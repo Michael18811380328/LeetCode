@@ -16,8 +16,7 @@ function reverse(x) {
   return isMinus ? -result : result;
 };
 
-// 算法二：遍历这个数字，依次获取个位数并放在新的数中。
-// 96 ms 较好
+// 算法二：遍历这个数字，依次获取个位数并放在新的数中。96 ms 较好
 function reverse(x) {
   if (x === 0) return x;
   const isMinus = x < 0;
