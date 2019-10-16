@@ -6,7 +6,7 @@
 // 因为 nums[0] + nums[1] = 2 + 7 = 9
 // 所以返回 [0, 1]
 
-// 方法1：时间复杂度 o(nlogN)
+// 方法1：时间复杂度 o(nlogN) 58%
 /**
  * @param {number[]} nums
  * @param {number} target
@@ -22,3 +22,19 @@ var twoSum = function(nums, target) {
     }
   }
 };
+
+// 方法二：52%
+function twoSum(nums, target) {
+  let len = nums.length;
+  for (let i = 0; i < len; i++) {
+    let another = target - nums[i];
+    let index = nums.lastIndexOf(another);
+    if (index > -1 && i !== index) {
+      return [i, index];
+    }
+  }
+}
+
+console.log(twoSum([2, 11, 7, 15], 9));
+console.log(twoSum([3, 3], 6));
+console.log(twoSum([1, 3, 4, 0, 2], 6));

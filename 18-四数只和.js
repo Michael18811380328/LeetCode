@@ -13,7 +13,6 @@
  * @return {number[][]}
  */
 var fourSum = function(nums, target) {
-
   // 先计算两个数的和数组，把四个数的和问题转化成两个数的和问题，降维减少时间复杂度
   let twoSumArr = [];
   const len = nums.length;
@@ -47,12 +46,10 @@ var fourSum = function(nums, target) {
       }
     }
   }
-
   // 结果数组转化成二维数组（升维）
   for (let i = 0; i < resultArr.length; i++) {
     resultArr[i] = resultArr[i].split(',');
   }
-
   return resultArr;
 };
 
