@@ -1,0 +1,30 @@
+{
+  "name": "LeetCode",
+  "version": "1.0.0",
+  "description": "Learn Leetcode",
+  "main": "test.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Michael18811380328/LeetCode.git"
+  },
+  "keywords": [],
+  "author": "Michael18811380328",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Michael18811380328/LeetCode/issues"
+  },
+  "homepage": "https://github.com/Michael18811380328/LeetCode#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-jest": "^24.9.0",
+    "babel-preset-env": "^1.7.0",
+    "jest": "^24.9.0",
+    "regenerator-runtime": "^0.13.3"
+  }
+}

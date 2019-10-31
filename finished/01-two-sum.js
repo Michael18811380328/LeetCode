@@ -12,16 +12,16 @@
  * @param {number} target
  * @return {number[]}
  */
-var twoSum = function(nums, target) {
-  let len = nums.length;
-  for (let i = 0; i < len; i++) {
-    for (let j = i + 1; j < len; j++) {
-      if (nums[i] + nums[j] === target) {
-        return [i, j];
-      }
-    }
-  }
-};
+// var twoSum = function(nums, target) {
+//   let len = nums.length;
+//   for (let i = 0; i < len; i++) {
+//     for (let j = i + 1; j < len; j++) {
+//       if (nums[i] + nums[j] === target) {
+//         return [i, j];
+//       }
+//     }
+//   }
+// };
 
 // 方法二：52%
 function twoSum(nums, target) {
@@ -35,6 +35,8 @@ function twoSum(nums, target) {
   }
 }
 
-console.log(twoSum([2, 11, 7, 15], 9));
-console.log(twoSum([3, 3], 6));
-console.log(twoSum([1, 3, 4, 0, 2], 6));
+// console.log(twoSum([2, 11, 7, 15], 9));
+// console.log(twoSum([3, 3], 6));
+// console.log(twoSum([1, 3, 4, 0, 2], 6));
+
+export default twoSum;
