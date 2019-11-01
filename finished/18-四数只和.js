@@ -26,7 +26,6 @@ var fourSum = function(nums, target) {
       twoSumArr.push(obj);
     }
   }
- 
   // 遍历这个和矩阵，如果和是目标，那么把对应的项数放到一个新的数组中
   let resultArr = [];
   const len2 = twoSumArr.length;

@@ -45,7 +45,6 @@ var plusOne = function(digits) {
       if (digits[i - 1]) {
         digits[i - 1]++;
       } else {
-        digits[i] = 0;
         digits.unshift(1);
       }
     }

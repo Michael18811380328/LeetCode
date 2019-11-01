@@ -15,7 +15,7 @@ var isValid = function(s) {
       result += s.charAt(i);
     }
     else {
-      if ( (s.charAt(i) === ')' && result.charAt(result.length - 1) === '(') || (s.charAt(i) === ']' && result.charAt(result.length - 1) === '[') || (s.charAt(i) === '}' && result.charAt(result.length - 1) === '{') ) {
+      if ((s.charAt(i) === ')' && result.charAt(result.length - 1) === '(') || (s.charAt(i) === ']' && result.charAt(result.length - 1) === '[') || (s.charAt(i) === '}' && result.charAt(result.length - 1) === '{')) {
         result = result.substr(0, result.length - 1);
       }
       else {
