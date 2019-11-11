@@ -1,0 +1,14 @@
+{
+  "extends": "airbnb-base",
+  "rules": {
+    "no-case-declarations": "warn",
+    "no-cond-assign": "warn",
+    "no-redeclare": "warn",
+    "no-unreachable": "warn",
+    "no-class-assign": "warn",
+    "no-unused-vars": "warn",
+    "no-irregular-whitespace": "warn",
+    "no-console": "warn",
+    "no-useless-escape": "warn"
+  }
+}
