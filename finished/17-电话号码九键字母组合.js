@@ -13,7 +13,7 @@
  * @param {string} digits
  * @return {string[]}
  */
-var letterCombinations = function(digits) {
+function letterCombinations(digits) {
   let resultArr = [];
   if (digits.length === 0) return resultArr; // 处理传入为空
   const dir = {
@@ -33,21 +33,23 @@ var letterCombinations = function(digits) {
     digits = digits.slice(1, digits.length);
     const firstStr = dir[firstNumber];
     // 把这个字符串加入到结果数组中
-    let newResultArr = [];
+    const newResultArr = [];
     if (resultArr.length === 0) {
       resultArr = firstStr.split('');
     } else {
       for (let i = 0; i < resultArr.length; i++) {
-        let item = resultArr[i];
+        const item = resultArr[i];
         newResultArr.push(item + firstStr[0], item + firstStr[1], item + firstStr[2]);
         // 处理一下特殊的7和9
         if (firstStr[3]) newResultArr.push(item + firstStr[3]);
       }
-      //使用新的结果数组迭代旧的结果数组
-      resultArr = newResultArr; 
+      // 使用新的结果数组迭代旧的结果数组
+      resultArr = newResultArr;
     }
   }
   return resultArr;
-};
+}
 
-console.log(letterCombinations('239'));
+// console.log(letterCombinations('239'));
+
+export default letterCombinations;

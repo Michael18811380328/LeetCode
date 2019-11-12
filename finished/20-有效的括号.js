@@ -7,26 +7,23 @@
  * @param {string} s
  * @return {boolean}
  */
-var isValid = function(s) {
+function isValid(s) {
   let result = '';
   const left = ['(', '[', '{'];
   for (let i = 0, len = s.length; i < len; i++) {
     if (left.includes(s.charAt(i))) {
       result += s.charAt(i);
-    }
-    else {
-      if ((s.charAt(i) === ')' && result.charAt(result.length - 1) === '(') || (s.charAt(i) === ']' && result.charAt(result.length - 1) === '[') || (s.charAt(i) === '}' && result.charAt(result.length - 1) === '{')) {
-        result = result.substr(0, result.length - 1);
-      }
-      else {
-        return false;
-      }
+    } else if ((s.charAt(i) === ')' && result.charAt(result.length - 1) === '(') || (s.charAt(i) === ']' && result.charAt(result.length - 1) === '[') || (s.charAt(i) === '}' && result.charAt(result.length - 1) === '{')) {
+      result = result.substr(0, result.length - 1);
+    } else {
+      return false;
     }
   }
   return result.length === 0;
-};
+}
 
-console.log(isValid('{}(){}[]'));
-console.log(isValid('{()}{}['));
-console.log(isValid('{[]}'));
-console.log(isValid('([)]'));
+// console.log(isValid('{}(){}[]'));
+// console.log(isValid('{()}{}['));
+// console.log(isValid('{[]}'));
+// console.log(isValid('([)]'));
+export default isValid;

@@ -19,7 +19,7 @@
  * @return {number}
  */
 // 思路：64 ms , 在所有 javascript 提交中击败了 97.02%
-var maxProfit = function(prices) {
+function maxProfit(prices) {
   if (prices.length === 1) return 0;
   let profit = 0;
   let minPrice = prices[0];
@@ -27,11 +27,12 @@ var maxProfit = function(prices) {
     if (prices[i] < minPrice) {
       minPrice = prices[i];
     }
-    let bonus = prices[i] - minPrice;
+    const bonus = prices[i] - minPrice;
     if (bonus > profit) profit = bonus;
   }
   return profit;
-};
+}
 
-let arr = [7,6,4,3,1,9,0,9,8,8,1];
-console.log(maxProfit(arr));
+// const arr = [7, 6, 4, 3, 1, 9, 0, 9, 8, 8, 1];
+// console.log(maxProfit(arr));
+export default maxProfit;

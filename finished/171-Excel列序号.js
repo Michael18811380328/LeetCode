@@ -6,17 +6,19 @@
  * @param {string} s
  * @return {number}
  */
-var titleToNumber = function(s) {
+function titleToNumber(s) {
   let result = 0;
   while (s.length > 0) {
     result = result * 26 + (s.charCodeAt(0) - 64);
     s = s.slice(1, s.length);
   }
   return result;
-};
+}
 
-console.log(titleToNumber("A")) 
-console.log(titleToNumber("AB")) // 28
-console.log(titleToNumber("BA")) // 53
-console.log(titleToNumber("ZY")) // 701
-console.log(titleToNumber("AAA")) 
+// console.log(titleToNumber('A'));
+// console.log(titleToNumber('AB')); // 28
+// console.log(titleToNumber('BA')); // 53
+// console.log(titleToNumber('ZY')); // 701
+// console.log(titleToNumber('AAA'));
+
+export default titleToNumber;

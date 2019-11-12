@@ -5,7 +5,7 @@
  * @param {number[]} height
  * @return {number}
  */
-var trap = function(height) {
+function trap(height) {
   // 如果初始化是空数组，直接返回0
   if (height.length === 0) return 0;
 
@@ -37,7 +37,7 @@ var trap = function(height) {
     for (let i = maxIndexArr[0]; i < maxIndexArr[maxIndexArr.length - 1]; i++) {
       middleSum += height[i];
     }
-    let rain = max * (maxIndexArr[maxIndexArr.length - 1] - maxIndexArr[0]) - middleSum;
+    const rain = max * (maxIndexArr[maxIndexArr.length - 1] - maxIndexArr[0]) - middleSum;
     sum += rain;
   }
 
@@ -64,10 +64,12 @@ var trap = function(height) {
     rightRainSum += height[i];
   }
   sum += rightRainSum - rightSum;
-  
+
   return sum;
-};
-// console.log(trap([0,1,0,2,1,0,1,3,2,1,2,1]));  // 0 + 5 + 1 = 6 
+}
+// console.log(trap([0,1,0,2,1,0,1,3,2,1,2,1]));  // 0 + 5 + 1 = 6
 // console.log(trap([1,0,2,0,2,3])); // 3
-// console.log(trap([3,0,2,0,2])); // 4 
+// console.log(trap([3,0,2,0,2])); // 4
 // console.log(trap([0,1,0,2,0,2,3,0,0,3,1,2,0,0,1,0])); // 6 + 3 + 3 = 12
+
+export default trap;

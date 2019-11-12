@@ -4,8 +4,8 @@
 // 如果当前的值比后面的大，直接转化后加入数值；如果当前的值和后面的相等，直接加入这个数值（这两个情况属于一类）
 // 如果当期的值比后面的小（XV）,使用后面的减去前面的值，字符串减去2；
 // 168 ms, 在所有 JavaScript 提交中击败了 94.41% 的用户
-var romanToInt = function(s) {
-  let dir = {
+function romanToInt(s) {
+  const dir = {
     I: 1,
     V: 5,
     X: 10,
@@ -27,6 +27,7 @@ var romanToInt = function(s) {
     }
   }
   return result;
-};
+}
 
-console.log(romanToInt('MCMXCIV')); //1994
+// console.log(romanToInt('MCMXCIV')); // 1994
+export default romanToInt;

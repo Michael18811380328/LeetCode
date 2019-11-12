@@ -5,23 +5,20 @@
  * @param {number} n
  * @return {boolean}
  */
-var isPowerOfTwo = function(n) {
+function isPowerOfTwo(n) {
   if (n <= 0) return false;
   if (n === 1) return true;
   while (n > 0) {
     if (n === 1) return true;
     if (n % 2 !== 0) return false;
-    n = n / 2;
+    n /= 2;
   }
-};
+  return null;
+}
 
-console.log(isPowerOfTwo(0));
-
-console.log(isPowerOfTwo(1));
-
-console.log(isPowerOfTwo(-16));
-
-console.log(isPowerOfTwo(218));
-
-console.log(isPowerOfTwo(16));
-
+// console.log(isPowerOfTwo(0));
+// console.log(isPowerOfTwo(1));
+// console.log(isPowerOfTwo(-16));
+// console.log(isPowerOfTwo(218));
+// console.log(isPowerOfTwo(16));
+export default isPowerOfTwo;

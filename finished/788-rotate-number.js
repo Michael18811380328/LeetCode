@@ -11,7 +11,7 @@
  * @param {number} N
  * @return {number}
  */
-var rotatedDigits = function(N) {
+function rotatedDigits(N) {
   let result = 0;
   const Arr1 = [2, 5, 6, 9];
   const Arr2 = [0, 1, 8];
@@ -22,8 +22,7 @@ var rotatedDigits = function(N) {
     for (let i = 0; i <= N; i++) {
       if (Arr1.includes(i)) result++;
     }
-  }
-  else if (N <= 100) {
+  } else if (N <= 100) {
     result = 4;
     for (let i = 11; i <= N; i++) {
       const num2 = i % 10;
@@ -35,12 +34,11 @@ var rotatedDigits = function(N) {
         result++;
       }
     }
-  }
-  else if (N <= 1000) {
+  } else if (N <= 1000) {
     result = 40;
     for (let i = 101; i <= N; i++) {
       const num3 = i % 10; // 个位
-      const num2 = (i % 100 - num3) / 10; // 十位
+      const num2 = ((i % 100) - num3) / 10; // 十位
       const num1 = (i - num2 * 10 - num3) / 100; // 百位
       // 百位是18, 十位是018，个位必须是2569
       if (Arr4.includes(num1) && Arr2.includes(num2) && Arr1.includes(num3)) {
@@ -55,14 +53,13 @@ var rotatedDigits = function(N) {
         result++;
       }
     }
-  }
-  else if (N <= 10000) {
+  } else if (N <= 10000) {
     result = 316;
     for (let i = 1001; i <= N; i++) {
       const num4 = i % 10; // 个位
-      const num3 = (i % 100 - num4) / 10; // 十位
-      const num2 = (i % 1000 - num3 * 10 - num4) / 100; // 百位
-      const num1 = (i - num2 * 100 - num3 * 10 - num4) / 1000; // 千位
+      const num3 = ((i % 100) - num4) / 10; // 十位
+      const num2 = ((i % 1000) - num3 * 10 - num4) / 100; // 百位
+      const num1 = (i - (num2 * 100) - (num3 * 10) - num4) / 1000; // 千位
 
       // 千位是18, 百位是018 十位是018，个位2569
       if (Arr4.includes(num1) && Arr2.includes(num2) && Arr2.includes(num3) && Arr1.includes(num4)) {
@@ -83,6 +80,6 @@ var rotatedDigits = function(N) {
     }
   }
   return result;
-};
+}
 
 export default rotatedDigits;

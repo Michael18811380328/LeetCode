@@ -12,8 +12,8 @@
  * @param {number} target
  * @return {number[]}
  */
-var twoSumTest = function(nums, target) {
-  let len = nums.length;
+function twoSumTest(nums, target) {
+  const len = nums.length;
   for (let i = 0; i < len; i++) {
     for (let j = i + 1; j < len; j++) {
       if (nums[i] + nums[j] === target) {
@@ -21,14 +21,14 @@ var twoSumTest = function(nums, target) {
       }
     }
   }
-};
+}
 
 // 方法二：52%
 function twoSum(nums, target) {
-  let len = nums.length;
+  const len = nums.length;
   for (let i = 0; i < len; i++) {
-    let another = target - nums[i];
-    let index = nums.lastIndexOf(another);
+    const another = target - nums[i];
+    const index = nums.lastIndexOf(another);
     if (index > -1 && i !== index) {
       return [i, index];
     }
@@ -39,4 +39,4 @@ function twoSum(nums, target) {
 // console.log(twoSum([3, 3], 6));
 // console.log(twoSum([1, 3, 4, 0, 2], 6));
 
-export default twoSum;
+export default { twoSum, twoSumTest };

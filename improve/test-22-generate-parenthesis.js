@@ -18,8 +18,8 @@
  * @param {number} n
  * @return {string[]}
  */
-var generateParenthesis = function(n) {
-  return null
-};
+function generateParenthesis() {
+  return null;
+}
 
 export default generateParenthesis;

@@ -14,24 +14,25 @@
  * @param {number} target
  * @return {number}
  */
-var searchInsert = function(nums, target) {
-  let index = nums.indexOf(target);
+function searchInsert(nums, target) {
+  const index = nums.indexOf(target);
   if (index > -1) return index;
   if (target < nums[0]) return 0;
   const len = nums.length - 1;
   if (target > nums[len]) return len + 1;
 
-  let min = 0, max = len;
+  let min = 0;
+  let max = len;
   while (max > min) {
-    let middle = Math.ceil((max + min) / 2);
+    const middle = Math.ceil((max + min) / 2);
     if (nums[middle] > target) {
       if (middle === max) return middle;
       max = middle;
-    }
-    else {
+    } else {
       min = middle;
     }
   }
-};
+}
 
-console.log(searchInsert([1,3,5,6], 0));
+// console.log(searchInsert([1, 3, 5, 6], 0));
+export default searchInsert;

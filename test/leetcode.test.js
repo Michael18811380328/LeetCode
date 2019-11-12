@@ -1,4 +1,4 @@
-import $ from '../finished/leetcode.js';
+import $ from '../finished/leetcode';
 
 // 01-two-sum
 test('01-get two items index from an array', () => {

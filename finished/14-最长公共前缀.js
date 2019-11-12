@@ -5,7 +5,7 @@
  * @param {string[]} strs
  * @return {string}
  */
-var longestCommonPrefix = function(strs) {
+function longestCommonPrefix(strs) {
   if (strs.length === 0) return '';
   if (strs.length === 1) {
     return strs[0];
@@ -13,7 +13,7 @@ var longestCommonPrefix = function(strs) {
   // 如果长度大于1，那么需要获取公共字符串前缀
   let commonPrefix = '';
   for (let i = 0, len = strs[0].length; i < len; i++) {
-    let str = strs[0].charAt(i);
+    const str = strs[0].charAt(i);
     for (let j = 0; j < strs.length; j++) {
       if (str !== strs[j].charAt(i)) {
         return commonPrefix;
@@ -22,13 +22,13 @@ var longestCommonPrefix = function(strs) {
     commonPrefix += str;
   }
   return commonPrefix;
-};
+}
 
 // 改进方案：减少第一次的对比（j=1，获取一次字符串的长度）
 // 64 ms, 在所有 javascript 提交中击败了 94.05%
 // 两次测试时间不同。原理上第二次更简单
-var longestCommonPrefixPro = function(strs) {
-  const length = strs.length;
+function longestCommonPrefixPro(strs) {
+  const { length } = strs;
   if (length === 0) return '';
   if (length === 1) {
     return strs[0];
@@ -36,7 +36,7 @@ var longestCommonPrefixPro = function(strs) {
   // 如果长度大于1，那么需要获取公共字符串前缀
   let commonPrefix = '';
   for (let i = 0, len = strs[0].length; i < len; i++) {
-    let str = strs[0].charAt(i);
+    const str = strs[0].charAt(i);
     for (let j = 1; j < length; j++) {
       if (str !== strs[j].charAt(i)) {
         return commonPrefix;
@@ -45,7 +45,8 @@ var longestCommonPrefixPro = function(strs) {
     commonPrefix += str;
   }
   return commonPrefix;
-};
+}
 
-console.log(longestCommonPrefix(["flower","flow","flight"]));
-console.log(longestCommonPrefix(["dog","racecar","car"]));
+// console.log(longestCommonPrefix(["flower", "flow", "flight"]));
+// console.log(longestCommonPrefix(["dog", "racecar", "car"]));
+export default { longestCommonPrefix, longestCommonPrefixPro };

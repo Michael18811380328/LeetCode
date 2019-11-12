@@ -8,7 +8,7 @@
  * @param {number} val
  * @return {number}
  */
-var removeElement = function(nums, val) {
+function removeElement(nums, val) {
   if (!nums.includes(val)) {
     return nums.length;
   }
@@ -20,10 +20,11 @@ var removeElement = function(nums, val) {
     }
   }
   return nums.length;
-};
+}
 
-let nums = [0,1,2,2,3,0,4,2], val = 2;
-// let nums = [0,1,3,0,4,4], val = 2;
-console.log(removeElement(nums, val));
-
-// 如果不使用Includes方法判断，76 ms, 在所有 javascript 提交中击败了55.09% 
+// const nums = [0, 1, 2, 2, 3, 0, 4, 2];
+// const val = 2;
+// let nums = [0, 1, 3, 0, 4, 4], val = 2;s
+// console.log(removeElement(nums, val));
+// 如果不使用Includes方法判断，76 ms, 在所有 javascript 提交中击败了55.09%
+export default removeElement;

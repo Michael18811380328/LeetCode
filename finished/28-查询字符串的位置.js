@@ -7,9 +7,11 @@
 
 
 // 64 ms , 在所有 javascript 提交中击败了 90.91%
-var strStr = function(haystack, needle) {
+function strStr(haystack, needle) {
   if (needle === '') return 0;
   return haystack.indexOf(needle);
-};
+}
 
-console.log(strStr("hello", 'll'));
+strStr('hello', 'll');
+
+// console.log(strStr('hello', 'll'));

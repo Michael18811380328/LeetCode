@@ -1,6 +1,5 @@
 // 66. 加一
 /**
- * 
  * 给定一个由整数组成的非空数组所表示的非负整数，在该数的基础上加一。
  * 最高位数字存放在数组的首位， 数组中每个元素只存储单个数字。
  * 你可以假设除了整数 0 之外，这个整数不会以零开头。
@@ -36,7 +35,7 @@
 
 // 思路二：直接在原数组最后一位加一。然后遍历原始数组，如果某一个是10， 那么这一个变成1，前一个加一；这样性能好一点。
 // 60 ms , 在所有 javascript 提交中击败了 94.99%
-var plusOne = function(digits) {
+function plusOne(digits) {
   const len = digits.length;
   digits[len - 1]++;
   for (let i = len - 1; i > -1; i--) {
@@ -50,6 +49,8 @@ var plusOne = function(digits) {
     }
   }
   return digits;
-};
+}
 
-console.log(plusOne([4,3,2,1]));
+// console.log(plusOne([4, 3, 2, 1]));
+
+export default plusOne;
