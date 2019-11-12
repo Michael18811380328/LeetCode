@@ -23,3 +23,17 @@ function generateParenthesis() {
 }
 
 export default generateParenthesis;
+
+
+// test-22 generate
+// test('generate Parenthesis', () => {
+//   const arr = [
+//     '((()))',
+//     '(()())',
+//     '(())()',
+//     '()(())',
+//     '()()()',
+//   ];
+//   expect($.generateParenthesis(3)).toEqual(arr);
+//   // return null
+// });

@@ -80,4 +80,4 @@ function isHappy(n) {
 }
 
 // console.log(isHappy(10));
-export default { isHappy, isHappy1 };
+export { isHappy, isHappy1 };

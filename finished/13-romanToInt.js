@@ -30,4 +30,4 @@ function romanToInt(s) {
 }
 
 // console.log(romanToInt('MCMXCIV')); // 1994
-export default romanToInt;
+export { romanToInt };

@@ -35,4 +35,4 @@ function maxProfit(prices) {
 
 // const arr = [7, 6, 4, 3, 1, 9, 0, 9, 8, 8, 1];
 // console.log(maxProfit(arr));
-export default maxProfit;
+export { maxProfit };

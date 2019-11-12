@@ -75,21 +75,22 @@
 ### 代码风格测试
 
 ~~~bash
-
 npm run lint
-
 npm run lint-fix
-
 ~~~
 
 代码使用 ESLint 检查代码的规范性（.eslintrc.json 配置文件）
 
 ### 单元测试
 
-~~~
-
+~~~bash
 npm run test
-
 ~~~
 
 项目使用 Jest 完成单元测试。其中测试文件在 test 路径下。
+
+### 功能测试
+
+### 集成测试
+
+使用 TravisCI 测试

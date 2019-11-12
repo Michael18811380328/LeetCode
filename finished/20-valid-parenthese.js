@@ -21,9 +21,4 @@ function isValid(s) {
   }
   return result.length === 0;
 }
-
-// console.log(isValid('{}(){}[]'));
-// console.log(isValid('{()}{}['));
-// console.log(isValid('{[]}'));
-// console.log(isValid('([)]'));
-export default isValid;
+export { isValid };

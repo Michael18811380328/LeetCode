@@ -52,4 +52,4 @@ function myAtoi(str) {
   return Math.max(Math.min(val, max), min);
 }
 
-export default myAtoi;
+export { myAtoi };
