@@ -5,7 +5,7 @@
  * @param {number[]} height
  * @return {number}
  */
-function trap(height) {
+function trapRain(height) {
   // 如果初始化是空数组，直接返回0
   if (height.length === 0) return 0;
 
@@ -68,8 +68,8 @@ function trap(height) {
   return sum;
 }
 // console.log(trap([0,1,0,2,1,0,1,3,2,1,2,1]));  // 0 + 5 + 1 = 6
-// console.log(trap([1,0,2,0,2,3])); // 3
-// console.log(trap([3,0,2,0,2])); // 4
-// console.log(trap([0,1,0,2,0,2,3,0,0,3,1,2,0,0,1,0])); // 6 + 3 + 3 = 12
+// console.log(trapRain([1,0,2,0,2,3])); // 3
+// console.log(trapRain([3,0,2,0,2])); // 4
+// console.log(trapRain([0,1,0,2,0,2,3,0,0,3,1,2,0,0,1,0])); // 6 + 3 + 3 = 12
 
-export default trap;
+export { trapRain };

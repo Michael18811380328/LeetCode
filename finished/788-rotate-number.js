@@ -82,4 +82,4 @@ function rotatedDigits(N) {
   return result;
 }
 
-export default rotatedDigits;
+export { rotatedDigits };

@@ -12,7 +12,7 @@
  * @param {number} target
  * @return {number[]}
  */
-function twoSumTest(nums, target) {
+function twoSum1(nums, target) {
   const len = nums.length;
   for (let i = 0; i < len; i++) {
     for (let j = i + 1; j < len; j++) {
@@ -35,8 +35,4 @@ function twoSum(nums, target) {
   }
 }
 
-// console.log(twoSum([2, 11, 7, 15], 9));
-// console.log(twoSum([3, 3], 6));
-// console.log(twoSum([1, 3, 4, 0, 2], 6));
-
-export default { twoSum, twoSumTest };
+export { twoSum, twoSum1 };

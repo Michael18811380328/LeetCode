@@ -10,7 +10,7 @@
     "test": "jest",
     "lint": "eslint **/*.js --no-ignore",
     "lint-html": "eslint **/*.js -f html -o ./reports/lint-results.html",
-    "lint-fix": "eslint --fix **/*.js"
+    "lint-fix": "eslint --fix **/*.js --no-ignore"
   },
   "repository": {
     "type": "git",

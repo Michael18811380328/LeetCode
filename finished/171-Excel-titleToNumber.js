@@ -15,10 +15,4 @@ function titleToNumber(s) {
   return result;
 }
 
-// console.log(titleToNumber('A'));
-// console.log(titleToNumber('AB')); // 28
-// console.log(titleToNumber('BA')); // 53
-// console.log(titleToNumber('ZY')); // 701
-// console.log(titleToNumber('AAA'));
-
-export default titleToNumber;
+export { titleToNumber };

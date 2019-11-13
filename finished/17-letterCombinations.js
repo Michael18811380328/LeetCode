@@ -50,6 +50,4 @@ function letterCombinations(digits) {
   return resultArr;
 }
 
-// console.log(letterCombinations('239'));
-
-export default letterCombinations;
+export { letterCombinations };

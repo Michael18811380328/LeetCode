@@ -13,7 +13,6 @@ function rotate1(nums, k) {
     nums.unshift(item);
   }
 }
-
 // 方法2：使用数组的 80ms, 94%
 function rotate2(nums, k) {
   const len = nums.length;
@@ -25,7 +24,6 @@ function rotate2(nums, k) {
     nums.push(item);
   }
 }
-
 // 方法3：不使用循环，直接使用数组的splice删除插入一部分内容 84ms 90%
 function rotate(nums, k) {
   const len = nums.length;
@@ -35,6 +33,4 @@ function rotate(nums, k) {
   nums.unshift(...tailArray);
 }
 
-// rotate([-1,-100,3,99], 2);
-// [3,99,-1,-100]
-export default { rotate, rotate1, rotate2 };
+export { rotate, rotate1, rotate2 };

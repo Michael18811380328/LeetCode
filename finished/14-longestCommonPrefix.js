@@ -47,6 +47,4 @@ function longestCommonPrefixPro(strs) {
   return commonPrefix;
 }
 
-// console.log(longestCommonPrefix(["flower", "flow", "flight"]));
-// console.log(longestCommonPrefix(["dog", "racecar", "car"]));
-export default { longestCommonPrefix, longestCommonPrefixPro };
+export { longestCommonPrefix, longestCommonPrefixPro };

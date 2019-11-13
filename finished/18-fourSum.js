@@ -47,11 +47,10 @@ function fourSum(nums, target) {
   }
   // 结果数组转化成二维数组（升维）
   for (let i = 0; i < resultArr.length; i++) {
-    resultArr[i] = resultArr[i].split(',');
+    resultArr[i] = resultArr[i].split(',').map(Number);
+    // array.map(Number) 把字符串数组转化成数值类型
   }
   return resultArr;
 }
 
-// console.log(fourSum([1, 0, -1, 0, -2, 2], 0));
-
-export default fourSum;
+export { fourSum };

@@ -15,3 +15,5 @@ function strStr(haystack, needle) {
 strStr('hello', 'll');
 
 // console.log(strStr('hello', 'll'));
+
+export { strStr };

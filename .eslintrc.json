@@ -16,7 +16,8 @@
     "no-undef": "off",
     "max-len": "off",
     "no-param-reassign": "off",
-    "consistent-return": "off"
+    "consistent-return": "off",
+    "import/prefer-default-export": "off"
   }
 }
 

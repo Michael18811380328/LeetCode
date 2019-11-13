@@ -33,4 +33,4 @@ function mySqrt3(x) {
 // console.log(mySqrt(8));
 // console.log(mySqrt(27));
 
-export default { mySqrt1, mySqrt2, mySqrt3 };
+export { mySqrt1, mySqrt2, mySqrt3 };

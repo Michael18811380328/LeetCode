@@ -27,4 +27,4 @@ function removeElement(nums, val) {
 // let nums = [0, 1, 3, 0, 4, 4], val = 2;s
 // console.log(removeElement(nums, val));
 // 如果不使用Includes方法判断，76 ms, 在所有 javascript 提交中击败了55.09%
-export default removeElement;
+export default { removeElement };

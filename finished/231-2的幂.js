@@ -21,4 +21,4 @@ function isPowerOfTwo(n) {
 // console.log(isPowerOfTwo(-16));
 // console.log(isPowerOfTwo(218));
 // console.log(isPowerOfTwo(16));
-export default isPowerOfTwo;
+export { isPowerOfTwo };
