@@ -10,7 +10,7 @@ function isPowerOfTwo(n) {
   if (n === 1) return true;
   while (n > 0) {
     if (n === 1) return true;
-    if (n % 2 !== 0) return false;
+    if ((n % 2) !== 0) return false;
     n /= 2;
   }
   return null;
@@ -21,4 +21,5 @@ function isPowerOfTwo(n) {
 // console.log(isPowerOfTwo(-16));
 // console.log(isPowerOfTwo(218));
 // console.log(isPowerOfTwo(16));
+
 export { isPowerOfTwo };
