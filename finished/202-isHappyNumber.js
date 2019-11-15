@@ -45,9 +45,6 @@ function isHappy1(n) {
   return null;
 }
 
-// console.log(isHappy(10));
-
-
 // 思路二：判断一个数不是快乐数。
 // 如果一个数的平方和是下面的数之一，那么就不是快乐数；4 16 37 58 89 145 42 20
 // 80 ms, 在所有 javascript 提交中击败了70.59%
@@ -79,5 +76,4 @@ function isHappy(n) {
   return null;
 }
 
-// console.log(isHappy(10));
 export { isHappy, isHappy1 };

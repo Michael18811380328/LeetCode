@@ -3,10 +3,6 @@
 // 不要使用额外的数组空间，你必须在原地修改输入数组并在使用 O(1) 额外空间的条件下完成。
 // 100 ms, 在所有 javascript 提交中击败了 71.42%
 
-/**
- * @param {number[]} nums
- * @return {number}
- */
 function removeDuplicates(nums) {
   for (let i = 0; i < nums.length;) {
     if (nums[i] === nums[i + 1]) {
@@ -18,5 +14,4 @@ function removeDuplicates(nums) {
   return nums.length;
 }
 
-removeDuplicates([0, 0, 1, 1, 1, 2, 2, 3, 3, 4]);
 export { removeDuplicates };

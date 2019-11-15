@@ -8,7 +8,6 @@
  */
 
 // 44 ms , 在所有 javascript 提交中击败了 99.95%
-
 /**
  * @param {number[]} nums
  * @param {number} target
@@ -34,5 +33,4 @@ function searchInsert(nums, target) {
   }
 }
 
-// console.log(searchInsert([1, 3, 5, 6], 0));
 export { searchInsert };

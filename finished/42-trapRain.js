@@ -18,10 +18,8 @@ function trapRain(height) {
   }
   // 如果处理完是一个空数组，直接返回
   if (height.length === 0) return 0;
-
   // 雨水的总量
   let sum = 0;
-
   // 获取最大值（峰值）
   const max = Math.max(...height);
 
@@ -64,12 +62,7 @@ function trapRain(height) {
     rightRainSum += height[i];
   }
   sum += rightRainSum - rightSum;
-
   return sum;
 }
-// console.log(trap([0,1,0,2,1,0,1,3,2,1,2,1]));  // 0 + 5 + 1 = 6
-// console.log(trapRain([1,0,2,0,2,3])); // 3
-// console.log(trapRain([3,0,2,0,2])); // 4
-// console.log(trapRain([0,1,0,2,0,2,3,0,0,3,1,2,0,0,1,0])); // 6 + 3 + 3 = 12
 
 export { trapRain };
