@@ -6,3 +6,7 @@
 //   expect(wordBreak("catsandog", ["cats", "dog", "sand", "and", "cat", "a", "bilibili"])).toEqual(false);
 //   expect(wordBreak("abcd", ["a","abc","b","cd"])).toEqual(true);
 // });
+
+test('', () => {
+  expect(1).toEqual(1);
+});
