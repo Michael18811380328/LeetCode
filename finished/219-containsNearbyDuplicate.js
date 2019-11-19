@@ -20,6 +20,6 @@ function containsNearbyDuplicate(nums, k) {
     }
   }
   return false;
-};
+}
 
 export { containsNearbyDuplicate };

@@ -14,10 +14,10 @@ function compareVersion(version1, version2) {
   const arr2 = version2.split('.');
   // 删除前导0， parseInt
   for (let i = 0; i < arr1.length; i++) {
-    arr1[i] = parseInt(arr1[i]);
+    arr1[i] = parseInt(arr1[i], 10);
   }
   for (let i = 0; i < arr2.length; i++) {
-    arr2[i] = parseInt(arr2[i]);
+    arr2[i] = parseInt(arr2[i], 10);
   }
   // 并删除后面的几个空位0
   while (arr1[arr1.length - 1] === 0) {
@@ -31,7 +31,7 @@ function compareVersion(version1, version2) {
     if (arr1[i] > arr2[i]) {
       return 1;
     }
-    else if (arr1[i] < arr2[i]) {
+    if (arr1[i] < arr2[i]) {
       return -1;
     }
   }
@@ -39,12 +39,11 @@ function compareVersion(version1, version2) {
   if (arr1.length === arr2.length) {
     return 0;
   }
-  else if (arr1.length < arr2.length) {
+  if (arr1.length < arr2.length) {
     return -1;
   }
-  else {
-    return 1;
-  }
+
+  return 1;
 }
 
 function compareTwo(a, b) {
@@ -55,16 +54,16 @@ function compareTwo(a, b) {
 // 思路2：在转化过程中，使用一次遍历就完成比较；使用一次循环比较更快；正则很耗时
 // 92 ms, 在所有 javascript 提交中击败了 5.81%
 function compareVersion2(version1, version2) {
-  let arr1 = version1.split('.');
-  let arr2 = version2.split('.');
+  const arr1 = version1.split('.');
+  const arr2 = version2.split('.');
   // 删除前导0， parseInt
   const arr1Len = arr1.length;
   const arr2Len = arr2.length;
   const minLen = arr1Len < arr2Len ? arr1Len : arr2Len;
 
   for (let i = 0; i < minLen; i++) {
-    const item1 = parseInt(arr1[i]);
-    const item2 = parseInt(arr2[i]);
+    const item1 = parseInt(arr1[i], 10);
+    const item2 = parseInt(arr2[i], 10);
     const res = compareTwo(item1, item2);
     if (res !== 0) {
       return res;
@@ -76,27 +75,26 @@ function compareVersion2(version1, version2) {
   const res1 = arr1.join('').replace(/0/g, '');
   const res2 = arr2.join('').replace(/0/g, '');
   if (res1 !== '') {
-    return 1
+    return 1;
   }
-  else if (res2 !== '') {
-    return -1
+  if (res2 !== '') {
+    return -1;
   }
-  else {
-    return 0
-  }
+
+  return 0;
 }
 
 // 思路3：思路二基础上，优化正则
 // 64 ms , 在所有 javascript 提交中击败了 78.71%
 function compareVersion3(version1, version2) {
-  let arr1 = version1.split('.');
-  let arr2 = version2.split('.');
+  const arr1 = version1.split('.');
+  const arr2 = version2.split('.');
   const arr1Len = arr1.length;
   const arr2Len = arr2.length;
   const minLen = arr1Len < arr2Len ? arr1Len : arr2Len;
   for (let i = 0; i < minLen; i++) {
-    const item1 = parseInt(arr1[i]);
-    const item2 = parseInt(arr2[i]);
+    const item1 = parseInt(arr1[i], 10);
+    const item2 = parseInt(arr2[i], 10);
     const res = compareTwo(item1, item2);
     if (res !== 0) {
       return res;
@@ -114,7 +112,7 @@ function compareVersion3(version1, version2) {
     arr = arr2;
   }
   for (let i = 0; i < arr.length; i++) {
-    const item = parseInt(arr[i]);
+    const item = parseInt(arr[i], 10);
     if (item > 0) {
       return isArr1 ? 1 : -1;
     }

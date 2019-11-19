@@ -16,26 +16,25 @@ function isUgly(num) {
   if (num <= 0) {
     return false;
   }
-  if (num < 7 ) {
+  if (num < 7) {
     return true;
   }
   if (num % 7 === 0 || num % 11 === 0 || num % 13 === 0 || num % 17 === 0) {
     return false;
   }
   while (num % 5 === 0 && num > 1) {
-    num = num / 5;
+    num /= 5;
   }
   while (num % 3 === 0 && num > 1) {
-    num = num / 3;
+    num /= 3;
   }
   while (num % 2 === 0 && num > 1) {
-    num = num / 2;
+    num /= 2;
   }
   if (num > 1) {
-    return false
-  } else {
-    return true;
+    return false;
   }
+  return true;
 }
 
 // 思路二：不需要考虑余数
@@ -43,23 +42,22 @@ function isUgly(num) {
 function isUgly2(num) {
   if (num <= 0) {
     return false;
-  } else if (num < 7 ) {
+  } if (num < 7) {
     return true;
   }
   while (num % 5 === 0 && num > 1) {
-    num = num / 5;
+    num /= 5;
   }
   while (num % 3 === 0 && num > 1) {
-    num = num / 3;
+    num /= 3;
   }
   while (num % 2 === 0 && num > 1) {
-    num = num / 2;
+    num /= 2;
   }
   if (num > 1) {
-    return false
-  } else {
-    return true;
+    return false;
   }
+  return true;
 }
 
 export { isUgly, isUgly2 };

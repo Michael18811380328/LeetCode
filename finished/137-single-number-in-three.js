@@ -15,7 +15,7 @@ function singleNumberThree1(nums) {
   for (let i = 0; i < len; i++) {
     const item = nums[i];
     if (obj[item] === 0 || obj[item]) {
-      obj[item] = obj[item] + 1;
+      obj[item]++;
     } else {
       obj[item] = 1;
     }

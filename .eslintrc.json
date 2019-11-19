@@ -9,7 +9,7 @@
     "no-unused-vars": "warn",
     "no-irregular-whitespace": "off",
     "no-console": "warn",
-    "no-useless-escape": "warn",
+    "no-useless-escape": "off",
     "default-case": "off",
     "allowForLoopAfterthoughts": "off",
     "no-plusplus": "off",
@@ -17,7 +17,8 @@
     "max-len": "off",
     "no-param-reassign": "off",
     "consistent-return": "off",
-    "import/prefer-default-export": "off"
+    "import/prefer-default-export": "off",
+    "func-names": "off"
   }
 }
 

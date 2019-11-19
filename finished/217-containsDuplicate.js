@@ -11,7 +11,7 @@ function containsDuplicate(nums) {
   }
   const newArr = [...new Set(nums)];
   return newArr.length !== len;
-};
+}
 
 // 思路二，遍历后获取重复元素，这样会省时间
 // 88 ms, 在所有 javascript 提交中击败了67.96%
@@ -19,7 +19,7 @@ function containsDuplicate2(nums) {
   const obj = {};
   const len = nums.length;
   for (let i = 0; i < len; i++) {
-    const item = nums[i]
+    const item = nums[i];
     if (!obj[item]) {
       obj[item] = true;
     } else {
@@ -27,6 +27,6 @@ function containsDuplicate2(nums) {
     }
   }
   return false;
-};
+}
 
 export { containsDuplicate, containsDuplicate2 };

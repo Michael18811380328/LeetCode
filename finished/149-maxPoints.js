@@ -125,9 +125,8 @@ function maxPointsError(points) {
             max++;
           }
         }
-      }
-      // 2 处理斜率不存在; 如果斜率不存在，即 (points[j][0] - points[i][0]) === 0
-      else if (points[j][1] === points[i][1]) {
+      } else if (points[j][1] === points[i][1]) {
+        // 2 处理斜率不存在; 如果斜率不存在，即 (points[j][0] - points[i][0]) === 0
         // 如果后面的一个点和前面的任意一个重合，那么需要加一
         for (let k = j + 1; k < len; k++) {
           if (samePoints(points[i], points[k]) || samePoints(points[j], points[k]) || points[j][1] === points[k][1]) {
@@ -141,9 +140,8 @@ function maxPointsError(points) {
             max++;
           }
         }
-      }
-      // 3 斜率存在
-      else {
+      } else {
+        // 3 斜率存在
         const slope1 = (points[j][1] - points[i][1]) / (points[j][0] - points[i][0]);
         // 遍历剩下的节点，如果Y值相同，就在一条线上；如果后面的一个点和前面的任意一个重合，那么需要加一
         for (let k = j + 1; k < len; k++) {
@@ -163,4 +161,6 @@ function maxPointsError(points) {
   return result;
 }
 
-export { maxPointsError, maxPoints, samePoints, pointLine, getKey, duplicatePoints };
+export {
+  maxPointsError, maxPoints, samePoints, pointLine, getKey, duplicatePoints,
+};

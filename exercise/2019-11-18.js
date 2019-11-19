@@ -11,7 +11,7 @@ function sortedSquares(A) {
   }
   // 然后计算小于0的平方。
   // 从一个开始，并把平方后的数字插入到已经排序的后面的数组中。
-  while(A[0] < 0) {
+  while (A[0] < 0) {
     const item = A[0] ** 2;
     if (item > A[index]) {
       A.push(item);
@@ -47,4 +47,3 @@ function mergeTwoArray(nums1, m, nums2, n) {
   }
   return nums1;
 }
-

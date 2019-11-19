@@ -38,4 +38,4 @@ function wordBreak(s, wordDict) {
 
 // 解答错误
 
-// export { wordBreak };
+export { wordBreak };

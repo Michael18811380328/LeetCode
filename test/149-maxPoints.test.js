@@ -1,4 +1,6 @@
-import { maxPoints, samePoints, pointLine, getKey, duplicatePoints } from '../finished/149-maxPoints';
+import {
+  maxPoints, samePoints, pointLine, getKey, duplicatePoints,
+} from '../finished/149-maxPoints';
 
 test('test 149-max-points-in-one-line', () => {
   // 测试常规情况

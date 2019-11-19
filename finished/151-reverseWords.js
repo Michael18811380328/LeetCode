@@ -16,7 +16,7 @@ function reverseWords(s) {
   if (s.indexOf(' ') === -1) {
     return s;
   }
-  let arr = s.trim().split(' ');
+  const arr = s.trim().split(' ');
   for (let i = 0; i < arr.length;) {
     if (arr[i] === '') {
       arr.splice(i, 1);

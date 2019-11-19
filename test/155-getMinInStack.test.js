@@ -1,7 +1,7 @@
 import { MinStack, MinStack2 } from '../finished/155-getMinInStack';
 
 test('155-get-min-number-in-stack', () => {
-  let minStack = new MinStack();
+  const minStack = new MinStack();
   minStack.push(-2);
   minStack.push(0);
   minStack.push(-3);
@@ -12,7 +12,7 @@ test('155-get-min-number-in-stack', () => {
 });
 
 test('155-get-min-number-in-stack', () => {
-  let minStack = new MinStack2();
+  const minStack = new MinStack2();
   minStack.push(-2);
   minStack.push(0);
   minStack.push(-3);
@@ -23,7 +23,7 @@ test('155-get-min-number-in-stack', () => {
 });
 
 test('155-get-min-number-in-stack', () => {
-  let minStack = new MinStack2();
+  const minStack = new MinStack2();
   minStack.push(1);
   minStack.push(2);
   expect(minStack.getMin()).toEqual(1);
