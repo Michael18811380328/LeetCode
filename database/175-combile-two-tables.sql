@@ -1,4 +1,5 @@
-# 175-combile-two tables
+# 175
+# combile-two tables
 
 -- SQL架构
 -- 表1: Person
@@ -25,4 +26,3 @@
 -- FirstName, LastName, City, State
 
 select Person.FirstName, Person.Lastname, Address.City, Address.State from Person Person left join Address Address on Person.PersonId = Address.PersonId;
-
