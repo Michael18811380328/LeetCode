@@ -9,3 +9,6 @@
 /lib
 
 package-lock.json
+
+#python
+*.pyc
