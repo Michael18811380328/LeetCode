@@ -3,7 +3,7 @@
 
 import math
 
-# 292 nim-game
+# 292 nim-game 在nim游戏中获胜
 def canWinNim(n):
   """
   :type n: int
@@ -14,7 +14,7 @@ def canWinNim(n):
   else:
     return True
 
-# 204
+# 204 统计所有小于非负整数 n 的质数的数量。
 def countPrimes(n):
   """
   :type n: int
@@ -39,3 +39,49 @@ def countPrimes(n):
           arr[item] = False
   
   return result
+
+# 172 统计n的阶乘中0的数量
+def trailingZeroes(n):
+  if n < 5:
+    return 0
+  result = 0
+  while n >= 5:
+    reminder = n % 5
+    quotient = (n - reminder) / 5;
+    result = result + quotient
+    n = quotient
+  return result
+
+# 374 guess Number auxiliary function（辅助函数）
+# 假设目标的数字是188
+def guess(n):
+  if n == 188:
+    return 0
+  elif n < 188:
+    return -1
+  else:
+    return 1
+
+# 374 guessNumber
+# 循环有问题
+def guessNumber(n):
+  # form 1-n guess Number, use guess def
+  
+  if guess(1) == 0:
+    return 1
+
+  start = 1
+  end = n
+  middle = int((end - start) / 2)
+
+  while middle > 1:
+    res = guess(middle)
+    print(res)
+    if res == 0:
+      return middle
+    elif res == -1:
+      start = middle
+    else:
+      end = middle
+    middle = int((end - start) / 2)
+    print(middle)
