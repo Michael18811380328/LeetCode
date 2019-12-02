@@ -1,4 +1,4 @@
-import { compressString } from '../finished2/443-compress-string';
+import { compressString } from '../finished4/443-compress-string';
 
 test('443-compress-string', () => {
   const arr = ['a', 'a', 'b', 'b', 'c', 'c', 'c'];

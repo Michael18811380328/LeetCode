@@ -1,4 +1,4 @@
-import { rotatedDigits } from '../finished2/788-rotate-number';
+import { rotatedDigits } from '../finished4/788-rotate-number';
 
 test('788-rotate-number', () => {
   expect(rotatedDigits(10)).toEqual(4);

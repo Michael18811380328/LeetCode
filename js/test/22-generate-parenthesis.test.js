@@ -1,5 +1,7 @@
 // test-22 generate
-import { isValid, generateParenthesis, generateParenthesis2, generateParenthesis3 } from '../finished/22-generate-parenthesis.js';
+import {
+  isValid, generateParenthesis, generateParenthesis2, generateParenthesis3,
+} from '../finished/22-generate-parenthesis.js';
 
 test('generate Parenthesis', () => {
   const arr = [

@@ -13,7 +13,7 @@
 
 // 思路一：获取全部树的路径，然后判断是否存在
 function getPath(node) {
-  const value = node.value;
+  const { value } = node;
   // 无子节点
   if (node.left === null && node.right === null) {
     return [value];
@@ -36,7 +36,7 @@ function getPath(node) {
   // 左右都有子节点
   const leftPath = getPath(node.left);
   const rightPath = getPath(node.right);
-  let totalPath = [].concat(leftPath).concat(rightPath);
+  const totalPath = [].concat(leftPath).concat(rightPath);
   for (let i = 0; i < totalPath.length; i++) {
     totalPath[i] += value;
   }
@@ -45,8 +45,8 @@ function getPath(node) {
 
 // 思路二：深度优先遍历：如果有值，直接返回真
 
-var hasPathSum = function(root, sum) {
+function hasPathSum(root, sum) {
   return getPath(root).includes(sum);
-};
+}
 
 export { hasPathSum };

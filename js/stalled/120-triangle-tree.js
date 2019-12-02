@@ -70,22 +70,22 @@
 
 function minimumTotal(triangle) {
   const len = triangle.length;
-  if (len ===1) {
+  if (len === 1) {
     return triangle[0][0];
   }
   // 迭代数组有问题
   for (let i = 1; i < len; i++) {
     // 首先创建一个新数组
     // 应该遍历原始数组，然后放在新的数组中，然后用新的数组取代原始数组
-    let newArr = [];
+    const newArr = [];
     // 处理第一项
     newArr[0] = triangle[i][0] + triangle[i - 1][0];
     // 处理中间项
     // 注意：第i层的长度是i+1，下标是[0, i]
     for (let j = 1; j < triangle[i].length - 1; j++) {
-      let item = triangle[i][j];
-      let new1 = item + triangle[i - 1][j - 1];
-      let new2 = item + triangle[i - 1][j];
+      const item = triangle[i][j];
+      const new1 = item + triangle[i - 1][j - 1];
+      const new2 = item + triangle[i - 1][j];
       newArr.push(new1);
       newArr.push(new2);
     }
@@ -99,17 +99,3 @@ function minimumTotal(triangle) {
 }
 
 export { minimumTotal };
-
-
-
-
-
-
-
-
-
-
-
-
-
-

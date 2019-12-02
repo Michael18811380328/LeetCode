@@ -1,12 +1,11 @@
 // 367. 有效的完全平方数
-
 /**
  * @param {number} num
  * @return {boolean}
  */
 // 88 ms, 在所有 javascript 提交中击败了25.41%
 // 思路一：直接循环一次
-var isPerfectSquare = function(num) {
+function isPerfectSquare(num) {
   if (num === 0 || num === 1) {
     return true;
   }
@@ -15,16 +14,16 @@ var isPerfectSquare = function(num) {
     if (product === num) {
       return true;
     }
-    else if (product > num) {
+    if (product > num) {
       return false;
     }
   }
   return false;
-};
+}
 
 // 思路二：应该使用二分法求解
 // 60 ms, 在所有 javascript 提交中击败了88.67%
-var isPerfectSquare2 = function(num) {
+function isPerfectSquare2(num) {
   if (num === 0 || num === 1) {
     return true;
   }
@@ -33,10 +32,10 @@ var isPerfectSquare2 = function(num) {
   let middle;
   do {
     middle = Math.ceil((start + end) / 2);
-    let product = middle ** 2;
+    const product = middle ** 2;
     if (product === num) {
       return true;
-    } else if (product < num) {
+    } if (product < num) {
       start = middle;
     } else if (product > num) {
       end = middle;

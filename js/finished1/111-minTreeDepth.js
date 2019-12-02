@@ -23,7 +23,7 @@
  * @param {TreeNode} root
  * @return {number}
  */
-var minDepth = function(root) {
+function minDepth(root) {
   if (root === null) {
     return 0;
   }
@@ -38,6 +38,6 @@ var minDepth = function(root) {
     return 1 + minDepth(root.left);
   }
   return 1 + Math.min(minDepth(root.right), minDepth(root.left));
-};
+}
 
 export { minDepth };

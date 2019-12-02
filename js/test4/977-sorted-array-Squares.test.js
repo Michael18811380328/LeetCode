@@ -1,4 +1,4 @@
-import { sortedSquares } from '../finished2/977-sorted-array-Squares';
+import { sortedSquares } from '../finished4/977-sorted-array-Squares';
 
 test('977-sorted-array-Squares', () => {
   expect(sortedSquares([-7, -3, 2, 3, 11])).toEqual([4, 9, 9, 49, 121]);

@@ -27,24 +27,23 @@ function isValid(str) {
   }
   if (res === 0) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 
 // 方法一：列举全部的情况，然后过滤一下处理(本地少量测试可以，但是时间复杂度太差，LeetCode超时)
 // 这是正向思维
 function generateParenthesis(n) {
-  let arr = ['('];
+  const arr = ['('];
   // 把全部的可能性加成一个数组，然后过滤这个字符串数组；
   for (let i = 1; i < 2 * n; i++) {
     const len = arr.length;
     for (let j = 0; j < len; j++) {
-      arr[j + len] = arr[j] + ')';
-      arr[j] = arr[j] + '(';
+      arr[j + len] = `${arr[j]})`;
+      arr[j] = `${arr[j]}(`;
     }
   }
-  return arr.filter(item => isValid(item));
+  return arr.filter((item) => isValid(item));
 }
 
 
@@ -77,29 +76,28 @@ function isValid3(str) {
   }
   if (res === 0) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 
 // 主函数
 function generateParenthesis2(n) {
-  let arr = ['('];
+  const arr = ['('];
   // 把全部的可能性加成一个数组，然后过滤这个字符串数组；
   for (let i = 1; i < 2 * n; i++) {
     const len = arr.length;
     for (let j = 0; j < len; j++) {
-      const lastItem = arr[j] + ')';
+      const lastItem = `${arr[j]})`;
       if (isValid2(lastItem)) {
         arr[j + len] = lastItem;
       }
-      const firstItem = arr[j] + '(';
+      const firstItem = `${arr[j]}(`;
       if (isValid2(firstItem)) {
         arr[j] = firstItem;
       }
     }
   }
-  return arr.filter(item => isValid3(item));
+  return arr.filter((item) => isValid3(item));
 }
 
 function isValid4(str) {
@@ -117,16 +115,16 @@ function isValid4(str) {
 // 思路三：每一次都判断是否合法
 // 96 ms, 在所有 javascript 提交中击败了18.02%
 function generateParenthesis3(n) {
-  let arr = ['('];
+  const arr = ['('];
   // 前半部分，只要结果大于0
   for (let i = 1; i < n; i++) {
     const len = arr.length;
     for (let j = 0; j < len; j++) {
-      const lastItem = arr[j] + ')';
+      const lastItem = `${arr[j]})`;
       if (isValid2(lastItem)) {
         arr[j + len] = lastItem;
       }
-      const firstItem = arr[j] + '(';
+      const firstItem = `${arr[j]}(`;
       if (isValid2(firstItem)) {
         arr[j] = firstItem;
       }
@@ -137,13 +135,13 @@ function generateParenthesis3(n) {
   for (let i = n; i < 2 * n; i++) {
     const len = arr.length;
     for (let j = 0; j < len; j++) {
-      const lastItem = arr[j] + ')';
+      const lastItem = `${arr[j]})`;
       const lastRes = isValid4(lastItem);
       // console.log(lastItem, lastRes, 2 * n - i);
       if (lastRes >= 0 && lastRes < 2 * n - i) {
         arr[j + len] = lastItem;
       }
-      const firstItem = arr[j] + '(';
+      const firstItem = `${arr[j]}(`;
       const firstRes = isValid4(firstItem);
       // console.log(firstItem, firstRes, 2 * n - i);
       if (firstRes >= 0 && firstRes < 2 * n - i) {
@@ -151,7 +149,9 @@ function generateParenthesis3(n) {
       }
     }
   }
-  return arr.filter(arr => arr.length === 2 * n);
+  return arr.filter((arr) => arr.length === 2 * n);
 }
 
-export { isValid, generateParenthesis, generateParenthesis2, generateParenthesis3 };
+export {
+  isValid, generateParenthesis, generateParenthesis2, generateParenthesis3,
+};
