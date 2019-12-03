@@ -42,6 +42,6 @@ function isPerfectSquare2(num) {
     }
   } while (start + 1 < end);
   return false;
-};
+}
 
 export { isPerfectSquare, isPerfectSquare2 };
