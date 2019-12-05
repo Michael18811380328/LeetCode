@@ -25,7 +25,8 @@ function ListNode(val) {
 
 // 思路一：直接计算两个链表的和，因为他们的位相对应（直接计算加法，需要处理进一等）
 function addTwoNumbers(l1, l2) {
-  let point1 = l1, point2 = l2;
+  let point1 = l1;
+  let point2 = l2;
   while (point1.next && point2.next) {
     l2.val = 0 + l1.val + l2.val;
     // 这里有问题
