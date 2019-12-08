@@ -1,6 +1,6 @@
-import { merge } from '../finished/56-mergeArray.js';
+import { merge } from '../finished/56-mergeArray';
 
-test('56-mergeArray.js', () => {
+test('56-mergeArray', () => {
   expect(merge([[1, 3], [2, 6], [8, 10], [15, 18]])).toEqual([[1, 6], [8, 10], [15, 18]]);
   expect(merge([[1, 4], [4, 5]])).toEqual([[1, 5]]);
   expect(merge([[1, 3], [2, 6], [8, 10], [15, 18], [16, 20], [20, 22], [24, 30]])).toEqual([[1, 6], [8, 10], [15, 22], [24, 30]]);

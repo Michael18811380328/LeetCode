@@ -15,27 +15,27 @@ function spiralOrder(matrix) {
   if (matrix.length === 0) return [];
   if (matrix.length === 1) return matrix[0];
   let timer = 1;
-  let result = [];
+  const result = [];
   while (matrix.length > 0) {
     const remainder = timer % 4;
     if (remainder === 1) {
-      let tmp = matrix.shift(1);
+      const tmp = matrix.shift(1);
       result.push(...tmp);
       timer++;
     } else if (remainder === 3) {
-      let tmp = matrix.pop(1);
+      const tmp = matrix.pop(1);
       result.push(...tmp.reverse());
       timer++;
     } else if (remainder === 2) {
       for (let i = 0; i < matrix.length; i++) {
-        let tmp = matrix[i].pop(1);
+        const tmp = matrix[i].pop(1);
         if (tmp) result.push(tmp);
       }
       timer++;
     } else if (remainder === 0) {
-      let temResult = [];
+      const temResult = [];
       for (let i = 0; i < matrix.length; i++) {
-        let tmp = matrix[i].shift(1);
+        const tmp = matrix[i].shift(1);
         if (tmp) temResult.push(tmp);
       }
       result.push(...temResult.reverse());

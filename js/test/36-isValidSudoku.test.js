@@ -1,11 +1,9 @@
-import {
-  isValidSudoku, isDuplicate, isValidSudoku2, isValidHash,
-} from '../finished/36-isValidSudoku.js';
+import { isValidSudoku, isDuplicate, isValidSudoku2, isValidHash } from '../finished/36-isValidSudoku';
 
-test('36-isValidSudoku.test.js', () => {
+test('36-isValidSudoku.test', () => {
   // 判断9个数中的元素是否重复
-  // expect(isDuplicate(["5","3",".",".","7",".",".",".","."])).toEqual(true);
-  // expect(isDuplicate(["5","3",".",".","7",".",".",".","7"])).toEqual(false);
+  expect(isDuplicate(['5', '3', '.', '.', '7', '.', '.', '.', '.'])).toEqual(true);
+  expect(isDuplicate(['5', '3', '.', '.', '7', '.', '.', '.', '7'])).toEqual(false);
 
   const arr1 = [
     ['5', '3', '.', '.', '7', '.', '.', '.', '.'],
@@ -29,8 +27,8 @@ test('36-isValidSudoku.test.js', () => {
     ['.', '.', '.', '4', '1', '9', '.', '.', '5'],
     ['.', '.', '.', '.', '8', '.', '.', '7', '9'],
   ];
-  // expect(isValidSudoku(arr1)).toEqual(true);
-  // expect(isValidSudoku(arr2)).toEqual(false);
+  expect(isValidSudoku(arr1)).toEqual(true);
+  expect(isValidSudoku(arr2)).toEqual(false);
 
   // 判断点的集合是否在共线，是否在一个小单元格内部，通过
   expect(isValidHash([[1, 1], [9, 8], [5, 6]])).toEqual(true);

@@ -1,6 +1,6 @@
-import { maxArea } from '../finished/11-maxArea.js';
+import { maxArea } from '../finished/11-maxArea';
 
-test('11-maxArea.test.js', () => {
+test('11-maxArea.test', () => {
   expect(maxArea([1, 8, 6, 2, 5, 4, 8, 3, 7])).toEqual(49);
   expect(maxArea([1, 2, 3, 4, 5, 6, 7, 6, 5, 4, 3, 2, 1])).toEqual(24);
   expect(maxArea([1, 4])).toEqual(1);

@@ -93,7 +93,7 @@ function minimumTotal(triangle) {
     newArr[newArr.length] = triangle[i][i] + triangle[i - 1][i - 1];
     // 使用新数组取代旧数组
     triangle[i] = newArr;
-    console.log(newArr);
+    // console.log(newArr);
   }
   return Math.min(...triangle[len - 1]);
 }

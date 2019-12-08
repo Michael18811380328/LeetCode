@@ -2,11 +2,8 @@
 // 给定两个大小为 m 和 n 的有序数组 nums1 和 nums2。
 // 请你找出这两个有序数组的中位数，并且要求算法的时间复杂度为 O(log(m + n))。
 // 你可以假设 nums1 和 nums2 不会同时为空。(如果有一个是空的情况)
-/**
- * @param {number[]} nums1
- * @param {number[]} nums2
- * @return {number}
- */
+
+// 思路：双指针：把排序数组的最小的一个放在第三个数组中，如果一个是空，那么就放另一个，如果结果数组的长度大于index2，那么返回结果数组的最后两项
 // 尝试用双指针解决:bug
 function findMedianSortedArrays(nums1, nums2) {
   const len1 = nums1.length;
@@ -21,8 +18,7 @@ function findMedianSortedArrays(nums1, nums2) {
     index1 = middle - 1;
     index2 = middle;
   }
-  // len 是长度，index 是数组下标，需要减一
-  // 先处理1个数组是0的情况
+  // len 是长度，index 是数组下标，需要减一；先处理1个数组是0的情况
   if (len1 === 0) {
     if (index2) {
       return (nums2[index1] + nums2[index2]) / 2;
@@ -42,7 +38,7 @@ function findMedianSortedArrays(nums1, nums2) {
   if (index2) {
     // 偶数，需要获取两个数并计算平均数
     let i = 0; let j = 0;
-    let sum = [];
+    const sum = [];
     // 能否改成一个变量？这里不需要数组，直接使用一个临时变量，记录上一个参数是多少就行
     while (i + j <= index2) {
       if (nums1[i] <= nums2[j] && nums1[i] !== undefined) {
@@ -56,11 +52,10 @@ function findMedianSortedArrays(nums1, nums2) {
           // 第一个数列结束了，第二个剩余
           const tmp = index2 - i;
           return ((nums2[tmp] + nums2[tmp - 1]) / 2);
-        } else {
-          // 第二个结束了，第一个剩余
-          const tmp = index2 - j;
-          return ((nums1[tmp] + nums1[tmp - 1]) / 2);
         }
+        // 第二个结束了，第一个剩余
+        const tmp = index2 - j;
+        return ((nums1[tmp] + nums1[tmp - 1]) / 2);
       }
       if (i + j - 1 === index2) {
         return ((sum[i + j - 1] + sum[i + j - 2]) / 2);
@@ -68,7 +63,7 @@ function findMedianSortedArrays(nums1, nums2) {
     }
   } else {
     // 奇数，计算当时的那个中位数即可
-    let i = 0; 
+    let i = 0;
     let j = 0;
     while (i + j <= index1) {
       if (nums1[i] <= nums2[j] && nums1[i] !== undefined) {
@@ -93,8 +88,7 @@ function findMedianSortedArrays(nums1, nums2) {
   }
 }
 
-// 现在情况比较多：使用基础方法先完成
-// 把排序后的数组合并到一起，然后重新排序，获取中位数即可
+// 思路二：把排序后的数组合并到一起，然后重新排序，获取中位数即可
 // 156 ms, 在所有 javascript 提交中击败了48.38%
 function findMedianSortedArrays2(nums1, nums2) {
   const arr = nums1.concat(nums2);
@@ -114,7 +108,5 @@ function findMedianSortedArrays2(nums1, nums2) {
   }
   return arr[index1];
 }
-
-// 思路：双指针：把排序数组的最小的一个放在第三个数组中，如果一个是空，那么就放另一个，如果结果数组的长度大于index2，那么返回结果数组的最后两项
 
 export { findMedianSortedArrays, findMedianSortedArrays2 };

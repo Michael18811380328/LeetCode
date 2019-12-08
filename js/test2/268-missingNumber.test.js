@@ -1,4 +1,4 @@
-import { missingNumber } from '../finished2/268-missingNumber.js';
+import { missingNumber } from '../finished2/268-missingNumber';
 
 test('judge a number is Prism', () => {
   expect(missingNumber([3, 0, 1])).toEqual(2);

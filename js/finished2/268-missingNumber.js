@@ -10,10 +10,13 @@
 // 计算一个实际的和，和理论上的总和，那么相减就是缺少的数字
 function missingNumber(nums) {
   const len = nums.length;
-  const defaultSum = (1 + len) * len / 2;
+  const defaultSum = ((1 + len) * len) / 2;
   let sum = 0;
-  nums.forEach((num) => sum += num);
-  return defaultSum - sum;
+  nums.forEach((num) => {
+    sum += num;
+  });
+  const result = defaultSum - sum;
+  return result;
 }
 
 export { missingNumber };

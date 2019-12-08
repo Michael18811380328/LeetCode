@@ -149,9 +149,7 @@ function generateParenthesis3(n) {
       }
     }
   }
-  return arr.filter((arr) => arr.length === 2 * n);
+  return arr.filter((item) => item.length === 2 * n);
 }
 
-export {
-  isValid, generateParenthesis, generateParenthesis2, generateParenthesis3,
-};
+export { isValid, generateParenthesis, generateParenthesis2, generateParenthesis3 };

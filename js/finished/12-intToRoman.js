@@ -19,17 +19,17 @@
 // 148 ms, 在所有 javascript 提交中击败了94.84%
 function intToRoman(num) {
   const res = [];
-  res[0] = (num - num % 1000) / 1000;
+  res[0] = (num - (num % 1000)) / 1000;
   num %= 1000;
-  res[1] = (num - num % 500) / 500;
+  res[1] = (num - (num % 500)) / 500;
   num %= 500;
-  res[2] = (num - num % 100) / 100;
+  res[2] = (num - (num % 100)) / 100;
   num %= 100;
-  res[3] = (num - num % 50) / 50;
+  res[3] = (num - (num % 50)) / 50;
   num %= 50;
-  res[4] = (num - num % 10) / 10;
+  res[4] = (num - (num % 10)) / 10;
   num %= 10;
-  res[5] = (num - num % 5) / 5;
+  res[5] = (num - (num % 5)) / 5;
   num %= 5;
   res[6] = num;
   // 1994 [ 1, 1, 4, 1, 4, 0, 4 ] M CM XC IV

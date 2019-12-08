@@ -48,6 +48,7 @@ function singleNumberThree2(nums) {
     if (obj[key] === 1) {
       return obj[key];
     }
+    return false;
   });
   return Number(res[0]);
 }

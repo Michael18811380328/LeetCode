@@ -1,6 +1,6 @@
-import { intToRoman } from '../finished/12-intToRoman.js';
+import { intToRoman } from '../finished/12-intToRoman';
 
-test('12-intToRoman.test.js', () => {
+test('12-intToRoman.test', () => {
   expect(intToRoman(1)).toEqual('I');
   expect(intToRoman(3)).toEqual('III');
   expect(intToRoman(4)).toEqual('IV');

@@ -22,7 +22,9 @@ function singleNumber1(nums) {
     }
   }
   for (const key in obj) {
-    return Number(key);
+    if (key) {
+      return Number(key);
+    }
   }
 }
 

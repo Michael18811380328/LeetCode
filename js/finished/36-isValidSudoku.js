@@ -19,9 +19,8 @@ function isDuplicate(arr) {
   for (let i = 0; i < 9; i++) {
     if (arr[i] === '.') {
       continue;
-    }
-    else {
-      let item = arr[i];
+    } else {
+      const item = arr[i];
       if (arr.indexOf(item) !== arr.lastIndexOf(item)) {
         return false;
       }
@@ -39,7 +38,7 @@ function isValidSudoku(board) {
     }
   }
   for (let i = 0; i < 9; i++) {
-    let column = [];
+    const column = [];
     for (let j = 0; j < 9; j++) {
       column.push(board[j][i]);
     }
@@ -49,9 +48,9 @@ function isValidSudoku(board) {
   }
   // 组合 x 0 3 6 y 0 3 6
   for (let i = 0; i < 9; i += 3) {
-    for (let j = 0; j < 9 ; j += 3) {
-      // i j is left top point 
-      let cell = [];
+    for (let j = 0; j < 9; j += 3) {
+      // i j is left top point
+      const cell = [];
       cell.push(board[i][j], board[i][j + 1], board[i][j + 2]);
       cell.push(board[i + 1][j], board[i + 1][j + 1], board[i + 1][j + 2]);
       cell.push(board[i + 2][j], board[i + 2][j + 1], board[i + 2][j + 2]);
@@ -70,78 +69,62 @@ function isValidSudoku(board) {
 // 辅助函数：判断是否在一个小单元格内部
 function isSmallCell(pointArr) {
   const len = pointArr.length;
-  let arr = [];
+  const arr = [];
   for (let i = 0; i < len; i++) {
-    const j = pointArr[i][0], k = pointArr[i][1];
+    const j = pointArr[i][0];
+    const k = pointArr[i][1];
     if (j < 3) {
       if (k < 3) {
         if (!arr[1]) {
-          arr[1] = 1
+          arr[1] = 1;
         } else {
           return false;
         }
-      }
-      else if (k < 6) {
+      } else if (k < 6) {
         if (!arr[2]) {
-          arr[2] = 1
+          arr[2] = 1;
         } else {
           return false;
         }
+      } else if (!arr[3]) {
+        arr[3] = 1;
+      } else {
+        return false;
       }
-      else {
-        if (!arr[3]) {
-          arr[3] = 1
-        } else {
-          return false;
-        }
-      }
-    }
-    else if (j < 6) {
+    } else if (j < 6) {
       if (k < 3) {
         if (!arr[4]) {
-          arr[4] = 1
+          arr[4] = 1;
         } else {
           return false;
         }
-      }
-      else if (k < 6) {
+      } else if (k < 6) {
         if (!arr[5]) {
-          arr[5] = 1
+          arr[5] = 1;
         } else {
           return false;
         }
+      } else if (!arr[6]) {
+        arr[6] = 1;
+      } else {
+        return false;
       }
-      else {
-        if (!arr[6]) {
-          arr[6] = 1
-        } else {
-          return false;
-        }
+    } else if (k < 3) {
+      if (!arr[7]) {
+        arr[7] = 1;
+      } else {
+        return false;
       }
-
-    }
-    else {
-      if (k < 3) {
-        if (!arr[7]) {
-          arr[7] = 1
-        } else {
-          return false;
-        }
+    } else if (k < 6) {
+      if (!arr[8]) {
+        arr[8] = 1;
+      } else {
+        return false;
       }
-      else if (k < 6) {
-        if (!arr[8]) {
-          arr[8] = 1
-        } else {
-          return false;
-        }
-      }
-      else {
-        if (!arr[9]) {
-          arr[9] = 1
-        } else {
-          return false;
-        }
-      }
+    } else if (!arr[9]) {
+      arr[9] = 1;
+    } else {
+      return false;
     }
   }
   return true;
@@ -153,27 +136,28 @@ function isValidHash(pointArr) {
   if (len === 1) {
     return true;
   }
-  let obj0 = {}, obj1 = {};
+  const obj0 = {};
+  const obj1 = {};
   for (let i = 0; i < len; i++) {
-    const j = pointArr[i][0], k = pointArr[i][1];
+    const j = pointArr[i][0];
+    const k = pointArr[i][1];
     // 在一行或者一列内出现，就是假的
     if (obj0[j]) {
-        return false;
-    } else {
-        obj0[j] = 1;
+      return false;
     }
+    obj0[j] = 1;
+
     if (obj1[k]) {
-        return false;
-    } else {
-        obj1[k] = 1;
+      return false;
     }
+    obj1[k] = 1;
   }
   // 需要判断是否在9个格子内部
   return isSmallCell(pointArr);
 }
 
 function isValidSudoku2(board) {
-  let hash = {};
+  const hash = {};
   for (let i = 0; i < 9; i++) {
     for (let j = 0; j < 9; j++) {
       const item = board[i][j];
@@ -185,9 +169,9 @@ function isValidSudoku2(board) {
       }
     }
   }
-  for (let key in hash) {
+  for (const key in hash) {
     if (!isValidHash(hash[key])) {
-        return false;
+      return false;
     }
   }
   return true;

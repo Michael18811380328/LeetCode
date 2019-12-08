@@ -30,17 +30,16 @@ function sortColors(nums) {
       if (i === 0) continue;
       nums.splice(i, 1);
       nums.unshift(0);
-      while(nums[i] === 0 && timer0 < i) {
+      while (nums[i] === 0 && timer0 < i) {
         i--;
       }
       if (timer0 === len) break;
-    }
-    else if (nums[i] === 2) {
+    } else if (nums[i] === 2) {
       timer++;
       if (i === len - 1) continue;
       nums.splice(i, 1);
       nums.push(2);
-      while((nums[i] === 2 && timer < len - i) || nums[i] === 0) {
+      while ((nums[i] === 2 && timer < len - i) || nums[i] === 0) {
         i--;
       }
     }

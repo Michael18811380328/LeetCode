@@ -15,11 +15,11 @@ function getSum1(a, b) {
 // 60 ms, 在所有 javascript 提交中击败了89.60%
 // 这种方法很偏
 function getSum2(a, b) {
-  if (a == 0 || b == 0) {
+  if (a === 0 || b === 0) {
     return a || b;
   }
   let ntempNum;
-  while (b != 0) {
+  while (b !== 0) {
     ntempNum = a ^ b;
     b = (a & b) << 1;
     a = ntempNum;

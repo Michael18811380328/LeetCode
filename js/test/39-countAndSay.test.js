@@ -1,6 +1,6 @@
-import { countAndSay, countAndSay2 } from '../finished/39-countAndSay.js';
+import { countAndSay, countAndSay2 } from '../finished/39-countAndSay';
 
-test('39-countAndSay.test.js', () => {
+test('39-countAndSay.test', () => {
   expect(countAndSay(1)).toEqual('1');
   expect(countAndSay(2)).toEqual('11');
   expect(countAndSay(3)).toEqual('21');

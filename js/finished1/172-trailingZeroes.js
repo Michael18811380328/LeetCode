@@ -64,4 +64,4 @@ function trailingZeroes2(n) {
   return result;
 }
 
-export { trailingZeroes1, trailingZeroes2 };
+export { trailingZeroesError, trailingZeroes1, trailingZeroes2 };

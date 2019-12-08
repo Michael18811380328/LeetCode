@@ -35,7 +35,7 @@ function addTwoNumbers(l1, l2) {
     point2 = point2.next;
   }
   // 怎样获取单向链表的index？
-  console.log(l1, l2);
+  // console.log(l1, l2);
   while (l2.next === null && l1.next !== null) {
     l2.next = l1.next;
   }
@@ -50,7 +50,7 @@ function addTwoNumbers(l1, l2) {
     }
   } while (l2.next);
   // 改进：在像第一次加法时，判断进一
-  console.log(l1, l2);
+  // console.log(l1, l2);
   return l2;
 }
 

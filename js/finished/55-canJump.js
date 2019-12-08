@@ -26,13 +26,11 @@ function canJump(nums) {
   for (let i = len - 1; i >= 0; i--) {
     if (nums[i] === 0) {
       for (let j = i; j >= 0; j--) {
-        const tmp = nums[j];
         // 如果0不是最后一位，那么前面的必须跳过0
         if (nums[j] > i - j && i !== len - 1) {
           break;
-        }
-        // 如果0是最后一位，只要到达0就行
-        else if (nums[j] >= i - j && i === len - 1) {
+        } else if (nums[j] >= i - j && i === len - 1) {
+          // 如果0是最后一位，只要到达0就行
           break;
         }
         // 内循环中，如果全部都不能跳出，那么就不能跳出
