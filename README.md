@@ -86,19 +86,21 @@ exercise 练习文件（不测试）
 
 images 图片文件
 
-js 主要 LeetCode 习题，因为题目较多，所以finished分成多个文件夹管理
+js LeetCode 习题，因为题目较多，所以分成多个文件夹管理
 
-​	finished 序号小于100
+​	finished 序号<100
 
-​	finished1序号100-200
+​	finished1 序号100-200
 
-​	test 测试序号小于100
-
-​    finished1测试序号100-200
+​	test 测试文件，序号<100
+  
+  test1 测试文件，序号 100-200
 
 ​	stalled 未完成的题目（不超过10道）
 
-​	array 数组 tag
-
 python 使用 python 完成的题目
+
+  leetcode.py 题目
+
+  test_leetcode.py 测试文件
 
