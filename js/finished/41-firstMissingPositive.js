@@ -5,12 +5,8 @@
 // 思路一：先过滤一下，把负数和0排除，然后在排序。排序结束获取最小的正整数
 // 68 ms, 在所有 javascript 提交中击败了76.60%
 function firstMissingPositive(nums) {
-  nums = nums.filter(item => {
-    return item > 0
-  });
-  nums = nums.sort((a, b) => {
-    return a - b;
-  });
+  nums = nums.filter((item) => item > 0);
+  nums = nums.sort((a, b) => a - b);
   if (nums[0] !== 1) {
     return 1;
   }
@@ -23,4 +19,4 @@ function firstMissingPositive(nums) {
   return nums[len - 1] + 1;
 }
 
-export { firstMissingPositive }; 
+export { firstMissingPositive };

@@ -13,7 +13,7 @@ function trailingZeroesError(n) {
   }
   let result = 0;
   while (multi > 9 && multi % 10 === 0) {
-    multi = multi / 10;
+    multi /= 10;
     result++;
   }
   return result;
@@ -33,11 +33,11 @@ function trailingZeroes1(n) {
       let item = i;
       // 判断整除10或者整除5
       while (item % 10 === 0) {
-        item = item / 10;
+        item /= 10;
         result++;
       }
       while (item % 5 === 0) {
-        item = item / 5;
+        item /= 5;
         result++;
       }
     }
@@ -56,12 +56,12 @@ function trailingZeroes2(n) {
     return result;
   }
   while (n >= 5) {
-    let reminder = n % 5;
-    let quotient = (n - reminder) / 5;
+    const reminder = n % 5;
+    const quotient = (n - reminder) / 5;
     result += quotient;
     n = quotient;
   }
   return result;
 }
 
-export { trailingZeroes1, trailingZeroes2 };
+export { trailingZeroesError, trailingZeroes1, trailingZeroes2 };

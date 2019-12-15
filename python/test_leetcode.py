@@ -23,5 +23,4 @@ def test_answer_172():
 
 # test 374 guess number
 def test_answer_374():
-  assert guessNumber(200) == 188
-  # assert guessNumber(12500) == 188
+  assert guessNumber(10) == 6

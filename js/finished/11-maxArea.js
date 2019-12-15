@@ -7,25 +7,25 @@
 // 输出: 49
 
 // 两次循环性能不好：1868 ms, 在所有 javascript 提交中击败了5.11%
-var maxArea = function(height) {
+function maxArea(height) {
   if (height.length === 2) {
     return height[0] > height[1] ? height[1] : height[0];
   }
   let max = 0;
-  const length = height.length;
+  const { length } = height;
   for (let i = 0; i < length; i++) {
     for (let j = i + 1; j < length; j++) {
       if (height[j + 1] && height[j + 1] > height[j]) {
         continue;
       }
-      let area = (height[i] > height[j] ? height[j] : height[i]) * (j - i);
+      const area = (height[i] > height[j] ? height[j] : height[i]) * (j - i);
       if (area > max) {
         max = area;
       }
     }
   }
   return max;
-};
+}
 
 // 应该想一个好办法
 

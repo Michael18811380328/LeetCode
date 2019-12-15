@@ -18,7 +18,13 @@
     "no-param-reassign": "off",
     "consistent-return": "off",
     "import/prefer-default-export": "off",
-    "func-names": "off"
+    "func-names": "off",
+    "no-bitwise": "off",
+    "no-continue": "off",
+    "no-restricted-syntax": "off",
+    "prefer-destructuring": "off",
+    "object-curly-newline": "off",
+    "no-return-assign": "off"
   }
 }
 
