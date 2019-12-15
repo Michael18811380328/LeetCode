@@ -25,26 +25,26 @@ function viewPoint(i, j, grid) {
 
   // 遍历周边四个节点，如果有节点，节点没有被遍历过，并且值为1，那么继续遍历这个节点和其子节点
   if (grid[i][j - 1] && grid[i][j - 1] === '1') {
-    const key = getKey(i, j - 1);
-    if (!grid[key]) {
+    const key1 = getKey(i, j - 1);
+    if (!grid[key1]) {
       viewPoint(i, j - 1, grid);
     }
   }
   if (grid[i][j + 1] && grid[i][j + 1] === '1') {
-    const key = getKey(i, j + 1);
-    if (!grid[key]) {
+    const key2 = getKey(i, j + 1);
+    if (!grid[key2]) {
       viewPoint(i, j + 1, grid);
     }
   }
   if (grid[i - 1] && grid[i - 1][j] === '1') {
-    const key = getKey(i - 1, j);
-    if (!grid[key]) {
+    const key3 = getKey(i - 1, j);
+    if (!grid[key3]) {
       viewPoint(i - 1, j, grid);
     }
   }
   if (grid[i + 1] && grid[i + 1][j] === '1') {
-    const key = getKey(i + 1, j);
-    if (!grid[key]) {
+    const key4 = getKey(i + 1, j);
+    if (!grid[key4]) {
       viewPoint(i + 1, j, grid);
     }
   }

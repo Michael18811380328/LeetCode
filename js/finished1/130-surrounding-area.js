@@ -28,16 +28,16 @@ function deepErgodicity(i, j, arr) {
     arr[key] = true;
     // 获取周边的四个点（如果有，继续进行判断）
     if (arr[i][j - 1]) {
-      deepErgodicity(i, j - 1, arr)
+      deepErgodicity(i, j - 1, arr);
     }
     if (arr[i][j + 1]) {
-      deepErgodicity(i, j + 1, arr)
+      deepErgodicity(i, j + 1, arr);
     }
     if (arr[i + 1]) {
-      deepErgodicity(i + 1, j, arr)
+      deepErgodicity(i + 1, j, arr);
     }
     if (arr[i - 1]) {
-      deepErgodicity(i - 1, j, arr)
+      deepErgodicity(i - 1, j, arr);
     }
   }
 }
@@ -49,7 +49,7 @@ function deepErgodicity(i, j, arr) {
 // 136 ms, 在所有 javascript 提交中击败了23.57%
 function solve(board) {
   for (let i = 0; i < board.length; i++) {
-    for (let j = 0 ; j < board[i].length; j++) {
+    for (let j = 0; j < board[i].length; j++) {
       if (i === 0 || i === board.length - 1 || j === 0 || j === board[i].length - 1) {
         // 第一行和最后一行, 第一列和最后一列
         deepErgodicity(i, j, board);
@@ -58,9 +58,9 @@ function solve(board) {
   }
   // 再次遍历，如果是O，需要获取哈希值是否是真假
   for (let i = 0; i < board.length; i++) {
-    for (let j = 0 ; j < board[i].length; j++) {
+    for (let j = 0; j < board[i].length; j++) {
       if (board[i][j] === 'O') {
-        let key = getKey(i, j);
+        const key = getKey(i, j);
         if (!board[key]) {
           board[i][j] = 'X';
         }

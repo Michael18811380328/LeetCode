@@ -23,7 +23,8 @@
     "no-continue": "off",
     "no-restricted-syntax": "off",
     "prefer-destructuring": "off",
-    "object-curly-newline": "off"
+    "object-curly-newline": "off",
+    "no-return-assign": "off"
   }
 }
 

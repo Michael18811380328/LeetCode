@@ -85,7 +85,7 @@ function singleNumber4(nums) {
     }
   }
   for (const key in nums) {
-    if (isNaN(key)) {
+    if (key.indexOf('key') > -1) {
       return nums[key];
     }
   }

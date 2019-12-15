@@ -4,14 +4,14 @@
 
 // 如果你可以绕环路行驶一周，则返回出发时加油站的编号，否则返回 -1。
 
-// 说明: 
+// 说明:
 
 // 如果题目有解，该答案即为唯一答案。
 // 输入数组均为非空数组，且长度相同。
 // 输入数组中的元素均为非负数。
 // 示例 1:
 
-// 输入: 
+// 输入:
 // gas  = [1,2,3,4,5]
 // cost = [3,4,5,1,2]
 // 输出: 3
@@ -32,7 +32,7 @@
 function canComplete(leftArr) {
   let sum = 0;
   const len = leftArr.length;
-  leftArr.forEach(item => sum += item);
+  leftArr.forEach((item) => sum += item);
   // 首先计算结果：如果总和小于0，那么一定不能环形行驶一圈
   if (sum < 0) {
     return -1;

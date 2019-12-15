@@ -9,29 +9,24 @@ function multiply(num1, num2) {
 
 // 方法二：模拟乘法计算，一位一位相乘，然后把结果相加
 // 120 ms, 在所有 javascript 提交中击败了43.11%
-function multiply2(num1, num2) {
-  // 首先处理特殊情况
-  if (num1 === '0' || num2 === '0') return '0';
-  if (num1 === '1') return num2;
-  if (num2 === '1') return num1;
-  // 判断大数和小数
-  const bigNum = num1.length > num2.length ? num1 : num2;
-  const smallNum = num1.length > num2.length ? num2 : num1;
-  // 小数外循环，大数内循环，然后把结果加起来
-  const bigLen = bigNum.length;
-  const smallLen = smallNum.length;
-  let resultArr = [];
-  for (let i = 0; i < smallLen; i++) {
-    let tmpResult = new Array(smallLen - i - 1).fill(0);
-    for (let j = bigLen - 1; j >= 0; j--) {
-      let multiply = smallNum[i] * bigNum[j];
-      tmpResult.unshift(multiply);
+
+// 辅助函数
+function handleAdd(item) {
+  item.unshift(0);
+  for (let i = item.length - 1; i >= 0; i--) {
+    if (item[i + 1] >= 10) {
+      const remain = Math.floor(item[i + 1] / 10);
+      item[i + 1] = item[i + 1] % 10;
+      item[i] += remain;
     }
-    resultArr.push(tmpResult)
   }
-  return handleSum(resultArr);
+  if (item[0] === 0) {
+    item.shift(1);
+  }
+  return item.join('');
 }
 
+// 辅助函数
 function handleSum(arr) {
   if (arr.length === 1) {
     return handleAdd(arr[0]);
@@ -52,7 +47,7 @@ function handleSum(arr) {
       arr[i] = newArr.concat(arr[i]);
     }
   }
-  let result = new Array(maxLen).fill(0);
+  const result = new Array(maxLen).fill(0);
   // 3/加起来求和
   for (let i = 0; i < arr.length; i++) {
     for (let j = maxLen - 1; j >= 0; j--) {
@@ -62,19 +57,28 @@ function handleSum(arr) {
   return handleAdd(result);
 }
 
-function handleAdd(item) {
-  item.unshift(0);
-  for (let i = item.length - 1; i >= 0; i--) {
-    if (item[i + 1] >= 10) {
-      const remain = Math.floor(item[i + 1] / 10);
-      item[i + 1] = item[i + 1] % 10;
-      item[i] += remain;
+// 主函数
+function multiply2(num1, num2) {
+  // 首先处理特殊情况
+  if (num1 === '0' || num2 === '0') return '0';
+  if (num1 === '1') return num2;
+  if (num2 === '1') return num1;
+  // 判断大数和小数
+  const bigNum = num1.length > num2.length ? num1 : num2;
+  const smallNum = num1.length > num2.length ? num2 : num1;
+  // 小数外循环，大数内循环，然后把结果加起来
+  const bigLen = bigNum.length;
+  const smallLen = smallNum.length;
+  const resultArr = [];
+  for (let i = 0; i < smallLen; i++) {
+    const tmpResult = new Array(smallLen - i - 1).fill(0);
+    for (let j = bigLen - 1; j >= 0; j--) {
+      const tmp = smallNum[i] * bigNum[j];
+      tmpResult.unshift(tmp);
     }
+    resultArr.push(tmpResult);
   }
-  if (item[0] === 0) {
-    item.shift(1);
-  }
-  return item.join('');
+  return handleSum(resultArr);
 }
 
 export { multiply, multiply2 };

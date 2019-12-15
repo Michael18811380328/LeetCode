@@ -16,35 +16,35 @@
 function getMin1(i, j, triangle) {
   if (triangle[i + 1]) {
     return triangle[i][j] + Math.min(getMin1(i + 1, j, triangle), getMin1(i + 1, j + 1, triangle));
-  } else {
-    return triangle[i][j];
   }
+  return triangle[i][j];
 }
-var minimumTotal1 = function(triangle) {
+
+function minimumTotal1(triangle) {
   const len = triangle.length;
   if (len === 1) {
     return triangle[0][0];
   }
   return getMin1(0, 0, triangle);
-};
+}
 
 // 改进版：把数组绑定到全局变量上，避免每次传递数组，占用内存；使用尾递归优化内存(测试可以使用，但是全局无法绑定)
 // 这样可以使用全局变量，但是还是超时。
 function getMin2(i, j) {
   if (window.triangle[i + 1]) {
     return window.triangle[i][j] + Math.min(getMin2(i + 1, j), getMin2(i + 1, j + 1));
-  } else {
-    return window.triangle[i][j];
   }
+  return window.triangle[i][j];
 }
-var minimumTotal2 = function(triangle) {
+
+function minimumTotal2(triangle) {
   const len = triangle.length;
   window.triangle = triangle;
   if (len === 1) {
     return triangle[0][0];
   }
   return getMin2(0, 0);
-};
+}
 
 // 继续改进版：可以使用哈希表存放最小长度，避免多次递归运算
 // 84 ms, 在所有 javascript 提交中击败了 19.08%
@@ -53,22 +53,21 @@ function getMin3(i, j, triangle) {
   if (triangle[key]) {
     return triangle[key];
   }
-  else {
-    let result = triangle[i][j];
-    if (triangle[i + 1]) {
-      result = result + Math.min(getMin3(i + 1, j, triangle), getMin3(i + 1, j + 1, triangle));
-    }
-    triangle[key] = result;
-    return result;
+  let result = triangle[i][j];
+  if (triangle[i + 1]) {
+    result += Math.min(getMin3(i + 1, j, triangle), getMin3(i + 1, j + 1, triangle));
   }
+  triangle[key] = result;
+  return result;
 }
-var minimumTotal3 = function(triangle) {
+
+function minimumTotal3(triangle) {
   const len = triangle.length;
   if (len === 1) {
     return triangle[0][0];
   }
   return getMin3(0, 0, triangle);
-};
+}
 
 
 // 思路四：首先把三角形构造一个树，然后计算不同的路径的总和，这样计算性能比方法一好，正确率比第二种好（优先使用第三种思路）

@@ -20,22 +20,22 @@ function addStrings2(num1, num2) {
   // 首先处理特殊情况
   let arr1 = num1.split('');
   let arr2 = num2.split('');
-  let maxLen = Math.max(arr1.length, arr2.length);
+  const maxLen = Math.max(arr1.length, arr2.length);
   // 增加前导0（这里能否优化） 字符串前面加0比数组的性能更好
   if (arr1.length < maxLen) {
-    let tmp = maxLen - arr1.length;
-    let tmpArr = new Array(tmp).fill(0);
+    const tmp = maxLen - arr1.length;
+    const tmpArr = new Array(tmp).fill(0);
     arr1 = tmpArr.concat(arr1);
   }
   if (arr2.length < maxLen) {
-    let tmp = maxLen - arr2.length;
-    let tmpArr = new Array(tmp).fill(0);
+    const tmp = maxLen - arr2.length;
+    const tmpArr = new Array(tmp).fill(0);
     arr2 = tmpArr.concat(arr2);
   }
-  let resultArr = new Array(maxLen + 1).fill(0);
+  const resultArr = new Array(maxLen + 1).fill(0);
   // 循环增加
   for (let i = maxLen - 1; i >= 0; i--) {
-    resultArr[i + 1] = resultArr[i + 1] + parseInt(arr1[i]) + parseInt(arr2[i]);
+    resultArr[i + 1] = resultArr[i + 1] + parseInt(arr1[i], 10) + parseInt(arr2[i], 10);
     if (resultArr[i + 1] >= 10) {
       resultArr[i]++;
       resultArr[i + 1] -= 10;
@@ -60,23 +60,23 @@ function addStrings3(num1, num2) {
   if (num1.length < maxLen) {
     let tmp = maxLen - num1.length;
     while (tmp > 0) {
-      num1 = '0' + num1;
+      num1 = `0${num1}`;
       tmp--;
     }
   }
   if (num2.length < maxLen) {
     let tmp = maxLen - num2.length;
     while (tmp > 0) {
-      num2 = '0' + num2;
+      num2 = `0${num2}`;
       tmp--;
     }
   }
   const arr1 = num1.split('');
   const arr2 = num2.split('');
-  let resultArr = new Array(maxLen + 1).fill(0);
+  const resultArr = new Array(maxLen + 1).fill(0);
   // 循环增加
   for (let i = maxLen - 1; i >= 0; i--) {
-    resultArr[i + 1] = resultArr[i + 1] + parseInt(arr1[i]) + parseInt(arr2[i]);
+    resultArr[i + 1] = resultArr[i + 1] + parseInt(arr1[i], 10) + parseInt(arr2[i], 10);
     if (resultArr[i + 1] >= 10) {
       resultArr[i]++;
       resultArr[i + 1] -= 10;

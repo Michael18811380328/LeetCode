@@ -35,4 +35,19 @@ function twoSum(nums, target) {
   }
 }
 
-export { twoSum, twoSum1 };
+// 方法三：使用哈希表
+// 68 ms, 在所有 javascript 提交中击败了85.69%
+function twoSum2(nums, target) {
+  const len = nums.length;
+  const hash = {};
+  for (let i = 0; i < len; i++) {
+    const item = nums[i];
+    const index = hash[`${item}`];
+    if (index > -1) {
+      return [index, i];
+    }
+    hash[`${target - item}`] = i;
+  }
+}
+
+export { twoSum, twoSum1, twoSum2 };

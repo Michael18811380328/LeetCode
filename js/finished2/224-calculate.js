@@ -13,11 +13,11 @@ function handleArithmetic(str) {
   const arr = str.split('+');
   let result = 0;
   for (let i = 0; i < arr.length; i++) {
-    let item = arr[i].split('-');
-    result = result + (parseInt(item[0]) || 0);
+    const item = arr[i].split('-');
+    result += (parseInt(item[0], 10) || 0);
     if (item[1]) {
       for (let j = 1; j < item.length; j++) {
-        result -= parseInt(item[j]);
+        result -= parseInt(item[j], 10);
       }
     }
   }
@@ -28,7 +28,7 @@ function handleArithmetic(str) {
 // 消耗内存很多
 function calculate(s) {
   // 去掉空格
-  s = s.replace(/(^\s*)|(\s+)|(\s*$)/g, "");
+  s = s.replace(/(^\s*)|(\s+)|(\s*$)/g, '');
   // 去掉括号
   while (s.indexOf(')') !== -1) {
     const endPoint = s.indexOf(')');
