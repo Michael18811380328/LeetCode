@@ -13,7 +13,8 @@ function findTheDifference(s, t) {
     const index = s.indexOf(item);
     if (index === -1) {
       return item;
-    } if (index === 0) {
+    }
+    if (index === 0) {
       s = s.slice(1);
     } else {
       s = s.slice(0, index) + s.slice(index + 1, s.length);

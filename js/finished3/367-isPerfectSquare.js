@@ -35,7 +35,8 @@ function isPerfectSquare2(num) {
     const product = middle ** 2;
     if (product === num) {
       return true;
-    } if (product < num) {
+    }
+    if (product < num) {
       start = middle;
     } else if (product > num) {
       end = middle;
