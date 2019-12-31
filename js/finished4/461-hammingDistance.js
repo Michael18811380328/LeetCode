@@ -9,7 +9,6 @@
  * @return {number}
  */
 // 72 ms , 在所有 javascript 提交中击败了 62.70%
-
 function hammingDistance2(x, y) {
   let result = 0;
   while (x > 0 || y > 0) {
@@ -26,8 +25,8 @@ function hammingDistance2(x, y) {
 function hammingDistance(x, y) {
   let result = 0;
   while (x > 0 || y > 0) {
-    const a = x % 2; const
-      b = y % 2;
+    const a = x % 2;
+    const b = y % 2;
     if ((a === 1 && b === 0) || (a === 0 && b === 1)) {
       result++;
     }

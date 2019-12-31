@@ -42,7 +42,8 @@ function isUgly(num) {
 function isUgly2(num) {
   if (num <= 0) {
     return false;
-  } if (num < 7) {
+  }
+  if (num < 7) {
     return true;
   }
   while (num % 5 === 0 && num > 1) {

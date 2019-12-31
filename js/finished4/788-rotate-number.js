@@ -39,6 +39,7 @@ function rotatedDigits(N) {
       const num3 = i % 10; // 个位
       const num2 = ((i % 100) - num3) / 10; // 十位
       const num1 = (i - num2 * 10 - num3) / 100; // 百位
+      // TODO 下面三种情况使用一个IF判断
       // 百位是18, 十位是018，个位必须是2569
       if (Arr4.includes(num1) && Arr2.includes(num2) && Arr1.includes(num3)) {
         result++;
