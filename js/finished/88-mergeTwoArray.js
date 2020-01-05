@@ -15,6 +15,7 @@
 function mergeTwoArray(nums1, m, nums2, n) {
   if (n === 0) return;
   if (m === 0) {
+    // PS： 能否不需要splice，直接返回nums2?
     nums1.splice(0, n, ...nums2);
     return nums1;
   }
