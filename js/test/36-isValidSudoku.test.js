@@ -1,9 +1,11 @@
-import { isValidSudoku, isDuplicate, isValidSudoku2, isValidHash } from '../finished/36-isValidSudoku';
+import { isValidSudoku, isDuplicate, isDuplicate2, isValidSudoku2, isValidHash } from '../finished/36-isValidSudoku';
 
 test('36-isValidSudoku.test', () => {
   // 判断9个数中的元素是否重复
   expect(isDuplicate(['5', '3', '.', '.', '7', '.', '.', '.', '.'])).toEqual(true);
   expect(isDuplicate(['5', '3', '.', '.', '7', '.', '.', '.', '7'])).toEqual(false);
+  expect(isDuplicate2(['5', '3', '.', '.', '7', '.', '.', '.', '.'])).toEqual(true);
+  expect(isDuplicate2(['5', '3', '.', '.', '7', '.', '.', '.', '7'])).toEqual(false);
 
   const arr1 = [
     ['5', '3', '.', '.', '7', '.', '.', '.', '.'],
