@@ -31,8 +31,6 @@
 //   return result;
 // };
 
-// console.log(plusOne([6,1,4,5,3,9,0,1,9,5,1,8,6,7,0,5,5,4,3]));
-
 // 思路二：直接在原数组最后一位加一。然后遍历原始数组，如果某一个是10， 那么这一个变成1，前一个加一；这样性能好一点。
 // 60 ms , 在所有 javascript 提交中击败了 94.99%
 function plusOne(digits) {
@@ -50,7 +48,5 @@ function plusOne(digits) {
   }
   return digits;
 }
-
-// console.log(plusOne([4, 3, 2, 1]));
 
 export { plusOne };
