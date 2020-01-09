@@ -16,5 +16,4 @@ function isPalindrome(x) {
 }
 
 // 执行用时: 220 ms 45.2 MB
-// console.log(isPalindrome(-123));
 export { isPalindrome };

@@ -9,10 +9,7 @@
 // 2 遇到3，遍历上面的数组，复制每一条信息，插入对应的三条 splice(i, 1, newArray) [ad,ae,af,...];
 // 执行用时 : 64 ms , 在所有 JavaScript 提交中击败了90.94% 的用户
 // 内存消耗 : 33.8 MB , 在所有 JavaScript 提交中击败了23.48% 的用户
-/**
- * @param {string} digits
- * @return {string[]}
- */
+
 function letterCombinations(digits) {
   let resultArr = [];
   if (digits.length === 0) return resultArr; // 处理传入为空

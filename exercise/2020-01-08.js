@@ -151,12 +151,107 @@ function searchRange2(nums, target) {
   return [start, end];
 }
 
-// 31
+// 31 用数组表示一个数，调换位置，获取比这个数大的一个数
+function nextPermutation(nums) {
+  const len = nums.length;
+  let index = -1;
+  for (let i = len - 2; i >= 0; i--) {
+    if (nums[i + 1] > nums[i]) {
+      index = i;
+      break;
+    }
+  }
+  if (index === -1) {
+    nums.reverse();
+    return;
+  }
+  let tmp;
+  let tmpIndex;
+  for (let j = index + 1; j < len; j++) {
+    if (nums[j] > nums[index] && (!tmp || nums[j] <= tmp)) {
+      tmp = nums[j];
+      tmpIndex = j;
+    }
+  }
+  nums[tmpIndex] = nums[index];
+  nums[index] = tmp;
+  const arr = nums.splice(index + 1, len - index - 1);
+  arr.sort((a, b) => a - b);
+  nums.push(...arr);
+}
 
-// 29
+// 29 不使用divide实现除法（算法不好）
+function handleBig(res) {
+  if (res > 2147483647) return 2147483647;
+  if (res < -2147483648) return -2147483648;
+}
 
-// 28
+function divide(dividend, divisor) {
+  if (dividend === 0) return 0;
+  if (dividend === divisor) return 1;
+  if (dividend === -divisor) return -1;
+  if (divisor === 1) return handleBig(dividend);
+  if (divisor === -1) return handleBig(-dividend);
+  if (Math.abs(dividend) < Math.abs(divisor)) return 0;
+  let result = 0;
+  if (dividend > 0 && divisor > 0) {
+    while (dividend >= divisor) {
+      dividend -= divisor;
+      result++;
+    }
+  }
+  if (dividend < 0 && divisor < 0) {
+    while (-dividend >= -divisor) {
+      dividend -= divisor;
+      result++;
+    }
+  }
+  if (dividend > 0 && divisor < 0) {
+    while (dividend >= -divisor) {
+      dividend += divisor;
+      result++;
+    }
+    result = -result;
+  }
+  if (dividend < 0 && divisor > 0) {
+    while (-dividend >= divisor) {
+      dividend += divisor;
+      result++;
+    }
+    result = -result;
+  }
+  return handleBig(result);
+}
 
-// 27
+// 28 获取字符串中首次出现另一个字符串的位置
+function strStr(haystack, needle) {
+  if (needle === '') return 0;
+  return haystack.indexOf(needle);
+}
 
-// 26
+// 27 原地移除数组中的某个元素，并返回新数组中的长度
+function removeElement(nums, val) {
+  if (!nums.includes(val)) {
+    return nums.length;
+  }
+  for (let i = 0; i < nums.length;) {
+    if (nums[i] === val) {
+      nums.splice(i, 1);
+    } else {
+      i++;
+    }
+  }
+  return nums.length;
+}
+
+// 26 原地删除排序数组中的重复出现的元素
+function removeDuplicates(nums) {
+  for (let i = 0; i < nums.length) {
+    if (nums[i] === nums[i + 1]) {
+      nums.splice(i, 1);
+    } else {
+      i++;
+    }
+  }
+  return nums.length;
+}
