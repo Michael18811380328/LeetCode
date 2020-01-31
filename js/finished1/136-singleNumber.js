@@ -30,7 +30,7 @@ function singleNumber1(nums) {
 
 // 方法二：遍历数组，通过indexOf lastIndexOf 获取某个元素在数组中出现的次数。如果出现一次就是结果
 // 404 ms, 在所有 javascript 提交中击败了14.02%
-// 说明 indexOf lastIndexOf 严重耗时
+// 说明 indexOf lastIndexOf 严重耗时(相当于一次循环)
 // 这个办法消耗内存最少
 function singleNumber2(nums) {
   const len = nums.length;

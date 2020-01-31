@@ -48,6 +48,7 @@ function countAndSay(n) {
 
 // 思路二：通过方法一训练，获取结果字典；训练集合并计算出30内的结果
 // 56 ms, 在所有 javascript 提交中击败了98.38%
+// 训练集合思路可行，但是方法实际不可行
 function countAndSay2(n) {
   const dict = [
     '1',

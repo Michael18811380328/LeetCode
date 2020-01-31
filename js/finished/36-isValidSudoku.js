@@ -15,6 +15,7 @@
 // 思路1：按照定义，判断每行、每列、每个小单元格是否有重复的元素，需要三次N平方循环，每次判断需要循环
 
 // 辅助函数：判断9个数中是否有重复元素
+// 80 ms, 在所有 JavaScript 提交中击败了94.19%
 function isDuplicate(arr) {
   for (let i = 0; i < 9; i++) {
     if (arr[i] === '.') {
@@ -29,7 +30,16 @@ function isDuplicate(arr) {
   return true;
 }
 
-// 88 ms, 在所有 javascript 提交中击败了82.55%
+// 这里的性能不好，indexOf,lastIndexOf
+// 直接使用Set去重后，比较长度，性能应该更好（首先过滤掉点）
+// 92 ms, 在所有 JavaScript 提交中击败了62.00% 从时间上看没有明显效果·
+function isDuplicate2(arr) {
+  arr = arr.filter((item) => {return item !== '.';});
+  const res = new Set(arr);
+  return res.size === arr.length;
+}
+
+// 主函数
 function isValidSudoku(board) {
   // 二维数组
   for (let i = 0; i < 9; i++) {
@@ -200,4 +210,4 @@ function isValidSudoku2(board) {
 //   return true;
 // }
 
-export { isValidSudoku, isDuplicate, isValidSudoku2, isValidHash };
+export { isValidSudoku, isDuplicate, isDuplicate2, isValidSudoku2, isValidHash };

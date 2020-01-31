@@ -25,10 +25,7 @@ function isValid(str) {
       return false;
     }
   }
-  if (res === 0) {
-    return true;
-  }
-  return false;
+  return res === 0;
 }
 
 // 方法一：列举全部的情况，然后过滤一下处理(本地少量测试可以，但是时间复杂度太差，LeetCode超时)
@@ -137,13 +134,11 @@ function generateParenthesis3(n) {
     for (let j = 0; j < len; j++) {
       const lastItem = `${arr[j]})`;
       const lastRes = isValid4(lastItem);
-      // console.log(lastItem, lastRes, 2 * n - i);
       if (lastRes >= 0 && lastRes < 2 * n - i) {
         arr[j + len] = lastItem;
       }
       const firstItem = `${arr[j]}(`;
       const firstRes = isValid4(firstItem);
-      // console.log(firstItem, firstRes, 2 * n - i);
       if (firstRes >= 0 && firstRes < 2 * n - i) {
         arr[j] = firstItem;
       }

@@ -80,7 +80,6 @@ function compareVersion2(version1, version2) {
   if (res2 !== '') {
     return -1;
   }
-
   return 0;
 }
 
