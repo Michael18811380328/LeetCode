@@ -7,7 +7,8 @@
     "test": "test"
   },
   "scripts": {
-    "test": "jest",
+    "clean": "rm -rf node_modules",
+    "test": "node ./scripts/jest-test.js --env=jsdom --watchAll",
     "lint": "eslint ./js/*/*.js",
     "lint-html": "eslint **/*.js -f html -o ./eslint-reports/lint-results.html",
     "lint-fix": "eslint --fix ./js/*/*.js"
@@ -24,6 +25,7 @@
   },
   "homepage": "https://github.com/Michael18811380328/LeetCode#readme",
   "devDependencies": {
+    "@babel/preset-env": "^7.8.3",
     "babel-core": "^6.26.3",
     "babel-jest": "^24.9.0",
     "babel-preset-env": "^1.7.0",

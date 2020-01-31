@@ -88,13 +88,9 @@ images 图片文件
 
 js LeetCode 习题，因为题目较多，所以分成多个文件夹管理
 
-​	finished 序号<100
+​	finished
 
-​	finished1 序号100-200
-
-​	test 测试文件，序号<100
-  
-  test1 测试文件，序号 100-200
+​	test 测试文件
 
 ​	stalled 未完成的题目（不超过10道）
 
