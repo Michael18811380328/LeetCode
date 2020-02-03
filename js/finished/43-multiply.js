@@ -6,6 +6,7 @@
 function multiply(num1, num2) {
   return String(BigInt(num1) * BigInt(num2));
 }
+// 由于BigInt还在提案中，测试无法通过，使用时监测浏览器兼容
 
 // 方法二：模拟乘法计算，一位一位相乘，然后把结果相加
 // 120 ms, 在所有 javascript 提交中击败了43.11%

@@ -1,10 +1,6 @@
-import { addStrings, addStrings2, addStrings3 } from '../finished4/415-addStrings';
+import { addStrings2, addStrings3 } from '../finished4/415-addStrings';
 
 test('415-addStrings.js', () => {
-  expect(addStrings('0', '0')).toEqual('0');
-  expect(addStrings('1', '2')).toEqual('3');
-  expect(addStrings('123', '54321')).toEqual('54444');
-
   expect(addStrings2('0', '0')).toEqual('0');
   expect(addStrings2('1', '2')).toEqual('3');
   expect(addStrings2('123', '54321')).toEqual('54444');
