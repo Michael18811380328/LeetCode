@@ -11,6 +11,7 @@
 function addStrings(num1, num2) {
   return String(BigInt(num1) + BigInt(num2));
 }
+// 由于BigInt还在提案中，测试无法通过，使用时监测浏览器兼容
 
 // 思路二，转换成数组相加，然后计算结果转换成字符串
 // 104 ms, 在所有 javascript 提交中击败了26.28% 性能不好
