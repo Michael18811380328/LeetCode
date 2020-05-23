@@ -2,13 +2,11 @@
 
 我方法的核心实际上和背英语单词类似，总结题型，找到高频题并且不断重复。具体来讲就是
 
-按 tag 分类
-艾宾浩斯记忆曲线，不断重复刷过的题
-不断总结掌握情况
+按 tag 分类——艾宾浩斯记忆曲线，不断重复刷过的题——不断总结掌握情况
 
 为什么这么来操作是因为经过很多面试后，发现大多数题型还是比较基本和重要的，分布在 medium 和 advanced medium 之间。而这些题目又可以演变出来很多不同的题，但万变不离其宗，抓住本质并且熟练掌握即可。
 
-1 按 tag 分类
+### 1 按 tag 分类
 
 第一件事就是按照 tag 把题目分成不同的 list，一般每个公司为一个 list。一定要根据自己的刷题掌握情况来定制 list，这也是我这个方法保证对你有用的精髓。随便从其他地方的舶来品基本没用，因为只有自己才最了解自己的复习情况。如果你基础比较差，之前没怎么刷过题或者是转专业，我推荐的做法是额外分一个 basic list，意思是所有基础的数据结构/算法都覆盖一遍，这些题是一定要会的，基础中的基础。我把我认为基础的 list 需要 cover 的内容分享在这里（后面是题号）：
 
@@ -26,7 +24,7 @@ Binary Search
 
 这个基础的 list 基本上一定要涵盖这些基础知识点（面试必考）。
 
-2 艾宾浩斯记忆曲线，不断重复刷过的题
+### 2 艾宾浩斯记忆曲线，不断重复刷过的题
 
 第二步就是著名的艾宾浩斯记忆曲线的运用了。考过托福/雅思的细心的同学可能发现了，这个实际上和记忆英语单词有异曲同工之处 -- 先做 list，第二步我们要干嘛？按 list 不断复习，每天循环呀！这里我用我的 Basic List 来举个例子：
 
@@ -42,7 +40,7 @@ Binary Search
 
 然后根据这些记录的情况，第二天来安排不同的优先级和精力重新刷这些题，大家可以看到 168 我打了三个 ※，说明 3 次都不会，日后还需要继续巩固此类题型。对于那些 y 的题目直接过，基本上半年再来 review 一次。
 
-3 不断总结掌握情况
+### 3 不断总结掌握情况
 
 最后一步也是最重要的一步：总结。我们需要随时记录下当前刷题的状态，然后每天在刷题时做到有的放矢：不浪费每一道新题，不重复任何一道已掌握的旧题。具体操作如下：
 
@@ -149,17 +147,17 @@ public:
 
 ```java
 public int[] twoSum(int[] nums, int target) {
-    Map<Integer, Integer> map = new HashMap<>(); 
-    int[] result = {-1, -1};  
-    for (int i = 0; i < nums.length; ++i) { 
-        if (map.containsKey(target - nums[i])) {   
-            result[0] = map.get(target - nums[i]); 
-            result[1] = i; 
-            break; 
-        }  
-        map.put(nums[i], i); 
-    }  
-    return result; 
+    Map<Integer, Integer> map = new HashMap<>();
+    int[] result = {-1, -1};
+    for (int i = 0; i < nums.length; ++i) {
+        if (map.containsKey(target - nums[i])) {  
+            result[0] = map.get(target - nums[i]);
+            result[1] = i;
+            break;
+        }
+        map.put(nums[i], i);
+    }
+    return result;
 }
 ```
 
@@ -186,17 +184,12 @@ public class Solution {
 再举个**极端的例子**吧，179. Largest Number，这个题目我最后精简成的代码如下：
 
 ```java
-public String largestNumber(int[] nums) { 
-    return Arrays.stream(nums) 
-    .mapToObj(String::valueOf) 
-    .sorted((s1, s2) -> (s2 + s1).compareTo(s1 + s2)) 
-    .reduce((s1, s2) -> s1.equals("0") ? s2 : s1 + s2).get(); 
+public String largestNumber(int[] nums) {
+    return Arrays.stream(nums)
+    .mapToObj(String::valueOf)
+    .sorted((s1, s2) -> (s2 + s1).compareTo(s1 + s2))
+    .reduce((s1, s2) -> s1.equals("0") ? s2 : s1 + s2).get();
 }
 ```
 
 我本人不是算法高手，算是勤能补拙类型。这样长期坚持下来，慢慢地感觉自己编程能力提升了很多。不仅面试的时候得心应手，而且在工作中提交code review的时候，往往有自信说自己的代码是简单，干净与优雅的。
-
-
-
-
-
