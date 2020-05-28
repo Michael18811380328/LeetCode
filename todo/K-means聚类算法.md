@@ -51,27 +51,27 @@
 
 ```js
 var data = [  
-    [1, 2],
-    [2, 1],
-    [2, 4], 
-    [1, 3],
-    [2, 2],
-    [3, 1],
-    [1, 1],
+  [1, 2],
+  [2, 1],
+  [2, 4], 
+  [1, 3],
+  [2, 2],
+  [3, 1],
+  [1, 1],
 
-    [7, 3],
-    [8, 2],
-    [6, 4],
-    [7, 4],
-    [8, 1],
-    [9, 2],
+  [7, 3],
+  [8, 2],
+  [6, 4],
+  [7, 4],
+  [8, 1],
+  [9, 2],
 
-    [10, 8],
-    [9, 10],
-    [7, 8],
-    [7, 9],
-    [8, 11],
-    [9, 9],
+  [10, 8],
+  [9, 10],
+  [7, 8],
+  [7, 9],
+  [8, 11],
+  [9, 9],
 ];
 ```
 
@@ -82,37 +82,37 @@ var data = [
 ```js
 // 给定一个n维数组extremes，获取这个数组在不同维度的范围数组 ranges 例如上面的数组 [1, 11];
 function getDataRanges(extremes) {  
-    var ranges = [];
-    for (var dimension in extremes) {
-      ranges[dimension] = extremes[dimension].max - extremes[dimension].min;
-    }
-    return ranges;
+  var ranges = [];
+  for (var dimension in extremes) {
+    ranges[dimension] = extremes[dimension].max - extremes[dimension].min;
+  }
+  return ranges;
 }
 
 // 把每一个维度的参数提取成为公共数据，获取公共数组的最值，再使用上面的函数获取不同维度的范围。在这个范围中进行差值，默认k，计算默认中心的平均值。
 function getDataExtremes(points) {
-    var extremes = [];
-    for (var i in data)
+  var extremes = [];
+  for (var i in data)
+  {
+    var point = data[i];
+    for (var dimension in point)
     {
-        var point = data[i];
-        for (var dimension in point)
-        {
-            if ( ! extremes[dimension] )
-            {
-                extremes[dimension] = {min: 1000, max: 0}; // 设置默认的最值
-            }
-            if (point[dimension] < extremes[dimension].min) // 如果一个值小于最值，进行取代
-            {
-                extremes[dimension].min = point[dimension];
-            }
-            if (point[dimension] > extremes[dimension].max)
-            {
-                extremes[dimension].max = point[dimension];
-            }
-        }
+      if ( ! extremes[dimension] )
+      {
+        extremes[dimension] = {min: 1000, max: 0}; // 设置默认的最值
+      }
+      if (point[dimension] < extremes[dimension].min) // 如果一个值小于最值，进行取代
+      {
+        extremes[dimension].min = point[dimension];
+      }
+      if (point[dimension] > extremes[dimension].max)
+      {
+        extremes[dimension].max = point[dimension];
+      }
     }
-  	// 最终返回这个数组的最值集合
-    return extremes;
+  }
+  // 最终返回这个数组的最值集合
+  return extremes;
 }
 ```
 
