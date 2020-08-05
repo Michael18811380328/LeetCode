@@ -67,18 +67,6 @@ Binary Search
 
 至于那些脑经急转弯式的 easy 和有很多高级技巧的 hard，实际上我个人感觉不是主要的考察范围。除非是 ACM 参赛者，对于一般的 candidate 编程实际上就是一份工作，既然是这样，那就找到合适的方法来应对。把更多的时间花在更宝贵的事情上，例如你喜欢的人和物上。
 
-
-
-
-
-lz在加拿大。
-
-先贴一个自己的刷题的进度吧：
-
-![img](https://pic2.zhimg.com/50/v2-978e9412da254491a12d5fb280fc56cb_hd.jpg)![img](https://pic2.zhimg.com/80/v2-978e9412da254491a12d5fb280fc56cb_hd.jpg)
-
-到目前为止，一共刷了428题。
-
 通过刷题，拿了很多公司（IBM, Google, Amazon, Microsoft, Zenefits, Splunk）的面试以及offer。这428题不是简单的刷一遍就过去的，而是反复练习，直到代码最优，解法最优（有时候甚至觉得自己的代码精简到一个符号都无法减少的地步）。所以有时候面试官问问题，问题还没说完，我就知道应该如何表述自己的心路历程，然后慢慢地给出最优解。
 
 
@@ -86,8 +74,6 @@ lz在加拿大。
 而这一切的关键就在于：做笔记！
 
 下面是我的笔记截图：
-
-![img](https://pic2.zhimg.com/50/v2-7c4d365c8e813c47e9ef6e3bc4f0bb1a_hd.jpg)![img](https://pic2.zhimg.com/80/v2-7c4d365c8e813c47e9ef6e3bc4f0bb1a_hd.jpg)
 
 对于遇到的每个题目，事后我都做上标记：普通题目，难题、好题。此外，每个题目都分为以下几个步骤做好详细的笔记：
 
@@ -115,14 +101,14 @@ lz在加拿大。
 
 ```cpp
 class Solution {
-public:
+  public:
   vector<int> twoSum(vector<int> &numbers, int target) {
     // Start typing your C/C++ solution below
     // DO NOT write int main() function
     vector<int> index(2, 0);
     if (numbers.empty() || numbers.size() == 1)
       return index;
-    
+
     for (int i = 0; i < numbers.size()-1; ++i) {
       // j should start from i+1
       for (int j = i+1; j < numbers.size(); ++j) {
@@ -147,17 +133,17 @@ public:
 
 ```java
 public int[] twoSum(int[] nums, int target) {
-    Map<Integer, Integer> map = new HashMap<>();
-    int[] result = {-1, -1};
-    for (int i = 0; i < nums.length; ++i) {
-        if (map.containsKey(target - nums[i])) {  
-            result[0] = map.get(target - nums[i]);
-            result[1] = i;
-            break;
-        }
-        map.put(nums[i], i);
+  Map<Integer, Integer> map = new HashMap<>();
+  int[] result = {-1, -1};
+  for (int i = 0; i < nums.length; ++i) {
+    if (map.containsKey(target - nums[i])) {  
+      result[0] = map.get(target - nums[i]);
+      result[1] = i;
+      break;
     }
-    return result;
+    map.put(nums[i], i);
+  }
+  return result;
 }
 ```
 
@@ -165,17 +151,17 @@ public int[] twoSum(int[] nums, int target) {
 
 ```java
 public class Solution {
-    public int[] twoSum(int[] nums, int target) {
-        Map<Integer, Integer> map = new HashMap();
-        
-        for (int i = 0; i < nums.length; ++i) {
-            if (map.containsKey(target- nums[i])) {
-                return new int[]{map.get(target- nums[i]), i};
-            }
-            map.put(nums[i], i);
-        }
-        return int[]{-1, -1};
+  public int[] twoSum(int[] nums, int target) {
+    Map<Integer, Integer> map = new HashMap();
+
+    for (int i = 0; i < nums.length; ++i) {
+      if (map.containsKey(target- nums[i])) {
+        return new int[]{map.get(target- nums[i]), i};
+      }
+      map.put(nums[i], i);
     }
+    return int[]{-1, -1};
+  }
 }
 ```
 
@@ -185,7 +171,7 @@ public class Solution {
 
 ```java
 public String largestNumber(int[] nums) {
-    return Arrays.stream(nums)
+  return Arrays.stream(nums)
     .mapToObj(String::valueOf)
     .sorted((s1, s2) -> (s2 + s1).compareTo(s1 + s2))
     .reduce((s1, s2) -> s1.equals("0") ? s2 : s1 + s2).get();

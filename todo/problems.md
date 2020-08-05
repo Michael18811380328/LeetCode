@@ -1,5 +1,3 @@
-# 常考面试算法题
-
 ### 一、暴力枚举
 
 1. [好多鱼！](https://link.zhihu.com/?target=https%3A//www.nowcoder.com/questionTerminal/e3dd485dd23a42899228305658457927%3Ffrom%3Dzhnkw)
