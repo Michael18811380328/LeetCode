@@ -12,7 +12,7 @@
 // 性能很差；超出时间限制
 function findRepeatedDnaSequences1(s) {
   if (s.length <= 10) return [];
-  let result = [];
+  const result = [];
   for (let i = 0; i < s.length - 10; i++) {
     const start = i;
     const end = i + 10;
@@ -46,10 +46,10 @@ function findRepeatedDnaSequences2(s) {
       }
     }
   }
-  let resultArr = [];
-  for (const key in result) {
-    if (result.hasOwnProperty(key)) resultArr.push(key);
-  }
+  const resultArr = [];
+  // for (const key in result) {
+  //   if (result.hasOwnProperty(key)) resultArr.push(key);
+  // }
   return resultArr;
 }
 

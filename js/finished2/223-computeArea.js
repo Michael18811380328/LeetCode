@@ -26,8 +26,8 @@ function computeArea(A, B, C, D, E, F, G, H) {
     return sum;
   }
   // 两个矩形有交集，计算相交区域的面积
-  const x = [A, C, E, G].sort((a, b) => {return (a - b);});
-  const y = [B, D, F, H].sort((a, b) => {return (a - b);});
+  const x = [A, C, E, G].sort((a, b) => a - b);
+  const y = [B, D, F, H].sort((a, b) => a - b);
   const deltaX = x[2] - x[1];
   const deltaY = y[2] - y[1];
   const s3 = deltaX * deltaY;

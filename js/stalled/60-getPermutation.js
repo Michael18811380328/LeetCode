@@ -37,8 +37,8 @@ function nextPermutation(nums) {
   }
   nums[tmpIndex] = nums[index];
   nums[index] = tmp;
-  let arr = nums.splice(index + 1, len - index - 1);
-  arr.sort((a, b) => {return a - b;});
+  const arr = nums.splice(index + 1, len - index - 1);
+  arr.sort((a, b) => a - b);
   nums.push(...arr);
 }
 
@@ -49,7 +49,7 @@ function getPermutation(n, k) {
   if (n === 1 && k === 1) {
     return '1';
   }
-  let init = [];
+  const init = [];
   for (let i = 1; i <= n; i++) {
     init.push(i);
   }
@@ -68,15 +68,15 @@ function getPermutation(n, k) {
 // 然后把商依次从排序好的数组中取出来，构成新的数组
 function getPermutation2(n, k) {
   if (n === 1 && k === 1) return '1';
-  let init = [];
+  const init = [];
   for (let i = 1; i <= n; i++) {
     init.push(i);
   }
   if (k === 1) return init.join('');
-  let remain = k % n;
-  let shang = Math.floor(k / n);
+  const remain = k % n;
+  const shang = Math.floor(k / n);
   if (shang > 0) {
-    let tmp = init[0];
+    const tmp = init[0];
     init[0] = init[n - shang - 1];
     init[n - shang - 1] = tmp;
   }
@@ -87,6 +87,5 @@ function getPermutation2(n, k) {
   }
   return init.join('');
 }
-
 
 export { getPermutation, getPermutation2 };

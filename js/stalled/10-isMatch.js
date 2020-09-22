@@ -6,21 +6,21 @@
 // p 可能为空，且只包含从 a-z 的小写字母，以及字符 . 和 *。
 
 // 删除一个字符串的开头的相同的元素
-function deleteStart(s) {
-  let item = s[0];
-  while (s[0] === item) {
-    s = s.slice(1);
-  }
-  return s;
-}
+// function deleteStart(s) {
+//   const item = s[0];
+//   while (s[0] === item) {
+//     s = s.slice(1);
+//   }
+//   return s;
+// }
 
 // 删除一个字符串的某个字符
-function deleteS(s, item) {
-  while (s[0] === item) {
-    s = s.slice(1);
-  }
-  return s;
-}
+// function deleteS(s, item) {
+//   while (s[0] === item) {
+//     s = s.slice(1);
+//   }
+//   return s;
+// }
 
 // 然后循环P
 // 如果遇到单个字符，那么减去这个字符，减去S中对应的这个字符
@@ -32,30 +32,26 @@ function isMatch(s, p) {
   if (p === '' || p === '.*') {
     return true;
   }
-  while (p.length > 0) {
-    if (p === '.') {
-      // 如果P是. 只要S的长度是1，就是真；否则就是假的
-      return s.length === 1;
-    }
-    else if (p.length === 1) {
-      // 如果P的长度是1，并且与S相等，那么返回真
-      return p === s;
-    }
-    else if (p[0] === '.' && p[1] === '*') {
-      p = p.slice(2);
-      s = deleteStart(s);
-    }
-    else if (p[1] === '*') {
-      s = deleteS(s, p[0]);
-      p = p.slice(2);
-    }
-    else if ((p[0] === s[0]) || (p[0] === '.' && p[1] !== '*')) {
-      p = p.slice(1);
-      s = s.slice(1);
-    } else {
-      return false;
-    }
-  }
+  // while (p.length > 0) {
+  //   if (p === '.') {
+  //     // 如果P是. 只要S的长度是1，就是真；否则就是假的
+  //     return s.length === 1;
+  //   } else if (p.length === 1) {
+  //     // 如果P的长度是1，并且与S相等，那么返回真
+  //     return p === s;
+  //   } else if (p[0] === '.' && p[1] === '*') {
+  //     p = p.slice(2);
+  //     s = deleteStart(s);
+  //   } else if (p[1] === '*') {
+  //     s = deleteS(s, p[0]);
+  //     p = p.slice(2);
+  //   } else if ((p[0] === s[0]) || (p[0] === '.' && p[1] !== '*')) {
+  //     p = p.slice(1);
+  //     s = s.slice(1);
+  //   } else {
+  //     return false;
+  //   }
+  // }
   return s.length === 0;
 }
 

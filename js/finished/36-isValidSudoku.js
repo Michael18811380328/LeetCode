@@ -34,7 +34,7 @@ function isDuplicate(arr) {
 // 直接使用Set去重后，比较长度，性能应该更好（首先过滤掉点）
 // 92 ms, 在所有 JavaScript 提交中击败了62.00% 从时间上看没有明显效果·
 function isDuplicate2(arr) {
-  arr = arr.filter((item) => {return item !== '.';});
+  arr = arr.filter((item) => item !== '.');
   const res = new Set(arr);
   return res.size === arr.length;
 }
