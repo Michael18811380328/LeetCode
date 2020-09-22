@@ -27,10 +27,13 @@ function wordPattern(pattern, str) {
   }
   const dict2 = {};
   for (const key in dict) {
-    if (dict2[dict[key]]) {
-      return false;
+    // Object.prototype.hasOwnProperty.call(dict, key)
+    if (Object.prototype.hasOwnProperty.call(dict, key)) {
+      if (dict2[dict[key]]) {
+        return false;
+      }
+      dict2[dict[key]] = true;
     }
-    dict2[dict[key]] = true;
   }
   return true;
 }
