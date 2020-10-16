@@ -33,4 +33,31 @@ const hasCycle = function (head) {
   return false;
 };
 
-export { hasCycle };
+// 方法二：快慢指针
+// 判断单向链表中是否存在环-141
+// 80 ms
+// , 在所有 JavaScript 提交中击败了
+// 96.65%
+// 的用户
+// 内存消耗：
+// 40 MB
+// , 在所有 JavaScript 提交中击败了
+// 27.45%
+// 的用户
+const hasCycle2 = function (head) {
+  if (head === null || head.next === null) {
+    return false;
+  }
+  let slow = head;
+  let fast = head.next;
+  while (slow !== fast) {
+    if (fast === null || slow === null || fast.next == null) {
+      return false;
+    }
+    slow = slow.next;
+    fast = fast.next.next;
+  }
+  return true;
+};
+
+export { hasCycle, hasCycle2 };

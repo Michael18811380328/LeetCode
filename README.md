@@ -70,13 +70,13 @@ js LeetCode 习题，因为题目较多，所以分成多个文件夹管理
 
 ​	finished
 
-​	test 测试文件
+​	test 测试文件(现在只测试js目录下面的单元测试，todo部分的单元测试跳过)
 
 ​	stalled 未完成的题目（不超过10道）
+
 
 python 使用 python 完成的题目
 
   leetcode.py 题目
 
   test_leetcode.py 测试文件
-
