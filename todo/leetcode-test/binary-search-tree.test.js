@@ -51,7 +51,4 @@ describe('binary search tree', function () {
     bst.remove(500);
     expect(bst.findMax()).toEqual(180);
   })
-
-
-
 })

@@ -8,6 +8,7 @@
  * @return {number[]}
  */
 // 168 ms , 在所有 javascript 提交中击败了 76.05%
+// 思路1：计算每个数的平方，然后重新排序。但是这样已经排序条件就没用了
 function sortedSquares(A) {
   // 1. 从右侧开始循环，计算右侧的大于0的数的平方；
   let index = A.length - 1;
@@ -34,9 +35,35 @@ function sortedSquares(A) {
   return A;
 }
 
-// 思路1：计算每个数的平方，然后重新排序。但是这样已经排序条件就没用了
+// 思路二: 有序数组，使用双指针实现（性能也不太好）
+function sortedSquares2(A) {
+  const res = [];
+  let left = 0;
+  let right = A.length - 1;
+  while (left <= right) {
+    let current;
+    if (Math.abs(A[left]) < Math.abs(A[right])) {
+      current = A[right];
+      right--;
+    } else {
+      current = A[left];
+      left++;
+    }
+    res.unshift(current * current);
+  }
+  return res;
+}
+
+function sortedSquares3(A) {
+  for (let i = 0, len = A.length; i <= len - 1; i++) {
+    A[i] *= A[i];
+  }
+  A.sort((a, b) => a - b);
+  return A;
+}
+
 // 思路2：
 // 1. 从右侧开始循环，计算右侧的大于0的数的平方；
 // 2. while 第一个数小于0，把第一个数取出来，计算第一个数的平方，然后遍历，splice插入，记录当前的index。
 
-export { sortedSquares };
+export { sortedSquares, sortedSquares2, sortedSquares3 };
