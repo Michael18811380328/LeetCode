@@ -1,4 +1,5 @@
 // 02-addTwoNumbers.js
+// https://leetcode.com/problems/add-two-numbers/description/
 // 给出两个非空的链表用来表示两个非负的整数。其中，它们各自的位数是按照 逆序 的方式存储的，并且它们的每个节点只能存储 一位 数字。
 // 如果，我们将这两个数相加起来，则会返回一个新的链表来表示它们的和。
 // 您可以假设除了数字 0 之外，这两个数都不会以 0 开头。
@@ -54,4 +55,44 @@ function addTwoNumbers(l1, l2) {
   return result;
 }
 
-export { addTwoNumbers };
+// 思路2
+const addTwoNumbers2 = function (l1, l2) {
+  const getVal = function (list1, list2, plus = 0) {
+    const val1 = list1 && list1.val;
+    const val2 = list2 && list2.val;
+    const total = val1 + val2 + plus;
+    return {
+      val: total % 10,
+      next: parseInt(total / 10, 10),
+    };
+  };
+  let l = null;
+  let plus = 0;
+  // eslint-disable-next-line no-shadow
+  function setNode(vm, l1, l2) {
+    if (!l1 && !l2 && !plus) {
+      return vm;
+    }
+    const totalObj = getVal(l1, l2, plus);
+    if (totalObj.next) {
+      plus = totalObj.next;
+    } else {
+      plus = 0;
+    }
+    if (!l) {
+      l = new ListNode(totalObj.val);
+      vm = l;
+    } else {
+      vm.next = new ListNode(totalObj.val);
+      vm = vm.next;
+    }
+    if ((l1 && l1.next) || (l2 && l2.next) || plus) {
+      return setNode(vm, l1 && l1.next, l2 && l2.next);
+    }
+  }
+  setNode(l, l1, l2);
+  return l;
+};
+
+
+export { addTwoNumbers, addTwoNumbers2 };
