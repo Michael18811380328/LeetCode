@@ -24,17 +24,24 @@
 
 ## 文件说明
 
-├── database 使用 SQL 完成的题目
-├── golang 使用 golang 完成的题目
-├── js 使用 JS 完成的题目
-├── python 使用 python 完成的题目
+database 使用 SQL 完成的题目
 
+golang 使用 golang 完成的题目
 
-├── algea 算法文档
-├── book 数据结构与算法书籍和笔记
-├── scripts 单元测试配置文件
-├── todo 未来将要学习的算法
+js 使用 JS 完成的题目
 
-├── exercise 练习文件（不测试）
-├── log.md 算法学习日志
-└── unit-test.md 测试说明
+python 使用 python 完成的题目
+
+algea 算法文档
+
+book 数据结构与算法书籍和笔记
+
+scripts 单元测试配置文件
+
+todo 未来将要学习的算法
+
+exercise 练习文件（不测试）
+
+log.md 算法学习日志
+
+unit-test.md 测试说明
