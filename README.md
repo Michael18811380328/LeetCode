@@ -2,9 +2,7 @@
 
 ## 简介
 
-乐扣算法刷题，网站链接 https://leetcode-cn.com
-
-主要的语言是 JavaScript，次要使用 python，数据库学习使用 SQL。
+乐扣算法刷题，网站链接 https://leetcode-cn.com。 主要的语言是 JavaScript。
 
 学习步骤：
 
@@ -24,59 +22,19 @@
 学习方法：把对应的知识点分别归类，强化学习；加强数据结构与算法的应用。一边做算法题目，一边巩固数据结构和基础知识。
 
 
-## 测试
-
-### 代码风格测试
-
-代码使用 ESLint 检查代码的规范性（.eslintrc.json 配置文件）
-
-~~~bash
-npm run lint
-npm run lint-fix
-~~~
-
-### javasscript 单元测试
-
-~~~bash
-npm run test
-~~~
-
-项目使用 Jest 完成单元测试，测试文件在 /js/test/*.test.js 路径。
-
-### python 单元测试
-
-~~~bash
-cd python
-pytest -q
-~~~
-
-项目使用 pytest 完成单元测试（需要全局安装 pytest），测试文件在 /python/test_*.py 路径。
-
-### 集成测试
-
-上线后，使用 TravisCI 测试
-
-
-
 ## 文件说明
 
-database 数据库 LeetCode 习题
-
-exercise 练习文件（不测试）
-
-images 图片文件
-
-js LeetCode 习题，因为题目较多，所以分成多个文件夹管理
-
-​	finished
-
-​	test 测试文件(现在只测试js目录下面的单元测试，todo部分的单元测试跳过)
-
-​	stalled 未完成的题目（不超过10道）
+├── database 使用 SQL 完成的题目
+├── golang 使用 golang 完成的题目
+├── js 使用 JS 完成的题目
+├── python 使用 python 完成的题目
 
 
-python 使用 python 完成的题目
+├── algea 算法文档
+├── book 数据结构与算法书籍和笔记
+├── scripts 单元测试配置文件
+├── todo 未来将要学习的算法
 
-  leetcode.py 题目
-
-  test_leetcode.py 测试文件
+├── exercise 练习文件（不测试）
+├── log.md 算法学习日志
+└── unit-test.md 测试说明
