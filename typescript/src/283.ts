@@ -1,7 +1,4 @@
-// 84 ms
-// , 在所有 typescript 提交中击败了
-// 95.71%
-// 的用户
+// 84 ms, 在所有 typescript 提交中击败了95.71%
 function moveZeroes(nums: number[]): void {
   let index:number = 0;
   const len:number = nums.length;

@@ -4,7 +4,7 @@
  * [867] 转置矩阵
  */
 
-// @lc code=start
+// 
 /**
  * @param {number[][]} A
  * @return {number[][]}
@@ -29,5 +29,5 @@ var transpose = function(A) {
   }
   return result;
 };
-// @lc code=end
+
 

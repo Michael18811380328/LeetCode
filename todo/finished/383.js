@@ -4,7 +4,7 @@
  * [383] 赎金信
  */
 
-// @lc code=start
+// 
 /**
  * @param {string} ransomNote
  * @param {string} magazine
@@ -44,5 +44,5 @@ var canConstruct = function(ransomNote, magazine) {
   }
   return true;
 };
-// @lc code=end
+
 

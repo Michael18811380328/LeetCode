@@ -4,7 +4,7 @@
  * [665] 非递减数列
  */
 
-// @lc code=start
+// 
 /**
  * @param {number[]} nums
  * @return {boolean}
@@ -38,5 +38,5 @@ var checkPossibility = function(nums) {
 // [3,4,2,3] false
 // [5,7,1,8] true
 
-// @lc code=end
+
 

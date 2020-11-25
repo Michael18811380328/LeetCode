@@ -4,7 +4,7 @@
  * [859] 亲密字符串
  */
 
-// @lc code=start
+// 
 /**
  * @param {string} A
  * @param {string} B
@@ -54,5 +54,5 @@ var buddyStrings = function(A, B) {
 // 输入： A = "aa", B = "aa"
 // 输出： true
 
-// @lc code=end
+
 

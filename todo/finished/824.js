@@ -4,7 +4,7 @@
  * [824] 山羊拉丁文
  */
 
-// @lc code=start
+// 
 /**
  * @param {string} S
  * @return {string}
@@ -30,5 +30,5 @@ var toGoatLatin = function(S) {
   }
   return arr.join(' ');
 };
-// @lc code=end
+
 

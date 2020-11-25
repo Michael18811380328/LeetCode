@@ -6,7 +6,7 @@
 // 84 ms
 // , 在所有 JavaScript 提交中击败了
 // 57.06%
-// @lc code=start
+// 
 /**
  * @param {number} numBottles
  * @param {number} numExchange
@@ -32,5 +32,5 @@ var getNumber = function(bottles, exchanges, last) {
     return bottles + getNumber(newBottles, exchanges, newLast);
   }
 }
-// @lc code=end
+
 

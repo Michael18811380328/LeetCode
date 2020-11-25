@@ -4,7 +4,7 @@
  * [500] 键盘行
  */
 
-// @lc code=start
+// 
 // 96 ms
 // , 在所有 JavaScript 提交中击败了
 // 16.11%
@@ -55,5 +55,5 @@ var findWords = function(words) {
   }
   return result;
 };
-// @lc code=end
+
 

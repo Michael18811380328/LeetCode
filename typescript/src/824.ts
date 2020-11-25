@@ -1,6 +1,4 @@
-// 92 ms
-// , 在所有 typescript 提交中击败了
-// // 100.00%
+// 92 ms, 在所有 typescript 提交中击败了 100.00%
 function toGoatLatin(S: string): string {
   let arr:string[] = S.split(' ');
   const len:number = arr.length;

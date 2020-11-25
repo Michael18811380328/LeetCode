@@ -1,8 +1,14 @@
 # dependencies
-/node_modules
+/js/node_modules
+/typescript/node_modules
 
-# testing
-/coverage
+# js testing
+/js/coverage
+/typescript/coverage
+
+# package
+/js/package-lock.json
+/typescript/package-lock.json
 
 # production
 /build

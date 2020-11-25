@@ -4,7 +4,7 @@
  * [1342] 将数字变成 0 的操作次数
  */
 
-// @lc code=start
+// 
 /**
  * @param {number} num
  * @return {number}
@@ -24,5 +24,5 @@ var numberOfSteps  = function(num) {
 };
 // 思路二：转换成二进制，然后计算长度和1的数量
 
-// @lc code=end
+
 

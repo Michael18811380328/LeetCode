@@ -8,7 +8,7 @@
 // , 在所有 JavaScript 提交中击败了
 // 42.73%
 // 的用户
-// @lc code=start
+// 
 /**
  * Initialize your data structure here.
  */
@@ -73,5 +73,5 @@ RandomizedSet.prototype.getRandom = function() {
  * var param_2 = obj.remove(val)
  * var param_3 = obj.getRandom()
  */
-// @lc code=end
+
 

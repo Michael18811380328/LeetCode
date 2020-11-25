@@ -1,10 +1,6 @@
 /*
- * @lc app=leetcode.cn id=345 lang=javascript
- *
  * [345] 反转字符串中的元音字母
  */
-
-// @lc code=start
 /**
  * @param {string} s
  * @return {string}
@@ -14,7 +10,7 @@
 // 5.13%
 // 的用户
 var reverseVowels = function(s) {
-  const strs = s;  
+  const strs = s;
   // 辅助函数，判断是否是元音
   let vowels = ['a', 'e', 'i', 'o', 'u'];
   var isVowel = (str) => {
@@ -45,5 +41,5 @@ var reverseVowels = function(s) {
   }
   return result;
 };
-// @lc code=end
+
 

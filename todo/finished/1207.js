@@ -4,7 +4,7 @@
  * [1207] 独一无二的出现次数
  */
 
-// @lc code=start
+// 
 /**
  * @param {number[]} arr
  * @return {boolean}
@@ -30,5 +30,5 @@ var uniqueOccurrences = function(arr) {
   }
   return tmp.length === (Array.from(new Set(tmp))).length;
 };
-// @lc code=end
+
 

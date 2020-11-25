@@ -4,7 +4,7 @@
  * [1295] 统计位数为偶数的数字
  */
 
-// @lc code=start
+// 
 /**
  * @param {number[]} nums
  * @return {number}
@@ -20,5 +20,5 @@ var findNumbers = function(nums) {
   }
   return res;
 };
-// @lc code=end
+
 

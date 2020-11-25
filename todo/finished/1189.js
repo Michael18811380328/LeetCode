@@ -4,7 +4,7 @@
  * [1189] “气球” 的最大数量
  */
 
-// @lc code=start
+// 
 /**
  * @param {string} text
  * @return {number}
@@ -42,5 +42,5 @@ var maxNumberOfBalloons = function(text) {
   }
   return Math.min(b, a, n, Math.floor(o / 2), Math.floor(l / 2));
 };
-// @lc code=end
+
 

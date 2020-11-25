@@ -4,7 +4,7 @@
  * [884] 两句话中的不常见单词
  */
 
-// @lc code=start
+// 
 /**
  * @param {string} A
  * @param {string} B
@@ -40,4 +40,4 @@ var uncommonFromSentences = function(A, B) {
   // 我们先把字符串变成数组，然后遍历数组，存放在一个对象中
   // 然后遍历对象，找到仅仅存在一次的单词即可
 };
-// @lc code=end
+

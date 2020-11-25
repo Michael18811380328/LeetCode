@@ -4,7 +4,7 @@
  * [575] 分糖果
  */
 
-// @lc code=start
+// 
 /**
  * @param {number[]} candies
  * @return {number}
@@ -43,5 +43,5 @@ var distributeCandies = function(candies) {
   // }
   // return len2;
 };
-// @lc code=end
+
 

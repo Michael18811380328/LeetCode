@@ -4,7 +4,7 @@
  * [1331] 数组序号转换
  */
 
-// @lc code=start
+// 
 /**
  * @param {number[]} arr
  * @return {number[]}
@@ -33,5 +33,5 @@ var arrayRankTransform = function(arr) {
   }
   return result;
 };
-// @lc code=end
+
 

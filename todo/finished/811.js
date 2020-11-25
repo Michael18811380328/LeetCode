@@ -4,7 +4,7 @@
  * [811] 子域名访问计数
  */
 
-// @lc code=start
+// 
 /**
  * @param {string[]} cpdomains
  * @return {string[]}
@@ -49,5 +49,5 @@ var subdomainVisits = function(cpdomains) {
   }
   return res;
 };
-// @lc code=end
+
 

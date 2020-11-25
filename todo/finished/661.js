@@ -4,7 +4,7 @@
  * [661] 图片平滑器
  */
 
-// @lc code=start
+// 
 /**
  * @param {number[][]} M
  * @return {number[][]}
@@ -72,5 +72,5 @@ var imageSmoother = function(M) {
 // 直接新建一个数组，然后计算每个节点的灰度
 // 这样需要完全遍历一次新数组，性能一般，消耗内存
 // 暂时没有更好的思路
-// @lc code=end
+
 

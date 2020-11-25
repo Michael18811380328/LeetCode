@@ -4,7 +4,7 @@
  * [566] 重塑矩阵
  */
 
-// @lc code=start
+// 
 /**
  * @param {number[][]} nums
  * @param {number} r
@@ -43,5 +43,5 @@ var matrixReshape = function(nums, r, c) {
   }
   return matrix;
 };
-// @lc code=end
+
 

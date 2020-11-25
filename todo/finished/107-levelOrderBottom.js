@@ -3,8 +3,6 @@
  *
  * [107] 二叉树的层次遍历 II
  */
-
-// @lc code=start
 /**
  * Definition for a binary tree node.
  * function TreeNode(val) {
@@ -47,5 +45,5 @@ var levelOrderBottom = function(root) {
   result.reverse();
   return result;
 };
-// @lc code=end
+
 

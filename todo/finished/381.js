@@ -14,7 +14,7 @@
 // 思路二：使用哈希表实现
 // 好处：增删简单，不需要遍历数组
 // 缺点：查找消耗时间比较多
-// @lc code=start
+// 
 /**
  * Initialize your data structure here.
  */
@@ -71,5 +71,5 @@ RandomizedCollection.prototype.getRandom = function() {
  * var param_2 = obj.remove(val)
  * var param_3 = obj.getRandom()
  */
-// @lc code=end
+
 

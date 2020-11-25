@@ -4,7 +4,7 @@
  * [1009] 十进制整数的反码
  */
 
-// @lc code=start
+// 
 /**
  * @param {number} N
  * @return {number}
@@ -27,5 +27,5 @@ var bitwiseComplement = function(N) {
   }
   return result;
 };
-// @lc code=end
+
 

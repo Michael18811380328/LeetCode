@@ -4,7 +4,7 @@
  * [506] 相对名次
  */
 
-// @lc code=start
+// 
 /**
  * @param {number[]} nums
  * @return {string[]}
@@ -52,5 +52,5 @@ var findRelativeRanks = function(nums) {
 // ["Gold Medal","Silver Medal","Bronze Medal","4","5"] 输出
 // ["Gold Medal","5","Bronze Medal","Silver Medal","4"]
 
-// @lc code=end
+
 

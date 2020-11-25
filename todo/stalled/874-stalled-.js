@@ -4,7 +4,7 @@
  * [874] 模拟行走机器人
  */
 
-// @lc code=start
+// 
 /**
  * @param {number[]} commands
  * @param {number[][]} obstacles
@@ -20,5 +20,5 @@ var robotSim = function(commands, obstacles) {
 
   // 每走到新的点，那么需要获取这个点的坐标，然后计算最大值
 };
-// @lc code=end
+
 

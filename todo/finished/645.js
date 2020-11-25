@@ -4,7 +4,7 @@
  * [645] 错误的集合
  */
 
-// @lc code=start
+// 
 /**
  * @param {number[]} nums
  * @return {number[]}
@@ -31,7 +31,7 @@ var findErrorNums = function(nums) {
   }
   return [error1, error2];
 };
-// @lc code=end
+
 
 // 第一种思路是先排序，然后比较，这种时间复杂度不太好
 // 第二种思路是，遍历一次，通过字典找到重复的一个

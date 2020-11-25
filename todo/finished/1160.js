@@ -4,7 +4,7 @@
  * [1160] 拼写单词
  */
 
-// @lc code=start
+// 
 // 256 ms
 // , 在所有 JavaScript 提交中击败了
 // 36.70%
@@ -64,5 +64,5 @@ var countCharacters = function(words, chars) {
 };
 
 
-// @lc code=end
+
 

@@ -4,7 +4,7 @@
  * [1323] 6 和 9 组成的最大数字
  */
 
-// @lc code=start
+// 
 /**
  * @param {number} num
  * @return {number}
@@ -19,5 +19,5 @@ var maximum69Number  = function(num) {
   let res = str.slice(0, index) + '9' + str.slice(index + 1);
   return Number(res);
 };
-// @lc code=end
+
 

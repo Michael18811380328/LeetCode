@@ -3,8 +3,6 @@
  *
  * [226] 翻转二叉树
  */
-
-// @lc code=start
 /**
  * Definition for a binary tree node.
  * function TreeNode(val) {
@@ -65,5 +63,5 @@ var invertTree = function(root) {
   invert(root);
   return root;
 };
-// @lc code=end
+
 

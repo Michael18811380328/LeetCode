@@ -7,7 +7,7 @@
 // 难点：输入的重复的可以忽略，但是原来的重复的需要处理
 // ttom => tommm 这是不正确的
 // 注意：空格也算名字'mike   ' 需要考虑后面的空格，空格当做字符处理就行
-// @lc code=start
+// 
 var isLongPressedName = function(name, typed) {
   if (name === typed) {
     return true;
@@ -56,4 +56,4 @@ var isLongPressedName = function(name, typed) {
 // "aaleex"
 // true
 
-// @lc code=end
+
