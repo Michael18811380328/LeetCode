@@ -1,6 +1,4 @@
 /*
- * @lc app=leetcode.cn id=107 lang=javascript
- *
  * [107] 二叉树的层次遍历 II
  */
 /**
@@ -14,13 +12,14 @@
  * @param {TreeNode} root
  * @return {number[][]}
  */
-var levelOrderBottom = function(root) {
+const levelOrderBottom = function (root) {
   if (!root) return [];
+  const result = [];
   // 辅助函数：把当前节点的全部元素放到数组中
   // 能否传一个当前的层级，然后子节点就可以在不同的层级中插入了
-  let getNode = function(node, index) {
+  const getNode = function (node, index) {
     if (!node) return null;
-    let tmp = [];
+    const tmp = [];
     if (node.left) {
       tmp.push(node.left.val);
       getNode(node.left, index + 1);
@@ -34,16 +33,14 @@ var levelOrderBottom = function(root) {
     } else if (tmp.length > 0) {
       result[index] = tmp;
     }
-  }
+  };
   // 使用一个数组存放结果
-  // 然后广度优先遍历（获取不同层级的子节点）
-  // 然后 UNshift 到结果数组中
-  let result = [];
-  let tmp = [root.val];
+  // 然后广度优先遍历（获取不同层级的子节点）然后 UNshift 到结果数组中
+  const tmp = [root.val];
   result.unshift(tmp);
   getNode(root, 1);
   result.reverse();
   return result;
 };
 
-
+export { levelOrderBottom };

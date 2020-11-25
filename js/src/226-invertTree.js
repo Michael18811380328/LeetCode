@@ -1,7 +1,6 @@
 /*
- * @lc app=leetcode.cn id=226 lang=javascript
- *
  * [226] 翻转二叉树
+ * 88 ms, 在所有 JavaScript 提交中击败了45.84%
  */
 /**
  * Definition for a binary tree node.
@@ -13,18 +12,14 @@
 
 // 226. 翻转二叉树
 // 翻转一棵二叉树。
-
 // 示例：
-
 // 输入：
-
 //      4
 //    /   \
 //   2     7
 //  / \   / \
 // 1   3 6   9
 // 输出：
-
 //      4
 //    /   \
 //   7     2
@@ -35,20 +30,15 @@
  * @param {TreeNode} node
  * @return {TreeNode}
  */
-// 88 ms
-// , 在所有 JavaScript 提交中击败了
-// 45.84%
-// 的用户
-var invert = function(node) {
+const invert = function (node) {
   if (!node) {
     return null;
   }
   if (node.left && node.right) {
-    let tmpNode = node.left;
+    const tmpNode = node.left;
     node.left = node.right;
     node.right = tmpNode;
-  }
-  else if (node.left) {
+  } else if (node.left) {
     node.right = node.left;
     node.left = null;
   } else {
@@ -59,9 +49,9 @@ var invert = function(node) {
   invert(node.right);
 };
 
-var invertTree = function(root) {
+const invertTree = function (root) {
   invert(root);
   return root;
 };
 
-
+export { invertTree };
