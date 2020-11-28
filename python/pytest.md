@@ -57,7 +57,7 @@ def test_answer():
     assert func(3)==5
 ```
 
-在当前目录下执行 pytes t或者 pytest -q（q是quiet的简拼），会寻找当前目录及其子目录下以test开头的py文件或者以test结尾的py文件，找到文件后，在文件中找到以test开头函数并执行。
+在当前目录下执行 pytest 或者 pytest -q（q是quiet的简拼），会寻找当前目录及其子目录下以test开头的py文件或者以test结尾的py文件，找到文件后，在文件中找到以test开头函数并执行。
 
 测试结果为F，并在FALURES中输出部分详细的错误原因，实际是 assert func(3)==5出现问题了，错误的原因是 4 = func(3)而我们的断言是 func(3)=5
 
