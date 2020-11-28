@@ -19,3 +19,5 @@ function validMountainArray(A: number[]): boolean {
   }
   return reach;
 };
+
+export { validMountainArray };

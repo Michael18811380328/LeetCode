@@ -24,19 +24,15 @@
 
 ## 文件说明
 
-database 使用 SQL 完成的题目
-
-golang 使用 golang 完成的题目
-
-js 使用 JS 完成的题目
-
-python 使用 python 完成的题目
-
 algea 算法文档
 
 book 数据结构与算法书籍和笔记
 
-scripts 单元测试配置文件
+database 使用 SQL 完成的题目
+
+js 使用 JS 完成的题目
+
+python 使用 python 完成的题目
 
 todo 未来将要学习的算法
 
@@ -45,3 +41,13 @@ exercise 练习文件（不测试）
 log.md 算法学习日志
 
 unit-test.md 测试说明
+
+## 书单
+
+百度网盘：算法导论（比较难）、数据结构与算法等可以参考
+
+数据结构与算法JavaScript描述
+
+啊哈算法（C语言）
+
+JavaScript 数据结构与算法

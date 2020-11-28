@@ -9,3 +9,5 @@ function countSegments(s: string): number {
   let arr:string[] = str.split(' ').filter(item => item !== '');
   return arr.length;
 };
+
+export { countSegments };

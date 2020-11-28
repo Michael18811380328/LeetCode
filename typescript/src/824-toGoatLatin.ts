@@ -16,3 +16,5 @@ function toGoatLatin(S: string): string {
   }
   return arr.join(' ');
 };
+
+export { toGoatLatin };

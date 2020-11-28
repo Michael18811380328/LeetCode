@@ -21,3 +21,5 @@ function findComplement2(num: number): number {
   str = str.replace(/2/g, '1');
   return parseInt(str, 2);
 };
+
+export { findComplement1, findComplement2 };

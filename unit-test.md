@@ -28,6 +28,8 @@ npm run test-ts
 // https://kulshekhar.github.io/ts-jest/user/install
 ~~~
 
+ts-test 配置链接：https://kulshekhar.github.io/ts-jest/user/config/#paths-mapping
+
 ### python 单元测试
 
 ~~~bash

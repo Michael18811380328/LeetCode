@@ -40,3 +40,4 @@ function summaryRanges(nums: number[]): string[] {
   return res;
 };
 
+export { summaryRanges };

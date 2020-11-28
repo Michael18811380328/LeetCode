@@ -1,6 +1,9 @@
-from leetcode import canWinNim, countPrimes, trailingZeroes, guessNumber, twoSum1, twoSum2
-
 from isPowerOfTwo import isPowerOfTwo
+from canWinNim import canWinNim
+from countPrimes import countPrimes
+from trailingZeroes import trailingZeroes
+from guessNumber import guessNumber
+from twoSum import twoSum1, twoSum2
 
 # test 292 nim-game
 def test_answer_292():
