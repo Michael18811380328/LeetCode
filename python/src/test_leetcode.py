@@ -4,6 +4,7 @@ from countPrimes import countPrimes
 from trailingZeroes import trailingZeroes
 from guessNumber import guessNumber
 from twoSum import twoSum1, twoSum2
+from largestPerimeter import largestPerimeter
 
 # test 292 nim-game
 def test_answer_292():
@@ -43,3 +44,9 @@ def test_answer_231():
   assert isPowerOfTwo(16) == True
   assert isPowerOfTwo(128) == True
   assert isPowerOfTwo(218) == False
+
+# test 967 find three numbers in a list to generate a triangle which C is max
+def test_anster_967():
+  assert largestPerimeter([2,3,4]) == 9
+  assert largestPerimeter([2,3,3,100]) == 8
+  assert largestPerimeter([1,2,3]) == 0

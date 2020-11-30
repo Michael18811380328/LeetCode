@@ -3,7 +3,6 @@
  * @param {string[]} words
  * @return {number[]}
  */
-
 var getDict = function(words) {
   const len = words.length;
   let dict = {};
@@ -36,17 +35,12 @@ var checkStr = function (DICT, str, keyLen) {
       }
     }
   }
-  // console.log(dict, str);
   return true;
 }
 
-// 740 ms
-// , 在所有 JavaScript 提交中击败了
-// 54.02%
-// 的用户
+// 740 ms , 在所有 JavaScript 提交中击败了 54.02%
 var findSubstring = function(s, words) {
-    // 反向思路
-  // 获取目标的字符串的长度
+  // 反向思路:获取目标的字符串的长度
   const keyLen = words[0].length;
   const len = words.length * keyLen;
   // 先把目标单词数组转换成一个对象（因为可能重复）
@@ -59,7 +53,6 @@ var findSubstring = function(s, words) {
     // 判断每一个子字符串是否满足对象要求，如果满足，那么返回当前的index
     if (subStr.length < len) break;
     if (checkStr(dict, subStr, keyLen)) {
-      // console.log(subStr);
       res.push(i);
     }
   }
