@@ -10,6 +10,7 @@
  * @param {string} word
  * @return {number}
  */
+// 这个方法未来可以改进一下
 // var maxRepeating = function(sequence, word) {
 //   const index = sequence.indexOf(word);
 //   if (index === -1) {
@@ -62,6 +63,7 @@ var maxRepeating = function(sequence, word) {
     for (let j = 0; j <= i; j++) {
       cur += word;
     }
+    // 改进：这里不需要循环添加，直接计算当前长度，然后padEnd增加字符串即可
     if (sequence.indexOf(cur) === -1) {
       return i;
     }
