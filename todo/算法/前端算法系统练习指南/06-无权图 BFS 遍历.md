@@ -1,6 +1,4 @@
-
-
-无权图 BFS 遍历
+# 无权图 BFS 遍历
 
 #完全平方数
 
@@ -11,10 +9,6 @@
     输入: n = 12
     输出: 3 
     解释: 12 = 4 + 4 + 4.
-
-1
-2
-3
 
 来源: LeetCode第279题
 
@@ -73,7 +67,7 @@ Talk is cheap, show me your code. 我们接下来来一步步实现这个寻找�
 这样大量的重复数字不仅仅消耗了更多的循环次数，同时也造成更加巨大的内存空间压力。
 
 因此，我们需要对已经推入队列的数字进行标记，避免重复推入。改善代码如下:
-
+~~~js
     var numSquares = function(n) {
         let map = new Map();
         let queue = [];
@@ -94,6 +88,7 @@ Talk is cheap, show me your code. 我们接下来来一步步实现这个寻找�
             }
         }
     };
+~~~
 
 #单词接龙
 
@@ -131,7 +126,7 @@ Talk is cheap, show me your code. 我们接下来来一步步实现这个寻找�
 这里我们可以通过 BFS 的方式来进行遍历。实现如下:
 
 #代码实现
-
+~~~js
     /**
      * @param {string} beginWord
      * @param {string} endWord
@@ -176,5 +171,5 @@ Talk is cheap, show me your code. 我们接下来来一步步实现这个寻找�
         }
         return 0;
     };
-
+~~~
 
