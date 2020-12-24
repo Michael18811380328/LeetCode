@@ -27,6 +27,5 @@ function findDisappearedNumbers(nums: number[]): number[] {
   }
   return result;
 };
-// 196 ms, 在所有 typescript 提交中击败了7.14%
 
 export { findDisappearedNumbers };
