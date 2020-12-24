@@ -15,7 +15,6 @@ import { findDisappearedNumbers } from '../src/448-findDisappearedNumbers';
 import { slowestKey } from '../src/1629-slowestKey';
 import { trimMean } from '../src/1619-trimMean';
 
-// 下面测试脚本按照JS语法写，没有完全按照类型监测写
 test('134-canCompleteCircuit', () => {
   const gas = [1,2,3,4,5];
   const cost = [3,4,5,1,2];
@@ -56,13 +55,15 @@ test('238-moveZeroes', () => {
 });
 
 test('343-integerBreak ', () => {
-  // 给定一个正整数 n，将其拆分为至少两个正整数的和，并使这些整数的乘积最大化。 返回你可以获得的最大乘积。
+  expect(integerBreak(1)).toBe(1);
   expect(integerBreak(2)).toBe(1);
+  expect(integerBreak(3)).toBe(2);
+  expect(integerBreak(9)).toBe(27);
   expect(integerBreak(10)).toBe(36);
+  expect(integerBreak(11)).toBe(54);
 });
 
 test('349-intersection', () => {
-  // 给定两个数组，编写一个函数来计算它们的交集。
   const nums1 = [1,2,2,1], nums2 = [2,2];
   expect(intersection(nums1, nums2)).toStrictEqual([2]);
   const nums3 = [4,9,5], nums4 = [9,4,9,8,4];
@@ -70,6 +71,8 @@ test('349-intersection', () => {
 });
 
 test('434-countSegments', () => {
+  expect((countSegments(""))).toBe(0);
+  expect((countSegments("Leetcode"))).toBe(1);
   expect((countSegments("Hello, my name is John"))).toBe(5);
 });
 
@@ -80,13 +83,12 @@ test('467-findComplement', () => {
   expect((findComplement2(1))).toBe(0);
 });
 
-test('arrayPairSum', () => {
+test('561-arrayPairSum', () => {
   expect(arrayPairSum([1,4,3,2])).toBe(4);
   expect(arrayPairSum([6,2,6,5,1,2])).toBe(9);
 });
 
 test('628-maximumProduct', () => {
-  // 给定一个整型数组，在数组中找出由三个数组成的最大乘积，并输出这个乘积。
   expect((maximumProduct([1,2,3]))).toBe(6);
   expect((maximumProduct([1,2,3,4]))).toBe(24);
 });
@@ -100,9 +102,10 @@ test('941-validMountainArray', () => {
   expect(validMountainArray([2,1])).toBe(false);
   expect(validMountainArray([3,5,5])).toBe(false);
   expect(validMountainArray([0,3,2,1])).toBe(true);
+  expect(validMountainArray([0,1,2,3,2,3,2,1])).toBe(false);
 });
 
-test('duplicateZeros', () => {
+test('1089-duplicateZeros', () => {
   let nums = [1,0,2,3,0,4,5,0];
   expect(duplicateZeros(nums)).toBe(undefined);
   expect(nums).toStrictEqual([1,0,0,2,3,0,0,4]);
@@ -111,7 +114,7 @@ test('duplicateZeros', () => {
   expect(nums2).toStrictEqual([1,2,3]);
 });
 
-test('sortByBits', () => {
+test('1356-sortByBits', () => {
   expect(sortByBits([0,1,2,3,4,5,6,7,8])).toStrictEqual([0,1,2,4,8,3,5,6,7]);
   expect(sortByBits([1024,512,256,128,64,32,16,8,4,2,1])).toStrictEqual([1,2,4,8,16,32,64,128,256,512,1024]);
   expect(sortByBits([10000,10000])).toStrictEqual([10000,10000]);
@@ -119,14 +122,14 @@ test('sortByBits', () => {
   expect(sortByBits([10,100,1000,10000])).toStrictEqual([10,100,10000,1000]);
 });
 
-test('slowestKey', () => {
+test('1629-slowestKey', () => {
   const releaseTimes = [9,29,49,50];
   const keysPressed = "cbcd";
   const res = "c";
   expect(slowestKey(releaseTimes, keysPressed)).toStrictEqual(res);
 });
 
-test('trimMean', () => {
+test('1619-trimMean', () => {
   expect(trimMean([1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3])).toStrictEqual(2.00000);
   expect(trimMean([6,2,7,5,1,2,0,3,10,2,5,0,5,5,0,8,7,6,8,0])).toStrictEqual(4.00000);
   expect(trimMean([6,0,7,0,7,5,7,8,3,4,0,7,8,1,6,8,1,1,2,4,8,1,9,5,4,3,8,5,10,8,6,6,1,0,6,10,8,2,3,4])).toStrictEqual(4.777777777777778);
@@ -135,13 +138,7 @@ test('trimMean', () => {
 })
 
 test('448-findDisappearedNumbers', () => {
-  // 给定一个范围在  1 ≤ a[i] ≤ n ( n = 数组大小 ) 的 整型数组，数组中的元素一些出现了两次，另一些只出现一次。
-  // 找到所有在 [1, n] 范围之间没有出现在数组中的数字。
-  // 这里需要改 ts 编译的配置
+  expect((findDisappearedNumbers([4]))).toStrictEqual([]);
+  expect((findDisappearedNumbers([4,3,2,1]))).toStrictEqual([]);
   expect((findDisappearedNumbers([4,3,2,7,8,2,3,1]))).toStrictEqual([5,6]);
 });
-
-// 树暂时不做单元测试
-// 107 Tree levelOrderBottom(root: TreeNode | null)
-// 226 invertTree
-// 257 binaryTreePaths
