@@ -1,7 +1,6 @@
 # coding=utf-8
 from statistics import median
 
-
 def getnum():
     nums = []
     inumStr = input("请输入数字（回车退出）：")
