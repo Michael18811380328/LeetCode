@@ -4,21 +4,13 @@
  * [515] 在每个树行中找最大值
  */
 
-// @lc code=start
-/**
- * Definition for a binary tree node.
- * function TreeNode(val, left, right) {
- *     this.val = (val===undefined ? 0 : val)
- *     this.left = (left===undefined ? null : left)
- *     this.right = (right===undefined ? null : right)
- * }
- */
 /**
  * @param {TreeNode} root
  * @return {number[]}
  */
 // Your runtime beats 70.22 % of javascript submissions
-var largestValues = function(root) {
+// 遍历树节点，然后把每一层放在临时数组中，求最大值即可
+var largestValues1 = function(root) {
   let tmpList = [];
   let runNode = (node, layer) => {
     if (!node) {
@@ -40,7 +32,7 @@ var largestValues = function(root) {
 };
 
 // Your runtime beats 56.11 % of javascript submissions
-var largestValues = function(root) {
+var largestValues2 = function(root) {
   let list = [];
   let runNode = (node, layer) => {
     if (!node) {
@@ -57,5 +49,3 @@ var largestValues = function(root) {
   runNode(root, 0);
   return list;
 };
-// @lc code=end
-

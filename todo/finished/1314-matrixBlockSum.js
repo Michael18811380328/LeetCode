@@ -29,7 +29,6 @@ var matrixBlockSum = function(mat, K) {
     endI = endI > len1 - 1 ? len1 - 1: endI;
     startJ = startJ < 0 ? 0 : startJ;
     endJ = endJ > len2 - 1? len2 - 1: endJ;
-    // console.log(startI, endI, startJ, endJ);
     let sum = 0;
     for (let i = startI; i <= endI; i++) {
       for (let j = startJ; j <= endJ; j++) {
@@ -38,14 +37,10 @@ var matrixBlockSum = function(mat, K) {
     }
     return sum;
   }
-  // console.log(len1, len2);
   for (let i = 0; i < len1; i++) {
     for (let j = 0; j < len2; j++) {
-      // console.log(i, j);
       res[i][j] = getSum(i, j);
     }
   }
   return res;
 };
-// @lc code=end
-

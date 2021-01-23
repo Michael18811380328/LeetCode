@@ -49,10 +49,7 @@ var numEnclaves = function(A) {
       check(i, len - 1, A)
     }
   }
-
-  // console.log(A);
-  // 遍历结束后，剩下的就都是飞地
-  // 那么遍历一次数组，找到数组中是1的个数即可
+  // 遍历结束后，剩下的就都是飞地；遍历一次数组，找到数组中是1的个数即可
   let res = 0;
   for (let i = 0; i < A.length; i++) {
     for (let j = 0; j < A[0].length; j++) {

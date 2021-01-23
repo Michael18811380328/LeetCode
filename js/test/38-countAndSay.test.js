@@ -1,4 +1,4 @@
-import { countAndSay, countAndSay2 } from '../finished/39-countAndSay';
+import { countAndSay, countAndSay2 } from '../finished/38-countAndSay';
 
 test('39-countAndSay.test', () => {
   expect(countAndSay(1)).toEqual('1');
