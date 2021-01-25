@@ -30,7 +30,6 @@ var combinationSum2 = function(candidates, target) {
         dict[item] = 1;
       }
     });
-    // console.log(dict);
     return dict;
   }
 
