@@ -1,4 +1,4 @@
-// import { wordBreak } from '../finished/139-word-break';
+// import { wordBreak } from '../src/139-word-break';
 
 // test('139-word-break', () => {
 //   expect(wordBreak("l", [])).toEqual(false);

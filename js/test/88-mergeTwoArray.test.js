@@ -1,4 +1,4 @@
-import { mergeTwoArray } from '../finished/88-mergeTwoArray';
+import { mergeTwoArray } from '../src/88-mergeTwoArray';
 
 test('88-mergeTwoArray', () => {
   expect(mergeTwoArray([1, 2, 3, 0, 0, 0], 3, [2, 5, 6], 3)).toEqual([1, 2, 2, 3, 5, 6]);

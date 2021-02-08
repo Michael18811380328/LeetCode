@@ -1,4 +1,4 @@
-import { spiralOrder } from '../finished/54-spiralOrder';
+import { spiralOrder } from '../src/54-spiralOrder';
 
 test('', () => {
   const arr1 = [

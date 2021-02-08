@@ -1,4 +1,4 @@
-import { myPow, myPow2 } from '../finished/50-myPow';
+import { myPow, myPow2 } from '../src/50-myPow';
 
 test('50-getpow', () => {
   expect(myPow(2.00000, 10)).toEqual(1024.00000);

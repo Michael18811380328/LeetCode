@@ -1,4 +1,4 @@
-import { longestCommonPrefixPro, findLongestCommonPrefix, longestCommonPrefix } from '../finished/14-longestCommonPrefix';
+import { longestCommonPrefixPro, findLongestCommonPrefix, longestCommonPrefix } from '../src/14-longestCommonPrefix';
 
 test('14-longestCommonPrefix', () => {
   // method1

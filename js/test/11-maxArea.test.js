@@ -1,4 +1,4 @@
-import { maxArea } from '../finished/11-maxArea';
+import { maxArea } from '../src/11-maxArea';
 
 test('11-maxArea.test', () => {
   expect(maxArea([1, 8, 6, 2, 5, 4, 8, 3, 7])).toEqual(49);

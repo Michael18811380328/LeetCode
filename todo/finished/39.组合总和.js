@@ -19,7 +19,6 @@ var combinationSum = function(candidates, target) {
   candidates.sort((a, b) => a - b);
   let list = [];
   let tmpList = [];
-  // 回溯
   backTrack(candidates, tmpList, list, target);
   return list;
 };
@@ -37,7 +36,6 @@ var backTrack = (candidates, tmpList, list, target) => {
     list.push([...tmpList]);
     return;
   }
-  // 回溯
   for (let i = 0; i < candidates.length; i++) {
     let item = candidates[i];
     let last = tmpList[tmpList.length - 1];
@@ -63,6 +61,9 @@ var combinationSum = function(candidates, target) {
   let list = [];
   let tmpList = [];
   var sum = (arr) => {
+    // todo：这里应该先转换成字符串，然后把结果保存到字典中。
+    // 如果第二次求得是相同的数组的和，那么直接从字典中获取值即可
+    // 这里应该统计一下求和的数组
     return arr.reduce((a, b) => a + b, 0);
   };
   const len = candidates.length;
@@ -91,7 +92,6 @@ var combinationSum = function(candidates, target) {
       }
     }
   };
-  // 回溯
   backTrack(tmpList);
   return list;
 };

@@ -1,4 +1,4 @@
-import { searchRange1, searchRange2, searchRange3 } from '../finished/34-searchRange';
+import { searchRange1, searchRange2, searchRange3 } from '../src/34-searchRange';
 
 test('34-searchRange.test.js', () => {
   expect(searchRange1([1, 2, 2, 2, 2, 3], 2)).toEqual([1, 4]);

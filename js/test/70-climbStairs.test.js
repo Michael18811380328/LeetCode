@@ -1,4 +1,4 @@
-import { climbStairs } from '../finished/70-climbStairs';
+import { climbStairs } from '../src/70-climbStairs';
 
 test('70-climbStairs', () => {
   expect(climbStairs(4)).toEqual(5);

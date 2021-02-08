@@ -1,4 +1,4 @@
-import { setZeroes } from '../finished/73-set-zeroes';
+import { setZeroes } from '../src/73-set-zeroes';
 
 test('73-setZeroes', () => {
   const arr1 = [[0, 1, 2, 0], [3, 4, 5, 2], [1, 3, 1, 5], [1, 2, 3, 4], [9, 8, 8, 111]];

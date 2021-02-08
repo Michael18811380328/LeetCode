@@ -1,4 +1,4 @@
-import { sortColors } from '../finished/75-sortColors';
+import { sortColors } from '../src/75-sortColors';
 
 test('75-sortColors', () => {
   // expect(sortColors([0,1,2,1,1,0,0,2,2,1,0,0,1,0,0,0,1])).toEqual( [ 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 2, 2, 2 ]);

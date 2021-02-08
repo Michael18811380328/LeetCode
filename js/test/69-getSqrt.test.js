@@ -1,4 +1,4 @@
-import { getSqrt1, getSqrt2, getSqrt3 } from '../finished/69-getSqrt';
+import { getSqrt1, getSqrt2, getSqrt3 } from '../src/69-getSqrt';
 
 test('69-getSqrt-1', () => {
   expect(getSqrt1(4)).toEqual(2);
