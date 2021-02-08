@@ -2,10 +2,7 @@
  * @param {number[][]} accounts
  * @return {number}
  */
-// 76 ms
-// , 在所有 JavaScript 提交中击败了
-// 91.84%
-// 的用户
+// 76 ms, 在所有 JavaScript 提交中击败了91.84%
 var maximumWealth = function(accounts) {
     let len = accounts.length;
     let max = 0;
