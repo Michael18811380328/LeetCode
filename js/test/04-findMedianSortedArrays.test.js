@@ -1,4 +1,4 @@
-import { findMedianSortedArrays2 } from '../finished/04-findMedianSortedArrays';
+import { findMedianSortedArrays2 } from '../src/04-findMedianSortedArrays';
 
 test('04-findMedianSortedArrays', () => {
   expect(findMedianSortedArrays2([1, 2, 3], [])).toEqual(2);

@@ -9,10 +9,7 @@
  * @param {number} n
  * @return {number[][]}
  */
-// 96 ms
-// , 在所有 JavaScript 提交中击败了
-// 16.54%
-// 的用户
+// 96 ms , 在所有 JavaScript 提交中击败了16.54%
 // 现在性能不太好！
 // 循环内部判断方向（如果下一个位置已经有值，那么换向）
 // 设置一个变量保存当前的方向（direction = 'right'）

@@ -1,10 +1,4 @@
-/*
- * @lc app=leetcode.cn id=112 lang=javascript
- *
- * [112] 路径总和
- */
-
-// @lc code=start
+// [112] 路径总和
 /**
  * Definition for a binary tree node.
  * function TreeNode(val) {
@@ -44,6 +38,8 @@ var runNode = function(node, sum, currentSum) {
   return runNode(node.left, sum, currentSum + node.val) || runNode(node.right, sum, currentSum + node.val);
 }
 
+export { hasPathSum };
+
 // 错误思路：// 思路一：获取全部树的路径，然后判断是否存在
 // function getPath(node) {
 //   const { value } = node;
@@ -81,6 +77,3 @@ var runNode = function(node, sum, currentSum) {
 // function hasPathSum(root, sum) {
 //   return getPath(root).includes(sum);
 // }
-
-// @lc code=end
-

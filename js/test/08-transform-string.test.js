@@ -1,4 +1,4 @@
-import { myAtoi } from '../finished/08-transform-string';
+import { myAtoi } from '../src/08-transform-string';
 
 test('08-transform-string', () => {
   expect(myAtoi('4193 with words')).toEqual(4193);

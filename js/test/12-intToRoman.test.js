@@ -1,4 +1,4 @@
-import { intToRoman } from '../finished/12-intToRoman';
+import { intToRoman } from '../src/12-intToRoman';
 
 test('12-intToRoman.test', () => {
   expect(intToRoman(1)).toEqual('I');

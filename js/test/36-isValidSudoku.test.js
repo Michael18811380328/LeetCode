@@ -1,4 +1,4 @@
-import { isValidSudoku, isDuplicate, isDuplicate2, isValidSudoku2, isValidHash } from '../finished/36-isValidSudoku';
+import { isValidSudoku, isDuplicate, isDuplicate2, isValidSudoku2, isValidHash } from '../src/36-isValidSudoku';
 
 test('36-isValidSudoku.test', () => {
   // 判断9个数中的元素是否重复

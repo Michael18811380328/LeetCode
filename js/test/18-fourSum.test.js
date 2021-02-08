@@ -1,4 +1,4 @@
-import { fourSum } from '../finished/18-fourSum';
+import { fourSum } from '../src/18-fourSum';
 
 test('18-four-sum', () => {
   // 这个道题的答案不唯一，每个子数组内部顺序正确即可

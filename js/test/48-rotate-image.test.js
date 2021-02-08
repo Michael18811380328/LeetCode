@@ -1,4 +1,4 @@
-import { rotateImage, moveFour } from '../finished/48-rotate-image';
+import { rotateImage, moveFour } from '../src/48-rotate-image';
 
 test('02-addTwoNumbers', () => {
   // move four numbers success
