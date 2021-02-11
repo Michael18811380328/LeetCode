@@ -1,10 +1,7 @@
 /*
  * @lc app=leetcode.cn id=145 lang=javascript
- *
  * [145] 二叉树的后序遍历
  */
-
-// @lc code=start
 /**
  * Definition for a binary tree node.
  * function TreeNode(val, left, right) {
@@ -17,14 +14,8 @@
  * @param {TreeNode} root
  * @return {number[]}
  */
-// 76 ms
-// , 在所有 JavaScript 提交中击败了
-// 91.50%
-// 的用户
+// 76 ms, 在所有 JavaScript 提交中击败了91.50%
 var postorderTraversal = function(root) {
   if (!root || !root.val) return [];
-  // 前序遍历：根左右
   return [].concat(postorderTraversal(root.left)).concat(postorderTraversal(root.right)).concat([root.val]);
 };
-// @lc code=end
-

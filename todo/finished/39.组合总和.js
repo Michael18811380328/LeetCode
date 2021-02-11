@@ -1,15 +1,9 @@
-/*
- * @lc app=leetcode.cn id=39 lang=javascript
- *
- * [39] 组合总和
- */
-
-// @lc code=start
 /**
  * @param {number[]} candidates
  * @param {number} target
  * @return {number[][]}
  */
+// [39] 组合总和
 // 考点：回溯算法
 // 无限制选取：每次都可以从当前的值开始选择（candidates排序）
 // 注意：无重复
@@ -53,8 +47,7 @@ var backTrack = (candidates, tmpList, list, target) => {
   }
 };
 
-// 优化后
-// 80 ms, 在所有 JavaScript 提交中击败了99.82%
+// 优化后 80 ms, 在所有 JavaScript 提交中击败了99.82%
 var combinationSum = function(candidates, target) {
   // 选择数字先排序
   candidates.sort((a, b) => a - b);
@@ -95,5 +88,3 @@ var combinationSum = function(candidates, target) {
   backTrack(tmpList);
   return list;
 };
-// @lc code=end
-
