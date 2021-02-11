@@ -45,5 +45,25 @@ var getIntersectionNode = function(headA, headB) {
 // 有没有直接比较指针相等的方法？
 // https://leetcode-cn.com/problems/intersection-of-two-linked-lists/solution/160xiang-jiao-lian-biao-shuang-zhi-zhen-ha-xi-biao/
 
+// 思路二：直接比较两个指针是否相等
+// 这个想法很好
+// 循环链表。如果一个链表到达终点，那么把链表的结尾变成另一个链表的开始节点。另一个链表也是类似的。如果相交，那么两个链表一定会在某个节点相等。
+// A 独立长度+ 公共长度 + B独立长度 === B 独立+ 公共 + A独立
+// 如果是不相交链表，那么指针不会相等
+// Your runtime beats 11.38 % of javascript submissions
+var getIntersectionNode = function(headA, headB) {
+  if (!headA || !headB) {
+    return null;
+  }
+  let p1 = headA;
+  let p2 = headB;
+  while (p1 !== p2) {
+    p1 = p1 !== null ? p1.next : headB;
+    p2 = p2 !== null ? p2.next : headA;
+  }
+  // 如果两个不想交？那么同时到达null，就返回null
+  return p1;
+};
+
 // @lc code=end
 
