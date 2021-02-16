@@ -3,8 +3,6 @@
  *
  * [83] 删除排序链表中的重复元素
  */
-
-// @lc code=start
 /**
  * Definition for singly-linked list.
  * function ListNode(val) {
@@ -25,5 +23,3 @@ var deleteDuplicates = function(head) {
   deleteDuplicates(head.next);
   return head;
 };
-// @lc code=end
-

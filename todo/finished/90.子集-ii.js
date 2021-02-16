@@ -57,6 +57,5 @@ var subsetsWithDup = function(nums) {
   list.push(nums);
   return list;
 };
-// [1,3,2,4,2,4]
 // @lc code=end
 

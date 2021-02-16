@@ -11,10 +11,7 @@
  */
 // 回溯算法
 // 子集中没有重复元素
-// 92 ms
-// , 在所有 JavaScript 提交中击败了
-// 46.19%
-// 的用户
+// 92 ms, 在所有 JavaScript 提交中击败了46.19%
 var subsets = function(nums) {
   const len = nums.length;
   let list = [];
@@ -65,5 +62,3 @@ var subsets = function(nums) {
   }
   return list;
 };
-// @lc code=end
-

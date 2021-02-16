@@ -1,14 +1,13 @@
 /*
  * @lc app=leetcode.cn id=113 lang=javascript
  * [113] 路径总和 II
+ * Your runtime beats 44.14 % of javascript submissions
  */
 /**
  * @param {TreeNode} root
  * @param {number} targetSum
  * @return {number[][]}
  */
-// 115/115 cases passed (108 ms)
-// Your runtime beats 44.14 % of javascript submissions
 var pathSum = function(root, targetSum) {
   let list = [];
   let tmp = [];

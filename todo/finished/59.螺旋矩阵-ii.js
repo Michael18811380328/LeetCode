@@ -1,10 +1,7 @@
 /*
  * @lc app=leetcode.cn id=59 lang=javascript
- *
  * [59] 螺旋矩阵 II
  */
-
-// @lc code=start
 /**
  * @param {number} n
  * @return {number[][]}
@@ -28,8 +25,6 @@ var generateMatrix = function(n) {
 
   // 辅助函数：计算下一个在什么位置
   var getNext = (res, x, y, direction) => {
-    // console.log(x, y, direction);
-    // console.log(res);
     switch (direction) {
       case 'right':
         if (res[x][y + 1] === true) {
@@ -95,5 +90,3 @@ var generateMatrix = function(n) {
   }
   return res;
 };
-// @lc code=end
-
