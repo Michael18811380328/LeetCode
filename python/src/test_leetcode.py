@@ -7,6 +7,8 @@ canWinNim = importlib.import_module("292-canWinNim")
 countPrimes = importlib.import_module("204-countPrimes")
 guessNumber = importlib.import_module("374-guessNumber")
 largestPerimeter = importlib.import_module("967-largestPerimeter")
+stoneGame = importlib.import_module('877-stoneGame')
+intToRoman = importlib.import_module('012-intToRoman')
 
 # test 292 nim-game
 def test_answer_292():
@@ -52,3 +54,16 @@ def test_anster_967():
   assert largestPerimeter.largestPerimeter([2,3,4]) == 9
   assert largestPerimeter.largestPerimeter([2,3,3,100]) == 8
   assert largestPerimeter.largestPerimeter([1,2,3]) == 0
+
+def test_anster_877():
+  assert stoneGame.stoneGame([2,3,4]) == True
+
+def test_anster_012():
+  assert intToRoman.intToRoman(1) == 'I'
+  assert intToRoman.intToRoman(3) == 'III'
+  assert intToRoman.intToRoman(4) == 'IV'
+  assert intToRoman.intToRoman(9) == 'IX'
+  assert intToRoman.intToRoman(58) == 'LVIII'
+  assert intToRoman.intToRoman(1994) == 'MCMXCIV'
+  assert intToRoman.intToRoman(2427) == 'MMCDXXVII'
+  assert intToRoman.intToRoman(3999) == 'MMMCMXCIX'

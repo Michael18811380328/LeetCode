@@ -1,4 +1,5 @@
-def stoneGame(self, piles):
+# 877
+def stoneGame(piles):
     """
     :type piles: List[int]
     :rtype: bool
