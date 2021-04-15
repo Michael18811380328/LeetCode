@@ -13,9 +13,9 @@
  */
 function levelOrderBottom(root: TreeNode | null): number[][] {
   if (!root) return [];
-  let getNode = function(node: TreeNode | null, index: number):void {
+  const getNode = function (node: TreeNode | null, index: number): void {
     if (node) {
-      let tmp:number[] = [];
+      const tmp: number[] = [];
       if (node.left) {
         tmp.push(node.left.val);
         getNode(node.left, index + 1);
@@ -30,10 +30,10 @@ function levelOrderBottom(root: TreeNode | null): number[][] {
         result[index] = tmp;
       }
     }
-  }
-  let tmp = [root.val];
-  let result:number[][] = [tmp];
+  };
+  const tmp = [root.val];
+  const result: number[][] = [tmp];
   getNode(root, 1);
   result.reverse();
   return result;
-};
+}

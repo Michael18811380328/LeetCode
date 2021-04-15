@@ -7,5 +7,5 @@ function isPowerOfTwo(n: number): boolean {
     n = n / 2;
   }
   return false;
-};
+}
 // 96 ms, 在所有 typescript 提交中击败了95.65%

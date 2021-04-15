@@ -13,15 +13,15 @@
  */
 
 function binaryTreePaths(root: TreeNode | null): string[] {
-  let result:string[] = [];
+  const result: string[] = [];
   if (!root) return result;
   if (!root.left && !root.right) {
-    let item:string = String(root.val);
+    const item = String(root.val);
     result.push(item);
     return result;
   }
-  let getValue = function(node: TreeNode, str:string): void {
-    let val:string = node.val ? String(node.val) : '';
+  const getValue = function (node: TreeNode, str: string): void {
+    const val: string = node.val ? String(node.val) : '';
     if (str === '') {
       str = val;
     } else {
@@ -32,7 +32,7 @@ function binaryTreePaths(root: TreeNode | null): string[] {
     if (!node.left && !node.right) {
       result.push(str);
     }
-  }
+  };
   getValue(root, '');
   return result;
-};
+}

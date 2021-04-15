@@ -1,5 +1,5 @@
-function intToRoman(num: number):string {
-  const res : number[] = [];
+function intToRoman(num: number): string {
+  const res: number[] = [];
   res[0] = (num - (num % 1000)) / 1000;
   num %= 1000;
   res[1] = (num - (num % 500)) / 500;
@@ -14,7 +14,7 @@ function intToRoman(num: number):string {
   num %= 5;
   res[6] = num;
 
-  let result:string = '';
+  let result = '';
 
   while (res[0] > 0) {
     result += 'M';
@@ -59,4 +59,4 @@ function intToRoman(num: number):string {
   return result;
 }
 
-export { intToRoman };
+export {intToRoman};
