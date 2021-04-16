@@ -1,7 +1,7 @@
 # -*- coding:utf-8 -*-
 import math
 
-# 204 统计所有小于非负整数 n 的质数的数量。
+"""204 统计所有小于非负整数 n 的质数的数量。"""
 def countPrimes(n):
     """
     :type n: int
@@ -24,5 +24,5 @@ def countPrimes(n):
                 item = i * j
                 if item < n:
                     arr[item] = False
-    
+
     return result

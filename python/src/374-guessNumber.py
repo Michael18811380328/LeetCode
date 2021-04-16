@@ -2,18 +2,18 @@
 
 # 374 guess Number auxiliary function（辅助函数）
 # 假设目标的数字是188
-def guess(n):
-    if n == 6:
+def guess(number):
+    if number == 6:
         return 0
-    elif n < 6:
+    if number < 6:
         return 1
-    else:
-        return -1
+    return -1
 
-# 374 guessNumber
-def guessNumber(n):
+"""374 guessNumber"""
+def guessNumber(number):
+    """guessNumber"""
     left = 1
-    right = n
+    right = number
     while left < right:
         mid = (left + right) >> 1
         # print(left + (right - left)) leetcode 在线测试超时
