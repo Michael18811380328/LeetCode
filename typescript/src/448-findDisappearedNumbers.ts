@@ -1,17 +1,17 @@
 function findDisappearedNumbers(nums: number[]): number[] {
-  const n:number = nums.length;
-  const nullArr:number[] = [];
+  const n: number = nums.length;
+  const nullArr: number[] = [];
   if (n === 1) {
     return nullArr;
   }
-  let newArr:number[] = [...new Set(nums)].sort((a, b) => a - b);
-  const len:number = newArr.length;
+  const newArr: number[] = [...new Set(nums)].sort((a, b) => a - b);
+  const len: number = newArr.length;
   if (len === n) {
     return nullArr;
   }
-  let pointer:number = 1;
-  let result:number[] = [];
-  let i:number = 0;
+  let pointer = 1;
+  const result: number[] = [];
+  let i = 0;
   for (; i < len; i++) {
     if (pointer === newArr[i]) {
       pointer++;
@@ -26,6 +26,6 @@ function findDisappearedNumbers(nums: number[]): number[] {
     pointer++;
   }
   return result;
-};
+}
 
-export { findDisappearedNumbers };
+export {findDisappearedNumbers};

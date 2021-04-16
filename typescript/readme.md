@@ -6,3 +6,5 @@
 
 次要目的：复习算法习题
 
+[![Code Style: Google](https://img.shields.io/badge/code%20style-google-blueviolet.svg)](https://github.com/google/gts)
+

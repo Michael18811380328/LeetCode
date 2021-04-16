@@ -16,11 +16,10 @@ function invert(node: TreeNode | null): null | undefined {
     return null;
   }
   if (node.left && node.right) {
-    let tmpNode:TreeNode = node.left;
+    const tmpNode: TreeNode = node.left;
     node.left = node.right;
     node.right = tmpNode;
-  }
-  else if (node.left) {
+  } else if (node.left) {
     node.right = node.left;
     node.left = null;
   } else {

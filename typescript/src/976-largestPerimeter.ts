@@ -1,11 +1,11 @@
 function largestPerimeter(A: number[]): number {
-  var isTriangle = function (a:number, b:number, c:number): boolean {
-    return (a + b + c) > 2 * Math.max(a, b, c);
-  }
-  var sum = function(a:number, b:number, c:number): number {
+  const isTriangle = function (a: number, b: number, c: number): boolean {
+    return a + b + c > 2 * Math.max(a, b, c);
+  };
+  const sum = function (a: number, b: number, c: number): number {
     return a + b + c;
-  }
-  const len:number = A.length;
+  };
+  const len: number = A.length;
   if (len === 3) {
     if (isTriangle(A[0], A[1], A[2])) {
       return sum(A[0], A[1], A[2]);
@@ -18,4 +18,4 @@ function largestPerimeter(A: number[]): number {
     A.shift();
   }
   return A.length > 2 ? sum(A[0], A[1], A[2]) : 0;
-};
+}
