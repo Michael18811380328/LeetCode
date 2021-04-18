@@ -9,7 +9,7 @@ function check(nums: number[]): boolean {
         add++;
     }
     for (let i:number = 0; i < len - 1; i++) {
-        if (nums[i] > nums[i+1]) {
+        if (nums[i] > nums[i + 1]) {
             add++;
         }
         if (add > 1) {
@@ -17,4 +17,6 @@ function check(nums: number[]): boolean {
         }
     }
     return true;
-};
+}
+
+export {check};

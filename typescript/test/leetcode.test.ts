@@ -14,6 +14,8 @@ import {sortByBits} from '../src/1356-sortByBits';
 import {findDisappearedNumbers} from '../src/448-findDisappearedNumbers';
 import {slowestKey} from '../src/1629-slowestKey';
 import {trimMean} from '../src/1619-trimMean';
+import {repeatedSubstringPattern} from '../src/459-repeatedSubstringPattern';
+import {check} from '../src/1752-check';
 
 test('134-canCompleteCircuit', () => {
   const gas = [1, 2, 3, 4, 5];
@@ -76,6 +78,26 @@ test('434-countSegments', () => {
   expect(countSegments('')).toBe(0);
   expect(countSegments('Leetcode')).toBe(1);
   expect(countSegments('Hello, my name is John')).toBe(5);
+});
+
+test('434-countSegments', () => {
+  expect(countSegments('')).toBe(0);
+  expect(countSegments('Leetcode')).toBe(1);
+  expect(countSegments('Hello, my name is John')).toBe(5);
+});
+
+test('459-repeatedSubstringPattern', () => {
+  expect(repeatedSubstringPattern('abab')).toEqual(true);
+  expect(repeatedSubstringPattern('abcabcabcabc')).toEqual(true);
+  expect(repeatedSubstringPattern('aba')).toEqual(false);
+});
+
+test('1752-check', () => {
+  expect(check([3,4,5,1,2])).toEqual(true);
+  expect(check([2,1,3,4])).toEqual(false);
+  expect(check([1,2,3])).toEqual(true);
+  expect(check([1,1,1])).toEqual(true);
+  expect(check([2,1])).toEqual(true);
 });
 
 test('467-findComplement', () => {

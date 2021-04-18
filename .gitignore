@@ -16,3 +16,7 @@
 
 #python
 *.pyc
+*.pytest_cache
+
+# IDE cache
+.vscode

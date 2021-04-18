@@ -1,16 +1,12 @@
 /*
- * @lc app=leetcode.cn id=459 lang=javascript
- *
  * [459] 重复的子字符串
  */
-
-// @lc code=start
 /**
  * @param {string} s
  * @return {boolean}
  */
 // Your runtime beats 73.88 % of javascript submissions
-var repeatedSubstringPattern = function(s) {
+function repeatedSubstringPattern(s) {
   const len = s.length;
   if (len === 1) {
     return false;
@@ -33,6 +29,6 @@ var repeatedSubstringPattern = function(s) {
     }
   }
   return false;
-};
-// @lc code=end
+}
 
+export { repeatedSubstringPattern };
