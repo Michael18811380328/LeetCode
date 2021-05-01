@@ -6,13 +6,7 @@
 
 2、空间复杂度
 
-一般最先接触的就是时间复杂度和空间复杂度的学习了，这两个概念以及如何计算，是必须学的，也是必须最先学的，主要有最大复杂度、平均复杂度等，直接通过博客搜索学习即可。
-
-文章推荐：
-
-[算法分析神器—时间复杂度](https://link.zhihu.com/?target=https%3A//mp.weixin.qq.com/s/070nYGokM96aorZn6MZTDA)
-
-
+一般最先接触的就是时间复杂度和空间复杂度的学习了，这两个概念以及如何计算，是必须学的，也是必须最先学的，主要有最大复杂度、平均复杂度等。
 
 ### 二、数据结构
 
@@ -36,8 +30,6 @@
 
 特别是优先队列，再刷题的时候，还是经常用到的，队列与栈，是最基本的数据结构。
 
-[三分钟基础知识：什么是栈？](https://link.zhihu.com/?target=https%3A//mp.weixin.qq.com/s/6DMLl_EksTqSqWyE2FkEug)
-
 [二叉堆是什么鬼？](https://link.zhihu.com/?target=https%3A//mp.weixin.qq.com/s/TKRtF2dAtH7VuNs-FC4awA)
 
 [【算法与数据结构】堆排序是什么鬼？](https://link.zhihu.com/?target=https%3A//mp.weixin.qq.com/s/B0ImTjuQJiR7ahRzBpslcg)
@@ -46,8 +38,6 @@
 
 - 碰撞解决方法：开放定址法、链地址法、再次哈希法、建立公共溢出区
 - 布隆过滤器（了解）
-
-[Hash冲突之开放地址法](https://link.zhihu.com/?target=https%3A//mp.weixin.qq.com/s/SddKKeTK6Hpk9Q5R8NmZKA)
 
 **4、树**
 
@@ -67,15 +57,11 @@
 
 [腾讯面试题：有了二叉查找树、平衡树为啥还需要红黑树？](https://link.zhihu.com/?target=https%3A//mp.weixin.qq.com/s/p_fEMMNjlnPbbwY9dDQMAQ)
 
-[【面试被虐】游戏中的敏感词过滤是如何实现的？](https://link.zhihu.com/?target=https%3A//mp.weixin.qq.com/s/ZYtU4v9y2KMLT0d2X_MIZQ)
-
 
 
 **5、数组**
 
 - 矩阵
-
-
 
 
 
@@ -150,8 +136,6 @@
 - 最大流：最短增广路、Dinic 算法
 - 最大流最小割：最大收益问题、方格取数问题
 - 最小费用最大流：最小费用路、消遣
-
-这方面的一些算法，我也只了解过一些，感兴趣的可以学习下。
 
 ### 总结
 

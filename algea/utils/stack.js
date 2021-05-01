@@ -1,6 +1,6 @@
 /* stack LIFO */
-// LIFO: Last in, First out(后进先出)
-// FIFO: First in, First out(先进先出)
+// stack: LIFO: Last in, First out(后进先出)
+// queue: FIFO: First in, First out(先进先出)
 class Stack {
   constructor() {
     this.dataSource = [];
@@ -15,6 +15,7 @@ class Stack {
     return this.dataSource[--this.top]
   }
   
+  // 返回栈顶的值（不改变栈）
   peek() {
     return this.dataSource[this.top-1]
   }
@@ -22,7 +23,4 @@ class Stack {
   clear() {
     this.dataSource = [];
   }
-  
 }
-
-module.exports = Stack;
