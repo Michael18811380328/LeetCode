@@ -58,8 +58,9 @@
 ~~~js
 function Set() {
   items = {};
+
   this.has = (value) => {
-    // return value in items;
+    // return value in items; // not good
     return items.hasOwnProperty(value); // better
   }
   
@@ -83,19 +84,22 @@ function Set() {
     items = {};
   }
   
+  //es5 实现 size
   this.size = () => {
-    return Object.keys(items).length; //es5
+    return Object.keys(items).length; 
   }
   
+  //es3 实现 size
   this.sizeLegacy = () => {
     var count = 0;
-    // 这里不能直接使用for-in循环，这样会遍历到继承的属性（继承的属性不属于集合的属性）；所以需要使用hasOwnProperty 监测是否属于对象自己的属性
+    // 这里不能直接使用for-in循环，这样会遍历到继承的属性（继承的属性不属于集合的属性）
+    // 所以需要使用hasOwnProperty 监测是否属于对象自己的属性
     for (let key in items) {
       if (items.hasOwnProperty(key)) {
         count++;
       }
     }
-    return count; //es3
+    return count;
   }
   
   this.value = () => {

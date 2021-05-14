@@ -20,3 +20,4 @@
 
 # IDE cache
 .vscode
+.DS_Store

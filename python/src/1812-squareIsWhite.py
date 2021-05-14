@@ -1,4 +1,4 @@
-def squareIsWhite(self, coordinates):
+def squareIsWhite(coordinates):
     """
     :type coordinates: str
     :rtype: bool

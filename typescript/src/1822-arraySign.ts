@@ -1,6 +1,4 @@
-// 84 ms
-// , 在所有 TypeScript 提交中击败了
-// 86.84%
+// 84 ms, 在所有 TypeScript 提交中击败了86.84%
 function arraySign(nums: number[]): number {
   let minusTimes:number = 0;
   let len:number = nums.length;

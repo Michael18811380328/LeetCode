@@ -1,4 +1,3 @@
-// @lc code=start
 /**
  * @param {string} coordinates
  * @return {boolean}
@@ -13,5 +12,3 @@
     return second % 2 === 0 ? false : true;
   }
 };
-// @lc code=end
-
