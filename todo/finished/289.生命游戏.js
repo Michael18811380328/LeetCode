@@ -16,15 +16,11 @@ var gameOfLife = function(board) {
   for (let i = 0; i < len1; i++) {
     let tmp = [];
     for (let j = 0; j < board[i].length; j++) {
-      // let item = board[i][j];
       let newItem = getCell(board, i, j);
-      // console.log(i, j, newItem);
       tmp.push(newItem);
     }
-    // console.log(tmp);
     res.push(tmp);
   }
-  // console.log(res);
   // 现在返回值的res始终是正确的，但是返回值为什么不正确？？？
   // 这里使用原地算法，所以不正确啊
   for (let i = 0; i < len1; i++) {
@@ -80,8 +76,5 @@ let getCell = (board, i, j) => {
   else {
     result = (aliveCell === 3 || aliveCell === 2) ? 1 : 0;
   }
-  // console.log(item, aliveCell, result);
   return result;
 }
-// @lc code=end
-

@@ -1,10 +1,16 @@
-import { convertToTitle } from '../src/168-convertToTitle';
+import { convertToTitle, convertToTitle1 } from '../src/168-convertToTitle';
 
 test('168 excel convertToTitle', () => {
-  expect(convertToTitle(1)).toEqual('A');
-  expect(convertToTitle(26)).toEqual('Z');
-  expect(convertToTitle(27)).toEqual('AA');
-  expect(convertToTitle(28)).toEqual('AB');
-  expect(convertToTitle(52)).toEqual('AZ');
-  expect(convertToTitle(701)).toEqual('ZY');
+  const list = [
+    [1, 'A'],
+    [26, 'Z'],
+    [27, 'AA'],
+    [28, 'AB'],
+    [52, 'AZ'],
+    [701, 'ZY'],
+  ];
+  list.forEach(item => {
+    expect(convertToTitle(item[0])).toEqual(item[1]);
+    expect(convertToTitle1(item[0])).toEqual(item[1]);
+  });
 });

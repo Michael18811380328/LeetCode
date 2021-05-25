@@ -2,13 +2,6 @@
  * @lc app=leetcode.cn id=1217 lang=javascript
  * [1217] 玩筹码
  */
-
-// @lc code=start
-/**
- * @param {number[]} position
- * @return {number}
- */
-
 // 考点：数学+数组
 // 注：这个题干比较难理解，实际解答难度不大
 // chips = [1,2,3]
@@ -21,6 +14,10 @@
 // 进一步简化：求奇数的个数，和偶数的个数的最小值
 
 // Your runtime beats 77.27 % of javascript submissions
+/**
+ * @param {number[]} position
+ * @return {number}
+ */
 var minCostToMoveChips = function(position) {
   let odd = 0;
   let even = 0;
@@ -30,5 +27,3 @@ var minCostToMoveChips = function(position) {
   }
   return Math.min(odd, even);
 };
-// @lc code=end
-

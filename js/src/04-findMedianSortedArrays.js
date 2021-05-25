@@ -4,7 +4,7 @@
 // 你可以假设 nums1 和 nums2 不会同时为空。(如果有一个是空的情况)
 
 // 思路：双指针：把排序数组的最小的一个放在第三个数组中，如果一个是空，那么就放另一个，如果结果数组的长度大于index2，那么返回结果数组的最后两项
-// 尝试用双指针解决:bug
+// 尝试用双指针解决: 这个本地单元测试通过，严格逻辑可能有问题，需要注意
 function findMedianSortedArrays(nums1, nums2) {
   const len1 = nums1.length;
   const len2 = nums2.length;
