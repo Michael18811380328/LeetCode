@@ -16,14 +16,10 @@ var maximumPopulation = function(logs) {
     const start = curr[0];
     const end = curr[1];
     for (let j = start; j < end; j++) {
-      // console.log(j);
       arr[j] = arr[j] + 1;
-      // console.log(arr[j]);
     }
   }
-  // console.log(arr.slice(1950));
   const max = Math.max(...arr);
-  // console.log(max);
   for (let i = 1950; i <= 2050; i++) {
     if (arr[i] === max) {
       return i;
