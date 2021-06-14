@@ -5,7 +5,7 @@ function addLine(path) {
   const files = fs.readdirSync(path);
   for (file of files) {
     // 如果是隐藏文件，直接跳过
-    if (file[0] === '.' || file === 'node_modules') {
+    if (file[0] === '.' || file === 'node_modules' || file === 'LICENSE' || file === 'site') {
       continue;
     }
     // 如果是文件夹，递归
@@ -13,13 +13,13 @@ function addLine(path) {
       addLine(path + '/' + file);
     }
     // 如果是要求的文件
-    if (file.indexOf('.py') > -1 || file.indexOf('.js') > -1 || file.indexOf('.ts') > -1) {
-      var currentPath = path + '/' + file;
+    if (file.indexOf('.md') > -1 || file.indexOf('.js') > -1 || file.indexOf('.ts') > -1) {
+      var currentPath = encodeURI(path + '/' + file);
       var checkDir = fs.existsSync(currentPath);
       if (checkDir === false) {
         continue;
       }
-      var data = fs.readFileSync(currentPath, 'utf-8');
+      var data = fs.readFileSync(currentPath, 'utf-8');      
       // 如果已经是空行，继续执行
       if (data[data.length - 1] === '\n') {
         continue;
@@ -31,6 +31,6 @@ function addLine(path) {
 }
 
 // 这里放需要处理的目录
-const initDir = '/test/';
+const initDir = '/Users/seafile/PersonalRepo/HelloSite';
 
 addLine(initDir);

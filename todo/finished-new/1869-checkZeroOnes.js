@@ -2,7 +2,7 @@
  * @param {string} s
  * @return {boolean}
  */
-//  100 ms 在所有 JavaScript 提交中击败了15.33%
+// 100 ms 在所有 JavaScript 提交中击败了15.33%
 var checkZeroOnes2 = function(s) {
   // 处理长度是1的情况
   if (s.length === 0) {
@@ -33,12 +33,10 @@ var checkZeroOnes2 = function(s) {
   } else {
     max2 = Math.max(max2, currLen);
   }
-  // console.log(max1, max2)
   return max1 > max2;
 };
 
-// 改进版
-// 92 ms, 在所有 JavaScript 提交中击败了38.67%
+// 改进版 92 ms, 在所有 JavaScript 提交中击败了38.67%
 var checkZeroOnes = function(s) {
   if (s.length === 0) {
     return s === '1';

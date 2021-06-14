@@ -1,28 +1,27 @@
+// 考点：数组的遍历和最值
+// 时间复杂度：O(n)
 /**
  * @param {number[]} nums
  * @param {number} target
  * @param {number} start
  * @return {number}
  */
-// 这样时间复杂度不好
-// 104 ms, 在所有 TypeScript 提交中击败了5.88%
+// 时间复杂度不好,104 ms, 在所有 TypeScript 提交中击败了5.88%
 function getMinDistance(nums: number[], target: number, start: number): number {
   const len:number = nums.length;
   let min:number = len;
   for (let i:number = 0; i < len; i++) {
-      if (nums[i] === target) {
-          let tmpAbs = Math.abs(i - start);
-          if (tmpAbs < min) {
-              min = tmpAbs;
-          }
-      } 
+    if (nums[i] === target) {
+      let tmpAbs = Math.abs(i - start);
+      if (tmpAbs < min) {
+        min = tmpAbs;
+      }
+    } 
   }
   return min;
 };
 
-// 改进
-// 80 ms, 在所有 TypeScript 提交中击败了100.00%
-// 改进后效果还行
+// 改进, 80 ms, 在所有 TypeScript 提交中击败了100.00%
 function getMinDistance2(nums: number[], target: number, start: number): number {
   if (nums[start] === target) {
     return 0;

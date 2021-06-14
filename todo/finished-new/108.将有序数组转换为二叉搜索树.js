@@ -1,6 +1,5 @@
 /*
  * @lc app=leetcode.cn id=108 lang=javascript
- *
  * [108] 将有序数组转换为二叉搜索树
  */
 
@@ -42,6 +41,3 @@ var sortedArrayToBST = function(nums) {
   // 然后把左边全部的元素作为左子树，右边的全部元素作为右子树即可
   return generateNode(0, nums.length - 1);
 };
-
-// @lc code=end
-

@@ -1,16 +1,15 @@
 /*
- * @lc app=leetcode.cn id=1577 lang=javascript
- *
+ * @lc app=leetcode.cn id=1577
  * [1577] 数的平方等于两数乘积的方法数
  */
 
-// @lc code=start
 /**
  * @param {number[]} nums1
  * @param {number[]} nums2
  * @return {number}
  */
-// 思路一，三层循环
+
+// 思路一，三层循环，性能很差
 // function numTriplets(nums1: number[], nums2: number[]): number {
 //   let foo = (arr1: number[], arr2: number[]):number => {
 //     let sum:number = 0;
@@ -32,12 +31,13 @@
 //   return foo(nums1, nums2) + foo(nums2, nums1);
 // };
 
+// 思路二：两层循环
 function numTriplets(nums1: number[], nums2: number[]): number {
   let foo = (arr1: number[], arr2: number[]): number => {
     let sum: number = 0;
-    // 获取字典和出现的个数
+    // 获取字典和出现的个数(可能有重复)
     const arr3: number[] = arr2.map(item => Math.pow(item, 2));
-    let dict: object = {};
+    let dict: any = {};
     arr3.forEach(ele => {
       if (dict[ele]) {
         dict[ele]++;
@@ -58,6 +58,3 @@ function numTriplets(nums1: number[], nums2: number[]): number {
   };
   return foo(nums1, nums2) + foo(nums2, nums1);
 }
-
-// @lc code=end
-
