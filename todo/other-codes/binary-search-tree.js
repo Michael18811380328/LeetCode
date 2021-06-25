@@ -2,20 +2,19 @@
  * Binary Search Tree(BST or Ordered Binary Tree)
  **/
 
+// 辅助类：二叉树节点
 class Node {
-  
   constructor(data, left, right) {
     this.data = data;
     this.left = left;
     this.right = right;
   }
-
   show() {
     return this.data;
   }
 }
 
-
+// 二叉搜索树
 class BinarySearchTree {
 
   constructor() {
@@ -23,16 +22,23 @@ class BinarySearchTree {
   }
 
   insert(data) {
+    // 把当前的值创建成一个节点（没有左右子节点）
     let n = new Node(data, null, null);
+    // 如果没有根节点，这个点就是根节点
     if (!this.root) {
       return this.root = n;
     }
+    // 如果有根节点，获取根节点
     let currentNode = this.root;
     let parent = null;
     while (1) {
       parent = currentNode;
+      // 判断当前的值和当前节点的大小
+      // 如果小于当前节点，那么当前节点变成左子节点；否则变成右子节点
       if (data < currentNode.data) {
         currentNode = currentNode.left;
+        // 如果节点不存在，这个节点就作为上一个节点的左子节点
+        // 完成 insert 操作
         if (currentNode === null) {
           parent.left = n;
           break;
@@ -51,6 +57,7 @@ class BinarySearchTree {
     this.root = this.removeNode(this.root, data)
   }
 
+  // 移除节点（较复杂）
   removeNode(node, data) {
     if (node == null) {
       return null;
@@ -94,8 +101,9 @@ class BinarySearchTree {
     }
   }
 
+  // 查找节点（找到特定值、最大值、最小值）
   find(data) {
-    var current = this.root;
+    let current = this.root;
     while (current != null) {
       if (data == current.data) {
         break;
@@ -110,7 +118,7 @@ class BinarySearchTree {
   }
 
   findMax() {
-    var current = this.root;
+    let current = this.root;
     while (current.right != null) {
       current = current.right;
     }
@@ -118,7 +126,7 @@ class BinarySearchTree {
   }
 
   findMin() {
-    var current = this.root;
+    let current = this.root;
     while (current.left != null) {
       current = current.left;
     }
@@ -155,7 +163,6 @@ class BinarySearchTree {
       this.postOrder(node.left);
       this.postOrder(node.right);
       this.postOrderArr.push(node.data);
-
     }
   }
 
