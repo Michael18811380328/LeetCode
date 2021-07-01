@@ -1,11 +1,5 @@
-/*
- * @lc app=leetcode.cn id=1827 lang=javascript
- *
- * [1827] 最少操作使数组递增
- */
-
+// [1827] 最少操作使数组递增
 // Your runtime beats 20.97 % of javascript submissions
-// @lc code=start
 /**
  * @param {number[]} nums
  * @return {number}
@@ -25,5 +19,3 @@ var minOperations = function(nums) {
   }
   return sum;
 };
-// @lc code=end
-

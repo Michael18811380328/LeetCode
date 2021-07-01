@@ -85,8 +85,8 @@ class BinarySearchTree {
         if(node.right !== null) {
           return getSmallest(node.right);
         }
-        
       }
+
       let temNode = getSmallest(node.right);
       node.data = temNode.data;
       node.right = this.removeNode(temNode.right,temNode.data);

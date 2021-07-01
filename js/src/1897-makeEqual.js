@@ -3,6 +3,7 @@
  * @return {boolean}
  */
 // 96 ms, 在所有 JavaScript 提交中击败了81.48%
+// 循环，字符串计数
 var makeEqual = function(words) {
     let dict = [];
     const len = words.length;

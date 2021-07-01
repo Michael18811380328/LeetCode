@@ -2,6 +2,7 @@
  * @param {number[]} nums
  * @return {number}
  */
+// 考点：回溯算法（性能需要提升）
 // 第一版：性能不好，第一个子函数是递归，性能太差
 // 180 ms 9.62%
 var subsetXORSum1 = function(nums) {
@@ -18,7 +19,6 @@ var subsetXORSum1 = function(nums) {
     // 思路：求出全部的子集(回溯算法)
     const len = nums.length;
     // i 表示子集元素的个数
-    
     var backTrace = (arr, target, list, index) => {
         if (arr.length === target) {
             // console.log(arr);
@@ -36,20 +36,13 @@ var subsetXORSum1 = function(nums) {
             arr.pop();
         }
     }
-    
-    
     for (let i = 1; i <= len; i++) {
         backTrace([], i, nums, 0);
     }
     return res;
 };
 
-
 // 168 ms, 在所有 JavaScript 提交中击败了9.94%
-/**
- * @param {number[]} nums
- * @return {number}
- */
 // 第二版：优化了辅助函数，但是性能仍然很差
 var subsetXORSum2 = function(nums) {
     let res = 0;
@@ -68,8 +61,7 @@ var subsetXORSum2 = function(nums) {
         }
         return result;
     }
-    
-    // 辅助函数：回溯
+    // 辅助函数：回溯（优化）
     var backTrace = (arr, target, list, index) => {
         if (arr.length === target) {
             let res1 = getXOR([...arr]);
@@ -86,7 +78,6 @@ var subsetXORSum2 = function(nums) {
             arr.pop();
         }
     }
-    
     const len = nums.length;
     // i 表示子集元素的个数
     for (let i = 1; i <= len; i++) {
@@ -94,7 +85,3 @@ var subsetXORSum2 = function(nums) {
     }
     return res;
 };
-
-
-
-

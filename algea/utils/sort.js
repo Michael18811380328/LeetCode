@@ -1,8 +1,9 @@
 /* BubbleSort O(N*N) */
 function bubbleSort(arr) {
-  for(let i = 0,l=arr.length;i<l-1;i++) {
-    for(let j = i+1;j<l;j++) { 
-      if(arr[i]>arr[j]) {
+  const len = arr.length;
+  for (let i = 0; i < len - 1; i++) {
+    for (let j = i + 1; j < len; j++) { 
+      if (arr[i] > arr[j]) {
         let tem = arr[i];
         arr[i] = arr[j];
         arr[j] = tem;
@@ -12,61 +13,54 @@ function bubbleSort(arr) {
   return arr;
 }
 
-/** insert sort
-*  O(n*n)
-**/
-
+/** insert sort O(n*n) **/
 function insertSort(arr) {
-  for(let i = 1 ,l = arr.length;i<l;i++) {
-      let j = i;
-      let tem = arr[i];
-      while(j>0&&tem<arr[j-1]) {
-          arr[j] = arr[j-1];
-          j--;
-      }
-      arr[j] = tem;
+  for (let i = 1 ,l = arr.length; i<l; i++) {
+    let j = i;
+    let tem = arr[i];
+    while(j>0 && tem < arr[j-1]) {
+      arr[j] = arr[j-1];
+      j--;
+    }
+    arr[j] = tem;
   }
   return arr;
 }
 
-/**
-* shell sort O(Nlog2N) 希尔排序
-**/
+/** shell sort O(Nlog2N) 希尔排序 **/
 function shellSort(arr) {
   let l = arr.length;
   let gap = l >> 1;
-  
   while(gap>0) {
-      for(let i = gap;i<l;i++) {
-          let tem = arr[i];
-          let j = i - gap; 
-          for(;j>=0&&tem<arr[j];j-=gap){
-              arr[j+gap] = arr[j];
-          }
-          arr[j+gap] = tem;
+    for(let i = gap;i<l;i++) {
+      let tem = arr[i];
+      let j = i - gap; 
+      for(;j>=0&&tem<arr[j];j-=gap){
+        arr[j+gap] = arr[j];
       }
-      gap = gap >> 1;
+      arr[j+gap] = tem;
+    }
+    gap = gap >> 1;
   }
   return arr;
 }
 
-/**
-* Selection Sort 
-**/
+/** Selection Sort **/
 function selectionSort(arr) {
   for(let i=0;i<arr.length-1;i++) {
-      let min = arr[i];
-      for(let j= i+1;j<arr.length;j++) {
-          if(min>arr[j]) {
-              let tem = min;
-              min = arr[j];
-              arr[j] = tem;
-          }
+    let min = arr[i];
+    for(let j= i+1;j<arr.length;j++) {
+      if(min>arr[j]) {
+        let tem = min;
+        min = arr[j];
+        arr[j] = tem;
       }
-      arr[i] = min;
+    }
+    arr[i] = min;
   }
   return arr;
 }
+
 /**
  * heap sort  O(nlogn) https://zh.wikipedia.org/wiki/%E5%A0%86%E6%8E%92%E5%BA%8F
  **/
@@ -105,9 +99,7 @@ function heapSort(arr) {
 }
 
 
-/**
-* Quick Sort  O(NLogN)
-**/ 
+/** Quick Sort  O(NLogN) **/ 
 function quickSort(arr) {
   if(arr.length<=1) {
       return arr;

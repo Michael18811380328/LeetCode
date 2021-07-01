@@ -10,13 +10,13 @@ var coor = {
 
 var ctx = canvas.getContext('2d');
 
+// 在 canvas 上面展示出来具体的点
 function draw(r, n ,prevR) {
    if(n>2) {
      switch(n%4) {
       case 0 :
         coor.y = coor.y - 5 * prevR;
         coor.y = coor.y + 5 * r;
-
         break;
       case 1 :
         coor.x = coor.x + 5 * prevR;
@@ -38,7 +38,6 @@ function draw(r, n ,prevR) {
      switch(n%4) {
       case 0 :
         ctx.moveTo(coor.x - 5*r,coor.y);
-
         break;
       case 1 :
         ctx.moveTo(coor.x,coor.y + 5*r);
@@ -51,35 +50,30 @@ function draw(r, n ,prevR) {
         break;
     }
   }
-  
   ctx.lineWidth = 1;
   ctx.strokeStyle = '#fff';
   ctx.stroke();
 }
 
-
-
+// 获取斐波那契数列数列
 function getFibonacci(n) {
   var fibarr = [];
   var i = 0;
-  while(i<n) {
-    if(i<=1) {
+  while (i<n) {
+    if (i<=1) {
       fibarr.push(i);
-    }else{
-      fibarr.push(fibarr[i-1] + fibarr[i-2])
+    } else {
+      fibarr.push(fibarr[i-1] + fibarr[i-2]);
     }
     i++;
   }
-  
   return fibarr;
 }
+
 var data = getFibonacci(10);
 
-for(var i = 0,l=data.length;i<l;i++) {
-  if(data[i]!=0) {
+for (var i = 0,l = data.length; i < l; i++) {
+  if (data[i] != 0) {
     draw(data[i],i,data[i-1]);
-    
   }
 }
-
-

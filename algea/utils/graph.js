@@ -2,34 +2,36 @@
 * graph https://zh.wikipedia.org/wiki/%E5%9B%BE_(%E6%95%B0%E5%AD%A6)#.E5.9B.BE.E7.9A.84.E5.AD.98.E5.82.A8.E8.A1.A8.E7.A4.BA
 **/
 
-class Vertex() {
-  constructor(labrl,isVisited) {
+// 图节点（节点的值，是否遍历过这个节点）
+class Vertex {
+  constructor(label, isVisited) {
     this.label = label;
     this.isVisited = isVisited;
   }
 }
 
-class Graph(v) {
-  constructor() {
+class Graph {
+  constructor(v) {
     this.vertices = v;
     this.edges = 0;
     this.adj = [];
     this.marked = [];
-    for(let i=0;i<v;++i) {
+    // 初始设置不同节点不相邻
+    for(let i = 0; i < v; ++i) {
       this.adj[i] = [];
       this.adj[i].push('');
       this.marked[i] = false;
     }
-
-
   }
 
+  // 增加边（增加两个节点的邻接关系）
   addEdge(v, w) {
     this.adj[v].push(w);
     this.adj[w].push(v);
     this.edges++;
   }
 
+  // 显示图
   showGrap() {
     for(let i=0;i<this.vertices;i++) {
       console.log(i + '->');
@@ -58,17 +60,12 @@ class Graph(v) {
     q.push(s);
     while(q.length>0) {
       let v = q.shift();
-      if(this.adj[v]!= undefined) {
-        //
-      }
       for(let j in this.adj[v]) {
         if(!this.marked[j]) {
           this.marked[j] = true;
           q.push(j);
         }
-
       }
     }
   }
-
 }

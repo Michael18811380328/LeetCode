@@ -3,6 +3,7 @@
  * @return {boolean}
  */
 // 100 ms 在所有 JavaScript 提交中击败了15.33%
+// 字符串的比较
 var checkZeroOnes2 = function(s) {
   // 处理长度是1的情况
   if (s.length === 0) {
@@ -37,15 +38,16 @@ var checkZeroOnes2 = function(s) {
 };
 
 // 改进版 92 ms, 在所有 JavaScript 提交中击败了38.67%
+// 这个算法还有哪些改进的地方？
 var checkZeroOnes = function(s) {
-  if (s.length === 0) {
+  const len = s.length;
+  if (len === 0) {
     return s === '1';
   }
   let current = s[0];
   let currLen = 1;
   let max1 = 0;
   let max2 = 0;
-  const len = s.length;
   for (let i = 1; i < len; i++) {
     if (s[i] === current) {
       currLen++;
@@ -63,7 +65,7 @@ var checkZeroOnes = function(s) {
       current = s[i];
       currLen = 1;
     }
-    // 增加预判
+    // 循环中判断是否满足条件
     if (max1 > len / 2) {
       return true;
     }

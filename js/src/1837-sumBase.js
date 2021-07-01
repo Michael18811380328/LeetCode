@@ -15,10 +15,8 @@ var sumBase = function(n, k) {
         return result;
     }
     
-    
     let transN;
     let res = 0;
-    
     if (k !== 10) {
         let newStr = transFn(n, k);
         transN = parseInt(newStr, 10);
@@ -26,12 +24,10 @@ var sumBase = function(n, k) {
         transN = n;
     }
     
-    
     while (transN > 0) {
         let remain = transN % 10;
         res += remain;
         transN = (transN - remain) / 10;
     }
     return res;
-    
 };

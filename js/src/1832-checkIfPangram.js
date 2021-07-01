@@ -1,14 +1,8 @@
-/*
- * @lc app=leetcode.cn id=1832 lang=javascript
- *
- * [1832] 判断句子是否为全字母句
- */
-
-// @lc code=start
 /**
  * @param {string} sentence
  * @return {boolean}
  */
+// 判断句子是否为全字母句
 // Your runtime beats 60.62 % of javascript submissions
 var checkIfPangram = function(sentence) {
   const len = sentence.length;
@@ -31,5 +25,3 @@ var checkIfPangram = function(sentence) {
   }
   return timer === 26;
 };
-// @lc code=end
-

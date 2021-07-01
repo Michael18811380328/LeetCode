@@ -27,6 +27,24 @@ var truncateSentence = function(s, k) {
   return s;
 };
 
+// 改进版本
+// 96 ms, 在所有 JavaScript 提交中击败了18.81%，还可以提升很大
+var truncateSentence = function(s, k) {
+  let K = k;
+  let position = 0;
+  while (K > 0) {
+   let index = s.indexOf(' ', position);
+    if (index > 0) {
+      position = index + 1;
+      K--;
+    }
+    if (index < 0) {
+      return s;
+    }
+  }
+  return s.slice(0, position - 1);
+};
+
 // 思路2：转换成数组
 // 88 ms, 在所有 JavaScript 提交中击败了40.79%
 var truncateSentence2 = function(s, k) {

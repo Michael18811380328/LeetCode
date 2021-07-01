@@ -3,7 +3,7 @@
  * @return {number}
  */
 // 108 ms, 在所有 JavaScript 提交中击败了13.79%
-// 现在效率不好，需要比较多次
+// 思路一：效率不好，需要比较多次
 var countGoodSubstrings1 = function(s) {
   const len = s.length;
   // if length is 1 or 2, the result is 0
@@ -20,11 +20,9 @@ var countGoodSubstrings1 = function(s) {
     }
     return false;
   };
-
   let res = 0;
   for (let i = 0; i < len; i++) {
     let current = s.slice(i, i + 3);
-    // console.log(current);
     if (isGood(current)) {
       res += 1;
     }
@@ -32,8 +30,8 @@ var countGoodSubstrings1 = function(s) {
   return res;
 };
 
-// 改进思路：直接循环一次，然后使用一个字典保存出现的次数
-// 然后这样比较比较快捷，不需要每次调用子函数进行比较，不需要使用 slice 函数截取字符串，这样大量节省时间
+// 思路二：循环一次，存储好子串的个数
+// 这样比较比较快捷，不需要每次调用子函数进行比较，不需要使用 slice 函数截取字符串，这样大量节省时间
 // 88 ms, 在所有 JavaScript 提交中击败了62.93%
 var countGoodSubstrings2 = function(s) {
   const len = s.length;
@@ -62,3 +60,5 @@ var countGoodSubstrings2 = function(s) {
 
 // console.log(countGoodSubstrings2('xyzzaz') === 1);
 // console.log(countGoodSubstrings2('aababcabc') === 4);
+
+export { countGoodSubstrings1, countGoodSubstrings2 };

@@ -4,7 +4,10 @@
  * @param {number} right
  * @return {boolean}
  */
-//80 ms, 在所有 JavaScript 提交中击败了80.00%
+// 80 ms, 在所有 JavaScript 提交中击败了80.00%
+// 判断一个二维数组中，是否覆盖一个区间（离散的点）
+// 当前 left - right 较短，这个算法可以
+// 如果是较长的区间 [1000, 30000] 这种，那么时间空间复杂度很差
 var isCovered = function(ranges, left, right) {
   let arr = new Array(51).fill(0);
   for (let i = 0; i < ranges.length; i++) {

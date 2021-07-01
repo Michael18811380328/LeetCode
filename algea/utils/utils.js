@@ -1,6 +1,6 @@
 // 常见工具函数
 
-// unique an array (use hash table es5)
+// 数组去重 (es5 使用哈希表去重)
 let unique = function(arr) {
   let hashTable = {};
   let data = [];
@@ -13,21 +13,30 @@ let unique = function(arr) {
   return data;
 }
 
+// 找到数组最大值(es5)
 function findMax(arr) {
   if(arr.length==1) {
       return arr[0];
   }
   let max = arr[0];
   for (let i = 1; i < arr.length; i++) {
-      if(max < arr[i]) {
-          max = arr[i];
-      }
+    if(max < arr[i]) {
+      max = arr[i];
+    }
   }
   return max;
 }
 
-//  query class name
+// 找到数组最大值（es6）
+function findMax2(arr) {
+  return Math.max(...arr);
+}
+
+// query class name
 function queryClassName(node, name) {
+  let starts = '(^|[ \n\r\t\f])', ends = '([ \n\r\t\f]|$)';
+  let regex = new RegExp(starts + name + ends), results = [];
+
   let walkTheDOM = function(node, func) {
     func(node);
     node = node.firstChild;
@@ -36,34 +45,26 @@ function queryClassName(node, name) {
       node = node.nextSibling;
     }
   }
-  let starts = '(^|[ \n\r\t\f])',
-    ends = '([ \n\r\t\f]|$)';
-  let regex = new RegExp(starts + name + ends),
-    results = [];
-
   walkTheDOM(node, function (currentNode) {
     if (regex.test(currentNode.className)) {
       results.push(currentNode);
     }
   });
-
   return results;
 }
 
-// swap number withour temp variable
+// 不使用临时变量交换两个数字
 function swap(a , b) {
   b = b - a;
   a = a + b;
   b = a - b;
-  return [a,b];
+  return [a, b];
 }
 
 // Get random string
 function randomString(n) {
   let str = 'abcdefghijklmnopqrstuvwxyz9876543210';
-  let tmp = '', 
-      i = 0,
-      l = str.length;     
+  let tmp = '', i = 0, l = str.length;     
   for (i = 0; i < n; i++) {
     tmp += str.charAt(Math.floor(Math.random() * l));
   }
@@ -71,7 +72,7 @@ function randomString(n) {
 }
 
 // filter() 方法创建一个新的数组，新数组中的元素是通过检查指定数组中符合条件的所有元素。
-// 注意： filter() 不会对空数组进行检测。注意： filter() 不会改变原始数组。
+// 注意：filter() 不会对空数组进行检测。注意： filter() 不会改变原始数组。
 function deleteOddNumber(source) {
   return source.filter((x) => {
     return x % 2 !== 0;
@@ -86,11 +87,12 @@ function deleteSpace(array) {
   })
 }
 
+// 删除字符串数组中重复值（es5）
 // delete repeat item 
 // arr = ['apple', 'strawberry', 'banana', 'pear', 'apple', 'orange', 'orange', 'strawberry'];
-function deleteRepeat (array) {
-  return array.filter(function(element, index, arr) {
-    return self.indexOf(element) === index;
+function deleteRepeat (arr) {
+  return arr.filter(function(element, index) {
+    return arr.indexOf(element) === index;
   });
 }
 
@@ -120,35 +122,31 @@ function treeData (source, id, parentId, children) {
 
 // find the maximum duplicate char in an string
 function findMaxDuplicateChar(str) {
-  if(str.length == 1) {
+  if (str.length == 1) {
     return str;
   }
   let charObj = {};
-  for(let i=0;i<str.length;i++) {
+  for (let i=0;i<str.length;i++) {
     if(!charObj[str.charAt(i)]) {
       charObj[str.charAt(i)] = 1;
-    }else{
+    } else {
       charObj[str.charAt(i)] += 1;
     }
   }
-  let maxChar = '',
-      maxValue = 1;
+  let maxChar = '', maxValue = 1;
   for(var k in charObj) {
     if(charObj[k] >= maxValue) {
       maxChar = k;
       maxValue = charObj[k];
     }
   }
-  
   return maxChar;
-  
 }
 
 /** find the max value in an consistant element in an array
 * input: [1,1,2,4,-5,12,-3,1]
 * output: 15
 **/
-
 function findMaxConsitantElement(a) {
   let max = 0;
   let t = [];
@@ -165,7 +163,5 @@ function findMaxConsitantElement(a) {
       }
     }
   }
-
   return max;
-  
 }
