@@ -1,13 +1,10 @@
-/*
- * @lc app=leetcode.cn id=59 lang=javascript
- * [59] 螺旋矩阵 II
- */
 /**
  * @param {number} n
  * @return {number[][]}
  */
+// [59] 螺旋矩阵 II
 // 96 ms , 在所有 JavaScript 提交中击败了16.54%
-// 现在性能不太好！
+// 现在性能不好！
 // 循环内部判断方向（如果下一个位置已经有值，那么换向）
 // 设置一个变量保存当前的方向（direction = 'right'）
 var generateMatrix = function(n) {
@@ -80,8 +77,7 @@ var generateMatrix = function(n) {
     // 需要填充的数字是i
     if (res[x][y] === true) {
       res[x][y] = i;
-      // 根据方向，改变XY
-      // 这里判断下一个是否有内容
+      // 根据方向，改变XY, 这里判断下一个是否有内容
       let obj = getNext(res, x, y, direction);
       x = obj.x;
       y = obj.y;

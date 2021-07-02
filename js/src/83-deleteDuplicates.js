@@ -1,8 +1,3 @@
-/*
- * @lc app=leetcode.cn id=83 lang=javascript
- *
- * [83] 删除排序链表中的重复元素
- */
 /**
  * Definition for singly-linked list.
  * function ListNode(val) {
@@ -14,6 +9,7 @@
  * @param {ListNode} head
  * @return {ListNode}
  */
+//  [83] 删除排序链表中的重复元素
 // Your runtime beats 51.88 % of javascript submissions
 var deleteDuplicates = function(head) {
   if (!head || !head.next) return head;
