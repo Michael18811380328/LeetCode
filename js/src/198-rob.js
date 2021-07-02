@@ -1,14 +1,10 @@
-/*
- * @lc app=leetcode.cn id=198 lang=javascript
- *
- * [198] 打家劫舍
- */
-
 // @lc code=start
 /**
  * @param {number[]} nums
  * @return {number}
  */
+// [198] 打家劫舍
+// 这个题目不错，好好看看
 // Your runtime beats 54.12 % of javascript submissions
 var rob = function(nums) {
   // 动态规划就是求数组的通项公式
@@ -32,9 +28,6 @@ var rob = function(nums) {
   for (let i = 2; i < len; i++) {
     res[i] = Math.max(res[i - 2] + nums[i], res[i - 1]);
   }
-  // console.log(res);
   return res[res.length - 1];
 };
 // [1,2,3,1,2,7,9,3,1]
-// @lc code=end
-

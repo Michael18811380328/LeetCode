@@ -1,8 +1,3 @@
-/*
- * @lc app=leetcode.cn id=108 lang=javascript
- * [108] 将有序数组转换为二叉搜索树
- */
-
 // @lc code=start
 /**
  * Definition for a binary tree node.
@@ -17,6 +12,7 @@
  * @param {number[]} nums
  * @return {TreeNode}
  */
+//  [108] 将有序数组转换为二叉搜索树
 //  92 ms 在所有 JavaScript 提交中击败了 89.29%
 var sortedArrayToBST = function(nums) {
   // 辅助函数

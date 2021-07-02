@@ -1,10 +1,3 @@
-/*
- * @lc app=leetcode.cn id=173 lang=javascript
- *
- * [173] 二叉搜索树迭代器
- */
-
-// @lc code=start
 /**
  * Definition for a binary tree node.
  * function TreeNode(val, left, right) {
@@ -16,6 +9,7 @@
 /**
  * @param {TreeNode} root
  */
+//  [173] 二叉搜索树迭代器
 // 两种思路：
 // 第一种：直接把二叉搜索树中序遍历，放入临时栈中，不断取出
 // Your runtime beats 5.08 % of javascript submissions
@@ -57,16 +51,10 @@ var runNode = (node) => {
   return [...runNode(node.left), node.val, ...runNode(node.right)];
 }
 
-/**
- * @return {number}
- */
 BSTIterator.prototype.next = function() {
   return this.arr.shift();
 };
 
-/**
- * @return {boolean}
- */
 BSTIterator.prototype.hasNext = function() {
   return this.arr.length > 0;
 };
@@ -77,5 +65,3 @@ BSTIterator.prototype.hasNext = function() {
  * var param_1 = obj.next()
  * var param_2 = obj.hasNext()
  */
-// @lc code=end
-

@@ -1,10 +1,3 @@
-/*
- * @lc app=leetcode.cn id=160 lang=javascript
- *
- * [160] 相交链表
- */
-
-// @lc code=start
 /**
  * Definition for singly-linked list.
  * function ListNode(val) {
@@ -12,7 +5,7 @@
  *     this.next = null;
  * }
  */
-
+//  [160] 相交链表
 /**
  * @param {ListNode} headA
  * @param {ListNode} headB
@@ -46,8 +39,8 @@ var getIntersectionNode = function(headA, headB) {
 // https://leetcode-cn.com/problems/intersection-of-two-linked-lists/solution/160xiang-jiao-lian-biao-shuang-zhi-zhen-ha-xi-biao/
 
 // 思路二：直接比较两个指针是否相等
-// 这个想法很好
-// 循环链表。如果一个链表到达终点，那么把链表的结尾变成另一个链表的开始节点。另一个链表也是类似的。如果相交，那么两个链表一定会在某个节点相等。
+// 循环链表。如果一个链表到达终点，那么把链表的结尾变成另一个链表的开始节点。
+// 另一个链表也是类似的。如果相交，那么两个链表一定会在某个节点相等。
 // A 独立长度+ 公共长度 + B独立长度 === B 独立+ 公共 + A独立
 // 如果是不相交链表，那么指针不会相等
 // Your runtime beats 11.38 % of javascript submissions
@@ -64,6 +57,3 @@ var getIntersectionNode = function(headA, headB) {
   // 如果两个不想交？那么同时到达null，就返回null
   return p1;
 };
-
-// @lc code=end
-
