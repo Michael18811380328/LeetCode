@@ -8,10 +8,7 @@
 /**
  * Initialize your data structure here.
  */
-// 184 ms
-// , 在所有 JavaScript 提交中击败了
-// 44.19%
-// 的用户
+// 184 ms, 在所有 JavaScript 提交中击败了44.19%
 var Twitter = function() {
   // 用户关注数据库表
   // 这个是一个对象
@@ -44,10 +41,6 @@ Twitter.prototype.getNewsFeed = function(userId) {
   // 这里获取有效的用户ID
   let followers = follow[userId] ? follow[userId].slice(0) : [];
   followers.push(userId);
-
-  console.log(userId);
-  console.log(followers);
-
   let res = [];
   for (let i = twitters.length - 1; i >= 0; i--) {
     let item = twitters[i];

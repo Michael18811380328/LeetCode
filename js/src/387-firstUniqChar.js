@@ -10,10 +10,7 @@
  * @return {number}
  */
 // 这是最基础的办法
-// 140 ms
-// , 在所有 JavaScript 提交中击败了
-// 34.39%
-// 的用户
+// 140 ms, 在所有 JavaScript 提交中击败了 34.39%
 var firstUniqChar = function(s) {
   for (let i = 0; i < s.length; i++) {
     if (s.indexOf(s[i]) === s.lastIndexOf(s[i])) {
@@ -24,10 +21,7 @@ var firstUniqChar = function(s) {
 };
 
 // 方法2：遍历一次字符串，把重复的记录一下
-// 116 ms
-// , 在所有 JavaScript 提交中击败了
-// 81.43%
-// 的用户
+// 116 ms , 在所有 JavaScript 提交中击败 81.43%
 var firstUniqChar = function(s) {
   let dict = {};
   for (let i = 0; i < s.length; i++) {

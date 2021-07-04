@@ -72,12 +72,10 @@ var combinationSum4 = function(nums, target) {
     let tmp = 0
     nums.forEach(num => {
       if (i - num >= 0) {
-        // console.log(i - num, dp[i - num]);
         tmp += dp[i - num];
       }
     });
     dp[i] = tmp;
-    // console.log(dp);
   }
   return dp[target];
 };
