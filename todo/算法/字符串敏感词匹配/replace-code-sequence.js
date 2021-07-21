@@ -22,4 +22,6 @@ console.log(res);
 // 我们把需要处理的字符串作为第二个参数传入试试，但是这样不支持换行（node终端换行直接执行脚本了，未来考虑一下）
 // console.log(process.argv[2]);
 
+// 最好直接读取一个文件，然后把每一行内容读取到
+// 使用 fs.readFileSync 和 fs.writeFile 等读取文件
 // 可以直接用 node 读取 md 文件，判断如果是代码片段，整体进行替换
