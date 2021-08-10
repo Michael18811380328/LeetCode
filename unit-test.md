@@ -1,5 +1,7 @@
 # 单元测试
 
+更新：运行 ./test.sh 脚本，会覆盖下面全部的测试
+
 ### javascript 单元测试
 
 js 代码格式检查，代码使用 ESLint 检查代码的规范性（.eslintrc.json 配置文件）
