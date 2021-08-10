@@ -8,11 +8,20 @@ npm run lint
 sleep 1s
 echo 'unit test'
 npm run test
-sleep 1s
+sleep 3s
 
-# npm run lint
-# todo pytest
-# cd typescript && npm install && npm run test-ts &&
-# todo pytest
-#    - run: npm ci
-#    - run: npm run build --if-present
+echo "typescript test"
+cd ../typescript
+npm install
+echo 'run eslint'
+npm run lint
+sleep 1s
+echo 'unit test'
+npm run test-ts
+sleep 3s
+
+echo "python test"
+cd ../python
+pip install pytest
+pytest -q
+sleep 1s

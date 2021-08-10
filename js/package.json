@@ -8,7 +8,7 @@
   },
   "scripts": {
     "clean": "rm -rf node_modules",
-    "test": "node ./scripts/jest-test.js --env=jsdom",
+    "test": "node ./scripts/jest-test.js --env=jsdom --coverage",
     "lint": "eslint ./*/*.js",
     "lint-html": "eslint ./*/*.js -f html -o ./eslint-reports/lint-results.html",
     "lint-fix": "eslint --fix ./js/*/*.js"
