@@ -20,7 +20,7 @@ test('04-findMedianSortedArrays', () => {
     [[2, 3, 4], [1], 2.5],
     [[2, 3, 4, 5], [1], 3],
   ];
-  testList.forEach(testItem => {
+  testList.forEach((testItem) => {
     if (testItem.length === 3) {
       expect(findMedianSortedArrays(testItem[0], testItem[1])).toEqual(testItem[2]);
       expect(findMedianSortedArrays2(testItem[0], testItem[1])).toEqual(testItem[2]);

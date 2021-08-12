@@ -9,7 +9,7 @@ test('168 excel convertToTitle', () => {
     [52, 'AZ'],
     [701, 'ZY'],
   ];
-  list.forEach(item => {
+  list.forEach((item) => {
     expect(convertToTitle(item[0])).toEqual(item[1]);
     expect(convertToTitle1(item[0])).toEqual(item[1]);
   });

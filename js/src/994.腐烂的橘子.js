@@ -1,6 +1,5 @@
 /*
  * @lc app=leetcode.cn id=994 lang=javascript
- *
  * [994] 腐烂的橘子
  */
 
@@ -9,11 +8,10 @@
  * @param {number[][]} grid
  * @return {number}
  */
-//  Your runtime beats 5.66 % of javascript submissions
-// 当前性能太差了
-// 主要是后半部分性能很差
+// Your runtime beats 5.66 % of javascript submissions
+// 当前性能太差了主要是后半部分性能很差
 var orangesRotting = function(grid) {
-  // 出现的次数放在字典
+  // 出现的次数放在字典(todo：这里可以定义三个变量，减少内存使用)
   let dict = {};
   dict[0] = 0;
   dict[1] = 0;
@@ -50,7 +48,6 @@ var orangesRotting = function(grid) {
 
   // 辅助函数：标记点位
   let mark = (x, y, time) => {
-    // console.log(x, y, time);
     if (grid[x] && grid[x][y] === 1) {
       grid[x][y] = 2;
       reapPos.unshift([x, y, time]);
@@ -59,7 +56,6 @@ var orangesRotting = function(grid) {
       max = time > max ? time : max;
     }
   }
-
   
   // BFS 遍历图节点
   let check = (pos) => {
@@ -84,19 +80,73 @@ var orangesRotting = function(grid) {
     let pos = reapPos.pop();
     check(pos);
   }
-
-  // console.log(grid);
-  // console.log(dict);
-  // console.log(reapPos);
-
-  // 遍历结束，如果还有新鲜的橘子，那就是没有遍历到的区域, 返回 -1 
+  // 遍历结束，如果还有新鲜的橘子，那就是没有遍历到的区域, 返回 -1
+  // 这一部分能否提前做？先判断是否有孤立的点，然后内部的橘子都是好的
+  // 这样就可以直接终止循环（BFS）
   if (dict[1] > 0) {
     return -1;
   }
-
   return max;
   // 因为这个图比较小，最差的情况下，循环20次，即可获取到结果
   // 这个算法复杂度可以接受
 };
-// @lc code=end
 
+// 改进1版本
+// Your runtime beats 33.93 % of javascript submissions
+var orangesRotting1 = function(grid) {
+  // 出现的次数
+  let b = 0;
+  // 坏了的位置
+  let reapPos = [];
+  // 先遍历一次，把出现的次数放在字典中
+  const len1 = grid.length;
+  const len2 = grid[0].length;
+  for (let i = 0; i < len1; i++) {
+    for (let j = 0; j < len2; j++) {
+      let curr = grid[i][j];
+      if (curr === 1) {
+        b = b + 1;
+      }
+      else if (curr === 2) {
+        // 然后把坏的果子的坐标获取到 0 表示初始值（分钟）
+        reapPos.push([i, j, 0]);
+      }
+    }
+  }
+  if (b === 0) {
+    return 0;
+  }
+  let mark = (x, y, time) => {
+    if (grid[x] && grid[x][y] === 1) {
+      grid[x][y] = 2;
+      reapPos.unshift([x, y, time]);
+      // 然后新鲜的橘子数量减1
+      b = b - 1;
+      max = time > max ? time : max;
+    }
+  }
+  
+  // BFS 遍历图节点
+  let check = (pos) => {
+    let x = pos[0];
+    let y = pos[1];
+    let time = pos[2];
+    if (grid[x] && grid[x][y] === 2) {
+      grid[x][y] = false;
+      mark(x, y + 1, time + 1);
+      mark(x, y - 1, time + 1);
+      mark(x + 1, y, time + 1);
+      mark(x - 1, y, time + 1);
+    }
+  };
+
+  let max = 0;
+  while (reapPos.length > 0) {
+    let pos = reapPos.pop();
+    check(pos);
+  }
+  if (b > 0) {
+    return -1;
+  }
+  return max;
+};

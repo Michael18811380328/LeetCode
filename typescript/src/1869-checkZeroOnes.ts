@@ -1,14 +1,14 @@
 // 84 ms, 在所有 TypeScript 提交中击败了100.00%
 function checkZeroOnes(s: string): boolean {
-  const len:number = s.length;
+  const len: number = s.length;
   if (len === 0) {
     return s === '1';
   }
-  let current:string = s[0];
-  let currLen:number = 1;
-  let max1:number = 0;
-  let max2:number = 0;
-  for (let i:number = 1; i < len; i++) {
+  let current: string = s[0];
+  let currLen: number = 1;
+  let max1: number = 0;
+  let max2: number = 0;
+  for (let i: number = 1; i < len; i++) {
     if (s[i] === current) {
       currLen++;
     } else {

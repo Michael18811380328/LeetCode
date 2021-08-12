@@ -1,18 +1,12 @@
 /*
  * @lc app=leetcode.cn id=999 lang=javascript
- *
  * [999] 可以被一步捕获的棋子数
  */
-
-// @lc code=start
 /**
  * @param {character[][]} board
  * @return {number}
  */
-// 80 ms
-// , 在所有 JavaScript 提交中击败了
-// 61.84%
-// 的用户
+// 80 ms, 在所有 JavaScript 提交中击败了61.84%
 var numRookCaptures = function(board) {
   const len = 8;
   for (let i = 0; i < len; i++) {
@@ -63,6 +57,4 @@ var getNum = (board, x, y) => {
     }
   }
   return res;
-}
-// @lc code=end
-
+};

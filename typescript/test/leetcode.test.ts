@@ -87,6 +87,7 @@ test('434-countSegments', () => {
 });
 
 test('459-repeatedSubstringPattern', () => {
+  expect(repeatedSubstringPattern('a')).toEqual(false);
   expect(repeatedSubstringPattern('abab')).toEqual(true);
   expect(repeatedSubstringPattern('abcabcabcabc')).toEqual(true);
   expect(repeatedSubstringPattern('aba')).toEqual(false);
@@ -108,6 +109,7 @@ test('467-findComplement', () => {
 });
 
 test('561-arrayPairSum', () => {
+  expect(arrayPairSum([])).toBe(0);
   expect(arrayPairSum([1, 4, 3, 2])).toBe(4);
   expect(arrayPairSum([6, 2, 6, 5, 1, 2])).toBe(9);
 });
@@ -387,8 +389,6 @@ test('1619-trimMean', () => {
 test('448-findDisappearedNumbers', () => {
   expect(findDisappearedNumbers([4])).toStrictEqual([]);
   expect(findDisappearedNumbers([4, 3, 2, 1])).toStrictEqual([]);
-  expect(findDisappearedNumbers([4, 3, 2, 7, 8, 2, 3, 1])).toStrictEqual([
-    5,
-    6,
-  ]);
+  expect(findDisappearedNumbers([1,1,1,1,1])).toStrictEqual([2,3,4,5]);
+  expect(findDisappearedNumbers([4, 3, 2, 7, 8, 2, 3, 1])).toStrictEqual([5,6]);
 });

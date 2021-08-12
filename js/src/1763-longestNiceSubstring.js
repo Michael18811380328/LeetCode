@@ -5,7 +5,6 @@ isBeautyStr = (str) => {
   // 0、字符串去重
   const simpleStr = [].filter.call(str,(s,i,o) => o.indexOf(s) == i).join('');
   // 如果去重后的字符串长度是奇数，那么一定不美丽
-  // console.log(str, simpleStr)
   const len = simpleStr.length;
   if (len % 2 === 1) {
     return false;

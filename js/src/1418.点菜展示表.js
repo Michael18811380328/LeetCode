@@ -1,10 +1,7 @@
 /*
  * @lc app=leetcode.cn id=1418 lang=javascript
- *
  * [1418] 点菜展示表
  */
-
-// @lc code=start
 /**
  * @param {string[][]} orders
  * @return {string[][]}
@@ -32,22 +29,16 @@ var displayTable = function(orders) {
       table[food] = 1
     }
   });
-  // console.log(menu);// true
-  // console.log(tables);
-  // console.log('----------------------')
   // 遍历菜品名称对象，并放到结果数组中第一行
   let menuArr = [];
   for (let key in menu) {
     menuArr.push(key);
   }
   menuArr.sort((a, b) => a > b ? 1 : -1);
-  // console.log(menuArr); 
   // 然后排序遍历桌号点的东西
   // tables.sort((a, b) => a.tableID < b.tableID ? 1 : -1);
-  // console.log(tables);
   let resultArr = [];
   tables.forEach((table, index) => {
-    // console.log(table)
     let tmp = [];
     tmp.push(String(index));
     menuArr.forEach(key => {
@@ -60,5 +51,3 @@ var displayTable = function(orders) {
   resultArr.unshift(menuArr);
   return resultArr;
 };
-// @lc code=end
-
