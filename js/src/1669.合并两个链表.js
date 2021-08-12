@@ -40,8 +40,6 @@ var mergeInBetween = function(list1, a, b, list2) {
     list2End = list2End.next;
   }
   // 然后把这个指向list2
-  // console.log(list1Middle, list1Middle1);
-  // console.log(list2Start, list2End);
   list1Middle.next = list2Start;
   list2End.next = list1Middle1;
   return list1Head;

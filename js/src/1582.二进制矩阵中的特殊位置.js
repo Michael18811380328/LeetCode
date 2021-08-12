@@ -27,7 +27,6 @@
 //   if (mat.length === 0) {
 //     return 0;
 //   }
-//   // console.log(mat);
 //   let res = 0;
 //   const len = mat[0].length;
 //   for (let i = 0; i < len; i++) {
@@ -35,11 +34,9 @@
 //     let tmp = 0;
 //     for (let j = 0; j < mat.length; j++) {
 //       sum += mat[j][i];
-//       // console.log(sum);
 //       if (dict[j] === true) continue;
 //       if (sum > 1) continue;
 //     }
-//     // console.log(i);
 //     if (sum === 1) {
 //       res++;
 //     }

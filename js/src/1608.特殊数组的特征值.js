@@ -3,8 +3,6 @@
  *
  * [1608] 特殊数组的特征值
  */
-
-// @lc code=start
 /**
  * @param {number[]} nums
  * @return {number}
@@ -29,13 +27,9 @@ var specialArray = function(nums) {
       x++;
     }
     else {
-      // console.log(x, pointer, nums[pointer]);
       x++;
     }
     if (x > nums[len - 1]) return -1;
-    // console.log(x, pointer);
   }
   return -1;
 };
-// @lc code=end
-

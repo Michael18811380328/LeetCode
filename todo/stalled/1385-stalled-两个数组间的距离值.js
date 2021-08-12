@@ -17,7 +17,6 @@ var findTheDistanceValue = function(arr1, arr2, d) {
   arr2.sort((a, b) => a - b);
   const len = arr2.length;
   let res = 0;
-  // console.log(arr2);
   for (let i = 0; i < arr1.length; i++) {
     let item = arr1[i];
     let start = 0;

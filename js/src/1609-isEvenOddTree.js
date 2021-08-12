@@ -62,7 +62,6 @@ var isEvenOddTree = function(root) {
     }
     // 将新的值放入层中
     matrix[layer].push(value);
-    // console.log(node);
     // 把子节点放在队列中
     if (node.left) {
       queue.push({
@@ -76,7 +75,6 @@ var isEvenOddTree = function(root) {
         layer: layer + 1,
       });
     }
-    // console.log(queue);
     return true;
   }
 
@@ -87,14 +85,11 @@ var isEvenOddTree = function(root) {
   });
 
   while (queue.length > 0) {
-    // console.log(queue.length);
     let current = queue.shift();
     if (runNode(current.node, current.layer) === false) {
       return false;
     } 
   }
-  // console.log(matrix);
-
   return true;
 };
 // @lc code=end

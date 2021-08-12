@@ -1,7 +1,7 @@
 {
   "scripts": {
     "test-ts": "jest --coverage",
-    "lint": "gts lint",
+    "lint": "gts lint ./src/*.ts",
     "clean": "gts clean",
     "compile": "tsc",
     "fix": "gts fix",

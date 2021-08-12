@@ -34,7 +34,6 @@ var checkSimilar = function(short, long) {
   for (let i = 1; i < len; i++) {
     let left = short.slice(0, i);
     let right = short.slice(i);
-    // console.log(left, right, long);
     if (long.indexOf(left) < 0) {
       return false;
     }

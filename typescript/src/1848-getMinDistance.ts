@@ -8,9 +8,9 @@
  */
 // 时间复杂度不好,104 ms, 在所有 TypeScript 提交中击败了5.88%
 function getMinDistance(nums: number[], target: number, start: number): number {
-  const len:number = nums.length;
-  let min:number = len;
-  for (let i:number = 0; i < len; i++) {
+  const len: number = nums.length;
+  let min: number = len;
+  for (let i: number = 0; i < len; i++) {
     if (nums[i] === target) {
       let tmpAbs = Math.abs(i - start);
       if (tmpAbs < min) {
@@ -28,8 +28,8 @@ function getMinDistance2(nums: number[], target: number, start: number): number 
   }
   let arr1: number[] = nums.slice(0, start + 1).reverse();
   let arr2: number[] = nums.slice(start);
-  const len:number = Math.max(arr1.length, arr2.length);
-  for (let i:number = 0; i < len; i++) {
+  const len: number = Math.max(arr1.length, arr2.length);
+  for (let i: number = 0; i < len; i++) {
     if (arr1[i] === target || arr2[i] === target) {
       return i;
     }

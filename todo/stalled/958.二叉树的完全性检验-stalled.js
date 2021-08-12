@@ -83,7 +83,6 @@ var isCompleteTree = function(root) {
         return checkQue(que,  laye);
       }
     }
-    console.log(que);
   }
   return true;
 };

@@ -11,8 +11,8 @@
 
 // 思路一，三层循环，性能很差
 // function numTriplets(nums1: number[], nums2: number[]): number {
-//   let foo = (arr1: number[], arr2: number[]):number => {
-//     let sum:number = 0;
+//   let foo = (arr1: number[], arr2: number[]): number => {
+//     let sum: number = 0;
 //     const arr3: number[] = arr2.map(item => Math.pow(item, 2));
 //     const len: number = arr1.length;
 //     const len3: number = arr3.length;
