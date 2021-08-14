@@ -27,6 +27,7 @@ var maxSlidingWindow = function(nums, k) {
     }
     // 否则，找到合适的位置，插入队列中
     // 这个很消耗性能，如果 K = 30000 那么插入操作是 N 的平方，未来可以用二分法优化
+    // 这里应该使用双端队列优化，现在直接在数组中插入性能很差
     else {
       for (let j = 0; j < listLen; j++) {
         if (nums[list[j]] <= item) {

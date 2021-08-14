@@ -1,4 +1,4 @@
-// 滑动窗口的最大值
+// 滑动窗口的最大值（细节有问题，详见239题目）
 var sliceWindow = (arr, k) => {
   let list = [];
   let len = arr.length;
