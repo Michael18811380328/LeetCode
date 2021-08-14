@@ -19,7 +19,7 @@ let fn = (nums, s) => {
   // 先获取第一个满足的右侧边界
   while (currentSum < s) {
     right++;
-    // 如果数组全部的和没有大于S，那么直接返回0
+    // 如果数组全部的和没有大于S，没有子数组满足，那么直接返回0
     if (right === len) {
       return 0;
     }
@@ -28,17 +28,24 @@ let fn = (nums, s) => {
   let minLen = right - left + 1;
   // 循环后面的元素
   while (right < len && left <= right) {
+    // 如果当前和大于S，那么左指针向右移动，当前和减少
     if (currentSum > s) {
       currentSum = currentSum - nums[left];
       left++;
     }
+    // 如果当前和小于等于S，那么右指针向右移动，当前的和增加
     else {
       right++;
-      if (nums[right] === undefined) break;
+      // 如果右指针已经到达最后，跳出循环
+      if (nums[right] === undefined) {
+        break;
+      }
       currentSum = currentSum + nums[right];
     }
+    // 如果当前的和大于S，那么计算左右指针的差，即当前子数组的长度
     if (currentSum >= s) {
       let currentLen = right - left + 1;
+      // 求最短子数组的长度
       if (currentLen < minLen) {
         minLen = currentLen;
       }
