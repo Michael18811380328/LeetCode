@@ -5,6 +5,11 @@ const fs = require('fs');
 // 作用：给程序文件加空行（如果文件末尾不是空行）
 function addLine(path) {
   const files = fs.readdirSync(path);
+  // 判断需要增加空行的文件类型
+  const suffixList = ['css', 'sass', 'less', 'js', 'ts', 'md'];
+  const suffix = suffixList.join('|');
+  const fileNameReg = new RegExp(suffix, 'g');
+
   for (file of files) {
     // 如果是隐藏文件（或者其他 gitignore 文件等），直接跳过
     if (file[0] === '.' || file === 'node_modules' || file === 'LICENSE' || file === 'site') {
@@ -14,8 +19,8 @@ function addLine(path) {
     if (file.indexOf('.') === -1) {
       addLine(path + '/' + file);
     }
-    // 要求的文件后缀（未来可以写一个数组放在全局）
-    if (file.indexOf('.md') > -1 || file.indexOf('.js') > -1 || file.indexOf('.ts') > -1) {
+    // 如果文件名满足文件类型，那么下一步处理
+    if (file.toLowerCase().match(fileNameReg) !== null) {
       var currentPath = encodeURI(path + '/' + file);
       var checkDir = fs.existsSync(currentPath);
       if (checkDir === false) {
