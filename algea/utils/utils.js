@@ -165,3 +165,76 @@ function findMaxConsitantElement(a) {
   }
   return max;
 }
+
+
+// 防抖
+export const debounce = (fn, wait = 100) => {
+  let timer = null;
+  return (...args) => {
+    if (timer) {
+      clearTimeout(timer);
+    }
+    timer = setTimeout(() => {
+      fn.apply(this, args);
+    }, wait);
+  };
+};
+
+// 节流
+export const throttle = (func, delay) => {
+  let timer = null;
+  let startTime = Date.now();
+  return function() {
+    let curTime = Date.now();
+    let remaining = delay - (curTime - startTime);
+    let context = this;
+    let args = arguments;
+    clearTimeout(timer);
+    if (remaining <= 0) {
+      func.apply(context, args);
+      startTime = Date.now();
+    } else {
+      timer = setTimeout(func, remaining);
+    }
+  };
+};
+
+
+export const isValidEmail = (email) => {
+  const reg = /^[A-Za-zd]+([-_.][A-Za-zd]+)*@([A-Za-zd]+[-.])+[A-Za-zd]{2,6}$/;
+  return reg.test(email);
+};
+
+export const checkDesktop = () => {
+  return window.innerWidth >= 768;
+};
+
+export const getErrorMessage = (err) => {
+  if (err.response) {
+    const { status } = err.response;
+    if (status === 500) {
+      return intl.get('Internal_server_error');
+    }
+  }
+  return intl.get('Network_error');
+};
+
+export const getErrorMsg = (error) => {
+  let errorMsg = '';
+  if (error.response) {
+    if (error.response.status === 403) {
+      // toaster.danger();
+      errorMsg = intl.get('Permission_denied');
+    }
+    else if (error.response.data && error.response.data['error_msg']) {
+      errorMsg = error.response.data['error_msg'];
+    }
+    else {
+      errorMsg = intl.get('Error');
+    }
+  } else {
+    errorMsg = intl.get('Please_check_the_network');
+  }
+  return errorMsg;
+};
+
