@@ -9,6 +9,7 @@
   "scripts": {
     "clean": "rm -rf node_modules",
     "test": "node ./scripts/jest-test.js --env=jsdom --coverage",
+    "test-watch": "node ./scripts/jest-test.js --env=jsdom --coverage --watch",
     "lint": "eslint ./*/*.js",
     "lint-html": "eslint ./*/*.js -f html -o ./eslint-reports/lint-results.html",
     "lint-fix": "eslint --fix ./js/*/*.js"
@@ -35,7 +36,14 @@
     "eslint": "^6.6.0",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.18.2",
-    "jest": "^24.9.0",
+    "jest": "^27.0.6",
+    "jest-watch-typeahead": "^0.6.4",
     "regenerator-runtime": "^0.13.3"
+  },
+  "jest": {
+    "watchPlugins": [
+      "jest-watch-typeahead/filename",
+      "jest-watch-typeahead/testname"
+    ]
   }
 }

@@ -9,6 +9,8 @@
 # package
 /js/package-lock.json
 /typescript/package-lock.json
+/js/yarn.lock
+/typescript/yarn.lock
 
 # production
 /build
