@@ -1,6 +1,8 @@
 # 单元测试
 
-更新：运行 ./test.sh 脚本，会覆盖下面全部的测试
+更新：本地运行 ./test.sh 脚本，会覆盖所有的测试。
+
+如需单独运行测试，详见下面操作。
 
 ### javascript 单元测试
 
@@ -57,4 +59,4 @@ GoLang 单元测试可以参考：https://zhuanlan.zhihu.com/p/91072465
 
 ### 集成测试
 
-todo: 上线后，使用 CI 测试 (develop 分支，但是会报错)
+上线后，根据 node.js.yml，执行 test.sh 脚本，运行全部测试。
