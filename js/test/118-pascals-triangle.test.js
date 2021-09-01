@@ -1,4 +1,4 @@
-import { generate } from '../src/118-pascals-triangle';
+import { generate } from '../src/0118-pascals-triangle';
 
 test('118-pascals-triangle', () => {
   const result1 = [

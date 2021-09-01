@@ -1,4 +1,4 @@
-import { lengthOfLastWord } from '../src/58-lengthOfLastWord';
+import { lengthOfLastWord } from '../src/0058-lengthOfLastWord';
 
 test('58-lengthOfLastWord', () => {
   expect(lengthOfLastWord('a ')).toEqual(1);

@@ -1,4 +1,4 @@
-import { thirdMax, thirdMax2 } from '../src/414-thirdMax';
+import { thirdMax, thirdMax2 } from '../src/0414-thirdMax';
 
 test('02-addTwoNumbers.js', () => {
   expect(thirdMax([1, 2, 3])).toEqual(1);

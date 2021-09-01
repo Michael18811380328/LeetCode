@@ -1,14 +1,14 @@
 import importlib
 
-twoSum = importlib.import_module("001-twoSum")
-trailingZeroes = importlib.import_module("172-trailingZeroes")
-isPowerOfTwo = importlib.import_module("231-isPowerOfTwo")
-canWinNim = importlib.import_module("292-canWinNim")
-countPrimes = importlib.import_module("204-countPrimes")
-guessNumber = importlib.import_module("374-guessNumber")
-largestPerimeter = importlib.import_module("967-largestPerimeter")
-stoneGame = importlib.import_module('877-stoneGame')
-intToRoman = importlib.import_module('012-intToRoman')
+twoSum = importlib.import_module("0001-twoSum")
+trailingZeroes = importlib.import_module("0172-trailingZeroes")
+isPowerOfTwo = importlib.import_module("0231-isPowerOfTwo")
+canWinNim = importlib.import_module("0292-canWinNim")
+countPrimes = importlib.import_module("0204-countPrimes")
+guessNumber = importlib.import_module("0374-guessNumber")
+largestPerimeter = importlib.import_module("0967-largestPerimeter")
+stoneGame = importlib.import_module("0877-stoneGame")
+intToRoman = importlib.import_module("0012-intToRoman")
 
 # test 292 nim-game
 def test_answer_292():

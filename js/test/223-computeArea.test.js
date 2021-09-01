@@ -1,4 +1,4 @@
-import { computeArea } from '../src/223-computeArea';
+import { computeArea } from '../src/0223-computeArea';
 
 test('224-calculate.js', () => {
   expect(computeArea(-3, 0, 3, 4, 0, -1, 9, 2)).toEqual(45);

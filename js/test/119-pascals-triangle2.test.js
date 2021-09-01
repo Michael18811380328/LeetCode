@@ -1,4 +1,4 @@
-import { getRow } from '../src/119-pascals-triangle-2';
+import { getRow } from '../src/0119-pascals-triangle-2';
 
 test('119-pascals-triangle2', () => {
   const result1 = [1, 1];

@@ -1,4 +1,4 @@
-import { trailingZeroes1, trailingZeroes2 } from '../src/172-trailingZeroes';
+import { trailingZeroes1, trailingZeroes2 } from '../src/0172-trailingZeroes';
 
 test('371-getSum.test.js', () => {
   // 思路一：适合计算小数，不好

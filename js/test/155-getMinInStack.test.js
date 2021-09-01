@@ -1,4 +1,4 @@
-import { MinStack, MinStack2 } from '../src/155-getMinInStack';
+import { MinStack, MinStack2 } from '../src/0155-getMinInStack';
 
 test('155-get-min-number-in-stack', () => {
   const minStack = new MinStack();

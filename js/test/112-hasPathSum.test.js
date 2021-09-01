@@ -1,4 +1,4 @@
-import { hasPathSum } from '../src/112-hasPathSum';
+import { hasPathSum } from '../src/0112-hasPathSum';
 
 // 获取最小子树的深度
 test('112-hasPathSum.js', () => {

@@ -1,4 +1,4 @@
-// import { hammingWeight } from '../src/191-hammingWeight';
+// import { hammingWeight } from '../src/0191-hammingWeight';
 
 test('02-addTwoNumbers.js', () => {
   // 在 babelrc 中增加 "ignore": ["./js/stalled/191-hammingWeight.test.js"] 可以避免严格模式报错

@@ -1,5 +1,5 @@
 // 215-findKthLargest.js
-import { findKthLargest } from '../src/215-findKthLargest';
+import { findKthLargest } from '../src/0215-findKthLargest';
 
 test('215-findKthLargest.js', () => {
   expect(findKthLargest([3, 2, 1, 5, 6, 4], 2)).toEqual(5);

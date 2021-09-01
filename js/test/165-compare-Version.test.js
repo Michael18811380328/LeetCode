@@ -1,4 +1,4 @@
-import { compareVersion, compareVersion2, compareVersion3 } from '../src/165-compare-Version';
+import { compareVersion, compareVersion2, compareVersion3 } from '../src/0165-compare-Version';
 
 test('165-compare-two-Version', () => {
   expect(compareVersion('1.0.1', '1')).toEqual(1);

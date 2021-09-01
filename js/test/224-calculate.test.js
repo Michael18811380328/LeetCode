@@ -1,4 +1,4 @@
-import { calculate } from '../src/224-calculate';
+import { calculate } from '../src/0224-calculate';
 
 test('224-calculate.js', () => {
   expect(calculate('1 + 1')).toEqual(2);

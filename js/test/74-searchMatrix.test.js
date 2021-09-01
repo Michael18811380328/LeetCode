@@ -1,4 +1,4 @@
-import { searchMatrix, searchMatrix2, searchArray } from '../src/74-searchMatrix';
+import { searchMatrix, searchMatrix2, searchArray } from '../src/0074-searchMatrix';
 
 test('74-search-array', () => {
   expect(searchArray([1, 2, 3, 4, 5], 2)).toEqual(true);

@@ -1,4 +1,4 @@
-import { reverseWords } from '../src/151-reverseWords';
+import { reverseWords } from '../src/0151-reverseWords';
 
 test('151-reverse words and delete space', () => {
   expect(reverseWords('a good   example')).toEqual('example good a');

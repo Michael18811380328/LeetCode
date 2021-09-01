@@ -1,4 +1,4 @@
-import { findRepeatedDnaSequences, findRepeatedDnaSequences1 } from '../src/187-findRepeatedDnaSequences';
+import { findRepeatedDnaSequences, findRepeatedDnaSequences1 } from '../src/0187-findRepeatedDnaSequences';
 
 test('187', () => {
   expect(findRepeatedDnaSequences('AAAAAAAAAAA')).toEqual(['AAAAAAAAAA']);

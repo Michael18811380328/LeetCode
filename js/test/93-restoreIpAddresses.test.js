@@ -1,4 +1,4 @@
-import { restoreIpAddresses } from '../src/93-restoreIpAddresses';
+import { restoreIpAddresses } from '../src/0093-restoreIpAddresses';
 
 test('80', () => {
   const s1 = '25525511135';

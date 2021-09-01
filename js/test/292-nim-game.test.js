@@ -1,4 +1,4 @@
-import { canWinNim } from '../src/292-nim-game';
+import { canWinNim } from '../src/0292-nim-game';
 
 test('292-nim-game', () => {
   expect(canWinNim(0)).toEqual(false);

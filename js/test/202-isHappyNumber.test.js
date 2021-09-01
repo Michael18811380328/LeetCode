@@ -1,4 +1,4 @@
-import { isHappy, isHappy1 } from '../src/202-isHappyNumber';
+import { isHappy, isHappy1 } from '../src/0202-isHappyNumber';
 
 test('202-isHappyNumber', () => {
   expect(isHappy(10)).toEqual(true);

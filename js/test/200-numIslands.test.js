@@ -1,4 +1,4 @@
-import { numIslands } from '../src/200-numIslands';
+import { numIslands } from '../src/0200-numIslands';
 
 test('200-numIslands.js', () => {
   expect(numIslands([['1', '1', '1', '1', '0'], ['1', '1', '0', '1', '0'], ['1', '1', '0', '0', '0'], ['0', '0', '0', '0', '0']])).toEqual(1);

@@ -1,4 +1,4 @@
-import { getSum1, getSum2 } from '../src/371-getSum';
+import { getSum1, getSum2 } from '../src/0371-getSum';
 
 test('371-getSum.test.js', () => {
   expect(getSum1(1, 2)).toEqual(3);

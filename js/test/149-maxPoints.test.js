@@ -1,6 +1,6 @@
 import {
   maxPoints, samePoints, pointLine, getKey, duplicatePoints,
-} from '../src/149-maxPoints';
+} from '../src/0149-maxPoints';
 
 test('test 149-max-points-in-one-line', () => {
   // 测试常规情况

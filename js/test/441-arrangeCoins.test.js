@@ -1,4 +1,4 @@
-import { arrangeCoins } from '../src/441-arrangeCoins';
+import { arrangeCoins } from '../src/0441-arrangeCoins';
 
 test('441', () => {
   expect(arrangeCoins(5)).toEqual(2);

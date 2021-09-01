@@ -1,4 +1,4 @@
-import { rotate, rotate1, rotate2 } from '../src/189-rotate-array';
+import { rotate, rotate1, rotate2 } from '../src/0189-rotate-array';
 
 test('189-rotate-array-sequence', () => {
   const array = [-1, -100, 3, 99];

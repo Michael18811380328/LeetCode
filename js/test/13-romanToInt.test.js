@@ -1,4 +1,4 @@
-import { romanToInt, romanToInt2 } from '../src/13-romanToInt';
+import { romanToInt, romanToInt2 } from '../src/0013-romanToInt';
 
 test('13-romanNumber-to-int', () => {
   expect(romanToInt('MCMXCIV')).toEqual(1994);

@@ -1,4 +1,4 @@
-import { reverseString } from '../src/344-reverseString';
+import { reverseString } from '../src/0344-reverseString';
 
 test('reverseString', () => {
   const arr = ['h', 'e', 'l', 'l', 'o'];

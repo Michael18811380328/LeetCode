@@ -1,4 +1,4 @@
-import { intersect } from '../src/350-intersect';
+import { intersect } from '../src/0350-intersect';
 
 test('', () => {
   const nums1 = [1, 2, 2, 1]; const

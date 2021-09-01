@@ -1,4 +1,4 @@
-import { trapRain } from '../src/42-trapRain';
+import { trapRain } from '../src/0042-trapRain';
 
 test('42-trapRain-hard', () => {
   expect(trapRain([0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1])).toEqual(6);

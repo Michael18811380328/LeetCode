@@ -1,4 +1,4 @@
-import { convertToTitle, convertToTitle1 } from '../src/168-convertToTitle';
+import { convertToTitle, convertToTitle1 } from '../src/0168-convertToTitle';
 
 test('168 excel convertToTitle', () => {
   const list = [

@@ -1,4 +1,4 @@
-import { insert } from '../src/57-insert-Interval';
+import { insert } from '../src/0057-insert-Interval';
 
 test('57-insert-Interval', () => {
   expect(insert([[1, 3], [6, 9]], [2, 5])).toEqual([[1, 5], [6, 9]]);

@@ -1,4 +1,4 @@
-import { isUgly, isUgly2 } from '../src/263-ugly-number';
+import { isUgly, isUgly2 } from '../src/0263-ugly-number';
 
 test('27-removeArrayElement', () => {
   expect(isUgly(-2)).toEqual(false);

@@ -1,4 +1,4 @@
-import { maxDepth } from '../src/104-maximum-depth-of-binary-tree';
+import { maxDepth } from '../src/0104-maximum-depth-of-binary-tree';
 
 test('104-maximum-depth-of-binary-tree', () => {
   const nullNode = { value: 1, left: null, right: null };

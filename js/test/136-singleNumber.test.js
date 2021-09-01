@@ -1,6 +1,6 @@
 import {
   singleNumber1, singleNumber2, singleNumber3, singleNumber4,
-} from '../src/136-singleNumber';
+} from '../src/0136-singleNumber';
 
 test('136-array has single number', () => {
   expect(singleNumber1([2])).toEqual(2);

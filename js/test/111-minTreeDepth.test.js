@@ -1,4 +1,4 @@
-import { minDepth } from '../src/111-minTreeDepth';
+import { minDepth } from '../src/0111-minTreeDepth';
 
 // 获取最小子树的深度
 test('111-minTreeDepth.test.js', () => {

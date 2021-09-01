@@ -1,4 +1,4 @@
-import { removeElement } from '../src/27-removeArrayElement';
+import { removeElement } from '../src/0027-removeArrayElement';
 
 test('27-removeArrayElement', () => {
   expect(removeElement([0, 1, 2, 2, 3, 0, 4, 2], 2)).toEqual(5);

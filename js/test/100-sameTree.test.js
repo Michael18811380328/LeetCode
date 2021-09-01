@@ -1,4 +1,4 @@
-import { isSameTree, isSameArray } from '../src/100-sameTree';
+import { isSameTree, isSameArray } from '../src/0100-sameTree';
 
 test('100-is-same-array', () => {
   expect(isSameArray([1, 2, 3], [1, 2, 3])).toEqual(true);

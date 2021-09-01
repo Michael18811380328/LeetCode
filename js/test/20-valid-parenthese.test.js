@@ -1,4 +1,4 @@
-import { isValid } from '../src/20-valid-parenthese';
+import { isValid } from '../src/0020-valid-parenthese';
 
 test('20-valid-parentheses', () => {
   expect(isValid('{}(){}[]')).toEqual(true);

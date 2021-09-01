@@ -1,4 +1,4 @@
-import { plusOne } from '../src/66-arrayplusOne';
+import { plusOne } from '../src/0066-arrayplusOne';
 
 test('07-reverse-number', () => {
   expect(plusOne([4, 3, 2, 1])).toEqual([4, 3, 2, 2]);

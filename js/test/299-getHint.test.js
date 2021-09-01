@@ -1,4 +1,4 @@
-import { getHint } from '../src/299-getHint';
+import { getHint } from '../src/0299-getHint';
 
 test('02-addTwoNumbers.js', () => {
   expect(getHint('1807', '7810')).toEqual('1A3B');
