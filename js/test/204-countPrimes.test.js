@@ -1,4 +1,4 @@
-import { isPrism, countPrimes, countPrimes2, countPrimes3 } from '../src/204-countPrimes';
+import { isPrism, countPrimes, countPrimes2, countPrimes3 } from '../src/0204-countPrimes';
 
 test('judge a number is Prism', () => {
   expect(isPrism(10)).toEqual(false);

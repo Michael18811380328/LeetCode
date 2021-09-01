@@ -10,9 +10,7 @@
  * @param {number} k
  * @return {number}
  */
-// 100 ms
-// , 在所有 JavaScript 提交中击败了
-// 43.23%
+// 100 ms, 在所有 JavaScript 提交中击败了43.23%
 var findKthPositive = function(arr, k) {
   // 两种情况
   // 如果缺失的这个数字，在 arr 内部

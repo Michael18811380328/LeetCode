@@ -1,4 +1,4 @@
-import { isPowerOfFour, isPowerOfFour2 } from '../src/342-isPowerOfFour';
+import { isPowerOfFour, isPowerOfFour2 } from '../src/0342-isPowerOfFour';
 
 test('342-isPowerOfFour.js', () => {
   expect(isPowerOfFour(4)).toEqual(true);

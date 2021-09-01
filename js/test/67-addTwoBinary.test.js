@@ -1,4 +1,4 @@
-import { addBinary } from '../src/67-addTwoBinary';
+import { addBinary } from '../src/0067-addTwoBinary';
 
 test('67-reverse-number', () => {
   expect(addBinary('1010', '1011')).toEqual('10101');

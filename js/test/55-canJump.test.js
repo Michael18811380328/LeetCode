@@ -1,4 +1,4 @@
-import { canJump } from '../src/55-canJump';
+import { canJump } from '../src/0055-canJump';
 
 test('02-addTwoNumbers', () => {
   const arr1 = [2, 3, 1, 1, 4];

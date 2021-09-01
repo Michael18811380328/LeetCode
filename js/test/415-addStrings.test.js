@@ -1,4 +1,4 @@
-import { addStrings2, addStrings3 } from '../src/415-addStrings';
+import { addStrings2, addStrings3 } from '../src/0415-addStrings';
 
 test('415-addStrings.js', () => {
   expect(addStrings2('0', '0')).toEqual('0');

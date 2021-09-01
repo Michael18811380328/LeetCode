@@ -1,4 +1,4 @@
-import { canCompleteCircuit } from '../src/134-canCompleteCircuit';
+import { canCompleteCircuit } from '../src/0134-canCompleteCircuit';
 
 test('02-addTwoNumbers.js', () => {
   expect(canCompleteCircuit([1, 2, 3, 4, 5], [3, 4, 5, 1, 2])).toEqual(3);

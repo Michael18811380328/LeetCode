@@ -1,4 +1,4 @@
-import { minimumTotal1, minimumTotal2, minimumTotal3 } from '../src/120-triangle-tree';
+import { minimumTotal1, minimumTotal2, minimumTotal3 } from '../src/0120-triangle-tree';
 
 test('minimumTotal', () => {
   const arr = [

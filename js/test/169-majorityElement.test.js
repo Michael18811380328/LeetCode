@@ -1,4 +1,4 @@
-import { majorityElement, majorityElement2 } from '../src/169-majorityElement';
+import { majorityElement, majorityElement2 } from '../src/0169-majorityElement';
 
 test('169-get-majority-Element-in-an-array', () => {
   expect(majorityElement([9])).toEqual(9);

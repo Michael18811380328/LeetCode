@@ -1,4 +1,4 @@
-import { wordPattern } from '../src/290-wordPattern';
+import { wordPattern } from '../src/0290-wordPattern';
 
 test('wordPattern', () => {
   expect(wordPattern('abba', 'dog cat cat dog')).toEqual(true);

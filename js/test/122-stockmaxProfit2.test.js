@@ -1,4 +1,4 @@
-import { maxProfit } from '../src/122-stock-maxProfit-2';
+import { maxProfit } from '../src/0122-stock-maxProfit-2';
 
 test('122-stockmaxProfit2', () => {
   expect(maxProfit([7, 1, 5, 3, 6, 4])).toEqual(7);

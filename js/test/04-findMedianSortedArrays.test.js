@@ -1,4 +1,4 @@
-import { findMedianSortedArrays, findMedianSortedArrays2 } from '../src/04-findMedianSortedArrays';
+import { findMedianSortedArrays, findMedianSortedArrays2 } from '../src/0004-findMedianSortedArrays';
 
 test('04-findMedianSortedArrays', () => {
   const testList = [

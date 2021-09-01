@@ -1,4 +1,4 @@
-import { nextPermutation } from '../src/31-nextPermutation';
+import { nextPermutation } from '../src/0031-nextPermutation';
 
 test('31-nextPermutation.test.js', () => {
   const arr1 = [1, 2, 3];

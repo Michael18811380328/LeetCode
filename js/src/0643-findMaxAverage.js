@@ -1,6 +1,5 @@
 /*
  * @lc app=leetcode.cn id=643 lang=javascript
- *
  * [643] 子数组最大平均数 I
  */
 
@@ -12,12 +11,8 @@
  */
 // 思路1：循环所有子数组，然后依次求和，这样可以实现，性能不好
 // 思路2：循环所有子数组，求和利用上一次的结果
-// 112 ms
-// , 在所有 JavaScript 提交中击败了
-// 71.43%
-// 的用户
+// 112 ms, 在所有 JavaScript 提交中击败了71.43%的用户
 var findMaxAverage = function(nums, k) {
-  console.log(nums, k)
   const n = nums.length;
   // 如果全部的数字小于给定的范围，测试一下
   if (n < k) {
@@ -45,7 +40,6 @@ var sum = function(arr) {
   var fn = function(total, num) {
     return total + num;
   }
-  console.log(arr);
   return arr.reduce(fn, 0);
 }
 // @lc code=end

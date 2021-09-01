@@ -1,4 +1,4 @@
-import { moveZeroes, moveZeroes2 } from '../src/283-moveZeroes';
+import { moveZeroes, moveZeroes2 } from '../src/0283-moveZeroes';
 
 test('283-moveZeroes.js', () => {
   const arr1 = [0, 1, 2, 3];

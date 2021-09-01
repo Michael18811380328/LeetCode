@@ -1,4 +1,4 @@
-import { reverse, reverse1 } from '../src/07-reverse';
+import { reverse, reverse1 } from '../src/0007-reverse';
 
 test('07-reverse-number', () => {
   expect(reverse(123)).toEqual(321);

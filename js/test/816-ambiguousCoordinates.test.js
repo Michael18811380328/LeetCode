@@ -1,4 +1,4 @@
-import { ambiguousCoordinates } from '../src/816-ambiguousCoordinates';
+import { ambiguousCoordinates } from '../src/0816-ambiguousCoordinates';
 
 test('816', () => {
   expect(ambiguousCoordinates('(00011)')).toEqual(["(0, 0.011)","(0.001, 1)"]);

@@ -1,4 +1,4 @@
-import { isPalindrome, isPalindrome2 } from '../src/09-isPalindrome';
+import { isPalindrome, isPalindrome2 } from '../src/0009-isPalindrome';
 
 test('09-isPalindrome', () => {
   expect(isPalindrome(-123)).toEqual(false);

@@ -1,4 +1,4 @@
-import { solve } from '../src/130-surrounding-area';
+import { solve } from '../src/0130-surrounding-area';
 
 test('130-surrounding-area.test.js', () => {
   const arr1 = [['X', 'X', 'X'], ['X', 'O', 'O'], ['X', 'X', 'O'], ['X', 'O', 'X']];

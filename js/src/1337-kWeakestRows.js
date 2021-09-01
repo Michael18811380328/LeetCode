@@ -10,10 +10,7 @@
  * @param {number} k
  * @return {number[]}
  */
-// 88 ms
-// , 在所有 JavaScript 提交中击败了
-// 62.86%
-// 的用户
+// 88 ms, 在所有 JavaScript 提交中击败了62.86%的用户
 var kWeakestRows = function(mat, k) {
   let arr = [];
   for (let i = 0; i < mat.length; i++) {

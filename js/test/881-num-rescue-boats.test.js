@@ -1,4 +1,4 @@
-import { numRescueBoats } from '../src/881-num-rescue-boats';
+import { numRescueBoats } from '../src/0881-num-rescue-boats';
 
 test('507', () => {
   expect(numRescueBoats([1, 2], 3)).toEqual(1);

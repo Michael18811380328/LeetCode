@@ -1,21 +1,21 @@
-import {canCompleteCircuit} from '../src/134-canCompleteCircuit';
-import {summaryRanges} from '../src/228-summaryRanges';
-import {moveZeroes} from '../src/283-moveZeroes';
-import {integerBreak} from '../src/343-integerBreak';
-import {intersection} from '../src/349-intersection';
-import {countSegments} from '../src/434-countSegments';
-import {findComplement1, findComplement2} from '../src/476-findComplement';
-import {maximumProduct} from '../src/628-maximumProduct';
-import {toGoatLatin} from '../src/824-toGoatLatin';
-import {validMountainArray} from '../src/941-validMountainArray';
+import {canCompleteCircuit} from '../src/0134-canCompleteCircuit';
+import {summaryRanges} from '../src/0228-summaryRanges';
+import {moveZeroes} from '../src/0283-moveZeroes';
+import {integerBreak} from '../src/0343-integerBreak';
+import {intersection} from '../src/0349-intersection';
+import {countSegments} from '../src/0434-countSegments';
+import {findComplement1, findComplement2} from '../src/0476-findComplement';
+import {maximumProduct} from '../src/0628-maximumProduct';
+import {toGoatLatin} from '../src/0824-toGoatLatin';
+import {validMountainArray} from '../src/0941-validMountainArray';
+import {arrayPairSum} from '../src/0561-arrayPairSum';
+import {findDisappearedNumbers} from '../src/0448-findDisappearedNumbers';
+import {repeatedSubstringPattern} from '../src/0459-repeatedSubstringPattern';
+import {check} from '../src/1752-check';
 import {duplicateZeros} from '../src/1089-duplicateZeros';
-import {arrayPairSum} from '../src/561-arrayPairSum';
 import {sortByBits} from '../src/1356-sortByBits';
-import {findDisappearedNumbers} from '../src/448-findDisappearedNumbers';
 import {slowestKey} from '../src/1629-slowestKey';
 import {trimMean} from '../src/1619-trimMean';
-import {repeatedSubstringPattern} from '../src/459-repeatedSubstringPattern';
-import {check} from '../src/1752-check';
 
 test('134-canCompleteCircuit', () => {
   const gas = [1, 2, 3, 4, 5];

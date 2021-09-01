@@ -1,4 +1,4 @@
-import { checkPerfectNumber } from '../src/507-checkPerfectNumber';
+import { checkPerfectNumber } from '../src/0507-checkPerfectNumber';
 
 test('507', () => {
   expect(checkPerfectNumber(28)).toEqual(true);

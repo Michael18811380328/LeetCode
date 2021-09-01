@@ -1,4 +1,4 @@
-import { searchInsert } from '../src/35-searchInsert';
+import { searchInsert } from '../src/0035-searchInsert';
 
 test('35-searchInsert', () => {
   expect(searchInsert([1, 3, 5, 6], 5)).toEqual(2);

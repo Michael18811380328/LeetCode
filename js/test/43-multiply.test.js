@@ -1,4 +1,4 @@
-import { multiply2 } from '../src/43-multiply';
+import { multiply2 } from '../src/0043-multiply';
 
 test('43-multiply.js', () => {
   expect(multiply2('123', '2')).toEqual('246');

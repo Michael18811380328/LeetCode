@@ -1,4 +1,4 @@
-import { isPowerOfThree } from '../src/326-isPowerOfThree';
+import { isPowerOfThree } from '../src/0326-isPowerOfThree';
 
 test('isPowerOfThree', () => {
   expect(isPowerOfThree(27)).toEqual(true);

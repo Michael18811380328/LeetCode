@@ -1,4 +1,4 @@
-import { isPowerOfTwo } from '../src/231-isPowerOfTwo';
+import { isPowerOfTwo } from '../src/0231-isPowerOfTwo';
 
 test('231-isPowerOfTwo', () => {
   expect(isPowerOfTwo(0)).toEqual(false);

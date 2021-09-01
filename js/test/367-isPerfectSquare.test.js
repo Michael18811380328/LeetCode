@@ -1,5 +1,5 @@
 // 367-isPerfectSquare.js
-import { isPerfectSquare, isPerfectSquare2 } from '../src/367-isPerfectSquare';
+import { isPerfectSquare, isPerfectSquare2 } from '../src/0367-isPerfectSquare';
 
 test('isPerfectSquare', () => {
   expect(isPerfectSquare(1)).toEqual(true);

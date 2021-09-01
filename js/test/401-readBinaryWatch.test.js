@@ -1,4 +1,4 @@
-import { readBinaryWatch } from '../src/401-readBinaryWatch';
+import { readBinaryWatch } from '../src/0401-readBinaryWatch';
 
 test('401-readBinaryWatch', () => {
   expect(readBinaryWatch(0)).toEqual(['0:00']);

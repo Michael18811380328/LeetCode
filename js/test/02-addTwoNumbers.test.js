@@ -1,4 +1,4 @@
-import { addTwoNumbers, addTwoNumbers2 } from '../src/02-addTwoNumbers';
+import { addTwoNumbers, addTwoNumbers2 } from '../src/0002-addTwoNumbers';
 
 /**
  * https://leetcode.com/problems/add-two-numbers/description/

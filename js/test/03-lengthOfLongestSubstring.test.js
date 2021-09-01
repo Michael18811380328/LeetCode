@@ -1,4 +1,4 @@
-import { lengthOfLongestSubstring } from '../src/03-lengthOfLongestSubstring';
+import { lengthOfLongestSubstring } from '../src/0003-lengthOfLongestSubstring';
 
 // test('03.js', () => {
 //   const res1 = lengthOfLongestSubstring2('bbbbb');
