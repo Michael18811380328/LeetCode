@@ -1,9 +1,7 @@
-import { rotateImage, moveFour } from '../src/0048-rotate-image';
+import { rotateImage } from '../src/0048-rotate-image';
 
 test('02-addTwoNumbers', () => {
-  // move four numbers success
-  expect(moveFour(1, 2, 3, 4)).toEqual([4, 1, 2, 3]);
-  // rotate three
+  // rotate matrix length is three
   const test1 = [
     [1, 2, 3],
     [4, 5, 6],
@@ -15,7 +13,7 @@ test('02-addTwoNumbers', () => {
     [9, 6, 3],
   ];
   expect(rotateImage(test1)).toEqual(result1);
-  // rotate four
+  // rotate matrix length is four
   const testmatrix = [
     [5, 1, 9, 11],
     [2, 4, 8, 10],
