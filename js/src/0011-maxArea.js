@@ -6,6 +6,7 @@
 // 输入: [1,8,6,2,5,4,8,3,7]
 // 输出: 49
 
+// 方法1：两次循环，逐步比较计算最大值
 // 两次循环性能不好：1868 ms, 在所有 javascript 提交中击败了5.11%
 function maxArea(height) {
   if (height.length === 2) {
@@ -27,6 +28,29 @@ function maxArea(height) {
   return max;
 }
 
-// 应该想一个好办法
+// 方法2：双指针逼近最大值
+// 84 ms, 在所有 JavaScript 提交中击败了82.20%
+// 一次循环实现（算法复杂度满足）
+function maxArea2(height) {
+  const len = height.length;
+  if (len === 2) {
+    return Math.min(height[0], height[1]);
+  }
+  let left = 0;
+  let right = len - 1;
+  let max = Math.min(height[left], height[right]) * (right - left);
+  while (left !== right) {
+    if (height[left] < height[right]) {
+      left++
+    } else {
+      right--;
+    }
+    let curr = Math.min(height[left], height[right]) * (right - left);
+    if (curr > max) {
+      max = curr;
+    }
+  }
+  return max;
+}
 
-export { maxArea };
+export { maxArea, maxArea2 };
