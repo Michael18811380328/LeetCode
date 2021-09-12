@@ -1,11 +1,13 @@
 /*
  * @lc app=leetcode.cn id=999 lang=javascript
  * [999] 可以被一步捕获的棋子数
+ * 考点：数组
  */
 /**
  * @param {character[][]} board
  * @return {number}
  */
+// 1、思路1
 // 80 ms, 在所有 JavaScript 提交中击败了61.84%
 var numRookCaptures = function(board) {
   const len = 8;
@@ -19,6 +21,7 @@ var numRookCaptures = function(board) {
   }
 };
 
+// 这里还能改进
 var getNum = (board, x, y) => {
   let res = 0;
   for (let i = x; i < 8; i++) {
@@ -58,3 +61,23 @@ var getNum = (board, x, y) => {
   }
   return res;
 };
+
+// 2、思路二：优化找到车的算法
+// 上面是两层循环，每一次循环还有复杂的函数判断，性能能否优化？
+// 这里寻找车的过程能否优化？
+// 现在是双重循环寻找
+// 能否直接把数组降维，然后获取index，然后除以8，获取对应的XY
+// 这样直接使用 index 即可完成，不需要双重循环
+// 68 ms, 在所有 JavaScript 提交中击败了78.57%
+// 子函数还能优化
+var numRookCaptures = function(board) {
+  let newBoard = board.flat();
+  let index = newBoard.indexOf('R') + 1;
+  const j = (index % 8) - 1;
+  const i = (index - index % 8) / 8;
+  return getNum(board, i, j);
+};
+
+// 更好的算法上，子函数还能优化，看一下怎么实现
+// 如果已知了 ij 那么直接可以把四个子数组拿出来（拿出来也消耗时间）
+
