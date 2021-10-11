@@ -1,5 +1,9 @@
 # LeetCode 刷题记录
 
+test
+
+https://img.shields.io/steam/size/100
+
 ## 简介
 
 乐扣算法刷题，网站链接 https://leetcode-cn.com。
