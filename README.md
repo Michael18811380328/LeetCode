@@ -1,8 +1,6 @@
 # LeetCode 刷题记录
 
-test
-
-https://img.shields.io/steam/size/100
+<img alt="Steam File Size" src="https://img.shields.io/steam/size/100">
 
 ## 简介
 
