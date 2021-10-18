@@ -25,6 +25,13 @@ test('02-addTwoNumbers.js', () => {
   expect(addTwoNumbers2(l1, l2)).toEqual(l3);
 });
 
+test('02-addTwoNumbers.js', () => {
+  const l1 = { val: 2, next: { val: 4, next: null } };
+  const l2 = { val: 5, next: { val: 6, next: { val: 4, next: null } } };
+  const l3 = { val: 7, next: { val: 0, next: { val: 5, next: null } } };
+  expect(addTwoNumbers2(l1, l2)).toEqual(l3);
+});
+
 test('02-addTwoNumbers list node', () => {
   const l1 = new ListNode(2);
   l1.next = new ListNode(4);

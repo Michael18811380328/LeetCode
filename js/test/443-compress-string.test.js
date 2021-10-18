@@ -20,3 +20,10 @@ test('443-compress-string', () => {
   expect(len).toEqual(7);
   expect(arr).toEqual(['E', 'u', 'e', '9', '9', '4', 'R']);
 });
+
+test('443-compress-string', () => {
+  const arr = ['E', 'u', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', '9', '9', '9', '9', 'R'];
+  const len = compressString(arr);
+  expect(len).toEqual(8);
+  expect(arr).toEqual(['E', 'u', 'e', '1', '1', '9', '4', 'R']);
+});

@@ -1,5 +1,5 @@
 {
-  "name": "LeetCode",
+  "name": "leetcode",
   "version": "1.0.0",
   "description": "Learn Leetcode",
   "main": "test.js",
@@ -10,8 +10,8 @@
     "clean": "rm -rf node_modules",
     "test": "node ./scripts/jest-test.js --env=jsdom --coverage",
     "test-watch": "node ./scripts/jest-test.js --env=jsdom --coverage --watch",
-    "lint": "eslint ./*/*.js",
-    "lint-html": "eslint ./*/*.js -f html -o ./eslint-reports/lint-results.html",
+    "lint": "eslint ./src/*.js",
+    "lint-html": "eslint ./src/*.js -f html -o ./eslint-reports/lint-results.html",
     "lint-fix": "eslint --fix ./js/*/*.js"
   },
   "repository": {
@@ -31,11 +31,11 @@
     "@babel/polyfill": "^7.11.5",
     "@babel/preset-env": "^7.11.5",
     "@types/jest": "^26.0.15",
-    "babel-jest": "^24.9.0",
+    "babel-jest": "^27.3.0",
     "babel-preset-env": "^1.7.0",
-    "eslint": "^6.6.0",
-    "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-plugin-import": "^2.18.2",
+    "eslint": "7.32.0",
+    "eslint-config-airbnb-base": "14.2.1",
+    "eslint-plugin-import": "2.25.2",
     "jest": "^27.0.6",
     "jest-watch-typeahead": "^0.6.4",
     "regenerator-runtime": "^0.13.3"

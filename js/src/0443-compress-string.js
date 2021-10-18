@@ -47,18 +47,18 @@ function compressString(chars) {
  * @param {character[]} chars
  * @return {number}
  */
-function compressStringBug(chars) {
-  for (let i = 0; i < chars.length; i++) {
-    const item = chars[i];
-    const firstIndex = chars.indexOf(item, i);
-    const lastIndex = chars.lastIndexOf(item);
-    if (firstIndex !== lastIndex) {
-      const times = lastIndex - firstIndex + 1;
-      const newItems = (`${times}`).split('');
-      chars.splice(firstIndex + 1, times - 1, ...newItems);
-    }
-  }
-  return chars.length;
-}
+// function compressStringBug(chars) {
+//   for (let i = 0; i < chars.length; i++) {
+//     const item = chars[i];
+//     const firstIndex = chars.indexOf(item, i);
+//     const lastIndex = chars.lastIndexOf(item);
+//     if (firstIndex !== lastIndex) {
+//       const times = lastIndex - firstIndex + 1;
+//       const newItems = (`${times}`).split('');
+//       chars.splice(firstIndex + 1, times - 1, ...newItems);
+//     }
+//   }
+//   return chars.length;
+// }
 
-export { compressString, compressStringBug };
+export { compressString };
