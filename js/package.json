@@ -8,6 +8,7 @@
   },
   "scripts": {
     "clean": "rm -rf node_modules",
+    "standard": "./node_modules/.bin/standard",
     "test": "node ./scripts/jest-test.js --env=jsdom --coverage",
     "test-watch": "node ./scripts/jest-test.js --env=jsdom --coverage --watch",
     "lint": "eslint ./src/*.js",
@@ -38,7 +39,16 @@
     "eslint-plugin-import": "2.25.2",
     "jest": "^27.0.6",
     "jest-watch-typeahead": "^0.6.4",
-    "regenerator-runtime": "^0.13.3"
+    "regenerator-runtime": "^0.13.3",
+    "standard": "^16.0.4"
+  },
+  "standard": {
+    "ignore": [
+      "/node_modules/",
+      "/lib/select2/",
+      "/lib/ckeditor/",
+      "tmp.js"
+    ]
   },
   "jest": {
     "watchPlugins": [
