@@ -7,7 +7,7 @@ int main() {
   scanf("%d %d", &n, &m);
 
   for (i = 0; i <= n - 1; i++) {
-    scanf("%d", a[i]);
+    scanf("%s", a[i]);
   }
 
   // 双重枚举遍历矩阵

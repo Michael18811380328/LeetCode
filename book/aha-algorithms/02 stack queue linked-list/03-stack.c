@@ -29,11 +29,13 @@ int main() {
     top--;
   }
 
+  char x = 't';
+  char y = 'f';
   if (top == 0) {
-    printf('true');
+    printf("%c", x);
   }
   else {
-    printf('false');
+    printf("%c", y);
   }
 
   return 0;

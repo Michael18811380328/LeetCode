@@ -6,7 +6,7 @@ const fs = require('fs');
 function addLine(path) {
   const files = fs.readdirSync(path);
   // 判断需要增加空行的文件类型
-  const suffixList = ['css', 'sass', 'less', 'js', 'ts', 'md'];
+  const suffixList = ['css', 'sass', 'less', 'js', 'ts', 'md', 'c'];
   const suffix = suffixList.join('|');
   const fileNameReg = new RegExp(suffix, 'g');
 
@@ -38,6 +38,6 @@ function addLine(path) {
 }
 
 // 这里放需要处理的目录（绝对路径）
-const initDir = '/PersonalRepo/HelloSite';
+const initDir = '/Users/seafile/PersonalRepo/LeetCode/book';
 
 addLine(initDir);

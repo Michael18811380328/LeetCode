@@ -108,9 +108,9 @@ int main() {
   for (i = 2; i <= n; i++) {
     dis[i] = inf;
   }
-  k = fisrt[1];
+  k = first[1];
   while (k != -1) {
-    dis[v[k] = w[k]];
+    dis[v[k]] = w[k];
     k = next[k];
   }
   size = n;

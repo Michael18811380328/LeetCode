@@ -43,7 +43,7 @@ int main() {
         dis[v[k]] = dis[u[k]] + w[k];
         if (book[v[k]] == 0) {
           que[tail] = v[k];
-          tail++:
+          tail++;
           book[v[k]] = 1;
         }
       }

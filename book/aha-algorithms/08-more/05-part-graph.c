@@ -33,7 +33,7 @@ int main () {
     for (j = 1; j <= n; j++) {
       book[j] = 0;
       if (dfs(i)) {
-        sum++:
+        sum++;
       }
     }
   }

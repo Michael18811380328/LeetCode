@@ -24,3 +24,6 @@
 .vscode
 .DS_Store
 js/eslint-reports/lint-results.html
+
+#clang
+*.out

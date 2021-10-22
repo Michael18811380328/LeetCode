@@ -27,11 +27,11 @@ struct node {
   int data;
   // 声明一个指针，指向下一个 node 节点的指针
   struct node *next;
-}
+};
 
 // 主函数
 int main() {
-  struct node *head, *p. *q, *t;
+  struct node *head, *p, *q, *t;
   int i, n, a;
 
   scanf("%d", &n);
@@ -52,7 +52,7 @@ int main() {
     // 如果不是空链表，那么把前一个节点(q)的指针，指向当前节点(p)
     // 然后把当前节点变成前一个节点（q）
     else {
-      q -> next = p
+      q -> next = p;
       q = p;
     }
   }
@@ -65,7 +65,7 @@ int main() {
     // 如果遍历到结尾，或者某个节点的值大于a
     // 那么把A节点插入其中（改变指针的指向）
     if (t -> next == NULL || t -> next -> data > a) {
-      p = (strcut node *)malloc(sizeof(struct node));
+      p = (struct node *)malloc(sizeof(struct node));
       p -> data = a;
       p -> next = t -> next;
       t -> next = p;
@@ -80,6 +80,6 @@ int main() {
     t = t -> next;
   }
   getchar();
-  getchat();
+  getchar();
   return 0;
 }

@@ -5,7 +5,7 @@ int n; // 堆中元素的数量
 
 void swap(int x, int y) {
   int tmp;
-  tmp = t[x];
+  tmp = h[x];
   h[x] = h[y];
   h[y] = tmp;
   return;

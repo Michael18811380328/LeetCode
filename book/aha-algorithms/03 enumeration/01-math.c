@@ -4,7 +4,7 @@
 int main() {
   int a[10], book[10];
   int total = 10;
-  int t, sum;
+  int i, sum;
   // 使用 a[1] - a[9] 表示九个数字
   for (a[1] = 1; a[1] <= 9; a[1]++) {
     for (a[2] = 1; a[2] <= 9; a[2]++) {
@@ -29,7 +29,7 @@ int main() {
                     }
                     if (sum == 9 && a[1] * 100 + a[2] * 10 + a[3] + a[4] * 100 + a[5] * 10 + a[6] == a[7] * 100 + a[8] * 10 + a[9]) {
                       total++;
-                      printf('当前的情况满足');
+                      printf("%s", "ok");
                     }
                   }
                 }

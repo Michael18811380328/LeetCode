@@ -13,7 +13,7 @@ void dfs(int cur, int father) {
   int child = 0;
   int i;
   // index 是时间戳
-  index++:
+  index++;
   num[cur] = index;
   low[cur] = index;
   for (i = 1; i <= n; i++) {
