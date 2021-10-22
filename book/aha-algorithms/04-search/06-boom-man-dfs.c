@@ -6,7 +6,7 @@ int book[20][20], max, mx, my, n, m;
 int getnum(int i, int j) {
   int sum = 0, x, y;
   x = i, y = j;
-  while (a[x][y] !== '#') {
+  while (a[x][y] != '#') {
     if (a[x][y] == 'G') {
       sum++;
     }
@@ -14,7 +14,7 @@ int getnum(int i, int j) {
   }
 
   x = i, y = j;
-  while (a[x][y] !== '#') {
+  while (a[x][y] != '#') {
     if (a[x][y] == 'G') {
       sum++;
     }
@@ -22,7 +22,7 @@ int getnum(int i, int j) {
   }
 
   x = i, y = j;
-  while (a[x][y] !== '#') {
+  while (a[x][y] != '#') {
     if (a[x][y] == 'G') {
       sum++;
     }
@@ -30,7 +30,7 @@ int getnum(int i, int j) {
   }
 
   x = i, y = j;
-  while (a[x][y] !== '#') {
+  while (a[x][y] != '#') {
     if (a[x][y] == 'G') {
       sum++;
     }

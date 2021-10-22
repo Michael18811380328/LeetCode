@@ -25,7 +25,7 @@ int bfs_main() {
   }
 
   // init queue
-  head = 1；
+  head = 1;
   tail = 1;
   que[tail].x = startx;
   que[tail].y = starty;

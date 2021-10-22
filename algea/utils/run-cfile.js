@@ -39,8 +39,10 @@ function compileFile(path) {
       const cmd = 'gcc ' + currentPath + ' -o test.out';
       console.log(cmd)
       process.exec(cmd, function(error, stdout, stderr) {
-        console.log("error:" + error);
-        console.log('\n')
+        if (error !== null) {
+          console.log("error:" + error);
+          console.log('\n')
+        }
         // console.log("stdout:"+stdout);
         // console.log("stderr:"+stderr);
       });

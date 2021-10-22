@@ -11,7 +11,7 @@ int main () {
   int e[51][51] = {0};
   int book[51] = {0};
   int head, tail;
-  int i, j, n, m, a, b, cur, strat, end, flag = 0;
+  int i, j, n, m, a, b, cur, start, end, flag = 0;
   scanf("%d %d %d %d", &n, &m, &start, &end);
 
   // init matrix

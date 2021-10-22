@@ -1,7 +1,7 @@
 // dfs 适应于边权重不同的情况（例如不同地点的距离不同）
 #include <stdio.h>
 
-int main = 9999999;
+int min = 9999999;
 int book[101], n, e[101][101];
 
 void dfs(int cur, int dis) {

@@ -14,7 +14,7 @@ int main() {
   struct node que[2501];
   int next[4][2] = {0};
   int book[51][51] = {0};
-  int next[4][2] = {
+  next[4][2] = {
     {0, 1},
     {1, 0},
     {0, -1},

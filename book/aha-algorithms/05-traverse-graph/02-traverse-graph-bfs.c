@@ -4,6 +4,7 @@ int main() {
   int i, j, n, m, a, b, cur;
   int book[101] = {0};
   int e[101][101];
+  int que[100];
 
   scanf("%d %d", &n, &m);
   // init matrix
@@ -28,15 +29,15 @@ int main() {
   }
 
   // bfs 核心就是队列
-  head = 1;
-  tail = 1;
+  int head = 1;
+  int tail = 1;
 
   // 开始 bfs
   que[tail] = 1;
   tail++;
   book[1] = 1;
 
-  while > (head < tail && tail <= n) {
+  while (head < tail && tail <= n) {
     cur = que[head];
     for (i = 1; i <= n; i++) {
       if (e[cur][i] == 1 && book[i] == 0) {

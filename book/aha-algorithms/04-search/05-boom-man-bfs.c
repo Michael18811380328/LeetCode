@@ -15,7 +15,7 @@ int getnum(int i, int j) {
   sum = 0;
   // 遍历上下左右可以消灭的敌人个数
   x = i, y = j;
-  while (a[x][y] !== '#') {
+  while (a[x][y] != '#') {
     if (a[x][y] == 'G') {
       sum++;
     }
@@ -23,7 +23,7 @@ int getnum(int i, int j) {
   }
 
   x = i, y = j;
-  while (a[x][y] !== '#') {
+  while (a[x][y] != '#') {
     if (a[x][y] == 'G') {
       sum++;
     }
@@ -31,7 +31,7 @@ int getnum(int i, int j) {
   }
 
   x = i, y = j;
-  while (a[x][y] !== '#') {
+  while (a[x][y] != '#') {
     if (a[x][y] == 'G') {
       sum++;
     }
@@ -39,7 +39,7 @@ int getnum(int i, int j) {
   }
 
   x = i, y = j;
-  while (a[x][y] !== '#') {
+  while (a[x][y] != '#') {
     if (a[x][y] == 'G') {
       sum++;
     }
