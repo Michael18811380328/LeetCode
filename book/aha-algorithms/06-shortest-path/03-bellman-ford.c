@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+// 最短路径
 int main() {
   int dis[10];
   int i, k, m, n, u[10], v[10], w[10];
@@ -9,6 +10,7 @@ int main() {
     scanf("%d %d %d", &u[i], &v[i], &w[i]);
   }
 
+  // 这里有问题
   for (i = 1; i <= n; i++) {
     dis[i] = inf;
   }
