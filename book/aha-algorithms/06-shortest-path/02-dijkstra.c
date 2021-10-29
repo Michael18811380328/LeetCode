@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+// 最短路径：单源最短路 Dijkstra 算法
 int main() {
   int e[10][10];
   int dis[10];
