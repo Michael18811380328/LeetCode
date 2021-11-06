@@ -18,18 +18,33 @@
  * @return {boolean}
  */
 // 考点：计算树的深度，然后比较一下
-// 92 ms
-// , 在所有 JavaScript 提交中击败了
-// 92.03%
-// 的用户
-var isBalanced = function(root) {
+// 92 ms, 在所有 JavaScript 提交中击败了92.03%
+const runTree = function(node) {
+  if (!node) {
+    return 1;
+  }
+  const left = runTree(node.left);
+  const right = runTree(node.right);
+  // 如果子节点的深度不符合，直接返回 false
+  if (!left || !right) {
+    return false;
+  }
+  if (Math.abs(left - right) < 2) {
+    return Math.max(left, right) + 1;
+  } else {
+    return false;
+  }
+  // 如果子节点的深度绝对值小于1，那么返回子节点的深度
+};
+
+const isBalanced = function(root) {
   if (!root) {
     return true;
   }
-  let left = runTree(root.left);
-  let right = runTree(root.right);
+  const left = runTree(root.left);
+  const right = runTree(root.right);
   // 如果子节点的深度不符合，直接返回 false
-  if (!left || !right ) {
+  if (!left || !right) {
     return false;
   }
   if (Math.abs(left - right) < 2) {
@@ -39,23 +54,4 @@ var isBalanced = function(root) {
   }
 };
 
-var runTree = function(node) {
-  if (!node) {
-    return 1;
-  }
-  let left = runTree(node.left);
-  let right = runTree(node.right);
-  // 如果子节点的深度不符合，直接返回 false
-  if (!left || !right ) {
-    return false;
-  }
-  if (Math.abs(left - right) < 2) {
-    return Math.max(left, right) + 1;
-  } else {
-    return false;
-  }
-  // 如果子节点的深度绝对值小于1，那么返回子节点的深度
-}
-
-// @lc code=end
-
+export { isBalanced, runTree };

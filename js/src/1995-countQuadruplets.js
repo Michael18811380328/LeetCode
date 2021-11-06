@@ -13,11 +13,11 @@
  * @param {number[]} nums
  * @return {number}
  */
-var countQuadruplets = function(nums) {
+const countQuadruplets = function (nums) {
   let max = nums[0];
-  let dict = {};
+  const dict = {};
   for (let i = 0; i < nums.length; i++) {
-    let curr = nums[i];
+    const curr = nums[i];
     // 求出最大值
     if (max < curr) {
       max = curr;
@@ -44,15 +44,15 @@ var countQuadruplets = function(nums) {
         continue;
       }
       for (let k = j + 1; k < len; k++) {
-        let sum = nums[i] + nums[j] + nums[k];
+        const sum = nums[i] + nums[j] + nums[k];
         // 如果字典中没有这个值，继续循环
         if (!dict[sum]) {
           continue;
         }
-        let sumList = dict[sum];
+        const sumList = dict[sum];
         // 这里的循环能否避免
         // sumList 是一个递增的数组
-        sumList.forEach(item => {
+        sumList.forEach((item) => {
           if (item > k) {
             result++;
           }
@@ -62,6 +62,8 @@ var countQuadruplets = function(nums) {
   }
   return result;
 };
+
+export { countQuadruplets };
 
 // console.log(countQuadruplets([1,2,3,6]));
 // console.log(countQuadruplets([3,3,6,4,5]));

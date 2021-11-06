@@ -5,10 +5,10 @@
  */
 // 先求和，然后求出左半部分和右半部分的和，一次循环实现
 // 76 ms, 在所有 JavaScript 提交中击败了50.00%
-var findMiddleIndex = function(nums) {
+const findMiddleIndex = function (nums) {
   const len = nums.length;
   if (len === 1) return 0;
-  const sum = nums.reduce((a, b) => { return a + b }, 0);
+  const sum = nums.reduce((a, b) => { return a + b; }, 0);
   let right = sum - nums[0];
   if (right === 0) {
     return 0;
@@ -28,3 +28,4 @@ var findMiddleIndex = function(nums) {
 // console.log(findMiddleIndex([1,-1,4]) === 2);
 // console.log(findMiddleIndex([2,5]) === -1);
 // console.log(findMiddleIndex([1]) === 0);
+export { findMiddleIndex };

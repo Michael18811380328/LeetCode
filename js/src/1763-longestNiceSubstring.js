@@ -3,14 +3,15 @@
 // Brute force and check each substring to see if it is nice.
 isBeautyStr = (str) => {
   // 0、字符串去重
-  const simpleStr = [].filter.call(str,(s,i,o) => o.indexOf(s) == i).join('');
+  const simpleStr = [].filter.call(str, (s, i, o) => o.indexOf(s) === i).join('');
   // 如果去重后的字符串长度是奇数，那么一定不美丽
   const len = simpleStr.length;
   if (len % 2 === 1) {
     return false;
   }
   // 1/ 把字符串中大写和小写分开，变成两个字符串数组
-  let arr1 = [], arr2 = [];
+  let arr1 = [];
+  let arr2 = [];
   // 循环去重后的字符串，现在数组1中放的大写字母，数组2中放的小写字母
   for (let i = 0; i < len; i++) {
     // 正则表达式的性能不好，现在改成code比较一下
@@ -38,27 +39,24 @@ isBeautyStr = (str) => {
     }
   }
   return true;
-}
+};
 
 // 1763 最长的美好子字符串
 // 字符串的长度是100，这个算法时间复杂度可以接受
 // 1040 ms, 在所有 JavaScript 提交中击败了5.33%
 // 现在性能很差
 
-var longestNiceSubstring = function(s) {    
+const longestNiceSubstring = function(s) {
   // 1、判断一个字符串是否是美好字符串（辅助函数，判断大小写是否对应 toLowerCase）
-  
   // 2、遍历字符串，获取最长的子字符串，这个存在性能问题，和问题一能都解决一下，避免多次求美好算法
-    // 外层循环按照字符串的长度，这个从 length 循环到 2
-    // 内层循环，个数是字符串的长度，这个最大是N-1
-    // 如果有满足条件的子字符串，立即终止循环，返回
-    // 否则返回空的字符串
-  
+  // 外层循环按照字符串的长度，这个从 length 循环到 2
+  // 内层循环，个数是字符串的长度，这个最大是N-1
+  // 如果有满足条件的子字符串，立即终止循环，返回
+  // 否则返回空的字符串
   // 空字符串需要测试
   if (s.length < 1) {
     return '';
   }
-  
   // 先判断整理是否美丽
   if (isBeautyStr(s)) {
     return s;
@@ -66,8 +64,8 @@ var longestNiceSubstring = function(s) {
   const len = s.length;
 
   // 这里增加缓存，避免多次判断同一个字符串
-  let cache = {};
-  
+  const cache = {};
+
   for (let i = len - 1; i > 1; i--) {
     // i 表示子字符串的长度
     for (let j = 0; j <= len - i; j++) {
@@ -76,7 +74,7 @@ var longestNiceSubstring = function(s) {
       if (cache[subStr]) {
         continue;
       }
-      let result = isBeautyStr(subStr);
+      const result = isBeautyStr(subStr);
       if (result) {
         return subStr;
       } else {
@@ -85,11 +83,11 @@ var longestNiceSubstring = function(s) {
     }
   }
   return '';
-}
+};
 
-console.log(83, longestNiceSubstring("aAay"));
-console.log(84, longestNiceSubstring("YazaAay"));
-console.log(85, longestNiceSubstring("Bb"));
-console.log(86, longestNiceSubstring('c'));
-console.log(87, longestNiceSubstring("dDzeE"));
-
+// console.log(83, longestNiceSubstring('aAay'));
+// console.log(84, longestNiceSubstring('YazaAay'));
+// console.log(85, longestNiceSubstring('Bb'));
+// console.log(86, longestNiceSubstring('c'));
+// console.log(87, longestNiceSubstring('dDzeE'));
+export { longestNiceSubstring };

@@ -13,13 +13,13 @@
 
 // 思路一：先把字符串转换成数组，然后每一项过滤一下
 // 64 ms Your runtime beats 94.36 % of javascript
-var canBeTypedWords = function(text, brokenLetters) {
-  let textList = text.split(' ');
-  let map = {};
+const canBeTypedWords = function (text, brokenLetters) {
+  const textList = text.split(' ');
+  const map = {};
   for (let i = 0; i < brokenLetters.length; i++) {
     map[brokenLetters[i]] = true;
   }
-  return textList.filter(item => {
+  return textList.filter((item) => {
     for (let j = 0; j < item.length; j++) {
       // 这里可以减少一部分循环
       if (map[item[j]]) return false;
@@ -32,4 +32,4 @@ var canBeTypedWords = function(text, brokenLetters) {
 // 这样需要循环全部字符串，性能较差
 
 // @lc code=end
-
+export { canBeTypedWords };

@@ -4,14 +4,14 @@
  */
 // 108 ms, 在所有 JavaScript 提交中击败了13.79%
 // 思路一：效率不好，需要比较多次
-var countGoodSubstrings1 = function(s) {
+const countGoodSubstrings1 = function(s) {
   const len = s.length;
   // if length is 1 or 2, the result is 0
   if (len <= 2) {
     return 0;
   }
   // 辅助函数，判断是否是好的子字符串
-  let isGood = function(str) {
+  const isGood = function(str) {
     if (str.length !== 3) {
       return false;
     }
@@ -22,7 +22,7 @@ var countGoodSubstrings1 = function(s) {
   };
   let res = 0;
   for (let i = 0; i < len; i++) {
-    let current = s.slice(i, i + 3);
+    const current = s.slice(i, i + 3);
     if (isGood(current)) {
       res += 1;
     }
@@ -33,14 +33,14 @@ var countGoodSubstrings1 = function(s) {
 // 思路二：循环一次，存储好子串的个数
 // 这样比较比较快捷，不需要每次调用子函数进行比较，不需要使用 slice 函数截取字符串，这样大量节省时间
 // 88 ms, 在所有 JavaScript 提交中击败了62.93%
-var countGoodSubstrings2 = function(s) {
+const countGoodSubstrings2 = function(s) {
   const len = s.length;
   // if length is 1 or 2, the result is 0
   if (len <= 2) {
     return 0;
   }
   // 辅助函数，判断是否是好的子字符串
-  let isGood = function(i, j, k) {
+  const isGood = function(i, j, k) {
     if (!i || !j || !k) {
       return false;
     }
