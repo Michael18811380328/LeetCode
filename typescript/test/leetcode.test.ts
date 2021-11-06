@@ -29,25 +29,23 @@ test('134-canCompleteCircuit', () => {
 });
 
 test('228-summaryRanges', () => {
-  const nums1 = [0, 1, 2, 4, 5, 7];
-  const res1 = ['0->2', '4->5', '7'];
-  expect(summaryRanges(nums1)).toStrictEqual(res1);
-
-  const nums2 = [0, 2, 3, 4, 6, 8, 9];
-  const res2 = ['0', '2->4', '6', '8->9'];
-  expect(summaryRanges(nums2)).toStrictEqual(res2);
-
-  const nums3: number[] = [];
-  const res3: number[] = [];
-  expect(summaryRanges(nums3)).toStrictEqual(res3);
-
-  const nums4 = [-1];
-  const res4 = ['-1'];
-  expect(summaryRanges(nums4)).toStrictEqual(res4);
-
-  const nums5 = [0];
-  const res5 = ['0'];
-  expect(summaryRanges(nums5)).toStrictEqual(res5);
+  const numsList: number[][] = [
+    [0, 1, 2, 4, 5, 7],
+    [0, 2, 3, 4, 6, 8, 9],
+    [],
+    [-1],
+    [0],
+  ];
+  const resList: string[][] = [
+    ['0->2', '4->5', '7'],
+    ['0', '2->4', '6', '8->9'],
+    [],
+    ['-1'],
+    ['0'],
+  ];
+  for (let i = 0; i < numsList.length; i++) {
+    expect(summaryRanges(numsList[i])).toStrictEqual(resList[i]);
+  }
 });
 
 test('238-moveZeroes', () => {

@@ -13,7 +13,8 @@
 /typescript/yarn.lock
 
 # production
-/build
+/js/build
+/typescript/build
 /lib
 
 #python

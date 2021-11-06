@@ -1,8 +1,4 @@
-// function TreeNode(val, left, right) {
-//   this.val = (val===undefined ? 0 : val);
-//   this.left = (left===undefined ? null : left);
-//   this.right = (right===undefined ? null : right);
-// }
+import TreeNode from './treeNode';
 
 // 96 ms, 在所有 TypeScript 提交中击败了91.67%
 function largestValues(root: TreeNode | null): number[] {

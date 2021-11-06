@@ -34,6 +34,7 @@ function getMinDistance2(nums: number[], target: number, start: number): number 
       return i;
     }
   }
+  return 0;
 };
 
 // console.log(getMinDistance([1,2,3,4,5], 5, 3) === 1);

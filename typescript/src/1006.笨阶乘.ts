@@ -29,6 +29,7 @@ function clumsy(n: number): number {
     if (n === 0) {
       return 0;
     }
+    return 0;
   }
   // 首次是正数，然后使用上面的公式动态规划计算
   if (n === 1) {
@@ -46,6 +47,5 @@ function clumsy(n: number): number {
   if (n > 4) {
     return Math.floor(n * (n - 1) / (n - 2)) + (n - 3) + innerFn(n - 4);
   }
+  return 0;
 };
-
-

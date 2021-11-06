@@ -1,18 +1,6 @@
 // [113] 路径总和 II
-// @lc code=start
-/**
- * Definition for a binary tree node.
- * function TreeNode(val, left, right) {
- *     this.val = (val===undefined ? 0 : val)
- *     this.left = (left===undefined ? null : left)
- *     this.right = (right===undefined ? null : right)
- * }
- */
-/**
- * @param {TreeNode} root
- * @param {number} targetSum
- * @return {number[][]}
- */
+import TreeNode from './treeNode';
+
 // 108 ms, 在所有 TypeScript 提交中击败了54.17%
 function pathSum(root: TreeNode | null, targetSum: number): number[][] {
   const list: number[][] = [];
@@ -36,4 +24,3 @@ function pathSum(root: TreeNode | null, targetSum: number): number[][] {
   runNode(root, tmp, 0);
   return list;
 }
-// @lc code=end

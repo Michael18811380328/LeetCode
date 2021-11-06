@@ -23,4 +23,5 @@ function searchInsert(nums: number[], target: number): number {
       min = middle;
     }
   }
+  return 0;
 };
