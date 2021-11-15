@@ -1,3 +1,20 @@
+# 56 ms, 在所有 Ruby 提交中击败了78.60%
+# @param {Integer[]} nums
+# @param {Integer} target
+# @return {Integer[]}
+def two_sum(nums, target)
+  hash = {}
+  nums.each_with_index do |num, i|
+    hash[num] = i
+  end
+  nums.each_with_index do |num, i|
+    current = target - num
+    if hash[current] && hash[current] != i
+      return [i, hash[current]]
+    end
+  end
+end
+
 # Two Sum
 # Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
 # You may assume that each input would have exactly one solution, and you may not use the same element twice.
