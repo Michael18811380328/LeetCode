@@ -15,4 +15,4 @@ BEGIN {
 =begin
 这里是多行注释
 Ruby 是一个解释性语言
-end=
+=end

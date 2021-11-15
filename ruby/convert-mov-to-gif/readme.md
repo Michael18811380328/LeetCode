@@ -18,29 +18,17 @@ This was designed for Mac OS X users.
 
 [Homebrew](http://www.chrisjmendez.com/2016/01/10/installing-homebrew-on-mac-os-x/) is a package manager for Mac OS x. You will need this to later download a few open source libraries.
 
-## Install FFmpeg
+## Install package
 
 Using homebew, you will need to install `ffmpeg`. This is the tool that will compress your existing .mov file.
 
-```
-brew install ffmpeg
-```
-
-## Install Quartz
-
 Quartz is required to use the next package, Gifsicle.
 
-```
+```bash
+brew install ffmpeg
 brew cask install xquartz
-```
-
-## Install Gifsicle
-
-```
 brew install gifsicle
 ```
-
-------
 
 # Run Ruby Script
 
@@ -50,13 +38,9 @@ I created a Convert class that will do all the work. I also made it Object Orien
 ruby Converter.rb
 ```
 
-------
-
 # Final Thoughts
 
 Using this simple class as my base, I can easily integrate this into a Rake Task or maybe use `FileList` to do more work with string manipulation. Hopefully this simple tutorial shows you that the possibilities are infinite using Ruby, Shell, and home-brew.
-
-------
 
 # Resources
 

@@ -13,7 +13,7 @@ EOF
  
 print <<`EOC`                 # 执行命令
     echo hi there
-    echo lo there
+    echo hello there
 EOC
  
 print <<"foo", <<"bar"          # 您可以把它们进行堆叠

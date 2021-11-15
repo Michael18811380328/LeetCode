@@ -2,8 +2,8 @@
 # Ruby 的复杂数据类型：Array/Hash(Rush哈希类似于JS对象)/范围
 # 这里简单做一个使用，后面说具体的操作
 
-ary = [10, 0.13, "hello"];
-ary.each do |i|
+arr = [10, 0.13, "hello"];
+arr.each do |i|
   puts i
 end
 
