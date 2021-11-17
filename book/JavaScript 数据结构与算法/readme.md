@@ -222,7 +222,7 @@ function Dictionary() {
     items = {};
   }
   
- 	this.keys = () => {
+  this.keys = () => {
     return items.keys;
   }
   
@@ -249,7 +249,7 @@ function HashTable() {
   let table = [];
   
   // 散列函数(工具函数) 下面简写为 loseHashCode
- 	loseloseHashCode = (key) => {
+  loseloseHashCode = (key) => {
     let hash = 0;
     for (let i = 0; i < key.length; i++) {
       hash += key.charCodeAt(i);
@@ -1272,3 +1272,4 @@ function index(arr, target) {
 -   Top Coder(http://www.topcoder.com/):此网站会举办算法联赛，这些联赛通常由NASA、 
 
   Google、Yahoo!、Amazon和Facebook这样的公司赞助。参加其中一些赛事，你可以获得 到赞助公司工作的机会，而参与另一些赛事会赢得奖金。这个网站也提供很棒的解题和 算法教程。 
+  
