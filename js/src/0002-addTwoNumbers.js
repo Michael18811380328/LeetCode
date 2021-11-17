@@ -11,7 +11,7 @@
 // [9, 9], [9] => [8, 0, 1]
 // [5], [5] => [0, 1]
 
-// 136 ms, 在所有 javascript 提交中击败了56.58%
+// 思路1：112 ms, 在所有 JavaScript 提交中击败了82.57%
 function ListNode(val) {
   this.val = val;
   this.next = null;
@@ -56,7 +56,9 @@ function addTwoNumbers(l1, l2) {
 }
 
 // 思路2
+// 112 ms, 在所有 JavaScript 提交中击败了82.57%
 const addTwoNumbers2 = function (l1, l2) {
+  // 辅助函数
   const getVal = function (list1, list2, plus = 0) {
     const val1 = list1 && list1.val;
     const val2 = list2 && list2.val;
@@ -68,6 +70,7 @@ const addTwoNumbers2 = function (l1, l2) {
   };
   let l = null;
   let plus = 0;
+  // 辅助函数
   // eslint-disable-next-line no-shadow
   function setNode(vm, l1, l2) {
     if (!l1 && !l2 && !plus) {
@@ -93,6 +96,5 @@ const addTwoNumbers2 = function (l1, l2) {
   setNode(l, l1, l2);
   return l;
 };
-
 
 export { addTwoNumbers, addTwoNumbers2 };
