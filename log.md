@@ -1,33 +1,29 @@
 ## LeetCode 考点说明
 
-考点（多选）：队列，栈，回溯算法，原地算法，动态规划
+- 考点（多选）：队列，栈，回溯算法，原地算法，动态规划
 
-难度（单选）：容易；中等；困难
+- 难度（单选）：容易；中等；困难
 
-完成（勾选）：是 or 否
+- 完成（勾选）：是 or 否
 
-完成时间（时间列）：日期格式，支持排序筛选进行复习
+- 完成时间（时间列）：日期格式，支持排序筛选进行复习
 
-掌握情况（单选）：
+- 掌握情况（单选）：
 
-    完全掌握（短期不需要复习，可以直接写出最佳解答过程，分析算法复杂度，可以直接面试）
+    A 完全掌握（短期不需要复习，可以直接写出最佳解答过程，分析算法复杂度，可以直接面试）
+    B 基本掌握（短期需要复习，可以直接写出一般解法，思考后写出最佳解答过程）
+    C 掌握一般（需要复习：只能写出一般解法，不能写出最佳答案）
+    D 没有掌握（跟着参考答案的思路，可以写出答案，自己独立无法解答）
+    E 没有学会（没有做，或者跟着参考答案的思路，还是无法想清楚的题目）
 
-    基本掌握（短期需要复习，可以直接写出一般解法，思考后写出最佳解答过程）
+- 备注（文本）：
 
-    掌握一般（需要复习：只能写出一般解法，不能写出最佳答案）
-
-    没有掌握（跟着参考答案的思路，可以写出答案，自己独立无法解答）
-
-    没有学会（没有做，或者跟着参考答案的思路，还是无法想清楚的题目）
-
-备注（文本）：
-
-未来可以分语言，分成第几次刷题
+- 未来可以分语言，分成第几次刷题
 
 | # | Title | 考点 | 难度 | 完成 | 掌握 |
 |---| ----- | ---------- | ---------- | ---------- | ---------- |
-|0001|[Two Sum](https://leetcode.com/problems/two-sum/) ||易|||
-|0002|[Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) ||中|||
+|0001|[Two Sum](https://leetcode.com/problems/two-sum/) |数组线性搜索变成对象索引查找|易|√|A|
+|0002|[Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) |链表|中|||
 |0003|[Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) ||中|||
 |0004|[Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/) ||难|||
 |0005|[Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/) ||中|||
