@@ -13,7 +13,7 @@
     "test-watch": "node ./scripts/jest-test.js --env=jsdom --coverage --watch",
     "lint": "eslint ./src/*.js",
     "lint-html": "eslint ./src/*.js -f html -o ./eslint-reports/lint-results.html",
-    "lint-fix": "eslint --fix ./js/*/*.js"
+    "lint-fix": "eslint --fix ./src/*.js"
   },
   "repository": {
     "type": "git",
