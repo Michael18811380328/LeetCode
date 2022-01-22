@@ -31,8 +31,10 @@ function addLine(path) {
       if (data[data.length - 1] === '\n') {
         continue;
       }
-      // 否则，在文件末尾写入一个空行
-      fs.appendFile(currentPath, '\n', err => function () {});
+      // 否则，在文件末尾写入一个空行（todo: 判断文件权限）
+      fs.appendFile(currentPath, '\n', err => function () {
+        console.log(err);
+      });
     }
   }
 }

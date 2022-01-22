@@ -1,25 +1,26 @@
 var fs = require('fs');
+var path = require('path');
 var process = require('child_process');
 
 const reg = new RegExp('dot', 'g');
 
-function generateGraph(path) {
-  const files = fs.readdirSync(path);
+function generateGraph(file_path) {
+  const files = fs.readdirSync(file_path);
   for (file of files) {
     // ignore node_modules and hide file
     if (file[0] === '.' || file === 'node_modules') {
       continue;
     }
     if (file.indexOf('.') === -1) {
-      generateGraph(path + '/' + file);
+      generateGraph(file_path + '/' + file);
     }
     if (file.toLowerCase().match(reg) !== null) {
-      var currentPath = encodeURI(path + '/' + file);
+      var currentPath = path.join(file_path, file);
       if (fs.existsSync(currentPath) === false) {
         continue;
       }
       let result = file.replace('.dot', '.png')
-      let cmd = `dot -Tpng ${currentPath} test.dot -o ${encodeURI(path + '/' + result)}`;
+      let cmd = `dot -Tpng ${currentPath} -o ${path.join(file_path, result)}`;
       runScript(cmd, file);
     }
   }
@@ -28,7 +29,7 @@ function generateGraph(path) {
 function runScript(cmd, file_name = '') {
   process.exec(cmd, function(error) {
     if (error) {
-      console.log("error:"+error);
+      console.log(error);
     } else {
       console.log(`${file_name} generate success!`);
     }
@@ -36,5 +37,5 @@ function runScript(cmd, file_name = '') {
 }
 
 // this is graph path
-const initDir = '/Users/seafile/desktop/test-flow';
+const initDir = '/Users/seafile/desktop/ImagesMichael/dot/';
 generateGraph(initDir);
