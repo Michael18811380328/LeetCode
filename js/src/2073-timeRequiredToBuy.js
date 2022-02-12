@@ -11,23 +11,25 @@
  * @param {number} k
  * @return {number}
  */
-var timeRequiredToBuy = function(tickets, k) {
-    let curr = tickets[k];
-    let sum = 0;
-    let decrease = 0;
-    // 循环一次：如果小于这个数，直接加上；如果大于这个数，那么加这个数字
-    // 如果数组长度变化了，不需要考虑 K 的变化（刚开始自己的误区）
-    for (let i = 0; i < tickets.length; i++) {
-        if (tickets[i] < curr) {
-            sum += tickets[i];
-        }
-        else {
-            sum += curr;
-            // 易错点：如果是这个数后面的数字，那么需要减去1（只要前一个满足，后面的就不需要计算了）
-            if (i > k) {
-                decrease++;
-            }
-        }
+const timeRequiredToBuy = function(tickets, k) {
+  let curr = tickets[k];
+  let sum = 0;
+  let decrease = 0;
+  // 循环一次：如果小于这个数，直接加上；如果大于这个数，那么加这个数字
+  // 如果数组长度变化了，不需要考虑 K 的变化（刚开始自己的误区）
+  for (let i = 0; i < tickets.length; i++) {
+    if (tickets[i] < curr) {
+      sum += tickets[i];
     }
-    return sum - decrease;
+    else {
+      sum += curr;
+      // 易错点：如果是这个数后面的数字，那么需要减去1（只要前一个满足，后面的就不需要计算了）
+      if (i > k) {
+        decrease++;
+      }
+    }
+  }
+  return sum - decrease;
 };
+
+export { timeRequiredToBuy };

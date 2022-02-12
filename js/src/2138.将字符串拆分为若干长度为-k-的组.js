@@ -12,8 +12,8 @@
  * @return {string[]}
  */
 //  Your runtime beats 100 % of javascript submissions
-var divideString = function(s, k, fill) {
-  let resArr = [];
+const divideString = function(s, k, fill) {
+  const resArr = [];
   // 思路：当S的长度大于K时，每次减掉前K个字符
   while (s.length >= k) {
     resArr.push(s.slice(0, k));
@@ -31,3 +31,4 @@ var divideString = function(s, k, fill) {
 // console.log(divideString("abcdefghij", 3, 'x'))
 // @lc code=end
 
+export default divideString;

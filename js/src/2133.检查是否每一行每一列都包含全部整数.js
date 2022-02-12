@@ -15,11 +15,11 @@
 // 当前用子数组实现（占用内存略大）
 // N 不超过100，时间空间复杂度可以接受
 // Your runtime beats 50.94 % of javascript submissions
-var checkValid = function(matrix) {
+const checkValid = function(matrix) {
   // 辅助函数：判断一个数组是否有重复元素
   const checkArr = (arr) => {
     return arr.length === [...new Set(arr)].length;
-  }
+  };
   // 1.1 横向遍历
   const n = matrix.length;
   for (let i = 0; i < n; i++) {
@@ -29,7 +29,7 @@ var checkValid = function(matrix) {
   }
   // 1.2 纵向遍历
   for (let i = 0; i < n; i++) {
-    let tmpArr = [];
+    const tmpArr = [];
     for (let j = 0; j < n; j++) {
       tmpArr.push(matrix[j][i]);
     }
@@ -44,3 +44,4 @@ var checkValid = function(matrix) {
 // console.log(checkValid([[1,1,1],[1,2,3],[1,2,3]]) === false)
 // @lc code=end
 
+export default checkValid;
