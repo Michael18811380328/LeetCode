@@ -6,10 +6,10 @@
  * @return {number}
  */
 const countWords = function(words1, words2) {
-  let dict1 = {};
-  let dict2 = {};
+  const dict1 = {};
+  const dict2 = {};
   for (let i = 0; i < words1.length; i++) {
-    let curr = words1[i];
+    const curr = words1[i];
     if (!dict1[curr]) {
       dict1[curr] = 1;
     } else {
@@ -17,7 +17,7 @@ const countWords = function(words1, words2) {
     }
   }
   for (let i = 0; i < words2.length; i++) {
-    let curr = words2[i];
+    const curr = words2[i];
     if (!dict2[curr]) {
       dict2[curr] = 1;
     } else {
@@ -25,7 +25,7 @@ const countWords = function(words1, words2) {
     }
   }
   let sum = 0;
-  for (let key in dict1) {
+  for (const key in dict1) {
     if (dict1[key] === 1 && dict2[key] === 1) {
       sum++;
     }

@@ -10,7 +10,7 @@
 // 判断字符串中最多的空格，然后加1
 // Your runtime beats 48.14 % of javascript submissions
 const mostWordsFound = function(sentences) {
-  let getLen = (str) => {
+  const getLen = (str) => {
     let num = 0;
     for (let i = 0; i < str.length; i++) {
       if (str[i] === ' ') {
@@ -21,7 +21,7 @@ const mostWordsFound = function(sentences) {
   };
   let max = 1;
   for (let i = 0; i < sentences.length; i++) {
-    let curr = getLen(sentences[i]);
+    const curr = getLen(sentences[i]);
     max = curr > max ? curr : max;
   }
   return max;
