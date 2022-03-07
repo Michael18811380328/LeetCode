@@ -1,8 +1,6 @@
-/*
- * @lc app=leetcode.cn id=6 lang=javascript
- * [6] Z 字形变换
- */
 /**
+ * [6] Z 字形变换
+ * @lc app=leetcode.cn id=6 lang=javascript
  * @param {string} s
  * @param {number} numRows
  * @return {string}
@@ -44,3 +42,5 @@ const convert = function(s, numRows) {
   // 然后遍历完，把对应的字符串从对象中拿出
   // 然后再拼接成新的字符串
 };
+
+export { convert };
