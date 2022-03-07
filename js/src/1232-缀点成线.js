@@ -10,7 +10,7 @@
  * @return {boolean}
  */
 // Your runtime beats 93.52 % of javascript submissions
-var checkStraightLine = function(coordinates) {
+const checkStraightLine = function(coordinates) {
   const len = coordinates.length;
   if (len === 2) return true;
   if (coordinates[1][0] - coordinates[0][0] === 0) {
@@ -24,9 +24,9 @@ var checkStraightLine = function(coordinates) {
     return true;
   } else {
     // 处理斜率存在的情况
-    const K = ((coordinates[1][1] - coordinates[0][1]) /(coordinates[1][0] - coordinates[0][0]));
+    const K = ((coordinates[1][1] - coordinates[0][1]) / (coordinates[1][0] - coordinates[0][0]));
     for (let i = 1; i < len; i++) {
-      let k = ((coordinates[i][1] - coordinates[0][1]) /(coordinates[i][0] - coordinates[0][0]));
+      const k = ((coordinates[i][1] - coordinates[0][1]) / (coordinates[i][0] - coordinates[0][0]));
       if (k !== K) {
         return false;
       }
@@ -35,4 +35,3 @@ var checkStraightLine = function(coordinates) {
   }
 };
 // @lc code=end
-

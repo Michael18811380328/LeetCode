@@ -8,7 +8,7 @@
 // 104 ms
 // , 在所有 JavaScript 提交中击败了
 // 20.94%
-// 
+//
 
 // 方法一有问题
 // var nextGreatestLetter = function(letters, target) {
@@ -39,14 +39,14 @@
 //   return letters[end];
 // };
 
-var nextGreatestLetter = function(letters, target) {
+const nextGreatestLetter = function(letters, target) {
   const tar = target.charCodeAt(0);
-  if (letters[0].charCodeAt(0) > tar ||
-    letters[letters.length - 1].charCodeAt(0) <= tar
+  if (letters[0].charCodeAt(0) > tar
+    || letters[letters.length - 1].charCodeAt(0) <= tar
   ) {
     return letters[0];
   }
-  let index = letters.lastIndexOf(target);
+  const index = letters.lastIndexOf(target);
   if (index > -1) {
     return letters[index + 1];
   }
@@ -64,4 +64,3 @@ var nextGreatestLetter = function(letters, target) {
   return letters[mid + 1];
 };
 // @lc code=end
-

@@ -39,12 +39,12 @@ function search2(nums, target) {
 // 任何一个数组，都能划分成两个子数组，可以找到开头，中间，结尾三个节点
 // 如果这个目标数存在，那么一定在这差最大的两个数之间
 // Your runtime beats 40.56 % of javascript submissions
-var search3 = function(nums, target) {
+const search3 = function(nums, target) {
   const len = nums.length;
   if (len === 1) {
     return nums[0] === target ? 0 : -1;
   } else if (len === 2) {
-    return nums[0] === target ? 0 : (nums[1] === target ? 1 : -1);;
+    return nums[0] === target ? 0 : (nums[1] === target ? 1 : -1);
   }
   // 使用二分法处理
   let start = 0;
@@ -62,7 +62,7 @@ var search3 = function(nums, target) {
     if (nums[end] === target) {
       return end;
     }
-    let mid = Math.floor((end - start) / 2) + start;
+    const mid = Math.floor((end - start) / 2) + start;
     if (nums[mid] === target) {
       return mid;
     }
@@ -73,8 +73,8 @@ var search3 = function(nums, target) {
       start = mid;
     } else {
       // 如果都不在的情况下，那就在绝对值较大的一个中
-      let left = Math.abs(nums[mid] - nums[start]);
-      let right = Math.abs(nums[mid] - nums[end]);
+      const left = Math.abs(nums[mid] - nums[start]);
+      const right = Math.abs(nums[mid] - nums[end]);
       if (left > right) {
         end = mid;
       } else if (left < right) {
@@ -89,9 +89,9 @@ var search3 = function(nums, target) {
   return -1;
 };
 
-console.log(search3([4,5,6,7,0,1,2], 0) === 4)
-console.log(search3([4,5,6,7,0,1,2], 3) === -1)
-console.log(search3([4,5,6,7,0,1,2], 100) === -1)
-console.log(search3([4,5,6,7,0,1,2], 2) === 6)
+console.log(search3([4, 5, 6, 7, 0, 1, 2], 0) === 4);
+console.log(search3([4, 5, 6, 7, 0, 1, 2], 3) === -1);
+console.log(search3([4, 5, 6, 7, 0, 1, 2], 100) === -1);
+console.log(search3([4, 5, 6, 7, 0, 1, 2], 2) === 6);
 
 export { search1, search2 };

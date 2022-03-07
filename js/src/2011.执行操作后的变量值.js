@@ -11,10 +11,10 @@
  */
 // 这个是基本的数组操作，简单
 // Your runtime beats 13.38 % of javascript submissions
-var finalValueAfterOperations = function(operations) {
+const finalValueAfterOperations = function(operations) {
   let count = 0;
   operations.forEach((item) => {
-    if (item === "X++" || item === "++X") {
+    if (item === 'X++' || item === '++X') {
       count++;
     } else {
       count--;
@@ -23,4 +23,3 @@ var finalValueAfterOperations = function(operations) {
   return count;
 };
 // @lc code=end
-

@@ -15,16 +15,15 @@
  * @return {string}
  */
 // 题目简单，主要是字符串遍历和反转
-var reversePrefix = function(word, ch) {
+const reversePrefix = function(word, ch) {
   // Your runtime beats 55.32 % of javascript submissions
-  let index = word.indexOf(ch);
+  const index = word.indexOf(ch);
   if (index <= 0) return word;
-  let len = index + ch.length;
+  const len = index + ch.length;
   let left = word.slice(0, len);
   // 易错点是字符串的反转（转换成数组后反转）
   left = left.split('').reverse().join('');
-  let right = word.slice(len);
+  const right = word.slice(len);
   return left + right;
 };
 // @lc code=end
-

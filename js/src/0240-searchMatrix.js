@@ -11,7 +11,7 @@
  * @return {boolean}
  */
 // Your runtime beats 5.05 % of javascript submissions
-var searchMatrix = function(matrix, target) {
+const searchMatrix = function(matrix, target) {
   const rowLen = matrix.length;
   const columnLen = matrix[0].length;
   // 如果目标值不在最大最小值范围内，不存在这个数字
@@ -22,22 +22,20 @@ var searchMatrix = function(matrix, target) {
   let startRowIdx;
   let endRowIdx;
   for (let i = 0; i < rowLen; i++) {
-    let row = matrix[i];
+    const row = matrix[i];
     if (row[0] === target || row[columnLen - 1] === target) return true;
     if (row[columnLen] < target) {
       continue;
-    }
-    else if (row[0] < target && row[columnLen - 1] > target && !startRowIdx && startRowIdx !== 0) {
+    } else if (row[0] < target && row[columnLen - 1] > target && !startRowIdx && startRowIdx !== 0) {
       startRowIdx = i;
-    }
-    else if (row[0] > target && !endRowIdx && endRowIdx !== 0) {
+    } else if (row[0] > target && !endRowIdx && endRowIdx !== 0) {
       endRowIdx = i - 1;
     }
   }
   endRowIdx = !endRowIdx ? columnLen - 1 : endRowIdx;
   // 列需要优化
   for (let i = startRowIdx; i <= endRowIdx; i++) {
-    let arr = matrix[i];
+    const arr = matrix[i];
     if (getNumber(arr, target)) return true;
   }
   return false;
@@ -63,7 +61,6 @@ var getNumber = (arr, target) => {
     mid = Math.floor((start + end) / 2);
   }
   return false;
-}
+};
 
 // @lc code=end
-

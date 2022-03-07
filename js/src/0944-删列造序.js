@@ -10,7 +10,7 @@
  * @return {number}
  */
 // Your runtime beats 82.35 % of javascript submissions
-var minDeletionSize = function(A) {
+const minDeletionSize = function(A) {
   const arrLen = A.length;
   if (arrLen === 0) return 0;
   const strLen = A[0].length;
@@ -28,4 +28,3 @@ var minDeletionSize = function(A) {
   return res;
 };
 // @lc code=end
-

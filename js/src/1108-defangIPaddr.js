@@ -2,6 +2,6 @@
  * @param {string} address
  * @return {string}
  */
-var defangIPaddr = function(address) {
-    return address.replace(/\./g, '[.]');
+const defangIPaddr = function(address) {
+  return address.replace(/\./g, '[.]');
 };

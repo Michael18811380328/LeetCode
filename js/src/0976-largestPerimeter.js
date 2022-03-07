@@ -2,18 +2,18 @@
  * @param {number[]} A
  * @return {number}
  */
-var largestPerimeter = function(A) {
+const largestPerimeter = function(A) {
   // 辅助函数：判断是否构成三角形
-  var isTriangle = function (a, b, c) {
+  const isTriangle = function (a, b, c) {
     return (a + b + c) > 2 * Math.max(a, b, c);
-  }
+  };
   // 辅助函数：判断是否构成三角形(a是最大值)
-  var isTri = function(a, b, c) {
+  const isTri = function(a, b, c) {
     return (a + b + c) > 2 * a;
-  }
-  var sum = function(a, b, c) {
+  };
+  const sum = function(a, b, c) {
     return a + b + c;
-  }
+  };
   const len = A.length;
   // 如果是3个，直接判断返回
   if (len === 3) {

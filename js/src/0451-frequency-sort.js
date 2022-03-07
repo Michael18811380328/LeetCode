@@ -46,5 +46,4 @@ function frequencySort(s) {
   return result;
 }
 
-
 export { frequencySort };

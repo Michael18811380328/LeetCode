@@ -8,7 +8,7 @@
 // 这样循环三次，时间复杂度是N，字符串长度是10000，时间上可以接受，考虑是否有更好的办法
 // 这个方法可以优化
 // 96 ms
-var minOperations = function(s) {
+const minOperations = function(s) {
   const len = s.length;
   let strA = '';
   let strB = '';

@@ -9,15 +9,15 @@
  * @param {string} kingName
  */
 // Your runtime beats 73.91 % of javascript submissions
-var ThroneInheritance = function(kingName) {
+const ThroneInheritance = function(kingName) {
   this.init = kingName;
   this.obj = {};
   this.obj[kingName] = [];
   this.obj[kingName].live = true;
 };
 
-/** 
- * @param {string} parentName 
+/**
+ * @param {string} parentName
  * @param {string} childName
  * @return {void}
  */
@@ -28,7 +28,7 @@ ThroneInheritance.prototype.birth = function(parentName, childName) {
   this.obj[childName].live = true;
 };
 
-/** 
+/**
  * @param {string} name
  * @return {void}
  */
@@ -40,11 +40,11 @@ ThroneInheritance.prototype.death = function(name) {
  * @return {string[]}
  */
 ThroneInheritance.prototype.getInheritanceOrder = function() {
-  let king = this.init;
-  let sons = this.obj[king];
-  let result = [];
+  const king = this.init;
+  const sons = this.obj[king];
+  const result = [];
   // 如果根节点活着，那么放入继承序列
-  if (this.obj[king]['live']) {
+  if (this.obj[king].live) {
     result.push(king);
   }
   // 辅助函数（DFS遍历子节点）
@@ -52,15 +52,15 @@ ThroneInheritance.prototype.getInheritanceOrder = function() {
     if (obj[name].live) {
       result.push(name);
     }
-    let sons = obj[name];
+    const sons = obj[name];
     for (let i = 0; i < sons.length; i++) {
-      let item = sons[i];
+      const item = sons[i];
       runChild(item, result, obj);
     }
-  }
+  };
   // 遍历开始
   for (let i = 0; i < sons.length; i++) {
-    let item = sons[i];
+    const item = sons[i];
     runChild(item, result, this.obj);
   }
   return result;
@@ -74,4 +74,3 @@ ThroneInheritance.prototype.getInheritanceOrder = function() {
  * var param_3 = obj.getInheritanceOrder()
  */
 // @lc code=end
-

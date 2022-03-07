@@ -10,8 +10,8 @@
  * @return {number}
  */
 // Your runtime beats 21.81 % of javascript submissions
-var sumOddLengthSubarrays = function(arr) {
-  let len = arr.length;
+const sumOddLengthSubarrays = function(arr) {
+  const len = arr.length;
   let sum = getSum(arr); // 把长度是1的加起来
   if (len < 3) {
     return sum;
@@ -22,8 +22,8 @@ var sumOddLengthSubarrays = function(arr) {
     for (let j = i + 1; j < len; j++) {
       // i - j
       if ((j + 1 - i) % 2 === 1) {
-        let sumArr = arr.slice(i, j + 1);
-        let tmp = getSum(sumArr);
+        const sumArr = arr.slice(i, j + 1);
+        const tmp = getSum(sumArr);
         sum += tmp;
       }
     }
@@ -33,6 +33,5 @@ var sumOddLengthSubarrays = function(arr) {
 
 var getSum = function(arr) {
   return arr.reduce((a, b) => a + b, 0);
-}
+};
 // @lc code=end
-

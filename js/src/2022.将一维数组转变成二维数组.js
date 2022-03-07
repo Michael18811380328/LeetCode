@@ -12,9 +12,9 @@
  * @return {number[][]}
  */
 // 简单，考点是数组的循环和剪切等
-// 时间复杂度是O(n) 数组的长度 / n 
+// 时间复杂度是O(n) 数组的长度 / n
 // Your runtime beats 96.11 % of javascript submissions
-var construct2DArray = function(original, m, n) {
+const construct2DArray = function(original, m, n) {
   const len = original.length;
   // 如果长度不一样，无法直接转换
   if (len !== m * n) {
@@ -25,12 +25,11 @@ var construct2DArray = function(original, m, n) {
     return [[original[0]]];
   }
   // 处理二维数组
-  let res = [];
+  const res = [];
   for (let i = 0; i < len; i += n) {
-    let tmp = original.slice(i, i + n);
+    const tmp = original.slice(i, i + n);
     res.push(tmp);
   }
   return res;
 };
 // @lc code=end
-

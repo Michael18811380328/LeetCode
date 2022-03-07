@@ -13,7 +13,7 @@
 // Your runtime beats 71.57 % of javascript submissions
 var numTrees = function(n) {
   if (n <= 1) return 1;
-  let arr = new Array(n + 1);
+  const arr = new Array(n + 1);
   arr[0] = 1;
   arr[1] = 1;
   // 外循环：动态规划计算每一项
@@ -26,7 +26,7 @@ var numTrees = function(n) {
   }
   return arr[n];
 };
- 
+
 // 思路2
 // 难点：数学卡特兰数，详见文档
 // Your runtime beats 51.04 % of javascript submissions

@@ -12,7 +12,7 @@
  * @param {number[]} prices
  */
 // Your runtime beats 8.33 % of javascript submissions
-var Cashier = function(n, discount, products, prices) {
+const Cashier = function(n, discount, products, prices) {
   this.n = n;
   this.discount = (100 - discount) / 100;
   this.products = products;
@@ -20,8 +20,8 @@ var Cashier = function(n, discount, products, prices) {
   this.current = 0;
 };
 
-/** 
- * @param {number[]} product 
+/**
+ * @param {number[]} product
  * @param {number[]} amount
  * @return {number}
  */
@@ -30,9 +30,9 @@ Cashier.prototype.getBill = function(product, amount) {
   let sum = 0;
   const len = product.length;
   for (let i = 0; i < len; i++) {
-    let item = product[i];
-    let index = this.products.indexOf(item);
-    let price = this.prices[index];
+    const item = product[i];
+    const index = this.products.indexOf(item);
+    const price = this.prices[index];
     sum = sum + price * amount[i];
   }
   this.current++;
@@ -49,4 +49,3 @@ Cashier.prototype.getBill = function(product, amount) {
  * var param_1 = obj.getBill(product,amount)
  */
 // @lc code=end
-

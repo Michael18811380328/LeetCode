@@ -10,7 +10,7 @@
  * @return {number[]}
  */
 // Your runtime beats 76.06 % of javascript submissions
-var getNoZeroIntegers = function(n) {
+const getNoZeroIntegers = function(n) {
   // 随机法比较好
   let a = Math.floor(Math.random() * n);
   let b = n - a;
@@ -23,14 +23,13 @@ var getNoZeroIntegers = function(n) {
 
 var jedge = function(a) {
   if (a <= 0) return false;
-  while(a > 0) {
+  while (a > 0) {
     if (a % 10 === 0) {
       return false;
     }
-    let re = a % 10;
+    const re = a % 10;
     a = (a - re) / 10;
   }
   return true;
-}
+};
 // @lc code=end
-

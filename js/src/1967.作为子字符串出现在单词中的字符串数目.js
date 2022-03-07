@@ -27,29 +27,26 @@
 // 优化，因为字符串中可能存在重复的，那么遍历时，可以把重复的记录下
 // 这样可以避免每一个都查找
 // Your runtime beats 92.65 % of javascript submissions
-var numOfStrings = function(patterns, word) {
+const numOfStrings = function(patterns, word) {
   let result = 0;
-  let dict = {};
+  const dict = {};
   for (let i = 0; i < patterns.length; i++) {
     // 先拿到当前的字符串
-    let key = patterns[i];
+    const key = patterns[i];
     // 先判断缓冲中是否存在
     if (dict[key] === true) {
       result++;
-    }
-    else if (dict[key] === false) {
+    } else if (dict[key] === false) {
       continue;
     }
     // 如果缓存没有，再查找是否是子串，并放在缓存中
     else if (word.includes(key)) {
       dict[key] = true;
       result++;
-    }
-    else {
+    } else {
       dict[key] = false;
     }
   }
   return result;
 };
 // @lc code=end
-

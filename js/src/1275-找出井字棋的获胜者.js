@@ -17,7 +17,7 @@
  */
 
 // 辅助函数：检查三个点是否在直线上(检查通过)
-var isThreeLine = function(p1, p2, p3) {
+const isThreeLine = function(p1, p2, p3) {
   // 如果横坐标相等，那么在直线上
   if (p1[0] == p2[0] && p1[0] == p3[0]) {
     return true;
@@ -30,18 +30,18 @@ var isThreeLine = function(p1, p2, p3) {
   // k1 = (y2 - y1) / (x2 - x1)
   // k2 = (y3 - y1) / (x3 - x1)
   if (p2[0] - p1[0] !== 0 && p3[0] - p1[0] !== 0) {
-    let k1 = (p2[1] - p1[1]) / (p2[0] - p1[0]);
-    let k2 = (p3[1] - p1[1]) / (p3[0] - p1[0]);
+    const k1 = (p2[1] - p1[1]) / (p2[0] - p1[0]);
+    const k2 = (p3[1] - p1[1]) / (p3[0] - p1[0]);
     if (k1 === k2) {
       return true;
     }
   }
   // 其他都不是直线上
   return false;
-}
+};
 
 // 检查一个人是否是真的
-var checkList = function(list) {
+const checkList = function(list) {
   const len = list.length;
   if (len === 3) {
     return isThreeLine(list[0], list[1], list[2]);
@@ -58,16 +58,16 @@ var checkList = function(list) {
   return false;
 };
 
-var tictactoe = function(moves) {
-  const draw = "Draw";
-  const pen = "Pending";
+const tictactoe = function(moves) {
+  const draw = 'Draw';
+  const pen = 'Pending';
   const len = moves.length;
   // 如果长度小于5，那么肯定没有人获胜，是 pending 状态
   if (len < 5) {
     return pen;
   }
-  let l1 = [];
-  let l2 = [];
+  const l1 = [];
+  const l2 = [];
   // 思路：循环数组，每次都判断当前的情况是否某一个人获胜
   for (let i = 0; i < len; i++) {
     i % 2 === 0 ? l1.push(moves[i]) : l2.push(moves[i]);
@@ -78,11 +78,8 @@ var tictactoe = function(moves) {
       if (l1.length > 2 && checkList(l1)) {
         return 'A';
       }
-    }
-    else {
-      if (l2.length > 2 && checkList(l2) ) {
-        return 'B';
-      }
+    } else if (l2.length > 2 && checkList(l2)) {
+      return 'B';
     }
   }
   // 如果下棋结束，长度等于9，那么就是平局；否则继续下

@@ -9,19 +9,19 @@
  * @param {number} k
  * @param {number[]} nums
  */
-var KthLargest = function(k, nums) {
+const KthLargest = function(k, nums) {
   nums.sort((a, b) => b - a);
   this.arr = nums.slice(0, k);
   this.k = k;
 };
 
-/** 
+/**
  * @param {number} val
  * @return {number}
  */
 KthLargest.prototype.add = function(val) {
   const len = this.arr.length;
-  let last = this.arr[len - 1];
+  const last = this.arr[len - 1];
   // 当前的数组比预期的长度小，正常插入，然后返回
   if (len < this.k) {
     this.arr.push(val);
@@ -53,4 +53,3 @@ KthLargest.prototype.add = function(val) {
  * var param_1 = obj.add(val)
  */
 // @lc code=end
-

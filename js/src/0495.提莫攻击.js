@@ -24,7 +24,7 @@
  * @param {number} duration
  * @return {number}
  */
-var findPoisonedDuration = function(timeSeries, duration) {
+const findPoisonedDuration = function(timeSeries, duration) {
   let total = 0;
   let end = 0;
   // 如果第一项是0，那么需要从0开始求和（这个刚开始忽略了）
@@ -48,4 +48,3 @@ var findPoisonedDuration = function(timeSeries, duration) {
 // console.log(findPoisonedDuration([1,4], 2) === 4);
 // console.log(findPoisonedDuration([1,2,5,6,7,12,20,22,23,50,200,300,345], 100) === 394);
 // @lc code=end
-

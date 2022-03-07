@@ -10,17 +10,16 @@
  * @return {number}
  */
 // Your runtime beats 92.76 % of javascript submissions
-var numberOfMatches = function(n) {
+const numberOfMatches = function(n) {
   if (n === 1) {
     return 0;
   }
   let num = 0;
   while (n > 1) {
-    let times = Math.floor(n / 2);
+    const times = Math.floor(n / 2);
     num += times;
     n = Math.ceil(n / 2);
   }
   return num;
 };
 // @lc code=end
-

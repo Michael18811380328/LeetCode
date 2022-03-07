@@ -17,9 +17,9 @@
  * @return {string}
  */
 // 58.13 % of javascript submissions
-var tree2str = function(t) {
+const tree2str = function(t) {
   if (!t) return '';
-  let res = runNode(t);
+  const res = runNode(t);
   return res.slice(1, res.length - 1);
 };
 
@@ -30,9 +30,8 @@ var runNode = function(node) {
   if (!node.left && !node.right) {
     return `(${node.val})`;
   }
-  let left = runNode(node.left);
-  let right = runNode(node.right);
+  const left = runNode(node.left);
+  const right = runNode(node.right);
   return `(${node.val}${left !== null ? left : '()'}${right !== null ? right : ''})`;
-}
+};
 // @lc code=end
-

@@ -10,33 +10,33 @@
 // 难度：简单
 // 考点：数字求和；数字转换成对象
 // 120 ms, 在所有 JavaScript 提交中击败了79.44%
-var countBalls = function(lowLimit, highLimit) {
+const countBalls = function(lowLimit, highLimit) {
   // 辅助函数：计算一个正数的每一位的和
-  var getSum = (num) => {
+  const getSum = (num) => {
     let res = 0;
     while (num > 0) {
-      let a = num % 10;
+      const a = num % 10;
       res += a;
       num = (num - a) / 10;
     }
     return res;
-  }
-  
+  };
+
   // 循环数字；把和放在字典中
-  let dict = {};
+  const dict = {};
   for (let i = lowLimit; i <= highLimit; i++) {
-    let sum = getSum(i);
+    const sum = getSum(i);
     if (!dict[sum]) {
       dict[sum] = 1;
     } else {
       dict[sum]++;
     }
   }
-  
+
   // 计算字典中数出现次数最多的数字
   let max = 1;
-  for (let key in dict) {
-    let value = dict[key];
+  for (const key in dict) {
+    const value = dict[key];
     if (value > max) {
       max = value;
     }

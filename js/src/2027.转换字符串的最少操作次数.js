@@ -13,13 +13,13 @@
 // Your runtime beats 57.99 % of javascript submissions
 // 贪心算法，每次遇到一个满足情况的解，就直接处理
 // 注意边界条件的处理（其他的字符串匹配的方法，解不正确）
-var minimumMoves = function(s) {
+const minimumMoves = function(s) {
   let timer = 0;
   if (!s.includes('X')) {
     return 0;
   }
   const len = s.length;
-  let S = s.split('');
+  const S = s.split('');
   for (let i = 2; i < len; i++) {
     if (S[i - 2] === 'X') {
       timer++;
@@ -36,4 +36,3 @@ var minimumMoves = function(s) {
   return timer;
 };
 // @lc code=end
-

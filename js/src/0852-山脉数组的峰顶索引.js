@@ -10,7 +10,7 @@
  * @return {number}
  */
 // Your runtime beats 63.5 % of javascript submissions
-var peakIndexInMountainArray = function(arr) {
+const peakIndexInMountainArray = function(arr) {
   const len = arr.length;
   let start = 0;
   let end = len - 1;
@@ -21,8 +21,7 @@ var peakIndexInMountainArray = function(arr) {
   while (arr[mid] <= arr[mid - 1] || arr[mid] <= arr[mid + 1]) {
     if (arr[mid] <= arr[mid - 1]) {
       end = mid;
-    }
-    else {
+    } else {
       start = mid;
     }
     mid = Math.floor((end + start) / 2);
@@ -34,4 +33,3 @@ var peakIndexInMountainArray = function(arr) {
 };
 
 // @lc code=end
-

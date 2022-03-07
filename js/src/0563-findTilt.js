@@ -21,11 +21,11 @@
  * @param {TreeNode} root
  * @return {number}
  */
-var findTilt = function(root) {
-  let list = [];
+const findTilt = function(root) {
+  const list = [];
   getSum(root, list);
   let sum = 0;
-  list.forEach(item => sum += item);
+  list.forEach((item) => sum += item);
   return sum;
 };
 
@@ -37,14 +37,13 @@ var getSum = function(node, list) {
   if (node && !node.left && !node.right) {
     return node.val;
   }
-  let nodeSum = node.val;
-  let sum1 = getSum(node.left, list);
-  let sum2 = getSum(node.right, list);
-  let nodeSlope = Math.abs(sum1 - sum2);
+  const nodeSum = node.val;
+  const sum1 = getSum(node.left, list);
+  const sum2 = getSum(node.right, list);
+  const nodeSlope = Math.abs(sum1 - sum2);
   list.push(nodeSlope);
   return sum1 + sum2 + nodeSum;
-}
+};
 
 // [1,2,3,4,5,6,7,8,9,null,null,13,null,19,38] 152
 // @lc code=end
-

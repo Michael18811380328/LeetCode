@@ -24,15 +24,13 @@ var canFormArray = function(arr, pieces) {
   // 如果子数组长度是1，并且可以index到，那么继续找
   // 如果不可以index，那么就找不到
   for (let i = 0; i < pieces.length; i++) {
-    let inner = pieces[i];
+    const inner = pieces[i];
     if (inner.length === 0) {
       continue;
-    }
-    else if (inner.length === 1) {
+    } else if (inner.length === 1) {
       if (arr.indexOf(inner[0]) === -1) return false;
-    }
-    else {
-      let index = arr.indexOf(inner[0]);
+    } else {
+      const index = arr.indexOf(inner[0]);
       if (index === -1) return false;
       // 如果子数组长度超过1，那么不同之间index应该是连接的
       for (let i = 1; i < inner.length; i++) {
@@ -52,12 +50,11 @@ var canFormArray = function(arr, pieces) {
   // 如果子数组长度是1，并且可以index到，那么继续找
   // 如果不可以index，那么就找不到
   for (let i = 0; i < pieces.length; i++) {
-    let inner = pieces[i];
+    const inner = pieces[i];
     if (inner.length === 1) {
       if (arr.indexOf(inner[0]) === -1) return false;
-    }
-    else if (inner.length > 1) {
-      let index = arr.indexOf(inner[0]);
+    } else if (inner.length > 1) {
+      const index = arr.indexOf(inner[0]);
       if (index === -1) return false;
       // 如果子数组长度超过1，那么不同之间index应该是连接的
       for (let i = 1; i < inner.length; i++) {
@@ -78,8 +75,8 @@ var canFormArray = function(arr, pieces) {
   // 如果子数组长度是1，并且可以index到，那么继续找
   // 如果不可以index，那么就找不到
   for (let i = 0; i < pieces.length; i++) {
-    let inner = pieces[i];
-    let index = arr.indexOf(inner[0]);
+    const inner = pieces[i];
+    const index = arr.indexOf(inner[0]);
     if (index === -1) return false;
     if (inner.length > 1) {
       // 如果子数组长度超过1，那么不同之间index应该是连接的
@@ -88,10 +85,9 @@ var canFormArray = function(arr, pieces) {
           return false;
         }
       }
-    }    
+    }
   }
   return true;
 };
 
 // @lc code=end
-

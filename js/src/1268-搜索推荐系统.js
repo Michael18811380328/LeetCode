@@ -15,17 +15,17 @@
 // 也可以使用数组和字符串对比做
 // 数组的长度是1000，搜索的长度也是1000，可能存在性能问题
 // 先使用基础的方法完成一下
-var suggestedProducts = function(products, searchWord) {
+const suggestedProducts = function(products, searchWord) {
   // products 首先按照字典序排序一下，这样减少后面的计算
   const new_products = products.sort((a, b) => {
     return a > b ? 1 : -1;
   });
   const productLen = new_products.length;
 
-  let result = [];
+  const result = [];
 
-  let getResult = function(search) {
-    let tmp = [];
+  const getResult = function(search) {
+    const tmp = [];
     const searchLen = search.length;
     for (let i = 0; i < productLen; i++) {
       if (new_products[i].slice(0, searchLen) === search) {
@@ -46,4 +46,3 @@ var suggestedProducts = function(products, searchWord) {
   return result;
 };
 // @lc code=end
-

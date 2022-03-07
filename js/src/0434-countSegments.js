@@ -15,14 +15,14 @@
 // 把两个连续的空格去掉（循环去掉）‘hello      Mike’
 // 然后可以把字符串转换成数组，计算数组的长度，需要过滤空元素
 // 或者循环字符串，直接计算空格的字符，然后
-var countSegments = function(s) {
-    let str = s.trim();
-    if (str.length === 0) {
-        return 0;
-    }
-    if (str.indexOf(' ') === -1) {
-        return 1;
-    }
-    let arr = str.split(' ').filter(item => item !== '');
-    return arr.length;
+const countSegments = function(s) {
+  const str = s.trim();
+  if (str.length === 0) {
+    return 0;
+  }
+  if (str.indexOf(' ') === -1) {
+    return 1;
+  }
+  const arr = str.split(' ').filter((item) => item !== '');
+  return arr.length;
 };

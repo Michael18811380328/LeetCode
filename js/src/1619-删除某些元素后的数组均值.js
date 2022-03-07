@@ -10,13 +10,12 @@
  * @return {number}
  */
 // Your runtime beats 93.78 % of javascript submissions
-var trimMean = function(arr) {
+const trimMean = function(arr) {
   const len1 = arr.length / 20;
   arr.sort((a, b) => a - b);
   arr.splice(0, len1);
   arr.splice(-len1, len1);
-  let sum = arr.reduce((a, b) => a + b, 0);
+  const sum = arr.reduce((a, b) => a + b, 0);
   return sum / arr.length;
 };
 // @lc code=end
-

@@ -13,7 +13,7 @@
 //  Your runtime beats 74.37 % of javascript submissions
 //  难度：简单
 //  数组双循环，然后计算两个数的绝对值即可
-var countKDifference = function(nums, k) {
+const countKDifference = function(nums, k) {
   let times = 0;
   const len = nums.length;
   for (let i = 0; i < len; i++) {
@@ -32,18 +32,18 @@ var countKDifference = function(nums, k) {
 // 理论上可以（字典获取重复值，然后数组去重，计算绝对值）
 // 需要测试
 
-var countKDifference2 = function(nums, k) {
+const countKDifference2 = function(nums, k) {
   const len = nums.length;
   // 存放出现的次数
-  let dict = {};
+  const dict = {};
   for (let i = 0; i < len; i++) {
-    let key = nums[i];
+    const key = nums[i];
     if (!dict[key]) {
       dict[key] = 0;
     }
     dict[key] = dict[key] + 1;
   }
-  let arr = [...new Set(nums)];
+  const arr = [...new Set(nums)];
   let times = 0;
   for (let i = 0; i < len; i++) {
     for (let j = i + 1; j < len; j++) {

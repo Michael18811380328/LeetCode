@@ -13,20 +13,20 @@
 // 分治算法：先根据 K 的符号确定怎么算
 // 每一个情况使用滑动窗口计算
 // Your runtime beats 81.54 % of javascript submissions
-var decrypt = function(code, k) {
+const decrypt = function(code, k) {
   const len = code.length;
   // 1. 如果是0，直接构造新数组返回
   if (k === 0) {
     return new Array(len).fill(0);
   }
   // 2. 如果不是0，先把 index-value 存放到字典中
-  let dict = {};
+  const dict = {};
   code.forEach((item, i) => {
     dict[i] = item;
   });
-  let res = new Array(len);
+  const res = new Array(len);
   // 计算不同的和即可（加一个减一个，滑动窗口算法）
-  // 2.1 K大于0，计算后面元素的和 
+  // 2.1 K大于0，计算后面元素的和
   if (k > 0) {
     // 计算第一个
     let first = 0;
@@ -64,4 +64,3 @@ var decrypt = function(code, k) {
 // console.log(decrypt([2,4,9,3], -2).toString() == [12,5,6,13]);
 
 // @lc code=end
-

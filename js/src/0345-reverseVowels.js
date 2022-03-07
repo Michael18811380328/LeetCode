@@ -4,15 +4,15 @@
  * [345] 反转字符串中的元音字母
  */
 // 416 ms , 在所有 JavaScript 提交中击败了 5.13%
-var reverseVowels = function(s) {
+const reverseVowels = function(s) {
   const strs = s;
   // 辅助函数，判断是否是元音
-  let vowels = ['a', 'e', 'i', 'o', 'u'];
-  var isVowel = (str) => {
+  const vowels = ['a', 'e', 'i', 'o', 'u'];
+  const isVowel = (str) => {
     const s = str.toLocaleLowerCase();
     return vowels.includes(s);
-  }
-  let dict = {};
+  };
+  const dict = {};
   let vowelArr = [];
   for (let i = 0; i < strs.length; i++) {
     if (isVowel(strs[i])) {
@@ -27,7 +27,7 @@ var reverseVowels = function(s) {
   let result = '';
   for (let i = 0; i < strs.length; i++) {
     if (dict[i]) {
-      let item = vowelArr.shift();
+      const item = vowelArr.shift();
       result = result + item;
     } else {
       result = result + strs[i];

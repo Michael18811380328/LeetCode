@@ -10,25 +10,25 @@
  * @return {boolean}
  */
 // Your runtime beats 98.4 % of javascript submissions
-var judgeCircle = function(moves) {
+const judgeCircle = function(moves) {
   if (moves.length % 2 === 1) return false;
   let x = 0;
   let y = 0;
   // 第一种思路，循环当前的字符串
   for (let i = 0; i < moves.length; i++) {
-    let item = moves[i];
+    const item = moves[i];
     switch (item) {
       case 'R':
-        x++
+        x++;
         break;
       case 'L':
-        x--
+        x--;
         break;
       case 'U':
-        y++
+        y++;
         break;
       case 'D':
-        y--
+        y--;
         break;
       default:
         break;
@@ -38,7 +38,6 @@ var judgeCircle = function(moves) {
   // 第二种思路：字符串排序，直接计算字符串的数量
   // 这个对于长字符串效果比较好
 };
-
 
 // 第二种思路：字符串排序，直接计算字符串的数量
 // 160 ms, 在所有 JavaScript 提交中击败了5.72%
@@ -54,4 +53,3 @@ var judgeCircle = function(moves) {
 //   return c === d;
 // };
 // @lc code=end
-

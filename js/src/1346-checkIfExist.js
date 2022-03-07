@@ -4,7 +4,7 @@
 // i != j
 // 0 <= i, j < arr.length
 // arr[i] == 2 * arr[j]
- 
+
 // 示例 1：
 // 输入：arr = [10,2,5,3]
 // 输出：true
@@ -13,18 +13,18 @@
  * @param {number[]} arr
  * @return {boolean}
  */
-var checkIfExist = function(arr) {
+const checkIfExist = function(arr) {
   // 哈希表存储
   const len = arr.length;
   if (len < 2) return false;
-  let hash = {};
+  const hash = {};
   for (let i = 0; i < len; i++) {
-      let item = arr[i];
-      let a = item * 2;
-      let b = item / 2;
-      if (hash[a] || hash[b]) return true;
-      // 把当前的存入hash 中
-      hash[item] = true;
+    const item = arr[i];
+    const a = item * 2;
+    const b = item / 2;
+    if (hash[a] || hash[b]) return true;
+    // 把当前的存入hash 中
+    hash[item] = true;
   }
   return false;
 };

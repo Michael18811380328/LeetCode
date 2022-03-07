@@ -19,21 +19,21 @@
  */
 //  105/105 cases passed (452 ms)
 //  Your runtime beats 11.61 % of javascript submissions
-var isEvenOddTree = function(root) {
+const isEvenOddTree = function(root) {
   // 思路 广度优先遍历
   // 使用递归，把树的不同层的节点，放在一个二维数组总
   // 放的时候，判断当前是否是递增或者递减的情况
 
   // 存储空间（二维数组）
-  let matrix = [];
+  const matrix = [];
   // 临时队列
-  let queue = [];
+  const queue = [];
 
   // 辅助函数：遍历树节点
   // 参数：树节点，层数
-  let runNode = (node, layer) => {
+  const runNode = (node, layer) => {
     if (!node) return;
-    let value = node.val;
+    const value = node.val;
 
     // 当前层是空，则初始化
     if (!matrix[layer]) {
@@ -76,7 +76,7 @@ var isEvenOddTree = function(root) {
       });
     }
     return true;
-  }
+  };
 
   // 初始化根节点到队列
   queue.push({
@@ -85,12 +85,11 @@ var isEvenOddTree = function(root) {
   });
 
   while (queue.length > 0) {
-    let current = queue.shift();
+    const current = queue.shift();
     if (runNode(current.node, current.layer) === false) {
       return false;
-    } 
+    }
   }
   return true;
 };
 // @lc code=end
-

@@ -10,14 +10,14 @@
  * @return {number}
  */
 // Your runtime beats 81.32 % of javascript submissions
-var countBattleships = function(board) {
+const countBattleships = function(board) {
   // 循环甲板上的元素
   // 如果是空的，继续循环
   // 如果不是空的，监测相邻的右边和下边，然后把联系的占有的情况改成空
   let res = 0;
   for (let i = 0; i < board.length; i++) {
     for (let j = 0; j < board[i].length; j++) {
-      let item = board[i][j];
+      const item = board[i][j];
       if (item === 'X') {
         res++;
         changeBoard(board, i, j);
@@ -41,7 +41,6 @@ var changeBoard = (board, i, j) => {
       i = i + 1;
     }
   }
-}
+};
 // [["X",".","X"],["X",".","X"]]
 // @lc code=end
-

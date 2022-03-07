@@ -10,7 +10,7 @@
  * @return {number}
  */
 // Your runtime beats 91.11 % of javascript submissions
-var findSpecialInteger = function(arr) {
+const findSpecialInteger = function(arr) {
   const length = arr.length;
   if (length < 3) return arr[0];
   const len = length / 4;
@@ -30,4 +30,3 @@ var findSpecialInteger = function(arr) {
   return arr[0];
 };
 // @lc code=end
-

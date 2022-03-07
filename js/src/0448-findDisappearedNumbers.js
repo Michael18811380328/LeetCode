@@ -15,30 +15,30 @@
 // [5,6]
 // 172 ms, 在所有 JavaScript 提交中击败了36.87%
 
-var findDisappearedNumbers = function(nums) {
-    const n = nums.length;
-    if (n === 1) return [];
-    let newArr = [...new Set(nums)].sort((a, b) => a - b);
-    const len = newArr.length;
-    // 如果去重排序后，还和原来的一样，那么没有缺失，直接返回空数组(优化：不需要排序)
-    if (len === n) return [];
-    let pointer = 1;
-    let result = [];
-    for (let i = 0; i < len; i++) {
-        if (pointer === newArr[i]) {
-            pointer++;
-        } else {
-            result.push(pointer);
-            pointer++;
-            i--;
-        }
+const findDisappearedNumbers = function(nums) {
+  const n = nums.length;
+  if (n === 1) return [];
+  const newArr = [...new Set(nums)].sort((a, b) => a - b);
+  const len = newArr.length;
+  // 如果去重排序后，还和原来的一样，那么没有缺失，直接返回空数组(优化：不需要排序)
+  if (len === n) return [];
+  let pointer = 1;
+  const result = [];
+  for (let i = 0; i < len; i++) {
+    if (pointer === newArr[i]) {
+      pointer++;
+    } else {
+      result.push(pointer);
+      pointer++;
+      i--;
     }
-    // [1,1,1,1,1] => [2,3,4,5]
-    while (pointer <= n) {
-        result.push(pointer);
-        pointer++;
-    }
-    return result;
+  }
+  // [1,1,1,1,1] => [2,3,4,5]
+  while (pointer <= n) {
+    result.push(pointer);
+    pointer++;
+  }
+  return result;
 };
 
 // 思路1：先把这个数组去重，然后新建一个数组长度是N，然后依次填充

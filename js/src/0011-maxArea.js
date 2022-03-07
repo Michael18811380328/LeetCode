@@ -41,11 +41,11 @@ function maxArea2(height) {
   let max = Math.min(height[left], height[right]) * (right - left);
   while (left !== right) {
     if (height[left] < height[right]) {
-      left++
+      left++;
     } else {
       right--;
     }
-    let curr = Math.min(height[left], height[right]) * (right - left);
+    const curr = Math.min(height[left], height[right]) * (right - left);
     if (curr > max) {
       max = curr;
     }

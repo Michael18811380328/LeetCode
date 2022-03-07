@@ -12,19 +12,19 @@
  */
 // Your runtime beats 82.75 % of javascript submissions
 // 思路一：使用哈希表
-var isAnagram1 = function(s, t) {
+const isAnagram1 = function(s, t) {
   if (s.length !== t.length) return false;
-  let dict = {};
+  const dict = {};
   const len = s.length;
   for (let i = 0; i < len; i++) {
-    let key = s[i];
+    const key = s[i];
     if (!dict[key]) {
-      dict[key] = 0
+      dict[key] = 0;
     }
     dict[key]++;
   }
   for (let i = 0; i < len; i++) {
-    let key = t[i];
+    const key = t[i];
     if (!dict[key] || dict[key] === 0) return false;
     dict[key]--;
   }
@@ -32,16 +32,16 @@ var isAnagram1 = function(s, t) {
 };
 // 思路二：使用数组排序
 // Your runtime beats 36.98 % of javascript submissions
-var isAnagram2 = function(s, t) {
+const isAnagram2 = function(s, t) {
   const sLen = s.length;
   if (sLen !== t.length) return false;
-  let arr1 = s.split('');
-  let arr2 = t.split('');
+  const arr1 = s.split('');
+  const arr2 = t.split('');
   arr1.sort((a, b) => {
-    return a > b ? 1 : -1
+    return a > b ? 1 : -1;
   });
   arr2.sort((a, b) => {
-    return a > b ? 1 : -1
+    return a > b ? 1 : -1;
   });
   for (let i = 0; i < sLen; i++) {
     if (arr1[i] !== arr2[i]) return false;
@@ -50,4 +50,3 @@ var isAnagram2 = function(s, t) {
 };
 
 // @lc code=end
-

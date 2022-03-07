@@ -5,17 +5,17 @@
 // 字符串中不同整数的数目
 // 这个方法需要循环一次字符串，性能不好
 // 92 ms, 在所有 JavaScript 提交中击败了33.46%
-var numDifferentIntegers = function(word) {
+const numDifferentIntegers = function(word) {
   const len = word.length;
   let numStr = '';
-  let res = new Set();
-  let handleStr = function(str) {
+  const res = new Set();
+  const handleStr = function(str) {
     if (str === '') return;
     str = str.replace(/^0+/ig, '');
     res.add(str);
-  }
+  };
   for (let i = 0; i < len; i++) {
-    let item = word[i];
+    const item = word[i];
     // check isNumber
     if (item > -1) {
       numStr = numStr + item;

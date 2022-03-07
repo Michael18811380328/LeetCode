@@ -21,13 +21,13 @@
  * @param {number} k
  * @return {number[][]}
  */
-var combine = function(n, k) {
+const combine = function(n, k) {
   // 没有满足的组合
   if (n < k) {
     return [];
   }
   // 这里设置一个全局的数组N，然后填充内容
-  let LIST = [];
+  const LIST = [];
   for (let i = 0; i < n; i++) {
     LIST.push(i + 1);
   }
@@ -45,16 +45,16 @@ var combine = function(n, k) {
     }
     // 这里过滤剩余的情况
     // list filter tmp 的元素，然后循环的时候，从大于 tmp 中最大元素开始循环
-    let start = tmp.length > 0 ? tmp[tmp.length - 1] + 1 : 1;
+    const start = tmp.length > 0 ? tmp[tmp.length - 1] + 1 : 1;
     for (let i = start; i <= n; i++) {
       tmp.push(i);
       backTrack(list, tmp, num);
       tmp.pop();
     }
-  }
+  };
   // 创建回溯的初始条件
-  let list = [];
-  let tmp = [];
+  const list = [];
+  const tmp = [];
   backTrack(list, tmp, k);
   return list;
 };

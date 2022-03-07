@@ -4,7 +4,7 @@
  * [867] 转置矩阵
  */
 
-// 
+//
 /**
  * @param {number[][]} A
  * @return {number[][]}
@@ -15,13 +15,13 @@
 // 55.28%
 // 输入：[[1,2,3],[4,5,6],[7,8,9]]
 // 输出：[[1,4,7],[2,5,8],[3,6,9]]
-var transpose = function(A) {
+const transpose = function(A) {
   const m = A.length;
   if (m === 0) return [];
   const n = A[0].length;
-  let result = [];
+  const result = [];
   for (let i = 0; i < n; i++) {
-    let arr = [];
+    const arr = [];
     for (let j = 0; j < m; j++) {
       arr.push(A[j][i]);
     }
@@ -29,5 +29,3 @@ var transpose = function(A) {
   }
   return result;
 };
-
-

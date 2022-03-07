@@ -13,8 +13,8 @@
 // 那么遍历两层，数据量可以接受，但是性能很不好
 // 循环开始的索引，然后依次求出数组的最值，看看这个是否满足要求
 // Your runtime beats 39.44 % of javascript submissions
-var maxRotateFunction = function(nums) {
-  let getRes = (start, len) => {
+const maxRotateFunction = function(nums) {
+  const getRes = (start, len) => {
     let sum = 0;
     for (let j = 0; j < len; j++) {
       const index = start + j > len - 1 ? start + j - len : start + j;
@@ -25,7 +25,7 @@ var maxRotateFunction = function(nums) {
   const len = nums.length;
   let result = null;
   for (let i = 0; i < len; i++) {
-    let currentRes = getRes(i, len);
+    const currentRes = getRes(i, len);
     if (!result) {
       result = currentRes;
     } else {
@@ -35,4 +35,3 @@ var maxRotateFunction = function(nums) {
   return result;
 };
 // @lc code=end
-

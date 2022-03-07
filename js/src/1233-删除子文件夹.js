@@ -8,15 +8,15 @@
 // 3336 ms, 在所有 JavaScript 提交中击败了7.14%
 // 现在循环太多，显然不是好办法
 // 循环一次时，应该把键记录在一个数组中
-var removeSubfolders = function(folder) {
+const removeSubfolders = function(folder) {
   // folder = [...new Set(folder)];
   folder.sort((a, b) => {
-    return a.length > b.length ? 1 : -1
+    return a.length > b.length ? 1 : -1;
   });
   // console.log(folder);
-  let result = [];
+  const result = [];
   while (folder.length > 0) {
-    let item = folder.shift();
+    const item = folder.shift();
     deleteSubFile(item, folder);
     result.push(item);
   }
@@ -31,7 +31,7 @@ var deleteSubFile = (item, folder) => {
       i--;
     }
   }
-}
+};
 
 // 思路二
 // 看看能否使用字典树结构优化，文件结构就是树
@@ -102,4 +102,3 @@ var deleteSubFile = (item, folder) => {
 // 这里还有问题，还需要修复
 
 // @lc code=end
-

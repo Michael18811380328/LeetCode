@@ -10,24 +10,23 @@
  * @return {number[]}
  */
 // Your runtime beats 68.75 % of javascript submissions
-var minSubsequence = function(nums) {
+const minSubsequence = function(nums) {
   if (nums.length === 1) return nums;
-  var fn = function(a, b) {
+  const fn = function(a, b) {
     return a + b;
-  }
+  };
   const sum = nums.reduce(fn, 0);
   const half = ((sum / 2) % 2 === 0) ? (sum / 2) + 1 : (sum / 2) + 0.5;
   nums.sort((a, b) => b - a);
   // 数组按照倒序排列
   let subSum = 0;
   for (let i = 0; i < nums.length; i++) {
-    let item = nums[i];
+    const item = nums[i];
     subSum += item;
     if (subSum >= half) {
-      let innerArr = nums.slice(0, i + 1);
+      const innerArr = nums.slice(0, i + 1);
       return innerArr;
-    } 
+    }
   }
 };
 // @lc code=end
-

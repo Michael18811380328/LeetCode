@@ -10,12 +10,12 @@
  * @return {boolean}
  */
 // Your runtime beats 11.21 % of javascript submissions
-var hasAlternatingBits = function(n) {
+const hasAlternatingBits = function(n) {
   const N = String(n);
-  var fn = (str) => {
+  const fn = (str) => {
     return (str >>> 0).toString(2);
-  }
-  let bin = fn(N);
+  };
+  const bin = fn(N);
   // 这里可以优化，能否不使用循环
   for (let i = 1; i < bin.length; i++) {
     if (bin[i - 1] === bin[i]) {
@@ -25,4 +25,3 @@ var hasAlternatingBits = function(n) {
   return true;
 };
 // @lc code=end
-

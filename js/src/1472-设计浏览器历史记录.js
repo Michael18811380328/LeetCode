@@ -9,13 +9,13 @@
  * @param {string} homepage
  */
 // Your runtime beats 92.59 % of javascript submissions
-var BrowserHistory = function(homepage) {
+const BrowserHistory = function(homepage) {
   back = [];
   forw = [];
   back.push(homepage);
 };
 
-/** 
+/**
  * @param {string} url
  * @return {void}
  */
@@ -26,7 +26,7 @@ BrowserHistory.prototype.visit = function(url) {
   back.push(url);
 };
 
-/** 
+/**
  * @param {number} steps
  * @return {string}
  */
@@ -34,7 +34,7 @@ BrowserHistory.prototype.back = function(steps) {
   while (steps > 0) {
     steps--;
     if (back.length > 1) {
-      let tmp = back.pop();
+      const tmp = back.pop();
       forw.push(tmp);
     } else {
       steps = 0;
@@ -43,7 +43,7 @@ BrowserHistory.prototype.back = function(steps) {
   return back[back.length - 1];
 };
 
-/** 
+/**
  * @param {number} steps
  * @return {string}
  */
@@ -51,7 +51,7 @@ BrowserHistory.prototype.forward = function(steps) {
   while (steps > 0) {
     steps--;
     if (forw.length > 0) {
-      let tmp = forw.pop();
+      const tmp = forw.pop();
       back.push(tmp);
     } else {
       steps = 0;
@@ -68,4 +68,3 @@ BrowserHistory.prototype.forward = function(steps) {
  * var param_3 = obj.forward(steps)
  */
 // @lc code=end
-

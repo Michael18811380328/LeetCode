@@ -11,9 +11,9 @@
  * @return {string[]}
  */
 // Your runtime beats 92.22 % of javascript submissions
-var buildArray = function(target, n) {
-  let res = [];
-  let last = target[target.length - 1];
+const buildArray = function(target, n) {
+  const res = [];
+  const last = target[target.length - 1];
   let current = 1;
   for (let i = 0; i <= last; i++) {
     if (target[i] === current) {
@@ -30,4 +30,3 @@ var buildArray = function(target, n) {
   return res;
 };
 // @lc code=end
-

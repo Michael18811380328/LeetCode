@@ -11,11 +11,10 @@
  * @return {boolean[]}
  */
 // 72 ms, 在所有 JavaScript 提交中击败了98.40%
-var kidsWithCandies = function(candies, extraCandies) {
+const kidsWithCandies = function(candies, extraCandies) {
   const max = Math.max(...candies);
   return candies.map((item) => {
     return (max - item) <= extraCandies;
   });
 };
 // @lc code=end
-

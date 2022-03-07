@@ -18,18 +18,18 @@
 // 132 ms
 // , 在所有 JavaScript 提交中击败了
 // 92.59%
-var addToArrayForm = function(A, K) {
+const addToArrayForm = function(A, K) {
   // 先把K转换成数组
-  let B = [];
+  const B = [];
   while (K > 0) {
-    let tmp = K % 10;
+    const tmp = K % 10;
     B.push(tmp);
     K = (K - tmp) / 10;
   }
   // 然后把A和B从后向前加一下
   A.reverse();
   const len = Math.max(A.length, B.length);
-  let C = [];
+  const C = [];
   for (let i = 0; i < len; i++) {
     C[i] = (A[i] || 0) + (B[i] || 0) + (C[i] || 0);
     if (C[i] > 9) {
@@ -42,4 +42,3 @@ var addToArrayForm = function(A, K) {
   // 最后再求反
 };
 // @lc code=end
-

@@ -7,21 +7,21 @@
  * @param {number[]} arr
  * @return {number}
  */
-var findLucky = function(arr) {
-  let len = arr.length;
-  let dict = {};
+const findLucky = function(arr) {
+  const len = arr.length;
+  const dict = {};
   for (let i = 0; i < len; i++) {
-    let key = arr[i];
+    const key = arr[i];
     if (dict[key]) {
       dict[key] += 1;
     } else {
       dict[key] = 1;
     }
   }
-  let list = [];
+  const list = [];
   // 获取幸运数字
-  for (let key in dict) {
-    let value = dict[key];
+  for (const key in dict) {
+    const value = dict[key];
     if (value == key) {
       list.push(key);
     }
@@ -31,4 +31,3 @@ var findLucky = function(arr) {
   return Math.max(...list);
 };
 // @lc code=end
-

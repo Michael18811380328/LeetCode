@@ -3,24 +3,24 @@
  * @return {string}
  */
 // 100 ms, 在所有 JavaScript 提交中击败了6.98%
-var maximumTime = function(time) {
-  let a = time[0]
+const maximumTime = function(time) {
+  let a = time[0];
   let b = time[1];
   let c = time[3];
   let d = time[4];
-  
+
   if (d === '?') {
     d = '9';
   }
   if (c === '?') {
-    c = '5'
+    c = '5';
   }
-  
+
   if (a === '?' && b === '?') {
     a = '2';
     b = '3';
   }
-  
+
   if (a !== '?' && b === '?') {
     if (a === '2') {
       b = '3';
@@ -28,7 +28,7 @@ var maximumTime = function(time) {
       b = '9';
     }
   }
-  
+
   if (a === '?' && b !== '?') {
     if (Number(b) < 4) {
       a = '2';

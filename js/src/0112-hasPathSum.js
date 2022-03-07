@@ -12,7 +12,7 @@
  * @return {boolean}
  */
 // 104 ms , 在所有 JavaScript 提交中击败了 31.09% 的用户
-var hasPathSum = function(root, sum) {
+const hasPathSum = function(root, sum) {
   // 空树，目标是0
   if (!root) {
     return false;
@@ -21,7 +21,7 @@ var hasPathSum = function(root, sum) {
   if (!root.left && !root.right) {
     return root.val === sum;
   }
-  let currentSum = root.val;
+  const currentSum = root.val;
   return runNode(root.left, sum, currentSum) || runNode(root.right, sum, currentSum);
 };
 
@@ -36,7 +36,7 @@ var runNode = function(node, sum, currentSum) {
   }
   // 有子节点
   return runNode(node.left, sum, currentSum + node.val) || runNode(node.right, sum, currentSum + node.val);
-}
+};
 
 export { hasPathSum };
 

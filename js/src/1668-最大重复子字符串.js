@@ -51,7 +51,7 @@
 
 // 换一个思路
 // Your runtime beats 36.25 % of javascript submissions
-var maxRepeating = function(sequence, word) {
+const maxRepeating = function(sequence, word) {
   const index = sequence.indexOf(word);
   if (index === -1) {
     return 0;
@@ -71,4 +71,3 @@ var maxRepeating = function(sequence, word) {
   return max;
 };
 // @lc code=end
-

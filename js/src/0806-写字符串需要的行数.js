@@ -14,12 +14,12 @@
 // , 在所有 JavaScript 提交中击败了
 // 85.29%
 // 的用户
-var numberOfLines = function(widths, s) {
+const numberOfLines = function(widths, s) {
   let remain = 100;
   let line = 1;
   for (let i = 0; i < s.length; i++) {
-    let index = s[i].charCodeAt(0) - 97;    
-    let len = widths[index];
+    const index = s[i].charCodeAt(0) - 97;
+    const len = widths[index];
     if (remain >= len) {
       remain = remain - len;
     } else {
@@ -28,9 +28,8 @@ var numberOfLines = function(widths, s) {
       remain = remain - len;
     }
   }
-  let res1 = line;
-  let res2 = 100 - remain;
+  const res1 = line;
+  const res2 = 100 - remain;
   return [res1, res2];
 };
 // @lc code=end
-

@@ -4,13 +4,13 @@
  * [1189] “气球” 的最大数量
  */
 
-// 
+//
 /**
  * @param {string} text
  * @return {number}
  */
 // balloon
-var maxNumberOfBalloons = function(text) {
+const maxNumberOfBalloons = function(text) {
   const len = text.length;
   if (len < 7) return 0;
   let b = 0;
@@ -19,7 +19,7 @@ var maxNumberOfBalloons = function(text) {
   let o = 0;
   let n = 0;
   for (let i = 0; i < len; i++) {
-    let item = text[i];
+    const item = text[i];
     switch (item) {
       case 'b':
         b++;
@@ -42,5 +42,3 @@ var maxNumberOfBalloons = function(text) {
   }
   return Math.min(b, a, n, Math.floor(o / 2), Math.floor(l / 2));
 };
-
-

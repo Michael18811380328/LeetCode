@@ -8,15 +8,15 @@
  * @param {number} targetSum
  * @return {number[][]}
  */
-var pathSum = function(root, targetSum) {
-  let list = [];
-  let tmp = [];
+const pathSum = function(root, targetSum) {
+  const list = [];
+  const tmp = [];
   var runNode = (node, tmp, lastSum) => {
     if (!node) {
       return;
     }
     tmp.push(node.val);
-    let tmpSum = lastSum + node.val;
+    const tmpSum = lastSum + node.val;
     if (!node.left && !node.right) {
       if (tmpSum === targetSum) {
         list.push(tmp);

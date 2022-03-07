@@ -6,11 +6,11 @@
 
 // @lc code=start
 // Your runtime beats 54.55 % of javascript submissions
-var ProductOfNumbers = function() {
+const ProductOfNumbers = function() {
   this.arr = [];
 };
 
-/** 
+/**
  * @param {number} num
  * @return {void}
  */
@@ -18,14 +18,14 @@ ProductOfNumbers.prototype.add = function(num) {
   this.arr.push(num);
 };
 
-/** 
+/**
  * @param {number} k
  * @return {number}
  */
 ProductOfNumbers.prototype.getProduct = function(k) {
   let res = 1;
   // console.log(this.arr);
-  for (let i = this.arr.length - 1; i > this.arr.length - 1 - k; i --) {
+  for (let i = this.arr.length - 1; i > this.arr.length - 1 - k; i--) {
     res *= this.arr[i];
   }
   return res;
@@ -38,4 +38,3 @@ ProductOfNumbers.prototype.getProduct = function(k) {
  * var param_2 = obj.getProduct(k)
  */
 // @lc code=end
-

@@ -25,7 +25,7 @@ var countStudents = function(students, sandwiches) {
       times = 0;
     } else {
       times++;
-      let tmp = students.shift();
+      const tmp = students.shift();
       students.push(tmp);
     }
     if (times >= students.length) {
@@ -47,7 +47,7 @@ var countStudents = function(students, sandwiches) {
       times = 0;
     } else {
       times++;
-      let tmp = students.shift();
+      const tmp = students.shift();
       students.push(tmp);
     }
     if (times >= students.length) {
@@ -68,22 +68,22 @@ var countStudents = function(students, sandwiches) {
   const len = students.length;
   let times1 = 0;
   let times0 = 0;
-  students.forEach(item => {
+  students.forEach((item) => {
     item === 1 ? times1++ : times0++;
   });
   // 处理特殊情况
   if (times1 === 0) {
-    let index = sandwiches.indexOf(1);
+    const index = sandwiches.indexOf(1);
     if (index === -1) return 0;
     return len - index;
   }
   if (times0 === 0) {
-    let index = sandwiches.indexOf(0);
+    const index = sandwiches.indexOf(0);
     if (index === -1) return 0;
     return len - index;
   }
   for (let i = 0; i < sandwiches.length; i++) {
-    let item = sandwiches[i];
+    const item = sandwiches[i];
     if (item === 1) {
       times1--;
     }
@@ -91,7 +91,7 @@ var countStudents = function(students, sandwiches) {
       times0--;
     }
     if (times1 === -1 || times0 === -1) {
-        return len - i;
+      return len - i;
     }
   }
   return 0;

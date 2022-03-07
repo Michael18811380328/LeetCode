@@ -18,7 +18,7 @@
  * @param {number[]} position
  * @return {number}
  */
-var minCostToMoveChips = function(position) {
+const minCostToMoveChips = function(position) {
   let odd = 0;
   let even = 0;
   const len = position.length;

@@ -18,20 +18,20 @@ function gcd(a, b) {
   return gcd(b, a % b);
 }
 
-var hasGroupsSizeX = function(deck) {
+const hasGroupsSizeX = function(deck) {
   const len = deck.length;
   if (len < 2) return false;
   // 获取不同元素出现的次数
-  let dict = {};
+  const dict = {};
   for (let i = 0; i < len; i++) {
-    let key = deck[i];
+    const key = deck[i];
     if (!dict[key]) {
       dict[key] = 0;
     }
     dict[key]++;
   }
-  let arr = [];
-  for (let key in dict) {
+  const arr = [];
+  for (const key in dict) {
     // 如果某个数字只出现一次，那么一定不存在最大公约数
     if (dict[key] === 1) {
       return false;
@@ -54,4 +54,3 @@ var hasGroupsSizeX = function(deck) {
 
 // [1,1]
 // @lc code=end
-

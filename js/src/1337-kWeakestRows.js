@@ -11,10 +11,10 @@
  * @return {number[]}
  */
 // 88 ms, 在所有 JavaScript 提交中击败了62.86%的用户
-var kWeakestRows = function(mat, k) {
-  let arr = [];
+const kWeakestRows = function(mat, k) {
+  const arr = [];
   for (let i = 0; i < mat.length; i++) {
-    let item = mat[i];
+    const item = mat[i];
     let times = 0;
     for (let j = 0; j < item.length; j++) {
       if (item[j] === 0) {
@@ -27,7 +27,7 @@ var kWeakestRows = function(mat, k) {
     }
     arr.push({
       index: i,
-      times: times,
+      times,
     });
   }
   arr.sort((a, b) => {
@@ -37,8 +37,7 @@ var kWeakestRows = function(mat, k) {
       return a.times > b.times ? 1 : -1;
     }
   });
-  let tmp = arr.map(item => item.index);
+  const tmp = arr.map((item) => item.index);
   return tmp.slice(0, k);
 };
 // @lc code=end
-

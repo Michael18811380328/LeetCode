@@ -10,7 +10,7 @@
  * @return {number}
  */
 // Your runtime beats 71.27 % of javascript submissions
-var maxDepth = function(s) {
+const maxDepth = function(s) {
   if (s.includes('(') === false) {
     return 0;
   }
@@ -23,12 +23,10 @@ var maxDepth = function(s) {
       if (max < len) {
         max = len;
       }
-    }
-    else if (s[i] === ')') {
+    } else if (s[i] === ')') {
       len--;
     }
   }
   return max;
 };
 // @lc code=end
-

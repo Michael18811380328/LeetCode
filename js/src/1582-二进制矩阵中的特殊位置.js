@@ -46,13 +46,13 @@
 
 // 思路二
 // Your runtime beats 41.1 % of javascript submissions
-var numSpecial = function(mat) {
+const numSpecial = function(mat) {
   // 先删除空行
   // 辅助函数：求两个数的和
-  let fn = (a, b) => a + b;
+  const fn = (a, b) => a + b;
 
   // 辅助函数：判断一列是否和为1
-  let sumFn = function(index){
+  const sumFn = function(index) {
     const len = mat.length;
     let sum = 0;
     for (let i = 0; i < len; i++) {
@@ -64,18 +64,16 @@ var numSpecial = function(mat) {
 
   let res = 0;
   for (let i = 0; i < mat.length; i++) {
-    let sum = mat[i].reduce(fn, 0);
+    const sum = mat[i].reduce(fn, 0);
     if (sum === 0) {
       mat.splice(i, 1);
       i--;
-    }
-    else if (sum === 1) {
+    } else if (sum === 1) {
       // 行满足，获取列是否满足
-      let index = mat[i].indexOf(1);
+      const index = mat[i].indexOf(1);
       if (sumFn(index)) res++;
     }
   }
   return res;
-}
+};
 // @lc code=end
-

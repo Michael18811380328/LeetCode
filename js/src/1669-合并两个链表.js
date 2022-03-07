@@ -20,10 +20,10 @@
  * @return {ListNode}
  */
 // Your runtime beats 97.33 % of javascript submissions
-var mergeInBetween = function(list1, a, b, list2) {
+const mergeInBetween = function(list1, a, b, list2) {
   // 关键是存储链表的开始节点和结束节点
   // 这是list1开始节点，返回这个值
-  let list1Head = list1;
+  const list1Head = list1;
   // 这个存储剪切开始的节点
   let list1Middle = list1Middle1 = list1;
   for (let i = 1; i < a; i++) {
@@ -34,7 +34,7 @@ var mergeInBetween = function(list1, a, b, list2) {
     list1Middle1 = list1Middle1.next;
   }
   // 获取第二个链表的开始节点和结束节点
-  let list2Start = list2;
+  const list2Start = list2;
   let list2End = list2Start;
   while (list2End.next) {
     list2End = list2End.next;
@@ -45,4 +45,3 @@ var mergeInBetween = function(list1, a, b, list2) {
   return list1Head;
 };
 // @lc code=end
-

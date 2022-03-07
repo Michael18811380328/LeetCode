@@ -12,12 +12,12 @@
  */
 // 先排序，然后获取目标的index，放在新数组中，很简单
 // Your runtime beats 64.52 % of javascript submissions
-var targetIndices = function(nums, target) {
+const targetIndices = function(nums, target) {
   if (!nums.includes(target)) return [];
   nums = nums.sort((a, b) => {
     return a > b ? 1 : -1;
   });
-  let res = [];
+  const res = [];
   nums.forEach((item, index) => {
     if (item === target) {
       res.push(index);
@@ -26,4 +26,3 @@ var targetIndices = function(nums, target) {
   return res;
 };
 // @lc code=end
-

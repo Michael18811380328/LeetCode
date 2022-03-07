@@ -11,14 +11,13 @@
  * @param {number} d
  * @return {number}
  */
-var findTheDistanceValue = function(arr1, arr2, d) {
+const findTheDistanceValue = function(arr1, arr2, d) {
   // 基本思路：双重循环，然后判断每一个是否满足要求
   let tmp = 0;
   for (let i = 0; i < arr1.length; i++) {
-    inner:
     for (let j = 0; j < arr2.length; j++) {
       if (Math.abs(arr1[i] - arr2[j]) <= d) {
-        break inner;
+        break;
       }
       if (j === arr2.length - 1) {
         tmp++;

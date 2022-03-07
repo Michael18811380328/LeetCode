@@ -12,7 +12,7 @@
  */
 // [0,1,0,0,1,0,0,1] 2 true
 // [0,1, 0,0,1,0,0,1] 2 true
-var kLengthApart = function(nums, k) {
+const kLengthApart = function(nums, k) {
   if (k === 0) return true;
   const len = nums.length;
   let times = null;
@@ -29,4 +29,3 @@ var kLengthApart = function(nums, k) {
   return true;
 };
 // @lc code=end
-

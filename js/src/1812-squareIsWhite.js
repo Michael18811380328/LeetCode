@@ -11,12 +11,12 @@
  * @return {boolean}
  */
 // 80 ms, 在所有 JavaScript 提交中击败了80.62%
-var squareIsWhite = function(coordinates) {
+const squareIsWhite = function(coordinates) {
   const first = coordinates[0];
   const second = parseInt(coordinates[1]);
-  if (first === 'a' || first === 'c' || first === 'e' || first === 'g')  {
-    return second % 2 === 0 ? true : false;
+  if (first === 'a' || first === 'c' || first === 'e' || first === 'g') {
+    return second % 2 === 0;
   } else {
-    return second % 2 === 0 ? false : true;
+    return second % 2 !== 0;
   }
 };

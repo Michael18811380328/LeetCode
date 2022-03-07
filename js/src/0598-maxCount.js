@@ -7,22 +7,22 @@
 
 // 示例 1:
 
-// 输入: 
+// 输入:
 // m = 3, n = 3
 // operations = [[2,2],[3,3]]
 // 输出: 4
-// 解释: 
-// 初始状态, M = 
+// 解释:
+// 初始状态, M =
 // [[0, 0, 0],
 //  [0, 0, 0],
 //  [0, 0, 0]]
 
-// 执行完操作 [2,2] 后, M = 
+// 执行完操作 [2,2] 后, M =
 // [[1, 1, 0],
 //  [1, 1, 0],
 //  [0, 0, 0]]
 
-// 执行完操作 [3,3] 后, M = 
+// 执行完操作 [3,3] 后, M =
 // [[2, 2, 1],
 //  [2, 2, 1],
 //  [1, 1, 1]]
@@ -34,33 +34,34 @@
  * @param {number[][]} ops
  * @return {number}
  */
-var maxCount = function(m, n, ops) {
-    const len = ops.length;
-    if (len === 0) {
-        return m * n;
+const maxCount = function(m, n, ops) {
+  const len = ops.length;
+  if (len === 0) {
+    return m * n;
+  }
+  // 先把 ops 遍历一次
+  // 如果有一个是0，那么应该去掉（不会增加元素）
+  // 然后求所有 x,y 对应坐标的最小值
+  // 把这个乘法就是结果？
+  // 是否有特殊情况
+  // 如果按照题目直接算，那么数量太大了
+  let a;
+  let b;
+  for (let i = 0; i < ops.length; i++) {
+    const item = ops[i];
+    const x = item[0]; const
+      y = item[1];
+    if (x === 0 || y === 0) continue;
+    if (!a) {
+      a = x;
+    } else {
+      a = a > x ? x : a;
     }
-    // 先把 ops 遍历一次
-    // 如果有一个是0，那么应该去掉（不会增加元素）
-    // 然后求所有 x,y 对应坐标的最小值
-    // 把这个乘法就是结果？
-    // 是否有特殊情况
-    // 如果按照题目直接算，那么数量太大了
-    let a;
-    let b;
-    for (let i = 0; i < ops.length; i++) {
-        let item = ops[i];
-        let x = item[0], y = item[1];
-        if (x === 0 || y === 0) continue;
-        if (!a) {
-            a = x;
-        } else {
-            a = a > x ? x : a;
-        }
-        if (!b) {
-            b = y
-        } else {
-            b = b > y ? y : b;
-        }
+    if (!b) {
+      b = y;
+    } else {
+      b = b > y ? y : b;
     }
-    return a * b;
+  }
+  return a * b;
 };

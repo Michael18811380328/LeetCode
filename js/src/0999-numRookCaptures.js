@@ -14,7 +14,7 @@ var numRookCaptures = function(board) {
   for (let i = 0; i < len; i++) {
     for (let j = 0; j < len; j++) {
       if (board[i][j] === 'R') {
-        let num = getNum(board, i, j);
+        const num = getNum(board, i, j);
         return num;
       }
     }
@@ -35,8 +35,7 @@ var getNum = (board, x, y) => {
   for (let i = x; i >= 0; i--) {
     if (board[i][y] === 'B') {
       break;
-    }
-    else if (board[i][y] === 'p') {
+    } else if (board[i][y] === 'p') {
       res++;
       break;
     }
@@ -44,8 +43,7 @@ var getNum = (board, x, y) => {
   for (let i = y; i < 8; i++) {
     if (board[x][i] === 'B') {
       break;
-    }
-    else if (board[x][i] === 'p') {
+    } else if (board[x][i] === 'p') {
       res++;
       break;
     }
@@ -53,8 +51,7 @@ var getNum = (board, x, y) => {
   for (let i = y; i >= 0; i--) {
     if (board[x][i] === 'B') {
       break;
-    }
-    else if (board[x][i] === 'p') {
+    } else if (board[x][i] === 'p') {
       res++;
       break;
     }
@@ -71,8 +68,8 @@ var getNum = (board, x, y) => {
 // 68 ms, 在所有 JavaScript 提交中击败了78.57%
 // 子函数还能优化
 var numRookCaptures = function(board) {
-  let newBoard = board.flat();
-  let index = newBoard.indexOf('R') + 1;
+  const newBoard = board.flat();
+  const index = newBoard.indexOf('R') + 1;
   const j = (index % 8) - 1;
   const i = (index - index % 8) / 8;
   return getNum(board, i, j);
@@ -80,4 +77,3 @@ var numRookCaptures = function(board) {
 
 // 更好的算法上，子函数还能优化，看一下怎么实现
 // 如果已知了 ij 那么直接可以把四个子数组拿出来（拿出来也消耗时间）
-

@@ -6,7 +6,7 @@
 // [198] 打家劫舍
 // 这个题目不错，好好看看
 // Your runtime beats 54.12 % of javascript submissions
-var rob = function(nums) {
+const rob = function(nums) {
   // 动态规划就是求数组的通项公式
   // 然后获取数组的前几项，即可计算需要的参数
   // f(n) = Math.max(f(n - 2) + nums(n), f(n - 1))
@@ -15,14 +15,12 @@ var rob = function(nums) {
   const len = nums.length;
   if (len === 0) {
     return 0;
-  }
-  else if (len === 1) {
+  } else if (len === 1) {
     return nums[0];
-  }
-  else if (len === 2) {
+  } else if (len === 2) {
     return Math.max(nums[0], nums[1]);
   }
-  let res = [];
+  const res = [];
   res[0] = nums[0];
   res[1] = Math.max(nums[0], nums[1]);
   for (let i = 2; i < len; i++) {

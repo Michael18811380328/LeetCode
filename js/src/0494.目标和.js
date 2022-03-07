@@ -1,4 +1,3 @@
-
 /*
  * @lc app=leetcode.cn id=494 lang=javascript
  *
@@ -14,11 +13,11 @@
  * @param {number} target
  * @return {number}
  */
-var findTargetSumWays = function(nums, target) {
+const findTargetSumWays = function(nums, target) {
   let total = 0;
   const len = nums.length;
-  let check = (preSum, index) => {
-    let current = nums[index];
+  const check = (preSum, index) => {
+    const current = nums[index];
     // 已经遍历了全部的数组
     if (index === len - 1) {
       if (preSum + current === target) total++;
@@ -28,7 +27,7 @@ var findTargetSumWays = function(nums, target) {
     // 没有遍历全部数组，那么 DFS 继续执行
     check(preSum + current, index + 1);
     check(preSum - current, index + 1);
-  }
+  };
   check(0, 0);
   return total;
 };
@@ -38,4 +37,3 @@ var findTargetSumWays = function(nums, target) {
 // console.log(findTargetSumWays([0], 0) === 2);
 // console.log(findTargetSumWays([1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1], 6) === 18564);
 // @lc code=end
-

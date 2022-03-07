@@ -27,7 +27,7 @@
 // 如果是1，那么直接返回 3 ^ (n - 1) * 4
 // 如果是2，直接返回 3 ^ n * 2
 
-var integerBreak = function(n) {
+const integerBreak = function(n) {
   if (n <= 1) {
     return 1;
   }
@@ -37,8 +37,8 @@ var integerBreak = function(n) {
   if (n === 3) {
     return 2;
   }
-  let b = n % 3;
-  let a = (n - b) / 3;
+  const b = n % 3;
+  const a = (n - b) / 3;
   if (b === 0) {
     return Math.pow(3, a);
   }

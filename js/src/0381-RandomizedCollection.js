@@ -10,16 +10,16 @@
 // 思路二：使用哈希表实现
 // 好处：增删简单，不需要遍历数组
 // 缺点：查找消耗时间比较多
-// 
+//
 /**
  * Initialize your data structure here.
  */
-var RandomizedCollection = function() {
+const RandomizedCollection = function() {
   arr = [];
 };
 
 /**
- * Inserts a value to the collection. Returns true if the collection did not already contain the specified element. 
+ * Inserts a value to the collection. Returns true if the collection did not already contain the specified element.
  * @param {number} val
  * @return {boolean}
  */
@@ -34,12 +34,12 @@ RandomizedCollection.prototype.insert = function(val) {
 };
 
 /**
- * Removes a value from the collection. Returns true if the collection contained the specified element. 
+ * Removes a value from the collection. Returns true if the collection contained the specified element.
  * @param {number} val
  * @return {boolean}
  */
 RandomizedCollection.prototype.remove = function(val) {
-  let index = arr.indexOf(val);
+  const index = arr.indexOf(val);
   if (index === -1) {
     return false;
   } else {
@@ -56,6 +56,6 @@ RandomizedCollection.prototype.getRandom = function() {
   if (arr.length === 0) {
     return 0;
   }
-  let index2 = Math.floor(Math.random() * arr.length);
+  const index2 = Math.floor(Math.random() * arr.length);
   return arr[index2];
 };

@@ -54,4 +54,3 @@ var deleteDuplicates = function(head) {
   }
 };
 // @lc code=end
-

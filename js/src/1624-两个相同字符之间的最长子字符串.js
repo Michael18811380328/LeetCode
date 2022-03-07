@@ -10,20 +10,19 @@
  * @return {number}
  */
 // 80 ms, 在所有 JavaScript 提交中击败了84.21%
-var maxLengthBetweenEqualCharacters = function(s) {
+const maxLengthBetweenEqualCharacters = function(s) {
   let max = -1;
-  let dict = {};
+  const dict = {};
   const len = s.length;
   for (let i = 0; i < len; i++) {
-    let key = s[i];
+    const key = s[i];
     if (!dict[key] && dict[key] !== 0) {
       dict[key] = i;
     } else {
-      let distance = i - dict[key] - 1;
+      const distance = i - dict[key] - 1;
       max = max > distance ? max : distance;
     }
   }
   return max;
 };
 // @lc code=end
-

@@ -6,11 +6,11 @@
  * @param {number[]} A
  * @return {boolean}
  */
-var isMonotonic = function(A) {
+const isMonotonic = function(A) {
   // 处理空数组或者长度是12的情况
   const len = A.length;
   if (len < 3) {
-    return true
+    return true;
   }
   // 设置默认的是 undefined
   let flag = null;
@@ -19,8 +19,7 @@ var isMonotonic = function(A) {
   for (let i = 1; i < len; i++) {
     if (A[i] === A[i - 1]) {
       continue;
-    }
-    else if (A[i] < A[i - 1]) {
+    } else if (A[i] < A[i - 1]) {
       if (flag === true) {
         continue;
       } else if (flag === false) {
@@ -28,8 +27,7 @@ var isMonotonic = function(A) {
       } else if (flag === null) {
         flag = true;
       }
-    }
-     else if (A[i] > A[i - 1]) {
+    } else if (A[i] > A[i - 1]) {
       if (flag === false) {
         continue;
       } else if (flag === true) {

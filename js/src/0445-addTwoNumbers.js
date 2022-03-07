@@ -12,14 +12,15 @@ function ListNode(val) {
   this.next = null;
 }
 
-var addTwoNumbers = function(l1, l2) {
-  let arr1 = [], arr2 = [];
+const addTwoNumbers = function(l1, l2) {
+  const arr1 = []; const
+    arr2 = [];
   toNumber(l1, arr1);
   toNumber(l2, arr2);
   // console.log(arr1, arr2);
-  let arr3 = getSum(arr1, arr2);
+  const arr3 = getSum(arr1, arr2);
   // console.log(arr1, arr2, arr3);
-  let result = toList(arr3);
+  const result = toList(arr3);
   return result;
 };
 
@@ -36,7 +37,7 @@ var toNumber = function(list, arr) {
 var getSum = (arr1, arr2) => {
   let arr3 = [];
   while (arr1.length > 0 && arr2.length > 0) {
-    let sum = arr1.pop() + arr2.pop();
+    const sum = arr1.pop() + arr2.pop();
     arr3.unshift(sum);
   }
   if (arr1.length > 0) {
@@ -64,11 +65,10 @@ var toList = function(arr) {
   if (arr.length === 0) {
     return null;
   }
-  let value = arr.shift();
-  let listNode = new ListNode(value);
+  const value = arr.shift();
+  const listNode = new ListNode(value);
   listNode.next = toList(arr);
   return listNode;
 };
 
 // @lc code=end
-

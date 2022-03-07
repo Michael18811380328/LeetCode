@@ -19,8 +19,8 @@
  */
 // 84 ms, 在所有 JavaScript 提交中击败了50.66%的用户
 // 循环一次列表，使用哈希表记录是否重复（是 set，Object 无效）
-var detectCycle = function(head) {
-  let dict = new Set();
+const detectCycle = function(head) {
+  const dict = new Set();
   while (head) {
     if (dict.has(head)) {
       return head;
@@ -31,4 +31,3 @@ var detectCycle = function(head) {
   return null;
 };
 // @lc code=end
-

@@ -8,10 +8,10 @@
  * @param {number[]} seats
  * @return {number}
  */
-var maxDistToClosest = function(seats) {
-  let len = seats.length;
+const maxDistToClosest = function(seats) {
+  const len = seats.length;
   if (len === 2) {
-      return 1;
+    return 1;
   }
   // 如果在两边，直接计算(这个情况需要处理)
   // 如果在中间（奇数加一）然后除以2，计算
@@ -22,8 +22,7 @@ var maxDistToClosest = function(seats) {
   for (let i = 1; i < len; i++) {
     if (seats[i - 1] === 1 && seats[i] === 0) {
       start = i;
-    }
-    else if ((seats[i - 1] === 0 && seats[i] === 1) || (i === len - 1 && seats[i] === 0)) {
+    } else if ((seats[i - 1] === 0 && seats[i] === 1) || (i === len - 1 && seats[i] === 0)) {
       if (i === len - 1 && seats[i] === 0) {
         end = i;
       } else {
@@ -42,4 +41,3 @@ var maxDistToClosest = function(seats) {
   return max;
 };
 // @lc code=end
-

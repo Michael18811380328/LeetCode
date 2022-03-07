@@ -18,7 +18,7 @@ const numPairsDivisibleBy60bad = function(time) {
   const len = time.length;
   for (let i = 0; i < len; i++) {
     for (let j = i + 1; j < len; j++) {
-      let sum = time[i] + time[j];
+      const sum = time[i] + time[j];
       if (sum % 60 === 0) {
         res++;
       }
@@ -32,13 +32,13 @@ const numPairsDivisibleBy60bad = function(time) {
 // 因为 time 范围是 1~500 所以这个情况比较少，趋近于 N
 // Your runtime beats 82.98 % of javascript submissions
 const numPairsDivisibleBy60 = function(time) {
-  let dict = [];
+  const dict = [];
   const len = time.length;
   let time60 = 0;
   for (let i = 0; i < len; i++) {
-    let curr = time[i];
+    const curr = time[i];
     // 能被60整除的单独拿出来？
-    let remain = curr % 60;
+    const remain = curr % 60;
     if (remain === 0) {
       time60++;
       continue;
@@ -52,18 +52,18 @@ const numPairsDivisibleBy60 = function(time) {
   let res = 0;
   // 注意： 30 比较特殊
   for (let i = 1; i < 30; i++) {
-    let time = dict[i];
-    let time2 = dict[60 - i];
-    res += (time * time2 || 0); 
+    const time = dict[i];
+    const time2 = dict[60 - i];
+    res += (time * time2 || 0);
   }
   // 30特殊处理
-  let time30 = dict[30];
+  const time30 = dict[30];
   if (time30 > 0) {
-    res += ((time30 - 1) * time30 / 2)
+    res += ((time30 - 1) * time30 / 2);
   }
   // 60 特殊处理
   if (time60 > 0) {
-    res += ((time60 - 1) * time60 / 2)
+    res += ((time60 - 1) * time60 / 2);
   }
   return res;
 };

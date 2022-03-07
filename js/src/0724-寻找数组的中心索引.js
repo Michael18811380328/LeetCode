@@ -10,8 +10,8 @@
  * @return {number}
  */
 // Your runtime beats 62.46 % of javascript submissions
-var pivotIndex = function(nums) {
-  let sum = nums.reduce((a, b) => a + b, 0);
+const pivotIndex = function(nums) {
+  const sum = nums.reduce((a, b) => a + b, 0);
   let tmp = 0;
   for (let i = 0; i < nums.length; i++) {
     if (tmp === (sum - nums[i]) / 2) {
@@ -22,4 +22,3 @@ var pivotIndex = function(nums) {
   return -1;
 };
 // @lc code=end
-

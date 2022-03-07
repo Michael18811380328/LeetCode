@@ -10,8 +10,9 @@
  * @return {string}
  */
 //  68 ms, 在所有 JavaScript 提交中击败了 99.31%
-var freqAlphabets = function(s) {
-  let res = '', cur, curStr;
+const freqAlphabets = function(s) {
+  let res = ''; let cur; let
+    curStr;
   // 基本思路，通过API计算出对应的字符，或者使用一个字典存储对应的字符
   // 'a' === String.fromCharCode(97);
   while (s.length > 0) {
@@ -22,8 +23,7 @@ var freqAlphabets = function(s) {
       // console.log(curStr);
       res += curStr;
       s = s.slice(3);
-    }
-    else {
+    } else {
       // 第一个规则
       cur = Number(s[0]);
       curStr = String.fromCharCode(cur + 96);
@@ -36,4 +36,3 @@ var freqAlphabets = function(s) {
   return res;
 };
 // @lc code=end
-

@@ -10,8 +10,8 @@
  * @return {boolean}
  */
 // Your runtime beats 19.77 % of javascript submissions
-var canThreePartsEqualSum = function(A) {
-  let dict = {};
+const canThreePartsEqualSum = function(A) {
+  const dict = {};
   let current = 0;
   const len = A.length;
   for (let i = 0; i < len; i++) {
@@ -23,7 +23,7 @@ var canThreePartsEqualSum = function(A) {
     }
   }
   // console.log(current);
-  let key = current / 3;
+  const key = current / 3;
   // console.log(dict[key], dict[key * 2]);
   // 第一个出现必须小于第二个出现
   if (key === 0) {
@@ -34,14 +34,13 @@ var canThreePartsEqualSum = function(A) {
     }
   }
   if (
-    current % 3 === 0 &&
-    dict[key] &&
-    dict[key * 2] &&
-    dict[key][0] < dict[key * 2].pop()
+    current % 3 === 0
+    && dict[key]
+    && dict[key * 2]
+    && dict[key][0] < dict[key * 2].pop()
   ) {
     return true;
   }
   return false;
 };
 // @lc code=end
-

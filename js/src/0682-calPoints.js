@@ -24,25 +24,25 @@
  */
 // 思路一：先把C拿到然后把相关的数据剔除
 // 思路二：直接使用stack计算数值，两次循环
-var calPoints = function(ops) {
-  let stack = [];
-  const len = ops.length
+const calPoints = function(ops) {
+  const stack = [];
+  const len = ops.length;
   for (let i = 0; i < len; i++) {
-    let item = ops[i];
+    const item = ops[i];
     if (item === 'C') {
       stack.pop();
     } else if (item === 'D') {
-      let last = stack[stack.length - 1] * 2;
+      const last = stack[stack.length - 1] * 2;
       stack.push(last);
     } else if (item === '+') {
-      let last = stack[stack.length - 1] + stack[stack.length - 2];
+      const last = stack[stack.length - 1] + stack[stack.length - 2];
       stack.push(last);
     } else {
-      let last = ops[i];
+      const last = ops[i];
       stack.push(parseInt(last));
     }
   }
   let sum = 0;
-  stack.forEach(item => sum += item);
+  stack.forEach((item) => sum += item);
   return sum;
 };

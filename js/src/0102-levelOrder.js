@@ -20,10 +20,10 @@
 // , 在所有 JavaScript 提交中击败了
 // 69.94%
 // 的用户
-var levelOrder = function(root) {
+const levelOrder = function(root) {
   // 把当前的层数传递下去，然后传递一个二重数组即可
-  let matrix = [];
-  let layer = 0;
+  const matrix = [];
+  const layer = 0;
   if (!root) return matrix;
   if (!matrix[layer]) {
     matrix[layer] = [];
@@ -42,7 +42,6 @@ var runTree = function(node, layer, matrix) {
   matrix[layer].push(node.val);
   runTree(node.left, layer + 1, matrix);
   runTree(node.right, layer + 1, matrix);
-}
+};
 
 // @lc code=end
-

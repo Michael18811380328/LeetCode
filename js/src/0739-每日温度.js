@@ -12,17 +12,16 @@
 // 第一种思路：双层循环，按照常理思考的方法
 // 现在性能很差
 // Your runtime beats 5.03 % of javascript submissions
-var dailyTemperatures = function(temperatures) {
+const dailyTemperatures = function(temperatures) {
   const len = temperatures.length;
-  let res = [];
+  const res = [];
   for (let i = 0; i < len; i++) {
-    let curr = temperatures[i];
+    const curr = temperatures[i];
     for (let j = 1; j <= len - i; j++) {
       if (temperatures[j + i] > curr) {
         res[i] = j;
         break;
-      }
-      else if (j === len - i) {
+      } else if (j === len - i) {
         res[i] = 0;
       }
     }
@@ -31,4 +30,3 @@ var dailyTemperatures = function(temperatures) {
   return res;
 };
 // @lc code=end
-

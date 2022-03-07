@@ -8,12 +8,12 @@
 /**
  * @param {number} k
  */
-var MyCircularQueue = function(k) {
+const MyCircularQueue = function(k) {
   arr = [];
   maxLen = k;
 };
 
-/** 
+/**
  * @param {number} value
  * @return {boolean}
  */
@@ -75,4 +75,3 @@ MyCircularQueue.prototype.isFull = function() {
  * var param_6 = obj.isFull()
  */
 // @lc code=end
-

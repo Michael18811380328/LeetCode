@@ -12,10 +12,10 @@ const restoreString = function(s, indices) {
   if (len < 2) {
     return s;
   }
-  let arr = new Array(len);
+  const arr = new Array(len);
   for (let i = 0; i < len; i++) {
-    let item = s[i];
-    let index = indices[i];
+    const item = s[i];
+    const index = indices[i];
     arr[index] = item;
   }
   return arr.join('');

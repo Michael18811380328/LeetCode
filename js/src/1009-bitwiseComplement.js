@@ -3,13 +3,13 @@
  *
  * [1009] 十进制整数的反码
  */
-// 
+//
 /**
  * @param {number} N
  * @return {number}
  */
 // Your runtime beats 81.05 % of javascript submissions
-var bitwiseComplement = function(N) {
+const bitwiseComplement = function(N) {
   if (N === 0) return 1;
   // 第一种思路：把这个数字转换成二进制字符串，然后循环，转换01，然后转换成数字输出。
   // 如果遇到很大的数字，这样可能性能不好
@@ -17,7 +17,7 @@ var bitwiseComplement = function(N) {
   let timer = 0;
   let result = 0;
   while (N > 0) {
-    let remain = N % 2;
+    const remain = N % 2;
     if (remain === 0) {
       result += 2 ** timer;
     }

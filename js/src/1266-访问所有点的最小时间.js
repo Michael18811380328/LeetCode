@@ -10,7 +10,7 @@
  * @return {number}
  */
 // Your runtime beats 78.91 % of javascript submissions
-var minTimeToVisitAllPoints = function(points) {
+const minTimeToVisitAllPoints = function(points) {
   let res = 0;
   const len = points.length;
   if (len === 1) return res;
@@ -21,10 +21,9 @@ var minTimeToVisitAllPoints = function(points) {
 };
 
 var getDistance = (a, b) => {
-  const {abs, max} = Math;
-  let x = abs(a[0] - b[0]);
-  let y = abs(a[1] - b[1]);
+  const { abs, max } = Math;
+  const x = abs(a[0] - b[0]);
+  const y = abs(a[1] - b[1]);
   return max(x, y);
-}
+};
 // @lc code=end
-

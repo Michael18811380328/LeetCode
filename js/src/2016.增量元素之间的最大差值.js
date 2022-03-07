@@ -11,7 +11,7 @@
  */
 //  Your runtime beats 74.2 % of javascript submissions
 // 循环数组，类似双指针（一个记录最小值，一个记录当前的值）
-var maximumDifference = function(nums) {
+const maximumDifference = function(nums) {
   let min = nums[0];
   let res = -1;
   for (let i = 1; i < nums.length; i++) {
@@ -19,7 +19,7 @@ var maximumDifference = function(nums) {
     if (nums[i] <= min) {
       min = nums[i];
     } else {
-      let current = nums[i] - min;
+      const current = nums[i] - min;
       if (current > res) {
         res = current;
       }
@@ -28,4 +28,3 @@ var maximumDifference = function(nums) {
   return res;
 };
 // @lc code=end
-

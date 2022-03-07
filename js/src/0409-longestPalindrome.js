@@ -8,16 +8,16 @@
  * @return {number}
  */
 // 88 ms, 在所有 JavaScript 提交中击败了73.49%的用户
-var longestPalindrome = function(s) {
+const longestPalindrome = function(s) {
   const len = s.length;
   // 长度是0或者1的情况
   if (len < 2) {
     return len;
   }
   // 获取字符出现的次数
-  let dict = [];
+  const dict = [];
   for (let i = 0; i < len; i++) {
-    let key = s[i];
+    const key = s[i];
     if (!dict[key]) {
       dict[key] = 1;
     } else {
@@ -27,11 +27,11 @@ var longestPalindrome = function(s) {
   // 计算回文串长度
   let max = 0;
   let hasMiddle = false;
-  for (let key in dict) {
-    let times = dict[key];
+  for (const key in dict) {
+    const times = dict[key];
     if (times % 2 === 0) {
       max += times;
-    } else  {
+    } else {
       max += (times - 1);
       hasMiddle = true;
     }

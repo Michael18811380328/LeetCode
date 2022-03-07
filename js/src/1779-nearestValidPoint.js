@@ -12,14 +12,14 @@
  * @return {number}
  */
 //  Your runtime beats 7.47 % of javascript submissions
- var nearestValidPoint = function(x, y, points) {
+const nearestValidPoint = function(x, y, points) {
   // 辅助函数1
-  let isValid = (point) => {
+  const isValid = (point) => {
     return point[0] === x || point[1] === y;
   };
   // 辅助函数2
-  let getDis = (point) => {
-    return Math.abs(point[0] - x) + Math.abs(point[1] - y)
+  const getDis = (point) => {
+    return Math.abs(point[0] - x) + Math.abs(point[1] - y);
   };
   let min;
   let minIndex;
@@ -32,7 +32,7 @@
       isOver = true;
     }
     if (!isOver && isValid(point)) {
-      let distance = getDis(point);
+      const distance = getDis(point);
       if (!min && min !== 0) {
         min = distance;
         minIndex = index;

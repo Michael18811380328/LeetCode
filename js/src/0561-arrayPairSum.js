@@ -14,15 +14,15 @@
 // 思路1
 // 数组首先排序，然后获取奇数序号的值的总和
 // 168 ms, 在所有 JavaScript 提交中击败了24.32%
-var arrayPairSum = function(nums) {
-    const len = nums.length;
-    // 现在这种思路，排序执行了一次，然后再次循环
-    // 实际执行两次循环，性能一般
-    if (len === 0) return 0;
-    nums.sort((a, b) => a - b);
-    let sum = 0;
-    for (let i = 0; i < len; i += 2) {
-        sum += nums[i];
-    }
-    return sum;
+const arrayPairSum = function(nums) {
+  const len = nums.length;
+  // 现在这种思路，排序执行了一次，然后再次循环
+  // 实际执行两次循环，性能一般
+  if (len === 0) return 0;
+  nums.sort((a, b) => a - b);
+  let sum = 0;
+  for (let i = 0; i < len; i += 2) {
+    sum += nums[i];
+  }
+  return sum;
 };

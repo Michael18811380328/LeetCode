@@ -1,8 +1,8 @@
-var MyCalendar = function() {
+const MyCalendar = function() {
   this.arr = [];
 };
-/** 
- * @param {number} start 
+/**
+ * @param {number} start
  * @param {number} end
  * @return {boolean}
  */
@@ -12,7 +12,7 @@ MyCalendar.prototype.book = function(start, end) {
   // 能够设置一个二维数组，然后子数组是一个区间（闭区间）
   // 这样就避免性能问题；
   const endIndex = end - 1;
-  let newInterval = [start, endIndex];
+  const newInterval = [start, endIndex];
   // 处理三个特殊情况
   if (this.arr.length === 0) {
     this.arr.push(newInterval);
@@ -36,13 +36,13 @@ MyCalendar.prototype.book = function(start, end) {
   return false;
 };
 
-var myCalendar = new MyCalendar();
+const myCalendar = new MyCalendar();
 
-let test = [[],[20,29],[13,22],[44,50],[1,7],[2,10],[14,20],[19,25],[36,42],[45,50],[47,50],[39,45],[44,50],[16,25],[45,50],[45,50],[12,20],[21,29],[11,20],[12,17],[34,40],[10,18],[38,44],[23,32],[38,44],[15,20],[27,33],[34,42],[44,50],[35,40],[24,31]];
+const test = [[], [20, 29], [13, 22], [44, 50], [1, 7], [2, 10], [14, 20], [19, 25], [36, 42], [45, 50], [47, 50], [39, 45], [44, 50], [16, 25], [45, 50], [45, 50], [12, 20], [21, 29], [11, 20], [12, 17], [34, 40], [10, 18], [38, 44], [23, 32], [38, 44], [15, 20], [27, 33], [34, 42], [44, 50], [35, 40], [24, 31]];
 
 for (let i = 0; i < test.length; i++) {
-  let testarr = test[i];
-  let result = myCalendar.book(testarr[0], testarr[1]);
+  const testarr = test[i];
+  const result = myCalendar.book(testarr[0], testarr[1]);
   console.log(result);
 }
 

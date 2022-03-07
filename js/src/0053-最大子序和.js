@@ -12,7 +12,7 @@
 // 思路1：双重循环，把全部的子序列求出来，然后求最大值(n^2)，数组求和多次
 var maxSubArray = function(nums) {
   // 辅助函数：求数组的和
-  let sum = (arr) => {
+  const sum = (arr) => {
     return arr.reduce((a, b) => a + b, 0);
   };
   const len = nums.length;
@@ -23,7 +23,7 @@ var maxSubArray = function(nums) {
   // 开始双重遍历
   // 先把子系列长度是1的情况全部拿出来，以及全部长度的和拿出来，并求出当前的最大值
   let max = Math.max(...nums, sum(nums));
-  
+
   // 外循环 i 是子序列的长度
   for (let i = 2; i < len; i++) {
     // 先计算从 0 到 i 的和
@@ -47,7 +47,7 @@ var maxSubArray = function(nums) {
   let currMax = 0;
   // 第一项的值作为最大值
   // 把每增加一项的最大值求出来，放在一个数组中，最后求这个数组的和（不是直接求最大子序的和）
-  let maxList = [nums[0]];
+  const maxList = [nums[0]];
   for (let i = 0; i < nums.length; i++) {
     // 增加一项，求1次最大值
     currMax = Math.max(currMax + nums[i], nums[i]);

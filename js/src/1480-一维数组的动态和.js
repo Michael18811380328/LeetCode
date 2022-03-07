@@ -10,7 +10,7 @@
  * @return {number[]}
  */
 // Your runtime beats 55.78 % of javascript submissions
-var runningSum = function(nums) {
+const runningSum = function(nums) {
   const len = nums.length;
   if (len === 1) return nums;
   let tmp = 0;
@@ -21,4 +21,3 @@ var runningSum = function(nums) {
   return nums;
 };
 // @lc code=end
-

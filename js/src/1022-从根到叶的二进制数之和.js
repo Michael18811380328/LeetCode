@@ -18,17 +18,17 @@
  * @return {number}
  */
 // Your runtime beats 84.42 % of javascript submissions
-var sumRootToLeaf = function(root) {
+const sumRootToLeaf = function(root) {
   if (!root || (!root.val && root.val !== 0)) {
     return 0;
   } else if (!root.left && !root.right) {
     return root.val;
   }
-  let list = [];
+  const list = [];
   // 递归子节点，直接叶子节点，然后转换成十进制
   var runNode = function(node, preVal) {
     if (!node) return;
-    let newVal = '' + preVal + node.val;
+    let newVal = `${preVal}${node.val}`;
     if (!node.left && !node.right) {
       // 没有左右子节点，证明是叶子节点，那么计算值并返回
       // console.log(newVal);
@@ -38,10 +38,10 @@ var sumRootToLeaf = function(root) {
     }
     runNode(node.left, newVal);
     runNode(node.right, newVal);
-  }
+  };
   runNode(root.left, root.val);
   runNode(root.right, root.val);
-  let sum = list.reduce((a, b) => a + b, 0);
+  const sum = list.reduce((a, b) => a + b, 0);
   return sum;
 };
 

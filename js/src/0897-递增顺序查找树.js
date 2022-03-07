@@ -13,17 +13,17 @@
  *     this.right = (right===undefined ? null : right)
  * }
  */
-//Your runtime beats 91.69 % of javascript submissions
+// Your runtime beats 91.69 % of javascript submissions
 function TreeNode(val, left, right) {
-    this.val = (val===undefined ? 0 : val)
-    this.left = (left===undefined ? null : left)
-    this.right = (right===undefined ? null : right)
+  this.val = (val === undefined ? 0 : val);
+  this.left = (left === undefined ? null : left);
+  this.right = (right === undefined ? null : right);
 }
 
-var increasingBST = function(root) {
-  let arr = [];
+const increasingBST = function(root) {
+  const arr = [];
   // 先把这个树中序遍历，然后把结果放在线性的数组中
-  let runNode = (node) => {
+  const runNode = (node) => {
     if (node.left) {
       runNode(node.left);
     }
@@ -35,18 +35,17 @@ var increasingBST = function(root) {
   runNode(root, arr);
   // console.log(arr);
   // 然后把线性的数组，转换成只有右子节点的树
-  let getTree = (node, arr) => {
+  const getTree = (node, arr) => {
     if (arr.length > 0) {
-      let value = arr.shift();
+      const value = arr.shift();
       node.right = new TreeNode(value);
       getTree(node.right, arr);
     }
   };
-  let start = arr.shift();
-  let res = new TreeNode(start);
+  const start = arr.shift();
+  const res = new TreeNode(start);
   getTree(res, arr);
   return res;
 };
 
 // @lc code=end
-

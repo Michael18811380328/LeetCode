@@ -66,15 +66,15 @@ function findRepeatedDnaSequences2(s) {
  */
 // 执行用时：
 // 176 ms, 在所有 JavaScript 提交中击败了13.03%
-var findRepeatedDnaSequences = function(s) {
+const findRepeatedDnaSequences = function(s) {
   const resultArr = [];
   if (s.length <= 10) {
     return resultArr;
   }
-  let hash = {};
+  const hash = {};
   let start = 0;
   while (start < s.length - 9) {
-    let end = start + 10;
+    const end = start + 10;
     const item = s.slice(start, end);
     if (hash[item] > 0) {
       if (hash[item] === 1) {

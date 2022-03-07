@@ -11,10 +11,10 @@
  * @return {number[]}
  */
 // Your runtime beats 95.21 % of javascript submissions
-var shuffle = function(nums, n) {
-  let a = nums.slice(0, n);
-  let b = nums.slice(n);
-  let res = [];
+const shuffle = function(nums, n) {
+  const a = nums.slice(0, n);
+  const b = nums.slice(n);
+  const res = [];
   for (let i = 0; i < n; i++) {
     res.push(a[i]);
     res.push(b[i]);
@@ -22,4 +22,3 @@ var shuffle = function(nums, n) {
   return res;
 };
 // @lc code=end
-

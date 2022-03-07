@@ -16,24 +16,23 @@
  * @param {string} word
  * @return {boolean}
  */
-var detectCapitalUse = function(word) {
-  let len = word.length;
+const detectCapitalUse = function(word) {
+  const len = word.length;
   // 如果长度是1，始终是正确的
   if (len <= 1) return true;
-  let firstStr = word[0];
-  let isFirstLarge = isLarge(firstStr);
+  const firstStr = word[0];
+  const isFirstLarge = isLarge(firstStr);
 
   if (isFirstLarge) {
     // 如首字母大写，长度是2，那么就是正确的
     if (len === 2) return true;
     // 第一个是大写（循环后面的，必须都是大写或者都是小写才行）
-    let isSecondLarge = isLarge(word[1]);
+    const isSecondLarge = isLarge(word[1]);
     for (let i = 1; i < len; i++) {
       if (isLarge(word[i]) !== isSecondLarge) return false;
     }
     return true;
-  }
-  else {
+  } else {
     // 第一个是小写（循环后面的，必须都是小写才行）
     for (let i = 1; i < len; i++) {
       if (isLarge(word[i])) return false;
@@ -43,12 +42,11 @@ var detectCapitalUse = function(word) {
 };
 
 var isLarge = function(str) {
-  let index = str.charCodeAt(0);
+  const index = str.charCodeAt(0);
   if (index > 64 && index < 91) {
     return true;
-  }
-  else if (index > 96 && index < 123) {
+  } else if (index > 96 && index < 123) {
     return false;
   }
   return null;
-}
+};

@@ -10,12 +10,12 @@
  * @return {boolean}
  */
 // Your runtime beats 100 % of javascript submissions
-var halvesAreAlike = function(s) {
+const halvesAreAlike = function(s) {
   s = s.toLowerCase();
   const len = s.length;
-  var check = function(s) {
+  const check = function(s) {
     return (s === 'a' || s === 'e' || s === 'i' || s === 'o' || s === 'u');
-  }
+  };
   let left = 0;
   let right = 0;
   for (let i = 0; i < len; i++) {
@@ -29,4 +29,3 @@ var halvesAreAlike = function(s) {
   return left === right;
 };
 // @lc code=end
-

@@ -21,8 +21,8 @@
 // , 在所有 JavaScript 提交中击败了
 // 33.70%
 // 的用户
-var preorder = function(root) {
-  let list = [];
+const preorder = function(root) {
+  const list = [];
   runNode(root, list);
   return list;
 };
@@ -34,7 +34,6 @@ var runNode = function(node, list) {
   if (!node.children) return;
   for (let i = 0; i < node.children.length; i++) {
     runNode(node.children[i], list);
-  }  
-}
+  }
+};
 // @lc code=end
-

@@ -8,14 +8,14 @@
  * @return {number[]}
  */
 // Your runtime beats 27.68 % of javascript submissions
-var singleNumber = function(nums) {
-  let len = nums.length;
+const singleNumber = function(nums) {
+  const len = nums.length;
   if (len === 2) {
     return nums;
   }
-  let dict = {};
+  const dict = {};
   for (let i = 0; i < len; i++) {
-    let item = nums[i];
+    const item = nums[i];
     if (dict[item]) {
       delete dict[item];
     } else {

@@ -10,12 +10,12 @@
  * @return {number}
  */
 // Your runtime beats 93.22 % of javascript submissions
-var binaryGap = function(n) {
+const binaryGap = function(n) {
   if (n === 1) return 0;
   // 先把十进制转换成二进制
-  let bin = (n >>> 0).toString(2);
+  const bin = (n >>> 0).toString(2);
   // 然后判断其中1的个数
-  let start = bin.indexOf('1')
+  let start = bin.indexOf('1');
   if (start === bin.lastIndexOf('1')) {
     return 0;
   }
@@ -26,7 +26,7 @@ var binaryGap = function(n) {
       continue;
     } else {
       // 如果是1，那么计算长度，然后归零
-      let len = i - start;
+      const len = i - start;
       max = max > len ? max : len;
       start = i;
     }
@@ -34,4 +34,3 @@ var binaryGap = function(n) {
   return max;
 };
 // @lc code=end
-

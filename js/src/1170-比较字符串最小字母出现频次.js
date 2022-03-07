@@ -14,21 +14,22 @@
 // , 在所有 JavaScript 提交中击败了
 // 59.09%
 // 的用户
-var numSmallerByFrequency = function(queries, words) {
+const numSmallerByFrequency = function(queries, words) {
   // 先把两个数组的字符串转换成函数结果，并排序
   // 然后使用双指针，获取结果
-  let a = [], b = [];
+  const a = []; const
+    b = [];
   queries.forEach((item, index) => {
-    let times = getNumber(item);
+    const times = getNumber(item);
     a[index] = times;
   });
   words.forEach((item, index) => {
-    let times = getNumber(item);
+    const times = getNumber(item);
     b[index] = times;
   });
   // 现在这种方法可行，但是很不好；
   // 改进的方法：把B排序后，然后节省一部分时间
-  let res = [];
+  const res = [];
   for (let i = 0; i < a.length; i++) {
     let times = 0;
     for (let j = 0; j < b.length; j++) {
@@ -38,20 +39,19 @@ var numSmallerByFrequency = function(queries, words) {
     }
     res[i] = times;
   }
-  return res;;
+  return res;
 };
 
 var getNumber = (strs) => {
-  let arr = strs.split('');
+  const arr = strs.split('');
   arr.sort((a, b) => {
-    return a > b ? 1 : -1
+    return a > b ? 1 : -1;
   });
-  let current = arr[0];
+  const current = arr[0];
   let index = 1;
   while (current === arr[index]) {
     index++;
   }
   return index;
-}
+};
 // @lc code=end
-

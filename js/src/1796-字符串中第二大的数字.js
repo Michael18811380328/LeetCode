@@ -43,17 +43,16 @@
 // };
 
 // 112 ms, 在所有 JavaScript 提交中击败了14.21%
-var secondHighest = function(s) {
+const secondHighest = function(s) {
   const len = s.length;
-  let nums = [];
+  const nums = [];
   for (let i = 0; i < len; i++) {
     const curr = Number(s[i]);
     if (curr > -1) {
       nums.push(curr);
     }
   }
-  let newNums = [...new Set(nums)].sort((a, b) => b - a);
+  const newNums = [...new Set(nums)].sort((a, b) => b - a);
   return newNums[1] > -1 ? newNums[1] : -1;
 };
 // @lc code=end
-

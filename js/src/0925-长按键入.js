@@ -11,7 +11,7 @@
  * @return {boolean}
  */
 // Your runtime beats 80.59 % of javascript submissions
-var isLongPressedName = function(name, typed) {
+const isLongPressedName = function(name, typed) {
   if (name === typed) {
     return true;
   } else if (name.length >= typed.length) {
@@ -34,4 +34,3 @@ var isLongPressedName = function(name, typed) {
   return (pointer === name.length);
 };
 // @lc code=end
-

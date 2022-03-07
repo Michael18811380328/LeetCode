@@ -10,7 +10,7 @@
  * @return {boolean}
  */
 // Your runtime beats 62.74 % of javascript submissions
-var isOneBitCharacter = function(bits) {
+const isOneBitCharacter = function(bits) {
   while (bits.length > 0) {
     if (bits.length === 1) {
       return true;
@@ -18,12 +18,10 @@ var isOneBitCharacter = function(bits) {
     if (bits[0] === 1) {
       bits.shift();
       bits.shift();
-    }
-    else if (bits[0] === 0) {
+    } else if (bits[0] === 0) {
       bits.shift();
     }
   }
   return false;
 };
 // @lc code=end
-

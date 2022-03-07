@@ -15,14 +15,14 @@
 // , 在所有 JavaScript 提交中击败了
 // 60.00%
 // 的用户
-var distanceBetweenBusStops = function(distance, start, destination) {
+const distanceBetweenBusStops = function(distance, start, destination) {
   let half = 0;
   let sum = 0;
   // 注意：start可能大于destination
-  let a = Math.min(start, destination);
-  let b = Math.max(start, destination);
+  const a = Math.min(start, destination);
+  const b = Math.max(start, destination);
   for (let i = 0; i < distance.length; i++) {
-    let item = distance[i];
+    const item = distance[i];
     sum += item;
     if (i >= a && i < b) {
       half += item;
@@ -35,4 +35,3 @@ var distanceBetweenBusStops = function(distance, start, destination) {
 // 7
 // 2
 // @lc code=end
-

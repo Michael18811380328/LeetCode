@@ -21,17 +21,14 @@ var mergeAlternately = function(word1, word2) {
   }
   if (len1 === len2) {
     return res;
-  }
-  else if (len1 > len) {
+  } else if (len1 > len) {
     res = res + word1.slice(len);
-  }
-  else if (len2 > len) {
+  } else if (len2 > len) {
     res = res + word2.slice(len);
   }
   return res;
 };
 // @lc code=end
-
 
 // Your runtime beats 84.33 % of javascript submissions
 var mergeAlternately = function(word1, word2) {
@@ -44,11 +41,9 @@ var mergeAlternately = function(word1, word2) {
   }
   if (len1 === len2) {
     return res;
-  }
-  else if (len1 > len) {
+  } else if (len1 > len) {
     res = res + word1.slice(len);
-  }
-  else if (len2 > len) {
+  } else if (len2 > len) {
     res = res + word2.slice(len);
   }
   return res;

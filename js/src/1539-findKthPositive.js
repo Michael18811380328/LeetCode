@@ -11,10 +11,10 @@
  * @return {number}
  */
 // 100 ms, 在所有 JavaScript 提交中击败了43.23%
-var findKthPositive = function(arr, k) {
+const findKthPositive = function(arr, k) {
   // 两种情况
   // 如果缺失的这个数字，在 arr 内部
-  let tmp = [];
+  const tmp = [];
   const len = arr.length;
   let current = 1;
   for (let i = 0; i < len; i++) {
@@ -33,4 +33,3 @@ var findKthPositive = function(arr, k) {
   return current + k - 1 - tmp.length;
 };
 // @lc code=end
-

@@ -10,20 +10,17 @@
  * @return {number}
  */
 // Your runtime beats 86.73 % of javascript submissions
-var dominantIndex = function(nums) {
+const dominantIndex = function(nums) {
   const len = nums.length;
   // 只有一个元素，满足条件
   if (len === 1) {
     return 0;
-  }
-  else if (len === 2) {
+  } else if (len === 2) {
     if (nums[0] >= nums[1] * 2) {
       return 0;
-    }
-    else if (nums[1] >= nums[0] * 2) {
+    } else if (nums[1] >= nums[0] * 2) {
       return 1;
-    }
-    else {
+    } else {
       return -1;
     }
   }
@@ -31,12 +28,11 @@ var dominantIndex = function(nums) {
   let max = nums[0] > nums[1] ? nums[0] : nums[1];
   let subMax = nums[0] < nums[1] ? nums[0] : nums[1];
   for (let i = 2; i < len; i++) {
-    let item = nums[i];
+    const item = nums[i];
     if (item > max) {
       subMax = max;
       max = item;
-    }
-    else if (item > subMax) {
+    } else if (item > subMax) {
       subMax = item;
     }
   }
@@ -48,4 +44,3 @@ var dominantIndex = function(nums) {
   }
 };
 // @lc code=end
-

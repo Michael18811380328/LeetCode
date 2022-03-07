@@ -11,7 +11,7 @@
  */
 // 1、最差的方法，三重循环
 // Your runtime beats 85.29 % of javascript submissions
-var largestTriangleArea = function(points) {
+const largestTriangleArea = function(points) {
   const len = points.length;
   if (len === 3) {
     return getArea(points[0], points[1], points[2]);
@@ -20,13 +20,13 @@ var largestTriangleArea = function(points) {
   for (let i = 0; i < len; i++) {
     for (let j = i + 1; j < len; j++) {
       for (let k = j + 1; k < len; k++) {
-        let area = getArea(points[i], points[j], points[k]);
+        const area = getArea(points[i], points[j], points[k]);
         max = area > max ? area : max;
       }
     }
   }
   return max;
-}
+};
 
 // 2、试一下这个思路
 // 这个思路不正确
@@ -63,13 +63,12 @@ var largestTriangleArea = function(points) {
 // }
 
 var getArea = (a, b, c) => {
-  let x1 = a[0];
-  let y1 = a[1];
-  let x2 = b[0];
-  let y2 = b[1];
-  let x3 = c[0];
-  let y3 = c[1];
-  return Math.abs((x1-x3)*(y2-y3)-(x2-x3)*(y1-y3))/2
-}
+  const x1 = a[0];
+  const y1 = a[1];
+  const x2 = b[0];
+  const y2 = b[1];
+  const x3 = c[0];
+  const y3 = c[1];
+  return Math.abs((x1 - x3) * (y2 - y3) - (x2 - x3) * (y1 - y3)) / 2;
+};
 // @lc code=end
-

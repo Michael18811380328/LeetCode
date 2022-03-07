@@ -7,11 +7,11 @@
  * @param {number} numRows
  * @return {string}
  */
-var convert = function(s, numRows) {
+const convert = function(s, numRows) {
   // 注意处理 num是1-2的情况
   if (numRows === 1) return s;
   // 建一个对象，设置不同的键，然后每一个numRows是空字符串
-  let dict = {};
+  const dict = {};
   for (let key = 1; key <= numRows; key++) {
     dict[key] = '';
   }
@@ -20,7 +20,7 @@ var convert = function(s, numRows) {
   let direction = true;
   for (let i = 0; i < s.length; i++) {
     // 获取当前的字符串，并加入到字典中
-    let item = s[i];
+    const item = s[i];
     dict[current] = dict[current] + item;
     // 当循环到第一个或者最后一个，换向
     if (current === numRows) {
@@ -37,7 +37,7 @@ var convert = function(s, numRows) {
   }
   let result = '';
   for (let i = 1; i <= numRows; i++) {
-    let item = dict[i];
+    const item = dict[i];
     result += item;
   }
   return result;

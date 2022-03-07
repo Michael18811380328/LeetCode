@@ -12,31 +12,31 @@
 // Your runtime beats 70.59 % of javascript submissions
 // 辅助函数 判断大写小写和数字
 // ASCII在 65-90 之间是大写,97-122 是小写
-var isLarge = (str) => {
-  let index = str.charCodeAt(0);
+const isLarge = (str) => {
+  const index = str.charCodeAt(0);
   return index >= 65 && index <= 90;
 };
 
-var isSmall = (str) => {
-  let index = str.charCodeAt(0);
+const isSmall = (str) => {
+  const index = str.charCodeAt(0);
   return index >= 97 && index <= 122;
 };
 
-var isNumber = str => {
+const isNumber = (str) => {
   return Number.isNaN(parseInt(str)) === false;
-}
+};
 
 // 辅助函数：计算某个简单字符串的元素(不含括号) 测试通过
-var getElementObj = (str) => {
-  let dict = {};
+const getElementObj = (str) => {
+  const dict = {};
   let item = null;
   let times = null;
   while (str.length > 0) {
-    let cur = str[0];
+    const cur = str[0];
     if (isLarge(cur)) {
       // 如果已经有 item，那么先计算上一次的情况
       if (item) {
-        times = times ? times : 1;
+        times = times || 1;
         if (dict[item]) {
           dict[item] = dict[item] + times;
         } else {
@@ -56,7 +56,7 @@ var getElementObj = (str) => {
     }
     // 数字，处理当前的数字
     else {
-      let num = parseInt(cur);
+      const num = parseInt(cur);
       times = times ? times * 10 + num : num;
     }
     // 循环一次，str 减去1
@@ -64,7 +64,7 @@ var getElementObj = (str) => {
   }
   // 最后存在的元素
   if (item) {
-    times = times ? times : 1;
+    times = times || 1;
     if (dict[item]) {
       dict[item] = dict[item] + times;
     } else {
@@ -72,29 +72,29 @@ var getElementObj = (str) => {
     }
   }
   return dict;
-}
+};
 
 // 难点：
 // 1、获取原子（必须大写字母开头，然后把数字获取到）
 // 原子的长度是0或者1，这个可以利用一下
 // 2、括号嵌套处理（这个使用递归操作）
-  // 先找到第一个右括号，然后找到相邻的第一个左括号，找到括号后面的数字
-  // 使用函数处理这部分值
-var countOfAtoms = function(formula) {
+// 先找到第一个右括号，然后找到相邻的第一个左括号，找到括号后面的数字
+// 使用函数处理这部分值
+const countOfAtoms = function(formula) {
   // 当有括号时，先去括号
   while (formula.includes(')')) {
     // 找到第一个右括号
-    let rightIndex = formula.indexOf(')');
+    const rightIndex = formula.indexOf(')');
     // 然后找到左侧的第一个左括号
-    let leftIndex = formula.lastIndexOf('(', rightIndex);
+    const leftIndex = formula.lastIndexOf('(', rightIndex);
     // 把中间的字符剪出来
-    let inner = formula.slice(leftIndex + 1, rightIndex);
+    const inner = formula.slice(leftIndex + 1, rightIndex);
     // console.log(inner);
     // 然后找到右面的数字（次数）;
     let tmp = formula.slice(rightIndex + 1);
     let times;
     // 去掉括号后，左侧剩余的字符串
-    let leftRemain = formula.slice(0, leftIndex);
+    const leftRemain = formula.slice(0, leftIndex);
     // 去掉括号后，右侧剩余的字符串
     let rightRemain = '';
     if (tmp.length > 0) {
@@ -104,15 +104,15 @@ var countOfAtoms = function(formula) {
       }
       rightRemain = tmp;
     }
-    let innerObj = getElementObj(inner);
+    const innerObj = getElementObj(inner);
     times = parseInt(times);
     // "Mg(H2O)N" times is NaN
     if (!times || Number.isNaN(times)) {
-      times = 1
+      times = 1;
     }
     let newRemain = '';
-    for (let key in innerObj) {
-      let value = innerObj[key];
+    for (const key in innerObj) {
+      const value = innerObj[key];
       newRemain = newRemain + key + String(value * times);
     }
     // 把计算结果拼接回去 // 这里注意结束的条件
@@ -120,15 +120,15 @@ var countOfAtoms = function(formula) {
     formula = leftRemain + newRemain + rightRemain;
   }
   // 这里是已经处理完括号的字符串-基本正确
-  let allObj = getElementObj(formula);
+  const allObj = getElementObj(formula);
   // 先转换成数组，然后排序，然后转换成字符串输出
-  let arr = [];
-  for (let key in allObj) {
+  const arr = [];
+  for (const key in allObj) {
     arr.push(key);
   }
   arr.sort((a, b) => a > b ? 1 : -1);
   let res = '';
-  arr.forEach(item => {
+  arr.forEach((item) => {
     res = res + item;
     if (allObj[item] > 1) {
       res += allObj[item];
@@ -146,4 +146,3 @@ var countOfAtoms = function(formula) {
 // "(NB3)33"
 
 // @lc code=end
-

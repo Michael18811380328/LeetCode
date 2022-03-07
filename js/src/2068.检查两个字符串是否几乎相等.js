@@ -12,21 +12,21 @@
  */
 // 思路：循环字符串，获取出现的次数。然后遍历两个字典即可
 // Your runtime beats 29.03 % of javascript submissions
-var checkAlmostEquivalent = function(word1, word2) {
+const checkAlmostEquivalent = function(word1, word2) {
   const len = word1.length;
-  let dict1 = {};
-  let dict2 = {};
+  const dict1 = {};
+  const dict2 = {};
   // 遍历字符串
   for (let i = 0; i < len; i++) {
     // 计算第一个的次数
-    let key1 = word1[i];
+    const key1 = word1[i];
     if (!dict1[key1]) {
       dict1[key1] = 0;
     }
     dict1[key1] = dict1[key1] + 1;
 
     // 计算第二个的次数
-    let key2 = word2[i];
+    const key2 = word2[i];
     if (!dict2[key2]) {
       dict2[key2] = 0;
     }
@@ -41,9 +41,9 @@ var checkAlmostEquivalent = function(word1, word2) {
     }
   }
   // 比较出现的概率
-  for (let key in dict1) {
-    let value1 = dict1[key];
-    let value2 = dict2[key];
+  for (const key in dict1) {
+    const value1 = dict1[key];
+    const value2 = dict2[key];
     if (Math.abs(value1 - value2) > 3) {
       return false;
     }
@@ -51,4 +51,3 @@ var checkAlmostEquivalent = function(word1, word2) {
   return true;
 };
 // @lc code=end
-

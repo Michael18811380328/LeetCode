@@ -18,7 +18,7 @@
  */
 // Your runtime beats 15.95 % of javascript submissions
 // 这个方法不好
-var isUnivalTree = function(root) {
+const isUnivalTree = function(root) {
   if (!root || (!root.val && root.val !== 0)) return true;
   var run = function(node, key) {
     if (!node || (!node.val && node.val !== 0)) return true;
@@ -28,10 +28,9 @@ var isUnivalTree = function(root) {
     if (run(node.left, key) === false) return false;
     if (run(node.right, key) === false) return false;
     return true;
-  }
+  };
   return run(root, root.val);
   // [0,6,0,null,null,null,0,0,null,0,null,null,0]
 };
 
 // @lc code=end
-

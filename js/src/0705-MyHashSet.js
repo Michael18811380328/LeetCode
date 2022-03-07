@@ -1,35 +1,35 @@
 /**
  * Initialize your data structure here.
  */
-var MyHashSet = function() {
-    this.hash = {};
+const MyHashSet = function() {
+  this.hash = {};
 };
 
-/** 
+/**
  * @param {number} key
  * @return {void}
  */
 MyHashSet.prototype.add = function(key) {
-    this.hash[key] = true;
+  this.hash[key] = true;
 };
 
-/** 
+/**
  * @param {number} key
  * @return {void}
  */
 MyHashSet.prototype.remove = function(key) {
-    if (this.hash[key]) {
-        delete this.hash[key];
-    }
+  if (this.hash[key]) {
+    delete this.hash[key];
+  }
 };
 
 /**
- * Returns true if this set contains the specified element 
+ * Returns true if this set contains the specified element
  * @param {number} key
  * @return {boolean}
  */
 MyHashSet.prototype.contains = function(key) {
-    return !!this.hash[key];
+  return !!this.hash[key];
 };
 
 /**

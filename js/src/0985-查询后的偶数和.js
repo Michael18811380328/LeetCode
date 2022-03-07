@@ -11,10 +11,10 @@
  * @return {number[]}
  */
 // Your runtime beats 43.48 % of javascript submissions
-var sumEvenAfterQueries = function(A, queries) {
+const sumEvenAfterQueries = function(A, queries) {
   // 先求当前偶数的和，然后把当前的数组转换成一个对象
   let sum = 0;
-  let dict = {};
+  const dict = {};
   A.forEach((item, index) => {
     if (item % 2 === 0) {
       sum += item;
@@ -22,12 +22,12 @@ var sumEvenAfterQueries = function(A, queries) {
     dict[index] = item;
   });
   // 然后遍历查询对象，改变对象的值
-  let res = [];
+  const res = [];
   queries.forEach((item, index) => {
-    let key = String(item[1]);
-    let value = item[0];
-    let oldValue = Number(dict[key]) + 0;
-    let newValue = Number(oldValue) + value;
+    const key = String(item[1]);
+    const value = item[0];
+    const oldValue = Number(dict[key]) + 0;
+    const newValue = Number(oldValue) + value;
     dict[key] = newValue;
     // 分治算法：四种情况
     if (isOdd(oldValue)) {
@@ -46,7 +46,7 @@ var sumEvenAfterQueries = function(A, queries) {
         // 新数字是偶数
         sum += newValue;
       } else {
-        // 新数字是奇数        
+        // 新数字是奇数
       }
     }
     res.push(sum);
@@ -56,6 +56,5 @@ var sumEvenAfterQueries = function(A, queries) {
 
 var isOdd = (num) => {
   return num % 2 === 0;
-}
+};
 // @lc code=end
-

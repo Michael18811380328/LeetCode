@@ -10,20 +10,20 @@
  * @param {number[]} groupSizes
  * @return {number[][]}
  */
-var groupThePeople = function(groupSizes) {
+const groupThePeople = function(groupSizes) {
   const len = groupSizes.length;
-  let arr = [];
+  const arr = [];
   for (let i = 0; i < len; i++) {
-    let item = {
+    const item = {
       index: i,
-      groupId: groupSizes[i]
+      groupId: groupSizes[i],
     };
     arr.push(item);
   }
   arr.sort((a, b) => {
     return a.groupId > b.groupId ? 1 : -1;
   });
-  let result = [];
+  const result = [];
   let temp = [];
   let currentID = arr[0].groupId;
   temp.push(arr[0].index);
@@ -33,11 +33,9 @@ var groupThePeople = function(groupSizes) {
       temp = [];
       temp.push(arr[i].index);
       currentID = arr[i].groupId;
-    }
-    else if (arr[i].groupId === currentID) {
+    } else if (arr[i].groupId === currentID) {
       temp.push(arr[i].index);
-    }
-    else {
+    } else {
       result.push([...temp]);
       temp = [];
       temp.push(arr[i].index);
@@ -50,4 +48,3 @@ var groupThePeople = function(groupSizes) {
   return result;
 };
 // @lc code=end
-

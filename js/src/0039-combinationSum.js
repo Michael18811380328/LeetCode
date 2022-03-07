@@ -11,18 +11,18 @@
 var combinationSum = function(candidates, target) {
   // 选择数字先排序
   candidates.sort((a, b) => a - b);
-  let list = [];
-  let tmpList = [];
+  const list = [];
+  const tmpList = [];
   backTrack(candidates, tmpList, list, target);
   return list;
 };
 
-var sum = (arr) => {
+const sum = (arr) => {
   return arr.reduce((a, b) => a + b, 0);
 };
 
 var backTrack = (candidates, tmpList, list, target) => {
-  let tmpSum = sum(tmpList);
+  const tmpSum = sum(tmpList);
   if (tmpSum > target) {
     return;
   }
@@ -31,15 +31,13 @@ var backTrack = (candidates, tmpList, list, target) => {
     return;
   }
   for (let i = 0; i < candidates.length; i++) {
-    let item = candidates[i];
-    let last = tmpList[tmpList.length - 1];
+    const item = candidates[i];
+    const last = tmpList[tmpList.length - 1];
     if (item < last) {
       continue;
-    }
-    else if (item + tmpSum > target) {
+    } else if (item + tmpSum > target) {
       break;
-    }
-    else {
+    } else {
       tmpList.push(item);
       backTrack(candidates, tmpList, list, target);
       tmpList.pop();
@@ -51,9 +49,9 @@ var backTrack = (candidates, tmpList, list, target) => {
 var combinationSum = function(candidates, target) {
   // 选择数字先排序
   candidates.sort((a, b) => a - b);
-  let list = [];
-  let tmpList = [];
-  var sum = (arr) => {
+  const list = [];
+  const tmpList = [];
+  const sum = (arr) => {
     // todo：这里应该先转换成字符串，然后把结果保存到字典中。
     // 如果第二次求得是相同的数组的和，那么直接从字典中获取值即可
     // 这里应该统计一下求和的数组
@@ -61,7 +59,7 @@ var combinationSum = function(candidates, target) {
   };
   const len = candidates.length;
   var backTrack = (tmpList) => {
-    let tmpSum = sum(tmpList);
+    const tmpSum = sum(tmpList);
     if (tmpSum > target) {
       return;
     }
@@ -70,15 +68,13 @@ var combinationSum = function(candidates, target) {
       return;
     }
     for (let i = 0; i < len; i++) {
-      let item = candidates[i];
-      let last = tmpList[tmpList.length - 1];
+      const item = candidates[i];
+      const last = tmpList[tmpList.length - 1];
       if (item < last) {
         continue;
-      }
-      else if (item + tmpSum > target) {
+      } else if (item + tmpSum > target) {
         break;
-      }
-      else {
+      } else {
         tmpList.push(item);
         backTrack(tmpList);
         tmpList.pop();

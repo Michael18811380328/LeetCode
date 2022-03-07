@@ -10,9 +10,9 @@
  * @return {number[]}
  */
 // Your runtime beats 83.33 % of javascript submissions
-var sortArrayByParity = function(A) {
-  let B = [];
-  let C = [];
+const sortArrayByParity = function(A) {
+  const B = [];
+  const C = [];
   const len = A.length;
   for (let i = 0; i < len; i++) {
     if (A[i] % 2 === 1) {
@@ -24,4 +24,3 @@ var sortArrayByParity = function(A) {
   return B.concat(C);
 };
 // @lc code=end
-

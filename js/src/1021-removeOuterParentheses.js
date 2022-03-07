@@ -14,21 +14,21 @@
 var removeOuterParentheses = function(S) {
   // 遍历字符串，然后把字符放在数组中，记录开始和结束的位置
   let start = 0;
-  let arr = [];
+  const arr = [];
   let res = '';
   // 这个可以直接放在循环里
   // 也不需要 arr 数组，直接记录个数就行
   arr.push(S[0]);
   for (let i = 1; i < S.length; i++) {
     if (S[i] === '(') {
-      arr.push(S[i])
+      arr.push(S[i]);
     } else {
       arr.pop();
       // 如果开始不等于结束，但是数组是空的，那么可以提取这个部分
       if (arr.length === 0) {
-        let end = i;
+        const end = i;
         // 然后去掉括号加起来即可
-        let inner = S.slice(start + 1, end);
+        const inner = S.slice(start + 1, end);
         res += inner;
         start = i + 1;
       }
@@ -50,8 +50,8 @@ var removeOuterParentheses = function(S) {
     } else {
       timer--;
       if (timer === 0) {
-        let end = i;
-        let inner = S.slice(start + 1, end);
+        const end = i;
+        const inner = S.slice(start + 1, end);
         res += inner;
         start = i + 1;
       }
@@ -59,4 +59,3 @@ var removeOuterParentheses = function(S) {
   }
   return res;
 };
-

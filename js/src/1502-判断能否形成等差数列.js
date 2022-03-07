@@ -10,11 +10,11 @@
  * @return {boolean}
  */
 // Your runtime beats 24.53 % of javascript submissions
-var canMakeArithmeticProgression = function(arr) {
+const canMakeArithmeticProgression = function(arr) {
   const len = arr.length;
   if (len === 2) return true;
   arr.sort((a, b) => a - b);
-  let interval = arr[1] - arr[0];
+  const interval = arr[1] - arr[0];
   for (let i = 1; i < len; i++) {
     if (arr[i] - arr[i - 1] !== interval) {
       return false;
@@ -23,4 +23,3 @@ var canMakeArithmeticProgression = function(arr) {
   return true;
 };
 // @lc code=end
-

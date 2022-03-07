@@ -28,16 +28,16 @@
  * @param {number} num
  * @return {string[]}
  */
-const TIMES = [100, 200, 400, 800, 1,2,4,8,16,32];
+const TIMES = [100, 200, 400, 800, 1, 2, 4, 8, 16, 32];
 // 96 ms, 在所有 JavaScript 提交中击败了26.51%
-var readBinaryWatch = function(num) {
+const readBinaryWatch = function(num) {
   if (num === 0) {
     return ['0:00'];
   } else if (num > 8) {
     return [];
   }
-  let list = [];
-  let temp = [];
+  const list = [];
+  const temp = [];
   backTrack(list, temp, num, TIMES);
   return list;
 };
@@ -45,20 +45,20 @@ var readBinaryWatch = function(num) {
 var backTrack = function(list, temp, num, times) {
   // 如果临时数组满足条件，那么计算当前的时间，然后放在List中
   if (temp.length === num) {
-    let time = formatTime(temp);
+    const time = formatTime(temp);
     if (time) list.push(time);
     return;
   }
   // TIMES 这个先 filter 一下 temp，然后再循环，这样好一点
   // times = TIMES.filter(item => !temp.includes(item));
   for (let i = 0; i < times.length; i++) {
-    let item = times[i];
+    const item = times[i];
     // 这里push的必须是当前最后一个元素后面的数组，不能是全部的数组，否则会重复
     // 那么这里第四个参数需要改变
     temp.push(item);
     // 先index切割，然后再filter一下
-    let lastTimes = TIMES.slice(TIMES.indexOf(item));
-    let newTimes = lastTimes.filter(time => !temp.includes(time) && time !== item);
+    const lastTimes = TIMES.slice(TIMES.indexOf(item));
+    const newTimes = lastTimes.filter((time) => !temp.includes(time) && time !== item);
     backTrack(list, temp, num, newTimes);
     temp.pop();
   }
@@ -67,7 +67,7 @@ var backTrack = function(list, temp, num, times) {
 // 单独写一个函数处理时间的格式
 var formatTime = function(timeArr) {
   let time = 0;
-  timeArr.forEach(item => time += item);
+  timeArr.forEach((item) => time += item);
   let minute = time % 100;
   let hour = (time - minute) / 100;
   // 超过表示范围（小时 0-11，分钟 0-59）的数据将会被舍弃
@@ -76,8 +76,8 @@ var formatTime = function(timeArr) {
   }
   minute = minute < 10 ? `0${minute}` : minute;
   minute = minute === 0 ? '00' : minute;
-  hour = hour.length === 0 ? '0' : hour; 
-  return '' + hour + ':' + minute;
+  hour = hour.length === 0 ? '0' : hour;
+  return `${hour}:${minute}`;
 };
 
 export { readBinaryWatch };

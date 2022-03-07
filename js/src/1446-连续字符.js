@@ -13,7 +13,7 @@
 // , 在所有 JavaScript 提交中击败了
 // 47.02%
 // 的用户
-var maxPower = function(s) {
+const maxPower = function(s) {
   if (s.length === 1) return 1;
   let max = 1;
   let times = 1;
@@ -30,4 +30,3 @@ var maxPower = function(s) {
   return max;
 };
 // @lc code=end
-

@@ -9,11 +9,11 @@
  * Initialize your data structure here.
  */
 // 184 ms, 在所有 JavaScript 提交中击败了44.19%
-var Twitter = function() {
+const Twitter = function() {
   // 用户关注数据库表
   // 这个是一个对象
-    // 对象的键是用户ID，对象的值是一个数组（关注的人）
-    // 这里支持增删关注这
+  // 对象的键是用户ID，对象的值是一个数组（关注的人）
+  // 这里支持增删关注这
   follow = {};
   // 推文发送数据库（时间戳和发送人）表
   // 这个使用数组实现，可以实现先后顺序
@@ -22,28 +22,28 @@ var Twitter = function() {
 };
 
 /**
- * Compose a new tweet. 
- * @param {number} userId 
+ * Compose a new tweet.
+ * @param {number} userId
  * @param {number} tweetId
  * @return {void}
  */
 Twitter.prototype.postTweet = function(userId, tweetId) {
-  let twitter = { userId, tweetId };
+  const twitter = { userId, tweetId };
   twitters.push(twitter);
 };
 
 /**
- * Retrieve the 10 most recent tweet ids in the user's news feed. Each item in the news feed must be posted by users who the user followed or by the user herself. Tweets must be ordered from most recent to least recent. 
+ * Retrieve the 10 most recent tweet ids in the user's news feed. Each item in the news feed must be posted by users who the user followed or by the user herself. Tweets must be ordered from most recent to least recent.
  * @param {number} userId
  * @return {number[]}
  */
 Twitter.prototype.getNewsFeed = function(userId) {
   // 这里获取有效的用户ID
-  let followers = follow[userId] ? follow[userId].slice(0) : [];
+  const followers = follow[userId] ? follow[userId].slice(0) : [];
   followers.push(userId);
-  let res = [];
+  const res = [];
   for (let i = twitters.length - 1; i >= 0; i--) {
-    let item = twitters[i];
+    const item = twitters[i];
     if (followers.includes(item.userId)) {
       res.push(item.tweetId);
     }
@@ -55,8 +55,8 @@ Twitter.prototype.getNewsFeed = function(userId) {
 };
 
 /**
- * Follower follows a followee. If the operation is invalid, it should be a no-op. 
- * @param {number} followerId 
+ * Follower follows a followee. If the operation is invalid, it should be a no-op.
+ * @param {number} followerId
  * @param {number} followeeId
  * @return {void}
  */
@@ -71,15 +71,15 @@ Twitter.prototype.follow = function(followerId, followeeId) {
 };
 
 /**
- * Follower unfollows a followee. If the operation is invalid, it should be a no-op. 
- * @param {number} followerId 
+ * Follower unfollows a followee. If the operation is invalid, it should be a no-op.
+ * @param {number} followerId
  * @param {number} followeeId
  * @return {void}
  */
 Twitter.prototype.unfollow = function(followerId, followeeId) {
   if (followerId === followeeId) return;
   if (!follow[followerId]) return;
-  let index = follow[followerId].indexOf(followeeId);
+  const index = follow[followerId].indexOf(followeeId);
   // 如果没有找到这个人，那么不需要删除
   if (index < 0) return;
   follow[followerId].splice(index, 1);

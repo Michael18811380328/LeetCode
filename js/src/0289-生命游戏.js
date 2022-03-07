@@ -10,13 +10,13 @@
  * @return {void} Do not return anything, modify board in-place instead.
  */
 // Your runtime beats 86.82 % of javascript submissions
-var gameOfLife = function(board) {
+const gameOfLife = function(board) {
   const len1 = board.length;
-  let res = [];
+  const res = [];
   for (let i = 0; i < len1; i++) {
-    let tmp = [];
+    const tmp = [];
     for (let j = 0; j < board[i].length; j++) {
-      let newItem = getCell(board, i, j);
+      const newItem = getCell(board, i, j);
       tmp.push(newItem);
     }
     res.push(tmp);
@@ -32,39 +32,39 @@ var gameOfLife = function(board) {
 };
 
 let getCell = (board, i, j) => {
-  let item = board[i][j];
+  const item = board[i][j];
   let aliveCell = 0;
   // 上一行
   if (board[i - 1]) {
     if (board[i - 1][j - 1] > -1) {
-      aliveCell += board[i - 1][j - 1]
+      aliveCell += board[i - 1][j - 1];
     }
     if (board[i - 1][j] > -1) {
-      aliveCell += board[i - 1][j]
+      aliveCell += board[i - 1][j];
     }
     if (board[i - 1][j + 1] > -1) {
-      aliveCell += board[i - 1][j + 1]
+      aliveCell += board[i - 1][j + 1];
     }
   }
   // 当前行
   if (board[i]) {
     if (board[i][j - 1] > -1) {
-      aliveCell += board[i][j - 1]
+      aliveCell += board[i][j - 1];
     }
     if (board[i][j + 1] > -1) {
-      aliveCell += board[i][j + 1]
+      aliveCell += board[i][j + 1];
     }
   }
   // 下一行
   if (board[i + 1]) {
     if (board[i + 1][j - 1] > -1) {
-      aliveCell += board[i + 1][j - 1]
+      aliveCell += board[i + 1][j - 1];
     }
     if (board[i + 1][j] > -1) {
-      aliveCell += board[i + 1][j]
+      aliveCell += board[i + 1][j];
     }
     if (board[i + 1][j + 1] > -1) {
-      aliveCell += board[i + 1][j + 1]
+      aliveCell += board[i + 1][j + 1];
     }
   }
   // 判断结果
@@ -72,9 +72,8 @@ let getCell = (board, i, j) => {
   let result;
   if (item === 0) {
     result = aliveCell === 3 ? 1 : 0;
-  }
-  else {
+  } else {
     result = (aliveCell === 3 || aliveCell === 2) ? 1 : 0;
   }
   return result;
-}
+};

@@ -15,7 +15,7 @@
 var MedianFinder = function() {
   list = [];
 };
-/** 
+/**
  * @param {number} num
  * @return {void}
  */
@@ -37,14 +37,13 @@ MedianFinder.prototype.findMedian = function() {
   list.sort((a, b) => a - b);
   if (len % 2 === 1) {
     // 找到中间的数字即可
-    let index = (len - 1) / 2;
+    const index = (len - 1) / 2;
     return list[index];
   } else {
-    let index = len / 2;
+    const index = len / 2;
     return (list[index - 1] + list[index]) / 2;
   }
 };
-
 
 // 思路二：插入的时候按照二分法对已经排序的数组插入
 // 寻找中位数直接可以找到
@@ -59,12 +58,10 @@ MedianFinder.prototype.addNum = function(num) {
   const len = list.length;
   if (len === 0) {
     list.push(num);
-  }
-  else if (num < list[0]) {
+  } else if (num < list[0]) {
     list.unshift(num);
     return;
-  }
-  else if (num > list[list.length - 1]) {
+  } else if (num > list[list.length - 1]) {
     list.push(num);
     return;
   }
@@ -72,14 +69,12 @@ MedianFinder.prototype.addNum = function(num) {
   let start = 0;
   let end = len - 1;
   while (start < end) {
-    let middle = Math.ceil((start + end) / 2);
+    const middle = Math.ceil((start + end) / 2);
     if (list[middle] > num) {
       end = middle;
-    }
-    else if (list[middle] < num) {
+    } else if (list[middle] < num) {
       start = middle;
-    }
-    else {
+    } else {
       // list[middle] === num
       list.splice(middle, 0, num);
       return;
@@ -102,10 +97,10 @@ MedianFinder.prototype.findMedian = function() {
     return (list[0] + list[1]) / 2;
   }
   if (len % 2 === 1) {
-    let index = (len - 1) / 2;
+    const index = (len - 1) / 2;
     return list[index];
   } else {
-    let index = len / 2;
+    const index = len / 2;
     return (list[index - 1] + list[index]) / 2;
   }
 };
@@ -117,4 +112,3 @@ MedianFinder.prototype.findMedian = function() {
  * var param_2 = obj.findMedian()
  */
 // @lc code=end
-

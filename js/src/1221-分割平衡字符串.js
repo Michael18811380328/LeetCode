@@ -9,8 +9,8 @@
  * @param {string} s
  * @return {number}
  */
-// 84 ms, 在所有 JavaScript 提交中击败了 70.55% 
-var balancedStringSplit = function(s) {
+// 84 ms, 在所有 JavaScript 提交中击败了 70.55%
+const balancedStringSplit = function(s) {
   let times = 0;
   let left = 0;
   let right = 0;
@@ -27,4 +27,3 @@ var balancedStringSplit = function(s) {
   return times;
 };
 // @lc code=end
-

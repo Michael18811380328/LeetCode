@@ -10,11 +10,11 @@
  * @return {string}
  */
 // Your runtime beats 50 % of javascript submissions
-var originalDigits = function(s) {
-  let dict = {};
+const originalDigits = function(s) {
+  const dict = {};
   const len = s.length;
   for (let i = 0; i < len; i++) {
-    let key = s[i];
+    const key = s[i];
     if (dict[key]) {
       dict[key]++;
     } else {
@@ -26,30 +26,29 @@ var originalDigits = function(s) {
   // two w
   // six x
   // eigth g
-  let zero = dict['z'] || 0;
-  let two = dict['w'] || 0;
-  let six = dict['x'] || 0;
-  let eight = dict['g']  || 0;
+  const zero = dict.z || 0;
+  const two = dict.w || 0;
+  const six = dict.x || 0;
+  const eight = dict.g || 0;
 
   // three h
   // seven s
-  let three = (dict['h'] || 0) - eight;
-  let seven = (dict['s'] || 0) - six;
+  const three = (dict.h || 0) - eight;
+  const seven = (dict.s || 0) - six;
 
   // ten t
   // five v
   // four f
   // one o
-  // nine 
-  let ten = (dict['t'] || 0) - two - eight - three;
-  let five = (dict['v'] || 0) - seven;
-  let four = (dict['f'] || 0) - five;
-  let one = (dict['o'] || 0) - zero - two - four;
-  let nine = ((dict['n'] || 0) - seven - ten - one) / 2;
+  // nine
+  const ten = (dict.t || 0) - two - eight - three;
+  const five = (dict.v || 0) - seven;
+  const four = (dict.f || 0) - five;
+  const one = (dict.o || 0) - zero - two - four;
+  const nine = ((dict.n || 0) - seven - ten - one) / 2;
 
-  let res = '' + '0'.repeat(zero) + '1'.repeat(one) + '2'.repeat(two) + '3'.repeat(three) + '4'.repeat(four) + '5'.repeat(five) + '6'.repeat(six) + '7'.repeat(seven) + '8'.repeat(eight) + '9'.repeat(nine);
+  const res = `${'0'.repeat(zero)}${'1'.repeat(one)}${'2'.repeat(two)}${'3'.repeat(three)}${'4'.repeat(four)}${'5'.repeat(five)}${'6'.repeat(six)}${'7'.repeat(seven)}${'8'.repeat(eight)}${'9'.repeat(nine)}`;
   return res;
 };
 
 // @lc code=end
-

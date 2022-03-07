@@ -25,7 +25,7 @@
 // 当快指针到结尾时，慢指针会到中间
 // 这样性能较好，需要测试空链表的情况
 // Your runtime beats 44.98 % of javascript submissions
-var middleNode = function(head) {
+const middleNode = function(head) {
   // 先把链表的头临时存储一下
   if (!head) {
     return head;
@@ -42,4 +42,3 @@ var middleNode = function(head) {
   return slow;
 };
 // @lc code=end
-

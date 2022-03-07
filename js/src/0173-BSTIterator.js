@@ -28,7 +28,7 @@ var getPointer = (node, stack) => {
 };
 
 BSTIterator.prototype.next = function() {
-  let res = this.pointer.val;
+  const res = this.pointer.val;
   // 每次next操作可能需要使用getPointer函数，性能不好
   this.pointer = this.pointer.right ? getPointer(this.pointer.right, this.stack) : this.stack.pop();
   return res;
@@ -49,7 +49,7 @@ var BSTIterator = function(root) {
 var runNode = (node) => {
   if (!node) return [];
   return [...runNode(node.left), node.val, ...runNode(node.right)];
-}
+};
 
 BSTIterator.prototype.next = function() {
   return this.arr.shift();

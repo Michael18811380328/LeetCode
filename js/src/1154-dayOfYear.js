@@ -19,8 +19,8 @@
  * @param {string} date
  * @return {number}
  */
-var dayOfYear = function(date) {
-  var isLeapYear = (year) => {
+const dayOfYear = function(date) {
+  const isLeapYear = (year) => {
     if (year % 100 === 0) {
       if (year % 400 === 0) {
         return true;
@@ -29,28 +29,26 @@ var dayOfYear = function(date) {
       }
     }
     return year % 4 === 0;
-  }
-  
-  var getMonthDays = (month) => {
+  };
+
+  const getMonthDays = (month) => {
     let sum = 0;
-    const month31 = [1,3,5,7,8,10,12];
+    const month31 = [1, 3, 5, 7, 8, 10, 12];
     for (let i = 1; i <= month; i++) {
       if (i === 2) {
         sum += 28;
-      }
-      else if (month31.includes(i)) {
+      } else if (month31.includes(i)) {
         sum += 31;
-      }
-      else {
+      } else {
         sum += 30;
       }
     }
-      return sum;
-  }
+    return sum;
+  };
   // 1、把年月日提取出来-不需要数组，直接切割字符串，然后转换成数值
-  let year = Number(date.slice(0, 4));
-  let month = Number(date.slice(5, 7));
-  let day = Number(date.slice(8, 10));
+  const year = Number(date.slice(0, 4));
+  const month = Number(date.slice(5, 7));
+  const day = Number(date.slice(8, 10));
   if (month > 2) {
     // 2、判断是否需要计算闰年（月份大于等于3月，需要计算闰年，否则不需要计算）
     // 2、1 如果是闰年，写一个闰年函数，并判断

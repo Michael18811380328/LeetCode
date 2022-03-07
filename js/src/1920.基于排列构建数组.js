@@ -11,8 +11,7 @@
  */
 // 题目简单，数组的基本操作
 //  Your runtime beats 95.95 % of javascript submissions
-var buildArray = function(nums) {
+const buildArray = function(nums) {
   return nums.map((item, i) => nums[nums[i]]);
 };
 // @lc code=end
-

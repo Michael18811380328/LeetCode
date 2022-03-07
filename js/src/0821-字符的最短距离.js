@@ -14,10 +14,10 @@
 // , 在所有 JavaScript 提交中击败了
 // 70.50%
 // 的用户
-var shortestToChar = function(S, C) {
+const shortestToChar = function(S, C) {
   // indexOf(item, start)
-  let res = new Array(S.length);
-  let arr = [];
+  const res = new Array(S.length);
+  const arr = [];
   // 开始获取C的位置
   let start = 0;
   let index = S.indexOf(C, start);
@@ -39,7 +39,7 @@ var shortestToChar = function(S, C) {
     }
   }
   if (arr[arr.length - 1] !== S.length - 1) {
-    let tmp = 1; 
+    let tmp = 1;
     for (let i = arr[arr.length - 1] + 1; i < S.length; i++) {
       res[i] = tmp;
       tmp++;
@@ -62,4 +62,3 @@ var shortestToChar = function(S, C) {
   return res;
 };
 // @lc code=end
-

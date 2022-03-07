@@ -9,26 +9,27 @@
  * @param {string} S
  * @return {number}
  */
-var numJewelsInStones = function(J, S) {
-    // 首先遍历S，创建一个字符串放权重
-    // 然后遍历J，获取不同宝石对应的权重
-    // 返回即可
-    let hashTable = {};
-    const sLen = S.length, jLen = J.length;
-    for (let i = 0; i < sLen; i++) {
-        let item = S[i];
-        if (!hashTable[item]) {
-            hashTable[item] = 1;
-        } else {
-            hashTable[item]++;
-        }
+const numJewelsInStones = function(J, S) {
+  // 首先遍历S，创建一个字符串放权重
+  // 然后遍历J，获取不同宝石对应的权重
+  // 返回即可
+  const hashTable = {};
+  const sLen = S.length; const
+    jLen = J.length;
+  for (let i = 0; i < sLen; i++) {
+    const item = S[i];
+    if (!hashTable[item]) {
+      hashTable[item] = 1;
+    } else {
+      hashTable[item]++;
     }
-    let sum = 0;
-    for (let j = 0; j < jLen; j++) {
-        let item = J[j];
-        if (hashTable[item]) {
-            sum+= hashTable[item];
-        }
+  }
+  let sum = 0;
+  for (let j = 0; j < jLen; j++) {
+    const item = J[j];
+    if (hashTable[item]) {
+      sum += hashTable[item];
     }
-    return sum;
+  }
+  return sum;
 };

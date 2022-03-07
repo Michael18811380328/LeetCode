@@ -13,15 +13,15 @@
 // 方法1
 var reverseOnlyLetters = function(S) {
   const len = S.length;
-  let resArr = new Array(len);
-  let strArr = [];
+  const resArr = new Array(len);
+  const strArr = [];
   for (let i = 0; i < len; i++) {
-    let item = S[i];
-    let index = item.charCodeAt(0);
+    const item = S[i];
+    const index = item.charCodeAt(0);
     // 65～90为26个大写英文字母，97～122号为26个小写英文字母
     if (
-      (index >= 65 && index <= 90) ||
-      (index <= 122 && index >= 97)
+      (index >= 65 && index <= 90)
+      || (index <= 122 && index >= 97)
     ) {
       strArr.push(item);
     } else {
@@ -34,7 +34,7 @@ var reverseOnlyLetters = function(S) {
   }
   let pointer = 0;
   for (let i = 0; i < strArr.length; i++) {
-    let item = strArr[i];
+    const item = strArr[i];
     while (resArr[pointer]) {
       pointer++;
     }
@@ -48,15 +48,15 @@ var reverseOnlyLetters = function(S) {
 // 116/116 cases passed (88 ms)
 // Your runtime beats 42.19 % of javascript submissions
 var reverseOnlyLetters = function(S) {
-  var isLetter = (a) => {
-    let index = a.charCodeAt(0);
-    return (index >= 65 && index <= 90) || (index <= 122 && index >= 97)
+  const isLetter = (a) => {
+    const index = a.charCodeAt(0);
+    return (index >= 65 && index <= 90) || (index <= 122 && index >= 97);
   };
 
   const len = S.length;
   let str = '';
   for (let i = 0; i < len; i++) {
-    let item = S[i];
+    const item = S[i];
     if (isLetter(item)) {
       str += item;
     }
@@ -67,7 +67,7 @@ var reverseOnlyLetters = function(S) {
   }
   let pointer = 0;
   for (let i = 0; i < str.length; i++) {
-    let item = str[i];
+    const item = str[i];
     while (!isLetter(S[pointer])) {
       pointer++;
     }

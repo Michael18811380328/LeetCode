@@ -13,7 +13,7 @@
 // , 在所有 JavaScript 提交中击败了
 // 53.97%
 // 的用户
-var countBinarySubstrings = function(s) {
+const countBinarySubstrings = function(s) {
   // 获取第一个进制的次数
   // 获取第二个进制的次数
   // 然后取最小值
@@ -23,24 +23,20 @@ var countBinarySubstrings = function(s) {
   let current2 = null;
   let res = 0;
   for (let i = 0; i < s.length; i++) {
-    let item = s[i];
+    const item = s[i];
     if (current1 === null) {
       current1 = item;
       time1++;
-    }
-    else if (item === current1 && current2 === null) {
+    } else if (item === current1 && current2 === null) {
       time1++;
-    }
-    else if (current1 !== null && current2 === null) {
+    } else if (current1 !== null && current2 === null) {
       current2 = item;
       time2++;
-    }
-    else if (item === current2) {
+    } else if (item === current2) {
       time2++;
-    }
-    else {
+    } else {
       // item === current1 && time1 > 0 && time2 > 0
-      let min = Math.min(time1, time2);
+      const min = Math.min(time1, time2);
       res += min;
       current1 = current2;
       time1 = time2;
@@ -50,10 +46,9 @@ var countBinarySubstrings = function(s) {
     console.log(current1, time1, current2, time2, res);
   }
   if (current2) {
-    let min = Math.min(time1, time2);
+    const min = Math.min(time1, time2);
     res += min;
   }
   return res;
 };
 // @lc code=end
-

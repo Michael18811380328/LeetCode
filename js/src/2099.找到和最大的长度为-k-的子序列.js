@@ -11,14 +11,14 @@
  * @return {number[]}
  */
 // Your runtime beats 92.95 % of javascript submissions
-var maxSubsequence = function(nums, k) {
+const maxSubsequence = function(nums, k) {
   // 1 先获取最大的前K个元素
-  let arr = [...nums].sort((a, b) => {
+  const arr = [...nums].sort((a, b) => {
     return a > b ? -1 : 1;
   }).slice(0, k);
   // 2 然后转换成字典
-  let dict = {};
-  arr.forEach(item => {
+  const dict = {};
+  arr.forEach((item) => {
     if (!dict[item]) {
       dict[item] = 1;
     } else {
@@ -26,8 +26,8 @@ var maxSubsequence = function(nums, k) {
     }
   });
   // 3 然后遍历一次原数组，把最大的这些元素按照顺序输出
-  let result = [];
-  nums.forEach(num => {
+  const result = [];
+  nums.forEach((num) => {
     if (dict[num]) {
       result.push(num);
       dict[num] = dict[num] - 1;
@@ -41,4 +41,3 @@ var maxSubsequence = function(nums, k) {
 // console.log(maxSubsequence([3,4,3,3], 2))
 
 // @lc code=end
-

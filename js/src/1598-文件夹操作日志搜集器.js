@@ -10,22 +10,19 @@
  * @return {number}
  */
 // Your runtime beats 63.72 % of javascript submissions
-var minOperations = function(logs) {
+const minOperations = function(logs) {
   let current = 0;
   const len = logs.length;
   for (let i = 0; i < len; i++) {
-    let item = logs[i];
+    const item = logs[i];
     if (item === './') {
       continue;
-    }
-    else if (item === '../') {
+    } else if (item === '../') {
       if (current > 0) current--;
-    }
-    else {
+    } else {
       current++;
     }
   }
   return current;
 };
 // @lc code=end
-

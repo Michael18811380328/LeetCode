@@ -10,13 +10,13 @@
  * @return {number}
  */
 // Your runtime beats 73.53 % of javascript submissions
-var numSpecialEquivGroups = function(A) {
-  let dict = {};
+const numSpecialEquivGroups = function(A) {
+  const dict = {};
   let num = 0;
   const len = A.length;
   for (let i = 0; i < len; i++) {
-    let item = A[i];
-    let key = getKey(item);
+    const item = A[i];
+    const key = getKey(item);
     // console.log(key);
     dict[key] ? dict[key]++ : dict[key] = 1;
     num = num > dict[key] ? num : dict[key];
@@ -25,8 +25,8 @@ var numSpecialEquivGroups = function(A) {
 };
 
 let getKey = (str) => {
-  let arr1 = [];
-  let arr2 = [];
+  const arr1 = [];
+  const arr2 = [];
   for (let i = 0; i < str.length; i++) {
     if (i % 2 === 0) {
       arr1.push(str[i]);
@@ -36,9 +36,8 @@ let getKey = (str) => {
   }
   arr1.sort((a, b) => a > b ? 1 : -1);
   arr2.sort((a, b) => a > b ? 1 : -1);
-  return arr1.join('') + '+' + arr2.join('');
+  return `${arr1.join('')}+${arr2.join('')}`;
 };
 // ["abc","acb","bac","bca","cab","cba"] 这个为什么不对
 // 是否考虑原始数组中完全相同的子串？
 // @lc code=end
-

@@ -10,13 +10,13 @@
  * @return {number}
  */
 // Your runtime beats 92.77 % of javascript submissions
-var numUniqueEmails = function(emails) {
+const numUniqueEmails = function(emails) {
   // 循环邮件
   const len = emails.length;
-  let dict = {};
+  const dict = {};
   let times = 0;
   for (let i = 0; i < len; i++) {
-    let item = valid(emails[i]);
+    const item = valid(emails[i]);
     // console.log(item);
     // 然后放在对象中，用另一个int记录次数
     if (!dict[item]) {
@@ -31,12 +31,11 @@ var numUniqueEmails = function(emails) {
 var valid = (email) => {
   const seperator = email.indexOf('@');
   let local = email.slice(0, seperator);
-  let domain = email.slice(seperator);
+  const domain = email.slice(seperator);
   if (local.indexOf('+') > -1) {
     local = local.slice(0, local.indexOf('+'));
   }
   local = local.replace(/\./g, '');
   return local + domain;
-}
+};
 // @lc code=end
-

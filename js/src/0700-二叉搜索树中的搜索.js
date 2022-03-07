@@ -24,12 +24,11 @@ var searchBST = function(root, val) {
     return null;
   } else if (root.val === val) {
     return root;
-  }
-  else {
+  } else {
     // 这里做优化
-    let leftVal = searchBST(root.left, val);
+    const leftVal = searchBST(root.left, val);
     if (leftVal) return leftVal;
-    let rightVal = searchBST(root.right, val);
+    const rightVal = searchBST(root.right, val);
     if (rightVal) return rightVal;
     return null;
   }
@@ -44,19 +43,17 @@ var searchBST = function(root, val) {
     return null;
   } else if (root.val === val) {
     return root;
-  }
-  else {
+  } else {
     // 这里做优化
     if (!root.right || val <= root.right.val) {
-      let leftVal = searchBST(root.left, val);
+      const leftVal = searchBST(root.left, val);
       if (leftVal) return leftVal;
     }
     if (!root.left || val >= root.left.val) {
-      let rightVal = searchBST(root.right, val);
+      const rightVal = searchBST(root.right, val);
       if (rightVal) return rightVal;
     }
     return null;
   }
 };
 // @lc code=end
-

@@ -16,7 +16,7 @@
  * @param {Node} root
  * @return {number}
  */
-var maxDepth = function(root) {
+const maxDepth = function(root) {
   if (!root) return 0;
   return getDepth(root);
 };
@@ -24,13 +24,12 @@ var maxDepth = function(root) {
 var getDepth = function(node) {
   if (!node) return 1;
   let max = 0;
-  let len = node.children.length;
+  const len = node.children.length;
   for (let i = 0; i < len; i++) {
-    let child = node.children[i];
-    let depth = getDepth(child);
+    const child = node.children[i];
+    const depth = getDepth(child);
     max = depth > max ? depth : max;
   }
   return max + 1;
-}
+};
 // @lc code=end
-

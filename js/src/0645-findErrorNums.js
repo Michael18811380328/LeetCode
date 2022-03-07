@@ -12,13 +12,13 @@
  * @return {number[]}
  */
 // Your runtime beats 93.89 % of javascript submissions
-var findErrorNums = function(nums) {
+const findErrorNums = function(nums) {
   let error1;
   let error2;
-  let len = nums.length;
-  let dict = {};
+  const len = nums.length;
+  const dict = {};
   for (let i = 0; i < len; i++) {
-    let key = nums[i];
+    const key = nums[i];
     if (!dict[key]) {
       dict[key] = true;
     } else {

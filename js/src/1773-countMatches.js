@@ -12,22 +12,20 @@
  * @return {number}
  */
 //  Your runtime beats 9.73 % of javascript submissions
-var countMatches = function(items, ruleKey, ruleValue) {
+const countMatches = function(items, ruleKey, ruleValue) {
   // 首先获取需要检索的项
   let index;
   if (ruleKey === 'type') {
     index = 0;
-  }
-  else if (ruleKey === 'color') {
+  } else if (ruleKey === 'color') {
     index = 1;
-  }
-  else if (ruleKey === 'name') {
+  } else if (ruleKey === 'name') {
     index = 2;
   }
   // 然后遍历一次，记录即可
   let number = 0;
   for (let i = 0; i < items.length; i++) {
-    let item = items[i];
+    const item = items[i];
     if (item[index] === ruleValue) {
       number++;
     }
@@ -35,4 +33,3 @@ var countMatches = function(items, ruleKey, ruleValue) {
   return number;
 };
 // @lc code=end
-

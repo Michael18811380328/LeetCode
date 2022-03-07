@@ -33,7 +33,7 @@ var truncateSentence = function(s, k) {
   let K = k;
   let position = 0;
   while (K > 0) {
-   let index = s.indexOf(' ', position);
+    const index = s.indexOf(' ', position);
     if (index > 0) {
       position = index + 1;
       K--;
@@ -47,7 +47,7 @@ var truncateSentence = function(s, k) {
 
 // 思路2：转换成数组
 // 88 ms, 在所有 JavaScript 提交中击败了40.79%
-var truncateSentence2 = function(s, k) {
-  let sList = s.split(' ');
+const truncateSentence2 = function(s, k) {
+  const sList = s.split(' ');
   return sList.slice(0, k).join(' ');
 };

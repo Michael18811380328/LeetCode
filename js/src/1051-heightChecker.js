@@ -5,7 +5,7 @@
 
 // 示例：
 // 输入：heights = [1,1,4,2,1,3]
-// 输出：3 
+// 输出：3
 // 解释：
 // 当前数组：[1,1,4,2,1,3]
 // 目标数组：[1,1,1,2,3,4]
@@ -21,15 +21,15 @@
 // , 在所有 JavaScript 提交中击败了
 // 86.87%
 // 的用户
-var heightChecker = function(heights) {
-    let arr = new Array(...heights);
-    arr.sort((a, b) => a - b);
-    let len = arr.length;
-    let res = 0;
-    for (let i = 0; i < len; i++) {
-        if (heights[i] !== arr[i]) {
-            res++;
-        }
+const heightChecker = function(heights) {
+  const arr = new Array(...heights);
+  arr.sort((a, b) => a - b);
+  const len = arr.length;
+  let res = 0;
+  for (let i = 0; i < len; i++) {
+    if (heights[i] !== arr[i]) {
+      res++;
     }
-    return res;
+  }
+  return res;
 };

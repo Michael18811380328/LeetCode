@@ -11,13 +11,13 @@
  * @param {number} small
  */
 // Your runtime beats 78.07 % of javascript submissions
-var ParkingSystem = function(big, medium, small) {
+const ParkingSystem = function(big, medium, small) {
   this.big = big;
   this.medium = medium;
   this.small = small;
 };
 
-/** 
+/**
  * @param {number} carType
  * @return {boolean}
  */
@@ -55,4 +55,3 @@ ParkingSystem.prototype.addCar = function(carType) {
  * var param_1 = obj.addCar(carType)
  */
 // @lc code=end
-

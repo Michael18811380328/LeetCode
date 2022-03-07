@@ -3,7 +3,7 @@
 // 现在还是有性能问题，正常的算法应该在 300ms 左右
 // 看一下还能怎么优化
 // 用空间换时间，多使用内存，少使用循环！
-var maxSlidingWindow = function(nums, k) {
+const maxSlidingWindow = function(nums, k) {
   // 处理特殊情况
   if (k === 1) {
     return nums;
@@ -19,8 +19,8 @@ var maxSlidingWindow = function(nums, k) {
 
   // 初始化前面几个值
   for (let i = 1; i < k; i++) {
-    let item = nums[i];
-    let listLen = list.length;
+    const item = nums[i];
+    const listLen = list.length;
     // 如果当前的值小于最后一个的值，直接插入到队列最后
     if (nums[list[listLen - 1]] > item) {
       list.push(i);
@@ -38,12 +38,12 @@ var maxSlidingWindow = function(nums, k) {
     }
   }
   // 现在已经把开始的K个元素放入了队列中，然后开始遍历剩下的数字，然后获取最大值
-  let res = [];
+  const res = [];
   res[0] = nums[list[0]];
 
   for (let i = k; i < len; i++) {
-    let item = nums[i];
-    let listLen = list.length;
+    const item = nums[i];
+    const listLen = list.length;
     // 如果新增的值小于最小的，那么直接插入最后
     if (nums[list[listLen - 1]] > item) {
       list.push(i);
@@ -73,16 +73,16 @@ var maxSlidingWindow = function(nums, k) {
 // 队列的长度不需要等于滑动窗口的长度，所以，应该把大于后面的值的后面的全部删除，而不是 splice 简单操作
 // 这样可以较少不少的数据量
 
-console.log(maxSlidingWindow([1,3,-1,-3,5,3,6,7], 3)); // [3,3,5,5,6,7] 
-console.log(maxSlidingWindow([9, 11, 1,3,-1,-3,5,3,6,7, 1,3,-1,-3,5,3,6,7, 1,3,-1,-3,5,3,6,7], 4)); // [11,11,3,5,5,6,7,7,7,7,3,5,5,6,7,7,7,7,3,5,5,6,7]
-console.log(maxSlidingWindow([9, 11, 1,3,-1,-3,5], 4)); // [11,11,3,5]
-console.log(maxSlidingWindow([1, -1,1,3,-1,-3,5,3,6,7,1,3,-1,-3,5,3,6,7,1], 3));
+console.log(maxSlidingWindow([1, 3, -1, -3, 5, 3, 6, 7], 3)); // [3,3,5,5,6,7]
+console.log(maxSlidingWindow([9, 11, 1, 3, -1, -3, 5, 3, 6, 7, 1, 3, -1, -3, 5, 3, 6, 7, 1, 3, -1, -3, 5, 3, 6, 7], 4)); // [11,11,3,5,5,6,7,7,7,7,3,5,5,6,7,7,7,7,3,5,5,6,7]
+console.log(maxSlidingWindow([9, 11, 1, 3, -1, -3, 5], 4)); // [11,11,3,5]
+console.log(maxSlidingWindow([1, -1, 1, 3, -1, -3, 5, 3, 6, 7, 1, 3, -1, -3, 5, 3, 6, 7, 1], 3));
 // [
 //   1, 3, 3, 3, 5, 5, 6,
 //   7, 7, 7, 3, 3, 5, 5,
 //   6, 7, 7
 // ]
-console.log(maxSlidingWindow([9,10,9,-7,-4,-8,2,-6], 5)); // [10,10,9,2]
+console.log(maxSlidingWindow([9, 10, 9, -7, -4, -8, 2, -6], 5)); // [10,10,9,2]
 
 // 现在基本逻辑正确，特别长的会超时（K是30000的情况）
 // 需要优化性能

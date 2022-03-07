@@ -60,17 +60,17 @@
 // };
 
 // Your runtime beats 18.52 % of javascript submissions
-var combinationSum4 = function(nums, target) {
+const combinationSum4 = function(nums, target) {
   // 动态规划（类似背包问题）
   // dp(target) = dp(target - nums1) + dp(target - nums2) + ... + dp(target - numsN)
   // dp(n) if n < 0 return 0; dp(0) === dp(1) === 1
   nums.sort((a, b) => b - a);
-  let dp = [];
+  const dp = [];
   dp[0] = 1;
   dp[1] = 1;
   for (let i = 1; i <= target; i++) {
-    let tmp = 0
-    nums.forEach(num => {
+    let tmp = 0;
+    nums.forEach((num) => {
       if (i - num >= 0) {
         tmp += dp[i - num];
       }
@@ -87,4 +87,3 @@ var combinationSum4 = function(nums, target) {
 // https://leetcode-cn.com/problems/combination-sum-iv/solution/377-zu-he-zong-he-iv-javascript-san-chong-jie-ti-s/
 
 // @lc code=end
-

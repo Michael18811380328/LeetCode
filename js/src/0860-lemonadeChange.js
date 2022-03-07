@@ -2,7 +2,7 @@
  * [860] 柠檬水找零
  */
 
-// 
+//
 /**
  * @param {number[]} bills
  * @return {boolean}
@@ -11,15 +11,15 @@
 // , 在所有 JavaScript 提交中击败了
 // 38.00%
 // 的用户
-var lemonadeChange = function(bills) {
+const lemonadeChange = function(bills) {
   if (bills.length === 0) {
     return true;
   }
-  let res = {};
+  const res = {};
   res['5'] = 0;
   res['10'] = 0;
   for (let i = 0; i < bills.length; i++) {
-    let item = bills[i];
+    const item = bills[i];
     switch (item) {
       case 5:
         res['5'] = res['5'] + 1;
@@ -56,5 +56,3 @@ var lemonadeChange = function(bills) {
   }
   return true;
 };
-
-

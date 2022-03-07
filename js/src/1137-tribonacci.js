@@ -11,18 +11,16 @@
  */
 // 动态规划
 // Your runtime beats 70.65 % of javascript submissions
-var tribonacci = function(n) {
+const tribonacci = function(n) {
   if (n === 0) {
     return 0;
-  }
-  else if (n < 3) {
+  } else if (n < 3) {
     return 1;
   }
-  let arr = [0, 1, 1];
+  const arr = [0, 1, 1];
   for (let i = 3; i <= n; i++) {
     arr[i] = arr[i - 2] + arr[i - 1] + arr[i - 3];
   }
   return arr[n];
 };
 // @lc code=end
-

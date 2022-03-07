@@ -20,18 +20,18 @@
 // 直接比较数组是否相同即可
 // 把链表转换成数组
 // Your runtime beats 24.03 % of javascript submissions
-var isPalindrome = function(head) {
+const isPalindrome = function(head) {
   // 空链表或者只有一个节点，那么是回文的链表
   if (!head || !head.next) {
     return true;
   }
-  let list = [];
+  const list = [];
   list.push(head.val);
   while (head.next) {
     list.push(head.next.val);
     head.next = head.next.next;
   }
-  let item = [...list].reverse();
+  const item = [...list].reverse();
   return list.toString() === item.toString();
 };
 // 你能否用 O(n) 时间复杂度和 O(1) 空间复杂度解决此题？
@@ -40,4 +40,3 @@ var isPalindrome = function(head) {
 // 优化：把数组变成字符串，减少数组的操作
 
 // @lc code=end
-

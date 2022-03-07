@@ -12,20 +12,20 @@
  */
 // 思路一：根据定义暴力法
 // Your runtime beats 23.81 % of javascript submissions
-var findAndReplacePattern = function(words, pattern) {
+const findAndReplacePattern = function(words, pattern) {
   // 先把 pattern 转换成一个字典
   // 然后看每一个字符串是否满足字典即可
-  let dict = {};
+  const dict = {};
   const len = pattern.length;
   for (let i = 0; i < len; i++) {
-    let key = pattern[i];
+    const key = pattern[i];
     if (!dict[key]) dict[key] = [];
     dict[key].push(i);
   }
   const keyLen = Object.keys(dict).length;
   const keyTimes = [];
-  for (let key in dict) {
-    let value = dict[key];
+  for (const key in dict) {
+    const value = dict[key];
     keyTimes.push(value);
   }
   keyTimes.sort((a, b) => a - b);
@@ -33,10 +33,10 @@ var findAndReplacePattern = function(words, pattern) {
 
   // 辅助函数：判断是否相同模式
   // 现在这样需要获取全部的长度，性能不好
-  let judge = function(str) {
-    let dict1 = {};
+  const judge = function(str) {
+    const dict1 = {};
     for (let i = 0; i < len; i++) {
-      let key = str[i];
+      const key = str[i];
       if (!dict1[key]) dict1[key] = [];
       dict1[key].push(i);
     }
@@ -44,8 +44,8 @@ var findAndReplacePattern = function(words, pattern) {
       return false;
     }
     const keyTimes1 = [];
-    for (let key in dict1) {
-      let value = dict1[key];
+    for (const key in dict1) {
+      const value = dict1[key];
       keyTimes1.push(value);
     }
     keyTimes1.sort((a, b) => a - b);
@@ -59,9 +59,9 @@ var findAndReplacePattern = function(words, pattern) {
     return true;
   };
   // 循环字符串
-  let result = [];
+  const result = [];
   for (let i = 0; i < words.length; i++) {
-    let item = words[i];
+    const item = words[i];
     if (item.length !== len) {
       continue;
     }
@@ -76,4 +76,3 @@ var findAndReplacePattern = function(words, pattern) {
 // [[0], [1,2,3]]
 
 // @lc code=end
-

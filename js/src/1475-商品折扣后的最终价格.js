@@ -13,11 +13,11 @@
 // , 在所有 JavaScript 提交中击败了
 // 33.52%
 // 的用户
-var finalPrices = function(prices) {
+const finalPrices = function(prices) {
   // 先把价格复制一份，然后升序排列
-  let ARR = prices.slice(0).sort((a, b) => a - b);
+  const ARR = prices.slice(0).sort((a, b) => a - b);
   // 遍历原始价格
-  let res = [];
+  const res = [];
   for (let i = 0; i < prices.length; i++) {
     // 如果没有找到比当前值小的值，那么就去掉字典中的值
     if (prices[i] === ARR[0]) {
@@ -36,7 +36,7 @@ var finalPrices = function(prices) {
       while (j < prices.length) {
         if (prices[j] <= prices[i]) {
           res[i] = prices[i] - prices[j];
-          let index = ARR.indexOf(prices[i]);
+          const index = ARR.indexOf(prices[i]);
           ARR.splice(index, 1);
           j = prices.length;
         }
@@ -47,4 +47,3 @@ var finalPrices = function(prices) {
   return res;
 };
 // @lc code=end
-

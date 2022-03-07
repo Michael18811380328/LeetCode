@@ -13,23 +13,20 @@
 // , 在所有 JavaScript 提交中击败了
 // 34.38%
 
-var makeGood = function(s) {
+const makeGood = function(s) {
   if (s.length < 2) return s;
-  let stack = [];
+  const stack = [];
   stack.push(s[0]);
   for (let i = 1; i < s.length; i++) {
-    let item = s[i];
+    const item = s[i];
     if (stack.length === 0) {
       stack.push(item);
-    }
-    else if (Math.abs(item.charCodeAt(0) - stack[stack.length - 1].charCodeAt(0)) === 32) {
+    } else if (Math.abs(item.charCodeAt(0) - stack[stack.length - 1].charCodeAt(0)) === 32) {
       stack.pop();
-    }
-    else {
+    } else {
       stack.push(item);
     }
   }
   return stack.join('');
 };
 // @lc code=end
-

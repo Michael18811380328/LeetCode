@@ -43,7 +43,6 @@ function generateParenthesis(n) {
   return arr.filter((item) => isValid(item));
 }
 
-
 // 反向思维：首先判断当前结果是否正确，然后再加入到结果数组中，循环2N次
 // 92 ms, 在所有 javascript 提交中击败了21.28%，性能不好。当大于N时，需要判断第二层循环，这样不需要后面的过滤
 // 辅助函数拆分成两个

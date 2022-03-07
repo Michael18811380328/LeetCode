@@ -10,17 +10,15 @@
 var interpret = function(command) {
   let res = '';
   for (let i = 0; i < command.length; i++) {
-    let item = command[i];
+    const item = command[i];
     if (item === 'G') {
       res += 'G';
+    } else if (command[i + 1] === 'a') {
+      res += 'al';
+      i += 3;
     } else {
-      if (command[i + 1] === 'a') {
-        res += 'al';
-        i += 3;
-      } else {
-        res += 'o';
-        i += 1;
-      }
+      res += 'o';
+      i += 1;
     }
   }
   return res;
@@ -30,4 +28,3 @@ var interpret = function(command) {
 var interpret = function(command) {
   return command.replace(/\(\)/g, 'o').replace(/\(al\)/g, 'al');
 };
-

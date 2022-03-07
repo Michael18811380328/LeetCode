@@ -10,15 +10,15 @@
  * @return {string}
  */
 // Your runtime beats 90.65 % of javascript submissions
-var reformatDate = function(date) {
-  let arr = date.split(' ');
-  let year = arr[2];
+const reformatDate = function(date) {
+  const arr = date.split(' ');
+  const year = arr[2];
   let month = arr[1];
   let day = arr[0];
   // 转换
   // 月变化
-  let monthArr = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-  let tmp = monthArr.findIndex(item => item === month) + 1;
+  const monthArr = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  let tmp = monthArr.findIndex((item) => item === month) + 1;
   tmp = String(tmp).padStart(2, '0');
   month = tmp;
   // 日变化
@@ -31,4 +31,3 @@ var reformatDate = function(date) {
   return `${year}-${month}-${day}`;
 };
 // @lc code=end
-

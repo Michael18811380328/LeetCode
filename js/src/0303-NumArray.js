@@ -14,21 +14,21 @@
 // 132 ms
 // , 在所有 JavaScript 提交中击败了
 // 84.20%
-var NumArray = function(nums) {
-  let len = nums.length;
+const NumArray = function(nums) {
+  const len = nums.length;
   if (len === 0) return;
   this.sum = [];
   this.sum[0] = nums[0];
   if (len === 1) return;
   for (let i = 1; i < len; i++) {
     if (nums[i] || nums[i] === 0) {
-      this.sum[i] = this.sum[i - 1] + nums[i]; 
+      this.sum[i] = this.sum[i - 1] + nums[i];
     }
   }
 };
 
-/** 
- * @param {number} i 
+/**
+ * @param {number} i
  * @param {number} j
  * @return {number}
  */
@@ -36,11 +36,10 @@ NumArray.prototype.sumRange = function(i, j) {
   if (i === 0 && j === 0) {
     return this.sum[0];
   }
-  let end = this.sum[j];
-  let start = (this.sum[i - 1] || this.sum[i - 1] === 0) ? this.sum[i - 1] : 0;
+  const end = this.sum[j];
+  const start = (this.sum[i - 1] || this.sum[i - 1] === 0) ? this.sum[i - 1] : 0;
   return end - start;
 };
-
 
 /**
  * Your NumArray object will be instantiated and called as such:
@@ -48,4 +47,3 @@ NumArray.prototype.sumRange = function(i, j) {
  * var param_1 = obj.sumRange(i,j)
  */
 // @lc code=end
-

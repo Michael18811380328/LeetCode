@@ -11,7 +11,7 @@
  */
 // 辅助函数（判断字符串是否是token）
 // Your runtime beats 33.48 % of javascript submissions
-let checkStr = (str) => {
+const checkStr = (str) => {
   if (str.length === 0) {
     return false;
   }
@@ -52,11 +52,11 @@ let checkStr = (str) => {
     return false;
   }
   return true;
-}
+};
 
 // 思路：把句子转换成字符串数组，然后判断每一个字符串是否满足
-var countValidWords = function(sentence) {
-  let arr = sentence.split(' ');
+const countValidWords = function(sentence) {
+  const arr = sentence.split(' ');
   let times = 0;
   for (let i = 0; i < arr.length; i++) {
     // console.log(arr[i], checkStr(arr[i]));
@@ -74,4 +74,3 @@ var countValidWords = function(sentence) {
 // console.log(countValidWords('!this  1-s b8d!') === 0)
 // console.log(countValidWords('alice and  bob are playing stone-game10') === 5)
 // @lc code=end
-

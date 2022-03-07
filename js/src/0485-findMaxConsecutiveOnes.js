@@ -15,20 +15,20 @@
 // 输入的数组只包含 0 和1。
 // 输入数组的长度是正整数，且不超过 10,000。
 
-var findMaxConsecutiveOnes = function(nums) {
-    const len = nums.length;
-    if (len === 0 || nums.indexOf(1) === -1) {
-        return 0;
+const findMaxConsecutiveOnes = function(nums) {
+  const len = nums.length;
+  if (len === 0 || nums.indexOf(1) === -1) {
+    return 0;
+  }
+  let max = 1;
+  let tmp = 0;
+  for (let i = 0; i < len; i++) {
+    if (nums[i] === 1) {
+      tmp++;
+      max = tmp > max ? tmp : max;
+    } else {
+      tmp = 0;
     }
-    let max = 1;
-    let tmp = 0;
-    for (let i = 0; i < len; i++) {
-        if (nums[i] === 1) {
-            tmp++;
-            max = tmp > max ? tmp : max;
-        } else {
-            tmp = 0;
-        }
-    }
-    return max;
+  }
+  return max;
 };

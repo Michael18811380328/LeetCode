@@ -13,7 +13,7 @@
 // , 在所有 JavaScript 提交中击败了
 // 85.37%
 // 这样可以实现，但是性能不太好
-var diagonalSum = function(mat) {
+const diagonalSum = function(mat) {
   const len = mat.length;
   if (len === 1) return mat[0][0];
   // 主对角线：i === j 获取 && i + j !== mat

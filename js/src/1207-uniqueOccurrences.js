@@ -6,26 +6,24 @@
  * @param {number[]} arr
  * @return {boolean}
  */
-var uniqueOccurrences = function(arr) {
+const uniqueOccurrences = function(arr) {
   const len = arr.length;
   if (len < 2) {
     return true;
   }
-  let dict = {};
+  const dict = {};
   for (let i = 0; i < len; i++) {
-    let item = arr[i];
+    const item = arr[i];
     if (dict[item]) {
       dict[item]++;
     } else {
       dict[item] = 1;
     }
   }
-  let tmp = [];
-  for (let key in dict) {
-    let value = dict[key];
+  const tmp = [];
+  for (const key in dict) {
+    const value = dict[key];
     tmp.push(value);
   }
   return tmp.length === (Array.from(new Set(tmp))).length;
 };
-
-

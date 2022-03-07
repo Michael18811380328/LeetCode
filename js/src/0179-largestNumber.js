@@ -7,7 +7,7 @@
  * @return {string}
  */
 // Your runtime beats 67.57 % of javascript submissions
-var largestNumber = function(nums) {
+const largestNumber = function(nums) {
   if (nums.length === 1) {
     return String(nums[0]);
   }
@@ -16,7 +16,7 @@ var largestNumber = function(nums) {
     nums[i] = String(nums[i]);
   }
   nums.sort((a, b) => {
-    return String(a) + String(b) > String(b) + String(a) ? -1 : 1
+    return String(a) + String(b) > String(b) + String(a) ? -1 : 1;
   });
   // [ '9', '5', '34', '30', '3' ]
   let res = nums.join('');

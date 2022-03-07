@@ -10,9 +10,9 @@
  */
 // Your runtime beats 70.22 % of javascript submissions
 // 遍历树节点，然后把每一层放在临时数组中，求最大值即可
-var largestValues1 = function(root) {
-  let tmpList = [];
-  let runNode = (node, layer) => {
+const largestValues1 = function(root) {
+  const tmpList = [];
+  const runNode = (node, layer) => {
     if (!node) {
       return;
     }
@@ -22,9 +22,9 @@ var largestValues1 = function(root) {
     tmpList[layer].push(node.val);
     runNode(node.left, layer + 1);
     runNode(node.right, layer + 1);
-  }
+  };
   runNode(root, 0);
-  let list = [];
+  const list = [];
   tmpList.forEach((item, index) => {
     list[index] = Math.max(...item);
   });
@@ -32,9 +32,9 @@ var largestValues1 = function(root) {
 };
 
 // Your runtime beats 56.11 % of javascript submissions
-var largestValues2 = function(root) {
-  let list = [];
-  let runNode = (node, layer) => {
+const largestValues2 = function(root) {
+  const list = [];
+  const runNode = (node, layer) => {
     if (!node) {
       return;
     }
@@ -45,7 +45,7 @@ var largestValues2 = function(root) {
     }
     runNode(node.left, layer + 1);
     runNode(node.right, layer + 1);
-  }
+  };
   runNode(root, 0);
   return list;
 };

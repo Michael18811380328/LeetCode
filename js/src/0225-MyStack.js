@@ -1,12 +1,12 @@
 /**
  * Initialize your data structure here.
  */
-var MyStack = function() {
-    this.arr = [];
+const MyStack = function() {
+  this.arr = [];
 };
 
 /**
- * Push element x onto stack. 
+ * Push element x onto stack.
  * @param {number} x
  * @return {void}
  */
@@ -14,7 +14,7 @@ var MyStack = function() {
 // 那么真实情况下，可以循环一次操作，拿到或者删除当前的最后一个元素
 // 题目中，直接使用数组解决
 MyStack.prototype.push = function(x) {
-    this.arr.push(x);
+  this.arr.push(x);
 };
 
 /**
@@ -22,7 +22,7 @@ MyStack.prototype.push = function(x) {
  * @return {number}
  */
 MyStack.prototype.pop = function() {
-    return this.arr.pop();
+  return this.arr.pop();
 };
 
 /**
@@ -30,7 +30,7 @@ MyStack.prototype.pop = function() {
  * @return {number}
  */
 MyStack.prototype.top = function() {
-    return this.arr[this.arr.length - 1];
+  return this.arr[this.arr.length - 1];
 };
 
 /**
@@ -38,7 +38,7 @@ MyStack.prototype.top = function() {
  * @return {boolean}
  */
 MyStack.prototype.empty = function() {
-    return this.arr.length === 0;
+  return this.arr.length === 0;
 };
 
 /**

@@ -10,11 +10,11 @@
  * @return {string}
  */
 // Your runtime beats 84.75 % of javascript submissions
-var thousandSeparator = function(n) {
+const thousandSeparator = function(n) {
   if (n < 1000) {
     return String(n);
   }
-  let arr = [];
+  const arr = [];
   while (n > 0) {
     let remain = n % 1000;
     n = (n - remain) / 1000;
@@ -29,4 +29,3 @@ var thousandSeparator = function(n) {
   return arr.join('.');
 };
 // @lc code=end
-

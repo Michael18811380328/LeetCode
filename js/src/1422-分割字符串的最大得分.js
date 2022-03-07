@@ -13,15 +13,15 @@
 // , 在所有 JavaScript 提交中击败了
 // 72.46%
 
-var maxScore = function(s) {
+const maxScore = function(s) {
   if (s.length === 2) {
     return (s[0] === '0' ? 1 : 0) + (s[1] === '1' ? 1 : 0);
-  }  
+  }
   let max = 0;
   for (let i = 1; i < s.length; i++) {
-    let left = s.slice(0, i);
-    let right = s.slice(i);
-    let score = getValue(left, right);
+    const left = s.slice(0, i);
+    const right = s.slice(i);
+    const score = getValue(left, right);
     max = max > score ? max : score;
   }
   return max;
@@ -36,6 +36,5 @@ var getValue = function(str1, str2) {
     if (str2[i] === '1') res++;
   }
   return res;
-}
+};
 // @lc code=end
-

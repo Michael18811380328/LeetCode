@@ -13,10 +13,10 @@
 
 // 思路一：遍历nums1，然后找到对应在 nums2 的位置，然后再循环nums2 到最后，这样N2可以实现，但是效率不高
 // 100 ms, 在所有 JavaScript 提交中击败了38.72%
-var nextGreaterElement = function(nums1, nums2) {
-  let res = [];
+const nextGreaterElement = function(nums1, nums2) {
+  const res = [];
   for (let i = 0; i < nums1.length; i++) {
-    let item = nums1[i];
+    const item = nums1[i];
     let index = nums2.indexOf(item);
     let target;
     while (index <= nums2.length - 1) {
@@ -59,4 +59,3 @@ var nextGreaterElement = function(nums1, nums2) {
 // };
 
 // @lc code=end
-

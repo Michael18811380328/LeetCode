@@ -7,11 +7,11 @@
 // @lc code=start
 // Your runtime beats 63.16 % of javascript submissions
 // 思路二：使用栈实现
-var RecentCounter = function() {
+const RecentCounter = function() {
   this.count = [];
 };
 
-/** 
+/**
  * @param {number} t
  * @return {number}
  */
@@ -27,15 +27,14 @@ RecentCounter.prototype.ping = function(t) {
   return this.count.length;
 };
 
-
 // @lc code=start
 // Your runtime beats 63.16 % of javascript submissions
 // 思路二：使用栈实现
-var RecentCounter2 = function() {
+const RecentCounter2 = function() {
   this.count = [];
 };
 
-/** 
+/**
  * @param {number} t
  * @return {number}
  */
@@ -57,4 +56,3 @@ RecentCounter2.prototype.ping = function(t) {
  * var param_1 = obj.ping(t)
  */
 // @lc code=end
-

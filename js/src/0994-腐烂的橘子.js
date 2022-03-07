@@ -10,28 +10,26 @@
  */
 // Your runtime beats 5.66 % of javascript submissions
 // 当前性能太差了主要是后半部分性能很差
-var orangesRotting = function(grid) {
+const orangesRotting = function(grid) {
   // 出现的次数放在字典(todo：这里可以定义三个变量，减少内存使用)
-  let dict = {};
+  const dict = {};
   dict[0] = 0;
   dict[1] = 0;
   dict[2] = 0;
   // 坏了的位置
-  let reapPos = [];
+  const reapPos = [];
 
   // 先遍历一次，把出现的次数放在字典中
   const len1 = grid.length;
   const len2 = grid[0].length;
   for (let i = 0; i < len1; i++) {
     for (let j = 0; j < len2; j++) {
-      let curr = grid[i][j];
+      const curr = grid[i][j];
       if (curr === 0) {
         dict[0] = dict[0] + 1;
-      }
-      else if (curr === 1) {
+      } else if (curr === 1) {
         dict[1] = dict[1] + 1;
-      }
-      else if (curr === 2) {
+      } else if (curr === 2) {
         dict[2] = dict[2] + 1;
         // 然后把坏的果子的坐标获取到
         // 0 表示初始值（分钟）
@@ -47,7 +45,7 @@ var orangesRotting = function(grid) {
   // 这个做了，还有孤立的橙子，没有必要
 
   // 辅助函数：标记点位
-  let mark = (x, y, time) => {
+  const mark = (x, y, time) => {
     if (grid[x] && grid[x][y] === 1) {
       grid[x][y] = 2;
       reapPos.unshift([x, y, time]);
@@ -55,13 +53,13 @@ var orangesRotting = function(grid) {
       dict[1] = dict[1] - 1;
       max = time > max ? time : max;
     }
-  }
-  
+  };
+
   // BFS 遍历图节点
-  let check = (pos) => {
-    let x = pos[0];
-    let y = pos[1];
-    let time = pos[2];
+  const check = (pos) => {
+    const x = pos[0];
+    const y = pos[1];
+    const time = pos[2];
     if (grid[x] && grid[x][y] === 2) {
       // 先把当前标记为 false
       grid[x][y] = false;
@@ -77,7 +75,7 @@ var orangesRotting = function(grid) {
   // 遍历烂橘子
   // 二维数组中应该存储一个对象？遍历过的点，直接标记一下即可
   while (reapPos.length > 0) {
-    let pos = reapPos.pop();
+    const pos = reapPos.pop();
     check(pos);
   }
   // 遍历结束，如果还有新鲜的橘子，那就是没有遍历到的区域, 返回 -1
@@ -93,21 +91,20 @@ var orangesRotting = function(grid) {
 
 // 改进1版本
 // Your runtime beats 33.93 % of javascript submissions
-var orangesRotting1 = function(grid) {
+const orangesRotting1 = function(grid) {
   // 出现的次数
   let b = 0;
   // 坏了的位置
-  let reapPos = [];
+  const reapPos = [];
   // 先遍历一次，把出现的次数放在字典中
   const len1 = grid.length;
   const len2 = grid[0].length;
   for (let i = 0; i < len1; i++) {
     for (let j = 0; j < len2; j++) {
-      let curr = grid[i][j];
+      const curr = grid[i][j];
       if (curr === 1) {
         b = b + 1;
-      }
-      else if (curr === 2) {
+      } else if (curr === 2) {
         // 然后把坏的果子的坐标获取到 0 表示初始值（分钟）
         reapPos.push([i, j, 0]);
       }
@@ -116,7 +113,7 @@ var orangesRotting1 = function(grid) {
   if (b === 0) {
     return 0;
   }
-  let mark = (x, y, time) => {
+  const mark = (x, y, time) => {
     if (grid[x] && grid[x][y] === 1) {
       grid[x][y] = 2;
       reapPos.unshift([x, y, time]);
@@ -124,13 +121,13 @@ var orangesRotting1 = function(grid) {
       b = b - 1;
       max = time > max ? time : max;
     }
-  }
-  
+  };
+
   // BFS 遍历图节点
-  let check = (pos) => {
-    let x = pos[0];
-    let y = pos[1];
-    let time = pos[2];
+  const check = (pos) => {
+    const x = pos[0];
+    const y = pos[1];
+    const time = pos[2];
     if (grid[x] && grid[x][y] === 2) {
       grid[x][y] = false;
       mark(x, y + 1, time + 1);
@@ -142,7 +139,7 @@ var orangesRotting1 = function(grid) {
 
   let max = 0;
   while (reapPos.length > 0) {
-    let pos = reapPos.pop();
+    const pos = reapPos.pop();
     check(pos);
   }
   if (b > 0) {

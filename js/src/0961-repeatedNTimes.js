@@ -3,11 +3,11 @@
  * @return {number}
  */
 // 92 ms, 在所有 JavaScript 提交中击败了70.56%
-var repeatedNTimes = function(A) {
-  let hash = {};
+const repeatedNTimes = function(A) {
+  const hash = {};
   const len = A.length;
   for (let i = 0; i < len; i++) {
-    let key = A[i];
+    const key = A[i];
     if (hash[key]) {
       return key;
     } else {

@@ -10,14 +10,14 @@
  * @return {number}
  */
 // Your runtime beats 89.64 % of javascript submissions
-var maxProduct = function(nums) {
+const maxProduct = function(nums) {
   if (nums.length === 2) {
     return (nums[0] - 1) * (nums[1] - 1);
   }
   let max = (nums[0] - 1) * (nums[1] - 1);
   for (let i = 0; i < nums.length; i++) {
     for (let j = i + 1; j < nums.length; j++) {
-      let cur = (nums[i] - 1) * (nums[j] - 1);
+      const cur = (nums[i] - 1) * (nums[j] - 1);
       max = max > cur ? max : cur;
     }
   }

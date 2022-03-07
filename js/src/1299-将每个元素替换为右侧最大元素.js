@@ -10,16 +10,16 @@
  * @return {number[]}
  */
 // Your runtime beats 63.71 % of javascript submissions
-var replaceElements = function(arr) {
+const replaceElements = function(arr) {
   const len = arr.length;
-  let res = [-1];
+  const res = [-1];
   if (len === 1) {
     return res;
   }
   let max = arr[len - 1];
   for (let i = len - 2; i >= 0; i--) {
     res.unshift(max);
-    let curr = arr[i];
+    const curr = arr[i];
     if (curr > max) {
       max = curr;
     }
@@ -27,4 +27,3 @@ var replaceElements = function(arr) {
   return res;
 };
 // @lc code=end
-

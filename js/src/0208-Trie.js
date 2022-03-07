@@ -16,12 +16,12 @@ function TreeNode(key, isEnd) {
   this.value = {};
 }
 
-var Trie = function() {
+const Trie = function() {
   this.trie = new TreeNode(null, false);
 };
 
 /**
- * Inserts a word into the trie. 
+ * Inserts a word into the trie.
  * @param {string} word
  * @return {void}
  */
@@ -29,13 +29,12 @@ Trie.prototype.insert = function(word) {
   const len = word.length;
   let node = this.trie;
   for (let i = 0; i < len; i++) {
-    let str = word[i];
-    let isEnd = i === len - 1;
+    const str = word[i];
+    const isEnd = i === len - 1;
     // 如果已经有这个节点，那么就不需要新建（新建会覆盖原来的节点）
     if (!node.value[str]) {
       node.value[str] = new TreeNode(str, isEnd);
-    }
-    else if (isEnd && !node.value[str].isEnd) {
+    } else if (isEnd && !node.value[str].isEnd) {
       node.value[str].isEnd = true;
     }
     node = node.value[str];
@@ -43,7 +42,7 @@ Trie.prototype.insert = function(word) {
 };
 
 /**
- * Returns if the word is in the trie. 
+ * Returns if the word is in the trie.
  * @param {string} word
  * @return {boolean}
  */
@@ -51,7 +50,7 @@ Trie.prototype.search = function(word) {
   const len = word.length;
   let node = this.trie;
   for (let i = 0; i < len; i++) {
-    let str = word[i];
+    const str = word[i];
     if (!node.value[str]) {
       return false;
     }
@@ -61,7 +60,7 @@ Trie.prototype.search = function(word) {
 };
 
 /**
- * Returns if there is any word in the trie that starts with the given prefix. 
+ * Returns if there is any word in the trie that starts with the given prefix.
  * @param {string} prefix
  * @return {boolean}
  */
@@ -69,7 +68,7 @@ Trie.prototype.startsWith = function(prefix) {
   const len = prefix.length;
   let node = this.trie;
   for (let i = 0; i < len; i++) {
-    let str = prefix[i];
+    const str = prefix[i];
     if (!node.value[str]) {
       return false;
     }
@@ -94,4 +93,3 @@ Trie.prototype.startsWith = function(prefix) {
  * var param_3 = obj.startsWith(prefix)
  */
 // @lc code=end
-

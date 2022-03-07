@@ -8,25 +8,22 @@
  * @return {number}
  */
 // Your runtime beats 49.29 % of javascript submissions
-var specialArray = function(nums) {
+const specialArray = function(nums) {
   nums.sort((a, b) => a - b);
   const len = nums.length;
   let pointer = 0;
   let x = 0;
   while (pointer <= len - 1 && x <= 1000) {
     if (
-      nums[pointer] >= x && len - pointer === x &&
-      (nums[pointer - 1] > -1 && nums[pointer - 1] !== x || pointer === 0)
+      nums[pointer] >= x && len - pointer === x
+      && (nums[pointer - 1] > -1 && nums[pointer - 1] !== x || pointer === 0)
     ) {
       return x;
-    }
-    else if (nums[pointer] <= x) {
+    } else if (nums[pointer] <= x) {
       pointer++;
-    }
-    else if (len - pointer > x) {
+    } else if (len - pointer > x) {
       x++;
-    }
-    else {
+    } else {
       x++;
     }
     if (x > nums[len - 1]) return -1;

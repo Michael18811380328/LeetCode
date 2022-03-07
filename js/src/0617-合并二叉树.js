@@ -30,4 +30,3 @@ var mergeTrees = function(t1, t2) {
   return t1;
 };
 // @lc code=end
-

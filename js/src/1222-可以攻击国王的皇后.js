@@ -14,43 +14,38 @@
 // , 在所有 JavaScript 提交中击败了
 // 66.67%
 // 的用户
-var queensAttacktheKing = function(queens, king) {
+const queensAttacktheKing = function(queens, king) {
   // 先遍历一次数组，把可能攻击到的位置获取出来（八个子数组）
   // 然后获取每一个数组的最小值
   const X = king[0];
   const Y = king[1];
   // 这里存放八个方向的可以攻击的位置
-  let arr = [[],[],[],[],[],[],[],[]];
+  const arr = [[], [], [], [], [], [], [], []];
   for (let i = 0; i < queens.length; i++) {
-    let item = queens[i];
+    const item = queens[i];
     // 处理下面几个情况
     if (item[0] === X) {
       // 在一行
       item[1] > Y ? arr[0].push(item) : arr[1].push(item);
-    }
-    else if (item[1] === Y) {
+    } else if (item[1] === Y) {
       // 在一列
       item[0] > X ? arr[2].push(item) : arr[3].push(item);
-    }
-    else if ((item[0] - X) === (item[1] - Y)) {
+    } else if ((item[0] - X) === (item[1] - Y)) {
       // 在对角线上
       item[0] > X ? arr[4].push(item) : arr[5].push(item);
-    }
-    else if ((item[0] - X) === - (item[1] - Y)) {
+    } else if ((item[0] - X) === -(item[1] - Y)) {
       // 在对角线上
       item[0] > X ? arr[6].push(item) : arr[7].push(item);
-    } 
+    }
   }
   // 然后排序，获取最小的元素
-  let res = [];
+  const res = [];
   for (let i = 0; i < arr.length; i++) {
     if (arr[i].length === 1) {
       res.push(arr[i][0]);
-    }
-    else if (arr[i].length === 0) {
+    } else if (arr[i].length === 0) {
       continue;
-    }
-    else {
+    } else {
       // 有很多，那么获取距离最短的那个点
       let currentIndex = 0;
       let currentDis = Math.abs(arr[i][0][0] - X) + Math.abs(arr[i][0][1] - Y);
@@ -69,4 +64,3 @@ var queensAttacktheKing = function(queens, king) {
 // [[1,3],[0,7],[5,1],[2,5],[7,2],[1,2],[6,7],[3,3],[5,5],[1,5],[5,0],[0,4],[4,1],[1,1],[3,2],[2,3],[4,2],[1,0],[6,5],[2,7],[3,1],[4,3],[3,4]]
 // [0,2]
 // @lc code=end
-

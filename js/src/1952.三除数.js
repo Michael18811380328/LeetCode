@@ -32,23 +32,22 @@ var isThree = function(n) {
     return false;
   }
   // 1 先开方
-  let m = Math.sqrt(n);
+  const m = Math.sqrt(n);
   // 2 判断这个数是否是整数，如果不是整数，那么直接返回 false
   if (m !== Math.floor(m)) {
     return false;
   }
   // 辅助函数：判断是否是质数
-  let isPrime = (num) => {
+  const isPrime = (num) => {
     if (num <= 3) return true;
     for (let i = 2; i <= num / 2; i++) {
       if (num % i === 0) {
-        return false
+        return false;
       }
     }
     return true;
-  }
+  };
   // 3 如果是整数，判断这个数是否是质数，这样性能就提升很多了
   return isPrime(m);
 };
 // @lc code=end
-

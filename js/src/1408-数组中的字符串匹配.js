@@ -10,16 +10,16 @@
  * @return {string[]}
  */
 // Your runtime beats 62.5 % of javascript submissions
-var stringMatching = function(words) {
+const stringMatching = function(words) {
   words.sort((a, b) => {
     return a.length > b.length ? -1 : 1;
   });
-  let res = [];
-  let dict = {};
+  const res = [];
+  const dict = {};
   for (let i = 1; i < words.length; i++) {
     for (let j = 0; j < i; j++) {
       if (words[j].includes(words[i])) {
-        let key = words[i];
+        const key = words[i];
         if (!dict[key]) {
           dict[key] = true;
           res.push(words[i]);
@@ -31,4 +31,3 @@ var stringMatching = function(words) {
   return res;
 };
 // @lc code=end
-

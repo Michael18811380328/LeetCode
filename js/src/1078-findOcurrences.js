@@ -15,17 +15,17 @@
 // , 在所有 JavaScript 提交中击败了
 // 68.24%
 // 的用户
-var findOcurrences = function(text, first, second) {
-  let arr = text.split(' ');
-  let res = [];
+const findOcurrences = function(text, first, second) {
+  const arr = text.split(' ');
+  const res = [];
   const len = arr.length;
   if (len < 3) {
     return res;
   }
   for (let i = 1; i < len - 1; i++) {
     if (
-      arr[i] === second &&
-      arr[i - 1] === first
+      arr[i] === second
+      && arr[i - 1] === first
     ) {
       res.push(arr[i + 1]);
     }
@@ -33,4 +33,3 @@ var findOcurrences = function(text, first, second) {
   return res;
 };
 // @lc code=end
-

@@ -13,7 +13,7 @@
 // , 在所有 JavaScript 提交中击败了
 // 31.03%
 
-var modifyString = function(s) {
+const modifyString = function(s) {
   for (let i = 0; i < s.length; i++) {
     if (s[i] === '?') {
       let item = 'a';
@@ -32,4 +32,3 @@ var modifyString = function(s) {
   return s;
 };
 // @lc code=end
-

@@ -14,18 +14,18 @@ const canConstruct = function(ransomNote, magazine) {
   if (l1 > l2) {
     return false;
   }
-  let dict2 = {};
+  const dict2 = {};
   for (let i = 0; i < l2; i++) {
-    let key = magazine[i];
+    const key = magazine[i];
     if (dict2[key]) {
       dict2[key]++;
     } else {
       dict2[key] = 1;
     }
   }
-  let dict1 = {};
+  const dict1 = {};
   for (let j = 0; j < l1; j++) {
-    let key = ransomNote[j];
+    const key = ransomNote[j];
     if (dict1[key]) {
       dict1[key]++;
     } else {

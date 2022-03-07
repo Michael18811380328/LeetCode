@@ -17,17 +17,15 @@
  * @return {number}
  */
 // Your runtime beats 38.94 % of javascript submissions
-var getDecimalValue = function(head) {
+const getDecimalValue = function(head) {
   var getValue = (node) => {
     if (node.next) {
-      return '' + node.val + getValue(node.next);
+      return `${node.val}${getValue(node.next)}`;
     }
-    return '' + node.val;
-  }
-  let binary = getValue(head);
+    return `${node.val}`;
+  };
+  const binary = getValue(head);
   return parseInt(binary, 2);
 };
 
-
 // @lc code=end
-

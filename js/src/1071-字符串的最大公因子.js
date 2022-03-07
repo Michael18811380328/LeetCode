@@ -11,10 +11,10 @@
  * @return {string}
  */
 // Your runtime beats 59.8 % of javascript submissions
-var gcdOfStrings = function(str1, str2) {
-  let len = Math.min(str1.length, str2.length);
+const gcdOfStrings = function(str1, str2) {
+  const len = Math.min(str1.length, str2.length);
   for (let i = len; i >= 1; i--) {
-    let prefix = str1.slice(0, i);
+    const prefix = str1.slice(0, i);
     if (check(str1, prefix) && check(str2, prefix)) {
       return prefix;
     }
@@ -30,6 +30,5 @@ var check = function(strs, prefix) {
     return false;
   }
   return strs === prefix.padEnd(len, prefix);
-}
+};
 // @lc code=end
-

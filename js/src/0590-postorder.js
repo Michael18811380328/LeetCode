@@ -21,8 +21,8 @@
 // , 在所有 JavaScript 提交中击败了
 // 95.50%
 // 的用户
-var postorder = function(root) {
-  let list = [];
+const postorder = function(root) {
+  const list = [];
   runNode(root, list);
   return list;
 };
@@ -36,6 +36,5 @@ var runNode = function(node, list) {
     }
   }
   list.push(node.val);
-}
+};
 // @lc code=end
-

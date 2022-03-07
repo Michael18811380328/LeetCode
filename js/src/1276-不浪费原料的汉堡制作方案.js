@@ -11,7 +11,7 @@
  * @return {number[]}
  */
 //  Your runtime beats 31.25 % of javascript submissions
-var numOfBurgers = function(tomatoSlices, cheeseSlices) {
+const numOfBurgers = function(tomatoSlices, cheeseSlices) {
   // 4x + 2y = A
   // x + y = B
   // 求 A 和 B 的正整数解
@@ -23,4 +23,3 @@ var numOfBurgers = function(tomatoSlices, cheeseSlices) {
   return [];
 };
 // @lc code=end
-

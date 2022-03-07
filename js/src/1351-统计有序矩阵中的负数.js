@@ -26,10 +26,10 @@
 
 // 思路二：改进后
 // Your runtime beats 89.94 % of javascript submissions
-var countNegatives = function(grid) {
+const countNegatives = function(grid) {
   let sum = 0;
   for (let i = 0; i < grid.length; i++) {
-    let item = grid[i];
+    const item = grid[i];
     for (let j = 0; j < item.length; j++) {
       if (item[j] < 0) {
         sum += item.length - j;
@@ -42,4 +42,3 @@ var countNegatives = function(grid) {
 
 // 思路3：二分法获取当期行的负数的开始位置
 // @lc code=end
-

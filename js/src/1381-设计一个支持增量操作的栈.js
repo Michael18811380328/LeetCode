@@ -9,12 +9,12 @@
  * @param {number} maxSize
  */
 // Your runtime beats 23.3 % of javascript submissions
-var CustomStack = function(maxSize) {
+const CustomStack = function(maxSize) {
   stack = [];
   max = maxSize;
 };
 
-/** 
+/**
  * @param {number} x
  * @return {void}
  */
@@ -31,8 +31,8 @@ CustomStack.prototype.pop = function() {
   return stack.length === 0 ? -1 : stack.pop();
 };
 
-/** 
- * @param {number} k 
+/**
+ * @param {number} k
  * @param {number} val
  * @return {void}
  */
@@ -54,4 +54,3 @@ CustomStack.prototype.increment = function(k, val) {
  * obj.increment(k,val)
  */
 // @lc code=end
-

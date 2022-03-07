@@ -10,11 +10,11 @@
  * @return {number}
  */
 // Your runtime beats 93.43 % of javascript submissions
-var findShortestSubArray = function(nums) {
-  let dict = {};
+const findShortestSubArray = function(nums) {
+  const dict = {};
   let max = 0;
   for (let i = 0; i < nums.length; i++) {
-    let key = nums[i];
+    const key = nums[i];
     if (!dict[key]) {
       dict[key] = {};
       dict[key].start = i;
@@ -29,10 +29,10 @@ var findShortestSubArray = function(nums) {
     return 1;
   }
   let minLen;
-  for (let key in dict) {
-    let item = dict[key];
+  for (const key in dict) {
+    const item = dict[key];
     if (item.times === max) {
-      let tmp = item.end - item.start + 1;
+      const tmp = item.end - item.start + 1;
       // console.log(tmp);
       if (minLen >= 0) {
         minLen = minLen < tmp ? minLen : tmp;
@@ -44,4 +44,3 @@ var findShortestSubArray = function(nums) {
   return minLen;
 };
 // @lc code=end
-

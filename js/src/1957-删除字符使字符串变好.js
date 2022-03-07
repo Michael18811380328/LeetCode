@@ -15,7 +15,7 @@
 var makeFancyString = function(s) {
   const len = s.length;
   if (len <= 2) return s;
-  let res = '' + s[0] + s[1];
+  let res = `${s[0]}${s[1]}`;
   for (let i = 2; i < len; i++) {
     if (s[i] === s[i - 2] && s[i] === s[i - 1]) {
       continue;
@@ -35,9 +35,6 @@ var makeFancyString = function(s) {
 var makeFancyString = function(s) {
   const len = s.length;
   if (len <= 2) return s;
-  
 };
 
-
 // @lc code=end
-

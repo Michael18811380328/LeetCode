@@ -8,7 +8,7 @@
  * @param {number} K
  * @return {string}
  */
-var licenseKeyFormatting = function(S, K) {
+const licenseKeyFormatting = function(S, K) {
   // 第一步，先去掉全部的破折号，正则
   let s = S.replace(/\-/g, '');
   // console.log(s);
@@ -18,9 +18,9 @@ var licenseKeyFormatting = function(S, K) {
     return s;
   }
   // 第三步，设置一个数组，然后从字符串后面不断截取 K 个字符，然后放在数组中 while 循环
-  let arr = [];
+  const arr = [];
   while (s.length > 0) {
-    let tmp = s.slice(-K);
+    const tmp = s.slice(-K);
     s = s.slice(0, -K);
     arr.unshift(tmp);
   }

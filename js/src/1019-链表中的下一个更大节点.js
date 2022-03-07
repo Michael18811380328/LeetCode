@@ -19,14 +19,14 @@
 // Your runtime beats 34.55 % of javascript submissions
 // 思路一：直接转换成数组，然后计算结果数组
 // 这样循环较多，性能可能不好
-var nextLargerNodes = function(head) {
-  let arr = [];
+const nextLargerNodes = function(head) {
+  const arr = [];
   while (head) {
-    let val = head.val;
+    const val = head.val;
     arr.push(val);
     head = head.next;
   }
-  let res = [];
+  const res = [];
   for (let i = 0; i < arr.length; i++) {
     // 如果下一个节点的值大于上一个节点
     // 那么上一个节点的目标就是下一个节点的值
@@ -49,4 +49,3 @@ var nextLargerNodes = function(head) {
   return res;
 };
 // @lc code=end
-

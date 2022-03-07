@@ -16,7 +16,7 @@
  * @param {TreeNode} root
  * @return {number}
  */
-var sumOfLeftLeaves = function(root) {
+const sumOfLeftLeaves = function(root) {
   return runNode(root, false);
 };
 
@@ -32,8 +32,7 @@ var runNode = function(node, isLeft) {
     return node.val;
   }
   return runNode(node.right, false) + runNode(node.left, true);
-}
+};
 
 // 必须是叶子节点
 // @lc code=end
-

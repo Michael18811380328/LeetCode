@@ -45,7 +45,6 @@ function singleNumber2(nums) {
   }
 }
 
-
 // 方案三：改进版：借用对象，节省时间。可以把已经出现的次数放在一个数组中，这样可以较少indexOf执行
 // 320 ms, 在所有 javascript 提交中击败了16.45%
 function singleNumber3(nums) {

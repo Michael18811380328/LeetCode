@@ -32,16 +32,16 @@ var countTriples = function(n) {
 // 思路2：既然是判断相等，那么可以使用字典优化一层循环 N * 2
 // Your runtime beats 44.83 % of javascript submissions
 var countTriples = function(n) {
-  let dict = {};
-  let max = n * n;
+  const dict = {};
+  const max = n * n;
   for (let i = 1; i <= n; i++) {
-    let curr = i * i;
+    const curr = i * i;
     dict[curr] = true;
   }
   let count = 0;
   for (let i = 1; i <= n; i++) {
     for (let j = i + 1; j <= n; j++) {
-      let sum = i * i + j * j;
+      const sum = i * i + j * j;
       if (dict[sum]) {
         count++;
       }
@@ -54,4 +54,3 @@ var countTriples = function(n) {
 };
 
 // @lc code=end
-

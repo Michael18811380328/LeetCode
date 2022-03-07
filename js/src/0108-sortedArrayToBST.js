@@ -14,7 +14,7 @@
  */
 //  [108] 将有序数组转换为二叉搜索树
 //  92 ms 在所有 JavaScript 提交中击败了 89.29%
-var sortedArrayToBST = function(nums) {
+const sortedArrayToBST = function(nums) {
   // 辅助函数
   const generateNode = (start, end) => {
     // 如果左大于右，返回错误，不设置节点
@@ -26,7 +26,7 @@ var sortedArrayToBST = function(nums) {
     }
     // start < end
     // 找到中间的节点作为根节点，然后递归设置子节点
-    let middle = Math.floor((start + end) / 2);
+    const middle = Math.floor((start + end) / 2);
     const node = new TreeNode(nums[middle]);
     node.left = generateNode(start, middle - 1);
     node.right = generateNode(middle + 1, end);

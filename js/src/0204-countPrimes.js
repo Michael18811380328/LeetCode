@@ -131,7 +131,6 @@ function countPrimes2(n) {
   return result;
 }
 
-
 export {
   isPrism, countPrimes, countPrimes2, countPrimes3,
 };

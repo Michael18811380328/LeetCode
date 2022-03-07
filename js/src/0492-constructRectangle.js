@@ -5,7 +5,7 @@
  * @param {number} area
  * @return {number[]}
  */
-var constructRectangle = function(area) {
+const constructRectangle = function(area) {
   // 处理特殊情况： 0
   if (area === 0) {
     return [];
@@ -13,11 +13,11 @@ var constructRectangle = function(area) {
   if (area < 4) {
     return [area, 1];
   }
-  let large = Math.floor(Math.sqrt(area));
+  const large = Math.floor(Math.sqrt(area));
   for (let i = large; i > 1; i++) {
     if (area / i === Math.floor(area / i)) {
-      let max = Math.max(i, area / i);
-      let min = i === max ? area / i : i;
+      const max = Math.max(i, area / i);
+      const min = i === max ? area / i : i;
       return [max, min];
     }
   }

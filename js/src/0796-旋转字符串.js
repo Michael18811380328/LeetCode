@@ -19,7 +19,7 @@ var rotateString = function(A, B) {
   const bLen = B.length;
   if (aLen !== bLen) return false;
   for (let i = 0; i < aLen; i++) {
-    let a = A.slice(i) + A.slice(0, i);
+    const a = A.slice(i) + A.slice(0, i);
     if (a === B) return true;
   }
   return false;
@@ -35,8 +35,7 @@ var rotateString = function(A, B) {
   const aLen = A.length;
   const bLen = B.length;
   if (aLen !== bLen) return false;
-  let a = A + A;
+  const a = A + A;
   return a.indexOf(B) > -1;
 };
 // @lc code=end
-

@@ -13,14 +13,14 @@
 // , 在所有 JavaScript 提交中击败了
 // 83.41%
 // 的用户
-var reorderSpaces = function(text) {
+const reorderSpaces = function(text) {
   if (text.indexOf(' ') === -1) return text;
   const len = text.length;
   let spaceLen = 0;
   for (let i = 0; i < len; i++) {
     if (text[i] === ' ') spaceLen++;
   }
-  let arr = text.split(' ').filter(item => item.length > 0);
+  const arr = text.split(' ').filter((item) => item.length > 0);
   if (arr.length === 1) {
     let finalStr = '';
     for (let i = 0; i < spaceLen; i++) {
@@ -42,4 +42,3 @@ var reorderSpaces = function(text) {
   return arr.join(midStr) + finalStr;
 };
 // @lc code=end
-

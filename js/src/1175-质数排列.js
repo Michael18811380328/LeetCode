@@ -12,24 +12,25 @@
  */
 // 100 测试通过
 // Your runtime beats 96.77 % of javascript submissions
-var numPrimeArrangements = function(n) {
-  let MOD = 1000000007;
-  let arr = new Array(n).fill(true);
+const numPrimeArrangements = function(n) {
+  const MOD = 1000000007;
+  const arr = new Array(n).fill(true);
   arr[0] = false; // 1 不是质数
   for (let i = 1; i < n; i++) {
     // 当前的索引是1
     // 先通过动态规划计算N之内的质数的个数
-    let index = i + 1; // 从2开始
+    const index = i + 1; // 从2开始
     for (let j = 2; j <= n / index; j++) {
       arr[index * j - 1] = false;
     }
   }
-  let a = 0, b = 0;
-  arr.forEach(item => {
+  let a = 0; let
+    b = 0;
+  arr.forEach((item) => {
     item === true ? a++ : b++;
   });
   // 关键问题是这里的数字很大很大
-  var factorial = function(a, b) {
+  const factorial = function(a, b) {
     let res = 1;
     for (let i = 1; i <= a; i++) {
       res *= i;
@@ -44,4 +45,3 @@ var numPrimeArrangements = function(n) {
   return factorial(a, b);
 };
 // @lc code=end
-

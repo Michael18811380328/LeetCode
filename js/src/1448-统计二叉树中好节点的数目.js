@@ -18,16 +18,16 @@
  * @return {number}
  */
 //  Your runtime beats 47.3 % of javascript submissions
-var goodNodes = function(root) {
+const goodNodes = function(root) {
   let goodNumber = 0;
   // 辅助函数，判断一个点是否是好节点
   var runNode = (node, max) => {
     if (!node) return;
-    let val = node.val;
+    const val = node.val;
     if (val >= max) {
       goodNumber++;
     }
-    let nextMax = Math.max(max, val);
+    const nextMax = Math.max(max, val);
     runNode(node.left, nextMax);
     runNode(node.right, nextMax);
   };
@@ -41,4 +41,3 @@ var goodNodes = function(root) {
 // [-1,5,-2,4,4,2,-2,null,null,-4,null,-2,3,null,-2,0,null,-1,null,-3,null,-4,-3,3,null,null,null,null,null,null,null,3,-3]
 // 这个过不去
 // @lc code=end
-

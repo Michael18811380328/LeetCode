@@ -41,13 +41,13 @@
 // 思路二：两层循环
 // 196 ms
 // Your runtime beats 50 % of javascript submissions
-var numTriplets = function(nums1, nums2) {
-  var foo = (arr1, arr2) => {
+const numTriplets = function(nums1, nums2) {
+  const foo = (arr1, arr2) => {
     let sum = 0;
     // 获取字典和出现的个数
-    const arr3 = arr2.map(item => Math.pow(item, 2));
-    let dict = {};
-    arr3.forEach(ele => {
+    const arr3 = arr2.map((item) => Math.pow(item, 2));
+    const dict = {};
+    arr3.forEach((ele) => {
       if (dict[ele]) {
         dict[ele]++;
       } else {
@@ -70,4 +70,3 @@ var numTriplets = function(nums1, nums2) {
 };
 
 // @lc code=end
-

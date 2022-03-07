@@ -10,15 +10,14 @@
  * @return {number[]}
  */
 // Your runtime beats 48.15 % of javascript submissions
-var decompressRLElist = function(nums) {
-  let res = [];
+const decompressRLElist = function(nums) {
+  const res = [];
   while (nums.length > 0) {
-    let times = nums.shift();
-    let num = nums.shift();
-    let arr = new Array(times).fill(num);
+    const times = nums.shift();
+    const num = nums.shift();
+    const arr = new Array(times).fill(num);
     res.push(...arr);
   }
   return res;
 };
 // @lc code=end
-

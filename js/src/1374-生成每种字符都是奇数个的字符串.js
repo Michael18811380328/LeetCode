@@ -10,15 +10,14 @@
  * @return {string}
  */
 // Your runtime beats 15.34 % of javascript submissions
-var generateTheString = function(n) {
+const generateTheString = function(n) {
   let res = '';
   if (n % 2 === 0) {
     res = res.padEnd(n - 1, 'a');
-    res = res + 'b';
+    res = `${res}b`;
   } else {
     res = res.padEnd(n, 'a');
   }
   return res;
 };
 // @lc code=end
-

@@ -10,13 +10,13 @@
  * @return {boolean}
  */
 // Your runtime beats 55.35 % of javascript submissions
-var threeConsecutiveOdds = function(arr) {
+const threeConsecutiveOdds = function(arr) {
   const len = arr.length;
   if (len < 3) return false;
   for (let i = 0; i <= len - 3; i++) {
-    let f1 = arr[i] % 2;
-    let f2 = arr[i + 1] % 2;
-    let f3 = arr[i + 2] % 2;
+    const f1 = arr[i] % 2;
+    const f2 = arr[i + 1] % 2;
+    const f3 = arr[i + 2] % 2;
     if (f1 && f2 && f3) {
       return true;
     }
@@ -29,4 +29,3 @@ var threeConsecutiveOdds = function(arr) {
   return false;
 };
 // @lc code=end
-

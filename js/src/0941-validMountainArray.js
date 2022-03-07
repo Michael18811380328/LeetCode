@@ -6,8 +6,8 @@
  * @param {number[]} A
  * @return {boolean}
  */
-var validMountainArray = function(A) {
-  let len = A.length;
+const validMountainArray = function(A) {
+  const len = A.length;
   if (len < 3) return false;
   if (A[0] > A[1]) return false;
   // [1,2,3,4,5] false
@@ -21,11 +21,9 @@ var validMountainArray = function(A) {
         return false;
       }
       continue;
-    }
-    else if (A[i] === A[i + 1]) {
+    } else if (A[i] === A[i + 1]) {
       return false;
-    }
-    else if (A[i] > A[i + 1]) {
+    } else if (A[i] > A[i + 1]) {
       if (!reach) reach = true;
     }
   }

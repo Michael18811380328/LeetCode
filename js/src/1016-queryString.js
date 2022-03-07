@@ -16,7 +16,7 @@
 // (64 ms) Your runtime beats 94.44 % of javascript submissions
 var queryString = function(s, n) {
   for (let i = 1; i <= n; i++) {
-    let current = i.toString(2);
+    const current = i.toString(2);
     if (!s.includes(current)) return false;
   }
   return true;
@@ -31,19 +31,19 @@ var queryString = function(s, n) {
 // S的长度小于1000，这个循环就是 1000 * 1000 这个计算较差
 // Your runtime beats 5.56 % of javascript submissions
 var queryString = function(s, n) {
-  let dict = {};
+  const dict = {};
   for (let len = 1; len <= s.length; len++) {
     for (let start = 0; start <= s.length - len; start++) {
-      let currStr = s.slice(start, start + len);
-      let num = parseInt(currStr, 2);
+      const currStr = s.slice(start, start + len);
+      const num = parseInt(currStr, 2);
       if (!dict[num]) {
         dict[num] = true;
       }
     }
   }
-  let keyLen = Object.keys(dict).length;
+  const keyLen = Object.keys(dict).length;
   if (keyLen < n) return false;
-  let res = [...Object.keys(dict)].sort((a, b) => a - b > 0);
+  const res = [...Object.keys(dict)].sort((a, b) => a - b > 0);
   // handle all is 1
   if (res[0] !== '0') {
     res.unshift('0');
@@ -57,4 +57,3 @@ var queryString = function(s, n) {
 };
 
 // @lc code=end
-

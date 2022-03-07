@@ -10,10 +10,10 @@
  * @return {number[]}
  */
 // Your runtime beats 8.21 % of javascript submissions
-var sumZero = function(n) {
+const sumZero = function(n) {
   if (n === 1) return [0];
   let sum = 0;
-  let arr = [];
+  const arr = [];
   for (let i = 0; i < n - 1; i++) {
     arr.push(i);
     sum += i;
@@ -22,4 +22,3 @@ var sumZero = function(n) {
   return arr;
 };
 // @lc code=end
-

@@ -5,7 +5,7 @@
 // 示例 1:
 // 输入: g = [1,2,3], s = [1,1]
 // 输出: 1
-// 解释: 
+// 解释:
 // 你有三个孩子和两块小饼干，3个孩子的胃口值分别是：1,2,3。
 // 虽然你有两块小饼干，由于他们的尺寸都是1，你只能让胃口值是1的孩子满足。
 // 所以你应该输出1。
@@ -19,12 +19,12 @@ var findContentChildren = function(g, s) {
   // ？这两个数组是否排序，这个很影响性能
   // 可以按照从小到大的顺序排列，然后使用贪心算法，依次遍历数组，看是否满足
   const gLen = g.length;
-  const sLen = s.length;  
+  const sLen = s.length;
   if (gLen === 0 || sLen === 0) return 0;
   g = g.sort((a, b) => a - b);
   s = s.sort((a, b) => a - b);
   let result = 0;
-  var getResult = (item) => {
+  const getResult = (item) => {
     let index = 0;
     while (index < sLen) {
       if (s[index] >= item) {
@@ -35,9 +35,9 @@ var findContentChildren = function(g, s) {
         index++;
       }
     }
-  }
+  };
   for (let i = 0; i < gLen; i++) {
-    let item = g[i];
+    const item = g[i];
     getResult(item);
   }
   return result;
@@ -46,7 +46,7 @@ var findContentChildren = function(g, s) {
 // 思路二 140 ms, 在所有 JavaScript 提交中击败了15.20%
 var findContentChildren = function(g, s) {
   const gLen = g.length;
-  const sLen = s.length;  
+  const sLen = s.length;
   if (gLen === 0 || sLen === 0) return 0;
   g = g.sort((a, b) => a - b);
   s = s.sort((a, b) => a - b);

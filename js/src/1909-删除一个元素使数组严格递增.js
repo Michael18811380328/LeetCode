@@ -12,19 +12,19 @@
 
 // 辅助函数：判断一个函数是否是单调递增函数
 // 这个如何记忆一个片段是单调递增的？现在是 N 平方的性能
-var isIncrease = function(list) {
+const isIncrease = function(list) {
   const len = list.length;
-  if (len === 0 || len === 1) return true; 
+  if (len === 0 || len === 1) return true;
   for (let i = 1; i < len; i++) {
     if (list[i] <= list[i - 1]) {
       return false;
     }
   }
   return true;
-}
+};
 
 // Your runtime beats 64.17 % of javascript submissions
-var canBeIncreasing = function(nums) {
+const canBeIncreasing = function(nums) {
   const len = nums.length;
   if (len === 2) {
     return true;
@@ -33,8 +33,8 @@ var canBeIncreasing = function(nums) {
     return true;
   }
   for (let i = 0; i < len; i++) {
-    let left = nums.slice(0, i);
-    let right = nums.slice(i + 1);
+    const left = nums.slice(0, i);
+    const right = nums.slice(i + 1);
     if ((left.length === 0 || right.length === 0 || left[left.length - 1] < right[0]) && isIncrease(left) && isIncrease(right)) {
       return true;
     }
@@ -45,4 +45,3 @@ var canBeIncreasing = function(nums) {
 // [100,21,100]
 
 // @lc code=end
-

@@ -10,7 +10,7 @@
  * @return {number}
  */
 // Your runtime beats 57 % of javascript submissions
-var hIndex = function(citations) {
+const hIndex = function(citations) {
   const len = citations.length;
   if (len === 0) {
     return 0;
@@ -22,7 +22,7 @@ var hIndex = function(citations) {
   let result = 1;
   for (let i = 0; i < len; i++) {
     if (citations[i] >= i + 1) {
-      let tmp = Math.min(citations[i], i + 1);
+      const tmp = Math.min(citations[i], i + 1);
       result = tmp > result ? tmp : result;
     }
   }
@@ -36,4 +36,3 @@ var hIndex = function(citations) {
 // [11,15] 2
 // [4,4,0,0] 2
 // @lc code=end
-

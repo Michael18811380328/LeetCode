@@ -9,15 +9,15 @@
  * @param {number[][]} rectangle
  */
 // Your runtime beats 88.68 % of javascript submissions
-var SubrectangleQueries = function(rectangle) {
+const SubrectangleQueries = function(rectangle) {
   this.matrix = rectangle;
 };
 
-/** 
- * @param {number} row1 
- * @param {number} col1 
- * @param {number} row2 
- * @param {number} col2 
+/**
+ * @param {number} row1
+ * @param {number} col1
+ * @param {number} row2
+ * @param {number} col2
  * @param {number} newValue
  * @return {void}
  */
@@ -34,8 +34,8 @@ SubrectangleQueries.prototype.updateSubrectangle = function(row1, col1, row2, co
   }
 };
 
-/** 
- * @param {number} row 
+/**
+ * @param {number} row
  * @param {number} col
  * @return {number}
  */
@@ -50,4 +50,3 @@ SubrectangleQueries.prototype.getValue = function(row, col) {
  * var param_2 = obj.getValue(row,col)
  */
 // @lc code=end
-

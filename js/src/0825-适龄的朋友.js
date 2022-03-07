@@ -12,7 +12,7 @@
 // Your runtime beats 7.41 % of javascript submissions
 // 现在性能很差 (6908 ms)
 // 平均耗时100ms
-var numFriendRequests = function(ages) {
+const numFriendRequests = function(ages) {
   ages.sort((a, b) => a - b);
   const len = ages.length;
   let res = 0;
@@ -21,7 +21,7 @@ var numFriendRequests = function(ages) {
   for (let i = 0; i < len; i++) {
     for (let j = 0; j < len; j++) {
       if (i === j || ages[i] < ages[j]) continue;
-      let isFriend = check(ages[i], ages[j]);
+      const isFriend = check(ages[i], ages[j]);
       if (isFriend) res++;
     }
   }
@@ -36,7 +36,6 @@ var check = function(a, b) {
     return false;
   }
   return true;
-}
+};
 
 // @lc code=end
-

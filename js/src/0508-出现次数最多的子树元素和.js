@@ -17,28 +17,27 @@
  * @return {number[]}
  */
 // Your runtime beats 24.39 % of javascript submissions
-var findFrequentTreeSum = function(root) {
+const findFrequentTreeSum = function(root) {
   if (!root) return [];
   if (!root.left && !root.right) {
-    let key = root.val;
+    const key = root.val;
     return [key];
   }
-  let dict = {};
-  let sum = runNode(root.left, dict) + runNode(root.right, dict);
-  let key = sum + root.val;
+  const dict = {};
+  const sum = runNode(root.left, dict) + runNode(root.right, dict);
+  const key = sum + root.val;
   dict[key] ? dict[key]++ : dict[key] = 1;
   // 获取最大值
   let res = [];
   let max = 0;
   // console.log(dict);
-  for (let key in dict) {
-    let times = dict[key];
+  for (const key in dict) {
+    const times = dict[key];
     if (times > max) {
       max = times;
       res = [];
       res.push(key);
-    }
-    else if (times === max) {
+    } else if (times === max) {
       res.push(key);
     }
   }
@@ -48,14 +47,13 @@ var findFrequentTreeSum = function(root) {
 var runNode = (node, dict) => {
   if (!node) return 0;
   if (!node.left && !node.right) {
-    let key = node.val;
+    const key = node.val;
     dict[key] ? dict[key]++ : dict[key] = 1;
     return node.val;
   }
-  let sum = runNode(node.left, dict) + runNode(node.right, dict);
-  let key = sum + node.val;
+  const sum = runNode(node.left, dict) + runNode(node.right, dict);
+  const key = sum + node.val;
   dict[key] ? dict[key]++ : dict[key] = 1;
   return key;
-}
+};
 // @lc code=end
-

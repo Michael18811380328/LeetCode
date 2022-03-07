@@ -35,7 +35,7 @@ var surfaceArea = function(grid) {
   let horizontal = 0;
   for (let i = 0; i < len; i++) {
     for (let j = 0; j < len; j++) {
-      let curr = grid[i][j];
+      const curr = grid[i][j];
       // 计算四个面水平方向重叠的表面积
       if (j !== len - 1) {
         horizontal += Math.min(grid[i][j + 1], curr);
@@ -44,10 +44,10 @@ var surfaceArea = function(grid) {
         horizontal += Math.min(grid[i][j - 1], curr);
       }
       if (i !== len - 1) {
-        horizontal += Math.min(grid[i + 1][j], curr)
+        horizontal += Math.min(grid[i + 1][j], curr);
       }
       if (i !== 0) {
-        horizontal += Math.min(grid[i - 1][j], curr)
+        horizontal += Math.min(grid[i - 1][j], curr);
       }
     }
   }

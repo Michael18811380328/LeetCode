@@ -17,16 +17,16 @@
  * @return {number}
  */
 // Your runtime beats 50.52 % of javascript submissions
-var minDiffInBST = function(root) {
+const minDiffInBST = function(root) {
   if (!root) {
     return null;
   }
-  let list = [];
+  const list = [];
   runNode(root, list);
   list.sort((a, b) => a - b);
   let min = list[1] - list[0];
   for (let i = 1; i < list.length; i++) {
-    let item = list[i] - list[i - 1];
+    const item = list[i] - list[i - 1];
     min = item < min ? item : min;
   }
   return min;
@@ -37,6 +37,5 @@ var runNode = (node, list) => {
   list.push(node.val);
   runNode(node.left, list);
   runNode(node.right, list);
-}
+};
 // @lc code=end
-

@@ -19,7 +19,7 @@ var getIntersectionNode = function(headA, headB) {
   if (!headA || !headB) {
     return null;
   }
-  let hashmap = new Map();
+  const hashmap = new Map();
   let p1 = headA;
   while (p1) {
     hashmap.set(p1, 1);

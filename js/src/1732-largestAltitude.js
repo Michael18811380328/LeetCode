@@ -20,7 +20,7 @@ var largestAltitude = function(gain) {
   let current = 0;
   const len = gain.length;
   for (let i = 0; i < len; i++) {
-    let item = gain[i];
+    const item = gain[i];
     current += item;
     if (max < current) {
       max = current;

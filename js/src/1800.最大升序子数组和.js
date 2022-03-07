@@ -10,7 +10,7 @@
  * @return {number}
  * Your runtime beats 53.97 % of javascript submissions
  */
-var maxAscendingSum = function(nums) {
+const maxAscendingSum = function(nums) {
   // 1、先获取数组最大值，处理数组降序的情况
   let max = Math.max(...nums);
   let tmp = nums[0];
@@ -31,4 +31,3 @@ var maxAscendingSum = function(nums) {
   return Math.max(tmp, max);
 };
 // @lc code=end
-

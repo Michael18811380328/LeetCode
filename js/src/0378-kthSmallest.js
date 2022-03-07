@@ -14,8 +14,8 @@
 // 这个可以实现，数组最长90000，不会超出内存限制
 // 但是性能很差
 // Your runtime beats 48.99 % of javascript submissions
-var kthSmallest = function(matrix, k) {
-  let arr = matrix.flat(1);
+const kthSmallest = function(matrix, k) {
+  const arr = matrix.flat(1);
   arr.sort((a, b) => a > b ? 1 : -1);
   return arr[k - 1];
 };
@@ -27,4 +27,3 @@ var kthSmallest = function(matrix, k) {
 // 这是结拜呢的思路，但是细节还需要考虑
 // 还有没有更好的办法
 // @lc code=end
-

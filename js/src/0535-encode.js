@@ -10,11 +10,11 @@
 // 或者调用JS内部的encode-decode函数
 // 实际上可以使用随机值进行哈希加密
 
-var encode = function(longUrl) {
+const encode = function(longUrl) {
   return encodeURI(longUrl);
 };
 
-var decode = function(shortUrl) {
+const decode = function(shortUrl) {
   return decodeURI(shortUrl);
 };
 
@@ -31,4 +31,3 @@ var decode = function(shortUrl) {
  * decode(encode(url));
  */
 // @lc code=end
-

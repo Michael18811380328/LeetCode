@@ -12,14 +12,14 @@
 // 104 ms
 // , 在所有 JavaScript 提交中击败了
 // 35.48%
-var isToeplitzMatrix = function(matrix) {
+const isToeplitzMatrix = function(matrix) {
   if (matrix.length === 0) return true;
-  let dict = matrix[0];
-  let len = dict.length;
+  const dict = matrix[0];
+  const len = dict.length;
   if (len === 0) return true;
   for (let i = 1; i < matrix.length; i++) {
     // 比较第i行和dict是否相同
-    let first = matrix[i][0];
+    const first = matrix[i][0];
     dict.pop();
     dict.unshift(first);
     for (let j = 0; j < len; j++) {
@@ -31,4 +31,3 @@ var isToeplitzMatrix = function(matrix) {
   return true;
 };
 // @lc code=end
-

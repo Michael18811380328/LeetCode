@@ -3,19 +3,19 @@
  * [1295] 统计位数为偶数的数字
  */
 
-// 
+//
 /**
  * @param {number[]} nums
  * @return {number}
  */
-var findNumbers = function(nums) {
+const findNumbers = function(nums) {
   // 循环数组
   // 然后判断每一个数字的位数
   let res = 0;
   const len = nums.length;
   for (let i = 0; i < len; i++) {
-    let item = String(nums[i]).length;
-    if (item % 2 === 0) res++
+    const item = String(nums[i]).length;
+    if (item % 2 === 0) res++;
   }
   return res;
 };

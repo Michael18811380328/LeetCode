@@ -11,17 +11,17 @@
  * @return {boolean}
  */
 // 92 ms, 在所有 JavaScript 提交中击败了 36.98%
-var backspaceCompare = function(S, T) {
-  let s = fn(S);
-  let t = fn(T);
+const backspaceCompare = function(S, T) {
+  const s = fn(S);
+  const t = fn(T);
   return s === t;
 };
 
 var fn = function(str) {
   if (str.indexOf('#') === -1) return str;
-  let arr = [];
+  const arr = [];
   for (let i = 0; i < str.length; i++) {
-    let item = str[i];
+    const item = str[i];
     if (item !== '#') {
       arr.push(item);
     } else {
@@ -29,7 +29,7 @@ var fn = function(str) {
     }
   }
   return arr.join('');
-}
+};
 
 // 思路二：直接使用字符串拼接的方式
 // 84 ms
@@ -47,7 +47,6 @@ var fn = function(str) {
     index = str.indexOf('#');
   }
   return str;
-}
+};
 
 // @lc code=end
-

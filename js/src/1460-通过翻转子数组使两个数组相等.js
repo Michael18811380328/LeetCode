@@ -11,7 +11,7 @@
  * @return {boolean}
  */
 // Your runtime beats 93.3 % of javascript submissions
-var canBeEqual = function(target, arr) {
+const canBeEqual = function(target, arr) {
   const len1 = target.length;
   const len2 = arr.length;
   if (len1 !== len2) {
@@ -28,4 +28,3 @@ var canBeEqual = function(target, arr) {
   return true;
 };
 // @lc code=end
-

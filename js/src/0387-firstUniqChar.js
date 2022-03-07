@@ -23,9 +23,9 @@ var firstUniqChar = function(s) {
 // 方法2：遍历一次字符串，把重复的记录一下
 // 116 ms , 在所有 JavaScript 提交中击败 81.43%
 var firstUniqChar = function(s) {
-  let dict = {};
+  const dict = {};
   for (let i = 0; i < s.length; i++) {
-    let key = s[i];
+    const key = s[i];
     if (!dict[key] && dict[key] !== 0) {
       dict[key] = i;
     } else {
@@ -33,7 +33,7 @@ var firstUniqChar = function(s) {
     }
   }
   let index;
-  for (let key in dict) {
+  for (const key in dict) {
     if (dict[key] > -1) {
       index = dict[key] > index ? index : dict[key];
     }
@@ -42,4 +42,3 @@ var firstUniqChar = function(s) {
 };
 
 // @lc code=end
-

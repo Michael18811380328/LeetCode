@@ -11,7 +11,7 @@
  */
 // 思路：遍历数组取余数
 // Your runtime beats 61 % of javascript submissions
-var smallestEqual = function(nums) {
+const smallestEqual = function(nums) {
   for (let i = 0; i < nums.length; i++) {
     if (i % 10 === nums[i]) {
       return i;
@@ -20,4 +20,3 @@ var smallestEqual = function(nums) {
   return -1;
 };
 // @lc code=end
-

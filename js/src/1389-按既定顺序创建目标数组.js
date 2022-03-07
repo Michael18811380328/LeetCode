@@ -14,15 +14,14 @@
 // , 在所有 JavaScript 提交中击败了
 // 13.78%
 // 的用户
-var createTargetArray = function(nums, index) {
-  let target = [];
+const createTargetArray = function(nums, index) {
+  const target = [];
   const len = nums.length;
   for (let i = 0; i < len; i++) {
-    let item = nums[i];
-    let ind = index[i];
+    const item = nums[i];
+    const ind = index[i];
     target.splice(ind, 0, item);
   }
   return target;
 };
 // @lc code=end
-

@@ -16,7 +16,7 @@
  * @param {TreeNode} root
  */
 // 124 ms, 在所有 JavaScript 提交中击败了97.50%
-var FindElements = function(root) {
+const FindElements = function(root) {
   // 还原二叉树，并设置字典实现查询
   this.dict = {};
   root.val == 0;
@@ -26,22 +26,22 @@ var FindElements = function(root) {
 
 runNode = (node, value, dict) => {
   if (node.left) {
-    let newLeft = 2 * value + 1;
+    const newLeft = 2 * value + 1;
     dict[newLeft] = true;
     node.left.val = newLeft;
     // console.log(newLeft);
     runNode(node.left, newLeft, dict);
   }
   if (node.right) {
-    let newLeft = 2 * value + 2;
+    const newLeft = 2 * value + 2;
     dict[newLeft] = true;
     node.right.val = newLeft;
     // console.log(newLeft);
     runNode(node.right, newLeft, dict);
   }
-}
+};
 
-/** 
+/**
  * @param {number} target
  * @return {boolean}
  */
@@ -56,4 +56,3 @@ FindElements.prototype.find = function(target) {
  * var param_1 = obj.find(target)
  */
 // @lc code=end
-

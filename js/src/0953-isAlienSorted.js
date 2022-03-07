@@ -14,36 +14,34 @@
 // , 在所有 JavaScript 提交中击败了
 // 50.72%
 // 的用户
-var isAlienSorted = function(words, order) {
+const isAlienSorted = function(words, order) {
   // 写一个辅助函数，判断两个单词是否符合顺序
-  var checkOrder = function(a, b) {
+  const checkOrder = function(a, b) {
     // console.log(a, b);
     const aLen = a.length;
     for (let i = 0; i < aLen; i++) {
       // 其中 '∅' 是空白字符
-      if (!b[i]) return false;      
-      let orderB = order.indexOf(b[i]);
-      let orderA = order.indexOf(a[i]);
+      if (!b[i]) return false;
+      const orderB = order.indexOf(b[i]);
+      const orderA = order.indexOf(a[i]);
       if (orderA < orderB) {
         return true;
-      }
-      else if (orderA > orderB) {
+      } else if (orderA > orderB) {
         return false;
-      }
-      else {
+      } else {
         // orderA === orderB
         continue;
       }
     }
     return true;
-  }
+  };
   // 循环数组，遍历每一个元素和后一个元素
-  let len = words.length;
+  const len = words.length;
   if (len < 2) return true;
   for (let i = 1; i < len; i++) {
-    let current = words[i];
-    let before = words[i - 1];
-    let res = checkOrder(before, current);
+    const current = words[i];
+    const before = words[i - 1];
+    const res = checkOrder(before, current);
     if (res === false) {
       return false;
     }
@@ -51,4 +49,3 @@ var isAlienSorted = function(words, order) {
   return true;
 };
 // @lc code=end
-

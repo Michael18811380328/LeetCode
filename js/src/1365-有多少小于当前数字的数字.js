@@ -10,23 +10,23 @@
  * @return {number[]}
  */
 // Your runtime beats 93.53 % of javascript submissions
-var smallerNumbersThanCurrent = function(nums) {
-  let hash = {};
+const smallerNumbersThanCurrent = function(nums) {
+  const hash = {};
   for (let i = 0; i < nums.length; i++) {
-    let key = nums[i];
+    const key = nums[i];
     if (!hash[key]) {
       hash[key] = [];
     }
     hash[key].push(i);
   }
   nums.sort((a, b) => a - b);
-  let res = [];
+  const res = [];
   for (let i = 0; i < nums.length; i++) {
     // 前面应该有i-1个元素
-    let item = nums[i];
-    let indexArr = hash[item];
+    const item = nums[i];
+    const indexArr = hash[item];
     for (let j = 0; j < indexArr.length; j++) {
-      let index = indexArr[j];
+      const index = indexArr[j];
       res[index] = i;
     }
     i = i + indexArr.length - 1;
@@ -34,4 +34,3 @@ var smallerNumbersThanCurrent = function(nums) {
   return res;
 };
 // @lc code=end
-

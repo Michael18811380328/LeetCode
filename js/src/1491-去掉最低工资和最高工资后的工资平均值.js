@@ -12,15 +12,14 @@
 // 96 ms
 // , 在所有 JavaScript 提交中击败了
 // 14.29%
-var average = function(salary) {
+const average = function(salary) {
   salary.sort((a, b) => a - b);
   let sum = 0;
-  let fn = function(num, total) {
+  const fn = function(num, total) {
     return num + total;
-  }
+  };
   sum = salary.reduce(fn, sum);
   sum = sum - salary[0] - salary[salary.length - 1];
   return sum / (salary.length - 2);
 };
 // @lc code=end
-

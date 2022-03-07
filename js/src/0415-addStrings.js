@@ -49,7 +49,6 @@ function addStrings2(num1, num2) {
   return resultArr.join('');
 }
 
-
 // 方法三更好（可能网速较快）
 // 操作字符串（补0）的速度和性能比数组好
 // 72 ms, 在所有 javascript 提交中击败了92.35%

@@ -44,7 +44,6 @@ MinStack.prototype.getMin = function () {
   return Math.min(...this.value);
 };
 
-
 // 方法二：有问题（后期优化）
 // 在数组中设置最小值；当出栈入栈时更新最小值
 // 获取最小值直接返回
