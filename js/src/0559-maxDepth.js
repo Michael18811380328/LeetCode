@@ -21,7 +21,7 @@ const maxDepth = function(root) {
   return getDepth(root);
 };
 
-var getDepth = function(node) {
+const getDepth = function(node) {
   if (!node) return 1;
   let max = 0;
   const len = node.children.length;

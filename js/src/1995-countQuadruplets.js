@@ -75,7 +75,7 @@ export { countQuadruplets };
 // 先对数组实现桶排序，范围1-100，然后每一项存储出现的位置
 // 然后再操作字典，这样最后匹配的就是4个数组，直接数组的长度相乘——需要检测不会重复
 
-// var countQuadruplets2 = function(nums) {
+// const countQuadruplets2 = function(nums) {
 //   const len = nums.length;
 //   let dict = {};
 //   let max = nums[0];

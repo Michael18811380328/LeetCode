@@ -18,7 +18,7 @@
  * @return {number[][]}
  */
 // Your runtime beats 6.03 % of javascript submissions
-var levelOrder = function(root) {
+const levelOrder = function(root) {
   // 递归遍历树节点，然后传递层数，将结果放在对应的层数内部
   // 递归非常耗性能，可以使用BFS解决问题
   const res = [];
@@ -27,7 +27,7 @@ var levelOrder = function(root) {
   return res;
 };
 
-var runNode = function(node, depth, res) {
+const runNode = function(node, depth, res) {
   if (!node) return;
   if (!res[depth]) {
     res[depth] = [];
@@ -41,7 +41,7 @@ var runNode = function(node, depth, res) {
 
 // 思路二
 // Your runtime beats 57.81 % of javascript submissions
-var levelOrder = function(root) {
+const levelOrder = function(root) {
   // 层序遍历：广度优先遍历
   if (!root) return [];
   const tmpArr = [];

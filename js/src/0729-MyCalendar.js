@@ -48,8 +48,8 @@ for (let i = 0; i < test.length; i++) {
 
 /**
  * Your MyCalendar object will be instantiated and called as such:
- * var obj = new MyCalendar()
- * var param_1 = obj.book(start,end)
+ * let obj = new MyCalendar()
+ * let param_1 = obj.book(start,end)
  */
 
 // ["MyCalendar","book","book","book","book","book","book","book","book","book","book","book","book","book","book","book","book","book","book","book","book","book","book","book","book","book","book","book","book","book","book"]

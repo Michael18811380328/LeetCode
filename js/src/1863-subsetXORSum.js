@@ -19,7 +19,7 @@ const subsetXORSum1 = function(nums) {
   // 思路：求出全部的子集(回溯算法)
   const len = nums.length;
   // i 表示子集元素的个数
-  var backTrace = (arr, target, list, index) => {
+  const backTrace = (arr, target, list, index) => {
     if (arr.length === target) {
       // console.log(arr);
       const res1 = getXOR([...arr]);
@@ -62,7 +62,7 @@ const subsetXORSum2 = function(nums) {
     return result;
   };
   // 辅助函数：回溯（优化）
-  var backTrace = (arr, target, list, index) => {
+  const backTrace = (arr, target, list, index) => {
     if (arr.length === target) {
       const res1 = getXOR([...arr]);
       res += res1;

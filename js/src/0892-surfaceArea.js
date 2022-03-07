@@ -11,7 +11,7 @@
  */
 
 // 72 ms Your runtime beats 85.71 %
-var surfaceArea = function(grid) {
+const surfaceArea = function(grid) {
   // 表面积 = 全部的表面积 - 水平方向重叠的部分 - 垂直方向重叠的部分
   const len = grid.length;
   // 先计算全部的立方体的表面积
@@ -65,7 +65,7 @@ var surfaceArea = function(grid) {
 // 改进版
 // 72 ms Your runtime beats 85.71 %
 // 三次循环变成1次循环
-var surfaceArea = function(grid) {
+const surfaceArea = function(grid) {
   const len = grid.length;
   let total = 0;
   for (let i = 0; i < len; i++) {

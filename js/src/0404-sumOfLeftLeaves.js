@@ -20,11 +20,8 @@ const sumOfLeftLeaves = function(root) {
   return runNode(root, false);
 };
 
-// 92 ms
-// , 在所有 JavaScript 提交中击败了
-// 39.16%
-// 的用户
-var runNode = function(node, isLeft) {
+// 92 ms, 在所有 JavaScript 提交中击败了39.16%的用户
+const runNode = function(node, isLeft) {
   if (!node) {
     return 0;
   }

@@ -38,7 +38,7 @@ const findAnagrams = function(s, p) {
   return res;
 };
 
-var check = (str, DICT) => {
+const check = (str, DICT) => {
   const dict = { ...DICT };
   const len = str.length;
   for (let i = 0; i < len; i++) {

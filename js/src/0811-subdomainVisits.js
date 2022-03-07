@@ -15,7 +15,7 @@ const subdomainVisits = function(cpdomains) {
   const dict = {};
   len = cpdomains.length;
   if (len === 0) return [];
-  var getNumber = function(address, times) {
+  const getNumber = function(address, times) {
     if (!dict[address]) {
       dict[address] = times;
     } else {

@@ -10,9 +10,9 @@
  * @return {number}
  */
 // // 思路1： 这个问题可以转换成2个子问题
-// var countVowelSubstrings = function(word) {
+// const countVowelSubstrings = function(word) {
 //   // 1 辅助函数：判断是否是元音字符串，设置计数器
-//   var checkStr = (str) => {
+//   const checkStr = (str) => {
 //     // 返回值可以是三个情况
 //     // true 表示满足条件
 //     // false 表示不满足条件（有辅音字母），不需要继续循环

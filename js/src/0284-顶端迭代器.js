@@ -73,9 +73,9 @@ PeekingIterator.prototype.hasNext = function() {
 
 /**
  * Your PeekingIterator object will be instantiated and called as such:
- * var obj = new PeekingIterator(arr)
- * var param_1 = obj.peek()
- * var param_2 = obj.next()
- * var param_3 = obj.hasNext()
+ * let obj = new PeekingIterator(arr)
+ * let param_1 = obj.peek()
+ * let param_2 = obj.next()
+ * let param_3 = obj.hasNext()
  */
 // @lc code=end

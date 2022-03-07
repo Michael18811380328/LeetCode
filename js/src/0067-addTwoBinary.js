@@ -11,7 +11,7 @@
  * @param {string} b
  * @return {string}
  */
-// var addBinary = function(a, b) {
+// const addBinary = function(a, b) {
 //   // handle 0
 //   if (a === '0') {
 //     return b;

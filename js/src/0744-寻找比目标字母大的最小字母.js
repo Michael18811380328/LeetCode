@@ -11,7 +11,7 @@
 //
 
 // 方法一有问题
-// var nextGreatestLetter = function(letters, target) {
+// const nextGreatestLetter = function(letters, target) {
 //   const tar = target.charCodeAt(0);
 //   if (letters[0].charCodeAt(0) > tar ||
 //     letters[letters.length - 1].charCodeAt(0) <= tar

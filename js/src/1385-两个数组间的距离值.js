@@ -32,7 +32,7 @@ const findTheDistanceValue = function(arr1, arr2, d) {
 // @lc code=end
 
 // 正确的思路：使用二分法和排序解决，第一种解决方案的效率低下
-// var findTheDistanceValue = function(arr1, arr2, d) {
+// const findTheDistanceValue = function(arr1, arr2, d) {
 //   // 对数组2进行排序
 //   // 然后循环数组1，使用二分法判断是否满足条件
 //   arr2.sort((a, b) => a - b);

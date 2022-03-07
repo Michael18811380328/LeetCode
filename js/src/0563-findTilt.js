@@ -30,7 +30,7 @@ const findTilt = function(root) {
 };
 
 // 辅助函数：计算节点的和集坡度
-var getSum = function(node, list) {
+const getSum = function(node, list) {
   if (!node) {
     return 0;
   }

@@ -15,7 +15,7 @@
  * @param {string} str
  * @return {number}
  */
-// var myAtoi = function(str) {
+// const myAtoi = function(str) {
 //   const number = Number(str);
 //   if (isNaN(number)) {
 //     let result = 0;

@@ -12,7 +12,7 @@
 /**
  * initialize your data structure here.
  */
-var MedianFinder = function() {
+let MedianFinder = function() {
   list = [];
 };
 /**
@@ -50,7 +50,7 @@ MedianFinder.prototype.findMedian = function() {
 // 300 ms
 // , 在所有 JavaScript 提交中击败了
 // 86.61%
-var MedianFinder = function() {
+let MedianFinder = function() {
   list = [];
 };
 
@@ -107,8 +107,8 @@ MedianFinder.prototype.findMedian = function() {
 
 /**
  * Your MedianFinder object will be instantiated and called as such:
- * var obj = new MedianFinder()
+ * let obj = new MedianFinder()
  * obj.addNum(num)
- * var param_2 = obj.findMedian()
+ * let param_2 = obj.findMedian()
  */
 // @lc code=end

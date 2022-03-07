@@ -32,7 +32,7 @@ const minDiffInBST = function(root) {
   return min;
 };
 
-var runNode = (node, list) => {
+const runNode = (node, list) => {
   if (!node) return;
   list.push(node.val);
   runNode(node.left, list);

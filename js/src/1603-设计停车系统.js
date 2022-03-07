@@ -51,7 +51,7 @@ ParkingSystem.prototype.addCar = function(carType) {
 
 /**
  * Your ParkingSystem object will be instantiated and called as such:
- * var obj = new ParkingSystem(big, medium, small)
- * var param_1 = obj.addCar(carType)
+ * let obj = new ParkingSystem(big, medium, small)
+ * let param_1 = obj.addCar(carType)
  */
 // @lc code=end

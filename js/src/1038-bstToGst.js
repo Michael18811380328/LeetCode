@@ -15,7 +15,7 @@
 // 84 ms, 在所有 JavaScript 提交中击败了66.41%
 const bstToGst = function(root) {
   let sum = 0;
-  var runNode = (node) => {
+  const runNode = (node) => {
     if (!node) {
       return;
     }

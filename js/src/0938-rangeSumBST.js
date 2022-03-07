@@ -23,7 +23,7 @@
 // , 在所有 JavaScript 提交中击败了
 // 70.44%
 // 的用户
-var rangeSumBST = function(root, low, high) {
+const rangeSumBST = function(root, low, high) {
   if (!root) return 0;
   const value = root.val;
   let sum = 0;

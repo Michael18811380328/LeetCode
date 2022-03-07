@@ -17,7 +17,7 @@
  */
 // 思路1: 前序遍历：根左右
 // 92 ms, 在所有 JavaScript 提交中击败了24.64%
-var preorderTraversal = function(root) {
+const preorderTraversal = function(root) {
   if (!root) return [];
   return [root.val].concat(preorderTraversal(root.left)).concat(preorderTraversal(root.right));
 };

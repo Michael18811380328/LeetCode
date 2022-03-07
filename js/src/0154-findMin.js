@@ -4,7 +4,7 @@
  */
 
 // 第一种：直接根据定义获取，用于生产环境
-// var findMin = function(nums) {
+// const findMin = function(nums) {
 //   return Math.min(...nums);
 // };
 

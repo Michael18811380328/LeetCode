@@ -3,7 +3,7 @@
  * @return {number}
  */
 // 84 ms, 在所有 JavaScript 提交中击败了52.25%
-var largestAltitude = function(gain) {
+const largestAltitude = function(gain) {
   const res = [0];
   const len = gain.length;
   for (let i = 0; i < len; i++) {
@@ -15,7 +15,7 @@ var largestAltitude = function(gain) {
 // 优化，不需要使用数组存储海拔
 // 直接使用两个临时变量（一个存储上一个的值，一个存储最大值即可）
 // 64 ms runtime beats 92.73 % of javascript submissions
-var largestAltitude = function(gain) {
+const largestAltitude = function(gain) {
   let max = 0;
   let current = 0;
   const len = gain.length;

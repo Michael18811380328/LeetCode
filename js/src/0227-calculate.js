@@ -53,7 +53,7 @@ const calculate = function(s) {
   return init;
 };
 
-var getNumber = (s) => {
+const getNumber = (s) => {
   for (let i = 0; i < s.length; i++) {
     if (isNaN(Number(s[i]))) {
       return s.slice(0, i);

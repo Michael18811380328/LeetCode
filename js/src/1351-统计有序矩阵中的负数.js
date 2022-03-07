@@ -11,7 +11,7 @@
  */
 // 思路1：最基本的算法-双重循环
 // Your runtime beats 63.02 % of javascript submissions
-// var countNegatives = function(grid) {
+// const countNegatives = function(grid) {
 //   let sum = 0;
 //   for (let i = 0; i < grid.length; i++) {
 //     let item = grid[i];

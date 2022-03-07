@@ -26,7 +26,7 @@ const sumRootToLeaf = function(root) {
   }
   const list = [];
   // 递归子节点，直接叶子节点，然后转换成十进制
-  var runNode = function(node, preVal) {
+  const runNode = function(node, preVal) {
     if (!node) return;
     let newVal = `${preVal}${node.val}`;
     if (!node.left && !node.right) {

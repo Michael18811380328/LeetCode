@@ -87,7 +87,7 @@ const solveEquation = function(equation) {
   return `x=${times}`;
 };
 
-var getNumber = (arr) => {
+const getNumber = (arr) => {
   let a = 0;
   let b = 0;
   arr.forEach((item) => {

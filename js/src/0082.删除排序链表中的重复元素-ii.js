@@ -20,7 +20,7 @@
 // 先想好思路，然后把各种情况都想清楚，再写代码，事半功倍
 // 这个再看一下官方思路，哪些地方可以提升
 // 链表的解决方法：处理当前的节点后，写一个节点等于递归调用这个函数
-var deleteDuplicates = function(head) {
+const deleteDuplicates = function(head) {
   // 如果空链表，或者是最后一个节点，直接返回
   if (!head || !head.next) {
     return head;

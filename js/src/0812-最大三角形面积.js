@@ -32,7 +32,7 @@ const largestTriangleArea = function(points) {
 // 这个思路不正确
 // 首先双重循环，找到当前距离最长的两个点构成的线段
 // 然后遍历剩下的点，找到最大的面积
-// var largestTriangleArea = function(points) {
+// const largestTriangleArea = function(points) {
 //   const len = points.length;
 //   // if (len === 3) 直接计算
 //   let max = 0;
@@ -58,11 +58,11 @@ const largestTriangleArea = function(points) {
 //   return maxArea;
 // };
 
-// var getDistance = (a, b) => {
+// const getDistance = (a, b) => {
 //   return (a[0] - b[0]) ** 2 + (a[1] - b[1]) ** 2;
 // }
 
-var getArea = (a, b, c) => {
+const getArea = (a, b, c) => {
   const x1 = a[0];
   const y1 = a[1];
   const x2 = b[0];

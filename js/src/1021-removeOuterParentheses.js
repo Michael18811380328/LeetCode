@@ -11,7 +11,7 @@
 
 // 1、常规思路实现：
 // 92 ms, 在所有 JavaScript 提交中击败了53.46%
-var removeOuterParentheses = function(S) {
+const removeOuterParentheses = function(S) {
   // 遍历字符串，然后把字符放在数组中，记录开始和结束的位置
   let start = 0;
   const arr = [];
@@ -39,7 +39,7 @@ var removeOuterParentheses = function(S) {
 
 // 2、优化后，减少循环中数组的操作，只进行一次字符串循环
 // 68 ms, 在所有 JavaScript 提交中击败了94.66%
-var removeOuterParentheses = function(S) {
+const removeOuterParentheses = function(S) {
   let start = 0; // 记录字符串开始的位置
   let timer = 0; // 记录左括号的个数
   let res = ''; // 存储临时的结果

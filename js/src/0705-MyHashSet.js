@@ -34,8 +34,8 @@ MyHashSet.prototype.contains = function(key) {
 
 /**
  * Your MyHashSet object will be instantiated and called as such:
- * var obj = new MyHashSet()
+ * let obj = new MyHashSet()
  * obj.add(key)
  * obj.remove(key)
- * var param_3 = obj.contains(key)
+ * let param_3 = obj.contains(key)
  */

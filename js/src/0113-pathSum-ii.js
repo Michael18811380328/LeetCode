@@ -11,7 +11,7 @@
 const pathSum = function(root, targetSum) {
   const list = [];
   const tmp = [];
-  var runNode = (node, tmp, lastSum) => {
+  const runNode = (node, tmp, lastSum) => {
     if (!node) {
       return;
     }

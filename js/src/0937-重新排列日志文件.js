@@ -29,7 +29,7 @@ const reorderLogFiles = function(logs) {
   return logs;
 };
 
-var getType = (log) => {
+const getType = (log) => {
   const index = log.indexOf(' ');
   const str = log.slice(index).replace(/\s/g, '');
   if (isNaN(Number(str))) {

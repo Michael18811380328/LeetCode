@@ -14,7 +14,7 @@
  * @param {number[]} digits
  * @return {number[]}
  */
-// var plusOne = function(digits) {
+// const plusOne = function(digits) {
 //   const len = digits.length;
 //   let sum = 0;
 //   for (let i = 0; i < len; i++) {

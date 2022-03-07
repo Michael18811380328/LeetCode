@@ -33,8 +33,8 @@ ProductOfNumbers.prototype.getProduct = function(k) {
 
 /**
  * Your ProductOfNumbers object will be instantiated and called as such:
- * var obj = new ProductOfNumbers()
+ * let obj = new ProductOfNumbers()
  * obj.add(num)
- * var param_2 = obj.getProduct(k)
+ * let param_2 = obj.getProduct(k)
  */
 // @lc code=end

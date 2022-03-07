@@ -58,8 +58,8 @@ class Tree{
 }
 
 // Your runtime beats 20 % of javascript submissions
-var longestWord = function(words) {
-  var tree = new Tree();
+const longestWord = function(words) {
+  const tree = new Tree();
   words.sort((a, b) => a > b ? 1 : -1);
   tree.run(words);
   let resArr = tree.get();

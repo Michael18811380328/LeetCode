@@ -18,7 +18,7 @@
  */
 // Your runtime beats 38.94 % of javascript submissions
 const getDecimalValue = function(head) {
-  var getValue = (node) => {
+  const getValue = (node) => {
     if (node.next) {
       return `${node.val}${getValue(node.next)}`;
     }

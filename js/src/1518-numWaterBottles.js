@@ -19,7 +19,7 @@ const numWaterBottles = function(numBottles, numExchange) {
   return getNumber(numBottles, numExchange, 0);
 };
 
-var getNumber = function(bottles, exchanges, last) {
+const getNumber = function(bottles, exchanges, last) {
   // 第一种情况：喝完当前的酒，不能继续兑换，直接返回当前的数量
   if ((bottles + last) < exchanges) {
     return bottles;

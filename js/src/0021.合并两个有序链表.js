@@ -20,7 +20,7 @@
 // 这个题目的原理明白，就是递归比较链表头结点的值
 // 卡在了链表数据结构操作上
 // 因为没有要求不改变原始链表，那么直接操作原始链表即可
-var mergeTwoLists = function(list1, list2) {
+const mergeTwoLists = function(list1, list2) {
   if (list1 === null && list2 === null) {
     return null;
   }

@@ -41,7 +41,7 @@ const judgeCircle = function(moves) {
 
 // 第二种思路：字符串排序，直接计算字符串的数量
 // 160 ms, 在所有 JavaScript 提交中击败了5.72%
-// var judgeCircle = function(moves) {
+// const judgeCircle = function(moves) {
 //   if (moves.length % 2 === 1) return false;
 //   moves = moves.split('');
 //   moves.sort((a, b) => a > b ? 1 : -1);

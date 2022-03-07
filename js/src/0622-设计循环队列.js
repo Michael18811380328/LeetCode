@@ -66,12 +66,12 @@ MyCircularQueue.prototype.isFull = function() {
 
 /**
  * Your MyCircularQueue object will be instantiated and called as such:
- * var obj = new MyCircularQueue(k)
- * var param_1 = obj.enQueue(value)
- * var param_2 = obj.deQueue()
- * var param_3 = obj.Front()
- * var param_4 = obj.Rear()
- * var param_5 = obj.isEmpty()
- * var param_6 = obj.isFull()
+ * let obj = new MyCircularQueue(k)
+ * let param_1 = obj.enQueue(value)
+ * let param_2 = obj.deQueue()
+ * let param_3 = obj.Front()
+ * let param_4 = obj.Rear()
+ * let param_5 = obj.isEmpty()
+ * let param_6 = obj.isFull()
  */
 // @lc code=end

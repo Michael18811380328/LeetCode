@@ -15,7 +15,7 @@
 // 直接循环三层，然后判断 abc 三个数是否满足需求
 // 注意：a b 两个数字可以调换顺序，最后结果需要X2
 // Your runtime beats 31.03 % of javascript submissions
-var countTriples = function(n) {
+const countTriples = function(n) {
   let count = 0;
   for (let i = 0; i <= n; i++) {
     for (let j = i + 1; j <= n; j++) {
@@ -31,7 +31,7 @@ var countTriples = function(n) {
 
 // 思路2：既然是判断相等，那么可以使用字典优化一层循环 N * 2
 // Your runtime beats 44.83 % of javascript submissions
-var countTriples = function(n) {
+const countTriples = function(n) {
   const dict = {};
   const max = n * n;
   for (let i = 1; i <= n; i++) {

@@ -14,7 +14,7 @@
 const combinationSum3 = function(k, n) {
   const list = [];
   const tmp = [];
-  var backTrack = function(tmp, list) {
+  const backTrack = function(tmp, list) {
     // console.log(tmp, k, list, n);
     // 如果和已经超过N，直接返回
     if (tmp.length > k) {

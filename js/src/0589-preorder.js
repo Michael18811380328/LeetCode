@@ -27,7 +27,7 @@ const preorder = function(root) {
   return list;
 };
 
-var runNode = function(node, list) {
+const runNode = function(node, list) {
   if (!node) return;
   // 前序遍历：根左右
   list.push(node.val);

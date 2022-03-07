@@ -42,7 +42,7 @@ const readBinaryWatch = function(num) {
   return list;
 };
 
-var backTrack = function(list, temp, num, times) {
+const backTrack = function(list, temp, num, times) {
   // 如果临时数组满足条件，那么计算当前的时间，然后放在List中
   if (temp.length === num) {
     const time = formatTime(temp);
@@ -65,7 +65,7 @@ var backTrack = function(list, temp, num, times) {
 };
 
 // 单独写一个函数处理时间的格式
-var formatTime = function(timeArr) {
+const formatTime = function(timeArr) {
   let time = 0;
   timeArr.forEach((item) => time += item);
   let minute = time % 100;

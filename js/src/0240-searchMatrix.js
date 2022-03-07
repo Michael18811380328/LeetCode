@@ -41,7 +41,7 @@ const searchMatrix = function(matrix, target) {
   return false;
 };
 
-var getNumber = (arr, target) => {
+const getNumber = (arr, target) => {
   if (!arr) return false;
   const len = arr.length;
   let start = 0;

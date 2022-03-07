@@ -51,7 +51,7 @@ const shortestCompletingWord = function(licensePlate, words) {
   return res;
 };
 
-var judge = function(str, Dict) {
+const judge = function(str, Dict) {
   const dict = { ...Dict };
   for (let i = 0; i < str.length; i++) {
     const s = str[i];

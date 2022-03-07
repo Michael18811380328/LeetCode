@@ -11,7 +11,7 @@
  */
 // 144 ms, 在所有 JavaScript 提交中击败了19.00%
 // 方法不好（频繁操作栈）
-// var removeDuplicates = function(S) {
+// const removeDuplicates = function(S) {
 //   if (S.length < 2) return S;
 //   let stack = [];
 //   for (let i = 0; i < S.length; i++) {
@@ -27,7 +27,7 @@
 
 // 改进1，比较当前情况
 // 140 ms , 在所有 JavaScript 提交中击败了 19.61%
-// var removeDuplicates = function(S) {
+// const removeDuplicates = function(S) {
 //   if (S.length < 2) return S;
 //   let stack = [];
 //   for (let i = 0; i < S.length; i++) {

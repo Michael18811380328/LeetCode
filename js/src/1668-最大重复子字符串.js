@@ -11,7 +11,7 @@
  * @return {number}
  */
 // 这个方法未来可以改进一下
-// var maxRepeating = function(sequence, word) {
+// const maxRepeating = function(sequence, word) {
 //   const index = sequence.indexOf(word);
 //   if (index === -1) {
 //     return 0;

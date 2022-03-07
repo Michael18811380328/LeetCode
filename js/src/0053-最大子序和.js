@@ -10,7 +10,7 @@
  * @return {number}
  */
 // 思路1：双重循环，把全部的子序列求出来，然后求最大值(n^2)，数组求和多次
-var maxSubArray = function(nums) {
+const maxSubArray = function(nums) {
   // 辅助函数：求数组的和
   const sum = (arr) => {
     return arr.reduce((a, b) => a + b, 0);
@@ -43,7 +43,7 @@ var maxSubArray = function(nums) {
 // 1 最大自序和，可以转换成以每一个项为结尾的子序的最大值 max = for（range(fn(1), fn(n)）)
 // 2 递推公式：fn = Math.max(fn(n - 1) + num[n], num[n]) 这是关键
 // 以当前数字结尾的子序列的最大值，可能是这个数字，或者这个数字和前面的全部相加
-var maxSubArray = function(nums) {
+const maxSubArray = function(nums) {
   let currMax = 0;
   // 第一项的值作为最大值
   // 把每增加一项的最大值求出来，放在一个数组中，最后求这个数组的和（不是直接求最大子序的和）

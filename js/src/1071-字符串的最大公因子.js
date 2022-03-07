@@ -23,7 +23,7 @@ const gcdOfStrings = function(str1, str2) {
 };
 
 // 辅助函数，判断某个子串是否是另一个字符串的公因子
-var check = function(strs, prefix) {
+const check = function(strs, prefix) {
   // 如果长度不能整除，肯定不是公因子
   const len = strs.length;
   if (len % prefix.length !== 0) {

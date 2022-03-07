@@ -11,7 +11,7 @@
 // 思路1
 // 难点：动态规划公式，详见文档
 // Your runtime beats 71.57 % of javascript submissions
-var numTrees = function(n) {
+const numTrees = function(n) {
   if (n <= 1) return 1;
   const arr = new Array(n + 1);
   arr[0] = 1;
@@ -30,7 +30,7 @@ var numTrees = function(n) {
 // 思路2
 // 难点：数学卡特兰数，详见文档
 // Your runtime beats 51.04 % of javascript submissions
-var numTrees = function(n) {
+const numTrees = function(n) {
   let res = 1;
   for (let i = 0; i < n; i++) {
     res = res * 2 * (2 * i + 1) / (i + 2);

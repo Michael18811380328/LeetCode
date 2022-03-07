@@ -91,9 +91,9 @@ Twitter.prototype.unfollow = function(followerId, followeeId) {
 
 /**
  * Your Twitter object will be instantiated and called as such:
- * var obj = new Twitter()
+ * let obj = new Twitter()
  * obj.postTweet(userId,tweetId)
- * var param_2 = obj.getNewsFeed(userId)
+ * let param_2 = obj.getNewsFeed(userId)
  * obj.follow(followerId,followeeId)
  * obj.unfollow(followerId,followeeId)
  */

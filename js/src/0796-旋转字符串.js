@@ -13,7 +13,7 @@
 // 第一个思路：循环一下A的长度，然后拼接字符串，看两个字符串是否相等
 // 简单粗暴，可能拼接字符串会消耗性能
 // Your runtime beats 31.06 % of javascript submissions
-var rotateString = function(A, B) {
+const rotateString = function(A, B) {
   if (A === B) return true;
   const aLen = A.length;
   const bLen = B.length;
@@ -30,7 +30,7 @@ var rotateString = function(A, B) {
 // 84 ms
 // , 在所有 JavaScript 提交中击败了
 // 48.48%
-var rotateString = function(A, B) {
+const rotateString = function(A, B) {
   if (A === B) return true;
   const aLen = A.length;
   const bLen = B.length;

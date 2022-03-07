@@ -11,7 +11,7 @@
  */
 //  [83] 删除排序链表中的重复元素
 // Your runtime beats 51.88 % of javascript submissions
-var deleteDuplicates = function(head) {
+const deleteDuplicates = function(head) {
   if (!head || !head.next) return head;
   while (head.next && head.val === head.next.val) {
     head.next = head.next.next;

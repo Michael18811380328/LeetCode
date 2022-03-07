@@ -42,7 +42,7 @@ const numSmallerByFrequency = function(queries, words) {
   return res;
 };
 
-var getNumber = (strs) => {
+const getNumber = (strs) => {
   const arr = strs.split('');
   arr.sort((a, b) => {
     return a > b ? 1 : -1;

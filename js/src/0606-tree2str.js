@@ -23,7 +23,7 @@ const tree2str = function(t) {
   return res.slice(1, res.length - 1);
 };
 
-var runNode = function(node) {
+const runNode = function(node) {
   if (!node) {
     return null;
   }

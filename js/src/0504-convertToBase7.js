@@ -22,7 +22,7 @@ const convertToBase7 = function(num) {
   // 最后转换成字符串输出
 };
 
-var base7 = function(num) {
+const base7 = function(num) {
   if (num < 7) return String(num);
   const remain = num % 7;
   const tmp = (num - remain) / 7;

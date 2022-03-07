@@ -20,7 +20,7 @@
 // 这个方法不好
 const isUnivalTree = function(root) {
   if (!root || (!root.val && root.val !== 0)) return true;
-  var run = function(node, key) {
+  const run = function(node, key) {
     if (!node || (!node.val && node.val !== 0)) return true;
     if (node.val !== key) {
       return false;

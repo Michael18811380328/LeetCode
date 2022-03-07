@@ -8,7 +8,7 @@
 // 无限制选取：每次都可以从当前的值开始选择（candidates排序）
 // 注意：无重复
 // 104 ms, 在所有 JavaScript 提交中击败了58.52%
-var combinationSum = function(candidates, target) {
+const combinationSum = function(candidates, target) {
   // 选择数字先排序
   candidates.sort((a, b) => a - b);
   const list = [];
@@ -21,7 +21,7 @@ const sum = (arr) => {
   return arr.reduce((a, b) => a + b, 0);
 };
 
-var backTrack = (candidates, tmpList, list, target) => {
+const backTrack = (candidates, tmpList, list, target) => {
   const tmpSum = sum(tmpList);
   if (tmpSum > target) {
     return;
@@ -46,7 +46,7 @@ var backTrack = (candidates, tmpList, list, target) => {
 };
 
 // 优化后 80 ms, 在所有 JavaScript 提交中击败了99.82%
-var combinationSum = function(candidates, target) {
+const combinationSum = function(candidates, target) {
   // 选择数字先排序
   candidates.sort((a, b) => a - b);
   const list = [];
@@ -58,7 +58,7 @@ var combinationSum = function(candidates, target) {
     return arr.reduce((a, b) => a + b, 0);
   };
   const len = candidates.length;
-  var backTrack = (tmpList) => {
+  const backTrack = (tmpList) => {
     const tmpSum = sum(tmpList);
     if (tmpSum > target) {
       return;

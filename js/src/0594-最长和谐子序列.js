@@ -9,7 +9,7 @@
  * @param {number[]} nums
  * @return {number}
  */
-// var findLHS = function(nums) {
+// const findLHS = function(nums) {
 // let dict = {};
 // const len = nums.length;
 // for (let i = 0; i < len; i++) {

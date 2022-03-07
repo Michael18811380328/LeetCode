@@ -20,7 +20,7 @@ const toHex = function(num) {
   }
 };
 
-var get16 = (num) => {
+const get16 = (num) => {
   const arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'a', 'b', 'c', 'd', 'e', 'f'];
   const res = [];
   while (num > 0) {
@@ -31,7 +31,7 @@ var get16 = (num) => {
   return res.join('');
 };
 
-var get16plus = (num) => {
+const get16plus = (num) => {
   // 去负号，转换成16进制
   const n16 = get16(-num);
   const map = {

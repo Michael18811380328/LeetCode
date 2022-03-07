@@ -19,7 +19,7 @@
  */
 // 现在没有使用二叉搜索树的信息！
 // Your runtime beats 34.06 % of javascript submissions
-var searchBST = function(root, val) {
+const searchBST = function(root, val) {
   if (!root) {
     return null;
   } else if (root.val === val) {
@@ -38,7 +38,7 @@ var searchBST = function(root, val) {
 // 100 ms
 // , 在所有 JavaScript 提交中击败了
 // 82.18%
-var searchBST = function(root, val) {
+const searchBST = function(root, val) {
   if (!root) {
     return null;
   } else if (root.val === val) {

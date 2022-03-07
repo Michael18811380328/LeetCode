@@ -34,7 +34,7 @@ const levelOrder = function(root) {
   return matrix;
 };
 
-var runTree = function(node, layer, matrix) {
+const runTree = function(node, layer, matrix) {
   if (!node) return;
   if (!matrix[layer]) {
     matrix[layer] = [];

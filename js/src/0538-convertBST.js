@@ -14,7 +14,7 @@
 // 144 ms, 在所有 JavaScript 提交中击败了16.89%
 const convertBST = function(root) {
   let sum = 0;
-  var runNode = (node) => {
+  const runNode = (node) => {
     if (!node) {
       return;
     }

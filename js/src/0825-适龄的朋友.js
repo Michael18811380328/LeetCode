@@ -28,7 +28,7 @@ const numFriendRequests = function(ages) {
   return res;
 };
 
-var check = function(a, b) {
+const check = function(a, b) {
   if (b <= 0.5 * a + 7) {
     return false;
   }

@@ -70,12 +70,12 @@ FrontMiddleBackQueue.prototype.popBack = function() {
 
 /**
  * Your FrontMiddleBackQueue object will be instantiated and called as such:
- * var obj = new FrontMiddleBackQueue()
+ * let obj = new FrontMiddleBackQueue()
  * obj.pushFront(val)
  * obj.pushMiddle(val)
  * obj.pushBack(val)
- * var param_4 = obj.popFront()
- * var param_5 = obj.popMiddle()
- * var param_6 = obj.popBack()
+ * let param_4 = obj.popFront()
+ * let param_5 = obj.popMiddle()
+ * let param_6 = obj.popBack()
  */
 // @lc code=end

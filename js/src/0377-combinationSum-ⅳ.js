@@ -17,8 +17,8 @@
 // [4,2,1]
 // 32
 
-// var combinationSum4 = function(nums, target) {
-//   var deleteSame = (arr) => {
+// const combinationSum4 = function(nums, target) {
+//   const deleteSame = (arr) => {
 //     let dict = {};
 //     let res = [];
 //     arr.forEach(item => {
@@ -31,7 +31,7 @@
 //     return res;
 //   };
 //   const len = nums.length;
-//   var backTrack = (tmp, list, currentSum) => {
+//   const backTrack = (tmp, list, currentSum) => {
 //     if (currentSum === target) {
 //       list.push([...tmp]);
 //       return;

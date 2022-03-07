@@ -48,7 +48,7 @@ ThroneInheritance.prototype.getInheritanceOrder = function() {
     result.push(king);
   }
   // 辅助函数（DFS遍历子节点）
-  var runChild = function(name, result, obj) {
+  let runChild = function(name, result, obj) {
     if (obj[name].live) {
       result.push(name);
     }
@@ -68,9 +68,9 @@ ThroneInheritance.prototype.getInheritanceOrder = function() {
 
 /**
  * Your ThroneInheritance object will be instantiated and called as such:
- * var obj = new ThroneInheritance(kingName)
+ * let obj = new ThroneInheritance(kingName)
  * obj.birth(parentName,childName)
  * obj.death(name)
- * var param_3 = obj.getInheritanceOrder()
+ * let param_3 = obj.getInheritanceOrder()
  */
 // @lc code=end

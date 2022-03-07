@@ -36,7 +36,7 @@ const countPrimeSetBits = function(L, R) {
   return result;
 };
 
-var getNumber = (num) => {
+const getNumber = (num) => {
   let res = 0;
   while (num > 0) {
     const remain = num % 2;

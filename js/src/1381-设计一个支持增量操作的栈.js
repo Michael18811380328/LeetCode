@@ -48,9 +48,9 @@ CustomStack.prototype.increment = function(k, val) {
 
 /**
  * Your CustomStack object will be instantiated and called as such:
- * var obj = new CustomStack(maxSize)
+ * let obj = new CustomStack(maxSize)
  * obj.push(x)
- * var param_2 = obj.pop()
+ * let param_2 = obj.pop()
  * obj.increment(k,val)
  */
 // @lc code=end

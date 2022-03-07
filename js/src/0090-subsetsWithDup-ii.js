@@ -14,7 +14,7 @@ const subsetsWithDup = function(nums) {
     list.push(nums);
     return list;
   }
-  var backTrack = function(current, target, list, lastIndex) {
+  const backTrack = function(current, target, list, lastIndex) {
     const currLen = current.length;
     if (currLen === target) {
       list.push([...current]);

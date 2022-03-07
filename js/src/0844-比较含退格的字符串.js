@@ -17,7 +17,7 @@ const backspaceCompare = function(S, T) {
   return s === t;
 };
 
-var fn = function(str) {
+const fn = function(str) {
   if (str.indexOf('#') === -1) return str;
   const arr = [];
   for (let i = 0; i < str.length; i++) {
@@ -35,7 +35,7 @@ var fn = function(str) {
 // 84 ms
 // , 在所有 JavaScript 提交中击败了
 // 73.31%
-var fn = function(str) {
+const fn = function(str) {
   let index = str.indexOf('#');
   if (index === -1) return str;
   while (index > -1) {

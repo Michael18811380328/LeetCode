@@ -13,12 +13,12 @@
 // 两种思路：
 // 第一种：直接把二叉搜索树中序遍历，放入临时栈中，不断取出
 // Your runtime beats 5.08 % of javascript submissions
-var BSTIterator = function(root) {
+const BSTIterator = function(root) {
   this.stack = [];
   this.pointer = getPointer(root, this.stack); // 指针指向当前最小值
 };
 
-var getPointer = (node, stack) => {
+const getPointer = (node, stack) => {
   if (!node) return node;
   while (node.left) {
     stack.push(node);
@@ -41,12 +41,12 @@ BSTIterator.prototype.hasNext = function() {
 // 第二种：直接初始化把树转换成数组
 // 缺点：把全部的树节点取出来，可能没必要
 // Your runtime beats 72.88 % of javascript submissions
-var BSTIterator = function(root) {
+const BSTIterator = function(root) {
   this.arr = [];
   this.arr.push(...runNode(root.left), root.val, ...runNode(root.right));
 };
 
-var runNode = (node) => {
+const runNode = (node) => {
   if (!node) return [];
   return [...runNode(node.left), node.val, ...runNode(node.right)];
 };
@@ -61,7 +61,7 @@ BSTIterator.prototype.hasNext = function() {
 
 /**
  * Your BSTIterator object will be instantiated and called as such:
- * var obj = new BSTIterator(root)
- * var param_1 = obj.next()
- * var param_2 = obj.hasNext()
+ * const obj = new BSTIterator(root)
+ * const param_1 = obj.next()
+ * const param_2 = obj.hasNext()
  */

@@ -84,9 +84,9 @@ export { MinStack, MinStack2 };
 
 /**
  * Your MinStack object will be instantiated and called as such:
- * var obj = new MinStack()
+ * const obj = new MinStack()
  * obj.push(x)
  * obj.pop()
- * var param_3 = obj.top()
- * var param_4 = obj.getMin()
+ * const param_3 = obj.top()
+ * const param_4 = obj.getMin()
  */

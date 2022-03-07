@@ -14,7 +14,7 @@
  * @return {boolean}
  */
 // (64 ms) Your runtime beats 94.44 % of javascript submissions
-var queryString = function(s, n) {
+const queryString = function(s, n) {
   for (let i = 1; i <= n; i++) {
     const current = i.toString(2);
     if (!s.includes(current)) return false;
@@ -30,7 +30,7 @@ var queryString = function(s, n) {
 // 把这个S的全部子串拿出来，然后转换成数字，看最后能否覆盖0~N的情况
 // S的长度小于1000，这个循环就是 1000 * 1000 这个计算较差
 // Your runtime beats 5.56 % of javascript submissions
-var queryString = function(s, n) {
+const queryString = function(s, n) {
   const dict = {};
   for (let len = 1; len <= s.length; len++) {
     for (let start = 0; start <= s.length - len; start++) {

@@ -11,7 +11,7 @@
  */
 // Your runtime beats 7.81 % of javascript submissions
 // 方法1
-var reverseOnlyLetters = function(S) {
+const reverseOnlyLetters = function(S) {
   const len = S.length;
   const resArr = new Array(len);
   const strArr = [];
@@ -47,7 +47,7 @@ var reverseOnlyLetters = function(S) {
 // 方法二：改进版本
 // 116/116 cases passed (88 ms)
 // Your runtime beats 42.19 % of javascript submissions
-var reverseOnlyLetters = function(S) {
+const reverseOnlyLetters = function(S) {
   const isLetter = (a) => {
     const index = a.charCodeAt(0);
     return (index >= 65 && index <= 90) || (index <= 122 && index >= 97);

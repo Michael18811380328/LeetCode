@@ -44,7 +44,7 @@ const findFrequentTreeSum = function(root) {
   return res;
 };
 
-var runNode = (node, dict) => {
+const runNode = (node, dict) => {
   if (!node) return 0;
   if (!node.left && !node.right) {
     const key = node.val;

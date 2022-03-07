@@ -24,7 +24,7 @@ const canPlaceFlowers = function(flowerbed, n) {
 // 有没有更好的办法：判断是否存在 [0,0,0] 这样的子数组，然后计算和？
 // 把数组转换成字符串，然后 indexOf 000 这样的情况
 // 可以试试第二种思路
-// var canPlaceFlowers = function(flowerbed, n) {
+// const canPlaceFlowers = function(flowerbed, n) {
 //   if (n === 0) return true;
 //   let str = flowerbed.join('');
 //   const len = flowerbed.length;

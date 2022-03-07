@@ -27,7 +27,7 @@ const postorder = function(root) {
   return list;
 };
 
-var runNode = function(node, list) {
+const runNode = function(node, list) {
   if (!node) return;
   // 后序遍历：左右根
   if (node.children) {

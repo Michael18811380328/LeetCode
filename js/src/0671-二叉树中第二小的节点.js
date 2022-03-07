@@ -30,7 +30,7 @@ const findSecondMinimumValue = function(root) {
   return res || -1;
 };
 
-var runNode = function(node, target) {
+const runNode = function(node, target) {
   if (!node) {
     return null;
   }

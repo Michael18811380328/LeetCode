@@ -13,8 +13,8 @@
 // 思路一，三层循环
 // 4394ms
 // Your runtime beats 50 % of javascript submissions
-// var numTriplets = function(nums1, nums2) {
-//   var foo = (arr1, arr2) => {
+// const numTriplets = function(nums1, nums2) {
+//   const foo = (arr1, arr2) => {
 //     // 获取一个数组的全排列，然后遍历另一个数组的平方，看是否相等即可
 //     // 现在性能很不好，三层循环，能否优化？
 //     let sum = 0;

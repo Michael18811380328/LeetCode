@@ -13,7 +13,7 @@ const validPalindrome = function(s) {
   return testString(s, true);
 };
 
-var testString = function(s, flag) {
+const testString = function(s, flag) {
   const len = s.length;
   if (len < 2) return true;
   const half = Math.floor(len / 2);

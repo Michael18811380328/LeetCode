@@ -37,7 +37,7 @@ const combine = function(n, k) {
   }
   // 下面深拷贝LIST数组
   // 执行回溯
-  var backTrack = function(list, tmp, num) {
+  const backTrack = function(list, tmp, num) {
     // 回溯结束的条件：临时数组的长度等于预定的长度
     if (tmp.length === num) {
       list.push([...tmp]);

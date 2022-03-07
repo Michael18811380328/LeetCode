@@ -15,7 +15,7 @@
 // 判断链表是否有重复元素即可
 // 这里不能使用对象，key 是字符串，直接使用Map
 // Your runtime beats 38.16 % of javascript submissions
-var getIntersectionNode = function(headA, headB) {
+const getIntersectionNode = function(headA, headB) {
   if (!headA || !headB) {
     return null;
   }
@@ -44,7 +44,7 @@ var getIntersectionNode = function(headA, headB) {
 // A 独立长度+ 公共长度 + B独立长度 === B 独立+ 公共 + A独立
 // 如果是不相交链表，那么指针不会相等
 // Your runtime beats 11.38 % of javascript submissions
-var getIntersectionNode = function(headA, headB) {
+const getIntersectionNode = function(headA, headB) {
   if (!headA || !headB) {
     return null;
   }

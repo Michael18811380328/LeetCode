@@ -25,7 +25,7 @@ const addTwoNumbers = function(l1, l2) {
 };
 
 // list to number array
-var toNumber = function(list, arr) {
+const toNumber = function(list, arr) {
   if (!list) return;
   arr.push(list.val);
   if (list.next) {
@@ -34,7 +34,7 @@ var toNumber = function(list, arr) {
 };
 
 // add two array
-var getSum = (arr1, arr2) => {
+const getSum = (arr1, arr2) => {
   let arr3 = [];
   while (arr1.length > 0 && arr2.length > 0) {
     const sum = arr1.pop() + arr2.pop();
@@ -61,7 +61,7 @@ var getSum = (arr1, arr2) => {
 };
 
 // number array to list
-var toList = function(arr) {
+const toList = function(arr) {
   if (arr.length === 0) {
     return null;
   }

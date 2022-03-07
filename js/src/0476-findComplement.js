@@ -20,7 +20,7 @@
  * @return {number}
  */
 // 通过  96 ms   37.9 MB
-var findComplement = function(num) {
+const findComplement = function(num) {
   const str = num.toString(2);
   // 可以使用循环
   let res = '';
@@ -40,7 +40,7 @@ var findComplement = function(num) {
  * @param {number} num
  * @return {number}
  */
-var findComplement = function(num) {
+const findComplement = function(num) {
   let str = num.toString(2);
   // 可以使用循环，或者使用正则替换
   // let res = '';

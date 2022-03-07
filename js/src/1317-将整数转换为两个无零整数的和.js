@@ -21,7 +21,7 @@ const getNoZeroIntegers = function(n) {
   return [a, b];
 };
 
-var jedge = function(a) {
+const jedge = function(a) {
   if (a <= 0) return false;
   while (a > 0) {
     if (a % 10 === 0) {

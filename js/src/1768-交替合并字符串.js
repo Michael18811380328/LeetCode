@@ -11,7 +11,7 @@
  * @return {string}
  */
 // Your runtime beats 84.33 % of javascript submissions
-var mergeAlternately = function(word1, word2) {
+const mergeAlternately = function(word1, word2) {
   const len1 = word1.length;
   const len2 = word2.length;
   const len = Math.min(len1, len2);
@@ -31,7 +31,7 @@ var mergeAlternately = function(word1, word2) {
 // @lc code=end
 
 // Your runtime beats 84.33 % of javascript submissions
-var mergeAlternately = function(word1, word2) {
+const mergeAlternately = function(word1, word2) {
   const len1 = word1.length;
   const len2 = word2.length;
   const len = Math.min(len1, len2);

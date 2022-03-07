@@ -17,7 +17,7 @@
  * @param {number} val
  * @return {ListNode}
  */
-var removeElements = function(head, val) {
+const removeElements = function(head, val) {
   if (!head) return head;
   // 如果头结点等于目标值，直接把头指针指向下一个
   while (head && head.val === val) {

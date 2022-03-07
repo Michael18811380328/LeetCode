@@ -45,8 +45,8 @@ SubrectangleQueries.prototype.getValue = function(row, col) {
 
 /**
  * Your SubrectangleQueries object will be instantiated and called as such:
- * var obj = new SubrectangleQueries(rectangle)
+ * let obj = new SubrectangleQueries(rectangle)
  * obj.updateSubrectangle(row1,col1,row2,col2,newValue)
- * var param_2 = obj.getValue(row,col)
+ * let param_2 = obj.getValue(row,col)
  */
 // @lc code=end

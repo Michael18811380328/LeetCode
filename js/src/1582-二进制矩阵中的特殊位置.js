@@ -11,7 +11,7 @@
  */
 // 38/95 cases passed (N/A)
 // 这个思路比较复杂，首先考虑一个简单的思路实现
-// var numSpecial = function(mat) {
+// const numSpecial = function(mat) {
 //   let fn = (a, b) => a + b;
 //   let dict = {};
 //   for (let i = 0; i < mat.length; i++) {

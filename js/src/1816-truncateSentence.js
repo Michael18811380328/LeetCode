@@ -13,7 +13,7 @@
  */
 // 思路一：遍历字符串
 // 96 ms, 在所有 JavaScript 提交中击败了16.61%
-var truncateSentence = function(s, k) {
+const truncateSentence = function(s, k) {
   const len = s.length;
   let remain = k;
   for (let i = 0; i < len; i++) {
@@ -29,7 +29,7 @@ var truncateSentence = function(s, k) {
 
 // 改进版本
 // 96 ms, 在所有 JavaScript 提交中击败了18.81%，还可以提升很大
-var truncateSentence = function(s, k) {
+const truncateSentence = function(s, k) {
   let K = k;
   let position = 0;
   while (K > 0) {

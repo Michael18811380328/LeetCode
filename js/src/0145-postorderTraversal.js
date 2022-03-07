@@ -15,7 +15,7 @@
  * @return {number[]}
  */
 // 76 ms, 在所有 JavaScript 提交中击败了91.50%
-var postorderTraversal = function(root) {
+const postorderTraversal = function(root) {
   if (!root || !root.val) return [];
   return [].concat(postorderTraversal(root.left)).concat(postorderTraversal(root.right)).concat([root.val]);
 };

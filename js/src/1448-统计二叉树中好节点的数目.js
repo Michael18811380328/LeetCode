@@ -21,7 +21,7 @@
 const goodNodes = function(root) {
   let goodNumber = 0;
   // 辅助函数，判断一个点是否是好节点
-  var runNode = (node, max) => {
+  const runNode = (node, max) => {
     if (!node) return;
     const val = node.val;
     if (val >= max) {

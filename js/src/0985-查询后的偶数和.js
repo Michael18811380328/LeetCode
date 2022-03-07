@@ -54,7 +54,7 @@ const sumEvenAfterQueries = function(A, queries) {
   return res;
 };
 
-var isOdd = (num) => {
+const isOdd = (num) => {
   return num % 2 === 0;
 };
 // @lc code=end

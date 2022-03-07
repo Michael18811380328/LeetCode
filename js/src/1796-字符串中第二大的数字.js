@@ -10,7 +10,7 @@
  * @return {number}
  */
 // 这样写有问题，可能存在相同的值
-// var secondHighest = function(s) {
+// const secondHighest = function(s) {
 //   const len = s.length;
 //   let first, second;
 //   for (let i = 0; i < len; i++) {

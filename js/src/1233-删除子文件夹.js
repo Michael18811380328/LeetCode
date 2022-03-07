@@ -23,7 +23,7 @@ const removeSubfolders = function(folder) {
   return result;
 };
 
-var deleteSubFile = (item, folder) => {
+const deleteSubFile = (item, folder) => {
   const len = item.length;
   for (let i = 0; i < folder.length; i++) {
     if (folder[i][len] === '/' && folder[i].indexOf(item) === 0) {
@@ -41,7 +41,7 @@ var deleteSubFile = (item, folder) => {
 //   this.children = {};
 // }
 
-// var removeSubfolders = function(folder) {
+// const removeSubfolders = function(folder) {
 //   // 先按照长度和顺序排序
 //   folder.sort((a, b) => {
 //     if (a.length === b.length) {
@@ -70,7 +70,7 @@ var deleteSubFile = (item, folder) => {
 //   return result;
 // };
 
-// var checkNode = (str, tree) => {
+// const checkNode = (str, tree) => {
 //   // 先把str转换成数组
 //   let arr = str.split('/');
 //   let pointer = tree;

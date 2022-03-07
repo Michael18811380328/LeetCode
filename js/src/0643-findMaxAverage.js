@@ -35,7 +35,7 @@ const findMaxAverage = function(nums, k) {
 };
 
 // 辅助函数（求数组的和）
-var sum = function(arr) {
+const sum = function(arr) {
   const fn = function(total, num) {
     return total + num;
   };

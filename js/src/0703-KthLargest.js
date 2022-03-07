@@ -49,7 +49,7 @@ KthLargest.prototype.add = function(val) {
 // [[1,[]],[-3],[-2],[-4],[0],[4]]
 /**
  * Your KthLargest object will be instantiated and called as such:
- * var obj = new KthLargest(k, nums)
- * var param_1 = obj.add(val)
+ * let obj = new KthLargest(k, nums)
+ * let param_1 = obj.add(val)
  */
 // @lc code=end

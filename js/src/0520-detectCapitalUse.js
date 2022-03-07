@@ -41,7 +41,7 @@ const detectCapitalUse = function(word) {
   }
 };
 
-var isLarge = function(str) {
+const isLarge = function(str) {
   const index = str.charCodeAt(0);
   if (index > 64 && index < 91) {
     return true;

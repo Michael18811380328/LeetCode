@@ -20,7 +20,7 @@ const minTimeToVisitAllPoints = function(points) {
   return res;
 };
 
-var getDistance = (a, b) => {
+const getDistance = (a, b) => {
   const { abs, max } = Math;
   const x = abs(a[0] - b[0]);
   const y = abs(a[1] - b[1]);

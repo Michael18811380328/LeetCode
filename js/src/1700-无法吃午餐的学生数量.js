@@ -10,7 +10,7 @@
  * @return {number}
  */
 // Your runtime beats 13.73 % of javascript submissions
-var countStudents = function(students, sandwiches) {
+const countStudents = function(students, sandwiches) {
   // 这里使用指针，比直接操作数组效果更好
   // 获取当前三明治的铲毒。循环一次
   // 如果用户吃掉三明治，那么重新计算长度和当前循环的次数
@@ -38,7 +38,7 @@ var countStudents = function(students, sandwiches) {
 
 // 改进1（去掉len变量）看来主要和网速有关
 // Your runtime beats 85.63 % of javascript submissions
-var countStudents = function(students, sandwiches) {
+const countStudents = function(students, sandwiches) {
   let times = 0;
   while (sandwiches.length > 0) {
     if (sandwiches[0] === students[0]) {
@@ -64,7 +64,7 @@ var countStudents = function(students, sandwiches) {
 // 如果不等，那么求出最后一个出现的，然后此时的长度就是没有吃饭的长度
 // 分析一下这样的复杂度
 // 64 ms, 在所有 JavaScript 提交中击败了95.00%
-var countStudents = function(students, sandwiches) {
+const countStudents = function(students, sandwiches) {
   const len = students.length;
   let times1 = 0;
   let times0 = 0;

@@ -52,7 +52,7 @@ FindElements.prototype.find = function(target) {
 
 /**
  * Your FindElements object will be instantiated and called as such:
- * var obj = new FindElements(root)
- * var param_1 = obj.find(target)
+ * let obj = new FindElements(root)
+ * let param_1 = obj.find(target)
  */
 // @lc code=end

@@ -27,7 +27,7 @@ const maxScore = function(s) {
   return max;
 };
 
-var getValue = function(str1, str2) {
+const getValue = function(str1, str2) {
   let res = 0;
   for (let i = 0; i < str1.length; i++) {
     if (str1[i] === '0') res++;

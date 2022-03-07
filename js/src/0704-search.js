@@ -5,12 +5,12 @@
  * @param {number} target
  * @return {number}
  */
-var search = function(nums, target) {
+const search = function(nums, target) {
   return nums.indexOf(target);
 };
 
 // 二分法
-var search = function(nums, target) {
+const search = function(nums, target) {
   const len = nums.length;
   if (len === 0 || nums[0] > target || nums[len - 1] < target) {
     return -1;

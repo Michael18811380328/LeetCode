@@ -34,7 +34,7 @@ const nextGreaterElement = function(nums1, nums2) {
 };
 
 // 思路二：既然是不重复的，那么是否可以利用字典，获取nums2中的键，然后排序一下，这样的效果是否好一点？
-// var nextGreaterElement = function(nums1, nums2) {
+// const nextGreaterElement = function(nums1, nums2) {
 //   let dict = [];
 //   for (let i = 0; i < nums2.length; i++) {
 //     let key = nums2[i];

@@ -28,7 +28,7 @@ const numUniqueEmails = function(emails) {
 };
 
 // 先规范邮件地址
-var valid = (email) => {
+const valid = (email) => {
   const seperator = email.indexOf('@');
   let local = email.slice(0, seperator);
   const domain = email.slice(seperator);

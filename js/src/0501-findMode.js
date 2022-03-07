@@ -39,7 +39,7 @@ const findMode = function(root) {
   return res;
 };
 
-var runTree = function(node, dict) {
+const runTree = function(node, dict) {
   if (!node) return;
   const key = node.val;
   if (dict[key]) {

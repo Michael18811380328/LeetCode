@@ -43,7 +43,7 @@ NumArray.prototype.sumRange = function(i, j) {
 
 /**
  * Your NumArray object will be instantiated and called as such:
- * var obj = new NumArray(nums)
- * var param_1 = obj.sumRange(i,j)
+ * let obj = new NumArray(nums)
+ * let param_1 = obj.sumRange(i,j)
  */
 // @lc code=end

@@ -25,7 +25,7 @@ const hasPathSum = function(root, sum) {
   return runNode(root.left, sum, currentSum) || runNode(root.right, sum, currentSum);
 };
 
-var runNode = function(node, sum, currentSum) {
+const runNode = function(node, sum, currentSum) {
   // 没有节点，直接返回
   if (!node) {
     return false;

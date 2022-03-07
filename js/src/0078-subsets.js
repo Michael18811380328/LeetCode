@@ -18,7 +18,7 @@ const subsets = function(nums) {
     return list;
   }
   // 回溯子函数
-  var backTrack = function(current, target, list) {
+  const backTrack = function(current, target, list) {
     const currLen = current.length;
     if (currLen === target) {
       list.push([...current]);

@@ -38,7 +38,7 @@ const averageOfLevels = function(root) {
   return matrix;
 };
 
-var runNode = function(node, depth, matrix) {
+const runNode = function(node, depth, matrix) {
   if (!node) return;
   if (!matrix[depth]) {
     matrix[depth] = [];

@@ -33,6 +33,6 @@ OrderedStream.prototype.insert = function(id, value) {
 
 /**
  * Your OrderedStream object will be instantiated and called as such:
- * var obj = new OrderedStream(n)
- * var param_1 = obj.insert(id,value)
+ * let obj = new OrderedStream(n)
+ * let param_1 = obj.insert(id,value)
  */

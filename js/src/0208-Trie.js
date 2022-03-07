@@ -87,9 +87,9 @@ Trie.prototype.startsWith = function(prefix) {
 // [null,null,null,null,null,null,null,false,true,false,false,false,false,false,true,true,false,true,true,false,false,false,true,true,true]
 /**
  * Your Trie object will be instantiated and called as such:
- * var obj = new Trie()
+ * const obj = new Trie()
  * obj.insert(word)
- * var param_2 = obj.search(word)
- * var param_3 = obj.startsWith(prefix)
+ * const param_2 = obj.search(word)
+ * const param_3 = obj.startsWith(prefix)
  */
 // @lc code=end

@@ -4,7 +4,7 @@
  */
 // 分糖果
 // 思路一：396 ms, 在所有 JavaScript 提交中击败了16.83%
-var distributeCandies = function(candies) {
+const distributeCandies = function(candies) {
   const len = candies.length;
   const dict = {};
   for (let i = 0; i < len; i++) {
@@ -25,7 +25,7 @@ var distributeCandies = function(candies) {
 
 // 思路二：直接把糖果去重，然后就是key的长度
 // 148 ms, 在所有 JavaScript 提交中击败了64.36%
-var distributeCandies = function(candies) {
+const distributeCandies = function(candies) {
   const keys = [...new Set(candies)];
   return Math.min(keys.length, candies.length / 2);
 };

@@ -28,7 +28,7 @@ const countBattleships = function(board) {
   return res;
 };
 
-var changeBoard = (board, i, j) => {
+const changeBoard = (board, i, j) => {
   board[i][j] = '.';
   if (board[i][j + 1] === 'X') {
     while (board[i][j + 1] === 'X') {

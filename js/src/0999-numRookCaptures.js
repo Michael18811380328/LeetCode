@@ -9,7 +9,7 @@
  */
 // 1、思路1
 // 80 ms, 在所有 JavaScript 提交中击败了61.84%
-var numRookCaptures = function(board) {
+const numRookCaptures = function(board) {
   const len = 8;
   for (let i = 0; i < len; i++) {
     for (let j = 0; j < len; j++) {
@@ -22,7 +22,7 @@ var numRookCaptures = function(board) {
 };
 
 // 这里还能改进
-var getNum = (board, x, y) => {
+const getNum = (board, x, y) => {
   let res = 0;
   for (let i = x; i < 8; i++) {
     if (board[i][y] === 'B') {
@@ -67,7 +67,7 @@ var getNum = (board, x, y) => {
 // 这样直接使用 index 即可完成，不需要双重循环
 // 68 ms, 在所有 JavaScript 提交中击败了78.57%
 // 子函数还能优化
-var numRookCaptures = function(board) {
+const numRookCaptures = function(board) {
   const newBoard = board.flat();
   const index = newBoard.indexOf('R') + 1;
   const j = (index % 8) - 1;

@@ -15,7 +15,7 @@
  * @param {number[]} s
  * @return {number}
  */
-var findContentChildren = function(g, s) {
+const findContentChildren = function(g, s) {
   // ？这两个数组是否排序，这个很影响性能
   // 可以按照从小到大的顺序排列，然后使用贪心算法，依次遍历数组，看是否满足
   const gLen = g.length;
@@ -44,7 +44,7 @@ var findContentChildren = function(g, s) {
 };
 
 // 思路二 140 ms, 在所有 JavaScript 提交中击败了15.20%
-var findContentChildren = function(g, s) {
+const findContentChildren = function(g, s) {
   const gLen = g.length;
   const sLen = s.length;
   if (gLen === 0 || sLen === 0) return 0;
