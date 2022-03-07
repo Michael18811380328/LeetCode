@@ -1,13 +1,8 @@
-# HelloJava
-This is a repo for learning java.
+# Target
 
-basic 基础的Java入门
+1. 基础 Java 语法入门，可以阅读入门算法书籍中的 Java 代码
 
-目标：看懂简单的 Java 代码；可以阅读入门算法书籍中的 Java 代码
-
-其他视频课程
-
-阿里云、网易云、腾讯等
+2. 其他视频课程了解（阿里云、网易云、腾讯课堂）
 
 https://www.w3cschool.cn/minicourse/play/javapre
 
