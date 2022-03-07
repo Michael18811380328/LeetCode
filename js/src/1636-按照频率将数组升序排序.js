@@ -13,7 +13,7 @@
 var frequencySort = function(nums) {
   let dict = {};
   for (let i = 0; i < nums.length; i++) {
-    let = key = nums[i];
+    let key = nums[i];
     if (!dict[key]) {
       dict[key] = 1;
     } else {

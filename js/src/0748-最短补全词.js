@@ -22,7 +22,7 @@ var shortestCompletingWord = function(licensePlate, words) {
   // 这里应该是一个字典
   let Dict = {};
   for (let i = 0; i < len; i++) {
-    let = key = license[i];
+    let key = license[i];
     if (!Dict[key]) {
       Dict[key] = 1
     } else {

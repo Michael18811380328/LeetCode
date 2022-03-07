@@ -11,6 +11,7 @@
     "standard": "./node_modules/.bin/standard",
     "test": "node ./scripts/jest-test.js --env=jsdom --coverage",
     "test-watch": "node ./scripts/jest-test.js --env=jsdom --coverage --watch",
+    "build-api": "./node_modules/jsdoc-to-markdown/bin/cli.js ./src/*.js > leetcode-api.md",
     "lint": "eslint ./src/*.js",
     "lint-html": "eslint ./src/*.js -f html -o ./eslint-reports/lint-results.html",
     "lint-fix": "eslint --fix ./src/*.js"
@@ -41,6 +42,7 @@
     "eslint-plugin-import": "2.25.2",
     "jest": "^27.0.6",
     "jest-watch-typeahead": "^0.6.4",
+    "jsdoc-to-markdown": "^7.1.1",
     "regenerator-runtime": "^0.13.3",
     "standard": "^16.0.4"
   },
