@@ -51,3 +51,4 @@ const checkAlmostEquivalent = function(word1, word2) {
   return true;
 };
 // @lc code=end
+export { checkAlmostEquivalent };

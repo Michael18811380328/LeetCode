@@ -28,3 +28,4 @@ const maximumDifference = function(nums) {
   return res;
 };
 // @lc code=end
+export { maximumDifference };

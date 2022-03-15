@@ -25,7 +25,9 @@ const distributeCandies = function(candies) {
 
 // 思路二：直接把糖果去重，然后就是key的长度
 // 148 ms, 在所有 JavaScript 提交中击败了64.36%
-const distributeCandies = function(candies) {
+const distributeCandies2 = function(candies) {
   const keys = [...new Set(candies)];
   return Math.min(keys.length, candies.length / 2);
 };
+
+export { distributeCandies, distributeCandies2 };

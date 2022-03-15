@@ -38,3 +38,5 @@ const matrixReshape = function(nums, r, c) {
   }
   return matrix;
 };
+
+export { matrixReshape };

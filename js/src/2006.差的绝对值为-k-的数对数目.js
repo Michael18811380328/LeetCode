@@ -56,3 +56,4 @@ const countKDifference2 = function(nums, k) {
 };
 
 // @lc code=end
+export { countKDifference, countKDifference2 };

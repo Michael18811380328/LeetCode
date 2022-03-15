@@ -74,3 +74,4 @@ const countValidWords = function(sentence) {
 // console.log(countValidWords('!this  1-s b8d!') === 0)
 // console.log(countValidWords('alice and  bob are playing stone-game10') === 5)
 // @lc code=end
+export { countValidWords };

@@ -36,3 +36,4 @@ const minimumMoves = function(s) {
   return timer;
 };
 // @lc code=end
+export { minimumMoves };

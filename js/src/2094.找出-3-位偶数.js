@@ -43,3 +43,4 @@ const findEvenNumbers = function(digits) {
   return arr;
 };
 // @lc code=end
+export { findEvenNumbers };

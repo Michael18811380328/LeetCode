@@ -35,3 +35,4 @@ const twoOutOfThree = function(nums1, nums2, nums3) {
   return [...new Set(result)];
 };
 // @lc code=end
+export { twoOutOfThree };

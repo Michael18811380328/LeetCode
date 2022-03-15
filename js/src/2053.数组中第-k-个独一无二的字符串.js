@@ -33,3 +33,4 @@ const kthDistinct = function(arr, k) {
   return filter_arr[k - 1] || '';
 };
 // @lc code=end
+export { kthDistinct };

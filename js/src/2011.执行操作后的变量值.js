@@ -23,3 +23,4 @@ const finalValueAfterOperations = function(operations) {
   return count;
 };
 // @lc code=end
+export { finalValueAfterOperations };

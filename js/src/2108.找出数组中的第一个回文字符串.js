@@ -35,3 +35,4 @@ const firstPalindrome = function(words) {
   return '';
 };
 // @lc code=end
+export { firstPalindrome };

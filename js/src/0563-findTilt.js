@@ -47,3 +47,4 @@ const getSum = function(node, list) {
 
 // [1,2,3,4,5,6,7,8,9,null,null,13,null,19,38] 152
 // @lc code=end
+export { findTilt };

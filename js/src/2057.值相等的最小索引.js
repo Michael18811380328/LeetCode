@@ -20,3 +20,4 @@ const smallestEqual = function(nums) {
   return -1;
 };
 // @lc code=end
+export { smallestEqual };

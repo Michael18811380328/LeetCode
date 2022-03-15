@@ -30,3 +30,4 @@ const minMovesToSeat = function(seats, students) {
   return move;
 };
 // @lc code=end
+export { minMovesToSeat };

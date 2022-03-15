@@ -17,16 +17,7 @@
  * @param {Node} root
  * @return {number[]}
  */
-// 96 ms
-// , 在所有 JavaScript 提交中击败了
-// 95.50%
-// 的用户
-const postorder = function(root) {
-  const list = [];
-  runNode(root, list);
-  return list;
-};
-
+// 96 ms, 在所有 JavaScript 提交中击败了95.50%
 const runNode = function(node, list) {
   if (!node) return;
   // 后序遍历：左右根
@@ -37,4 +28,12 @@ const runNode = function(node, list) {
   }
   list.push(node.val);
 };
+
+const postorder = function(root) {
+  const list = [];
+  runNode(root, list);
+  return list;
+};
+
 // @lc code=end
+export { postorder };

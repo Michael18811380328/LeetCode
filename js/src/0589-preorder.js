@@ -17,16 +17,7 @@
  * @param {Node} root
  * @return {number[]}
  */
-// 120 ms
-// , 在所有 JavaScript 提交中击败了
-// 33.70%
-// 的用户
-const preorder = function(root) {
-  const list = [];
-  runNode(root, list);
-  return list;
-};
-
+// 120 ms, 在所有 JavaScript 提交中击败了33.70%
 const runNode = function(node, list) {
   if (!node) return;
   // 前序遍历：根左右
@@ -36,4 +27,12 @@ const runNode = function(node, list) {
     runNode(node.children[i], list);
   }
 };
+
+const preorder = function(root) {
+  const list = [];
+  runNode(root, list);
+  return list;
+};
+
 // @lc code=end
+export { preorder };

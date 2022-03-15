@@ -95,3 +95,4 @@ const countVowelSubstrings = function(word) {
 // "b"
 
 // @lc code=end
+export { countVowelSubstrings };

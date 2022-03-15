@@ -41,3 +41,4 @@ const maxSubsequence = function(nums, k) {
 // console.log(maxSubsequence([3,4,3,3], 2))
 
 // @lc code=end
+export { maxSubsequence };

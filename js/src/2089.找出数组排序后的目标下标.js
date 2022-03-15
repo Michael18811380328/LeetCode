@@ -26,3 +26,4 @@ const targetIndices = function(nums, target) {
   return res;
 };
 // @lc code=end
+export { targetIndices };

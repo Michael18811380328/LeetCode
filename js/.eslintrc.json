@@ -30,6 +30,7 @@
     "no-restricted-syntax": "off",
     "prefer-destructuring": "off",
     "object-curly-newline": "off",
+    "camelcase": "off",
     "no-return-assign": "off"
   }
 }

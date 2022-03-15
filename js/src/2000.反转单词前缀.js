@@ -27,3 +27,4 @@ const reversePrefix = function(word, ch) {
   return left + right;
 };
 // @lc code=end
+export { reversePrefix };

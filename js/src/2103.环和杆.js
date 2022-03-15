@@ -45,3 +45,4 @@ const countPoints = function(rings) {
 // console.log(countPoints("G4") === 0)
 
 // @lc code=end
+export { countPoints };

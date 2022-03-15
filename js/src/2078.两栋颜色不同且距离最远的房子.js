@@ -30,3 +30,4 @@ const maxDistance = function(colors) {
 };
 // 能否使用双指针优化？
 // @lc code=end
+export { maxDistance };

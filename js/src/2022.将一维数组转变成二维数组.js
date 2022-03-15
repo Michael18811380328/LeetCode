@@ -33,3 +33,4 @@ const construct2DArray = function(original, m, n) {
   return res;
 };
 // @lc code=end
+export { construct2DArray };

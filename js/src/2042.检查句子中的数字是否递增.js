@@ -26,3 +26,4 @@ const areNumbersAscending = function(s) {
   return true;
 };
 // @lc code=end
+export { areNumbersAscending };
