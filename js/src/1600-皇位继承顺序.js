@@ -48,7 +48,7 @@ ThroneInheritance.prototype.getInheritanceOrder = function() {
     result.push(king);
   }
   // 辅助函数（DFS遍历子节点）
-  let runChild = function(name, result, obj) {
+  const runChild = function(name, result, obj) {
     if (obj[name].live) {
       result.push(name);
     }
