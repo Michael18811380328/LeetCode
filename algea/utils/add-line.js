@@ -12,7 +12,7 @@ function addLine(path) {
 
   for (file of files) {
     // 如果是隐藏文件（或者其他 gitignore 文件等），直接跳过
-    if (file[0] === '.' || file === 'node_modules' || file === 'LICENSE' || file === 'site') {
+    if (file[0] === '.' || file === 'node_modules' || file === 'LICENSE' || file === 'site' || file === 'Makefile') {
       continue;
     }
     // 如果是文件夹，递归子文件夹
@@ -40,6 +40,6 @@ function addLine(path) {
 }
 
 // 这里放需要处理的目录（绝对路径）
-const initDir = '/Users/seafile/PersonalRepo/LeetCode/book';
+const initDir = '/Users/';
 
 addLine(initDir);
