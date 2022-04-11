@@ -16,10 +16,7 @@
  * @param {TreeNode} root
  * @return {number[][]}
  */
-// 88 ms
-// , 在所有 JavaScript 提交中击败了
-// 69.94%
-// 的用户
+// 88 ms, 在所有 JavaScript 提交中击败了69.94%的用户
 const levelOrder = function(root) {
   // 把当前的层数传递下去，然后传递一个二重数组即可
   const matrix = [];
