@@ -1,5 +1,6 @@
 // * 97. 交错字符串（中等-困难）
 // * 给定三个字符串 s1、s2、s3，请你帮忙验证 s3 是否是由 s1 和 s2 交错 组成的。
+// 这个解答不太熟，需要多看几次
 
 /**
  * 思路1，双指针：DFS 的思路，时间复杂度 O(2^n)，性能不好
@@ -135,7 +136,6 @@ var isInterleave3 = function (s1, s2, s3) {
   let dict = new Set();
   let res = false;
   function backtrace(i1, i2, i3) {
-    console.log(i1, i2, i3)
     // 当三个指针都到字符串末尾，证明完全匹配，返回
     if (i1 === l1 && i2 === l2 && i3 === l3) {
       return res = true;
