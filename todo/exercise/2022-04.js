@@ -412,3 +412,70 @@ var isInterleave2 = function(s1, s2, s3) {
   }
   return matrix[l1][l2];
 }
+
+// 0099 恢复正常的二叉搜索树（没有重复节点）
+// 其中有两个节点的位置调换了
+// 思路：二叉搜索树的中序遍历是有序数组
+// 然后看这个数组中那两个换了（可能是1个或者两个）
+// 然后再次遍历二叉树，给这两个节点的值调换一下
+var recoverTree = function(root) {
+  let list = [];
+  let inorder = (node) => {
+    if (!node) {
+      return;
+    }
+    inorder(node.left);
+    list.push(node.val);
+    inorder(node.right);
+  }
+  inorder(root);
+
+  let unorder = [];
+  for (let i = 1; i < list.length; i++) {
+    if (list[i] < list[i - 1]) {
+      if (unorder.length === 0) {
+        unorder.push(list[i - 1]);
+      } else {
+        unorder.push(list[i]);
+      }
+    }
+  }
+  if (unorder.length === 1) {
+    let index = list.indexOf(unorder[0]);
+    unorder.push(list[index + 1]);
+  }
+
+  let runNode = (node) => {
+    if (!node) {
+      return;
+    }
+    if (node.val === unorder[0]) {
+      node.val = unorder[1];
+    }
+    else if (node.val === unorder[1]) {
+      node.val = unorder[0];
+    }
+    runNode(node.val);
+    runNode(node.right);
+  }
+  runNode(root);
+};
+
+// 133 克隆图
+// 关键是克隆图的节点和邻接关系
+var cloneGraph = function(node) {
+  let dict = new Map();
+  let runNode = (a) => {
+    if (!a) return null;
+    if (dict.has(a.val)) {
+      return dict.get(a.val);
+    }
+    let b = new Node(a.val, []);
+    dict.set(b.val, b);
+    a.neighbors.forEach(item => {
+      b.neighbors.push(runNode(item));
+    });
+    return b;
+  }
+  return runNode(node);
+};
