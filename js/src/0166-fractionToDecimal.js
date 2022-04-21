@@ -4,7 +4,6 @@
  * [166] 分数到小数
  */
 
-// @lc code=start
 /**
  * @param {number} numerator
  * @param {number} denominator
@@ -74,19 +73,4 @@ var fractionToDecimal = function(numerator, denominator) {
   return result.join('');
 };
 
-
-// ok
-// console.log(fractionToDecimal(1, 2) === "0.5");
-// console.log(fractionToDecimal(2, 1) === "2");
-// console.log(fractionToDecimal(1, 5) === "0.2");
-// console.log(fractionToDecimal(35, 20) === "1.75");
-// console.log(fractionToDecimal(2, 3) === "0.(6)");
-// console.log(fractionToDecimal(4, 333) === "0.(012)");
-// console.log(fractionToDecimal(821, 370) === "2.2(189)");
-
-// 极端值测试
-// console.log(fractionToDecimal(-1, -2147483648) === "0.0000000004656612873077392578125");
-// console.log(fractionToDecimal(1, 214748364) === "0.00(000000465661289042462740251655654056577585848337359161441621040707904997124914069194026549138227660723878669455195477065427143370461252966751355553982241280310754777158628319049732085502639731402098131932683780538602845887105337854867197032523144157689601770377165713821223802198558308923834223016478952081795603341592860749337303449725)");
-
-// @lc code=end
-
+export { fractionToDecimal };

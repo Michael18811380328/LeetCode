@@ -56,7 +56,6 @@ var isInterleave = function(s1, s2, s3) {
 
   // 辅助函数递归字符串（双指针，递归字符串是否满足）
   function fn(p1, p2, p3) {
-    console.log(p1, p2, p3);
     // 如果有一个已经是空字符串，那么直接比较另两个即可
     if (!s1[p1]) {
       return s2.slice(p2) === s3.slice(p3);
