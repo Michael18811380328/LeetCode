@@ -18,9 +18,8 @@
  * @param {number} right
  * @return {ListNode}
  */
-// 基本思路
-// 现在内存爆了，while 循环有问题，不应该直接放入数组操作
-// 最好使用索引
+// 思路1
+// 现在内存爆了，while 循环有问题，不应该直接放入数组操作;最好使用索引
 var reverseBetween = function(head, left, right) {
   let index = 0;
   let list = [];
