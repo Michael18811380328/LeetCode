@@ -41,3 +41,5 @@ const sortEvenOdd = function(nums) {
 // console.log(sortEvenOdd([4,1,2,3])); // [2,3,4,1]
 // console.log(sortEvenOdd([2, 1])); // [2, 1]
 // @lc code=end
+
+export { sortEvenOdd };

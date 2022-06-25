@@ -18,3 +18,5 @@ const minimumSum = function(num) {
 // 实际上，获取四个数中前两个最大的数字，然后获取后两个数字，加起来即可
 
 // @lc code=end
+
+export { minimumSum };

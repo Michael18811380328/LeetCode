@@ -25,3 +25,5 @@ const divideArray = function(nums) {
   // console.log(divideArray([1,2,3,4]));
 };
 // @lc code=end
+
+export { divideArray };

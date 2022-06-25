@@ -45,3 +45,5 @@ const largestInteger = function(num) {
   return parseInt(resArr.join(''));
 };
 // @lc code=end
+
+export { largestInteger };

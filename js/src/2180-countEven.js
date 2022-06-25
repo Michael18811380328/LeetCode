@@ -37,3 +37,5 @@ const countEven = function(num) {
   return tmp;
 };
 // @lc code=end
+
+export { countEven };

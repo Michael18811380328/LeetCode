@@ -58,3 +58,5 @@ const mostFrequent = function(nums, key) {
   return tmp;
 };
 // @lc code=end
+
+export { mostFrequent };

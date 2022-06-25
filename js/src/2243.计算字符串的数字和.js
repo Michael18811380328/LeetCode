@@ -28,3 +28,5 @@ const digitSum = function(s, k) {
   return arr.join('');
 };
 // @lc code=end
+
+export { digitSum };

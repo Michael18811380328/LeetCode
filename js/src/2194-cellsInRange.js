@@ -33,3 +33,5 @@ const cellsInRange = function(s) {
 
 // console.log(cellsInRange("A1:F1"))
 // @lc code=end
+
+export { cellsInRange };

@@ -21,3 +21,5 @@ const prefixCount = function(words, pref) {
   return nums;
 };
 // @lc code=end
+
+export { prefixCount };

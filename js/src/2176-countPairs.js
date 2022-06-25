@@ -32,3 +32,5 @@ const countPairs = function(nums, k) {
 // 更好的优化方案，是循环一次，然后使用字典计数即可
 // 这个实现也不难，有时间再说
 // @lc code=end
+
+export { countPairs };

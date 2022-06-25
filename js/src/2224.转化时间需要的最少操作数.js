@@ -36,3 +36,5 @@ const convertTime = function(current, correct) {
   return res;
 };
 // @lc code=end
+
+export { convertTime };

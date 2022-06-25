@@ -33,3 +33,4 @@ const intersection = function(nums) {
   return res;
 };
 // @lc code=end
+export { intersection };

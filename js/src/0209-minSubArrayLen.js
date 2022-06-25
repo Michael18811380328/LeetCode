@@ -38,3 +38,5 @@ const minSubArrayLen = function(s, nums) {
   }
   return minLen;
 };
+
+export { minSubArrayLen };

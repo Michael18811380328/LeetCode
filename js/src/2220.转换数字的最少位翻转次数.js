@@ -29,3 +29,5 @@ const minBitFlips = function(start, goal) {
   return res;
 };
 // @lc code=end
+
+export { minBitFlips };

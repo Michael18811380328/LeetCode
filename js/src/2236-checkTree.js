@@ -22,3 +22,5 @@ const checkTree = function(root) {
   return root.val === (root.left.val + root.right.val);
 };
 // @lc code=end
+
+export { checkTree };
