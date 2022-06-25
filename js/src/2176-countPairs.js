@@ -12,7 +12,7 @@
  * 难度简单，数组遍历和比较
  * 64 ms, 在所有 JavaScript 提交中击败了79.65%
  */
-var countPairs = function(nums, k) {
+const countPairs = function(nums, k) {
   const len = nums.length;
   // 先判断一下是否有重复值，如果没有重复值，直接返回空
   if (Array.from(new Set(nums)).length === len) {
@@ -32,4 +32,3 @@ var countPairs = function(nums, k) {
 // 更好的优化方案，是循环一次，然后使用字典计数即可
 // 这个实现也不难，有时间再说
 // @lc code=end
-

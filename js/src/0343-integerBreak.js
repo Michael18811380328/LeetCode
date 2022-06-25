@@ -40,12 +40,12 @@ const integerBreak = function(n) {
   const b = n % 3;
   const a = (n - b) / 3;
   if (b === 0) {
-    return Math.pow(3, a);
+    return 3 ** a;
   }
   if (b === 1) {
-    return Math.pow(3, a - 1) * 4;
+    return 3 ** (a - 1) * 4;
   }
   if (b === 2) {
-    return Math.pow(3, a) * 2;
+    return 3 ** a * 2;
   }
 };

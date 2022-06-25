@@ -10,12 +10,12 @@
  * @return {number}
  * Your runtime beats 89.75 % of javascript submissions
  */
-var largestInteger = function(num) {
-  let arr = String(num).split('');
-  let len = arr.length;
-  let arr1 = [];
-  let arr2 = [];
-  let dict = [];
+const largestInteger = function(num) {
+  const arr = String(num).split('');
+  const len = arr.length;
+  const arr1 = [];
+  const arr2 = [];
+  const dict = [];
 
   arr.forEach((item, index) => {
     // item % 2 === 0
@@ -31,14 +31,13 @@ var largestInteger = function(num) {
 
   arr1.sort((a, b) => a > b ? 1 : -1);
   arr2.sort((a, b) => a > b ? 1 : -1);
-  
-  let resArr = [];
+
+  const resArr = [];
   for (let i = 0; i < len; i++) {
     if (dict[i]) {
       // arr1
       resArr[i] = arr1.pop();
-    }
-    else {
+    } else {
       // arr2
       resArr[i] = arr2.pop();
     }
@@ -46,4 +45,3 @@ var largestInteger = function(num) {
   return parseInt(resArr.join(''));
 };
 // @lc code=end
-

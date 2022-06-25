@@ -11,12 +11,11 @@
  * @return {number}
  * Your runtime beats 59.5 % of javascript submissions
  */
-var findFinalValue = function(nums, original) {
-  let set = new Set(nums);
+const findFinalValue = function(nums, original) {
+  const set = new Set(nums);
   while (set.has(original)) {
     original *= 2;
   }
   return original;
 };
 // @lc code=end
-

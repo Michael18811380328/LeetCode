@@ -11,7 +11,7 @@
  * 思路：排序，然后去掉3的倍数的项，求和即可
  * Your runtime beats 23.03 % of javascript submissions
  */
-var minimumCost = function(cost) {
+const minimumCost = function(cost) {
   let sum = 0;
   const len = cost.length;
   cost = cost.sort((a, b) => a > b ? -1 : 1);
@@ -23,4 +23,3 @@ var minimumCost = function(cost) {
   return sum;
 };
 // @lc code=end
-

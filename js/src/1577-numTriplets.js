@@ -45,7 +45,7 @@ const numTriplets = function(nums1, nums2) {
   const foo = (arr1, arr2) => {
     let sum = 0;
     // 获取字典和出现的个数
-    const arr3 = arr2.map((item) => Math.pow(item, 2));
+    const arr3 = arr2.map((item) => item ** 2);
     const dict = {};
     arr3.forEach((ele) => {
       if (dict[ele]) {

@@ -10,10 +10,10 @@
  * @return {number[]}
  * Your runtime beats 45.9 % of javascript submissions
  */
-var intersection = function(nums) {
+const intersection = function(nums) {
   const length1 = nums.length;
-  let list = nums.flat().sort((a, b) => a > b ? 1 : -1);
-  let res = [];
+  const list = nums.flat().sort((a, b) => a > b ? 1 : -1);
+  const res = [];
   let previous = list[0];
   let time = 1;
   for (let i = 1; i < list.length; i++) {
@@ -33,4 +33,3 @@ var intersection = function(nums) {
   return res;
 };
 // @lc code=end
-

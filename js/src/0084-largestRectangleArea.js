@@ -76,12 +76,11 @@ const largestRectangleArea = (heights) => {
   // 最大面积
   let maxArea = 0;
   // 单调递增的栈(存放数组索引)
-  let stack = [];
+  const stack = [];
   // 先在开头和结尾加一个0，避免开始结尾算不到的情况
   heights = [0, ...heights, 0];
   // 循环数组
   for (let i = 0; i < heights.length; i++) {
-
     // 如果新的bar，比栈顶bar矮
     while (heights[i] < heights[stack[stack.length - 1]]) {
       // 栈顶元素出栈，并保存栈顶bar的索引，到临时变量
@@ -115,6 +114,5 @@ const largestRectangleArea = (heights) => {
 //   }
 //   return max;
 // }
-
 
 export { largestRectangleArea, largestRectangleArea1 };

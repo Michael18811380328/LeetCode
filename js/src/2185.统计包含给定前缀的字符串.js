@@ -11,9 +11,9 @@
  * @return {number}
  * Your runtime beats 87.37 % of javascript submissions
  */
-var prefixCount = function(words, pref) {
+const prefixCount = function(words, pref) {
   let nums = 0;
-  words.forEach(word => {
+  words.forEach((word) => {
     if (word.indexOf(pref) === 0) {
       nums++;
     }
@@ -21,4 +21,3 @@ var prefixCount = function(words, pref) {
   return nums;
 };
 // @lc code=end
-

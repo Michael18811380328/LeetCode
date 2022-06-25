@@ -30,16 +30,16 @@ var buildTree = function(inorder, postorder) {
   if (postorder.length === 1) {
     return new TreeNode(postorder[0]);
   }
-  let rootVal = postorder[postorder.length - 1];
-  let index = inorder.indexOf(rootVal);
+  const rootVal = postorder[postorder.length - 1];
+  const index = inorder.indexOf(rootVal);
 
-  let rootNode = new TreeNode(rootVal);
+  const rootNode = new TreeNode(rootVal);
 
-  let leftInorder = inorder.slice(0, index);
-  let rightInorder = inorder.slice(index + 1);
+  const leftInorder = inorder.slice(0, index);
+  const rightInorder = inorder.slice(index + 1);
 
-  let leftPostOrder = postorder.slice(0, index);
-  let rightPostOrder = postorder.slice(index, postorder.length - 1);
+  const leftPostOrder = postorder.slice(0, index);
+  const rightPostOrder = postorder.slice(index, postorder.length - 1);
 
   if (leftPostOrder.length > 0) {
     rootNode.left = buildTree(leftInorder, leftPostOrder);
@@ -50,4 +50,3 @@ var buildTree = function(inorder, postorder) {
   return rootNode;
 };
 // @lc code=end
-

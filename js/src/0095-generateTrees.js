@@ -22,9 +22,9 @@
  */
 // 80 ms, 在所有 JavaScript 提交中击败了83.40%
 // 1 <= n <= 8，递归调用+三层循环，不会影响太多的性能
-var generateTrees = function(n) {
-  let generateInnerTrees = (start, end) => {
-    let res = [];
+const generateTrees = function(n) {
+  const generateInnerTrees = (start, end) => {
+    const res = [];
     // 如果最小值大于最大值，树不存在，但是需要有空位，返回 null
     if (start > end) {
       res.push(null);
@@ -32,26 +32,25 @@ var generateTrees = function(n) {
     }
     // 如果最小值等于最大值，那么只有一个节点
     if (start === end) {
-      let node = new TreeNode(start);
+      const node = new TreeNode(start);
       res.push(node);
       return res;
     }
     // 如果最小值小于最大值，循环根节点，递归获取子树的情况
     for (let i = start; i <= end; i++) {
-      let leftTrees = generateInnerTrees(start, i - 1);
-      let rightTrees = generateInnerTrees(i + 1, end);   
+      const leftTrees = generateInnerTrees(start, i - 1);
+      const rightTrees = generateInnerTrees(i + 1, end);
       for (let j = 0; j < leftTrees.length; j++) {
         for (let k = 0; k < rightTrees.length; k++) {
-          let node = new TreeNode(i, leftTrees[j], rightTrees[k]);
+          const node = new TreeNode(i, leftTrees[j], rightTrees[k]);
           res.push(node);
         }
       }
     }
     return res;
-  }
+  };
   return generateInnerTrees(1, n);
 };
 
 // 官方详细解法：https://leetcode-cn.com/problems/unique-binary-search-trees-ii/solution/bu-tong-de-er-cha-sou-suo-shu-ii-by-leetcode-solut/
 // @lc code=end
-

@@ -19,8 +19,8 @@
  * 先把树结构转换成数组（先序遍历），然后数组前后项增加树节点关系
  * 68 ms, 在所有 JavaScript 提交中击败了81.73%
  */
-var flatten = function(root) {
-  let list = [];
+const flatten = function(root) {
+  const list = [];
   function runNode(node) {
     if (node) {
       list.push(node);
@@ -31,11 +31,10 @@ var flatten = function(root) {
   runNode(root);
   const len = list.length;
   for (let i = 1; i < len; i++) {
-    let prev = list[i - 1];
-    let curr = list[i];
+    const prev = list[i - 1];
+    const curr = list[i];
     prev.left = null;
     prev.right = curr;
   }
 };
 // @lc code=end
-

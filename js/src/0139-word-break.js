@@ -7,15 +7,15 @@
 // 可以使用这个思路（每次取出剩余的部分，然后查看每一个字典是否可以减去）
 function wordBreak1(s, wordDict) {
   // 先把字典转换成对象
-  let dict = {};
-  let subDict = {};
+  const dict = {};
+  const subDict = {};
   for (let i = 0; i < wordDict.length; i++) {
     // 先把字典中无关的字符串过滤出去，减少字典的复杂度
     if (s.includes(item)) {
       dict[item] = true;
     }
     for (let j = 0; j < item.length; j++) {
-      let key = item[j];
+      const key = item[j];
       subDict[key] = true;
     }
   }
@@ -26,11 +26,11 @@ function wordBreak1(s, wordDict) {
     }
   }
   // 创建一个队列，然后深度优先遍历
-  let queue = [];
+  const queue = [];
   queue.push(s);
   while (queue.length > 0) {
     // 深度优先遍历
-    let current = queue.shift();
+    const current = queue.shift();
     // 如果当前的字符串就在字典中，满足要求，那么直接返回真
     if (dict[current]) {
       return true;
@@ -39,7 +39,7 @@ function wordBreak1(s, wordDict) {
     Object.keys(dict).forEach((key) => {
       if (current.indexOf(key) === 0) {
         const len = key.length;
-        let newStr = current.slice(len);
+        const newStr = current.slice(len);
         queue.unshift(newStr);
       }
     });
@@ -53,10 +53,10 @@ function wordBreak1(s, wordDict) {
 // 默认空字符串是满足的
 // https://leetcode-cn.com/problems/word-break/solution/dan-ci-chai-fen-by-leetcode-solution/
 // 76 ms, 在所有 JavaScript 提交中击败了28.70%
-var wordBreak = function(s, wordDict) {
+const wordBreak = function(s, wordDict) {
   const len = s.length;
   const dict = new Set(wordDict);
-  let dp = new Array(len + 1).fill(false);
+  const dp = new Array(len + 1).fill(false);
   dp[0] = true;
   for (let i = 1; i <= len; i++) {
     for (let j = 0; j < i; j++) {

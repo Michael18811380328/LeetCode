@@ -10,9 +10,9 @@
  * @param {string} correct
  * @return {number}
  */
-var convertTime = function(current, correct) {
-  let arr1 = current.split(':').map(item => parseInt(item));
-  let arr2 = correct.split(':').map(item => parseInt(item));
+const convertTime = function(current, correct) {
+  const arr1 = current.split(':').map((item) => parseInt(item));
+  const arr2 = correct.split(':').map((item) => parseInt(item));
   let res = 0;
   // handle minutes "09:41" "10:34"
   if (arr2[1] < arr1[1]) {
@@ -36,4 +36,3 @@ var convertTime = function(current, correct) {
   return res;
 };
 // @lc code=end
-

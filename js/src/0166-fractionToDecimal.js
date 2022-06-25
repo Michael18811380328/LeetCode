@@ -16,20 +16,20 @@
 // 所以，循环计算小数时，需要把余数记录在哈希表中，如果出现同样的余数
 // 那么就说明是无限循环小数
 // Your runtime beats 45.03 % of javascript submissions
-var fractionToDecimal = function(numerator, denominator) {
+const fractionToDecimal = function(numerator, denominator) {
   // 存放不同位数的结果
   let result = [];
   // 0、处理被除数是 0 的情况
   if (numerator === 0) {
-    return "0";
+    return '0';
   }
   // 1、计算正负号
   if (numerator > 0 && denominator < 0 || numerator < 0 && denominator > 0) {
     result.push('-');
   }
   // 2、计算整数部分
-  let A = Math.abs(numerator);
-  let B = Math.abs(denominator);
+  const A = Math.abs(numerator);
+  const B = Math.abs(denominator);
   result.push(Math.floor(A / B));
   // 如果没有小数，直接返回
   if (A % B === 0) {
@@ -37,12 +37,12 @@ var fractionToDecimal = function(numerator, denominator) {
   }
   // 如果有小数，先加上小数点
   result.push('.');
-  
+
   // 依次计算余数，然后把余数记录到字典中
   // 如果某个时刻余数是0，或者余数中重复了，结束
-  let tmpDict = {};
-  let tmpArr = [];
-  let indexArr = [];
+  const tmpDict = {};
+  const tmpArr = [];
+  const indexArr = [];
   let remain = A - Math.floor(A / B) * B;
   remain = remain * 10;
   // 保证 答案字符串的长度小于10000，这里不会死循环
@@ -64,7 +64,7 @@ var fractionToDecimal = function(numerator, denominator) {
   // tmpArr 这个不正确
   if (tmpDict[remain]) {
     // 先找到这个循环开始的位置，然后加一个括号
-    let index = indexArr.indexOf(remain);
+    const index = indexArr.indexOf(remain);
     tmpArr.splice(index, 0, '(');
     tmpArr.push(')');
     result = result.concat(tmpArr);

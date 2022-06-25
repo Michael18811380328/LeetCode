@@ -33,16 +33,16 @@ var buildTree = function(preorder, inorder) {
   if (preorder.length === 1) {
     return new TreeNode(preorder[0]);
   }
-  let rootVal = preorder[0];
-  let index = inorder.indexOf(rootVal);
+  const rootVal = preorder[0];
+  const index = inorder.indexOf(rootVal);
 
-  let rootNode = new TreeNode(rootVal);
+  const rootNode = new TreeNode(rootVal);
 
-  let leftInorder = inorder.slice(0, index);
-  let rightInorder = inorder.slice(index + 1);
+  const leftInorder = inorder.slice(0, index);
+  const rightInorder = inorder.slice(index + 1);
 
-  let leftPreOrder = preorder.slice(1, index + 1);
-  let rightPreOrder = preorder.slice(index + 1);
+  const leftPreOrder = preorder.slice(1, index + 1);
+  const rightPreOrder = preorder.slice(index + 1);
 
   if (leftPreOrder.length > 0) {
     rootNode.left = buildTree(leftPreOrder, leftInorder);
@@ -53,4 +53,3 @@ var buildTree = function(preorder, inorder) {
   return rootNode;
 };
 // @lc code=end
-

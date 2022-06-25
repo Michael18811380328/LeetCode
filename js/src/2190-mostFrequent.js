@@ -38,13 +38,13 @@
 
 // 改进后
 // Your runtime beats 82.53 % of javascript submissions
-var mostFrequent = function(nums, key) {
-  let dict = {};
+const mostFrequent = function(nums, key) {
+  const dict = {};
   let max = 0;
   let tmp;
   for (let i = 0; i < nums.length - 1; i++) {
     if (nums[i] === key) {
-      let current = nums[i + 1];
+      const current = nums[i + 1];
       if (!dict[current]) {
         dict[current] = 0;
       }
@@ -58,4 +58,3 @@ var mostFrequent = function(nums, key) {
   return tmp;
 };
 // @lc code=end
-

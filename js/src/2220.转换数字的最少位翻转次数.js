@@ -11,13 +11,13 @@
  * @return {number}
  * Your runtime beats 75.61 % of javascript submissions
  */
-var minBitFlips = function(start, goal) {
+const minBitFlips = function(start, goal) {
   if (start === goal) {
     return 0;
   }
   let a = start.toString(2);
   let b = goal.toString(2);
-  let maxLen = Math.max(a.length, b.length);
+  const maxLen = Math.max(a.length, b.length);
   a = a.padStart(maxLen, '0');
   b = b.padStart(maxLen, '0');
   let res = 0;
@@ -29,4 +29,3 @@ var minBitFlips = function(start, goal) {
   return res;
 };
 // @lc code=end
-

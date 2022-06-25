@@ -13,9 +13,9 @@
 // 思路一：回溯算法（针对特殊用例，使用了特殊的写法）
 // 性能比较差
 // 604 ms, 在所有 JavaScript 提交中击败了5.94%
-var combinationSum2 = function(candidates, target) {
+const combinationSum2 = function(candidates, target) {
   //  辅助函数：求数组的和
-  var sum = (arr) => {
+  const sum = (arr) => {
     return arr.reduce((a, b) => a + b, 0);
   };
   // 辅助函数：数组转换成对象存储
@@ -39,13 +39,13 @@ var combinationSum2 = function(candidates, target) {
 
   // 数字排序
   candidates.sort((a, b) => a - b);
-  let list = [];
-  let tmpList = [];
+  const list = [];
+  const tmpList = [];
 
   // 特例特办：如果排序后，最后一个仍然是1，那么直接构造一个数组直接返回即可（只有一个情况）
   // 这个不是根本解决方法
   if (candidates[candidates.length - 1] === 1) {
-    let a = new Array(target).fill(1);
+    const a = new Array(target).fill(1);
     return [a];
   }
 
@@ -68,8 +68,8 @@ var combinationSum2 = function(candidates, target) {
   //   return true;
   // };
 
-  let invalidDict = {};
-  let validDict = {};
+  const invalidDict = {};
+  const validDict = {};
 
   var backTrack = (tmpList, start, tmpSum) => {
     // 先验证，tmpList 是否重复？每个元素的使用次数是否大于规定？——应该不需要判断这里，直接给出一个 index 行不行
@@ -92,11 +92,11 @@ var combinationSum2 = function(candidates, target) {
     }
 
     for (let i = start; i < candidates.length; i++) {
-      let item = candidates[i];
+      const item = candidates[i];
       tmpList.push(item);
       // 如果当前临时数组，已经计算过了（不管是否满足，那么直接跳过即可，不需要回溯了，这样可以优化一部分）
       // 但是这样还没有到点子上（下面的例子）
-      let tmpKey = String(tmpList);
+      const tmpKey = String(tmpList);
       if (!invalidDict[tmpKey] && !validDict[tmpKey]) {
         // 因为数组是已经排序的，直接传递一个 index 即可，大大减少时间复杂度
         backTrack(tmpList, i + 1, tmpSum + item);
@@ -109,10 +109,10 @@ var combinationSum2 = function(candidates, target) {
   backTrack(tmpList, 0, 0);
 
   // 去重
-  let newList = [];
-  let dict = {};
-  list.forEach(arr => {
-    let key = String(arr);
+  const newList = [];
+  const dict = {};
+  list.forEach((arr) => {
+    const key = String(arr);
     if (!dict[key]) {
       newList.push([...arr]);
       dict[key] = true;
@@ -126,7 +126,7 @@ var combinationSum2 = function(candidates, target) {
 // 改进后解决思路——关键是回溯中去重（剪枝）
 // 68 ms, 在所有 JavaScript 提交中击败了72.53%
 // 在 39 题目基础上更改
-var combinationSum2Pro = function(candidates, target) {
+const combinationSum2Pro = function(candidates, target) {
   // 结果数组
   const res = [];
   // 临时数组

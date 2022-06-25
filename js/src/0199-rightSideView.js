@@ -19,7 +19,7 @@
  * 思路：先把二叉树层序遍历，然后把每一层的最右侧一个拿出来
  * Your runtime beats 71.38 % of javascript submissions
  */
-var rightSideView = function(root) {
+const rightSideView = function(root) {
   // 复用102代码(层序遍历)
   const matrix = [];
   if (!root) return [];
@@ -40,7 +40,6 @@ var rightSideView = function(root) {
   matrix[layer].push(root.val);
   runTree(root.left, layer + 1);
   runTree(root.right, layer + 1);
-  return matrix.map(arr => arr[arr.length - 1]);
+  return matrix.map((arr) => arr[arr.length - 1]);
 };
 // @lc code=end
-
