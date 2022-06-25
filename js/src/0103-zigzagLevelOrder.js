@@ -22,21 +22,21 @@
  * 这样逻辑更好理解一些，不易出错
  */
 //  56 ms, 在所有 JavaScript 提交中击败了95.87%
-var zigzagLevelOrder = function(root) {
+const zigzagLevelOrder = function(root) {
   if (!root) return [];
   // 先把二叉树层序遍历，同时增加layer层数
-  let res = [];
-  let list = [];
+  const res = [];
+  const list = [];
   list.push({
     node: root,
     layer: 0,
   });
   while (list.length > 0) {
-    let tmp = list.shift();
-    res.push({ val: tmp.node.val, layer:tmp.layer });
-    let layer = tmp.layer;
-    let left = tmp.node.left;
-    let right = tmp.node.right;
+    const tmp = list.shift();
+    res.push({ val: tmp.node.val, layer: tmp.layer });
+    const layer = tmp.layer;
+    const left = tmp.node.left;
+    const right = tmp.node.right;
     if (left) {
       list.push({ node: left, layer: layer + 1 });
     }
@@ -45,7 +45,7 @@ var zigzagLevelOrder = function(root) {
     }
   }
   // 再次遍历数组，把每一层的结果都放入临时数组，然后返回
-  let result = [];
+  const result = [];
   let flagLayer = 0;
   let tmpArr = [];
   for (let i = 0; i < res.length; i++) {
@@ -73,4 +73,3 @@ var zigzagLevelOrder = function(root) {
   return result;
 };
 // @lc code=end
-

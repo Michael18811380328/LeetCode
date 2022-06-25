@@ -11,25 +11,25 @@
  * @return {number[][]}
  * Your runtime beats 66.57 % of javascript submissions
  */
-var findDifference = function(nums1, nums2) {
+const findDifference = function(nums1, nums2) {
   // 数组去重，然后使用字典获取，再计入结果数组即可
-  let nums_1 = [...new Set(nums1)];
-  let nums_2 = [...new Set(nums2)];
-  let dict1 = {};
-  let dict2 = {};
-  nums_1.forEach(item => {
+  const nums_1 = [...new Set(nums1)];
+  const nums_2 = [...new Set(nums2)];
+  const dict1 = {};
+  const dict2 = {};
+  nums_1.forEach((item) => {
     dict1[item] = true;
   });
-  nums_2.forEach(item => {
+  nums_2.forEach((item) => {
     dict2[item] = true;
   });
-  let res1 = nums_1.filter(item => {
+  const res1 = nums_1.filter((item) => {
     if (dict2[item]) {
       return false;
     }
     return true;
   });
-  let res2 = nums_2.filter(item => {
+  const res2 = nums_2.filter((item) => {
     if (dict1[item]) {
       return false;
     }
@@ -38,4 +38,3 @@ var findDifference = function(nums1, nums2) {
   return [res1, res2];
 };
 // @lc code=end
-

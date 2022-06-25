@@ -10,7 +10,7 @@
  * @param {string} s3
  * @return {boolean}
  */
-var isInterleave = function(s1, s2, s3) {
+const isInterleave = function(s1, s2, s3) {
   // 如果长度不等，那么一定不满足条件，这个判断一次即可
   if ((s1.length + s2.length) !== s3.length) {
     return false;
@@ -25,19 +25,19 @@ var isInterleave = function(s1, s2, s3) {
   // 字符串的长度是100，这里循环最多400次，性能可以接受
   // 如果是不等的字符，不会执行到下面的递归中，尽量优化性能
   function checkStr(str, str2) {
-    let dict = {};
-    let len = str.length;
+    const dict = {};
+    const len = str.length;
     for (let i = 0; i < len; i++) {
-      let key = str[i];
+      const key = str[i];
       if (!dict[key]) {
         dict[key] = 0;
       }
       dict[key]++;
     }
     if (str2) {
-      let len = str2.length;
+      const len = str2.length;
       for (let i = 0; i < len; i++) {
-        let key = str2[i];
+        const key = str2[i];
         if (!dict[key]) {
           dict[key] = 0;
         }
@@ -46,9 +46,9 @@ var isInterleave = function(s1, s2, s3) {
     }
     return dict;
   }
-  let dict1 = checkStr(s1, s2);
-  let dict2 = checkStr(s3);
-  for (let key in dict1) {
+  const dict1 = checkStr(s1, s2);
+  const dict2 = checkStr(s3);
+  for (const key in dict1) {
     if (dict2[key] !== dict1[key]) {
       return false;
     }
@@ -64,9 +64,9 @@ var isInterleave = function(s1, s2, s3) {
       return s1.slice(p1) === s3.slice(p3);
     }
     // 首先获取三个字符串开始的字符
-    let a1 = s1[p1];
-    let a2 = s2[p2];
-    let a3 = s3[p3];
+    const a1 = s1[p1];
+    const a2 = s2[p2];
+    const a3 = s3[p3];
     // 如果第三个和前两个都不相等，那么就不满足
     if (a3 !== a1 && a3 !== a2) {
       return false;
@@ -93,16 +93,16 @@ var isInterleave = function(s1, s2, s3) {
 // 官方给的动态规划转移方程
 // f(i,j) = [f(i−1,j) and s1(i−1)=s3(p)] or [f(i,j−1) and s2(j−1)=s3(p)]
 // 76 ms, 在所有 JavaScript 提交中击败了60.50%
-var isInterleave2 = function(s1, s2, s3) {
-  let l1 = s1.length;
-  let l2 = s2.length;
-  let l3 = s3.length;
+const isInterleave2 = function(s1, s2, s3) {
+  const l1 = s1.length;
+  const l2 = s2.length;
+  const l3 = s3.length;
   if (l1 + l2 !== l3) {
     return false;
   }
   // 这个矩阵存放动态规划的结果
-  let arr = new Array(l1 + 1).fill(true);
-  let matrix = arr.map(() => {
+  const arr = new Array(l1 + 1).fill(true);
+  const matrix = arr.map(() => {
     return new Array(l2 + 1).fill(true);
   });
   // 先处理首行首列
@@ -121,18 +121,18 @@ var isInterleave2 = function(s1, s2, s3) {
     }
   }
   return matrix[l1][l2];
-}
+};
 
 // 思路3：回溯算法+指针+字典
 // 68 ms, 在所有 JavaScript 提交中击败了84.93%
-var isInterleave3 = function (s1, s2, s3) {
-  let l1 = s1.length;
-  let l2 = s2.length;
-  let l3 = s3.length;
+const isInterleave3 = function (s1, s2, s3) {
+  const l1 = s1.length;
+  const l2 = s2.length;
+  const l3 = s3.length;
   if (l1 + l2 !== l3) {
     return false;
   }
-  let dict = new Set();
+  const dict = new Set();
   let res = false;
   function backtrace(i1, i2, i3) {
     // 当三个指针都到字符串末尾，证明完全匹配，返回
@@ -147,7 +147,7 @@ var isInterleave3 = function (s1, s2, s3) {
     if (s1[i1] === s3[i3]) {
       backtrace(i1 + 1, i2, i3 + 1);
     }
-    // 注：这里是两种情况，不能用 else if 
+    // 注：这里是两种情况，不能用 else if
     if (s2[i2] === s3[i3]) {
       backtrace(i1, i2 + 1, i3 + 1);
     }

@@ -11,7 +11,7 @@
  * @return {number}
  * 80 ms, 在所有 JavaScript 提交中击败了10.24%
  */
-var countOperations = function(num1, num2) {
+const countOperations = function(num1, num2) {
   if (num1 === 0 && num2 === 0) {
     return 0;
   }
@@ -23,9 +23,9 @@ var countOperations = function(num1, num2) {
     if (num1 === 0 || num2 === 0) {
       return times;
     }
-    let large = num1 > num2 ? num1 : num2;
-    let small = num1 > num2 ? num2 : num1;
-    let decrease = large - small;
+    const large = num1 > num2 ? num1 : num2;
+    const small = num1 > num2 ? num2 : num1;
+    const decrease = large - small;
     num1 = decrease;
     num2 = small;
     times++;
@@ -38,4 +38,3 @@ var countOperations = function(num1, num2) {
 // console.log(countOperations(0, 0) === 0)
 // console.log(countOperations(0, 1) === 0)
 // @lc code=end
-

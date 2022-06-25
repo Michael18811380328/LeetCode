@@ -15,13 +15,13 @@
 // 当前位置的最优解未必是由前一个位置的最优解转移得到的
 // 因为当前的数字可能是正数或者负数，如果是负数，当前面是最小的情况
 // 这时的结果是最大的，所以需要维护两个方程，然后三个数求最值
-var maxProduct = function(nums) {
+const maxProduct = function(nums) {
   const len = nums.length;
   if (len === 1) {
     return nums[0];
   }
-  let maxArr = [];
-  let minArr = [];
+  const maxArr = [];
+  const minArr = [];
   maxArr[0] = nums[0];
   minArr[0] = nums[0];
   for (let i = 1; i < len; i++) {
@@ -35,4 +35,3 @@ var maxProduct = function(nums) {
 // console.log(maxProduct([-2,0,-1]) === 0);
 // console.log(maxProduct([-2,3,-4]) === 24);
 // @lc code=end
-

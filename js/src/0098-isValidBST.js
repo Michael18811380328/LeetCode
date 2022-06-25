@@ -3,10 +3,10 @@
  * [98] 验证二叉搜索树
  */
 // 本题考察二叉搜索树的性质
-  // 左子树是二叉搜索树
-  // 右子树是二叉搜索树
-  // 左子树的最大值小于当前节点值
-  // 右子树的最小值大于当前节点值
+// 左子树是二叉搜索树
+// 右子树是二叉搜索树
+// 左子树的最大值小于当前节点值
+// 右子树的最小值大于当前节点值
 
 // @lc code=start
 // 思路1：递归，判断每一个子树是二叉搜索树
@@ -24,27 +24,27 @@ var checkTree = function(node, small, large) {
   // 子节点在函数中递归判断，更改上下边界即可，辅助函数不需要返回最值
   // 左子树的最大值小于当前节点值，右子树的最小值大于当前节点值
   return checkTree(node.left, small, node.val) && checkTree(node.right, node.val, large);
-}
+};
 
-var isValidBST = function(root) {
+const isValidBST = function(root) {
   // 默认根节点不设置最值判断
-  let small = -Infinity;
-  let large = +Infinity;
+  const small = -Infinity;
+  const large = +Infinity;
   return checkTree(root, small, large);
 };
 
 // 思路二：二叉树中序遍历
 // 如果是二叉搜索树，那么中序遍历（左根右）的结果是升序的数组
 // 60 ms, 在所有 JavaScript 提交中击败了96.81%
-var isValidBST2 = function(root) {
+const isValidBST2 = function(root) {
   // 这个存放遍历的结果（或者用一个number变量存放也可以）
-  let arr = [];
+  const arr = [];
   function runNode(node) {
     if (!node) {
       return true;
     }
     if (node && node.left) {
-      let res = runNode(node.left);
+      const res = runNode(node.left);
       if (res === false) {
         return false;
       }
@@ -57,14 +57,14 @@ var isValidBST2 = function(root) {
       arr.push(node.val);
     }
     if (node && node.right) {
-      let res = runNode(node.right);
+      const res = runNode(node.right);
       if (res === false) {
         return false;
       }
     }
     return true;
   }
-  let res = runNode(root);
+  const res = runNode(root);
   if (res === false) {
     return false;
   }

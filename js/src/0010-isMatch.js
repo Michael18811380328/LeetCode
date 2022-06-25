@@ -15,7 +15,7 @@
  * @param {string} p
  * @return {boolean}
  */
- const isMatch = (s, p) => {
+const isMatch = (s, p) => {
   if (s == null || p == null) {
     return false;
   }
@@ -31,7 +31,7 @@
   // 基本情况
   dp[0][0] = true;
   for (let j = 1; j < pLen + 1; j++) {
-    if (p[j - 1] == "*") {
+    if (p[j - 1] == '*') {
       dp[0][j] = dp[0][j - 2];
     }
   }
@@ -40,13 +40,13 @@
   for (let i = 1; i < sLen + 1; i++) {
     for (let j = 1; j < pLen + 1; j++) {
       // 1.如果最后一个字符相等，或者最后一个是通配符. 满足匹配下一个
-      if (s[i - 1] === p[j - 1] || p[j - 1] === ".") {
+      if (s[i - 1] === p[j - 1] || p[j - 1] === '.') {
         dp[i][j] = dp[i - 1][j - 1];
       }
       // 2. 如果最后一个是 *，分情况
-      else if (p[j - 1] == "*") {
+      else if (p[j - 1] == '*') {
         // 2.1 如果前一位相等，或者是通配符
-        if (s[i - 1] === p[j - 2] || p[j - 2] === ".") {
+        if (s[i - 1] === p[j - 2] || p[j - 2] === '.') {
           // 下面三种情况满足一种即可（这里没有考虑到）
           // 这个情况比较复杂
           dp[i][j] = dp[i][j - 2] || dp[i - 1][j - 2] || dp[i - 1][j];
@@ -63,16 +63,6 @@
 };
 
 // @lc code=end
-
-
-
-
-
-
-
-
-
-
 
 // 10-给你一个字符串 s 和一个字符规律 p，请你来实现一个支持 '.' 和 '*' 的正则表达式匹配。
 // '.' 匹配任意单个字符
@@ -108,26 +98,26 @@
 //   if (p === '' || p === '.*') {
 //     return true;
 //   }
-  // while (p.length > 0) {
-  //   if (p === '.') {
-  //     // 如果P是. 只要S的长度是1，就是真；否则就是假的
-  //     return s.length === 1;
-  //   } else if (p.length === 1) {
-  //     // 如果P的长度是1，并且与S相等，那么返回真
-  //     return p === s;
-  //   } else if (p[0] === '.' && p[1] === '*') {
-  //     p = p.slice(2);
-  //     s = deleteStart(s);
-  //   } else if (p[1] === '*') {
-  //     s = deleteS(s, p[0]);
-  //     p = p.slice(2);
-  //   } else if ((p[0] === s[0]) || (p[0] === '.' && p[1] !== '*')) {
-  //     p = p.slice(1);
-  //     s = s.slice(1);
-  //   } else {
-  //     return false;
-  //   }
-  // }
+// while (p.length > 0) {
+//   if (p === '.') {
+//     // 如果P是. 只要S的长度是1，就是真；否则就是假的
+//     return s.length === 1;
+//   } else if (p.length === 1) {
+//     // 如果P的长度是1，并且与S相等，那么返回真
+//     return p === s;
+//   } else if (p[0] === '.' && p[1] === '*') {
+//     p = p.slice(2);
+//     s = deleteStart(s);
+//   } else if (p[1] === '*') {
+//     s = deleteS(s, p[0]);
+//     p = p.slice(2);
+//   } else if ((p[0] === s[0]) || (p[0] === '.' && p[1] !== '*')) {
+//     p = p.slice(1);
+//     s = s.slice(1);
+//   } else {
+//     return false;
+//   }
+// }
 //   return s.length === 0;
 // }
 

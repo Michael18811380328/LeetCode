@@ -16,17 +16,17 @@
  * @param {TreeNode} root
  * @return {string}
  */
-var serialize = function(root) {
+const serialize = function(root) {
   const runNode = (root, str) => {
     if (root === null) {
       str += 'None,';
     } else {
-      str = str + root.val + ',';
+      str = `${str + root.val},`;
       str = runNode(root.left, str);
       str = runNode(root.right, str);
     }
     return str;
-  }
+  };
   return runNode(root, '');
 };
 
@@ -36,19 +36,19 @@ var serialize = function(root) {
  * @param {string} data
  * @return {TreeNode}
  */
-var deserialize = function(data) {
+const deserialize = function(data) {
   const runArr = (arr) => {
     if (arr[0] === 'None') {
       arr.shift();
       return null;
     }
-    let node = new TreeNode(parseInt(arr[0]));
+    const node = new TreeNode(parseInt(arr[0]));
     arr.shift();
     node.left = runArr(arr);
     node.right = runArr(arr);
     return node;
-  }
-  let list = data.split(',');
+  };
+  const list = data.split(',');
   return runArr(list);
 };
 
@@ -56,4 +56,3 @@ var deserialize = function(data) {
  * Your functions will be called as such:
  * deserialize(serialize(root));
  */
- 

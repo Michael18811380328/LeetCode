@@ -17,8 +17,8 @@
  * @return {ListNode}
  */
 // 60 ms, 在所有 JavaScript 提交中击败了70.94%
-var swapPairs = function(head) {
-  let changeNode = (node) => {
+const swapPairs = function(head) {
+  const changeNode = (node) => {
     if (!node) {
       return node;
     }
@@ -26,15 +26,14 @@ var swapPairs = function(head) {
       return node;
     }
     // 有 node 和 node.next
-    let a = node;
-    let b = node.next;
-    let c = node.next.next;
+    const a = node;
+    const b = node.next;
+    const c = node.next.next;
     // 前后交换节点，改变指针
     a.next = changeNode(c);
     b.next = a;
     return b;
-  }
+  };
   return changeNode(head);
 };
 // @lc code=end
-

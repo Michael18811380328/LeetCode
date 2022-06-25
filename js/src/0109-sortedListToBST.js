@@ -28,9 +28,9 @@
  * 是否能直接转换成二叉搜索树
  * 76 ms, 在所有 JavaScript 提交中击败了86.33%
  */
-var sortedListToBST = function(head) {
+const sortedListToBST = function(head) {
   // 先把有序列表转换成有序数组
-  let arr = [];
+  const arr = [];
   while (head) {
     arr.push(head.val);
     head = head.next;
@@ -39,13 +39,11 @@ var sortedListToBST = function(head) {
   function arr2Tree(start, end) {
     if (start > end) {
       return null;
-    }
-    else if (start === end) {
+    } else if (start === end) {
       return new TreeNode(arr[start]);
-    }
-    else {
-      let middle = Math.floor((start + end) / 2);
-      let node = new TreeNode(arr[middle]);
+    } else {
+      const middle = Math.floor((start + end) / 2);
+      const node = new TreeNode(arr[middle]);
       node.left = arr2Tree(start, middle - 1);
       node.right = arr2Tree(middle + 1, end);
       return node;
@@ -61,4 +59,3 @@ var sortedListToBST = function(head) {
 // 注意：链表找到元素的索引
 
 // @lc code=end
-

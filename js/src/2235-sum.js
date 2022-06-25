@@ -11,8 +11,7 @@
  * @return {number} number
  * Your runtime beats 95.76 % of javascript submissions
  */
-var sum = function(num1, num2) {
+const sum = function(num1, num2) {
   return num1 + num2;
 };
 // @lc code=end
-

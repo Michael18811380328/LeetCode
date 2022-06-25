@@ -12,20 +12,19 @@
  */
 // 现在算法是按照题目算的，性能不好，能否优化算法？
 // Your runtime beats 24.84 % of javascript submissions
-var digitSum = function(s, k) {
-  let arr = s.split('').map(item => parseInt(item));
+const digitSum = function(s, k) {
+  let arr = s.split('').map((item) => parseInt(item));
   while (arr.length > k) {
-    let newArr = [];
+    const newArr = [];
     for (let i = 0; i < arr.length; i += k) {
       let sum = 0;
       for (let j = i; j < i + k; j++) {
-        if (arr[j] > -1) sum += arr[j];        
+        if (arr[j] > -1) sum += arr[j];
       }
       newArr.push(sum);
     }
-    arr = newArr.join('').split('').map(item => parseInt(item));
+    arr = newArr.join('').split('').map((item) => parseInt(item));
   }
   return arr.join('');
 };
 // @lc code=end
-

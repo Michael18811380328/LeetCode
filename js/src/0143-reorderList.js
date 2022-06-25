@@ -20,20 +20,20 @@
  * 执行用时：840 ms，打败 10.38%的用户
  * 这个算法不好（如果不是数组，直接放在对象索引中，避免数组操作试试）
  */
-var reorderList = function(head) {
+const reorderList = function(head) {
   let tmp = head;
-  let list = [];
+  const list = [];
   while (tmp) {
     list.push(tmp);
     tmp = tmp.next;
   }
   let current = head;
   while (list.length > 0) {
-    let first = list.shift();
+    const first = list.shift();
     current.next = first;
     // 链表的长度是偶数
     if (list.length > 0) {
-      let last = list.pop();
+      const last = list.pop();
       first.next = last;
       current = last;
       current.next = null;
@@ -49,9 +49,9 @@ var reorderList = function(head) {
 // 思路2
 // 可以使用数组+双指针，获取对应的节点，不需要每次都操作数组元素，可以优化
 // 88 ms, 在所有 JavaScript 提交中击败了 73.09%
-var reorderList2 = function(head) {
+const reorderList2 = function(head) {
   let tmp = head;
-  let list = [];
+  const list = [];
   while (tmp) {
     list.push(tmp);
     tmp = tmp.next;
@@ -61,12 +61,11 @@ var reorderList2 = function(head) {
   let end = list.length - 1;
   // 使用双指针获取链表，避免数组操作
   while (start < end) {
-
-    let first = list[start];
+    const first = list[start];
     current.next = first;
     start++;
 
-    let last = list[end];
+    const last = list[end];
     end--;
     first.next = last;
 
@@ -76,7 +75,7 @@ var reorderList2 = function(head) {
 
   // 处理奇数的情况
   if (list.length % 2 === 1) {
-    let middle = list[(list.length - 1) / 2];
+    const middle = list[(list.length - 1) / 2];
     current.next = middle;
     middle.next = null;
   }
@@ -90,4 +89,3 @@ var reorderList2 = function(head) {
 // 2、把后面的链表反转（N，N-1， N-2）
 // 3、合并两个链表（因为长度差可能是0或者1，所以基本不影响）
 // 后续有时间可以按照这个思路完成（这三个子问题，可以使用其他的题目处理）
-

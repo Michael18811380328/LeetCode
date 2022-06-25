@@ -18,8 +18,7 @@
  * @return {boolean}
  * Your runtime beats 94.47 % of javascript submissions
  */
-var checkTree = function(root) {
+const checkTree = function(root) {
   return root.val === (root.left.val + root.right.val);
 };
 // @lc code=end
-

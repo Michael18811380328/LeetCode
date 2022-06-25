@@ -21,7 +21,7 @@
  * 实际上，先把二叉树层序遍历，然后每一层的节点，设置指针指向右侧的节点即可
  * 二叉树的层序遍历使用 102 题目已有的代码，不需要单独写了
  */
-var connect = function(root) {
+const connect = function(root) {
   const matrix = [];
   if (!root) return root;
   // 辅助函数：二叉树层序遍历
@@ -57,4 +57,3 @@ var connect = function(root) {
   return root;
 };
 // @lc code=end
-

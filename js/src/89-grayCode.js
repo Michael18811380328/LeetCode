@@ -24,7 +24,7 @@
  * @param {number} n
  * @return {number[]}
  */
-var grayCode = function(n) {
+const grayCode = function(n) {
   const result = [0];
   for (let i = 1; i <= n; i++) {
     const len = result.length;
@@ -36,4 +36,3 @@ var grayCode = function(n) {
   return result;
 };
 // @lc code=end
-
