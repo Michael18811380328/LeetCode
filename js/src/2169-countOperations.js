@@ -38,3 +38,5 @@ const countOperations = function(num1, num2) {
 // console.log(countOperations(0, 0) === 0)
 // console.log(countOperations(0, 1) === 0)
 // @lc code=end
+
+export { countOperations };

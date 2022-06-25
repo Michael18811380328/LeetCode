@@ -70,3 +70,4 @@ const recoverTree = function(root) {
   runNode(root);
 };
 // @lc code=end
+export { recoverTree };

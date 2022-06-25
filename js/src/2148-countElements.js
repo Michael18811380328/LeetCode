@@ -21,3 +21,5 @@ const countElements = function(nums) {
     return num !== a && num !== b;
   }).length;
 };
+
+export { countElements };

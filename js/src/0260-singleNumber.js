@@ -25,3 +25,5 @@ const singleNumber = function(nums) {
   return Object.keys(dict);
 };
 // @lc code=end
+
+export { singleNumber };

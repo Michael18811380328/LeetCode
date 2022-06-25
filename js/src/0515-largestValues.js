@@ -49,3 +49,5 @@ const largestValues2 = function(root) {
   runNode(root, 0);
   return list;
 };
+
+export { largestValues2, largestValues1 };

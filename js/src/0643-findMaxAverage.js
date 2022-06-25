@@ -42,3 +42,5 @@ const sum = function(arr) {
   return arr.reduce(fn, 0);
 };
 // @lc code=end
+
+export { findMaxAverage };

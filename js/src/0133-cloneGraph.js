@@ -40,3 +40,4 @@ const cloneGraph = function(node) {
   return runNode(node);
 };
 // @lc code=end
+export { cloneGraph };

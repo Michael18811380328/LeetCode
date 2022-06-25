@@ -33,3 +33,4 @@ const countMatches = function(items, ruleKey, ruleValue) {
   return number;
 };
 // @lc code=end
+export { countMatches };

@@ -41,3 +41,5 @@ const maxDistToClosest = function(seats) {
   return max;
 };
 // @lc code=end
+
+export { maxDistToClosest };

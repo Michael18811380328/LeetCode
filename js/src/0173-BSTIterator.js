@@ -41,7 +41,7 @@ BSTIterator.prototype.hasNext = function() {
 // 第二种：直接初始化把树转换成数组
 // 缺点：把全部的树节点取出来，可能没必要
 // Your runtime beats 72.88 % of javascript submissions
-const BSTIterator = function(root) {
+const BSTIterator2 = function(root) {
   this.arr = [];
   this.arr.push(...runNode(root.left), root.val, ...runNode(root.right));
 };
@@ -51,11 +51,11 @@ const runNode = (node) => {
   return [...runNode(node.left), node.val, ...runNode(node.right)];
 };
 
-BSTIterator.prototype.next = function() {
+BSTIterator2.prototype.next = function() {
   return this.arr.shift();
 };
 
-BSTIterator.prototype.hasNext = function() {
+BSTIterator2.prototype.hasNext = function() {
   return this.arr.length > 0;
 };
 
@@ -65,3 +65,5 @@ BSTIterator.prototype.hasNext = function() {
  * const param_1 = obj.next()
  * const param_2 = obj.hasNext()
  */
+
+export { BSTIterator, BSTIterator2 };

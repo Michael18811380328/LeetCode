@@ -38,3 +38,5 @@ const findDifference = function(nums1, nums2) {
   return [res1, res2];
 };
 // @lc code=end
+
+export { findDifference };

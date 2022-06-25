@@ -23,7 +23,6 @@ const reverseVowels = function(s) {
   // 如果没有元音，直接返回
   if (dict.length === 0) return s;
   vowelArr = vowelArr.reverse();
-  console.log(vowelArr);
   let result = '';
   for (let i = 0; i < strs.length; i++) {
     if (dict[i]) {
@@ -32,7 +31,8 @@ const reverseVowels = function(s) {
     } else {
       result = result + strs[i];
     }
-    console.log(result);
   }
   return result;
 };
+
+export { reverseVowels };

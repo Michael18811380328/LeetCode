@@ -23,25 +23,24 @@ const levelOrder = function(root) {
   // 递归非常耗性能，可以使用BFS解决问题
   const res = [];
   const depth = 0;
+  const runNode = function(node, depth, res) {
+    if (!node) return;
+    if (!res[depth]) {
+      res[depth] = [];
+    }
+    res[depth].push(node.val);
+    if (!node.children) return;
+    node.children.forEach((element) => {
+      runNode(element, depth + 1, res);
+    });
+  };
   runNode(root, depth, res);
   return res;
 };
 
-const runNode = function(node, depth, res) {
-  if (!node) return;
-  if (!res[depth]) {
-    res[depth] = [];
-  }
-  res[depth].push(node.val);
-  if (!node.children) return;
-  node.children.forEach((element) => {
-    runNode(element, depth + 1, res);
-  });
-};
-
 // 思路二
 // Your runtime beats 57.81 % of javascript submissions
-const levelOrder = function(root) {
+const levelOrder2 = function(root) {
   // 层序遍历：广度优先遍历
   if (!root) return [];
   const tmpArr = [];
@@ -61,3 +60,5 @@ const levelOrder = function(root) {
 };
 
 // @lc code=end
+
+export { levelOrder, levelOrder2 };

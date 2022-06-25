@@ -28,3 +28,5 @@ const fizzBuzz = function(n) {
   }
   return res;
 };
+
+export { fizzBuzz };

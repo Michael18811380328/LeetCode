@@ -66,3 +66,5 @@ const dayOfYear = function(date) {
     }
   }
 };
+
+export { dayOfYear };

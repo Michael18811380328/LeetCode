@@ -23,3 +23,5 @@ const reformatNumber = function(number) {
   }
   return arr.join('-');
 };
+
+export { reformatNumber };

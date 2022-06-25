@@ -89,3 +89,4 @@ const reorderList2 = function(head) {
 // 2、把后面的链表反转（N，N-1， N-2）
 // 3、合并两个链表（因为长度差可能是0或者1，所以基本不影响）
 // 后续有时间可以按照这个思路完成（这三个子问题，可以使用其他的题目处理）
+export { reorderList, reorderList2 };

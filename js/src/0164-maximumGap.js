@@ -84,3 +84,5 @@ const maximumGap2 = function(nums) {
   }
   return ret;
 };
+
+export { maximumGap, maximumGap2 };

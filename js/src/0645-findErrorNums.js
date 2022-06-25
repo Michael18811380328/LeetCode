@@ -33,3 +33,5 @@ const findErrorNums = function(nums) {
   }
   return [error1, error2];
 };
+
+export { findErrorNums };

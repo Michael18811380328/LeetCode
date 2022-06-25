@@ -110,3 +110,5 @@ const sortList = function(head) {
 //   }
 //   return res;
 //   };
+
+export { sortList };

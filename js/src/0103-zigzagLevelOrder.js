@@ -73,3 +73,4 @@ const zigzagLevelOrder = function(root) {
   return result;
 };
 // @lc code=end
+export { zigzagLevelOrder };

@@ -1,11 +1,8 @@
 /**
  * @param {number} n
  */
-// 232 ms
-// , 在所有 JavaScript 提交中击败了
-// 44.78%
-// 的用户
-const OrderedStream = function(n) {
+// 232 ms, 在所有 JavaScript 提交中击败了44.78%
+const OrderedStream = function() {
   this.arr = ['test'];
   this.ptr = 1;
 };
@@ -36,3 +33,5 @@ OrderedStream.prototype.insert = function(id, value) {
  * let obj = new OrderedStream(n)
  * let param_1 = obj.insert(id,value)
  */
+
+export { OrderedStream };

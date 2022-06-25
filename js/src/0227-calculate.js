@@ -55,7 +55,7 @@ const calculate = function(s) {
 
 const getNumber = (s) => {
   for (let i = 0; i < s.length; i++) {
-    if (isNaN(Number(s[i]))) {
+    if (Number.isNaN(Number(s[i]))) {
       return s.slice(0, i);
     }
   }
@@ -63,3 +63,5 @@ const getNumber = (s) => {
 };
 
 // @lc code=end
+
+export { calculate };

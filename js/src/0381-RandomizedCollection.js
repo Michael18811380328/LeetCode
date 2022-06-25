@@ -59,3 +59,5 @@ RandomizedCollection.prototype.getRandom = function() {
   const index2 = Math.floor(Math.random() * arr.length);
   return arr[index2];
 };
+
+export { RandomizedCollection };

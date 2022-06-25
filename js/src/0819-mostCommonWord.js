@@ -49,3 +49,5 @@ const mostCommonWord = function(paragraph, banned) {
   }
 };
 // @lc code=end
+
+export { mostCommonWord };

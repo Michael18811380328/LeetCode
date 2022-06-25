@@ -44,3 +44,5 @@ const findRelativeRanks = function(nums) {
   }
   return result;
 };
+
+export { findRelativeRanks };

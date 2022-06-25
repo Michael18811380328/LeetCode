@@ -19,3 +19,5 @@ const findFinalValue = function(nums, original) {
   return original;
 };
 // @lc code=end
+
+export { findFinalValue };

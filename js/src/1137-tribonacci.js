@@ -24,3 +24,5 @@ const tribonacci = function(n) {
   return arr[n];
 };
 // @lc code=end
+
+export { tribonacci };

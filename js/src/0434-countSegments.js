@@ -26,3 +26,5 @@ const countSegments = function(s) {
   const arr = str.split(' ').filter((item) => item !== '');
   return arr.length;
 };
+
+export { countSegments };

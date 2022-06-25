@@ -49,3 +49,4 @@ const nearestValidPoint = function(x, y, points) {
 // console.log(nearestValidPoint(3, 4, [[3,4]]) === 0);
 // console.log(nearestValidPoint(3, 4, [[2,3]]) === -1);
 // @lc code=end
+export { nearestValidPoint };

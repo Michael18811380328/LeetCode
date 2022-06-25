@@ -62,7 +62,7 @@ function getPermutation(n, k) {
   return init.join('');
 }
 
-// 思路2：2308 ms	37 MB
+// 思路2, 2308ms, 37 MB
 // function nextPermutation(nums) {
 //   const len = nums.length;
 //   let index = -1;

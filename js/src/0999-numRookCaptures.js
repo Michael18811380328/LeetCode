@@ -67,7 +67,7 @@ const getNum = (board, x, y) => {
 // 这样直接使用 index 即可完成，不需要双重循环
 // 68 ms, 在所有 JavaScript 提交中击败了78.57%
 // 子函数还能优化
-const numRookCaptures = function(board) {
+const numRookCaptures2 = function(board) {
   const newBoard = board.flat();
   const index = newBoard.indexOf('R') + 1;
   const j = (index % 8) - 1;
@@ -77,3 +77,5 @@ const numRookCaptures = function(board) {
 
 // 更好的算法上，子函数还能优化，看一下怎么实现
 // 如果已知了 ij 那么直接可以把四个子数组拿出来（拿出来也消耗时间）
+
+export { numRookCaptures, numRookCaptures2 };

@@ -33,3 +33,5 @@ const findKthPositive = function(arr, k) {
   return current + k - 1 - tmp.length;
 };
 // @lc code=end
+
+export { findKthPositive };

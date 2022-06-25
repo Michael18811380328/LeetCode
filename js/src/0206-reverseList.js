@@ -24,3 +24,5 @@ const reverseList = function(head) {
   }
   return preview;
 };
+
+export { reverseList };

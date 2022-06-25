@@ -30,3 +30,5 @@ const findSpecialInteger = function(arr) {
   return arr[0];
 };
 // @lc code=end
+
+export { findSpecialInteger };

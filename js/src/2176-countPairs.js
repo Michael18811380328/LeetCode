@@ -22,7 +22,7 @@ const countPairs = function(nums, k) {
   let res = 0;
   for (let i = 0; i < len; i++) {
     for (let j = i + 1; j < len; j++) {
-      if (nums[i] === nums[j] && i * j % k === 0) {
+      if (nums[i] === nums[j] && ((i * j) % k) === 0) {
         res++;
       }
     }
@@ -32,3 +32,5 @@ const countPairs = function(nums, k) {
 // 更好的优化方案，是循环一次，然后使用字典计数即可
 // 这个实现也不难，有时间再说
 // @lc code=end
+
+export { countPairs };

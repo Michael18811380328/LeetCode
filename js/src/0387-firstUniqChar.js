@@ -22,7 +22,7 @@ const firstUniqChar = function(s) {
 
 // 方法2：遍历一次字符串，把重复的记录一下
 // 116 ms , 在所有 JavaScript 提交中击败 81.43%
-const firstUniqChar = function(s) {
+const firstUniqChar2 = function(s) {
   const dict = {};
   for (let i = 0; i < s.length; i++) {
     const key = s[i];
@@ -42,3 +42,5 @@ const firstUniqChar = function(s) {
 };
 
 // @lc code=end
+
+export { firstUniqChar, firstUniqChar2 };

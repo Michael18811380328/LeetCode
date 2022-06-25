@@ -28,3 +28,5 @@ const pathSum = function(root, targetSum) {
   runNode(root, tmp, 0);
   return list;
 };
+
+export { pathSum };

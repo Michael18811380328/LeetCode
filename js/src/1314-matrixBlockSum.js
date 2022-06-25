@@ -44,3 +44,5 @@ const matrixBlockSum = function(mat, K) {
   }
   return res;
 };
+
+export { matrixBlockSum };

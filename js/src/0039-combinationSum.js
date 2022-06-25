@@ -46,7 +46,7 @@ const backTrack = (candidates, tmpList, list, target) => {
 };
 
 // 优化后 80 ms, 在所有 JavaScript 提交中击败了99.82%
-const combinationSum = function(candidates, target) {
+const combinationSum2 = function(candidates, target) {
   // 选择数字先排序
   candidates.sort((a, b) => a - b);
   const list = [];
@@ -84,3 +84,5 @@ const combinationSum = function(candidates, target) {
   backTrack(tmpList);
   return list;
 };
+
+export { combinationSum, combinationSum2 };

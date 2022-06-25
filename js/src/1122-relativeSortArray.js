@@ -53,3 +53,5 @@ const relativeSortArray = function(arr1, arr2) {
   }
   return arr2.concat(arr3);
 };
+
+export { relativeSortArray };

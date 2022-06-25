@@ -32,3 +32,4 @@ const containsNearbyAlmostDuplicate = function(nums, k, t) {
 // 在计算机科学中，关联数组（Associative Array），又称映射（Map）、字典（Dictionary）是一个抽象的数据结构，它包含着类似于（键，值）的有序对。
 // 如何使用另一种方法实现
 // @lc code=end
+export { containsNearbyAlmostDuplicate };

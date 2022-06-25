@@ -20,7 +20,7 @@ const isTrue = function(string) {
   } else if (str3.includes(firstStr)) {
     target = str3;
   }
-  console.log(target, firstStr);
+  // console.log(target, firstStr);
   if (!target) {
     return false;
   }
@@ -45,3 +45,5 @@ const findWords = function(words) {
   }
   return result;
 };
+
+export { findWords };

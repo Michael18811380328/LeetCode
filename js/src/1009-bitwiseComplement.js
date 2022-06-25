@@ -26,3 +26,5 @@ const bitwiseComplement = function(N) {
   }
   return result;
 };
+
+export { bitwiseComplement };

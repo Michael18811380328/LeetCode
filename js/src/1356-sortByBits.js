@@ -29,3 +29,5 @@ const sortByBits = function(arr) {
   // 结果数组直接降维，获取需要输出的数组
   return matrix.flat();
 };
+
+export { sortByBits };

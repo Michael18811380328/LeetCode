@@ -29,7 +29,7 @@ const truncateSentence = function(s, k) {
 
 // 改进版本
 // 96 ms, 在所有 JavaScript 提交中击败了18.81%，还可以提升很大
-const truncateSentence = function(s, k) {
+const truncateSentence3 = function(s, k) {
   let K = k;
   let position = 0;
   while (K > 0) {
@@ -51,3 +51,5 @@ const truncateSentence2 = function(s, k) {
   const sList = s.split(' ');
   return sList.slice(0, k).join(' ');
 };
+
+export { truncateSentence, truncateSentence2, truncateSentence3 };

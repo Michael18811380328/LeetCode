@@ -48,3 +48,5 @@ MyQueue.prototype.empty = function () {
  * let param_3 = obj.peek()
  * let param_4 = obj.empty()
  */
+
+export { MyQueue };

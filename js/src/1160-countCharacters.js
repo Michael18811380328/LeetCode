@@ -60,3 +60,5 @@ const countCharacters = function(words, chars) {
   }
   return result;
 };
+
+export { countCharacters };

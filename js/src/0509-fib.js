@@ -16,3 +16,5 @@ const fib = function(N) {
     return result;
   }
 };
+
+export { fib };

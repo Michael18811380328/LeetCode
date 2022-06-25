@@ -24,3 +24,5 @@ const preorderTraversal = function(root) {
 
 // 问题：题目建议使用迭代算法，这个需要进一步计算
 // 思路二，使用栈，直接把数组放入栈内，不需要函数递归
+
+export { preorderTraversal };

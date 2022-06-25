@@ -29,3 +29,5 @@ const sortArrayByParityII = function(A) {
   }
   return A;
 };
+
+export { sortArrayByParityII };

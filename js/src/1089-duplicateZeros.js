@@ -26,3 +26,5 @@ const duplicateZeros = function(arr) {
     }
   }
 };
+
+export { duplicateZeros };

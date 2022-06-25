@@ -12,6 +12,16 @@
  *     this.left = this.right = null;
  * }
  */
+
+const runTree = function(node, layer, matrix) {
+  if (!node) return;
+  if (!matrix[layer]) {
+    matrix[layer] = [];
+  }
+  matrix[layer].push(node.val);
+  runTree(node.left, layer + 1, matrix);
+  runTree(node.right, layer + 1, matrix);
+};
 /**
  * @param {TreeNode} root
  * @return {number[][]}
@@ -31,14 +41,5 @@ const levelOrder = function(root) {
   return matrix;
 };
 
-const runTree = function(node, layer, matrix) {
-  if (!node) return;
-  if (!matrix[layer]) {
-    matrix[layer] = [];
-  }
-  matrix[layer].push(node.val);
-  runTree(node.left, layer + 1, matrix);
-  runTree(node.right, layer + 1, matrix);
-};
-
 // @lc code=end
+export { levelOrder };

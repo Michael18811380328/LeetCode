@@ -32,3 +32,5 @@ const findMaxConsecutiveOnes = function(nums) {
   }
   return max;
 };
+
+export { findMaxConsecutiveOnes };

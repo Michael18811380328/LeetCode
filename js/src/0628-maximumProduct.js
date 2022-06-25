@@ -15,3 +15,5 @@ const maximumProduct = function(nums) {
   const num2 = nums[len - 3] * nums[len - 2] * nums[len - 1];
   return Math.max(num1, num2);
 };
+
+export { maximumProduct };

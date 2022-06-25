@@ -7,3 +7,5 @@
 const checkOnesSegment = function(s) {
   return !s.includes('01');
 };
+
+export { checkOnesSegment };

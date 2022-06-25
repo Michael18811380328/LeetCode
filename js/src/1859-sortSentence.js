@@ -24,3 +24,5 @@ const sortSentence = function(s) {
     return item.str;
   }).join(' ');
 };
+
+export { sortSentence };

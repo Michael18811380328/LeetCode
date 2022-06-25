@@ -12,6 +12,16 @@
 // 输入: "FlaG"
 // 输出: False
 
+const isLarge = function(str) {
+  const index = str.charCodeAt(0);
+  if (index > 64 && index < 91) {
+    return true;
+  } else if (index > 96 && index < 123) {
+    return false;
+  }
+  return null;
+};
+
 /**
  * @param {string} word
  * @return {boolean}
@@ -41,12 +51,4 @@ const detectCapitalUse = function(word) {
   }
 };
 
-const isLarge = function(str) {
-  const index = str.charCodeAt(0);
-  if (index > 64 && index < 91) {
-    return true;
-  } else if (index > 96 && index < 123) {
-    return false;
-  }
-  return null;
-};
+export { isLarge, detectCapitalUse };

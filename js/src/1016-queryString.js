@@ -30,7 +30,7 @@ const queryString = function(s, n) {
 // 把这个S的全部子串拿出来，然后转换成数字，看最后能否覆盖0~N的情况
 // S的长度小于1000，这个循环就是 1000 * 1000 这个计算较差
 // Your runtime beats 5.56 % of javascript submissions
-const queryString = function(s, n) {
+const queryString2 = function(s, n) {
   const dict = {};
   for (let len = 1; len <= s.length; len++) {
     for (let start = 0; start <= s.length - len; start++) {
@@ -57,3 +57,5 @@ const queryString = function(s, n) {
 };
 
 // @lc code=end
+
+export { queryString, queryString2 };

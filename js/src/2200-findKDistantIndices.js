@@ -29,3 +29,5 @@ const findKDistantIndices = function(nums, key, k) {
   return Array.from(new Set(tmp));
 };
 // @lc code=end
+
+export { findKDistantIndices };

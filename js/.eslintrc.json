@@ -31,8 +31,23 @@
     "prefer-destructuring": "off",
     "object-curly-newline": "off",
     "camelcase": "off",
+    "no-mixed-operators": "off",
+    "no-use-before-define": "off",
+    "no-shadow": "off",
+    "guard-for-in": "off",
+    "radix": "off",
+    "prefer-regex-literals": "off",
+    "eqeqeq": "off",
+    "brace-style": "off",
+    "no-nested-ternary": "off",
+    "no-lonely-if": "off",
+    "no-multi-assign": "off",
+    "no-unused-expressions": "off",
+    "for-direction": "off",
+    "max-classes-per-file": "off",
     "no-return-assign": "off"
-  }
+  },
+  "parser": "@babel/eslint-parser"
 }
 
 // Possible Errors 可能的错误或逻辑错误

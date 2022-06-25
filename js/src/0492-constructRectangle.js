@@ -27,3 +27,5 @@ const constructRectangle = function(area) {
   // 如果余数是0， 那么这个数就是满足的最合适的数字
   // 否则 7 = 【7， 1】
 };
+
+export { constructRectangle };

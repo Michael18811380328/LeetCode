@@ -35,3 +35,5 @@ const maxRotateFunction = function(nums) {
   return result;
 };
 // @lc code=end
+
+export { maxRotateFunction };

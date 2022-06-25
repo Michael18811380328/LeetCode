@@ -23,3 +23,5 @@ const maximumUnits = function(boxTypes, truckSize) {
   }
   return sum;
 };
+
+export { maximumUnits };

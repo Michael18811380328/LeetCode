@@ -54,3 +54,4 @@ const deleteDuplicates = function(head) {
   }
 };
 // @lc code=end
+export { deleteDuplicates };

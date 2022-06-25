@@ -29,3 +29,5 @@ const kLengthApart = function(nums, k) {
   return true;
 };
 // @lc code=end
+
+export { kLengthApart };

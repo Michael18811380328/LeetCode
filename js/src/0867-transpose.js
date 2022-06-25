@@ -29,3 +29,5 @@ const transpose = function(A) {
   }
   return result;
 };
+
+export { transpose };

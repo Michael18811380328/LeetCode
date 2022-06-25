@@ -43,3 +43,5 @@ const rightSideView = function(root) {
   return matrix.map((arr) => arr[arr.length - 1]);
 };
 // @lc code=end
+
+export { rightSideView };

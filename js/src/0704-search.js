@@ -10,7 +10,7 @@ const search = function(nums, target) {
 };
 
 // 二分法
-const search = function(nums, target) {
+const search2 = function(nums, target) {
   const len = nums.length;
   if (len === 0 || nums[0] > target || nums[len - 1] < target) {
     return -1;
@@ -38,3 +38,5 @@ const search = function(nums, target) {
   }
   return -1;
 };
+
+export { search, search2 };

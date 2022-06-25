@@ -86,3 +86,5 @@ const checkZeroOnes = function(s) {
 // console.log(checkZeroOnes("110100010") === false);
 // console.log(checkZeroOnes("1") === true);
 // console.log(checkZeroOnes("0") === false);
+
+export { checkZeroOnes2, checkZeroOnes };

@@ -27,3 +27,5 @@ const kthSmallest = function(matrix, k) {
 // 这是结拜呢的思路，但是细节还需要考虑
 // 还有没有更好的办法
 // @lc code=end
+
+export { kthSmallest };

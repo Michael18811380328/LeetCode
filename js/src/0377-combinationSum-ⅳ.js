@@ -87,3 +87,5 @@ const combinationSum4 = function(nums, target) {
 // https://leetcode-cn.com/problems/combination-sum-iv/solution/377-zu-he-zong-he-iv-javascript-san-chong-jie-ti-s/
 
 // @lc code=end
+
+export { combinationSum4 };

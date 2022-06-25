@@ -40,7 +40,7 @@ const findComplement = function(num) {
  * @param {number} num
  * @return {number}
  */
-const findComplement = function(num) {
+const findComplement2 = function(num) {
   let str = num.toString(2);
   // 可以使用循环，或者使用正则替换
   // let res = '';
@@ -56,3 +56,5 @@ const findComplement = function(num) {
   str = str.replace(/2/g, '1');
   return parseInt(str, 2);
 };
+
+export { findComplement, findComplement2 };

@@ -42,3 +42,5 @@ MyHashMap.prototype.remove = function(key) {
  * let param_2 = obj.get(key)
  * obj.remove(key)
  */
+
+export { MyHashMap };

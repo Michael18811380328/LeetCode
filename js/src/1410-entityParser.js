@@ -19,3 +19,5 @@ const entityParser = function(text) {
 
 // 第二种思路：遍历字符串，然后判断栈顶的是否是特殊的字符串，然后替换
 // @lc code=end
+
+export { entityParser };

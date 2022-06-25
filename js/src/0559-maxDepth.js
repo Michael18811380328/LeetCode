@@ -12,15 +12,6 @@
  * };
  */
 // Your runtime beats 91.3 % of javascript submissions
-/**
- * @param {Node} root
- * @return {number}
- */
-const maxDepth = function(root) {
-  if (!root) return 0;
-  return getDepth(root);
-};
-
 const getDepth = function(node) {
   if (!node) return 1;
   let max = 0;
@@ -32,4 +23,15 @@ const getDepth = function(node) {
   }
   return max + 1;
 };
+
+/**
+ * @param {Node} root
+ * @return {number}
+ */
+const maxDepth = function(root) {
+  if (!root) return 0;
+  return getDepth(root);
+};
 // @lc code=end
+
+export { maxDepth };

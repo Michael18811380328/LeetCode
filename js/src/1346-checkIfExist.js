@@ -28,3 +28,5 @@ const checkIfExist = function(arr) {
   }
   return false;
 };
+
+export { checkIfExist };

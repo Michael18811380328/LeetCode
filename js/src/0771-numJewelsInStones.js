@@ -33,3 +33,5 @@ const numJewelsInStones = function(J, S) {
   }
   return sum;
 };
+
+export { numJewelsInStones };

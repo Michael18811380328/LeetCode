@@ -49,3 +49,5 @@ MyStack.prototype.empty = function() {
  * let param_3 = obj.top()
  * let param_4 = obj.empty()
  */
+
+export { MyStack };

@@ -23,3 +23,5 @@ const minimumCost = function(cost) {
   return sum;
 };
 // @lc code=end
+
+export { minimumCost };

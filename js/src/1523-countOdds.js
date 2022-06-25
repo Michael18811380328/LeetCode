@@ -22,3 +22,5 @@ const countOdds = function(low, high) {
     return ((high - low) / 2);
   }
 };
+
+export { countOdds };

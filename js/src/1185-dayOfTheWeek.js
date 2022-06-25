@@ -4,10 +4,7 @@
  * @param {number} year
  * @return {string}
  */
-// 80 ms
-// , 在所有 JavaScript 提交中击败了
-// 75.32%
-// 的用户
+// 80 ms, 在所有 JavaScript 提交中击败了75.32%
 const dict = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 const dayOfTheWeek = function(day, month, year) {
   // 思路：1971 到 2100 之间获取 1971-01-01 的星期几
@@ -41,3 +38,5 @@ const dayOfTheWeek = function(day, month, year) {
   return dict[remain];
   // 除以7，计算星期
 };
+
+export { dayOfTheWeek };

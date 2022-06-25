@@ -19,3 +19,5 @@ const findNumbers = function(nums) {
   }
   return res;
 };
+
+export { findNumbers };

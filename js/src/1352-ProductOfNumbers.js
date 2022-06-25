@@ -38,3 +38,5 @@ ProductOfNumbers.prototype.getProduct = function(k) {
  * let param_2 = obj.getProduct(k)
  */
 // @lc code=end
+
+export { ProductOfNumbers };

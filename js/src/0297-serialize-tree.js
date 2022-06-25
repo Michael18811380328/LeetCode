@@ -56,3 +56,5 @@ const deserialize = function(data) {
  * Your functions will be called as such:
  * deserialize(serialize(root));
  */
+
+export { serialize, deserialize };

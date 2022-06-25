@@ -65,7 +65,7 @@ const surfaceArea = function(grid) {
 // 改进版
 // 72 ms Your runtime beats 85.71 %
 // 三次循环变成1次循环
-const surfaceArea = function(grid) {
+const surfaceArea2 = function(grid) {
   const len = grid.length;
   let total = 0;
   for (let i = 0; i < len; i++) {
@@ -91,3 +91,5 @@ const surfaceArea = function(grid) {
   }
   return total;
 };
+
+export { surfaceArea, surfaceArea2 };

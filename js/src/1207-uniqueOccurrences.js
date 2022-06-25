@@ -27,3 +27,5 @@ const uniqueOccurrences = function(arr) {
   }
   return tmp.length === (Array.from(new Set(tmp))).length;
 };
+
+export { uniqueOccurrences };

@@ -35,3 +35,5 @@ const distanceBetweenBusStops = function(distance, start, destination) {
 // 7
 // 2
 // @lc code=end
+
+export { distanceBetweenBusStops };

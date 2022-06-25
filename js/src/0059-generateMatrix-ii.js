@@ -26,44 +26,44 @@ const generateMatrix = function(n) {
       case 'right':
         if (res[x][y + 1] === true) {
           direction = 'right';
-          x = x;
+          // x = x;
           y = y + 1;
         } else {
           direction = 'down';
           x = x + 1;
-          y = y;
+          // y = y;
         }
         break;
       case 'down':
         if (res[x + 1] && res[x + 1][y] === true) {
           direction = 'down';
           x = x + 1;
-          y = y;
+          // y = y;
         } else {
           direction = 'left';
-          x = x;
+          // x = x;
           y = y - 1;
         }
         break;
       case 'left':
         if (res[x][y - 1] === true) {
           direction = 'left';
-          x = x;
+          // x = x;
           y = y - 1;
         } else {
           direction = 'up';
           x = x - 1;
-          y = y;
+          // y = y;
         }
         break;
       case 'up':
         if (res[x - 1] && res[x - 1][y] === true) {
           direction = 'up';
           x = x - 1;
-          y = y;
+          // y = y;
         } else {
           direction = 'right';
-          x = x;
+          // x = x;
           y = y + 1;
         }
         break;
@@ -86,3 +86,5 @@ const generateMatrix = function(n) {
   }
   return res;
 };
+
+export { generateMatrix };

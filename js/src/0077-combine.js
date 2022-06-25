@@ -58,3 +58,5 @@ const combine = function(n, k) {
   backTrack(list, tmp, k);
   return list;
 };
+
+export { combine };
