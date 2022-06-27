@@ -12,6 +12,17 @@
 // 1、最差的方法，三重循环
 // Your runtime beats 85.29 % of javascript submissions
 const largestTriangleArea = function(points) {
+  // 辅助函数
+  const getArea = (a, b, c) => {
+    const x1 = a[0];
+    const y1 = a[1];
+    const x2 = b[0];
+    const y2 = b[1];
+    const x3 = c[0];
+    const y3 = c[1];
+    return Math.abs((x1 - x3) * (y2 - y3) - (x2 - x3) * (y1 - y3)) / 2;
+  };
+
   const len = points.length;
   if (len === 3) {
     return getArea(points[0], points[1], points[2]);
@@ -61,16 +72,6 @@ const largestTriangleArea = function(points) {
 // const getDistance = (a, b) => {
 //   return (a[0] - b[0]) ** 2 + (a[1] - b[1]) ** 2;
 // }
-
-const getArea = (a, b, c) => {
-  const x1 = a[0];
-  const y1 = a[1];
-  const x2 = b[0];
-  const y2 = b[1];
-  const x3 = c[0];
-  const y3 = c[1];
-  return Math.abs((x1 - x3) * (y2 - y3) - (x2 - x3) * (y1 - y3)) / 2;
-};
 // @lc code=end
 
 export { largestTriangleArea };

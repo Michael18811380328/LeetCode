@@ -25,27 +25,26 @@ const findSecondMinimumValue = function(root) {
   if (!root || !root.val) {
     return -1;
   }
+  const runNode = function(node, target) {
+    if (!node) {
+      return null;
+    }
+    if (node && node.val > target) {
+      return node.val;
+    }
+    if (node.left) {
+      const a = runNode(node.left, target);
+      const b = runNode(node.right, target);
+      if (!a && !b) return -1;
+      if (!a || a === -1) return b;
+      if (!b || b === -1) return a;
+      return Math.min(a, b);
+    }
+    return null;
+  };
   const rootVal = root.val;
   const res = runNode(root, rootVal);
   return res || -1;
-};
-
-const runNode = function(node, target) {
-  if (!node) {
-    return null;
-  }
-  if (node && node.val > target) {
-    return node.val;
-  }
-  if (node.left) {
-    const a = runNode(node.left, target);
-    const b = runNode(node.right, target);
-    if (!a && !b) return -1;
-    if (!a || a === -1) return b;
-    if (!b || b === -1) return a;
-    return Math.min(a, b);
-  }
-  return null;
 };
 // @lc code=end
 

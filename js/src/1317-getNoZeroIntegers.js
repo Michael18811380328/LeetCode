@@ -11,6 +11,18 @@
  */
 // Your runtime beats 76.06 % of javascript submissions
 const getNoZeroIntegers = function(n) {
+  // 辅助函数
+  const jedge = function(a) {
+    if (a <= 0) return false;
+    while (a > 0) {
+      if (a % 10 === 0) {
+        return false;
+      }
+      const re = a % 10;
+      a = (a - re) / 10;
+    }
+    return true;
+  };
   // 随机法比较好
   let a = Math.floor(Math.random() * n);
   let b = n - a;
@@ -19,18 +31,6 @@ const getNoZeroIntegers = function(n) {
     b = n - a;
   }
   return [a, b];
-};
-
-const jedge = function(a) {
-  if (a <= 0) return false;
-  while (a > 0) {
-    if (a % 10 === 0) {
-      return false;
-    }
-    const re = a % 10;
-    a = (a - re) / 10;
-  }
-  return true;
 };
 // @lc code=end
 

@@ -29,18 +29,6 @@
  * @return {string[]}
  */
 const TIMES = [100, 200, 400, 800, 1, 2, 4, 8, 16, 32];
-// 96 ms, 在所有 JavaScript 提交中击败了26.51%
-const readBinaryWatch = function(num) {
-  if (num === 0) {
-    return ['0:00'];
-  } else if (num > 8) {
-    return [];
-  }
-  const list = [];
-  const temp = [];
-  backTrack(list, temp, num, TIMES);
-  return list;
-};
 
 const backTrack = function(list, temp, num, times) {
   // 如果临时数组满足条件，那么计算当前的时间，然后放在List中
@@ -78,6 +66,19 @@ const formatTime = function(timeArr) {
   minute = minute === 0 ? '00' : minute;
   hour = hour.length === 0 ? '0' : hour;
   return `${hour}:${minute}`;
+};
+
+// 96 ms, 在所有 JavaScript 提交中击败了26.51%
+const readBinaryWatch = function(num) {
+  if (num === 0) {
+    return ['0:00'];
+  } else if (num > 8) {
+    return [];
+  }
+  const list = [];
+  const temp = [];
+  backTrack(list, temp, num, TIMES);
+  return list;
 };
 
 export { readBinaryWatch };

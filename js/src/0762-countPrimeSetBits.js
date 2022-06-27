@@ -26,6 +26,17 @@ const countPrimeSetBits = function(L, R) {
     false, true, false, true, false,
   ];
   let result = 0;
+
+  const getNumber = (num) => {
+    let res = 0;
+    while (num > 0) {
+      const remain = num % 2;
+      res += remain;
+      num = (num - remain) / 2;
+    }
+    return res;
+  };
+
   // 然后遍历数组，获取二进制数中的1的个数
   for (let i = L; i <= R; i++) {
     const item = getNumber(i);
@@ -34,16 +45,6 @@ const countPrimeSetBits = function(L, R) {
     }
   }
   return result;
-};
-
-const getNumber = (num) => {
-  let res = 0;
-  while (num > 0) {
-    const remain = num % 2;
-    res += remain;
-    num = (num - remain) / 2;
-  }
-  return res;
 };
 
 // @lc code=end

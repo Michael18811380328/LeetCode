@@ -17,21 +17,21 @@
  * @return {number}
  */
 const sumOfLeftLeaves = function(root) {
+  const runNode = function(node, isLeft) {
+    if (!node) {
+      return 0;
+    }
+    if (!node.left && !node.right && isLeft) {
+      return node.val;
+    }
+    return runNode(node.right, false) + runNode(node.left, true);
+  };
   return runNode(root, false);
 };
 
 // 92 ms, 在所有 JavaScript 提交中击败了39.16%的用户
-const runNode = function(node, isLeft) {
-  if (!node) {
-    return 0;
-  }
-  if (!node.left && !node.right && isLeft) {
-    return node.val;
-  }
-  return runNode(node.right, false) + runNode(node.left, true);
-};
 
 // 必须是叶子节点
 // @lc code=end
 
-export { umOfLeftLeaves };
+export { sumOfLeftLeaves };

@@ -12,7 +12,7 @@
 /**
  * initialize your data structure here.
  */
-let MedianFinder = function() {
+const MedianFinder = function() {
   list = [];
 };
 /**
@@ -50,11 +50,11 @@ MedianFinder.prototype.findMedian = function() {
 // 300 ms
 // , 在所有 JavaScript 提交中击败了
 // 86.61%
-let MedianFinder = function() {
+const MedianFinder2 = function() {
   list = [];
 };
 
-MedianFinder.prototype.addNum = function(num) {
+MedianFinder2.prototype.addNum = function(num) {
   const len = list.length;
   if (len === 0) {
     list.push(num);
@@ -86,9 +86,8 @@ MedianFinder.prototype.addNum = function(num) {
   }
 };
 
-MedianFinder.prototype.findMedian = function() {
+MedianFinder2.prototype.findMedian = function() {
   const len = list.length;
-  console.log(list);
   if (len === 0) {
     return 0;
   } else if (len === 1) {
@@ -113,4 +112,4 @@ MedianFinder.prototype.findMedian = function() {
  */
 // @lc code=end
 
-export { len };
+export { MedianFinder, MedianFinder2 };

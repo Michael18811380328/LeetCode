@@ -11,6 +11,29 @@
  * @return {boolean}
  */
 // Your runtime beats 5.05 % of javascript submissions
+
+const getNumber = (arr, target) => {
+  if (!arr) return false;
+  const len = arr.length;
+  let start = 0;
+  let end = len - 1;
+  if (arr[start] > target || arr[end] < target) {
+    return false;
+  }
+  let mid = Math.floor((start + end) / 2);
+  while (start < end - 1) {
+    if (arr[mid] === target) {
+      return true;
+    } else if (arr[mid] > target) {
+      end = mid;
+    } else if (arr[mid] < target) {
+      start = mid;
+    }
+    mid = Math.floor((start + end) / 2);
+  }
+  return false;
+};
+
 const searchMatrix = function(matrix, target) {
   const rowLen = matrix.length;
   const columnLen = matrix[0].length;
@@ -37,28 +60,6 @@ const searchMatrix = function(matrix, target) {
   for (let i = startRowIdx; i <= endRowIdx; i++) {
     const arr = matrix[i];
     if (getNumber(arr, target)) return true;
-  }
-  return false;
-};
-
-const getNumber = (arr, target) => {
-  if (!arr) return false;
-  const len = arr.length;
-  let start = 0;
-  let end = len - 1;
-  if (arr[start] > target || arr[end] < target) {
-    return false;
-  }
-  let mid = Math.floor((start + end) / 2);
-  while (start < end - 1) {
-    if (arr[mid] === target) {
-      return true;
-    } else if (arr[mid] > target) {
-      end = mid;
-    } else if (arr[mid] < target) {
-      start = mid;
-    }
-    mid = Math.floor((start + end) / 2);
   }
   return false;
 };

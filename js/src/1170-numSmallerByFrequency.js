@@ -10,11 +10,22 @@
  * @param {string[]} words
  * @return {number[]}
  */
-// 152 ms
-// , 在所有 JavaScript 提交中击败了
-// 59.09%
-// 的用户
+// 152 ms, 在所有 JavaScript 提交中击败了59.09%
 const numSmallerByFrequency = function(queries, words) {
+  // 辅助函数
+  const getNumber = (strs) => {
+    const arr = strs.split('');
+    arr.sort((a, b) => {
+      return a > b ? 1 : -1;
+    });
+    const current = arr[0];
+    let index = 1;
+    while (current === arr[index]) {
+      index++;
+    }
+    return index;
+  };
+
   // 先把两个数组的字符串转换成函数结果，并排序
   // 然后使用双指针，获取结果
   const a = []; const
@@ -40,19 +51,6 @@ const numSmallerByFrequency = function(queries, words) {
     res[i] = times;
   }
   return res;
-};
-
-const getNumber = (strs) => {
-  const arr = strs.split('');
-  arr.sort((a, b) => {
-    return a > b ? 1 : -1;
-  });
-  const current = arr[0];
-  let index = 1;
-  while (current === arr[index]) {
-    index++;
-  }
-  return index;
 };
 // @lc code=end
 

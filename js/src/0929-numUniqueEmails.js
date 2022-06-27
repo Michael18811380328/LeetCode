@@ -11,6 +11,18 @@
  */
 // Your runtime beats 92.77 % of javascript submissions
 const numUniqueEmails = function(emails) {
+  // 辅助函数：规范邮件地址
+  const valid = (email) => {
+    const seperator = email.indexOf('@');
+    let local = email.slice(0, seperator);
+    const domain = email.slice(seperator);
+    if (local.indexOf('+') > -1) {
+      local = local.slice(0, local.indexOf('+'));
+    }
+    local = local.replace(/\./g, '');
+    return local + domain;
+  };
+
   // 循环邮件
   const len = emails.length;
   const dict = {};
@@ -27,17 +39,6 @@ const numUniqueEmails = function(emails) {
   return times;
 };
 
-// 先规范邮件地址
-const valid = (email) => {
-  const seperator = email.indexOf('@');
-  let local = email.slice(0, seperator);
-  const domain = email.slice(seperator);
-  if (local.indexOf('+') > -1) {
-    local = local.slice(0, local.indexOf('+'));
-  }
-  local = local.replace(/\./g, '');
-  return local + domain;
-};
 // @lc code=end
 
 export { numUniqueEmails };

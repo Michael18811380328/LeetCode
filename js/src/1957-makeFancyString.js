@@ -32,11 +32,11 @@ const makeFancyString = function(s) {
 //   console.log(String.fromCharCode((97 + i)));
 // }
 // 'asaaaaaa'.replace(/([a-z])\1{2}/g, 'a');
-const makeFancyString = function(s) {
+const makeFancyString2 = function(s) {
   const len = s.length;
   if (len <= 2) return s;
 };
 
 // @lc code=end
 
-export { makeFancyString };
+export { makeFancyString, makeFancyString2 };

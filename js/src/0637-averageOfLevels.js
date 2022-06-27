@@ -16,11 +16,20 @@
  * @param {TreeNode} root
  * @return {number[]}
  */
-// 96 ms
-// , 在所有 JavaScript 提交中击败了
-// 82.37%
-// 的用户
+// 96 ms , 在所有 JavaScript 提交中击败了82.37%
 const averageOfLevels = function(root) {
+  // 辅助函数
+  const runNode = function(node, depth, matrix) {
+    if (!node) return;
+    if (!matrix[depth]) {
+      matrix[depth] = [];
+    }
+    const value = node.val;
+    matrix[depth].push(value);
+    runNode(node.left, depth + 1, matrix);
+    runNode(node.right, depth + 1, matrix);
+  };
+
   // 遍历二叉树，转换成一个二维数组
   const depth = 0;
   const matrix = [];
@@ -36,17 +45,6 @@ const averageOfLevels = function(root) {
     matrix[i] = sum / len;
   }
   return matrix;
-};
-
-const runNode = function(node, depth, matrix) {
-  if (!node) return;
-  if (!matrix[depth]) {
-    matrix[depth] = [];
-  }
-  const value = node.val;
-  matrix[depth].push(value);
-  runNode(node.left, depth + 1, matrix);
-  runNode(node.right, depth + 1, matrix);
 };
 
 // @lc code=end

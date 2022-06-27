@@ -21,6 +21,14 @@ const minDiffInBST = function(root) {
   if (!root) {
     return null;
   }
+
+  const runNode = (node, list) => {
+    if (!node) return;
+    list.push(node.val);
+    runNode(node.left, list);
+    runNode(node.right, list);
+  };
+
   const list = [];
   runNode(root, list);
   list.sort((a, b) => a - b);
@@ -30,13 +38,6 @@ const minDiffInBST = function(root) {
     min = item < min ? item : min;
   }
   return min;
-};
-
-const runNode = (node, list) => {
-  if (!node) return;
-  list.push(node.val);
-  runNode(node.left, list);
-  runNode(node.right, list);
 };
 // @lc code=end
 

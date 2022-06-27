@@ -9,10 +9,7 @@
  * @param {string} s
  * @return {number}
  */
-// 108 ms
-// , 在所有 JavaScript 提交中击败了
-// 53.97%
-// 的用户
+// 108 ms, 在所有 JavaScript 提交中击败了53.97%
 const countBinarySubstrings = function(s) {
   // 获取第一个进制的次数
   // 获取第二个进制的次数
@@ -43,7 +40,7 @@ const countBinarySubstrings = function(s) {
       current2 = item;
       time2 = 1;
     }
-    console.log(current1, time1, current2, time2, res);
+    // console.log(current1, time1, current2, time2, res);
   }
   if (current2) {
     const min = Math.min(time1, time2);

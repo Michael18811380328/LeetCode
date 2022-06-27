@@ -22,7 +22,7 @@ const countPairs = function(nums, k) {
   let res = 0;
   for (let i = 0; i < len; i++) {
     for (let j = i + 1; j < len; j++) {
-      if (nums[i] === nums[j] && i * j % k === 0) {
+      if (nums[i] === nums[j] && ((i * j) % k) === 0) {
         res++;
       }
     }

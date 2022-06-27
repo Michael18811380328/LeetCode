@@ -35,10 +35,8 @@ const searchBST = function(root, val) {
 };
 
 // 改进
-// 100 ms
-// , 在所有 JavaScript 提交中击败了
-// 82.18%
-const searchBST = function(root, val) {
+// 100 ms, 在所有 JavaScript 提交中击败了82.18%
+const searchBST2 = function(root, val) {
   if (!root) {
     return null;
   } else if (root.val === val) {
@@ -46,11 +44,11 @@ const searchBST = function(root, val) {
   } else {
     // 这里做优化
     if (!root.right || val <= root.right.val) {
-      const leftVal = searchBST(root.left, val);
+      const leftVal = searchBST2(root.left, val);
       if (leftVal) return leftVal;
     }
     if (!root.left || val >= root.left.val) {
-      const rightVal = searchBST(root.right, val);
+      const rightVal = searchBST2(root.right, val);
       if (rightVal) return rightVal;
     }
     return null;
@@ -58,4 +56,4 @@ const searchBST = function(root, val) {
 };
 // @lc code=end
 
-export { searchBST };
+export { searchBST, searchBST2 };

@@ -45,13 +45,13 @@ const maxProduct = function(words) {
 
   // 辅助函数，计算不同单词出现的字母的字典
   function getDict(str) {
-    const tmp = {};
+    const tmp2 = {};
     for (let i = 0; i < str.length; i++) {
-      if (!tmp[str[i]]) {
-        tmp[str[i]] = true;
+      if (!tmp2[str[i]]) {
+        tmp2[str[i]] = true;
       }
     }
-    dict[str] = tmp;
+    dict[str] = tmp2;
   }
 
   // 辅助函数：计算两个单词是否有重复的字母

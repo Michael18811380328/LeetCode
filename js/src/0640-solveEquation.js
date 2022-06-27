@@ -12,6 +12,24 @@
 // 现在五个测试用例通过
 // Your runtime beats 88.64 % of javascript submissions
 const solveEquation = function(equation) {
+  // 辅助函数
+  const getNumber = (arr) => {
+    let a = 0;
+    let b = 0;
+    arr.forEach((item) => {
+      if (item[item.length - 1] === 'x') {
+        let num = item.slice(0, item.length - 1);
+        if (num.length === 0) {
+          num = 1;
+        }
+        a += Number(num);
+      } else {
+        b += Number(item);
+      }
+    });
+    return { a, b };
+  };
+
   // 先获取等号，把等号两边字符串取出来（x+5-3+x）
   // 不考虑一个方程中有多个等号的情况（不是方程）
   const index = equation.indexOf('=');
@@ -86,24 +104,6 @@ const solveEquation = function(equation) {
   const times = -(b / a);
   return `x=${times}`;
 };
-
-const getNumber = (arr) => {
-  let a = 0;
-  let b = 0;
-  arr.forEach((item) => {
-    if (item[item.length - 1] === 'x') {
-      let num = item.slice(0, item.length - 1);
-      if (num.length === 0) {
-        num = 1;
-      }
-      a += Number(num);
-    } else {
-      b += Number(item);
-    }
-  });
-  return { a, b };
-};
-
 // test
 // const testArr = [
 //   "x+5-3+x=6+x-2",

@@ -10,11 +10,21 @@
  * @param {string[]} words
  * @return {string}
  */
-// 116 ms
-// , 在所有 JavaScript 提交中击败了
-// 36.96%
-// 的用户
+// 116 ms, 在所有 JavaScript 提交中击败了36.96%
 const shortestCompletingWord = function(licensePlate, words) {
+  // 辅助函数
+  const judge = function(str, Dict) {
+    const dict = { ...Dict };
+    for (let i = 0; i < str.length; i++) {
+      const s = str[i];
+      if (dict[s] === 1) {
+        delete (dict[s]);
+      } else if (dict[s]) {
+        dict[s] = dict[s] - 1;
+      }
+    }
+    return Object.keys(dict).length === 0;
+  };
   // 标准化字典
   // 去掉数字和空格，全部变成小写，然后转换成一个数组
   const license = licensePlate.replace(/\s/g, '').replace(/[0-9]/g, '').toLowerCase();
@@ -49,19 +59,6 @@ const shortestCompletingWord = function(licensePlate, words) {
     }
   }
   return res;
-};
-
-const judge = function(str, Dict) {
-  const dict = { ...Dict };
-  for (let i = 0; i < str.length; i++) {
-    const s = str[i];
-    if (dict[s] === 1) {
-      delete (dict[s]);
-    } else if (dict[s]) {
-      dict[s] = dict[s] - 1;
-    }
-  }
-  return Object.keys(dict).length === 0;
 };
 // @lc code=end
 

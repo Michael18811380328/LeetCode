@@ -32,10 +32,8 @@ const fn = function(str) {
 };
 
 // 思路二：直接使用字符串拼接的方式
-// 84 ms
-// , 在所有 JavaScript 提交中击败了
-// 73.31%
-const fn = function(str) {
+// 84 ms, 在所有 JavaScript 提交中击败了73.31%
+const fn2 = function(str) {
   let index = str.indexOf('#');
   if (index === -1) return str;
   while (index > -1) {
@@ -51,4 +49,4 @@ const fn = function(str) {
 
 // @lc code=end
 
-export { backspaceCompare };
+export { backspaceCompare, fn, fn2 };

@@ -23,20 +23,19 @@ const levelOrder = function(root) {
   // 递归非常耗性能，可以使用BFS解决问题
   const res = [];
   const depth = 0;
+  const runNode = function(node, depth, res) {
+    if (!node) return;
+    if (!res[depth]) {
+      res[depth] = [];
+    }
+    res[depth].push(node.val);
+    if (!node.children) return;
+    node.children.forEach((element) => {
+      runNode(element, depth + 1, res);
+    });
+  };
   runNode(root, depth, res);
   return res;
-};
-
-const runNode = function(node, depth, res) {
-  if (!node) return;
-  if (!res[depth]) {
-    res[depth] = [];
-  }
-  res[depth].push(node.val);
-  if (!node.children) return;
-  node.children.forEach((element) => {
-    runNode(element, depth + 1, res);
-  });
 };
 
 // 思路二

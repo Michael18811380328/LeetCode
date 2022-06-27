@@ -9,9 +9,17 @@
  * @param {string} s
  * @return {number}
  */
-// 92 ms
-// , 在所有 JavaScript 提交中击败了
-// 72.46%
+// 92 ms, 在所有 JavaScript 提交中击败了72.46%
+const getValue = function(str1, str2) {
+  let res = 0;
+  for (let i = 0; i < str1.length; i++) {
+    if (str1[i] === '0') res++;
+  }
+  for (let i = 0; i < str2.length; i++) {
+    if (str2[i] === '1') res++;
+  }
+  return res;
+};
 
 const maxScore = function(s) {
   if (s.length === 2) {
@@ -25,17 +33,6 @@ const maxScore = function(s) {
     max = max > score ? max : score;
   }
   return max;
-};
-
-const getValue = function(str1, str2) {
-  let res = 0;
-  for (let i = 0; i < str1.length; i++) {
-    if (str1[i] === '0') res++;
-  }
-  for (let i = 0; i < str2.length; i++) {
-    if (str2[i] === '1') res++;
-  }
-  return res;
 };
 // @lc code=end
 

@@ -91,4 +91,4 @@ const commonChars = function(A) {
   return result;
 };
 
-export { string2dict };
+export { commonChars, string2dict };

@@ -68,4 +68,4 @@ const findDuplicates3 = function(nums) {
 };
 // @lc code=end
 
-export { findDuplicates };
+export { findDuplicates, findDuplicates2, findDuplicates3 };
