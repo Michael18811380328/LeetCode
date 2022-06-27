@@ -41,3 +41,5 @@ const combinationSum3 = function(k, n) {
 };
 
 // @lc code=end
+
+export { combinationSum3 };

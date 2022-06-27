@@ -27,6 +27,8 @@ const maximumPopulation = function(logs) {
   }
 };
 
+export { maximumPopulation };
+
 // console.log(maximumPopulation([[1993,1994]]));
 // console.log(maximumPopulation([[1993,1999],[2000,2010]]));
 // console.log(maximumPopulation([[1950,1961],[1960,1971],[1970,1981]]));

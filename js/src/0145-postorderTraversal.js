@@ -19,3 +19,5 @@ const postorderTraversal = function(root) {
   if (!root || !root.val) return [];
   return [].concat(postorderTraversal(root.left)).concat(postorderTraversal(root.right)).concat([root.val]);
 };
+
+export { postorderTraversal };

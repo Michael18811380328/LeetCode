@@ -56,3 +56,5 @@ RecentCounter2.prototype.ping = function(t) {
  * let param_1 = obj.ping(t)
  */
 // @lc code=end
+
+export { RecentCounter };

@@ -57,3 +57,4 @@ const connect = function(root) {
   return root;
 };
 // @lc code=end
+export { connect };

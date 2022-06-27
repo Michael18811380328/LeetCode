@@ -6,6 +6,20 @@
  *     this.left = this.right = null;
  * }
  */
+
+const runNode = function(node, sum, currentSum) {
+  // 没有节点，直接返回
+  if (!node) {
+    return false;
+  }
+  // 没有子节点，那么是叶子节点
+  if (!node.left && !node.right) {
+    return currentSum + node.val === sum;
+  }
+  // 有子节点
+  return runNode(node.left, sum, currentSum + node.val) || runNode(node.right, sum, currentSum + node.val);
+};
+
 /**
  * @param {TreeNode} root
  * @param {number} sum
@@ -23,19 +37,6 @@ const hasPathSum = function(root, sum) {
   }
   const currentSum = root.val;
   return runNode(root.left, sum, currentSum) || runNode(root.right, sum, currentSum);
-};
-
-const runNode = function(node, sum, currentSum) {
-  // 没有节点，直接返回
-  if (!node) {
-    return false;
-  }
-  // 没有子节点，那么是叶子节点
-  if (!node.left && !node.right) {
-    return currentSum + node.val === sum;
-  }
-  // 有子节点
-  return runNode(node.left, sum, currentSum + node.val) || runNode(node.right, sum, currentSum + node.val);
 };
 
 export { hasPathSum };

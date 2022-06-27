@@ -72,3 +72,5 @@ const toList = function(arr) {
 };
 
 // @lc code=end
+
+export { addTwoNumbers };

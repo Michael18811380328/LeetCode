@@ -33,3 +33,5 @@ const findOcurrences = function(text, first, second) {
   return res;
 };
 // @lc code=end
+
+export { findOcurrences };

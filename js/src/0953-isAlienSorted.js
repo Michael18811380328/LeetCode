@@ -49,3 +49,5 @@ const isAlienSorted = function(words, order) {
   return true;
 };
 // @lc code=end
+
+export { isAlienSorted };

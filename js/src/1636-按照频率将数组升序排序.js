@@ -43,3 +43,4 @@ const frequencySort = function(nums) {
   return res;
 };
 // @lc code=end
+export { frequencySort };

@@ -36,3 +36,5 @@ const hIndex = function(citations) {
 // [11,15] 2
 // [4,4,0,0] 2
 // @lc code=end
+
+export { hIndex };

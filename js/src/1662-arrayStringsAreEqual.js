@@ -11,3 +11,5 @@ const arrayStringsAreEqual = function(word1, word2) {
   if (word1[0][0] !== word2[0][0]) return false;
   return word1.join('') === word2.join('');
 };
+
+export { arrayStringsAreEqual };

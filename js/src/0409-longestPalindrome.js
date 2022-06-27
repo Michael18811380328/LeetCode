@@ -40,3 +40,5 @@ const longestPalindrome = function(s) {
   if (hasMiddle) max++;
   return max;
 };
+
+export { longestPalindrome };

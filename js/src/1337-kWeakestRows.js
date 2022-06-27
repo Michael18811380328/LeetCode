@@ -41,3 +41,5 @@ const kWeakestRows = function(mat, k) {
   return tmp.slice(0, k);
 };
 // @lc code=end
+
+export { kWeakestRows };

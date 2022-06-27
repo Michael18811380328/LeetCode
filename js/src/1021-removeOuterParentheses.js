@@ -59,3 +59,5 @@ const removeOuterParentheses = function(S) {
   }
   return res;
 };
+
+export { removeOuterParentheses };

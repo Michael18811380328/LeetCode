@@ -41,3 +41,5 @@ const dayOfTheWeek = function(day, month, year) {
   return dict[remain];
   // 除以7，计算星期
 };
+
+export { dict };

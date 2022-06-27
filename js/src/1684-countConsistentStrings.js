@@ -25,3 +25,5 @@ const countConsistentStrings = function(allowed, words) {
   }
   return res;
 };
+
+export { countConsistentStrings };

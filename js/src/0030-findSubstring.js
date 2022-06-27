@@ -58,3 +58,5 @@ const findSubstring = function(s, words) {
   }
   return res;
 };
+
+export { findSubstring };

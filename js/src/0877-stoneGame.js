@@ -7,3 +7,5 @@
 const stoneGame = function(piles) {
   return true;
 };
+
+export { stoneGame };

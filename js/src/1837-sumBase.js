@@ -31,3 +31,5 @@ const sumBase = function(n, k) {
   }
   return res;
 };
+
+export { sumBase };

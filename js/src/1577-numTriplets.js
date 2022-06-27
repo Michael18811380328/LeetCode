@@ -70,3 +70,5 @@ const numTriplets = function(nums1, nums2) {
 };
 
 // @lc code=end
+
+export { numTriplets };

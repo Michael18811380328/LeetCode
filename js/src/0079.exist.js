@@ -107,3 +107,5 @@ const exist = function(board, word) {
   return false;
 };
 // @lc code=end
+
+export { exist };

@@ -26,3 +26,5 @@ const prefixesDivBy5 = function(A) {
   return res;
 };
 // @lc code=end
+
+export { prefixesDivBy5 };

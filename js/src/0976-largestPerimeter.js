@@ -31,3 +31,5 @@ const largestPerimeter = function(A) {
   }
   return A.length > 2 ? sum(A[0], A[1], A[2]) : 0;
 };
+
+export { largestPerimeter };

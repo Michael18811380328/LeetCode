@@ -31,3 +31,5 @@ const arrayRankTransform = function(arr) {
   }
   return result;
 };
+
+export { arrayRankTransform };

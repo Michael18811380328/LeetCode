@@ -63,3 +63,5 @@ const getNumber = (s) => {
 };
 
 // @lc code=end
+
+export { calculate };

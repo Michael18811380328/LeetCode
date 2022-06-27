@@ -25,3 +25,5 @@ const isOneBitCharacter = function(bits) {
   return false;
 };
 // @lc code=end
+
+export { isOneBitCharacter };

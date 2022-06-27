@@ -44,7 +44,7 @@ const getIntersectionNode = function(headA, headB) {
 // A 独立长度+ 公共长度 + B独立长度 === B 独立+ 公共 + A独立
 // 如果是不相交链表，那么指针不会相等
 // Your runtime beats 11.38 % of javascript submissions
-const getIntersectionNode = function(headA, headB) {
+const getIntersectionNode2 = function(headA, headB) {
   if (!headA || !headB) {
     return null;
   }
@@ -57,3 +57,5 @@ const getIntersectionNode = function(headA, headB) {
   // 如果两个不想交？那么同时到达null，就返回null
   return p1;
 };
+
+export { getIntersectionNode, getIntersectionNode2 };

@@ -49,3 +49,5 @@ const integerBreak = function(n) {
     return 3 ** a * 2;
   }
 };
+
+export { integerBreak };

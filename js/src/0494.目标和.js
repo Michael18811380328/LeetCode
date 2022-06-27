@@ -32,6 +32,8 @@ const findTargetSumWays = function(nums, target) {
   return total;
 };
 
+export { findTargetSumWays };
+
 // console.log(findTargetSumWays([1,1,1,1,1], 3) === 3);
 // console.log(findTargetSumWays([1], 1) === 1);
 // console.log(findTargetSumWays([0], 0) === 2);

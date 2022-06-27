@@ -37,3 +37,5 @@ const swapPairs = function(head) {
   return changeNode(head);
 };
 // @lc code=end
+
+export { swapPairs };

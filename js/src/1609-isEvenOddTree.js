@@ -93,3 +93,4 @@ const isEvenOddTree = function(root) {
   return true;
 };
 // @lc code=end
+export { isEvenOddTree };

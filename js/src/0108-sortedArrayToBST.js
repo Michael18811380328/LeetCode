@@ -37,3 +37,5 @@ const sortedArrayToBST = function(nums) {
   // 然后把左边全部的元素作为左子树，右边的全部元素作为右子树即可
   return generateNode(0, nums.length - 1);
 };
+
+export { sortedArrayToBST };

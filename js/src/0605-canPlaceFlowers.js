@@ -36,3 +36,5 @@ const canPlaceFlowers = function(flowerbed, n) {
 //     if (n <= 0) return true;
 //   }
 // };
+
+export { canPlaceFlowers };

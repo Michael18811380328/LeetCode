@@ -46,3 +46,5 @@ const calPoints = function(ops) {
   stack.forEach((item) => sum += item);
   return sum;
 };
+
+export { calPoints };

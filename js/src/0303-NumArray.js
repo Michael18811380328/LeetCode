@@ -47,3 +47,5 @@ NumArray.prototype.sumRange = function(i, j) {
  * let param_1 = obj.sumRange(i,j)
  */
 // @lc code=end
+
+export { NumArray };

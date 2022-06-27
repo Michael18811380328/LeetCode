@@ -31,3 +31,5 @@ const findLucky = function(arr) {
   return Math.max(...list);
 };
 // @lc code=end
+
+export { findLucky };

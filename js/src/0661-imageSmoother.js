@@ -65,3 +65,5 @@ const imageSmoother = function(M) {
   }
   return matrix;
 };
+
+export { imageSmoother };

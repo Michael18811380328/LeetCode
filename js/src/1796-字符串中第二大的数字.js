@@ -56,3 +56,4 @@ const secondHighest = function(s) {
   return newNums[1] > -1 ? newNums[1] : -1;
 };
 // @lc code=end
+export { secondHighest };

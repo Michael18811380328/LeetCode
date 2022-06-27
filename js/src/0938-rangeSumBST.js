@@ -40,3 +40,5 @@ const rangeSumBST = function(root, low, high) {
   return sum;
 };
 // @lc code=end
+
+export { rangeSumBST };

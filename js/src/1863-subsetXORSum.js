@@ -85,3 +85,6 @@ const subsetXORSum2 = function(nums) {
   }
   return res;
 };
+
+// 这个算法不合适，需要修改
+export { subsetXORSum1, subsetXORSum2 };

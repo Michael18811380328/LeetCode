@@ -98,3 +98,5 @@ Twitter.prototype.unfollow = function(followerId, followeeId) {
  * obj.unfollow(followerId,followeeId)
  */
 // @lc code=end
+
+export { Twitter };

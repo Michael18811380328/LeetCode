@@ -45,3 +45,4 @@ const mergeInBetween = function(list1, a, b, list2) {
   return list1Head;
 };
 // @lc code=end
+export { mergeInBetween };

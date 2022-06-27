@@ -58,3 +58,5 @@ const numEnclaves = function(A) {
   }
   return res;
 };
+
+export { numEnclaves };

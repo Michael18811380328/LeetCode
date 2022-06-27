@@ -30,3 +30,5 @@ const toGoatLatin = function(S) {
   }
   return arr.join(' ');
 };
+
+export { toGoatLatin };

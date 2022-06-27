@@ -26,3 +26,4 @@ const maxLengthBetweenEqualCharacters = function(s) {
   return max;
 };
 // @lc code=end
+export { maxLengthBetweenEqualCharacters };

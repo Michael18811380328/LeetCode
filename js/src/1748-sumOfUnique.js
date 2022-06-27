@@ -28,3 +28,5 @@ const sumOfUnique = function(nums) {
   }
   return sum;
 };
+
+export { sumOfUnique };

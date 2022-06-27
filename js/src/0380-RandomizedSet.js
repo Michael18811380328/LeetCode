@@ -66,3 +66,5 @@ RandomizedSet.prototype.getRandom = function() {
  * let param_2 = obj.remove(val)
  * let param_3 = obj.getRandom()
  */
+
+export { RandomizedSet };

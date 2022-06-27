@@ -29,3 +29,5 @@ const bstToGst = function(root) {
   runNode(root);
   return root;
 };
+
+export { bstToGst };

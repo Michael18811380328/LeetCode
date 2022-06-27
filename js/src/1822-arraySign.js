@@ -51,3 +51,4 @@ const arraySign2 = function(nums) {
 
 // todo: 先排序，然后判断数组元素的正负号，是否更快？
 // todo: reduce 能否更快？arr.reduce((a, b) => { return a * b }, 1);
+export { arraySign, arraySign2 };

@@ -33,3 +33,5 @@ const heightChecker = function(heights) {
   }
   return res;
 };
+
+export { heightChecker };

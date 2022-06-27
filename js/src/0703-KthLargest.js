@@ -53,3 +53,5 @@ KthLargest.prototype.add = function(val) {
  * let param_1 = obj.add(val)
  */
 // @lc code=end
+
+export { KthLargest };

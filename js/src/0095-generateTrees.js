@@ -54,3 +54,4 @@ const generateTrees = function(n) {
 
 // 官方详细解法：https://leetcode-cn.com/problems/unique-binary-search-trees-ii/solution/bu-tong-de-er-cha-sou-suo-shu-ii-by-leetcode-solut/
 // @lc code=end
+export { generateTrees };

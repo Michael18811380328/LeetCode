@@ -64,3 +64,4 @@ const decrypt = function(code, k) {
 // console.log(decrypt([2,4,9,3], -2).toString() == [12,5,6,13]);
 
 // @lc code=end
+export { decrypt };

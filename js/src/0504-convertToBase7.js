@@ -6,6 +6,14 @@
 // 示例 2:
 // 输入: -7
 // 输出: "-10"
+
+const base7 = function(num) {
+  if (num < 7) return String(num);
+  const remain = num % 7;
+  const tmp = (num - remain) / 7;
+  return base7(tmp) + String(remain);
+};
+
 /**
  * @param {number} num
  * @return {string}
@@ -22,9 +30,4 @@ const convertToBase7 = function(num) {
   // 最后转换成字符串输出
 };
 
-const base7 = function(num) {
-  if (num < 7) return String(num);
-  const remain = num % 7;
-  const tmp = (num - remain) / 7;
-  return base7(tmp) + String(remain);
-};
+export { convertToBase7 };

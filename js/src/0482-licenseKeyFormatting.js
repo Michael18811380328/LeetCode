@@ -29,4 +29,6 @@ const licenseKeyFormatting = function(S, K) {
   return arr.join('-');
 };
 
+export { licenseKeyFormatting };
+
 // '5F3Z-2e-9-w-5F3Z-2e-9-w-5F3Z-2e-9-w-5F3Z-2e-9-w-5F3Z-2e-9-w-5F3Z-2e-9-w-5F3Z-2e-9-w-5F3Z-2e-9-w-5F3Z-2e-9-w-5F3Z-2e-9-w-5F3Z-2e-9-w-5F3Z-2e-9-w-5F3Z-2e-9-w-5F3Z-2e-9-w-5F3Z-2e-9-w-5F3Z-2e-9-w-5F3Z-2e-9-w-5F3Z-2e-9-w-5F3Z-2e-9-w-5F3Z-2e-9-w-5F3Z-2e-9-w-5F3Z-2e-9-w-5F3Z-2e-9-w-5F3Z-2e-9-w-5F3Z-2e-9-w-5F3Z-2e-95F3Z-2e-9-w-5F3Z-2e-9-w-5F3Z-2e-9-w-5F3Z-2e-9-w-5F3Z-2e-9-w-5F3Z-2e-9-w-5F3Z-2e-9-w-5F3Z-2e-9-w-5F3Z-2e-9-w-5F3Z-2e-9-w-5F3Z-2e-95F3Z-2e-9-w-5F3Z-2e-9-w-5F3Z-2e-9-w-5F3Z-2e-9-w-5F3Z-2e-9-w-5F3Z-2e-9-w-5F3Z-2e-9-w-5F3Z-2e-9-w-5F3Z-2e-9-w-5F3Z-2e-9-w-5F3Z-2e-95F3Z-2e-9-w-5F3Z-2e-9-w-5F3Z-2e-9-w-5F3Z-2e-9-w-5F3Z-2e-9-w-5F3Z-2e-9-w-5F3Z-2e-9-w-5F3Z-2e-9-w-5F3Z-2e-9-w-5F3Z-2e-9-w-5F3Z-2e-95F3Z-2e-9-w-5F3Z-2e-9-w-5F3Z-2e-9-w-5F3Z-2e-9-w-5F3Z-2e-9-w-5F3Z-2e-9-w-5F3Z-2e-9-w-5F3Z-2e-9-w-5F3Z-2e-9-w-5F3Z-2e-9-w-5F3Z-2e-95F3Z-2e-9-w-5F3Z-2e-9-w-5F3Z-2e-9-w-5F3Z-2e-9-w-5F3Z-2e-9-w-5F3Z-2e-9-w-5F3Z-2e-9-w-5F3Z-2e-9-w-5F3Z-2e-9-w-5F3Z-2e-9-w-5F3Z-2e-9'

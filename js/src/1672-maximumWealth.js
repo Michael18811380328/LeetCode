@@ -12,3 +12,5 @@ const maximumWealth = function(accounts) {
   }
   return max;
 };
+
+export { maximumWealth };

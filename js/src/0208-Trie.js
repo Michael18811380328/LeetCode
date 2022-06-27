@@ -93,3 +93,5 @@ Trie.prototype.startsWith = function(prefix) {
  * const param_3 = obj.startsWith(prefix)
  */
 // @lc code=end
+
+export { Trie };

@@ -15,3 +15,5 @@ const repeatedNTimes = function(A) {
     }
   }
 };
+
+export { repeatedNTimes };

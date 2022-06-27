@@ -71,3 +71,4 @@ const maxRepeating = function(sequence, word) {
   return max;
 };
 // @lc code=end
+export { maxRepeating };

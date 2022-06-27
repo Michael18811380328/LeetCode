@@ -20,3 +20,5 @@ const squareIsWhite = function(coordinates) {
     return second % 2 !== 0;
   }
 };
+
+export { squareIsWhite };

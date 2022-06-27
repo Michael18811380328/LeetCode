@@ -21,3 +21,5 @@ const numberOfSteps = function(num) {
   return operate;
 };
 // 思路二：转换成二进制，然后计算长度和1的数量
+
+export { numberOfSteps };

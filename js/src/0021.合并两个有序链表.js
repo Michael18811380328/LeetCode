@@ -40,3 +40,5 @@ const mergeTwoLists = function(list1, list2) {
   }
 };
 // @lc code=end
+
+export { mergeTwoLists };

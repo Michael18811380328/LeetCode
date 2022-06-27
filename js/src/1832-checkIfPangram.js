@@ -25,3 +25,5 @@ const checkIfPangram = function(sentence) {
   }
   return timer === 26;
 };
+
+export { checkIfPangram };

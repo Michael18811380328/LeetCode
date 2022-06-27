@@ -26,3 +26,5 @@ const largestNumber = function(nums) {
   }
   return res;
 };
+
+export { largestNumber };

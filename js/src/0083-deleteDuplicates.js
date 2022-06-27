@@ -19,3 +19,5 @@ const deleteDuplicates = function(head) {
   deleteDuplicates(head.next);
   return head;
 };
+
+export { deleteDuplicates };

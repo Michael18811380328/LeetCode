@@ -49,3 +49,5 @@ const subsetsWithDup = function(nums) {
   list.push(nums);
   return list;
 };
+
+export { subsetsWithDup };

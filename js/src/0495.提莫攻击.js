@@ -48,3 +48,4 @@ const findPoisonedDuration = function(timeSeries, duration) {
 // console.log(findPoisonedDuration([1,4], 2) === 4);
 // console.log(findPoisonedDuration([1,2,5,6,7,12,20,22,23,50,200,300,345], 100) === 394);
 // @lc code=end
+export { findPoisonedDuration };

@@ -53,3 +53,4 @@ const areAlmostEqual = function(s1, s2) {
   return false;
 };
 // @lc code=end
+export { areAlmostEqual };

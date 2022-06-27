@@ -57,3 +57,5 @@ const queryString = function(s, n) {
 };
 
 // @lc code=end
+
+export { queryString };

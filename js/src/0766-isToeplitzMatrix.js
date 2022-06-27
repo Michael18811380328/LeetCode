@@ -31,3 +31,5 @@ const isToeplitzMatrix = function(matrix) {
   return true;
 };
 // @lc code=end
+
+export { isToeplitzMatrix };

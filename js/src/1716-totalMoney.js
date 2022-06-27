@@ -24,3 +24,5 @@ const totalMoney = function(n) {
   return sum;
 };
 // 思路二：动态规划(n = 1000 循环次数比较多，同时需要很长的数组)
+
+export { totalMoney };

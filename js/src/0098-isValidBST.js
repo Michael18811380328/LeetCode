@@ -12,7 +12,7 @@
 // 思路1：递归，判断每一个子树是二叉搜索树
 // 56 ms, 在所有 JavaScript 提交中击败了99.13%
 // 需要给定一个辅助函数，判断一个子树的最值(子树的最值在 small-large 之间)，这是解题关键
-var checkTree = function(node, small, large) {
+const checkTree = function(node, small, large) {
   // 如果没有节点，满足
   if (!node) {
     return true;
@@ -72,3 +72,4 @@ const isValidBST2 = function(root) {
 };
 
 // @lc code=end
+export { isValidBST, isValidBST2 };

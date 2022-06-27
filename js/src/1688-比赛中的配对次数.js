@@ -23,3 +23,5 @@ const numberOfMatches = function(n) {
   return num;
 };
 // @lc code=end
+
+export { numberOfMatches };

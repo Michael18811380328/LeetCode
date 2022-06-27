@@ -49,3 +49,5 @@ Cashier.prototype.getBill = function(product, amount) {
  * let param_1 = obj.getBill(product,amount)
  */
 // @lc code=end
+
+export { Cashier };

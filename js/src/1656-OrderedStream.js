@@ -36,3 +36,5 @@ OrderedStream.prototype.insert = function(id, value) {
  * let obj = new OrderedStream(n)
  * let param_1 = obj.insert(id,value)
  */
+
+export { OrderedStream };

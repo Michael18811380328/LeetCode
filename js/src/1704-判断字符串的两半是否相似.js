@@ -29,3 +29,5 @@ const halvesAreAlike = function(s) {
   return left === right;
 };
 // @lc code=end
+
+export { halvesAreAlike };

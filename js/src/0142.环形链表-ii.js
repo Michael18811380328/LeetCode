@@ -31,3 +31,4 @@ const detectCycle = function(head) {
   return null;
 };
 // @lc code=end
+export { detectCycle };

@@ -32,3 +32,5 @@ const minOperations = function(s) {
   }
   return Math.min(num1, num2);
 };
+
+export { minOperations };

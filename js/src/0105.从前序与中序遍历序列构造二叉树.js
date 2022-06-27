@@ -24,7 +24,7 @@
  * Your runtime beats 37.58 % of javascript submissions
  * 基本思路正常（如果传递的是数组的index，每次不需要slice，可以提高时间和空间利用率）
  */
-var buildTree = function(preorder, inorder) {
+const buildTree = function(preorder, inorder) {
   // 如果根节点不存在，直接返回空树节点
   if (!preorder || preorder.length === 0) {
     return new TreeNode(null);
@@ -53,3 +53,4 @@ var buildTree = function(preorder, inorder) {
   return rootNode;
 };
 // @lc code=end
+export { buildTree };

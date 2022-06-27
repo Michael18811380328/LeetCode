@@ -36,3 +36,5 @@ const reverseVowels = function(s) {
   }
   return result;
 };
+
+export { reverseVowels };

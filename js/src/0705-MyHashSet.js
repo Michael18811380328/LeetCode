@@ -39,3 +39,5 @@ MyHashSet.prototype.contains = function(key) {
  * obj.remove(key)
  * let param_3 = obj.contains(key)
  */
+
+export { MyHashSet };

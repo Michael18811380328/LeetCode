@@ -20,3 +20,5 @@ const busyStudent = function(startTime, endTime, queryTime) {
   }
   return res;
 };
+
+export { busyStudent };

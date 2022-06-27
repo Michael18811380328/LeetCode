@@ -38,3 +38,5 @@ const maskPII = function(s) {
   }
 };
 // @lc code=end
+
+export { maskPII };

@@ -30,3 +30,4 @@ const slowestKey = function(releaseTimes, keysPressed) {
   return longStr;
 };
 // @lc code=end
+export { slowestKey };

@@ -64,3 +64,5 @@ const getNumber = (arr, target) => {
 };
 
 // @lc code=end
+
+export { searchMatrix };

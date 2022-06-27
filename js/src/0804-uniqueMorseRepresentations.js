@@ -30,3 +30,5 @@ const uniqueMorseRepresentations = function(words) {
   // console.log(dict);
   return num;
 };
+
+export { uniqueMorseRepresentations };

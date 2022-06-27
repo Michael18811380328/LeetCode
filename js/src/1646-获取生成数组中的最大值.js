@@ -29,3 +29,4 @@ const getMaximumGenerated = function(n) {
   return max;
 };
 // @lc code=end
+export { getMaximumGenerated };

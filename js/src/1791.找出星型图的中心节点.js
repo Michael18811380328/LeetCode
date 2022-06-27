@@ -22,3 +22,4 @@ const findCenter = function(edges) {
   return p2;
 };
 // @lc code=end
+export { findCenter };

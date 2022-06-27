@@ -59,3 +59,4 @@ const sortedListToBST = function(head) {
 // 注意：链表找到元素的索引
 
 // @lc code=end
+export { sortedListToBST };

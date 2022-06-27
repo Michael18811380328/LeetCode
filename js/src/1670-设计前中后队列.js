@@ -79,3 +79,4 @@ FrontMiddleBackQueue.prototype.popBack = function() {
  * let param_6 = obj.popBack()
  */
 // @lc code=end
+export { FrontMiddleBackQueue };

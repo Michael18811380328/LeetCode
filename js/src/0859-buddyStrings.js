@@ -54,3 +54,5 @@ const buddyStrings = function(A, B) {
 
 // 输入： A = "aa", B = "aa"
 // 输出： true
+
+export { buddyStrings };

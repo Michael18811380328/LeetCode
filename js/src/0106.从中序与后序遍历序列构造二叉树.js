@@ -21,7 +21,7 @@
  * 基本思路还是找到根节点和左右子树，然后递归处理
  * Your runtime beats 31.7 % of javascript submissions
  */
-var buildTree = function(inorder, postorder) {
+const buildTree = function(inorder, postorder) {
   // 如果根节点不存在，直接返回空树节点
   if (!postorder || postorder.length === 0) {
     return new TreeNode(null);
@@ -50,3 +50,4 @@ var buildTree = function(inorder, postorder) {
   return rootNode;
 };
 // @lc code=end
+export { buildTree };

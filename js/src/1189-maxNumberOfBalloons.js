@@ -42,3 +42,5 @@ const maxNumberOfBalloons = function(text) {
   }
   return Math.min(b, a, n, Math.floor(o / 2), Math.floor(l / 2));
 };
+
+export { maxNumberOfBalloons };

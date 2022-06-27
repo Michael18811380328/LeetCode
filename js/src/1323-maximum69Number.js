@@ -17,3 +17,5 @@ const maximum69Number = function(num) {
   const res = `${str.slice(0, index)}9${str.slice(index + 1)}`;
   return Number(res);
 };
+
+export { maximum69Number };

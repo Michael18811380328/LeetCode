@@ -90,3 +90,5 @@ const commonChars = function(A) {
   }
   return result;
 };
+
+export { string2dict };

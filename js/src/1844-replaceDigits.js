@@ -18,3 +18,5 @@ const replaceDigits = function(s) {
   }
   return s1;
 };
+
+export { replaceDigits };

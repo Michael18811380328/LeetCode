@@ -38,3 +38,5 @@ const testString = function(s, flag) {
 };
 
 // @lc code=end
+
+export { validPalindrome };

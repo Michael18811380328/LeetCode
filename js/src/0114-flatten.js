@@ -38,3 +38,4 @@ const flatten = function(root) {
   }
 };
 // @lc code=end
+export { flatten };

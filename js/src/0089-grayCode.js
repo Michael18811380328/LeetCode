@@ -36,3 +36,5 @@ const grayCode = function(n) {
   return result;
 };
 // @lc code=end
+
+export { grayCode };

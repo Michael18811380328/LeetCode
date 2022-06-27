@@ -31,3 +31,5 @@ const getNumber = function(bottles, exchanges, last) {
     return bottles + getNumber(newBottles, exchanges, newLast);
   }
 };
+
+export { numWaterBottles };

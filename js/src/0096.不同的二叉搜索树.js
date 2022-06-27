@@ -30,10 +30,12 @@ const numTrees = function(n) {
 // 思路2
 // 难点：数学卡特兰数，详见文档
 // Your runtime beats 51.04 % of javascript submissions
-const numTrees = function(n) {
+const numTrees2 = function(n) {
   let res = 1;
   for (let i = 0; i < n; i++) {
     res = res * 2 * (2 * i + 1) / (i + 2);
   }
   return res;
 };
+
+export { numTrees, numTrees2 };

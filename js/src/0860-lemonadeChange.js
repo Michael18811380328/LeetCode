@@ -56,3 +56,5 @@ const lemonadeChange = function(bills) {
   }
   return true;
 };
+
+export { lemonadeChange };

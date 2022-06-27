@@ -41,7 +41,7 @@ const runNode = function(node, depth, res) {
 
 // 思路二
 // Your runtime beats 57.81 % of javascript submissions
-const levelOrder = function(root) {
+const levelOrder2 = function(root) {
   // 层序遍历：广度优先遍历
   if (!root) return [];
   const tmpArr = [];
@@ -61,3 +61,5 @@ const levelOrder = function(root) {
 };
 
 // @lc code=end
+
+export { levelOrder, levelOrder2 };

@@ -17,3 +17,5 @@ const countGoodRectangles = function(rectangles) {
   });
   return times;
 };
+
+export { countGoodRectangles };

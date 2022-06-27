@@ -17,11 +17,6 @@
  * @return {string}
  */
 // 58.13 % of javascript submissions
-const tree2str = function(t) {
-  if (!t) return '';
-  const res = runNode(t);
-  return res.slice(1, res.length - 1);
-};
 
 const runNode = function(node) {
   if (!node) {
@@ -35,3 +30,11 @@ const runNode = function(node) {
   return `(${node.val}${left !== null ? left : '()'}${right !== null ? right : ''})`;
 };
 // @lc code=end
+
+const tree2str = function(t) {
+  if (!t) return '';
+  const res = runNode(t);
+  return res.slice(1, res.length - 1);
+};
+
+export { tree2str };

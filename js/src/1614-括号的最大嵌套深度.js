@@ -30,3 +30,4 @@ const maxDepth = function(s) {
   return max;
 };
 // @lc code=end
+export { maxDepth };

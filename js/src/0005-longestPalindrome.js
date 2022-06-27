@@ -27,3 +27,5 @@ const longestPalindrome = function(s) {
   }
   return s[0];
 };
+
+export { longestPalindrome };

@@ -19,3 +19,5 @@ const minOperations = function(nums) {
   }
   return sum;
 };
+
+export { minOperations };

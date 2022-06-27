@@ -26,3 +26,5 @@ const getTargetCopy = function(original, cloned, target) {
   };
   return runNode(cloned, target.val);
 };
+
+export { getTargetCopy };

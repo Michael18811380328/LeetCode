@@ -44,3 +44,5 @@ const subdomainVisits = function(cpdomains) {
   }
   return res;
 };
+
+export { subdomainVisits };

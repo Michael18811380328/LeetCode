@@ -41,3 +41,5 @@ const isMonotonic = function(A) {
 };
 
 // 思路二：先数组去重，然后计算长度，这样可以不需要比较重复的部分
+
+export { isMonotonic };

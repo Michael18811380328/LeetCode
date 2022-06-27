@@ -15,3 +15,5 @@ const toLowerCase = function(str) {
   }
   return str;
 };
+
+export { toLowerCase };

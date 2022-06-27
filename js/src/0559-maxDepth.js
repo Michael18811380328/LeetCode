@@ -28,7 +28,7 @@ const getDepth = function(node) {
  * @param {Node} root
  * @return {number}
  */
- const maxDepth = function(root) {
+const maxDepth = function(root) {
   if (!root) return 0;
   return getDepth(root);
 };

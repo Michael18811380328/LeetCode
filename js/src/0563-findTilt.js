@@ -34,7 +34,7 @@ const getSum = function(node, list) {
  * @param {TreeNode} root
  * @return {number}
  */
- const findTilt = function(root) {
+const findTilt = function(root) {
   const list = [];
   getSum(root, list);
   let sum = 0;

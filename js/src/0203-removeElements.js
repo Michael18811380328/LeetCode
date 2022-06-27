@@ -33,3 +33,5 @@ const removeElements = function(head, val) {
   }
   return head;
 };
+
+export { removeElements };

@@ -43,3 +43,5 @@ const countBalls = function(lowLimit, highLimit) {
   }
   return max;
 };
+
+export { countBalls };

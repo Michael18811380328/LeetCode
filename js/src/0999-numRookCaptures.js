@@ -77,3 +77,5 @@ const numRookCaptures = function(board) {
 
 // 更好的算法上，子函数还能优化，看一下怎么实现
 // 如果已知了 ij 那么直接可以把四个子数组拿出来（拿出来也消耗时间）
+
+export { numRookCaptures };

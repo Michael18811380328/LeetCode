@@ -33,3 +33,5 @@ const runNode = function(node, isLeft) {
 
 // 必须是叶子节点
 // @lc code=end
+
+export { umOfLeftLeaves };

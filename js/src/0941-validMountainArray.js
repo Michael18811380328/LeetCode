@@ -29,3 +29,5 @@ const validMountainArray = function(A) {
   }
   return reach;
 };
+
+export { validMountainArray };

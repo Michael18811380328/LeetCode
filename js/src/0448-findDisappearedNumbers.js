@@ -47,3 +47,5 @@ const findDisappearedNumbers = function(nums) {
 
 // 思路二：首先数组去重后排序，然后使用指针保存当前的元素，然后获取缺失的元素
 // 这个思路应该比思路1好一点。
+
+export { findDisappearedNumbers };

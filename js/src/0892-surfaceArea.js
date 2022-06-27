@@ -91,3 +91,5 @@ const surfaceArea = function(grid) {
   }
   return total;
 };
+
+export { surfaceArea };

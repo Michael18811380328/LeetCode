@@ -49,3 +49,5 @@ const simplifyPath = function(path) {
   }
   return res;
 };
+
+export { simplifyPath };

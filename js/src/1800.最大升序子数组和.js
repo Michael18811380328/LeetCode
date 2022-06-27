@@ -31,3 +31,4 @@ const maxAscendingSum = function(nums) {
   return Math.max(tmp, max);
 };
 // @lc code=end
+export { maxAscendingSum };

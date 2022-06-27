@@ -19,3 +19,4 @@ const trimMean = function(arr) {
   return sum / arr.length;
 };
 // @lc code=end
+export { trimMean };

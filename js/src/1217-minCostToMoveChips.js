@@ -27,3 +27,5 @@ const minCostToMoveChips = function(position) {
   }
   return Math.min(odd, even);
 };
+
+export { minCostToMoveChips };

@@ -52,3 +52,5 @@ const runTree = function(node, dict) {
 };
 
 // @lc code=end
+
+export { findMode };

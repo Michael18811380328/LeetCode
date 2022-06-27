@@ -45,3 +45,5 @@ const subsets = function(nums) {
   }
   return list;
 };
+
+export { subsets };
