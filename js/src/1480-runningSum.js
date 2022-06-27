@@ -21,3 +21,5 @@ const runningSum = function(nums) {
   return nums;
 };
 // @lc code=end
+
+export { runningSum };

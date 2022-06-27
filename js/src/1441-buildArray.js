@@ -30,3 +30,5 @@ const buildArray = function(target, n) {
   return res;
 };
 // @lc code=end
+
+export { buildArray };

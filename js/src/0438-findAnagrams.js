@@ -52,3 +52,5 @@ const check = (str, DICT) => {
   return true;
 };
 // @lc code=end
+
+export { findAnagrams };

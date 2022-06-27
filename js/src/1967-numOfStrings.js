@@ -50,3 +50,5 @@ const numOfStrings = function(patterns, word) {
   return result;
 };
 // @lc code=end
+
+export { numOfStrings };

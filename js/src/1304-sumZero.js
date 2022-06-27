@@ -22,3 +22,5 @@ const sumZero = function(n) {
   return arr;
 };
 // @lc code=end
+
+export { sumZero };

@@ -40,3 +40,5 @@ const isPalindrome = function(head) {
 // 优化：把数组变成字符串，减少数组的操作
 
 // @lc code=end
+
+export { isPalindrome };

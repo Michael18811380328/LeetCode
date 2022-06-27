@@ -44,3 +44,5 @@ const findShortestSubArray = function(nums) {
   return minLen;
 };
 // @lc code=end
+
+export { findShortestSubArray };

@@ -67,3 +67,5 @@ const findDuplicates3 = function(nums) {
   return res;
 };
 // @lc code=end
+
+export { findDuplicates };

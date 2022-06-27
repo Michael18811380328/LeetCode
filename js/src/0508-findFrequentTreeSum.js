@@ -57,3 +57,5 @@ const runNode = (node, dict) => {
   return key;
 };
 // @lc code=end
+
+export { findFrequentTreeSum };

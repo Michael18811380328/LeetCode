@@ -77,3 +77,5 @@ const longestWord = function(words) {
 // ["b", "c", "d", "e", "g"]
 
 // @lc code=end
+
+export { longestWord };

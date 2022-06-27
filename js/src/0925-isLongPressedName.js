@@ -34,3 +34,5 @@ const isLongPressedName = function(name, typed) {
   return (pointer === name.length);
 };
 // @lc code=end
+
+export { isLongPressedName };

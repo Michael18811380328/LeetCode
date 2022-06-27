@@ -52,3 +52,5 @@ const countBinarySubstrings = function(s) {
   return res;
 };
 // @lc code=end
+
+export { countBinarySubstrings };

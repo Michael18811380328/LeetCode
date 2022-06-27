@@ -36,3 +36,5 @@ const numEquivDominoPairs = function(dominoes) {
   return res;
 };
 // @lc code=end
+
+export { numEquivDominoPairs };

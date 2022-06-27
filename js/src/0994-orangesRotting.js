@@ -147,3 +147,5 @@ const orangesRotting1 = function(grid) {
   }
   return max;
 };
+
+export { orangesRotting };

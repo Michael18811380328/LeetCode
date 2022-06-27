@@ -36,3 +36,5 @@ const shiftGrid = function(grid, k) {
   return res;
 };
 // @lc code=end
+
+export { shiftGrid };

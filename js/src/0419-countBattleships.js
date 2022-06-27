@@ -44,3 +44,5 @@ const changeBoard = (board, i, j) => {
 };
 // [["X",".","X"],["X",".","X"]]
 // @lc code=end
+
+export { countBattleships };

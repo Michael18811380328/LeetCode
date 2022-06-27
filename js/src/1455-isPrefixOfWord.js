@@ -37,3 +37,5 @@ const isPrefixOfWord = function(sentence, searchWord) {
   return -1;
 };
 // @lc code=end
+
+export { isPrefixOfWord };

@@ -17,3 +17,5 @@ const daysBetweenDates = function(date1, date2) {
   return Math.abs((b.getTime() - a.getTime()) / 1000 / 3600 / 24);
 };
 // @lc code=end
+
+export { daysBetweenDates };

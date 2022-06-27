@@ -35,3 +35,5 @@ const maxProduct = function(nums) {
 // console.log(maxProduct([-2,0,-1]) === 0);
 // console.log(maxProduct([-2,3,-4]) === 24);
 // @lc code=end
+
+export { maxProduct };

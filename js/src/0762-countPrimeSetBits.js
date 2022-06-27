@@ -47,3 +47,5 @@ const getNumber = (num) => {
 };
 
 // @lc code=end
+
+export { countPrimeSetBits };

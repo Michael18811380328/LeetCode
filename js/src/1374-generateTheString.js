@@ -21,3 +21,5 @@ const generateTheString = function(n) {
   return res;
 };
 // @lc code=end
+
+export { generateTheString };

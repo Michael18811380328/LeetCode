@@ -31,3 +31,5 @@ const leastBricks = function(wall) {
   return rowLen - max;
 };
 // @lc code=end
+
+export { leastBricks };

@@ -40,3 +40,5 @@ const projectionArea = function(grid) {
   return (X + Y + Z);
 };
 // @lc code=end
+
+export { projectionArea };

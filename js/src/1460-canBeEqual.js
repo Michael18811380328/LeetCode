@@ -28,3 +28,5 @@ const canBeEqual = function(target, arr) {
   return true;
 };
 // @lc code=end
+
+export { canBeEqual };

@@ -58,3 +58,5 @@ const isOdd = (num) => {
   return num % 2 === 0;
 };
 // @lc code=end
+
+export { sumEvenAfterQueries };

@@ -77,3 +77,5 @@ const reverseOnlyLetters = function(S) {
   return S;
 };
 // @lc code=end
+
+export { reverseOnlyLetters };

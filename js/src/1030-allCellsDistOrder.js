@@ -30,3 +30,5 @@ const allCellsDistOrder = function(R, C, r0, c0) {
   return arr;
 };
 // @lc code=end
+
+export { allCellsDistOrder };

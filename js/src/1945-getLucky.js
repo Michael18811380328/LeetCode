@@ -57,3 +57,5 @@ const getLucky = function(s, k) {
 // 如果数字很大，除法计算有问题，直接解析字符串，不要使用除法
 
 // @lc code=end
+
+export { getLucky };

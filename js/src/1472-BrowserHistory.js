@@ -68,3 +68,5 @@ BrowserHistory.prototype.forward = function(steps) {
  * let param_3 = obj.forward(steps)
  */
 // @lc code=end
+
+export { BrowserHistory };

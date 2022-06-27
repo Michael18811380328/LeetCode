@@ -48,3 +48,5 @@ const groupThePeople = function(groupSizes) {
   return result;
 };
 // @lc code=end
+
+export { groupThePeople };

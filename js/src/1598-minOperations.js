@@ -26,3 +26,5 @@ const minOperations = function(logs) {
   return current;
 };
 // @lc code=end
+
+export { minOperations };

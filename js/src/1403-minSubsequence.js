@@ -30,3 +30,5 @@ const minSubsequence = function(nums) {
   }
 };
 // @lc code=end
+
+export { minSubsequence };

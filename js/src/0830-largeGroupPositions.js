@@ -40,3 +40,5 @@ const largeGroupPositions = function(s) {
   return res;
 };
 // @lc code=end
+
+export { largeGroupPositions };

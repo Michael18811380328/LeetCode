@@ -44,3 +44,5 @@ const canThreePartsEqualSum = function(A) {
   return false;
 };
 // @lc code=end
+
+export { canThreePartsEqualSum };

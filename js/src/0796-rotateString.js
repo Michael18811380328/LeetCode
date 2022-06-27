@@ -39,3 +39,5 @@ const rotateString = function(A, B) {
   return a.indexOf(B) > -1;
 };
 // @lc code=end
+
+export { rotateString };

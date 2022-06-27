@@ -51,3 +51,5 @@ const sumRootToLeaf = function(root) {
 // 错误：newVal = parseInt(Number(newVal), 2);
 // 这个转换过程中出错了
 // @lc code=end
+
+export { sumRootToLeaf };

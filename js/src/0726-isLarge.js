@@ -146,3 +146,5 @@ const countOfAtoms = function(formula) {
 // "(NB3)33"
 
 // @lc code=end
+
+export { isLarge };

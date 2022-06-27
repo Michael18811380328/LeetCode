@@ -24,3 +24,5 @@ const minStartValue = function(nums) {
   return Math.max(1 - min, 1);
 };
 // @lc code=end
+
+export { minStartValue };

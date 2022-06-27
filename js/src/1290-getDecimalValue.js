@@ -29,3 +29,5 @@ const getDecimalValue = function(head) {
 };
 
 // @lc code=end
+
+export { getDecimalValue };

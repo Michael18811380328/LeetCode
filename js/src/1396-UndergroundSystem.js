@@ -70,3 +70,5 @@ UndergroundSystem.prototype.getAverageTime = function(startStation, endStation) 
  * let param_3 = obj.getAverageTime(startStation,endStation)
  */
 // @lc code=end
+
+export { UndergroundSystem };

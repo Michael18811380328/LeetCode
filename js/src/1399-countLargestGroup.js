@@ -52,3 +52,5 @@ const countLargestGroup = function(n) {
   return dict2[max];
 };
 // @lc code=end
+
+export { countLargestGroup };

@@ -33,3 +33,5 @@ const jedge = function(a) {
   return true;
 };
 // @lc code=end
+
+export { getNoZeroIntegers };

@@ -51,3 +51,5 @@ const minimumAbsDifference = function(arr) {
   // 然后设置一个最小值，设置一个存放的数组
 };
 // @lc code=end
+
+export { minimumAbsDifference };

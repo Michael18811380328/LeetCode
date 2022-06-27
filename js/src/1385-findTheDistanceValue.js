@@ -71,3 +71,5 @@ const findTheDistanceValue = function(arr1, arr2, d) {
 
 // 预期是3
 // 现在是0
+
+export { findTheDistanceValue };

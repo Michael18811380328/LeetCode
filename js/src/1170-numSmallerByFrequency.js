@@ -55,3 +55,5 @@ const getNumber = (strs) => {
   return index;
 };
 // @lc code=end
+
+export { numSmallerByFrequency };

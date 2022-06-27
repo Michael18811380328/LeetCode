@@ -30,3 +30,5 @@ const complexNumberMultiply = function(a, b) {
   return `${c1}+${c2}i`;
 };
 // @lc code=end
+
+export { complexNumberMultiply };

@@ -77,3 +77,5 @@ const numSpecial = function(mat) {
   return res;
 };
 // @lc code=end
+
+export { numSpecial };

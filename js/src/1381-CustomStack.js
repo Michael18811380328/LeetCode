@@ -54,3 +54,5 @@ CustomStack.prototype.increment = function(k, val) {
  * obj.increment(k,val)
  */
 // @lc code=end
+
+export { CustomStack };

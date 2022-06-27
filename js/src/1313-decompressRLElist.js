@@ -21,3 +21,5 @@ const decompressRLElist = function(nums) {
   return res;
 };
 // @lc code=end
+
+export { decompressRLElist };

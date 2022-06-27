@@ -64,3 +64,5 @@ const judge = function(str, Dict) {
   return Object.keys(dict).length === 0;
 };
 // @lc code=end
+
+export { shortestCompletingWord };

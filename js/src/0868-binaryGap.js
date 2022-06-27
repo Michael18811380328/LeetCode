@@ -34,3 +34,5 @@ const binaryGap = function(n) {
   return max;
 };
 // @lc code=end
+
+export { binaryGap };

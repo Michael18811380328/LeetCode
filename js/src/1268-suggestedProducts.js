@@ -46,3 +46,5 @@ const suggestedProducts = function(products, searchWord) {
   return result;
 };
 // @lc code=end
+
+export { suggestedProducts };

@@ -23,3 +23,5 @@ const numOfBurgers = function(tomatoSlices, cheeseSlices) {
   return [];
 };
 // @lc code=end
+
+export { numOfBurgers };

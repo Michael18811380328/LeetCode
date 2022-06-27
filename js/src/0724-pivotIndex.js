@@ -22,3 +22,5 @@ const pivotIndex = function(nums) {
   return -1;
 };
 // @lc code=end
+
+export { pivotIndex };

@@ -42,3 +42,5 @@ const addToArrayForm = function(A, K) {
   // 最后再求反
 };
 // @lc code=end
+
+export { addToArrayForm };

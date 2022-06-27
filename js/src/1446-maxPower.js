@@ -30,3 +30,5 @@ const maxPower = function(s) {
   return max;
 };
 // @lc code=end
+
+export { maxPower };

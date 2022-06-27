@@ -27,3 +27,5 @@ const replaceElements = function(arr) {
   return res;
 };
 // @lc code=end
+
+export { replaceElements };

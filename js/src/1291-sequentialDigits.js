@@ -72,3 +72,5 @@ const sequentialDigits = function(low, high) {
 };
 
 // @lc code=end
+
+export { sequentialDigits };

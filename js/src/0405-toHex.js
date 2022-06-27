@@ -75,3 +75,5 @@ const get16plus = (num) => {
 };
 
 // @lc code=end
+
+export { toHex };

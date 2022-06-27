@@ -42,3 +42,5 @@ const reorderSpaces = function(text) {
   return arr.join(midStr) + finalStr;
 };
 // @lc code=end
+
+export { reorderSpaces };

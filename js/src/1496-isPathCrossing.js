@@ -55,3 +55,5 @@ const isPathCrossing = function(path) {
 };
 
 // @lc code=end
+
+export { isPathCrossing };

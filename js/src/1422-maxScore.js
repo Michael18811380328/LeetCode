@@ -38,3 +38,5 @@ const getValue = function(str1, str2) {
   return res;
 };
 // @lc code=end
+
+export { maxScore };

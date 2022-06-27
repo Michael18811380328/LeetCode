@@ -54,3 +54,5 @@ const countTriples = function(n) {
 };
 
 // @lc code=end
+
+export { countTriples };

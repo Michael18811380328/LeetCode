@@ -47,3 +47,5 @@ const finalPrices = function(prices) {
   return res;
 };
 // @lc code=end
+
+export { finalPrices };

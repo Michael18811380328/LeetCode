@@ -23,3 +23,5 @@ const average = function(salary) {
   return sum / (salary.length - 2);
 };
 // @lc code=end
+
+export { average };

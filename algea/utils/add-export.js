@@ -41,6 +41,6 @@ function addExport(path) {
 }
 
 // 这里放需要处理的目录（暂时用绝对路径）
-const initDir = '/Users/';
+const initDir = '/Users/seafile/desktop/code-seafile/LeetCode/js/src';
 
 addExport(initDir);

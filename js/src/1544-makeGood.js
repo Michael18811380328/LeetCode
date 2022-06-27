@@ -30,3 +30,5 @@ const makeGood = function(s) {
   return stack.join('');
 };
 // @lc code=end
+
+export { makeGood };

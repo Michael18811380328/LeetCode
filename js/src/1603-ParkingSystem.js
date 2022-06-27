@@ -55,3 +55,5 @@ ParkingSystem.prototype.addCar = function(carType) {
  * let param_1 = obj.addCar(carType)
  */
 // @lc code=end
+
+export { ParkingSystem };

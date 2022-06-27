@@ -41,3 +41,5 @@ const isRectangleOverlap = function(rec1, rec2) {
 // [8,20,12,20]
 // [14,2,19,11] true
 // @lc code=end
+
+export { isRectangleOverlap };

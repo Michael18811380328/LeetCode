@@ -29,3 +29,5 @@ const threeConsecutiveOdds = function(arr) {
   return false;
 };
 // @lc code=end
+
+export { threeConsecutiveOdds };

@@ -21,3 +21,5 @@ const reverseBits = function(n) {
   return rev >>> 0;
 };
 // @lc code=end
+
+export { reverseBits };

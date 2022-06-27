@@ -112,3 +112,5 @@ MedianFinder.prototype.findMedian = function() {
  * let param_2 = obj.findMedian()
  */
 // @lc code=end
+
+export { len };

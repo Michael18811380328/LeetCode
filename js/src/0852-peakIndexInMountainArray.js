@@ -33,3 +33,5 @@ const peakIndexInMountainArray = function(arr) {
 };
 
 // @lc code=end
+
+export { peakIndexInMountainArray };

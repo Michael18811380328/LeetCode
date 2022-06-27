@@ -40,3 +40,5 @@ const reformat = function(s) {
   return res;
 };
 // @lc code=end
+
+export { reformat };

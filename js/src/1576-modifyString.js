@@ -32,3 +32,5 @@ const modifyString = function(s) {
   return s;
 };
 // @lc code=end
+
+export { modifyString };

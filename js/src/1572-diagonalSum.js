@@ -29,3 +29,5 @@ const diagonalSum = function(mat) {
   return sum;
 };
 // @lc code=end
+
+export { diagonalSum };

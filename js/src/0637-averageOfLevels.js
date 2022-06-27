@@ -50,3 +50,5 @@ const runNode = function(node, depth, matrix) {
 };
 
 // @lc code=end
+
+export { averageOfLevels };

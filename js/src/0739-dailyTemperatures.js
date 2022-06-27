@@ -30,3 +30,5 @@ const dailyTemperatures = function(temperatures) {
   return res;
 };
 // @lc code=end
+
+export { dailyTemperatures };

@@ -45,3 +45,5 @@ const GetImportance = function(employees, id) {
 };
 
 // @lc code=end
+
+export { GetImportance };

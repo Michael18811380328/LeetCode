@@ -76,3 +76,5 @@ const findAndReplacePattern = function(words, pattern) {
 // [[0], [1,2,3]]
 
 // @lc code=end
+
+export { findAndReplacePattern };

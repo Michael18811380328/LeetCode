@@ -30,3 +30,5 @@ const specialArray = function(nums) {
   }
   return -1;
 };
+
+export { specialArray };

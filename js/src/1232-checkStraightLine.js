@@ -35,3 +35,5 @@ const checkStraightLine = function(coordinates) {
   }
 };
 // @lc code=end
+
+export { checkStraightLine };

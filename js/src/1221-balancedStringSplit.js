@@ -27,3 +27,5 @@ const balancedStringSplit = function(s) {
   return times;
 };
 // @lc code=end
+
+export { balancedStringSplit };

@@ -25,3 +25,5 @@ const hasAlternatingBits = function(n) {
   return true;
 };
 // @lc code=end
+
+export { hasAlternatingBits };

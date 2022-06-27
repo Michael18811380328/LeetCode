@@ -36,3 +36,5 @@ const topKFrequent = function(words, k) {
   return arr.slice(0, k).map((item) => item.key);
 };
 // @lc code=end
+
+export { topKFrequent };

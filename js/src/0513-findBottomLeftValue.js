@@ -43,3 +43,5 @@ const runNode = function(node, depth, list) {
 };
 
 // @lc code=end
+
+export { findBottomLeftValue };

@@ -24,3 +24,5 @@ const sortArrayByParity = function(A) {
   return B.concat(C);
 };
 // @lc code=end
+
+export { sortArrayByParity };

@@ -31,3 +31,5 @@ const reformatDate = function(date) {
   return `${year}-${month}-${day}`;
 };
 // @lc code=end
+
+export { reformatDate };

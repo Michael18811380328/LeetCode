@@ -40,3 +40,5 @@ const getType = (log) => {
   }
 };
 // @lc code=end
+
+export { reorderLogFiles };

@@ -49,3 +49,5 @@ const increasingBST = function(root) {
 };
 
 // @lc code=end
+
+export { increasingBST };

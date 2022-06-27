@@ -69,3 +69,5 @@ const removeDuplicates = function(S) {
 };
 
 // @lc code=end
+
+export { removeDuplicates };

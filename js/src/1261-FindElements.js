@@ -56,3 +56,5 @@ FindElements.prototype.find = function(target) {
  * let param_1 = obj.find(target)
  */
 // @lc code=end
+
+export { FindElements };

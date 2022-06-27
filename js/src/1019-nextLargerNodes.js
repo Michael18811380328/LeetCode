@@ -49,3 +49,5 @@ const nextLargerNodes = function(head) {
   return res;
 };
 // @lc code=end
+
+export { nextLargerNodes };

@@ -36,3 +36,5 @@ const luckyNumbers = function(matrix) {
   return res;
 };
 // @lc code=end
+
+export { luckyNumbers };

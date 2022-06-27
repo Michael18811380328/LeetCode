@@ -28,3 +28,5 @@ const minDeletionSize = function(A) {
   return res;
 };
 // @lc code=end
+
+export { minDeletionSize };

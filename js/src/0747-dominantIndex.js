@@ -44,3 +44,5 @@ const dominantIndex = function(nums) {
   }
 };
 // @lc code=end
+
+export { dominantIndex };

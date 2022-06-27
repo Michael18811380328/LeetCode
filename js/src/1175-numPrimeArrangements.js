@@ -45,3 +45,5 @@ const numPrimeArrangements = function(n) {
   return factorial(a, b);
 };
 // @lc code=end
+
+export { numPrimeArrangements };

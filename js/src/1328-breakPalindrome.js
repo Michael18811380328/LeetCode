@@ -39,3 +39,5 @@ const breakPalindrome = function(palindrome) {
   return `${palindrome.slice(0, len - 1)}b`;
 };
 // @lc code=end
+
+export { breakPalindrome };

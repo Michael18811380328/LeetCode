@@ -64,3 +64,5 @@ const nextGreatestLetter = function(letters, target) {
   return letters[mid + 1];
 };
 // @lc code=end
+
+export { nextGreatestLetter };

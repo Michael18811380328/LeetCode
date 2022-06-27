@@ -25,3 +25,5 @@ const createTargetArray = function(nums, index) {
   return target;
 };
 // @lc code=end
+
+export { createTargetArray };

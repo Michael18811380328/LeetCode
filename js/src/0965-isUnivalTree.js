@@ -34,3 +34,5 @@ const isUnivalTree = function(root) {
 };
 
 // @lc code=end
+
+export { isUnivalTree };

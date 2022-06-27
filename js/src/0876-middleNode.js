@@ -42,3 +42,5 @@ const middleNode = function(head) {
   return slow;
 };
 // @lc code=end
+
+export { middleNode };

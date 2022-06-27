@@ -23,3 +23,5 @@ const canMakeArithmeticProgression = function(arr) {
   return true;
 };
 // @lc code=end
+
+export { canMakeArithmeticProgression };

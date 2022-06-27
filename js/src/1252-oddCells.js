@@ -32,3 +32,5 @@ const oddCells = function(n, m, indices) {
   return len1 * m + len2 * n - len1 * len2 * 2;
 };
 // @lc code=end
+
+export { oddCells };

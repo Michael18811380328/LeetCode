@@ -77,3 +77,5 @@ let getCell = (board, i, j) => {
   }
   return result;
 };
+
+export { gameOfLife };

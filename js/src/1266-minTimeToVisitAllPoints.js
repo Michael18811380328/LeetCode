@@ -27,3 +27,5 @@ const getDistance = (a, b) => {
   return max(x, y);
 };
 // @lc code=end
+
+export { minTimeToVisitAllPoints };

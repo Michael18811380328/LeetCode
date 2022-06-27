@@ -42,3 +42,5 @@ const powerfulIntegers = function(x, y, bound) {
 };
 
 // @lc code=end
+
+export { powerfulIntegers };

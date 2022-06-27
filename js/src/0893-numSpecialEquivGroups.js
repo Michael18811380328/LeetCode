@@ -41,3 +41,5 @@ let getKey = (str) => {
 // ["abc","acb","bac","bca","cab","cba"] 这个为什么不对
 // 是否考虑原始数组中完全相同的子串？
 // @lc code=end
+
+export { numSpecialEquivGroups };

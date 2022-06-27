@@ -43,3 +43,5 @@ const findDuplicate = function(paths) {
   return res;
 };
 // @lc code=end
+
+export { findDuplicate };

@@ -38,3 +38,5 @@ const makeFancyString = function(s) {
 };
 
 // @lc code=end
+
+export { makeFancyString };

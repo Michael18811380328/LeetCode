@@ -31,3 +31,5 @@ const stringMatching = function(words) {
   return res;
 };
 // @lc code=end
+
+export { stringMatching };

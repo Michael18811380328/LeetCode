@@ -50,3 +50,5 @@ SubrectangleQueries.prototype.getValue = function(row, col) {
  * let param_2 = obj.getValue(row,col)
  */
 // @lc code=end
+
+export { SubrectangleQueries };

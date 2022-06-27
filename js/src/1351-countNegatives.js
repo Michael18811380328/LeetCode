@@ -42,3 +42,5 @@ const countNegatives = function(grid) {
 
 // 思路3：二分法获取当期行的负数的开始位置
 // @lc code=end
+
+export { countNegatives };

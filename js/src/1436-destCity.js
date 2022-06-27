@@ -31,3 +31,5 @@ const destCity = function(paths) {
   }
 };
 // @lc code=end
+
+export { destCity };

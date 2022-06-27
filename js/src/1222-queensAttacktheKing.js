@@ -64,3 +64,5 @@ const queensAttacktheKing = function(queens, king) {
 // [[1,3],[0,7],[5,1],[2,5],[7,2],[1,2],[6,7],[3,3],[5,5],[1,5],[5,0],[0,4],[4,1],[1,1],[3,2],[2,3],[4,2],[1,0],[6,5],[2,7],[3,1],[4,3],[3,4]]
 // [0,2]
 // @lc code=end
+
+export { queensAttacktheKing };

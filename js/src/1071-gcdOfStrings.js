@@ -32,3 +32,5 @@ const check = function(strs, prefix) {
   return strs === prefix.padEnd(len, prefix);
 };
 // @lc code=end
+
+export { gcdOfStrings };

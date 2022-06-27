@@ -51,3 +51,5 @@ const displayTable = function(orders) {
   resultArr.unshift(menuArr);
   return resultArr;
 };
+
+export { displayTable };

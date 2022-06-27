@@ -80,3 +80,5 @@ const productExceptSelf2 = function(nums) {
   return res;
 };
 // @lc code=end
+
+export { productExceptSelf1 };

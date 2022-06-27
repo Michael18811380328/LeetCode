@@ -102,3 +102,5 @@ const deleteSubFile = (item, folder) => {
 // 这里还有问题，还需要修复
 
 // @lc code=end
+
+export { removeSubfolders };

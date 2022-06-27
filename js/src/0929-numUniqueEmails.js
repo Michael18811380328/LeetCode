@@ -39,3 +39,5 @@ const valid = (email) => {
   return local + domain;
 };
 // @lc code=end
+
+export { numUniqueEmails };

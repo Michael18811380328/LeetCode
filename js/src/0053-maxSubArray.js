@@ -56,3 +56,5 @@ const maxSubArray = function(nums) {
   return Math.max(...maxList);
 };
 // @lc code=end
+
+export { maxSubArray };

@@ -39,3 +39,5 @@ const check = function(a, b) {
 };
 
 // @lc code=end
+
+export { numFriendRequests };

@@ -75,3 +75,5 @@ MyCircularQueue.prototype.isFull = function() {
  * let param_6 = obj.isFull()
  */
 // @lc code=end
+
+export { MyCircularQueue };

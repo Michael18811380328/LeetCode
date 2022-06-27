@@ -39,3 +39,5 @@ const runNode = (node, list) => {
   runNode(node.right, list);
 };
 // @lc code=end
+
+export { minDiffInBST };

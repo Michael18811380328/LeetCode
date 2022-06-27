@@ -36,3 +36,5 @@ const freqAlphabets = function(s) {
   return res;
 };
 // @lc code=end
+
+export { freqAlphabets };

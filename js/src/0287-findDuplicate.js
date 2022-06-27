@@ -24,3 +24,5 @@ const findDuplicate = function(nums) {
   }
 };
 // @lc code=end
+
+export { findDuplicate };

@@ -18,3 +18,5 @@ const kidsWithCandies = function(candies, extraCandies) {
   });
 };
 // @lc code=end
+
+export { kidsWithCandies };

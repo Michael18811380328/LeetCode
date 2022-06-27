@@ -48,3 +48,5 @@ const clumsy = function(n) {
   }
 };
 // @lc code=end
+
+export { clumsy };

@@ -92,3 +92,5 @@ const findLHS = function(nums) {
   return longest;
 };
 // @lc code=end
+
+export { findLHS };

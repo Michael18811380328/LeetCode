@@ -35,3 +35,5 @@ const getSum = function(arr) {
   return arr.reduce((a, b) => a + b, 0);
 };
 // @lc code=end
+
+export { sumOddLengthSubarrays };

@@ -33,3 +33,5 @@ const numberOfLines = function(widths, s) {
   return [res1, res2];
 };
 // @lc code=end
+
+export { numberOfLines };

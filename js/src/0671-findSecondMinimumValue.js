@@ -48,3 +48,5 @@ const runNode = function(node, target) {
   return null;
 };
 // @lc code=end
+
+export { findSecondMinimumValue };

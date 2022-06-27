@@ -28,3 +28,5 @@ const xorOperation = function(n, start) {
   return a1;
 };
 // @lc code=end
+
+export { xorOperation };

@@ -25,3 +25,5 @@ const subtractProductAndSum = function(n) {
   return product - sum;
 };
 // @lc code=end
+
+export { subtractProductAndSum };

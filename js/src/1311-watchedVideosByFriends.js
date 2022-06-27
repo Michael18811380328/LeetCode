@@ -59,3 +59,5 @@ const watchedVideosByFriends = function(watchedVideos, friends, id, level) {
 };
 
 // @lc code=end
+
+export { watchedVideosByFriends };

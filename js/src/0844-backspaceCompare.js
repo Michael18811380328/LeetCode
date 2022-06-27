@@ -50,3 +50,5 @@ const fn = function(str) {
 };
 
 // @lc code=end
+
+export { backspaceCompare };

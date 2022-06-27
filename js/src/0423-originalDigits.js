@@ -52,3 +52,5 @@ const originalDigits = function(s) {
 };
 
 // @lc code=end
+
+export { originalDigits };

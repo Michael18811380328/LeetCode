@@ -62,3 +62,5 @@ const shortestToChar = function(S, C) {
   return res;
 };
 // @lc code=end
+
+export { shortestToChar };

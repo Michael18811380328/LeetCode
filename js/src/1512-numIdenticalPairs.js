@@ -31,3 +31,5 @@ const numIdenticalPairs = function(nums) {
   return res;
 };
 // @lc code=end
+
+export { numIdenticalPairs };

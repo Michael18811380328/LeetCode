@@ -54,3 +54,5 @@ const hasGroupsSizeX = function(deck) {
 
 // [1,1]
 // @lc code=end
+
+export { hasGroupsSizeX };

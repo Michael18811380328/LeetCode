@@ -74,3 +74,5 @@ ThroneInheritance.prototype.getInheritanceOrder = function() {
  * let param_3 = obj.getInheritanceOrder()
  */
 // @lc code=end
+
+export { ThroneInheritance };

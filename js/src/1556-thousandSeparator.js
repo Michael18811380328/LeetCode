@@ -29,3 +29,5 @@ const thousandSeparator = function(n) {
   return arr.join('.');
 };
 // @lc code=end
+
+export { thousandSeparator };

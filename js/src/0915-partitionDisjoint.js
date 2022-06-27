@@ -29,3 +29,5 @@ const partitionDisjoint = function(A) {
 };
 
 // @lc code=end
+
+export { partitionDisjoint };

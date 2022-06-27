@@ -32,3 +32,5 @@ const fairCandySwap = function(A, B) {
   }
 };
 // @lc code=end
+
+export { fairCandySwap };

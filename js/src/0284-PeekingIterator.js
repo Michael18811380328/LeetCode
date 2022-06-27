@@ -79,3 +79,5 @@ PeekingIterator.prototype.hasNext = function() {
  * let param_3 = obj.hasNext()
  */
 // @lc code=end
+
+export { PeekingIterator };

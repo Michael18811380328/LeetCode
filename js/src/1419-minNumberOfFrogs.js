@@ -67,3 +67,5 @@ const minNumberOfFrogs = function(croakOfFrogs) {
   return max;
 };
 // @lc code=end
+
+export { minNumberOfFrogs };

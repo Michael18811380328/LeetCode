@@ -57,3 +57,5 @@ const searchBST = function(root, val) {
   }
 };
 // @lc code=end
+
+export { searchBST };

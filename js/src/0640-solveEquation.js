@@ -118,3 +118,5 @@ const getNumber = (arr) => {
 // }
 
 // @lc code=end
+
+export { solveEquation };

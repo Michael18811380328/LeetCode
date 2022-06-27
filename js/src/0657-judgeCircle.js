@@ -53,3 +53,5 @@ const judgeCircle = function(moves) {
 //   return c === d;
 // };
 // @lc code=end
+
+export { judgeCircle };

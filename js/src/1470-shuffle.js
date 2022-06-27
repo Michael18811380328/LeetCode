@@ -22,3 +22,5 @@ const shuffle = function(nums, n) {
   return res;
 };
 // @lc code=end
+
+export { shuffle };

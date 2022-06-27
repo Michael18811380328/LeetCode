@@ -27,3 +27,5 @@ const maxProduct = function(nums) {
 // 是否有更好的方法？例如先排序，获取最值
 // 然后计算比较好（减少循环的次数）？
 // @lc code=end
+
+export { maxProduct };

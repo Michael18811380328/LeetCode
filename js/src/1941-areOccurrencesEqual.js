@@ -38,3 +38,5 @@ const areOccurrencesEqual = function(s) {
   return true;
 };
 // @lc code=end
+
+export { areOccurrencesEqual };
