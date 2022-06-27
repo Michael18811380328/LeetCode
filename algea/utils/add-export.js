@@ -6,11 +6,9 @@ const fs = require('fs');
 // 预处理：先使用 npm run lint 把函数声明改成 const
 function addExport(path) {
   const files = fs.readdirSync(path);
-  // 判断需要增加空行的文件类型
   const suffixList = ['js', 'ts'];
   const suffix = suffixList.join('|');
   const fileNameReg = new RegExp(suffix, 'g');
-
   for (file of files) {
     if (file[0] === '.' || file === 'node_modules' || file === 'LICENSE' || file === 'site' || file === 'Makefile') {
       continue;
