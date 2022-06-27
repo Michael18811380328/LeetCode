@@ -15,3 +15,5 @@ const buildArray = function(nums) {
   return nums.map((item, i) => nums[nums[i]]);
 };
 // @lc code=end
+
+export { buildArray };

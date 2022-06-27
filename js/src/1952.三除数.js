@@ -26,7 +26,7 @@ const isThree = function(n) {
 // 且 M * M === N, M 本身是一个质数，不能被其他的数字整除
 // 这样直接计算即可，不需要遍历，性能比思路1好
 // Your runtime beats 88.89 % of javascript submissions
-const isThree = function(n) {
+const isThree2 = function(n) {
   // 0 特殊：1是质数，但是1不是三除数
   if (n === 1) {
     return false;
@@ -51,3 +51,5 @@ const isThree = function(n) {
   return isPrime(m);
 };
 // @lc code=end
+
+export { isThree, isThree2 };

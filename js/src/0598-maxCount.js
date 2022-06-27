@@ -65,3 +65,5 @@ const maxCount = function(m, n, ops) {
   }
   return a * b;
 };
+
+export { maxCount };

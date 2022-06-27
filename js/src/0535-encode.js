@@ -31,3 +31,4 @@ const decode = function(shortUrl) {
  * decode(encode(url));
  */
 // @lc code=end
+export { encode, decode };

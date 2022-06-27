@@ -18,3 +18,4 @@ const maxProductDifference = function(nums) {
   return nums[0] * nums[1] - nums[nums.length - 1] * nums[nums.length - 2];
 };
 // @lc code=end
+export { maxProductDifference };

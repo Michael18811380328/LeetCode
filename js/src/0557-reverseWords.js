@@ -16,3 +16,5 @@ const reverseWords = function(s) {
   });
   return arr2.join(' ');
 };
+
+export { reverseWords };

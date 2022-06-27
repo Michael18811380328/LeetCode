@@ -42,7 +42,7 @@ const largestInteger = function(num) {
       resArr[i] = arr2.pop();
     }
   }
-  return parseInt(resArr.join(''));
+  return parseInt(resArr.join(''), 10);
 };
 // @lc code=end
 

@@ -59,3 +59,4 @@ const updateBoard = function(board, click) {
   return board;
 };
 // @lc code=end
+export { updateBoard };

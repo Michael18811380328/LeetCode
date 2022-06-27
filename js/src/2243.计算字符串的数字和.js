@@ -13,7 +13,7 @@
 // 现在算法是按照题目算的，性能不好，能否优化算法？
 // Your runtime beats 24.84 % of javascript submissions
 const digitSum = function(s, k) {
-  let arr = s.split('').map((item) => parseInt(item));
+  let arr = s.split('').map((item) => parseInt(item, 10));
   while (arr.length > k) {
     const newArr = [];
     for (let i = 0; i < arr.length; i += k) {
@@ -23,7 +23,7 @@ const digitSum = function(s, k) {
       }
       newArr.push(sum);
     }
-    arr = newArr.join('').split('').map((item) => parseInt(item));
+    arr = newArr.join('').split('').map((item) => parseInt(item, 10));
   }
   return arr.join('');
 };

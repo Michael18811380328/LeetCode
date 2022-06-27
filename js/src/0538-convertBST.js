@@ -28,3 +28,5 @@ const convertBST = function(root) {
   runNode(root);
   return root;
 };
+
+export { convertBST };

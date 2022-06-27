@@ -26,3 +26,5 @@ const arrayPairSum = function(nums) {
   }
   return sum;
 };
+
+export { arrayPairSum };

@@ -47,3 +47,4 @@ const diameterOfBinaryTree = function(root) {
 // [1, null, 2]
 // [1, null, 2,1,2,3,4,5,null,6,7,8,null,null,19,20,null,null]
 // [1]
+export { diameterOfBinaryTree };

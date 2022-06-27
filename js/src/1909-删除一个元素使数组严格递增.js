@@ -45,3 +45,4 @@ const canBeIncreasing = function(nums) {
 // [100,21,100]
 
 // @lc code=end
+export { canBeIncreasing };

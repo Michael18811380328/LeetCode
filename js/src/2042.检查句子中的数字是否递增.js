@@ -16,10 +16,10 @@ const areNumbersAscending = function(s) {
   let arr = s.split(' ');
   // 2 过滤数组中的字符串，把数字部分转换成数值类型
   arr = arr.filter((item) => {
-    return !isNaN(parseInt(item));
+    return !isNaN(parseInt(item, 10));
   });
   for (let i = 1; i < arr.length; i++) {
-    if (parseInt(arr[i]) <= parseInt(arr[i - 1])) {
+    if (parseInt(arr[i], 10) <= parseInt(arr[i - 1], 10)) {
       return false;
     }
   }

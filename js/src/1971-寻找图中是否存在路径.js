@@ -73,3 +73,4 @@ const validPath = function(n, edges, start, end) {
 };
 
 // @lc code=end
+export { validPath };

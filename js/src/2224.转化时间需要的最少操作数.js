@@ -11,8 +11,8 @@
  * @return {number}
  */
 const convertTime = function(current, correct) {
-  const arr1 = current.split(':').map((item) => parseInt(item));
-  const arr2 = correct.split(':').map((item) => parseInt(item));
+  const arr1 = current.split(':').map((item) => parseInt(item, 10));
+  const arr2 = correct.split(':').map((item) => parseInt(item, 10));
   let res = 0;
   // handle minutes "09:41" "10:34"
   if (arr2[1] < arr1[1]) {

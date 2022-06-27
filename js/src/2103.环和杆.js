@@ -28,7 +28,7 @@ const countPoints = function(rings) {
   }
   for (let i = 0; i < rings.length; i += 2) {
     const key = rings[i];
-    const index = parseInt(rings[i + 1]);
+    const index = parseInt(rings[i + 1], 10);
     poles[index][key] = true;
   }
   let result = 0;
