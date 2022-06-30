@@ -147,4 +147,4 @@ const countOfAtoms = function(formula) {
 
 // @lc code=end
 
-export { isLarge };
+export { countOfAtoms };

@@ -23,7 +23,7 @@ const sumEvenAfterQueries = function(A, queries) {
   });
   // 然后遍历查询对象，改变对象的值
   const res = [];
-  queries.forEach((item, index) => {
+  queries.forEach((item) => {
     const key = String(item[1]);
     const value = item[0];
     const oldValue = Number(dict[key]) + 0;

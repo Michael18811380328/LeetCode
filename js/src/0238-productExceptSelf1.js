@@ -81,4 +81,4 @@ const productExceptSelf2 = function(nums) {
 };
 // @lc code=end
 
-export { productExceptSelf1 };
+export { productExceptSelf1, productExceptSelf2 };

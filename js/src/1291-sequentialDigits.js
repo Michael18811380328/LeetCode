@@ -39,7 +39,7 @@
 
 // 思路3：全部的满足的情况，不超过100个，那么直接进把满足的情况写成一个字典，然后遍历这个区间内的数字，这样也可以
 // Your runtime beats 89.33 % of javascript submissions
-const sequentialDigits = function(low, high) {
+const sequentialDigits1 = function(low, high) {
   const dict = [12, 23, 34, 45, 56, 67, 78, 89, 123, 234, 345, 456, 567, 678, 789, 1234, 2345, 3456, 4567, 5678, 6789, 12345, 23456, 34567, 45678, 56789, 123456, 234567, 345678, 456789, 1234567, 2345678, 3456789, 12345678, 23456789, 123456789];
   const res = [];
   for (let i = 0; i < dict.length; i++) {
@@ -55,7 +55,7 @@ const sequentialDigits = function(low, high) {
 // 10
 // 1000000000
 // Your runtime beats 89.33 % of javascript submissions
-const sequentialDigits = function(low, high) {
+const sequentialDigits2 = function(low, high) {
   const dict = [12, 23, 34, 45, 56, 67, 78, 89, 123, 234, 345, 456, 567, 678, 789, 1234, 2345, 3456, 4567, 5678, 6789, 12345, 23456, 34567, 45678, 56789, 123456, 234567, 345678, 456789, 1234567, 2345678, 3456789, 12345678, 23456789, 123456789];
   let start = -1;
   let end = dict.length;
@@ -73,4 +73,4 @@ const sequentialDigits = function(low, high) {
 
 // @lc code=end
 
-export { sequentialDigits };
+export { sequentialDigits1, sequentialDigits2 };

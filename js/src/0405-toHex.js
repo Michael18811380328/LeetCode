@@ -65,7 +65,7 @@ const get16plus = (num) => {
   for (let i = 0; i < n16.length; i++) {
     let item = map[n16[i]]; // 这个是取补码的结果
     // 然后转换成数字
-    item = isNaN(Number(item)) ? subMap[item] : item;
+    item = Number.isNaN(Number(item)) ? subMap[item] : item;
     res = res * 16 + item;
   }
   // console.log(n16);

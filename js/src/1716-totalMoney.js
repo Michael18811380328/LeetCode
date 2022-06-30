@@ -12,14 +12,14 @@ const totalMoney = function(n) {
   const a = n % 7; // 余数
   const b = (n - a) / 7; // 商
   let sum = 0;
-  sum = sum + b * 28 + (0 + b - 1) * b / 2 * 7; // 商部分求和
+  sum = sum + b * 28 + (((0 + b - 1) * b) / 2) * 7; // 商部分求和
   sum = sum + a * b;
   // let arr = [1,2,3,4,5,6,7];
   // for (let i = 0; i < a; i++) {
   //     sum += arr[i];
   // }
   if (a !== 0) {
-    sum += (1 + a) * a / 2;
+    sum += ((1 + a) * a) / 2;
   }
   return sum;
 };

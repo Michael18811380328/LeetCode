@@ -43,4 +43,4 @@ const largestSumAfterKNegations = function(A, K) {
   }
 };
 
-export { getSum };
+export { getSum, largestSumAfterKNegations };

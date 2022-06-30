@@ -71,7 +71,7 @@ const combinationSum2 = function(candidates, target) {
   const invalidDict = {};
   const validDict = {};
 
-  var backTrack = (tmpList, start, tmpSum) => {
+  const backTrack = (tmpList, start, tmpSum) => {
     // 先验证，tmpList 是否重复？每个元素的使用次数是否大于规定？——应该不需要判断这里，直接给出一个 index 行不行
     // 这里能不能知己去去掉（没有必要再次做了）——但是时间还是不行
     // if (!check(tmpList)) {

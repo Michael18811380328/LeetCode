@@ -49,7 +49,7 @@ const commonChars = function(A) {
   if (len === 0) {
     return [];
   } else if (len === 1) {
-    return A[0], split('');
+    return A[0].split('');
   }
   // 获取最短字符串
   let minIndex = 0;

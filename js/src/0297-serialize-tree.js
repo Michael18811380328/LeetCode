@@ -57,4 +57,4 @@ const deserialize = function(data) {
  * deserialize(serialize(root));
  */
 
-export { serialize };
+export { serialize, deserialize };

@@ -30,7 +30,7 @@ const numEquivDominoPairs = function(dominoes) {
   for (const key in dict) {
     const value = dict[key];
     if (value === 1) continue;
-    const times = value * (value - 1) / 2;
+    const times = (value * (value - 1)) / 2;
     res += times;
   }
   return res;

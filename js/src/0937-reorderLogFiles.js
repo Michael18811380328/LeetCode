@@ -32,7 +32,7 @@ const reorderLogFiles = function(logs) {
 const getType = (log) => {
   const index = log.indexOf(' ');
   const str = log.slice(index).replace(/\s/g, '');
-  if (isNaN(Number(str))) {
+  if (Number.isNaN(Number(str))) {
     const res = log.slice(index);
     return res;
   } else {

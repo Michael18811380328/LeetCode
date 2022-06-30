@@ -39,7 +39,7 @@ const removeOuterParentheses = function(S) {
 
 // 2、优化后，减少循环中数组的操作，只进行一次字符串循环
 // 68 ms, 在所有 JavaScript 提交中击败了94.66%
-const removeOuterParentheses = function(S) {
+const removeOuterParentheses2 = function(S) {
   let start = 0; // 记录字符串开始的位置
   let timer = 0; // 记录左括号的个数
   let res = ''; // 存储临时的结果
@@ -60,4 +60,4 @@ const removeOuterParentheses = function(S) {
   return res;
 };
 
-export { removeOuterParentheses };
+export { removeOuterParentheses, removeOuterParentheses2 };

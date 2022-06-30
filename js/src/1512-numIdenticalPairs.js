@@ -24,7 +24,7 @@ const numIdenticalPairs = function(nums) {
   for (const key in dict) {
     const value = dict[key];
     if (value > 1) {
-      const tmp = value * (value - 1) / 2;
+      const tmp = (value * (value - 1)) / 2;
       res += tmp;
     }
   }

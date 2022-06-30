@@ -21,7 +21,7 @@ const reformat = function(s) {
   const arr2 = [];
   for (let i = 0; i < s.length; i++) {
     const item = s[i];
-    if (isNaN(Number(item))) {
+    if (Number.isNaN(Number(item))) {
       arr1.push(item);
     } else {
       arr2.push(item);

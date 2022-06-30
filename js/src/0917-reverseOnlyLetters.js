@@ -47,7 +47,7 @@ const reverseOnlyLetters = function(S) {
 // 方法二：改进版本
 // 116/116 cases passed (88 ms)
 // Your runtime beats 42.19 % of javascript submissions
-const reverseOnlyLetters = function(S) {
+const reverseOnlyLetters2 = function(S) {
   const isLetter = (a) => {
     const index = a.charCodeAt(0);
     return (index >= 65 && index <= 90) || (index <= 122 && index >= 97);
@@ -78,4 +78,4 @@ const reverseOnlyLetters = function(S) {
 };
 // @lc code=end
 
-export { reverseOnlyLetters };
+export { reverseOnlyLetters, reverseOnlyLetters2 };

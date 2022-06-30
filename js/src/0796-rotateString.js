@@ -30,7 +30,7 @@ const rotateString = function(A, B) {
 // 84 ms
 // , 在所有 JavaScript 提交中击败了
 // 48.48%
-const rotateString = function(A, B) {
+const rotateString2 = function(A, B) {
   if (A === B) return true;
   const aLen = A.length;
   const bLen = B.length;
@@ -40,4 +40,4 @@ const rotateString = function(A, B) {
 };
 // @lc code=end
 
-export { rotateString };
+export { rotateString, rotateString2 };

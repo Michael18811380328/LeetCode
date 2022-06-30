@@ -90,4 +90,4 @@ const tictactoe = function(moves) {
 
 // @lc code=end
 
-export { isThreeLine };
+export { isThreeLine, tictactoe };

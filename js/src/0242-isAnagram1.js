@@ -51,4 +51,4 @@ const isAnagram2 = function(s, t) {
 
 // @lc code=end
 
-export { isAnagram1 };
+export { isAnagram1, isAnagram2 };
