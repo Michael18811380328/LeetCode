@@ -1,3 +1,5 @@
-function stoneGame(piles: number[]): boolean {
+function stoneGame(): boolean {
   return true;
 }
+
+export {stoneGame};

@@ -15,3 +15,5 @@ function maximumUnits(boxTypes: number[][], truckSize: number): number {
   }
   return sum;
 }
+
+export {maximumUnits};

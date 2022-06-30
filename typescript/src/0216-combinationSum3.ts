@@ -1,7 +1,7 @@
 function combinationSum3(k: number, n: number): number[][] {
   const list: any = [];
   const tmp: any = [];
-  var backTrack = function (tmp: number[], list: number[]): any {
+  const backTrack = function (tmp: number[], list: number[]): any {
     if (tmp.length > k) {
       return;
     }
@@ -23,3 +23,5 @@ function combinationSum3(k: number, n: number): number[][] {
   backTrack(tmp, list);
   return list;
 }
+
+export {combinationSum3};

@@ -1,7 +1,7 @@
-var solution = function(isBadVersion: any) {
-  return function(n: number): number {
+function solution(isBadVersion: any) {
+  return function (n: number): number {
     if (n === 1) return n;
-    let start: number = 0;
+    let start = 0;
     let end: number = n;
     let middle: number = Math.ceil((start + end) / 2);
     while (start < end - 1) {
@@ -14,4 +14,6 @@ var solution = function(isBadVersion: any) {
     }
     return middle;
   };
-};
+}
+
+export {solution};

@@ -3,7 +3,7 @@ import TreeNode from './treeNode';
 // 196 ms, 在所有 TypeScript 提交中击败了50.00%
 function goodNodes(root: TreeNode | null): number {
   let goodNumber = 0;
-  var runNode = (node: TreeNode | null, max: number) => {
+  const runNode = (node: TreeNode | null, max: number) => {
     if (!node) return;
     const val: number = node.val;
     if (val >= max) {
@@ -16,3 +16,5 @@ function goodNodes(root: TreeNode | null): number {
   runNode(root, root.val);
   return goodNumber;
 }
+
+export {goodNodes};

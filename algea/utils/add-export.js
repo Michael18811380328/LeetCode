@@ -40,7 +40,44 @@ function addExport(path) {
   }
 }
 
-// 这里放需要处理的目录（暂时用绝对路径）
-const initDir = '/Users/seafile/desktop/code-seafile/LeetCode/js/src';
+function addExportTs(path) {
+  const files = fs.readdirSync(path);
+  const suffixList = ['js', 'ts'];
+  const suffix = suffixList.join('|');
+  const fileNameReg = new RegExp(suffix, 'g');
+  for (file of files) {
+    if (file[0] === '.' || file === 'node_modules' || file === 'LICENSE' || file === 'site' || file === 'Makefile') {
+      continue;
+    }
+    if (file.indexOf('.') === -1) {
+      addExport(path + '/' + file);
+    }
+    if (file.toLowerCase().match(fileNameReg) !== null) {
+      var currentPath = encodeURI(path + '/' + file);
+      var checkDir = fs.existsSync(currentPath);
+      // 中文目录无法识别（需要把中文路径改成英文路径）
+      if (checkDir === false) {
+        continue;
+      }
+      var data = fs.readFileSync(currentPath, 'utf-8');
+      // 这里判断TS文件内部是否结尾输入，如果没有输出，增加一个输入和换行
+      if (!data.includes('export')) {
+        // 默认第一个定义 function 的函数需要输出（首先使用 npm run lint 把 var 转换成 const）
+        let function_index = data.indexOf('function ');
+        let first_space_index = data.indexOf(' ', function_index);
+        let first_left_index = data.indexOf('(', first_space_index + 1);
+        const fn_name = data.slice(first_space_index + 1, first_left_index);
+        fs.appendFile(currentPath, `\nexport {${fn_name}};\n`, err => function () {
+          console.log(err);
+        });
+      }
+    }
+  }
+}
 
-addExport(initDir);
+// 这里放需要处理的目录（暂时用绝对路径）
+const jsDir = '/Users/seafile/desktop/code-seafile/LeetCode/js/src';
+const tsDir = '/Users/seafile/desktop/code-seafile/LeetCode/typescript/src';
+
+addExport(jsDir);
+addExportTs(tsDir);

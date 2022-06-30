@@ -5,7 +5,7 @@ function isPrefixString(s: string, words: string[]): boolean {
   if (res.length < sLen) {
     return false;
   }
-  let tmp: string = '';
+  let tmp = '';
   let i: number;
   for (i = 0; i < words.length; i++) {
     const item: string = words[i];
@@ -19,3 +19,5 @@ function isPrefixString(s: string, words: string[]): boolean {
   }
   return false;
 }
+
+export {isPrefixString};

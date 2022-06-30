@@ -12,11 +12,11 @@
 
 // 本地需要声明这个类，leetcode 在线测试不需要这个类
 class ListNode {
-  val: number
-  next: ListNode | null
+  val: number;
+  next: ListNode | null;
   constructor(val?: number, next?: ListNode | null) {
-    this.val = (val === undefined ? 0 : val)
-    this.next =(next === undefined ? null : next)
+    this.val = val === undefined ? 0 : val;
+    this.next = next === undefined ? null : next;
   }
 }
 
@@ -37,7 +37,10 @@ function handleTen(node: ListNode | null): null {
 }
 
 // 132 ms, 在所有 TypeScript 提交中击败了30.75%
-function addTwoNumbers(l1: ListNode | null, l2: ListNode | null): ListNode | null {
+function addTwoNumbers(
+  l1: ListNode | null,
+  l2: ListNode | null
+): ListNode | null {
   if (!l1 && !l2) {
     return null;
   }
@@ -49,7 +52,7 @@ function addTwoNumbers(l1: ListNode | null, l2: ListNode | null): ListNode | nul
     handleTen(l1);
     return l1;
   }
-  let value:number = l1.val + l2.val;
+  let value: number = l1.val + l2.val;
   if (value > 9) {
     if (l1.next) {
       l1.next.val++;
@@ -58,7 +61,9 @@ function addTwoNumbers(l1: ListNode | null, l2: ListNode | null): ListNode | nul
     }
     value -= 10;
   }
-  const result:ListNode = new ListNode(value);
+  const result: ListNode = new ListNode(value);
   result.next = addTwoNumbers(l1.next, l2.next);
   return result;
-};
+}
+
+export {handleTen, addTwoNumbers};

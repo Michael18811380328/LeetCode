@@ -24,3 +24,5 @@ function binaryTreePaths(root: TreeNode | null): string[] {
   getValue(root, '');
   return result;
 }
+
+export {binaryTreePaths};

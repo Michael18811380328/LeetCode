@@ -23,3 +23,5 @@ function searchRange(nums: number[], target: number): number[] {
   const res: number[] = [start, end];
   return res;
 }
+
+export {searchRange};

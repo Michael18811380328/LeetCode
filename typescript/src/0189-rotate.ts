@@ -4,11 +4,13 @@
  * 108 ms, 在所有 TypeScript 提交中击败了87.08%
  */
 function rotate(nums: number[], k: number): void {
-  const len:number = nums.length;
+  const len: number = nums.length;
   if (len === 1 || k === 0) {
     return;
   }
-  const times:number = k % len;
-  let tailArray: number[] = nums.splice(-times, times);
+  const times: number = k % len;
+  const tailArray: number[] = nums.splice(-times, times);
   nums.unshift(...tailArray);
-};
+}
+
+export {rotate};

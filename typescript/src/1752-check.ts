@@ -4,11 +4,11 @@ function check(nums: number[]): boolean {
   if (len < 3) {
     return true;
   }
-  let add: number = 0;
+  let add = 0;
   if (nums[len - 1] > nums[0]) {
     add++;
   }
-  for (let i: number = 0; i < len - 1; i++) {
+  for (let i = 0; i < len - 1; i++) {
     if (nums[i] > nums[i + 1]) {
       add++;
     }

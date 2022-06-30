@@ -16,3 +16,5 @@ function largestNumber(nums: number[]): string {
   }
   return res;
 }
+
+export {largestNumber};

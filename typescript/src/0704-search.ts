@@ -3,7 +3,7 @@ function search(nums: number[], target: number): number {
   if (len === 0 || nums[0] > target || nums[len - 1] < target) {
     return -1;
   }
-  let start: number = 0;
+  let start = 0;
   let end: number = len - 1;
   if (nums[start] === target) {
     return 0;
