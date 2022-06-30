@@ -25,4 +25,22 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: ${{ matrix.node-version }}
-    - run: chmod 755 test.sh && ./test.sh
+    - run: |
+        cd js
+        echo "javascript test"
+        npm install
+        npm run lint
+        npm run test
+
+        cd ../typescript
+        echo "typescript test"
+        npm install
+        npm run lint
+        npm run test-ts
+
+        cd ../python
+        echo "python test"
+        pip install pytest
+        pytest -q
+    
+        # chmod 755 test.sh && ./test.sh
