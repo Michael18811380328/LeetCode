@@ -5,10 +5,10 @@ function checkZeroOnes(s: string): boolean {
     return s === '1';
   }
   let current: string = s[0];
-  let currLen: number = 1;
-  let max1: number = 0;
-  let max2: number = 0;
-  for (let i: number = 1; i < len; i++) {
+  let currLen = 1;
+  let max1 = 0;
+  let max2 = 0;
+  for (let i = 1; i < len; i++) {
     if (s[i] === current) {
       currLen++;
     } else {
@@ -36,4 +36,6 @@ function checkZeroOnes(s: string): boolean {
     }
   }
   return max1 > max2;
-};
+}
+
+export {checkZeroOnes};

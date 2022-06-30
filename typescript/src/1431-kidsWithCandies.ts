@@ -4,3 +4,5 @@ function kidsWithCandies(candies: number[], extraCandies: number): boolean[] {
     return max - item <= extraCandies;
   });
 }
+
+export {kidsWithCandies};

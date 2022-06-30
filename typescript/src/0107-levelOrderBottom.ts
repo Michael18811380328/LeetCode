@@ -26,3 +26,5 @@ function levelOrderBottom(root: TreeNode | null): number[][] {
   result.reverse();
   return result;
 }
+
+export {levelOrderBottom};

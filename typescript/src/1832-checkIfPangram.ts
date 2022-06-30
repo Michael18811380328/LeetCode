@@ -4,11 +4,11 @@ function checkIfPangram(sentence: string): boolean {
   if (len < 26) {
     return false;
   }
-  let dict:object = {};
-  let timer: number = 0;
+  const dict: object = {};
+  let timer = 0;
   // 然后遍历句子，使用一个对象存储，最后看键的长度是多少
-  for (let i: number = 0; i < len; i++) {
-    let key: string = sentence[i];
+  for (let i = 0; i < len; i++) {
+    const key: string = sentence[i];
     if (!dict[key]) {
       dict[key] = true;
       timer++;
@@ -18,4 +18,6 @@ function checkIfPangram(sentence: string): boolean {
     }
   }
   return timer === 26;
-};
+}
+
+export {checkIfPangram};

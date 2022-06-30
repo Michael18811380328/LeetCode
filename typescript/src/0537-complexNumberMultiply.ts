@@ -9,3 +9,5 @@ function complexNumberMultiply(a: string, b: string): string {
   const c2: number = a2 * b1 + a1 * b2;
   return `${c1}+${c2}i`;
 }
+
+export {complexNumberMultiply};

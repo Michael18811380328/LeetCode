@@ -8,7 +8,9 @@ function canComplete(leftArr: number[]): number {
   sum = 0;
   for (let i = 0; i < len; i++) {
     const tmp: number[] = [];
-    const tmpArr: number[] = tmp.concat(leftArr.slice(i, len)).concat(leftArr.slice(0, i));
+    const tmpArr: number[] = tmp
+      .concat(leftArr.slice(i, len))
+      .concat(leftArr.slice(0, i));
     for (let j = 0; j < len; j++) {
       sum += tmpArr[j];
       if (sum < 0) {

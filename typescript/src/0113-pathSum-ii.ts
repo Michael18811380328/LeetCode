@@ -5,7 +5,7 @@ import TreeNode from './treeNode';
 function pathSum(root: TreeNode | null, targetSum: number): number[][] {
   const list: number[][] = [];
   const tmp: number[] = [];
-  var runNode = (
+  const runNode = (
     node: TreeNode | null,
     tmp: number[],
     lastSum: number
@@ -24,3 +24,5 @@ function pathSum(root: TreeNode | null, targetSum: number): number[][] {
   runNode(root, tmp, 0);
   return list;
 }
+
+export {pathSum};

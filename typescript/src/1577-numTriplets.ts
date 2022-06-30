@@ -33,11 +33,11 @@
 
 // 思路二：两层循环
 function numTriplets(nums1: number[], nums2: number[]): number {
-  let foo = (arr1: number[], arr2: number[]): number => {
-    let sum: number = 0;
+  const foo = (arr1: number[], arr2: number[]): number => {
+    let sum = 0;
     // 获取字典和出现的个数(可能有重复)
     const arr3: number[] = arr2.map(item => Math.pow(item, 2));
-    let dict: any = {};
+    const dict: any = {};
     arr3.forEach(ele => {
       if (dict[ele]) {
         dict[ele]++;
@@ -46,7 +46,7 @@ function numTriplets(nums1: number[], nums2: number[]): number {
       }
     });
     const len: number = arr1.length;
-    for (let i: number = 0; i < len; i++) {
+    for (let i = 0; i < len; i++) {
       for (let j: number = i + 1; j < len; j++) {
         const curr: number = arr1[i] * arr1[j];
         if (dict[curr]) {
@@ -58,3 +58,5 @@ function numTriplets(nums1: number[], nums2: number[]): number {
   };
   return foo(nums1, nums2) + foo(nums2, nums1);
 }
+
+export {numTriplets};

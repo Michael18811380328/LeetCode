@@ -6,39 +6,39 @@
 // 356 ms, 在所有 TypeScript 提交中击败了68.28%
 // 一部分代码没有完全类型验证，需要后续修改
 function exist(board: string[][], word: string): boolean {
-  let wordDict = {};
-  for (let i:number = 0; i < word.length; i++) {
+  const wordDict = {};
+  for (let i = 0; i < word.length; i++) {
     if (wordDict[word[i]]) {
       wordDict[word[i]] = wordDict[word[i]] + 1;
     } else {
       wordDict[word[i]] = 1;
     }
   }
-  let boardPosition = {};
-  for (let i:number = 0; i < board.length; i++) {
-    for (let j:number = 0; j < board[0].length; j++) {
-      let curr = board[i][j];
+  const boardPosition = {};
+  for (let i = 0; i < board.length; i++) {
+    for (let j = 0; j < board[0].length; j++) {
+      const curr = board[i][j];
       if (!boardPosition[curr]) {
         boardPosition[curr] = [];
       }
       boardPosition[curr].push([i, j]);
     }
   }
-  for (let key in wordDict) {
-    let num = wordDict[key];
+  for (const key in wordDict) {
+    const num = wordDict[key];
     if (!boardPosition[key] || boardPosition[key].length < num) {
       return false;
     }
-  }  
-  let result: string[][] = [];
-  let tmp: string[][] = [];
+  }
+  const result: string[][] = [];
+  const tmp: string[][] = [];
   /**
    * 辅助函数 判断两个坐标是否相邻
    * @param a 一个点的坐标
    * @param b 另一个点的坐标
    * @returns 是否相邻
    */
-  let checkArround = (a:any, b:any): boolean => {
+  const checkArround = (a: any, b: any): boolean => {
     if (a[0] === b[0] && (a[1] === b[1] - 1 || a[1] === b[1] + 1)) {
       return false;
     }
@@ -46,14 +46,14 @@ function exist(board: string[][], word: string): boolean {
       return false;
     }
     return true;
-  }
+  };
   /**
    * 回溯函数
    * @param index 下一个遍历的字母的索引
-   * @param tmp 临时数组，存放已经遍历过的点 
-   * @returns 
+   * @param tmp 临时数组，存放已经遍历过的点
+   * @returns
    */
-  let backtract = (index: number, tmp: any): boolean => {
+  const backtract = (index: number, tmp: any): boolean => {
     if (index > word.length - 1) {
       return false;
     }
@@ -63,9 +63,9 @@ function exist(board: string[][], word: string): boolean {
     }
     if (index < word.length - 1) {
       // 继续回溯
-      let newIndex = index + 1;
-      let key = word[newIndex];
-      let valueArr = boardPosition[key];
+      const newIndex = index + 1;
+      const key = word[newIndex];
+      const valueArr = boardPosition[key];
       for (let i = 0; i < valueArr.length; i++) {
         if (tmp.includes(valueArr[i])) {
           continue;
@@ -74,7 +74,7 @@ function exist(board: string[][], word: string): boolean {
           continue;
         }
         tmp.push(valueArr[i]);
-        let res = backtract(newIndex, tmp);
+        const res = backtract(newIndex, tmp);
         if (res) {
           return true;
         }
@@ -82,16 +82,18 @@ function exist(board: string[][], word: string): boolean {
       }
     }
     return false;
-  }
+  };
 
-  let valueArr = boardPosition[word[0]];
-  for (let i:number = 0; i < valueArr.length; i++) {
+  const valueArr = boardPosition[word[0]];
+  for (let i = 0; i < valueArr.length; i++) {
     tmp.push(valueArr[i]);
-    let res = backtract(0, tmp);
+    const res = backtract(0, tmp);
     if (res) {
       return true;
     }
     tmp.pop();
   }
   return false;
-};
+}
+
+export {exist};

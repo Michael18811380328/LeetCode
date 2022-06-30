@@ -1,5 +1,5 @@
 function searchInsert(nums: number[], target: number): number {
-  let index: number = nums.indexOf(target);
+  const index: number = nums.indexOf(target);
   if (index > -1) {
     return index;
   }
@@ -10,10 +10,10 @@ function searchInsert(nums: number[], target: number): number {
   if (target > nums[len]) {
     return len + 1;
   }
-  let min: number = 0;
+  let min = 0;
   let max: number = len;
   while (max > min) {
-    let middle: number = Math.ceil((max + min) / 2);
+    const middle: number = Math.ceil((max + min) / 2);
     if (nums[middle] > target) {
       if (middle === max) {
         return middle;
@@ -24,4 +24,6 @@ function searchInsert(nums: number[], target: number): number {
     }
   }
   return 0;
-};
+}
+
+export {searchInsert};

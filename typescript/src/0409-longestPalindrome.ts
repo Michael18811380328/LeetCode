@@ -7,9 +7,9 @@ function longestPalindrome(s: string): number {
   }
   // 104 ms, 在所有 TypeScript 提交中击败了47.83%
   // 获取字符出现的次数
-  let dict:object = [];
-  for (let i: number = 0; i < len; i++) {
-    let key: string = s[i];
+  const dict: object = [];
+  for (let i = 0; i < len; i++) {
+    const key: string = s[i];
     if (!dict[key]) {
       dict[key] = 1;
     } else {
@@ -17,21 +17,21 @@ function longestPalindrome(s: string): number {
     }
   }
   // 计算回文串长度
-  let max: number = 0;
-  let hasMiddle:boolean = false;
+  let max = 0;
+  let hasMiddle = false;
   let key: string;
   for (key in dict) {
-    let times: number = dict[key];
+    const times: number = dict[key];
     if (times % 2 === 0) {
       max += times;
-    } else  {
-      max += (times - 1);
+    } else {
+      max += times - 1;
       hasMiddle = true;
     }
   }
   // 如果中间有值，增加一个长度
   if (hasMiddle) max++;
   return max;
-};
+}
 
 export {longestPalindrome};
