@@ -32,7 +32,7 @@ jobs:
         npm run lint
         npm run test
 
-        cd ./typescript
+        cd ../typescript
         echo "typescript test"
         npm install
         npm run lint
