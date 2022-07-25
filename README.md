@@ -2,7 +2,9 @@
 
 ## 简介
 
-乐扣算法刷题，网站链接 https://leetcode-cn.com。
+乐扣算法刷题，网站链接 https://leetcode-cn.com
+
+个人刷题记录 https://leetcode.cn/u/michael-an/
 
 注意：学习目的不是独创算法，而是学会已有的算法，掌握标准算法。所以每一个题目要看最佳的算法，然后学会这个算法，并不是随便解答出来。
 
