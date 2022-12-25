@@ -3,7 +3,7 @@
  * @return {number}
  */
 // 两个思路
-// 1、枚举法，直接遍历这个数字，性能较差(963153657 会超时)
+// 1、枚举法，直接遍历这个数字，性能差(963153657 会超时)
 // var monotoneIncreasingDigits = function(n) {
 //     if (n < 10) return n;
 //     // 辅助函数：判断一个数字是否单调递增的
@@ -26,10 +26,7 @@
 // };
 
 // 2、贪心算法：如果某一个数字满足，那么返回真；如果不满足，从前向后遍历数字，然后把相差的直接变成9，然后再测试，这样可以减少循环次数
-// 这个可以做出来，但是性能还可以提升
-// 同一个代码，在不同时间提交，执行时间差异较大，所以还是从代码角度分析时间复杂度，这个结果仅供参考
-// 92 ms, 在所有 JavaScript 提交中击败了5.25%
-// 52 ms, 在所有 JavaScript 提交中击败了96.79%
+// 52 ms, 在所有 JavaScript 提交中击败了96.79%（时间仅供参考）
 const monotoneIncreasingDigits = function(n) {
   if (n < 10) return n;
   // 辅助函数：判断一个数字是否单调递增的
@@ -62,14 +59,9 @@ const monotoneIncreasingDigits = function(n) {
   };
 
   while (!check(n)) {
-    // 重新计算 n
     n = calculateNum(n);
   }
   return n;
 };
 
-// console.log(monotoneIncreasingDigits(10), 9);
-// console.log(monotoneIncreasingDigits(1234), 1234);
-// console.log(monotoneIncreasingDigits(332), 299);
-// console.log(monotoneIncreasingDigits(963153657), 299);
 export { monotoneIncreasingDigits };
