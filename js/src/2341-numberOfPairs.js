@@ -1,6 +1,7 @@
 /**
  * @param {number[]} nums
  * @return {number[]}
+ * 判断一个数组中有几个数对，有几个单独的数
  */
 const numberOfPairs = function(nums) {
   const dict = {};

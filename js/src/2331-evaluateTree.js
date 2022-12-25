@@ -1,11 +1,6 @@
-/*
- * @lc app=leetcode.cn id=2331 lang=javascript
- *
- * [2331] 计算布尔二叉树的值
- */
-
-// @lc code=start
 /**
+ * @lc app=leetcode.cn id=2331 lang=javascript
+ * [2331] 计算布尔二叉树的值
  * Definition for a binary tree node.
  * function TreeNode(val, left, right) {
  *     this.val = (val===undefined ? 0 : val)
@@ -20,7 +15,6 @@
  */
 const evaluateTree = function(root) {
   // 0 false,  1 true,  2 OR,  3 AND
-  // 递归树节点即可
   if (!root) {
     return false;
   }
@@ -34,5 +28,5 @@ const evaluateTree = function(root) {
     return evaluateTree(root.left) && evaluateTree(root.right);
   }
 };
-// @lc code=end
+
 export { evaluateTree };
