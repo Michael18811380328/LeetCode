@@ -35,7 +35,4 @@ const checkXMatrix = function(grid) {
   return true;
 };
 
-// console.log(checkXMatrix([[2,0,0,1],[0,3,1,0],[0,5,2,0],[4,0,0,2]]) === true);
-// console.log(checkXMatrix([[5,7,0],[0,3,1],[0,5,0]]) === false);
-
 export { checkXMatrix };

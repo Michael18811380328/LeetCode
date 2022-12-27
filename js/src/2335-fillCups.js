@@ -1,10 +1,7 @@
 /*
  * @lc app=leetcode.cn id=2335 lang=javascript
- *
  * [2335] 装满杯子需要的最短总时长
  */
-
-// @lc code=start
 /**
  * @param {number[]} amount
  * @return {number}
@@ -17,7 +14,7 @@ const fillCups = function(amount) {
   // 辅助函数，计算三个数的情况
   function fillThreeCups(amount) {
     // 如果有一个是0，那么直接返回剩余三个的最大值即可
-    if (amount[0] == 0 || amount[1] === 0 || amount[2] === 0) {
+    if (amount[0] === 0 || amount[1] === 0 || amount[2] === 0) {
       return Math.max(...amount);
     }
     // 如果三个都不是0，那么前两个最大的减去1，剩余一个不变
@@ -59,10 +56,5 @@ const fillCups2 = function(amount) {
   }
   return fillThreeCups(amount);
 };
-
-// console.log(fillCups([5,4,4]) === 7)
-// console.log(fillCups([1,4,2]) === 4)
-// console.log(fillCups([5,0,0]) === 5)
-// 可以想一下更好的办法，先把最小的拿出来，然后做差，这样递归的次数就少多了 [100, 100, 10] 这种
 
 export { fillCups, fillCups2 };
