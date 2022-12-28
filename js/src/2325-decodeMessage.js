@@ -7,8 +7,7 @@
  * @return {string}
  */
 const decodeMessage = function(key, message) {
-  // unit test use nodejs env, don't support String.replaceAll(), so use String.replace() instead temporary
-  const cleanKey = Array.from(new Set(key.replace(/\s/ig, '').split('')));
+  const cleanKey = Array.from(new Set(key.replaceAll(' ', '').split('')));
   const dict = {};
   for (let i = 0; i < cleanKey.length; i++) {
     dict[cleanKey[i]] = String.fromCharCode(97 + i);
