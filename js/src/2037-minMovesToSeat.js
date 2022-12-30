@@ -1,15 +1,9 @@
-/*
- * @lc app=leetcode.cn id=2037 lang=javascript
- *
- * [2037] 使每位学生都有座位的最少移动次数
- */
-
-// @lc code=start
 /**
  * @param {number[]} seats
  * @param {number[]} students
  * @return {number}
  */
+// [2037] 使每位学生都有座位的最少移动次数
 // 不管怎么移动，第一个移动到第一个座位，第二个移动到第二个座位
 // 这样移动结果是最小的（不考虑每一个的移动的权重）
 // Your runtime beats 81.15 % of javascript submissions
@@ -29,5 +23,5 @@ const minMovesToSeat = function(seats, students) {
   }
   return move;
 };
-// @lc code=end
+
 export { minMovesToSeat };

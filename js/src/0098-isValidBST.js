@@ -1,32 +1,27 @@
-/*
- * @lc app=leetcode.cn id=98 lang=javascript
- * [98] 验证二叉搜索树
- */
+// [98] 验证二叉搜索树
 // 本题考察二叉搜索树的性质
 // 左子树是二叉搜索树
 // 右子树是二叉搜索树
 // 左子树的最大值小于当前节点值
 // 右子树的最小值大于当前节点值
 
-// @lc code=start
 // 思路1：递归，判断每一个子树是二叉搜索树
 // 56 ms, 在所有 JavaScript 提交中击败了99.13%
-// 需要给定一个辅助函数，判断一个子树的最值(子树的最值在 small-large 之间)，这是解题关键
-const checkTree = function(node, small, large) {
-  // 如果没有节点，满足
-  if (!node) {
-    return true;
-  }
-  // 如果当前节点的值，大于等于最大值或者小于等于最小值，那么不是二叉搜索树
-  if (node.val >= large || node.val <= small) {
-    return false;
-  }
-  // 子节点在函数中递归判断，更改上下边界即可，辅助函数不需要返回最值
-  // 左子树的最大值小于当前节点值，右子树的最小值大于当前节点值
-  return checkTree(node.left, small, node.val) && checkTree(node.right, node.val, large);
-};
-
 const isValidBST = function(root) {
+  // 需要给定一个辅助函数，判断一个子树的最值(子树的最值在 small-large 之间)，这是解题关键
+  const checkTree = function(node, small, large) {
+    // 如果没有节点，满足
+    if (!node) {
+      return true;
+    }
+    // 如果当前节点的值，大于等于最大值或者小于等于最小值，那么不是二叉搜索树
+    if (node.val >= large || node.val <= small) {
+      return false;
+    }
+    // 子节点在函数中递归判断，更改上下边界即可，辅助函数不需要返回最值
+    // 左子树的最大值小于当前节点值，右子树的最小值大于当前节点值
+    return checkTree(node.left, small, node.val) && checkTree(node.right, node.val, large);
+  };
   // 默认根节点不设置最值判断
   const small = -Infinity;
   const large = +Infinity;
@@ -71,5 +66,4 @@ const isValidBST2 = function(root) {
   return true;
 };
 
-// @lc code=end
 export { isValidBST, isValidBST2 };

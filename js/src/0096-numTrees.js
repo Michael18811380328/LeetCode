@@ -1,13 +1,8 @@
-/*
- * @lc app=leetcode.cn id=96 lang=javascript
- *
- * [96] 不同的二叉搜索树
- */
-
 /**
  * @param {number} n
  * @return {number}
  */
+// [96] 不同的二叉搜索树
 // 思路1
 // 难点：动态规划公式，详见文档
 // Your runtime beats 71.57 % of javascript submissions

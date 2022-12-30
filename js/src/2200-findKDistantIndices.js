@@ -1,11 +1,5 @@
-/*
- * @lc app=leetcode.cn id=2200 lang=javascript
- *
- * [2200] 找出数组中的所有 K 近邻下标
- */
-
-// @lc code=start
 /**
+ * [2200] 找出数组中的所有 K 近邻下标
  * @param {number[]} nums
  * @param {number} key
  * @param {number} k
@@ -28,6 +22,5 @@ const findKDistantIndices = function(nums, key, k) {
   }
   return Array.from(new Set(tmp));
 };
-// @lc code=end
 
 export { findKDistantIndices };

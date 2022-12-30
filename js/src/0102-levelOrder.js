@@ -1,10 +1,8 @@
 /*
  * @lc app=leetcode.cn id=102 lang=javascript
- *
  * [102] 二叉树的层序遍历
+ * 88 ms, 在所有 JavaScript 提交中击败了69.94%的用户
  */
-
-// @lc code=start
 /**
  * Definition for a binary tree node.
  * function TreeNode(val) {
@@ -12,7 +10,6 @@
  *     this.left = this.right = null;
  * }
  */
-
 const runTree = function(node, layer, matrix) {
   if (!node) return;
   if (!matrix[layer]) {
@@ -26,7 +23,6 @@ const runTree = function(node, layer, matrix) {
  * @param {TreeNode} root
  * @return {number[][]}
  */
-// 88 ms, 在所有 JavaScript 提交中击败了69.94%的用户
 const levelOrder = function(root) {
   // 把当前的层数传递下去，然后传递一个二重数组即可
   const matrix = [];
@@ -41,5 +37,4 @@ const levelOrder = function(root) {
   return matrix;
 };
 
-// @lc code=end
 export { levelOrder };

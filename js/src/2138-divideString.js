@@ -1,17 +1,12 @@
-/*
- * @lc app=leetcode.cn id=2138 lang=javascript
- *
- * [2138] 将字符串拆分为若干长度为 k 的组
- */
-
-// @lc code=start
 /**
+ * [2138] 将字符串拆分为若干长度为 k 的组
+ * Your runtime beats 100 % of javascript submissions
  * @param {string} s
  * @param {number} k
  * @param {character} fill
  * @return {string[]}
  */
-//  Your runtime beats 100 % of javascript submissions
+//
 const divideString = function(s, k, fill) {
   const resArr = [];
   // 思路：当S的长度大于K时，每次减掉前K个字符
@@ -26,9 +21,5 @@ const divideString = function(s, k, fill) {
   }
   return resArr;
 };
-
-// console.log(divideString("abcdefghi", 3, 'x'))
-// console.log(divideString("abcdefghij", 3, 'x'))
-// @lc code=end
 
 export default divideString;

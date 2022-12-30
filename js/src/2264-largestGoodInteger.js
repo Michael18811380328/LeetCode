@@ -1,11 +1,6 @@
-/*
- * @lc app=leetcode.cn id=2264 lang=javascript
- *
- * [2264] 字符串中最大的 3 位相同数字
- */
-
-// @lc code=start
 /**
+ * [2264] 字符串中最大的 3 位相同数字
+ * @lc app=leetcode.cn id=2264 lang=javascript
  * @param {string} num
  * @return {string}
  */
@@ -21,6 +16,5 @@ const largestGoodInteger = function(num) {
   if (tmp === '') return '';
   return tmp + tmp + tmp;
 };
-// @lc code=end
 
 export { largestGoodInteger };

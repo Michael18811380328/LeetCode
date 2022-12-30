@@ -1,14 +1,11 @@
-// @lc code=start
 /**
+ * [198] 打家劫舍(动态规划)
  * @param {number[]} nums
  * @return {number}
+ * Your runtime beats 54.12 % of javascript submissions
  */
-// [198] 打家劫舍
-// 这个题目不错，好好看看(动态规划)
-// Your runtime beats 54.12 % of javascript submissions
 const rob = function(nums) {
-  // 动态规划就是求数组的通项公式
-  // 然后获取数组的前几项，即可计算需要的参数
+  // 动态规划就是求数组的通项公式, 然后获取数组的前几项，即可计算需要的参数
   // f(n) = Math.max(f(n - 2) + nums(n), f(n - 1))
   // f(1) = nums(1)
   // f(2) = Math.max(nums[1], nums[2])
@@ -29,6 +26,7 @@ const rob = function(nums) {
   }
   return res[res.length - 1];
 };
+
 // [1,2,3,1,2,7,9,3,1]
 
 export { rob };

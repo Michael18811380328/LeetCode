@@ -1,15 +1,9 @@
-/*
- * @lc app=leetcode.cn id=1945 lang=javascript
- *
- * [1945] 字符串转化后的各位数字之和
- */
-
-// @lc code=start
 /**
  * @param {string} s
  * @param {number} k
  * @return {number}
  */
+// [1945] 字符串转化后的各位数字之和
 // 问题可以转换成两个小问题
 // 1 把字符串根据 code 转换成数字字符串（循环）
 // 2 计算数字字符串的每一位的和（递归）
@@ -28,7 +22,6 @@ const getLucky = function(s, k) {
     }
     return res;
   };
-
   /**
    * 2 计算字符串数值的每一位的和
    * @param {string} str 输入的数值字符串
@@ -41,7 +34,6 @@ const getLucky = function(s, k) {
     }
     return `${result}`;
   };
-
   // 3调用函数递归计算
   let resultStr = transStr(s);
   while (k > 0) {
@@ -51,11 +43,8 @@ const getLucky = function(s, k) {
   return resultStr * 1;
 };
 
-// 特殊情况
 // getLucky("dbvmfhnttvr", 5)
 // 42221368142020220 / 10 返回值是 4222136814202022.5
 // 如果数字很大，除法计算有问题，直接解析字符串，不要使用除法
-
-// @lc code=end
 
 export { getLucky };

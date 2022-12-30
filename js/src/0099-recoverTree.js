@@ -1,9 +1,3 @@
-/*
- * @lc app=leetcode.cn id=99 lang=javascript
- * [99] 恢复二叉搜索树
- */
-
-// @lc code=start
 /**
  * Definition for a binary tree node.
  * function TreeNode(val, left, right) {
@@ -12,6 +6,7 @@
  *     this.right = (right===undefined ? null : right)
  * }
  */
+// [99] 恢复二叉搜索树
 /**
  * @param {TreeNode} root
  * @return {void} Do not return anything, modify root in-place instead.
@@ -69,5 +64,5 @@ const recoverTree = function(root) {
   };
   runNode(root);
 };
-// @lc code=end
+
 export { recoverTree };

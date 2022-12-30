@@ -1,20 +1,12 @@
-/*
- * @lc app=leetcode.cn id=2309 lang=javascript
- *
- * [2309] 兼具大小写的最好英文字母
- */
-
-// @lc code=start
 /**
+ * [2309] 兼具大小写的最好英文字母
  * @param {string} s
  * @return {string}
  * Your runtime beats 83.75 % of javascript submissions
- * 难度简单
- * 最好记住不同的字符对应的 Unicode，
+ * 难度简单，记住不同的字符对应的 Unicode
+ * 'a'.charCodeAt() 97 'A'.charCodeAt() 65
  */
 const greatestLetter = function(s) {
-  // 'a'.charCodeAt() 97
-  // 'A'.charCodeAt() 65
   // 因为字符串长度1000，可以先去重，减少循环次数
   let arr = [...new Set(s.split(''))].sort();
   arr = arr.reverse();
@@ -35,8 +27,4 @@ const greatestLetter = function(s) {
   return '';
 };
 
-// console.log(greatestLetter("lEeTcOdE") === 'E');
-// console.log(greatestLetter("arRAzFif") === 'R');
-// console.log(greatestLetter("AbCdEfGhIjK") === '');
-// @lc code=end
 export { greatestLetter };

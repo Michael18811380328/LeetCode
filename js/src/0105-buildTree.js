@@ -1,10 +1,3 @@
-/*
- * @lc app=leetcode.cn id=105 lang=javascript
- *
- * [105] 从前序与中序遍历序列构造二叉树
- */
-
-// @lc code=start
 /**
  * Definition for a binary tree node.
  * function TreeNode(val, left, right) {
@@ -13,6 +6,7 @@
  *     this.right = (right===undefined ? null : right)
  * }
  */
+// [105] 从前序与中序遍历序列构造二叉树
 /**
  * @param {number[]} preorder
  * @param {number[]} inorder
@@ -52,5 +46,5 @@ const buildTree = function(preorder, inorder) {
   }
   return rootNode;
 };
-// @lc code=end
+
 export { buildTree };

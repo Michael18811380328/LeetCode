@@ -1,10 +1,3 @@
-/*
- * @lc app=leetcode.cn id=127 lang=javascript
- *
- * [127] 单词接龙
- */
-
-// @lc code=start
 /**
  * 127. 单词接龙(无向图)
  * https://leetcode.cn/problems/word-ladder/
@@ -13,7 +6,6 @@
  * @param {string[]} wordList
  * @return {number}
  * Your runtime beats 48.99 % of js submissions
- * Your memory usage beats 92.36 % (43.9 MB)
  */
 const ladderLength = function(beginWord, endWord, wordList) {
   // 辅助函数：判断两个单词是否可以转换(有一个字母不同)
@@ -42,9 +34,12 @@ const ladderLength = function(beginWord, endWord, wordList) {
   // 初始化长度是2，beginWord -> middle -> endWord 是两步
   let res = 2;
 
+  // 广度优先遍历-难点
   while (list.length > 0) {
     // 获取当前的长度（这一层），然后遍历当前的这一层单词
     let currentLen = list.length;
+    // 广度遍历一层，现在把新加入的单词，直接放在原来的列表中了
+    // 为了方便理解，也可以创建一个 newList 然后每次循环一层，再获取下一层的长度
     while (currentLen--) {
       const item = list.shift();
       for (let i = 0; i < wordList.length; i++) {
@@ -66,6 +61,5 @@ const ladderLength = function(beginWord, endWord, wordList) {
   // 如果没有，返回0
   return 0;
 };
-// @lc code=end
 
 export { ladderLength };

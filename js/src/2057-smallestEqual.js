@@ -1,11 +1,5 @@
-/*
- * @lc app=leetcode.cn id=2057 lang=javascript
- *
- * [2057] 值相等的最小索引
- */
-
-// @lc code=start
 /**
+ * [2057] 值相等的最小索引
  * @param {number[]} nums
  * @return {number}
  */
@@ -19,5 +13,5 @@ const smallestEqual = function(nums) {
   }
   return -1;
 };
-// @lc code=end
+
 export { smallestEqual };

@@ -1,15 +1,9 @@
-/*
- * @lc app=leetcode.cn id=2129 lang=javascript
- *
- * [2129] 将标题首字母大写
- */
-
-// @lc code=start
 /**
+ * [2129] 将标题首字母大写
+ * Your runtime beats 55.68 % of javascript submissions
  * @param {string} title
  * @return {string}
  */
-//  Your runtime beats 55.68 % of javascript submissions
 const capitalizeTitle = function(title) {
   // 辅助函数：转换字符串大小写
   const toSmall = (str) => {
@@ -35,7 +29,4 @@ const capitalizeTitle = function(title) {
   return arr.join(' ');
 };
 
-// console.log(capitalizeTitle("First leTTeR of EACH Word") === "First Letter of Each Word");
-// console.log(capitalizeTitle("i lOve leetcode") === "i Love Leetcode");
-// @lc code=end
 export default capitalizeTitle;

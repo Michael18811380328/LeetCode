@@ -1,10 +1,3 @@
-/*
- * @lc app=leetcode.cn id=24 lang=javascript
- *
- * [24] 两两交换链表中的节点
- */
-
-// @lc code=start
 /**
  * Definition for singly-linked list.
  * function ListNode(val, next) {
@@ -16,6 +9,7 @@
  * @param {ListNode} head
  * @return {ListNode}
  */
+// @lc app=leetcode.cn id=24 lang=javascript
 // 60 ms, 在所有 JavaScript 提交中击败了70.94%
 const swapPairs = function(head) {
   const changeNode = (node) => {
@@ -36,6 +30,5 @@ const swapPairs = function(head) {
   };
   return changeNode(head);
 };
-// @lc code=end
 
 export { swapPairs };

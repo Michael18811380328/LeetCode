@@ -1,14 +1,8 @@
-/*
- * @lc app=leetcode.cn id=2094 lang=javascript
- *
- * [2094] 找出 3 位偶数
- */
-
-// @lc code=start
 /**
  * @param {number[]} digits
  * @return {number[]}
  */
+// 找出 3 位偶数
 // 时间复杂度是O^3，这个数据量级下可以接受
 // Your runtime beats 38.23 % of javascript submissions
 // 优化后：Your runtime beats 42.65 % of javascript
@@ -42,5 +36,5 @@ const findEvenNumbers = function(digits) {
   });
   return arr;
 };
-// @lc code=end
+
 export { findEvenNumbers };

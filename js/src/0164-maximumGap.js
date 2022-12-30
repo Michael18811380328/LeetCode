@@ -1,11 +1,5 @@
-/*
- * @lc app=leetcode.cn id=164 lang=javascript
- *
- * [164] 最大间距
- */
-
-// @lc code=start
 /**
+ * [164] 最大间距
  * @param {number[]} nums
  * @return {number}
  * 常规的算法：直接排序，然后比较相邻元素的差值，获取最大值
@@ -32,8 +26,6 @@ const maximumGap = function(nums) {
 // 官方给出的算法是基数排序，或者桶排序实现
 // 这两个算法的时间复杂度最好是 O(n)
 // 实际测试发现，JS 内部实现的快速排序，速度比手写的这两个排序效果更快
-// @lc code=end
-
 // 下面是基数排序的代码示例（学习）
 // https://www.runoob.com/w3cnote/radix-sort.html
 // 桶排序：每一个桶是固定的值，然后需要很多桶

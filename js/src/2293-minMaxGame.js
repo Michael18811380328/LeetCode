@@ -1,11 +1,5 @@
-/*
- * @lc app=leetcode.cn id=2293 lang=javascript
- *
- * [2293] 极大极小游戏
- */
-
-// @lc code=start
 /**
+ * [2293] 极大极小游戏
  * @param {number[]} nums
  * @return {number}
  * Your runtime beats 90.21 % of javascript submissions
@@ -25,7 +19,4 @@ const minMaxGame = function(nums) {
   return nums[0];
 };
 
-// console.log(minMaxGame([1,3,5,2,4,8,2,2])) // 1
-// console.log(minMaxGame([3])) // 3
-// @lc code=end
 export { minMaxGame };

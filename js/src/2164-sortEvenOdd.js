@@ -1,11 +1,5 @@
-/*
- * @lc app=leetcode.cn id=2164 lang=javascript
- *
- * [2164] 对奇偶下标分别排序
- */
-
-// @lc code=start
 /**
+ * [2164] 对奇偶下标分别排序
  * @param {number[]} nums
  * @return {number[]}
  * 简单：把数组按照下标拆成两个，分别排序，然后再拼接起来
@@ -37,9 +31,5 @@ const sortEvenOdd = function(nums) {
   }
   return result;
 };
-
-// console.log(sortEvenOdd([4,1,2,3])); // [2,3,4,1]
-// console.log(sortEvenOdd([2, 1])); // [2, 1]
-// @lc code=end
 
 export { sortEvenOdd };

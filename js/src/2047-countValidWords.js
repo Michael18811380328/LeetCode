@@ -1,14 +1,8 @@
-/*
- * @lc app=leetcode.cn id=2047 lang=javascript
- *
- * [2047] 句子中的有效单词数
- */
-
-// @lc code=start
 /**
  * @param {string} sentence
  * @return {number}
  */
+// [2047] 句子中的有效单词数
 // 辅助函数（判断字符串是否是token）
 // Your runtime beats 33.48 % of javascript submissions
 const checkStr = (str) => {
@@ -20,7 +14,6 @@ const checkStr = (str) => {
   if (number_reg.test(str)) {
     return false;
   }
-
   // 2. 如果存在连字符
   if (str.indexOf('-') > -1) {
     // 2.1 如果存在多个连字符，不满足
@@ -39,7 +32,6 @@ const checkStr = (str) => {
       return false;
     }
   }
-
   // 3 判断标点符号：至多一个 标点符号。'!'、'.' 和 ','
   // 如果存在，标点符号应当位于 token 的末尾。
   // 如果结尾是标点符号，那么直接删除，然后判断剩余部分是否有标点符号
@@ -59,19 +51,11 @@ const countValidWords = function(sentence) {
   const arr = sentence.split(' ');
   let times = 0;
   for (let i = 0; i < arr.length; i++) {
-    // console.log(arr[i], checkStr(arr[i]));
     if (checkStr(arr[i])) {
-      // console.log(arr[i]);
       times++;
     }
   }
   return times;
 };
 
-// console.log(countValidWords("-") === 0)
-// console.log(countValidWords('pencil-sharpener.') === 1)
-// console.log(countValidWords('cat and  dog') === 3)
-// console.log(countValidWords('!this  1-s b8d!') === 0)
-// console.log(countValidWords('alice and  bob are playing stone-game10') === 5)
-// @lc code=end
 export { countValidWords };

@@ -1,11 +1,5 @@
-/*
- * @lc app=leetcode.cn id=2255 lang=javascript
- *
- * [2255] 统计是给定字符串前缀的字符串数目
- */
-
-// @lc code=start
 /**
+ * [2255] 统计是给定字符串前缀的字符串数目
  * @param {string[]} words
  * @param {string} s
  * @return {number}
@@ -49,6 +43,5 @@ const countPrefixes2 = function(words, s) {
   }
   return num;
 };
-// @lc code=end
 
 export { countPrefixes1, countPrefixes2 };

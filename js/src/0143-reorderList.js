@@ -1,10 +1,3 @@
-/*
- * @lc app=leetcode.cn id=143 lang=javascript
- *
- * [143] 重排链表
- */
-
-// @lc code=start
 /**
  * Definition for singly-linked list.
  * function ListNode(val, next) {
@@ -13,6 +6,7 @@
  * }
  */
 /**
+ * [143] 重排链表
  * @param {ListNode} head
  * @return {void} Do not return anything, modify head in-place instead.
  * 思路1：先遍历一次链表，把每一个节点和索引存储到数组中，同时找到总长度
@@ -82,11 +76,10 @@ const reorderList2 = function(head) {
   return head;
 };
 
-// @lc code=end
-
 // 官方的更好的解法是：
 // 1、通过快慢指针，找到链表的中点，把链表分成两个
 // 2、把后面的链表反转（N，N-1， N-2）
 // 3、合并两个链表（因为长度差可能是0或者1，所以基本不影响）
 // 后续有时间可以按照这个思路完成（这三个子问题，可以使用其他的题目处理）
+
 export { reorderList, reorderList2 };

@@ -1,11 +1,5 @@
-/*
- * @lc app=leetcode.cn id=2176 lang=javascript
- *
- * [2176] 统计数组中相等且可以被整除的数对
- */
-
-// @lc code=start
 /**
+ * [2176] 统计数组中相等且可以被整除的数对
  * @param {number[]} nums
  * @param {number} k
  * @return {number}
@@ -14,7 +8,7 @@
  */
 const countPairs = function(nums, k) {
   const len = nums.length;
-  // 先判断一下是否有重复值，如果没有重复值，直接返回空
+  // 先判断一下是否有重复值，如果没有重复值（数对），直接返回空
   if (Array.from(new Set(nums)).length === len) {
     return 0;
   }
@@ -29,8 +23,5 @@ const countPairs = function(nums, k) {
   }
   return res;
 };
-// 更好的优化方案，是循环一次，然后使用字典计数即可
-// 这个实现也不难，有时间再说
-// @lc code=end
 
 export { countPairs };
