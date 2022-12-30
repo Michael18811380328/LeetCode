@@ -1,17 +1,9 @@
-/*
- * @lc app=leetcode.cn id=279 lang=javascript
- *
- * [279] 完全平方数
- */
-
-// @lc code=start
 /**
- * 完全平方数
+ * 279 完全平方数
  * https://leetcode.cn/problems/perfect-squares/
  * @param {number} n
  * @return {number}
  * Your runtime beats 89.32 % of ss submissions
- * Your memory usage beats 7.05 % of js submissions (48.9 MB)
  */
 const numSquares = function(n) {
   const list = [];
@@ -34,7 +26,7 @@ const numSquares = function(n) {
       if (newNum === 0) {
         return times + 1;
       }
-      // 这里可以节省大量性能
+      // 把遍历到的数字，记录到字典中，可以节省大量性能
       if (!map.get(newNum)) {
         list.push([newNum, times + 1]);
         map.set(newNum, true);
@@ -42,6 +34,5 @@ const numSquares = function(n) {
     }
   }
 };
-// @lc code=end
 
 export { numSquares };

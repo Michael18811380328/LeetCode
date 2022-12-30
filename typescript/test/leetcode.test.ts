@@ -16,6 +16,7 @@ import {duplicateZeros} from '../src/1089-duplicateZeros';
 import {sortByBits} from '../src/1356-sortByBits';
 import {slowestKey} from '../src/1629-slowestKey';
 import {trimMean} from '../src/1619-trimMean';
+import {decodeMessage} from '../src/2325-decodeMessage';
 
 test('134-canCompleteCircuit', () => {
   const gas = [1, 2, 3, 4, 5];
@@ -202,4 +203,19 @@ test('448-findDisappearedNumbers', () => {
   expect(findDisappearedNumbers([4, 3, 2, 7, 8, 2, 3, 1])).toStrictEqual([
     5, 6,
   ]);
+});
+
+test('2325-decodeMessage', () => {
+  expect(
+    decodeMessage(
+      'the quick brown fox jumps over the lazy dog',
+      'vkbs bs t suepuv'
+    )
+  ).toBe('this is a secret');
+  expect(
+    decodeMessage(
+      'eljuxhpwnyrdgtqkviszcfmabo',
+      'zwx hnfx lqantp mnoeius ycgk vcnjrdb'
+    )
+  ).toBe('the five boxing wizards jump quickly');
 });

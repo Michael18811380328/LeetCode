@@ -1,8 +1,7 @@
 /**
  * @param {string} s
  * @return {character}
- * 2351. 第一个出现两次的字母
- * 难度简单
+ * 2351. 第一个出现两次的字母,简单
  */
 const repeatedCharacter = function(s) {
   const dict = {};

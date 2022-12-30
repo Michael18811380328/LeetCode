@@ -44,8 +44,9 @@
     "jest": "27.5.1",
     "jest-watch-typeahead": "^0.6.4",
     "jsdoc-to-markdown": "^7.1.1",
-    "regenerator-runtime": "^0.13.3",
-    "standard": "^16.0.4"
+    "regenerator-runtime": "^0.13.3",    
+    "standard": "^16.0.4",
+    "string.prototype.replaceall": "1.0.7"
   },
   "standard": {
     "ignore": [
@@ -53,12 +54,6 @@
       "/lib/select2/",
       "/lib/ckeditor/",
       "tmp.js"
-    ]
-  },
-  "jest": {
-    "watchPlugins": [
-      "jest-watch-typeahead/filename",
-      "jest-watch-typeahead/testname"
     ]
   }
 }

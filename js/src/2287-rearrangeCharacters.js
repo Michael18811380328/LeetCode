@@ -1,11 +1,5 @@
-/*
- * @lc app=leetcode.cn id=2287 lang=javascript
- *
- * [2287] 重排字符形成目标字符串
- */
-
-// @lc code=start
 /**
+ * [2287] 重排字符形成目标字符串
  * @param {string} s
  * @param {string} target
  * @return {number}
@@ -47,12 +41,4 @@ const rearrangeCharacters = function(s, target) {
   return Math.min(...res);
 };
 
-// console.log(rearrangeCharacters("ilovecodingonleetcode", "code") === 2)
-// console.log(rearrangeCharacters("abcba", "abc") === 1)
-// console.log(rearrangeCharacters("abbaccaddaeea", "aaaaa") === 1)
-// console.log(rearrangeCharacters("lrnvlcqukanpdnluowenfxquitzryponxsikhciohyostvmkapkfpglzikitwiraqgchxnpryhwpuwpozacjhmwhjvslprqlnxrk", "woijih") === 2);
-// console.log(rearrangeCharacters("abc", "abcd") === 0)
-// console.log(rearrangeCharacters("aaaaaaaaaaaaaaaaaaaaaaaaaa", "aaaaaaaaa") === 2)
 export { rearrangeCharacters };
-
-// @lc code=end

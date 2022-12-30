@@ -1,11 +1,7 @@
-/*
- * @lc app=leetcode.cn id=2269 lang=javascript
- *
- * [2269] 找到一个数字的 K 美丽值
- */
-
-// @lc code=start
 /**
+ * [2269] 找到一个数字的 K 美丽值
+ * 一个整数 num 的 k 美丽值定义为 num 中符合以下条件的 子字符串 数目：
+ * 子字符串长度为 k && 子字符串能整除 num 。
  * @param {number} num
  * @param {number} k
  * @return {number}
@@ -23,7 +19,4 @@ const divisorSubstrings = function(num, k) {
   return res;
 };
 
-// console.log(divisorSubstrings(240, 2), 2);
-// console.log(divisorSubstrings(430043, 2), 2);
-// @lc code=end
 export { divisorSubstrings };

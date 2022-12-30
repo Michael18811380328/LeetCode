@@ -1,11 +1,5 @@
-/*
- * @lc app=leetcode.cn id=2283 lang=javascript
- *
- * [2283] 判断一个数的数字计数是否等于数位的值
- */
-
-// @lc code=start
 /**
+ * [2283] 判断一个数的数字计数是否等于数位的值
  * @param {string} num
  * @return {boolean}
  * Your runtime beats 64.81 % of javascript submissions
@@ -29,8 +23,4 @@ const digitCount = function(num) {
   return true;
 };
 
-// console.log(digitCount("1210") === true);
-// console.log(digitCount("030") === false);
-
-// @lc code=end
 export { digitCount };

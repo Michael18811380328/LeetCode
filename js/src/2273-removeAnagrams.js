@@ -1,11 +1,5 @@
-/*
- * @lc app=leetcode.cn id=2273 lang=javascript
- *
- * [2273] 移除字母异位词后的结果数组
- */
-
-// @lc code=start
 /**
+ * [2273] 移除字母异位词后的结果数组
  * @param {string[]} words
  * @return {string[]}
  * Your runtime beats 69.72 % of javascript submissions
@@ -25,7 +19,5 @@ const removeAnagrams = function(words) {
     return !dict[index];
   });
 };
-// console.log(removeAnagrams(["abba","baba","bbaa","cd","cd"])) // ["abba","cd"]
-// @lc code=end
 
 export { removeAnagrams };

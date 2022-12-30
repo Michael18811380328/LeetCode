@@ -1,11 +1,5 @@
-/*
- * @lc app=leetcode.cn id=2278 lang=javascript
- *
- * [2278] 字母在字符串中的百分比
- */
-
-// @lc code=start
 /**
+ * [2278] 字母在字符串中的百分比
  * @param {string} s
  * @param {character} letter
  * @return {number}
@@ -21,5 +15,5 @@ const percentageLetter = function(s, letter) {
   }
   return Math.floor(times / len * 100);
 };
-// @lc code=end
+
 export { percentageLetter };

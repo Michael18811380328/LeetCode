@@ -41,6 +41,4 @@ const countAsterisks2 = function(s) {
   return sum;
 };
 
-// 在官方测试案例情况中，这两个算法的性能差距不大
-// 根据实际数据选择适合的算法
 export { countAsterisks1, countAsterisks2 };

@@ -1,11 +1,5 @@
-/*
- * @lc app=leetcode.cn id=2303 lang=javascript
- *
- * [2303] 计算应缴税款总额
- */
-
-// @lc code=start
 /**
+ * [2303] 计算应缴税款总额
  * @param {number[][]} brackets
  * @param {number} income
  * @return {number}
@@ -29,9 +23,5 @@ const calculateTax = function(brackets, income) {
   }
   return total;
 };
-// console.log(calculateTax([[3,50],[7,10],[12,25]], 10) === 2.65);
-// console.log(calculateTax([[1,0],[4,25],[5,50]], 2) === 0.25);
-// console.log(calculateTax([[10,10]], 5) === 0.5);
 
-// @lc code=end
 export { calculateTax };
