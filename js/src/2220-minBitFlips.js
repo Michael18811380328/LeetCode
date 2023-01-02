@@ -1,11 +1,5 @@
-/*
- * @lc app=leetcode.cn id=2220 lang=javascript
- *
- * [2220] 转换数字的最少位翻转次数
- */
-
-// @lc code=start
 /**
+ * [2220] 转换数字的最少位翻转次数
  * @param {number} start
  * @param {number} goal
  * @return {number}
@@ -28,6 +22,5 @@ const minBitFlips = function(start, goal) {
   }
   return res;
 };
-// @lc code=end
 
 export { minBitFlips };

@@ -1,11 +1,5 @@
-/*
- * @lc app=leetcode.cn id=2224 lang=javascript
- *
- * [2224] 转化时间需要的最少操作数
- */
-
-// @lc code=start
 /**
+ * [2224] 转化时间需要的最少操作数
  * @param {string} current
  * @param {string} correct
  * @return {number}
@@ -35,6 +29,5 @@ const convertTime = function(current, correct) {
   res += minutes;
   return res;
 };
-// @lc code=end
 
 export { convertTime };

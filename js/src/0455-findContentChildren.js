@@ -16,7 +16,6 @@
  * @return {number}
  */
 const findContentChildren1 = function(g, s) {
-  // ？这两个数组是否排序，这个很影响性能
   // 可以按照从小到大的顺序排列，然后使用贪心算法，依次遍历数组，看是否满足
   const gLen = g.length;
   const sLen = s.length;

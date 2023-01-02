@@ -1,11 +1,5 @@
-/*
- * @lc app=leetcode.cn id=2169 lang=javascript
- *
- * [2169] 得到 0 的操作数
- */
-
-// @lc code=start
 /**
+ * [2169] 得到 0 的操作数
  * @param {number} num1
  * @param {number} num2
  * @return {number}
@@ -32,11 +26,5 @@ const countOperations = function(num1, num2) {
   }
   return times + 1;
 };
-
-// console.log(countOperations(10, 10) === 1)
-// console.log(countOperations(2, 3) === 3)
-// console.log(countOperations(0, 0) === 0)
-// console.log(countOperations(0, 1) === 0)
-// @lc code=end
 
 export { countOperations };

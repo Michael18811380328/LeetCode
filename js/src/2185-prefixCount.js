@@ -1,11 +1,5 @@
-/*
- * @lc app=leetcode.cn id=2185 lang=javascript
- *
- * [2185] 统计包含给定前缀的字符串
- */
-
-// @lc code=start
 /**
+ * [2185] 统计包含给定前缀的字符串
  * @param {string[]} words
  * @param {string} pref
  * @return {number}
@@ -20,6 +14,5 @@ const prefixCount = function(words, pref) {
   });
   return nums;
 };
-// @lc code=end
 
 export { prefixCount };

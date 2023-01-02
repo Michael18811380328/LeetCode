@@ -1,6 +1,5 @@
 /*
  * @lc app=leetcode.cn id=89 lang=javascript
- *
  * [89] 格雷编码
  */
 
@@ -35,6 +34,5 @@ const grayCode = function(n) {
   }
   return result;
 };
-// @lc code=end
 
 export { grayCode };

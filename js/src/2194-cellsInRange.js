@@ -1,15 +1,9 @@
-/*
- * @lc app=leetcode.cn id=2194 lang=javascript
- *
- * [2194] Excel 表中某个范围内的单元格
- */
-
-// @lc code=start
 /**
- * @param {string} s
+ * [2194] Excel 表中某个范围 "A1:F1" 内的单元格数组
+ * Your runtime beats 86.88 % of javascript submissions
+ * @param {string} s "A1:F1"
  * @return {string[]}
  */
-//  Your runtime beats 86.88 % of javascript submissions
 const cellsInRange = function(s) {
   // 双层循环即可
   const a = s.charCodeAt(0);
@@ -21,7 +15,6 @@ const cellsInRange = function(s) {
   // cd 是内循环，直接使用数字即可
 
   const res = [];
-  // String.fromCharCode()
   for (let i = a; i <= b; i++) {
     const tmp = String.fromCharCode(i);
     for (let j = c; j <= d; j++) {
@@ -30,8 +23,5 @@ const cellsInRange = function(s) {
   }
   return res;
 };
-
-// console.log(cellsInRange("A1:F1"))
-// @lc code=end
 
 export { cellsInRange };

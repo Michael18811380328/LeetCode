@@ -1,11 +1,5 @@
-/*
- * @lc app=leetcode.cn id=2235 lang=javascript
- *
- * [2235] 两整数相加
- */
-
-// @lc code=start
 /**
+ * [2235] 两整数相加
  * @param {number} num1
  * @param {number} num2
  * @return {number} number
@@ -14,6 +8,5 @@
 const sum = function(num1, num2) {
   return num1 + num2;
 };
-// @lc code=end
 
 export { sum };
