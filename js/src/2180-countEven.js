@@ -51,7 +51,7 @@ const countEven2 = function(num) {
     return res % 2 === 0;
   };
 
-  let dict = {};
+  const dict = {};
   let tmp = 0;
   for (let i = 1; i <= num; i++) {
     if (i < 10) {
@@ -60,7 +60,7 @@ const countEven2 = function(num) {
       }
       continue;
     }
-    let remain = i % 10;
+    const remain = i % 10;
     // 如果是10的倍数，重新计算
     if (remain === 0) {
       if (check(i)) {

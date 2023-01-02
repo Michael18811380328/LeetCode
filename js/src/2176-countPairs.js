@@ -3,7 +3,7 @@
  * @param {number[]} nums
  * @param {number} k
  * @return {number}
- * 难度简单，数组遍历和比较 
+ * 难度简单，数组遍历和比较
  * 64 ms, 在所有 JavaScript 提交中击败了79.65%
  */
 const countPairs = function(nums, k) {

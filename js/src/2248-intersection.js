@@ -33,10 +33,10 @@ const intersection = function(nums) {
 // 在所有 JavaScript 提交中击败了62.22%
 const intersection2 = function(nums) {
   const len = nums.length;
-  let dict = {};
+  const dict = {};
   for (let i = 0; i < nums.length; i++) {
     for (let j = 0; j < nums[i].length; j++) {
-      let curr = nums[i][j];
+      const curr = nums[i][j];
       if (!dict[curr]) {
         dict[curr] = 0;
       }
@@ -44,13 +44,13 @@ const intersection2 = function(nums) {
     }
   }
   let result = [];
-  for (let key in dict) {
+  for (const key in dict) {
     if (dict[key] === len) {
       result.push(Number(key));
     }
   }
   result = result.sort((a, b) => a > b ? 1 : -1);
   return result;
-}
+};
 
 export { intersection, intersection2 };

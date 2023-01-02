@@ -25,10 +25,10 @@ const findFinalValue2 = function(nums, original) {
 // 优化后 N * N 变成了 N
 // 52 ms, 在所有 JavaScript 提交中击败了97.22%
 const findFinalValue3 = function(nums, original) {
-  let dict = {};
-  nums.forEach(item => {
+  const dict = {};
+  nums.forEach((item) => {
     dict[item] = true;
-  })
+  });
   while (dict[original]) {
     original *= 2;
   }

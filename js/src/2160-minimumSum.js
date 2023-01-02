@@ -11,11 +11,11 @@ const minimumSum = function(num) {
 
 // 60 ms, 在所有 JavaScript 提交中击败了65.56%
 const minimumSum2 = function(num) {
-  let a = num % 10;
-  let b = (num - a) / 10 % 10;
-  let c = (num - a - 10 * b) % 1000 / 100;
-  let d = (num - a - 10 * b - 100 * c) / 1000;
-  let arr = [a, b, c, d].sort((a, b) => a > b ? 1 : -1);
+  const a = num % 10;
+  const b = (num - a) / 10 % 10;
+  const c = (num - a - 10 * b) % 1000 / 100;
+  const d = (num - a - 10 * b - 100 * c) / 1000;
+  const arr = [a, b, c, d].sort((a, b) => a > b ? 1 : -1);
   return (arr[0] + arr[1]) * 10 + arr[2] + arr[3];
 };
 

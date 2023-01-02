@@ -1,9 +1,9 @@
 function intersection(nums: number[][]): number[] {
   const len: number = nums.length;
-  let dict = {};
+  const dict = {};
   for (let i = 0; i < nums.length; i++) {
     for (let j = 0; j < nums[i].length; j++) {
-      let curr = nums[i][j];
+      const curr = nums[i][j];
       if (!dict[curr]) {
         dict[curr] = 0;
       }
@@ -11,11 +11,13 @@ function intersection(nums: number[][]): number[] {
     }
   }
   let result: number[] = [];
-  for (let key in dict) {
+  for (const key in dict) {
     if (dict[key] === len) {
       result.push(Number(key));
     }
   }
-  result = result.sort((a, b) => a > b ? 1 : -1);
+  result = result.sort((a, b) => (a > b ? 1 : -1));
   return result;
-};
+}
+
+export {intersection};
