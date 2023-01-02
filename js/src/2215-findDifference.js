@@ -1,11 +1,5 @@
-/*
- * @lc app=leetcode.cn id=2215 lang=javascript
- *
- * [2215] 找出两数组的不同
- */
-
-// @lc code=start
 /**
+ * [2215] 找出两数组的不同
  * @param {number[]} nums1
  * @param {number[]} nums2
  * @return {number[][]}
@@ -37,6 +31,5 @@ const findDifference = function(nums1, nums2) {
   });
   return [res1, res2];
 };
-// @lc code=end
 
 export { findDifference };

@@ -167,3 +167,91 @@ const countPrefixes = function(words, s) {
   }
   return num;
 };
+
+// 279 完全平方数（无向图）
+const numSquares = function(n) {
+  const list = [];
+  list.push([n, 0]);
+  const map = new Map();
+  map.set(n, true);
+  // BFS
+  while (list.length > 0) {
+    const current = list.shift();
+    const [num, times] = current;
+    // 这里细节
+    for (let i = 1; ;i++) {
+      const newNumber = num - i ** 2;
+      if (newNumber < 0) {
+        break;
+      }
+      if (newNumber === 0) {
+        return times + 1;
+      }
+      if (!map.get(newNumber)) {
+        map.set(newNumber, true);
+        list.push([newNumber, times + 1]);
+      }
+    }
+  }
+};
+
+// 打家劫舍 198
+const rob = function(nums) {
+  const len = nums.length;
+  if (len === 1) return nums[0];
+  const res = [];
+  res[0] = nums[0];
+  res[1] = Math.max(nums[0], nums[1]);
+  for (let i = 2; i < len; i++) {
+    res[i] = Math.max(nums[i - 1], res[i - 2] + nums[i]);
+  }
+  return res[res.length - 1];
+};
+
+// 0089 格雷编码 位运算
+const grayCode = function(n) {
+  const result = [0];
+  for (let i = 1; i <= n; i++) {
+    const len = result.length;
+    for (let j = len - 1; j >= 0; j--) {
+      result.push(result[j] | (1 << (i - 1)));
+    }
+  }
+  return result;
+};
+
+// 0010 正则表达式，矩阵动态规划
+const isMath = (s, p) => {
+  if (s == null || p == null) {
+    return false;
+  }
+  const sLen = s.length, pLen = p.length;
+  const dp = new Array(sLen + 1);
+  for (let i = 0; i < dp.length; i++) {
+    dp[i] = new Array(pLen + 1).fill(false);
+  }
+  dp[0][0] = true;
+  for (let j = 1; j < pLen + 1; j++) {
+    if (p[j - 1] == '*') {
+      dp[0][j] = dp[0][j - 2];
+    }
+  }
+  // 动态规划
+  for (let i = 1; i < sLen + 1; i++) {
+    for (let j = 1; j < pLen + 1; j++) {
+      if (s[i - 1] === p[j - 1] || p[j - 1] === '.') {
+        dp[i][j] = dp[i - 1][j - 1];
+      }
+      else if (p[j - 1] == '*') {
+        if (s[i - 1] === p[j - 2] || p[j - 2] === '.') {
+          dp[i][j] = dp[i][j - 2] || dp[i - 1][j - 2] || dp[i - 1][j];
+        }
+        else {
+          dp[i][j] = dp[i][j - 2];
+        }
+      }
+    }
+  }
+  return dp[sLen][pLen];
+};
+

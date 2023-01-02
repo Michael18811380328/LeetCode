@@ -1,11 +1,5 @@
-/*
- * @lc app=leetcode.cn id=2231 lang=javascript
- *
- * [2231] 按奇偶性交换后的最大数字
- */
-
-// @lc code=start
 /**
+ * [2231] 按奇偶性交换后的最大数字
  * @param {number} num
  * @return {number}
  * Your runtime beats 89.75 % of javascript submissions
@@ -44,6 +38,5 @@ const largestInteger = function(num) {
   }
   return parseInt(resArr.join(''), 10);
 };
-// @lc code=end
 
 export { largestInteger };

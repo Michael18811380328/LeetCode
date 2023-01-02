@@ -1,11 +1,5 @@
-/*
- * @lc app=leetcode.cn id=2210 lang=javascript
- *
- * [2210] 统计数组中峰和谷的数量
- */
-
-// @lc code=start
 /**
+ * [2210] 统计数组中峰和谷的数量
  * @param {number[]} nums
  * @return {number}
  * 思路：波峰和波谷的特点就是左右的值变化
@@ -35,6 +29,5 @@ const countHillValley = function(nums) {
   }
   return res;
 };
-// @lc code=end
 
 export { countHillValley };
