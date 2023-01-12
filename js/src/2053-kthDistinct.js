@@ -1,16 +1,10 @@
-/*
- * @lc app=leetcode.cn id=2053 lang=javascript
- *
- * [2053] 数组中第 K 个独一无二的字符串
- */
-
-// @lc code=start
 /**
+ * [2053] 数组中第 K 个独一无二的字符串
+ * Your runtime beats 44.36 % of javascript submissions
  * @param {string[]} arr
  * @param {number} k
  * @return {string}
  */
-// Your runtime beats 44.36 % of javascript submissions
 const kthDistinct = function(arr, k) {
   // 1. 遍历一次数组，找出没有重复的和没有重复的元素
   const dict = {};
@@ -32,5 +26,5 @@ const kthDistinct = function(arr, k) {
   });
   return filter_arr[k - 1] || '';
 };
-// @lc code=end
+
 export { kthDistinct };

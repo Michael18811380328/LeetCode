@@ -1,11 +1,5 @@
-/*
- * @lc app=leetcode.cn id=2068 lang=javascript
- *
- * [2068] 检查两个字符串是否几乎相等
- */
-
-// @lc code=start
 /**
+ * [2068] 检查两个字符串是否几乎相等
  * @param {string} word1
  * @param {string} word2
  * @return {boolean}
@@ -50,5 +44,5 @@ const checkAlmostEquivalent = function(word1, word2) {
   }
   return true;
 };
-// @lc code=end
+
 export { checkAlmostEquivalent };

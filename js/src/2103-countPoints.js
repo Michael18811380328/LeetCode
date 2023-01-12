@@ -1,11 +1,5 @@
-/*
- * @lc app=leetcode.cn id=2103 lang=javascript
- *
- * [2103] 环和杆
- */
-
-// @lc code=start
 /**
+ * [2103] 环和杆
  * @param {string} rings
  * @return {number}
  */
@@ -40,9 +34,4 @@ const countPoints = function(rings) {
   return result;
 };
 
-// console.log(countPoints("B0B6G0R6R0R6G9") === 1)
-// console.log(countPoints("B0R0G0R9R0B0G0") === 1)
-// console.log(countPoints("G4") === 0)
-
-// @lc code=end
 export { countPoints };

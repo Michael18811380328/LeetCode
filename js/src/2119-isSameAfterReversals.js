@@ -1,5 +1,6 @@
 /**
- * [isSameAfterReversals [2119] 反转两次的数字]
+ * [isSameAfterReversals]
+ * [2119] 反转两次的数字
  * @author Michael An
  * @DateTime 2022-03-08T14:38:49+0800
  * @param    {number}                 num [description]

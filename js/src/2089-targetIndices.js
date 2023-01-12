@@ -1,11 +1,5 @@
-/*
- * @lc app=leetcode.cn id=2089 lang=javascript
- *
- * [2089] 找出数组排序后的目标下标
- */
-
-// @lc code=start
 /**
+ * [2089] 找出数组排序后的目标下标
  * @param {number[]} nums
  * @param {number} target
  * @return {number[]}
@@ -25,5 +19,5 @@ const targetIndices = function(nums, target) {
   });
   return res;
 };
-// @lc code=end
+
 export { targetIndices };

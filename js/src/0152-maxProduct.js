@@ -1,10 +1,5 @@
-/*
- * @lc app=leetcode.cn id=152 lang=javascript
- *
- * [152] 乘积最大子数组
- */
-// @lc code=start
 /**
+ * [152] 乘积最大子数组
  * @param {number[]} nums
  * @return {number}
  * 考点：动态规划
@@ -34,6 +29,5 @@ const maxProduct = function(nums) {
 // console.log(maxProduct([2,3,-2,4]) === 6);
 // console.log(maxProduct([-2,0,-1]) === 0);
 // console.log(maxProduct([-2,3,-4]) === 24);
-// @lc code=end
 
 export { maxProduct };

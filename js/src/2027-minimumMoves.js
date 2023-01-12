@@ -1,18 +1,12 @@
-/*
- * @lc app=leetcode.cn id=2027 lang=javascript
- *
- * [2027] 转换字符串的最少操作次数
- */
-
-// @lc code=start
-/**
- * @param {string} s
- * @return {number}
- */
+// [2027] 转换字符串的最少操作次数
 // 遍历时，在三个元素中，如果第一个是X，那么必须换成O，不管后面的是什么
 // Your runtime beats 57.99 % of javascript submissions
 // 贪心算法，每次遇到一个满足情况的解，就直接处理
 // 注意边界条件的处理（其他的字符串匹配的方法，解不正确）
+/**
+ * @param {string} s
+ * @return {number}
+ */
 const minimumMoves = function(s) {
   let timer = 0;
   if (!s.includes('X')) {
@@ -35,5 +29,5 @@ const minimumMoves = function(s) {
   }
   return timer;
 };
-// @lc code=end
+
 export { minimumMoves };
