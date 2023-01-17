@@ -1,10 +1,3 @@
-/*
- * @lc app=leetcode.cn id=82 lang=javascript
- *
- * [82] 删除排序链表中的重复元素 II
- */
-
-// @lc code=start
 /**
  * Definition for singly-linked list.
  * function ListNode(val, next) {
@@ -16,9 +9,8 @@
  * @param {ListNode} head
  * @return {ListNode}
  */
+// [82] 删除排序链表中的重复元素 II
 // Your runtime beats 52.45 % of javascript submissions
-// 先想好思路，然后把各种情况都想清楚，再写代码，事半功倍
-// 这个再看一下官方思路，哪些地方可以提升
 // 链表的解决方法：处理当前的节点后，写一个节点等于递归调用这个函数
 const deleteDuplicates = function(head) {
   // 如果空链表，或者是最后一个节点，直接返回
@@ -53,5 +45,5 @@ const deleteDuplicates = function(head) {
     }
   }
 };
-// @lc code=end
+
 export { deleteDuplicates };

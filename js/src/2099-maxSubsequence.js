@@ -1,11 +1,5 @@
-/*
- * @lc app=leetcode.cn id=2099 lang=javascript
- *
- * [2099] 找到和最大的长度为 K 的子序列
- */
-
-// @lc code=start
 /**
+ * [2099] 找到和最大的长度为 K 的子序列
  * @param {number[]} nums
  * @param {number} k
  * @return {number[]}
@@ -40,5 +34,4 @@ const maxSubsequence = function(nums, k) {
 // console.log(maxSubsequence([-1,-2,3,4], 3))
 // console.log(maxSubsequence([3,4,3,3], 2))
 
-// @lc code=end
 export { maxSubsequence };
