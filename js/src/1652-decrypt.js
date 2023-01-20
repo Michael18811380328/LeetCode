@@ -1,15 +1,9 @@
-/*
- * @lc app=leetcode.cn id=1652 lang=javascript
- *
- * [1652] 拆炸弹
- */
-
-// @lc code=start
 /**
  * @param {number[]} code
  * @param {number} k
  * @return {number[]}
  */
+// [1652] 拆炸弹
 // 分治算法：先根据 K 的符号确定怎么算
 // 每一个情况使用滑动窗口计算
 // Your runtime beats 81.54 % of javascript submissions
@@ -58,10 +52,4 @@ const decrypt = function(code, k) {
   }
 };
 
-// 实际是数组，需要 .toString() 处理后测试
-// console.log(decrypt([5,7,1,4], 3).toString() == [12,10,16,13]);
-// console.log(decrypt([1,2,3,4], 0).toString() == [0,0,0,0]);
-// console.log(decrypt([2,4,9,3], -2).toString() == [12,5,6,13]);
-
-// @lc code=end
 export { decrypt };

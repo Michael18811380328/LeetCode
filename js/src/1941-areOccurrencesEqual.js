@@ -1,14 +1,8 @@
-/*
- * @lc app=leetcode.cn id=1941 lang=javascript
- *
- * [1941] 检查是否所有字符出现次数相同
- */
-
-// @lc code=start
 /**
  * @param {string} s
  * @return {boolean}
  */
+// [1941] 检查是否所有字符出现次数相同
 // 考点：遍历字符串，使用对象存储出现的次数
 const areOccurrencesEqual = function(s) {
   // 1、如果长度是1，一个字符，直接返回真
@@ -25,7 +19,7 @@ const areOccurrencesEqual = function(s) {
     }
     dict[key] = dict[key] + 1;
   }
-  // 3、遍历对象，判断出现次数是否相同。如果不同，返回false
+  // 3、遍历对象，判断出现次数是否相同，如果不同，返回 false
   let times = -1;
   for (const key in dict) {
     const value = dict[key];
@@ -37,6 +31,5 @@ const areOccurrencesEqual = function(s) {
   }
   return true;
 };
-// @lc code=end
 
 export { areOccurrencesEqual };
