@@ -1,15 +1,9 @@
-/*
- * @lc app=leetcode.cn id=1790 lang=javascript
- *
- * [1790] 仅执行一次字符串交换能否使两个字符串相等
- */
-
-// @lc code=start
 /**
  * @param {string} s1
  * @param {string} s2
  * @return {boolean}
  */
+// [1790] 仅执行一次字符串交换能否使两个字符串相等
 // 思路：这两个字符串中，只有某两个字符调换位置，其他都相同
 // 那么把这两个找出来，然后调换比较即可
 // Your runtime beats 91.85 % of javascript submissions
@@ -22,8 +16,8 @@ const areAlmostEqual = function(s1, s2) {
     return false;
   }
   // 默认设置两个指针都是-1
-  let p1 = -1; let
-    p2 = -1;
+  let p1 = -1;
+  let p2 = -1;
   for (let i = 0; i < s1.length; i++) {
     // 如果某个字符不相等，分三种情况
     if (s1[i] !== s2[i]) {
@@ -52,5 +46,5 @@ const areAlmostEqual = function(s1, s2) {
   // 否则不满足
   return false;
 };
-// @lc code=end
+
 export { areAlmostEqual };

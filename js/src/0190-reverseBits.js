@@ -1,9 +1,4 @@
-/*
- * @lc app=leetcode.cn id=190 lang=javascript
- *
- * [190] 颠倒二进制位
- */
-// @lc code=start
+// [190] 颠倒二进制位
 // 二进制运算，实际工作中没有使用JS二进制
 // 所以参考官方解答学习（不要求掌握）
 // 将 nn 视作一个长为 3232 的二进制串，从低位往高位枚举 nn 的每一位，将其倒序添加到翻转结果 \textit{rev}rev 中。
@@ -20,6 +15,5 @@ const reverseBits = function(n) {
   }
   return rev >>> 0;
 };
-// @lc code=end
 
 export { reverseBits };

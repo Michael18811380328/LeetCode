@@ -1,10 +1,3 @@
-/*
- * @lc app=leetcode.cn id=21 lang=javascript
- *
- * [21] 合并两个有序链表
- */
-
-// @lc code=start
 /**
  * Definition for singly-linked list.
  * function ListNode(val, next) {
@@ -17,9 +10,11 @@
  * @param {ListNode} list2
  * @return {ListNode}
  */
+// [21] 合并两个有序链表
+// 将两个升序链表合并为一个新的 升序 链表并返回。
+// 新链表是通过拼接给定的两个链表的所有节点组成的。
 // 这个题目的原理明白，就是递归比较链表头结点的值
-// 卡在了链表数据结构操作上
-// 因为没有要求不改变原始链表，那么直接操作原始链表即可
+// 没有要求不改变原始链表，那么直接操作原始链表即可
 const mergeTwoLists = function(list1, list2) {
   if (list1 === null && list2 === null) {
     return null;
@@ -30,7 +25,7 @@ const mergeTwoLists = function(list1, list2) {
   if (list2 === null) {
     return list1;
   }
-  // 如果都不是 null 直接比较这两个链表的头结点
+  // 如果都不是 null, 直接比较这两个链表的头结点
   if (list1.val < list2.val) {
     list1.next = mergeTwoLists(list1.next, list2);
     return list1;
@@ -39,6 +34,5 @@ const mergeTwoLists = function(list1, list2) {
     return list2;
   }
 };
-// @lc code=end
 
 export { mergeTwoLists };

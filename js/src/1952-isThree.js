@@ -1,11 +1,5 @@
-/*
- * @lc app=leetcode.cn id=1952 lang=javascript
- *
- * [1952] 三除数
- */
-
-// @lc code=start
 /**
+ * [1952] 三除数
  * @param {number} n
  * @return {boolean}
  */
@@ -15,7 +9,9 @@ const isThree = function(n) {
   for (let i = 0; i <= n; i++) {
     if (n % i === 0) {
       times++;
-      if (times > 3) return false;
+      if (times > 3) {
+        return false;
+      }
     }
   }
   return times === 3;
@@ -47,9 +43,8 @@ const isThree2 = function(n) {
     }
     return true;
   };
-  // 3 如果是整数，判断这个数是否是质数，这样性能就提升很多了
+  // 3 如果是整数，判断这个数是否是质数
   return isPrime(m);
 };
-// @lc code=end
 
 export { isThree, isThree2 };
