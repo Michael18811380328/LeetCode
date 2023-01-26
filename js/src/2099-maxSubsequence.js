@@ -30,8 +30,4 @@ const maxSubsequence = function(nums, k) {
   return result;
 };
 
-// console.log(maxSubsequence([2,1,3,3], 2))
-// console.log(maxSubsequence([-1,-2,3,4], 3))
-// console.log(maxSubsequence([3,4,3,3], 2))
-
 export { maxSubsequence };

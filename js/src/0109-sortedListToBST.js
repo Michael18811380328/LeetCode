@@ -1,10 +1,4 @@
-/*
- * @lc app=leetcode.cn id=109 lang=javascript
- *
- * [109] 有序链表转换二叉搜索树
- */
-
-// @lc code=start
+// [109] 有序链表转换二叉搜索树
 /**
  * Definition for singly-linked list.
  * function ListNode(val, next) {
@@ -58,5 +52,4 @@ const sortedListToBST = function(head) {
 // 2、设置中位数的是根节点，然后左子树和右子树的边界可以确定，递归左右子树即可
 // 注意：链表找到元素的索引
 
-// @lc code=end
 export { sortedListToBST };

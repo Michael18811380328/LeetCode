@@ -1,10 +1,3 @@
-/*
- * @lc app=leetcode.cn id=114 lang=javascript
- *
- * [114] 二叉树展开为链表
- */
-
-// @lc code=start
 /**
  * Definition for a binary tree node.
  * function TreeNode(val, left, right) {
@@ -13,6 +6,7 @@
  *     this.right = (right===undefined ? null : right)
  * }
  */
+// [114] 二叉树展开为链表
 /**
  * @param {TreeNode} root
  * @return {void} Do not return anything, modify root in-place instead.
@@ -37,5 +31,5 @@ const flatten = function(root) {
     prev.right = curr;
   }
 };
-// @lc code=end
+
 export { flatten };

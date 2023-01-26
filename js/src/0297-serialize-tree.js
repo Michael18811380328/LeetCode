@@ -1,7 +1,6 @@
 // 297 二叉树的序列化和反序列化，需要按照官方的格式，去序列化
 // 简单就是：中序遍历（递归二叉树的节点） + 字符串拼接即可
 // 可以不用转换成数组，然后再转换成字符串的格式
-
 /**
  * Definition for a binary tree node.
  * function TreeNode(val) {
@@ -9,7 +8,6 @@
  *     this.left = this.right = null;
  * }
  */
-
 /**
  * Encodes a tree to a single string.
  * 二叉树序列化成字符串
@@ -29,7 +27,6 @@ const serialize = function(root) {
   };
   return runNode(root, '');
 };
-
 /**
  * Decodes your encoded data to tree.
  * 字符串反序列化成二叉树

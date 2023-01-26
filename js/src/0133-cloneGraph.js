@@ -1,10 +1,3 @@
-/*
- * @lc app=leetcode.cn id=133 lang=javascript
- *
- * [133] 克隆图
- */
-
-// @lc code=start
 /**
  * // Definition for a Node.
  * function Node(val, neighbors) {
@@ -12,10 +5,10 @@
  *    this.neighbors = neighbors === undefined ? [] : neighbors;
  * };
  */
-
 /**
  * @param {Node} node
  * @return {Node}
+ * [133] 克隆图
  * 基本思路：BFS或者DFS遍历图节点，使用一个字典记录已经遍历的节点
  * 遍历图节点时，同时克隆节点的值和节点的关系
  */
@@ -39,5 +32,5 @@ const cloneGraph = function(node) {
   };
   return runNode(node);
 };
-// @lc code=end
+
 export { cloneGraph };

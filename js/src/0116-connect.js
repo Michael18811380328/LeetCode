@@ -1,10 +1,3 @@
-/*
- * @lc app=leetcode.cn id=116 lang=javascript
- *
- * [116] 填充每个节点的下一个右侧节点指针
- */
-
-// @lc code=start
 /**
  * // Definition for a Node.
  * function Node(val, left, right, next) {
@@ -14,6 +7,7 @@
  *    this.next = next === undefined ? null : next;
  * };
  */
+// [116] 填充每个节点的下一个右侧节点指针
 /**
  * @param {Node} root
  * @return {Node}
@@ -56,5 +50,5 @@ const connect = function(root) {
   }
   return root;
 };
-// @lc code=end
+
 export { connect };

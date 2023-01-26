@@ -1,9 +1,3 @@
-/*
- * @lc app=leetcode.cn id=95 lang=javascript
- * [95] 不同的二叉搜索树 II
- */
-
-// @lc code=start
 /**
  * Definition for a binary tree node.
  * function TreeNode(val, left, right) {
@@ -12,6 +6,7 @@
  *     this.right = (right===undefined ? null : right)
  * }
  */
+// [95] 不同的二叉搜索树 II
 /**
  * @param {number} n
  * @return {TreeNode[]}
@@ -53,5 +48,5 @@ const generateTrees = function(n) {
 };
 
 // 官方详细解法：https://leetcode-cn.com/problems/unique-binary-search-trees-ii/solution/bu-tong-de-er-cha-sou-suo-shu-ii-by-leetcode-solut/
-// @lc code=end
+
 export { generateTrees };

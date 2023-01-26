@@ -1,10 +1,3 @@
-/*
- * @lc app=leetcode.cn id=199 lang=javascript
- *
- * [199] 二叉树的右视图
- */
-
-// @lc code=start
 /**
  * Definition for a binary tree node.
  * function TreeNode(val, left, right) {
@@ -13,6 +6,7 @@
  *     this.right = (right===undefined ? null : right)
  * }
  */
+// [199] 二叉树的右视图
 /**
  * @param {TreeNode} root
  * @return {number[]}
@@ -42,6 +36,5 @@ const rightSideView = function(root) {
   runTree(root.right, layer + 1);
   return matrix.map((arr) => arr[arr.length - 1]);
 };
-// @lc code=end
 
 export { rightSideView };

@@ -1,10 +1,3 @@
-/*
- * @lc app=leetcode.cn id=24 lang=c
- *
- * [24] 两两交换链表中的节点
- */
-
-// @lc code=start
 /**
  * Definition for singly-linked list.
  * struct ListNode {
@@ -12,6 +5,7 @@
  *     struct ListNode *next;
  * };
  */
+// [24] 两两交换链表中的节点
 // Your runtime beats 100 % of c submissions
 struct ListNode* swapPairs(struct ListNode* head){
   // 没有节点或者没有下一个节点
@@ -29,5 +23,3 @@ struct ListNode* swapPairs(struct ListNode* head){
   a->next = head;
   return a;
 }
-// @lc code=end
-
