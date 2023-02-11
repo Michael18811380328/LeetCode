@@ -22,7 +22,7 @@ def intToRoman(num):
     res.append((num - (num % 5)) / 5)
     num %= 5
 
-    res.append(num);
+    res.append(num)
 
     result = ''
 
@@ -37,7 +37,7 @@ def intToRoman(num):
             result = result + 'CD'
     else:
         if (res[1] == 1):
-            result += 'D';
+            result += 'D'
         while (res[2] > 0):
             result += 'C'
             res[2] -= 1

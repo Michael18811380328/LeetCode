@@ -6,7 +6,7 @@ def isPrefixString(s: str, words: List[str]) -> bool:
     wLen = len(words)
     for i in range(0, wLen):
         item = words[i]
-        tmp = tmp + item;
+        tmp = tmp + item
         if tmp == s:
             return True
         if len(tmp) > sLen:
