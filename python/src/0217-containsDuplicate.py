@@ -9,7 +9,7 @@ class Solution(object):
         for i in range(0, numsLen):
             item = nums[i]
             if (item in dict):
-                return True;
+                return True
             else:
                 dict[item] = True
         return False

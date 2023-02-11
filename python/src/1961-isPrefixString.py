@@ -9,7 +9,7 @@ def isPrefixString(s, words):
     sLen = len('' + join(words))
     for i in range(0, len(words)):
         item = words[i]
-        tmp = tmp + item;
+        tmp = tmp + item
         if tmp == s:
             return True
         if len(tmp) > sLen:

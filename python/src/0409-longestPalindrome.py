@@ -3,7 +3,7 @@ def longestPalindrome(s):
     :type s: str
     :rtype: int
     """
-    s_len = len(s);
+    s_len = len(s)
     # 长度是0或者1的情况
     if s_len < 2:
         return s_len
