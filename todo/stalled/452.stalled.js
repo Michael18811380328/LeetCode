@@ -80,43 +80,16 @@ var getMaxPoint = function(matrix) {
   return currentKeys; // 这是当前最大值的数组，然后需要删除对应的数组
 }
 
-
-
 // [[9,17],[4,12],[4,8],[4,8],[7,13],[3,4],[7,12],[9,15]]
 // 这是现在出错的数组
 // 按照贪心算法的出来的是3，实际上结果是2（因为最大值的问题）
 // 如果有多个最小值，那么需要计算哪个最小
 // 这个可能有性能问题，不过需要计算
 
-
 // [[2,3],[7,15],[5,12],[4,5],[8,13],[9,16],[5,8],[8,16],[3,4],[8,17]]
 // 看来还需要考虑出现的次数
-
 
 // [[4289383,51220269],[81692777,96329692],[57747793,81986128],[19885386,69645878],[96516649,186158070],[25202362,75692389],[83368690,85888749],[44897763,112411689],[65180540,105563966],[4089172,7544908]]
 // 如何求长度很长的数组的公共区间？不能使用离散的对象表示，最好使用区间表示
 // 现在这样性能不好，会内存溢出。。。
 // 需要减少不必要的循环
-// <--- Last few GCs --->
-// [41:0x5674750]      886 ms: Mark-sweep (reduce) 117.7 (126.7) -> 106.3 (115.3) MB, 35.5 / 0.0 ms  (+ 5.5 ms in 2 steps since start of marking, biggest step 4.1 ms, walltime since start of marking 118 ms) (average mu = 0.733, current mu = 0.736) last resor[41:0x5674750]      914 ms: Mark-sweep (reduce) 106.3 (111.3) -> 80.5 (85.6) MB, 28.3 / 0.0 ms  (average mu = 0.617, current mu = 0.001) last resort GC in old space requested
-// <--- JS stacktrace --->
-// FATAL ERROR: CALL_AND_RETRY_LAST Allocation failed - JavaScript heap out of memory
-//  1: 0x9feb00 node::Abort() [nodejs run]
-//  2: 0x94a471 node::FatalError(char const*, char const*) [nodejs run]
-//  3: 0xb720fe v8::Utils::ReportOOMFailure(v8::internal::Isolate*, char const*, bool) [nodejs run]
-//  4: 0xb72477 v8::internal::V8::FatalProcessOutOfMemory(v8::internal::Isolate*, char const*, bool) [nodejs run]
-//  5: 0xd1c065  [nodejs run]
-//  6: 0xd2e8b1 v8::internal::Heap::AllocateRawWithRetryOrFailSlowPath(int, v8::internal::AllocationType, v8::internal::AllocationOrigin, v8::internal::AllocationAlignment) [nodejs run]
-//  7: 0xcf4142 v8::internal::Factory::AllocateRaw(int, v8::internal::AllocationType, v8::internal::AllocationAlignment) [nodejs run]
-//  8: 0xcf0392 v8::internal::FactoryBase<v8::internal::Factory>::AllocateRawArray(int, v8::internal::AllocationType) [nodejs run]
-//  9: 0xcf0444 v8::internal::FactoryBase<v8::internal::Factory>::NewFixedArrayWithFiller(v8::internal::Handle<v8::internal::Map>, int, v8::internal::Handle<v8::internal::Oddball>, v8::internal::AllocationType) [nodejs run]
-// 10: 0xe7dcee  [nodejs run]
-// 11: 0xe83434  [nodejs run]
-// 12: 0xe836f8  [nodejs run]
-// 13: 0xed6d3b v8::internal::JSObject::AddDataElement(v8::internal::Handle<v8::internal::JSObject>, unsigned int, v8::internal::Handle<v8::internal::Object>, v8::internal::PropertyAttributes) [nodejs run]
-// 14: 0xf2af22 v8::internal::Object::AddDataProperty(v8::internal::LookupIterator*, v8::internal::Handle<v8::internal::Object>, v8::internal::PropertyAttributes, v8::Maybe<v8::internal::ShouldThrow>, v8::internal::StoreOrigin) [nodejs run]
-// 15: 0xf2e21f v8::internal::Object::SetProperty(v8::internal::LookupIterator*, v8::internal::Handle<v8::internal::Object>, v8::internal::StoreOrigin, v8::Maybe<v8::internal::ShouldThrow>) [nodejs run]
-// 16: 0x1057b55 v8::internal::Runtime::SetObjectProperty(v8::internal::Isolate*, v8::internal::Handle<v8::internal::Object>, v8::internal::Handle<v8::internal::Object>, v8::internal::Handle<v8::internal::Object>, v8::internal::StoreOrigin, v8::Maybe<v8::internal::ShouldThrow>) [nodejs run]
-// 17: 0x1058bf7 v8::internal::Runtime_SetKeyedProperty(int, unsigned long*, v8::internal::Isolate*) [nodejs run]
-// 18: 0x13ce059  [nodejs run]
-
