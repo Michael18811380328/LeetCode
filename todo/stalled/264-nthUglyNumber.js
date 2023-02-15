@@ -1,3 +1,7 @@
+// 第 N 个丑数
+// https://leetcode.cn/problems/ugly-number-ii/solution/chou-shu-ii-by-leetcode-solution-uoqd/
+// 使用动态规划 + “最小堆”数据结构，这个知识点不太懂
+
 // 辅助函数：判断一个数是否是丑数
 const isUgly = function (num) {
   while (num % 5 === 0 && num > 1) {
