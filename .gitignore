@@ -20,6 +20,7 @@
 #python
 *.pyc
 *.pytest_cache
+/python/python3-env
 
 # IDE cache
 .vscode
