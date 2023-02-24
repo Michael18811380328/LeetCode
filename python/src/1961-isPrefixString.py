@@ -1,13 +1,10 @@
-def isPrefixString(s, words):
-    """
-    :type s: str
-    :type words: List[str]
-    :rtype: bool
-    """
+def isPrefixString(s: str, words: List[str]) -> bool:
     tmp = ''
-    # python2 中直接使用 join(list) 可以把列表转换成字符串
-    sLen = len('' + join(words))
-    for i in range(0, len(words)):
+    # python3 中使用 seperator.join(list)
+    # 可以把列表转换成字符串(使用分隔符连接)
+    sLen = len(tmp.join(words))
+    wLen = len(words)
+    for i in range(0, wLen):
         item = words[i]
         tmp = tmp + item
         if tmp == s:
