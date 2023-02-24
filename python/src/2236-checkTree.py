@@ -1,14 +1,10 @@
+# https://leetcode.cn/problems/root-equals-sum-of-children/
 # Definition for a binary tree node.
-# class TreeNode(object):
+# class TreeNode:
 #     def __init__(self, val=0, left=None, right=None):
 #         self.val = val
 #         self.left = left
 #         self.right = right
-class Solution(object):
-    def checkTree(self, root):
-        """
-        :type root: Optional[TreeNode]
-        :rtype: bool
-        """
+class Solution:
+    def checkTree(self, root: Optional[TreeNode]) -> bool:
         return root.val == root.left.val + root.right.val
-        

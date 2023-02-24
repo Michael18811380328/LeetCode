@@ -1,5 +1,4 @@
 # coding=utf-8
-"""231-判断2的幂"""
 def isPowerOfTwo(n):
     """判断2的幂"""
     if n <= 0:

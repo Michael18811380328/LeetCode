@@ -1,9 +1,5 @@
-class Solution(object):
-    def containsDuplicate(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: bool
-        """
+class Solution:
+    def containsDuplicate(self, nums: List[int]) -> bool:
         dict = {}
         numsLen = len(nums)
         for i in range(0, numsLen):

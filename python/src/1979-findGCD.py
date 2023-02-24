@@ -1,10 +1,6 @@
 import math
 
-def findGCD(self, nums):
-    """
-    :type nums: List[int]
-    :rtype: int
-    """
+def findGCD(self, nums: List[int]) -> int:
     list_max = max(nums)
     list_min = min(nums)
     if list_max == list_min or list_max % list_min == 0:
