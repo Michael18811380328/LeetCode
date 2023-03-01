@@ -2,9 +2,9 @@
 function leftRightDifference(nums: number[]): number[] {
   const len: number = nums.length;
   if (len === 1) return [0];
-  let leftSum: number[] = [];
-  let rightSum: number[] = [];
-  let tmp: number = 0;
+  const leftSum: number[] = [];
+  const rightSum: number[] = [];
+  let tmp = 0;
   for (let i = 0; i < len; i++) {
     leftSum[i] = tmp;
     tmp += nums[i];
@@ -14,9 +14,11 @@ function leftRightDifference(nums: number[]): number[] {
     rightSum[i] = tmp;
     tmp += nums[i];
   }
-  let res: number[] = [];
+  const res: number[] = [];
   for (let i = 0; i < len; i++) {
     res.push(Math.abs(leftSum[i] - rightSum[i]));
   }
   return res;
-};
+}
+
+export {leftRightDifference};
