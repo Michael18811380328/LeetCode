@@ -75,9 +75,9 @@ function addExportTs(path) {
   }
 }
 
-// 这里放需要处理的目录（暂时用绝对路径）
-const jsDir = '/Users/seafile/desktop/code-seafile/LeetCode/js/src';
-const tsDir = '/Users/seafile/desktop/code-seafile/LeetCode/typescript/src';
+// 这里放需要处理的目录（绝对路径）
+const jsDir = './LeetCode/js/src';
+const tsDir = './LeetCode/typescript/src';
 
 addExport(jsDir);
 addExportTs(tsDir);
