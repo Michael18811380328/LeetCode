@@ -45,7 +45,7 @@ function rename(path) {
   }
 }
 
-const initDir = '/Users/seafile/PersonalRepo/LeetCode/';
+const initDir = './LeetCode/';
 const subDirs = ['js/src', 'typescript/src', 'python/src', 'python/python3', 'others'];
 
 subDirs.forEach(subdir => {

@@ -52,6 +52,6 @@ function compileFile(path) {
 
 // 需要处理 Clang 的目录（绝对路径）
 // 现在 C 部分还有不少问题，稍后修复一下基本的编译错误
-const initDir = '/Users/seafile/PersonalRepo/LeetCode/book/aha-algorithms';
+const initDir = './LeetCode/book/aha-algorithms';
 
 compileFile(initDir);
