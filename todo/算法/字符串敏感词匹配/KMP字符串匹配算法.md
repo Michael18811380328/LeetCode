@@ -188,7 +188,7 @@ kmp算法的核心即是计算子串F每一个位置之前的字符串的前缀�
 
 获得next数组:
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
 
 ```
  1 void cal_next(char *str, int *next, int len)
@@ -210,11 +210,11 @@ kmp算法的核心即是计算子串F每一个位置之前的字符串的前缀�
 17 }
 ```
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
 
  kmp主函数：
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
 
 ```
  1 int KMP(char *str, int slen, char *ptr, int plen)
@@ -244,7 +244,7 @@ kmp算法的核心即是计算子串F每一个位置之前的字符串的前缀�
 25 }
 ```
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
 
  代码说明：
 
@@ -258,22 +258,20 @@ kmp算法的核心即是计算子串F每一个位置之前的字符串的前缀�
 ```
 
 看cal_next(..)函数：
-*首先我们看第一个while循环，它到底干了什么。*
-*在此之前，我们先回到原程序。原程序里有一个大的for()循环，那这个for()循环是干嘛的？*
-*这个for循环就是计算next[0]，next[1],…next[q]…的值。*
-*里面最后一句next[q]=k就是说明每次循环结束，我们已经计算了ptr的前(q+1)个字母组成的子串的“相同的最长前缀和最长后缀的长度”。这个“长度”就是k。*
-*好，到此为止，假设循环进行到 第 q 次，即已经计算了next[q]，我们是怎么计算next[q+1]呢？*
-*比如我们已经知道ababab，q=4时，next[4]=2（k=2，表示该字符串的前5个字母组成的子串ababa存在相同的最长前缀和最长后缀的长度是3，所以k=2,next[4]=2。*
-*这个结果可以理解成我们自己观察算的，也可以理解成程序自己算的，这不是重点，重点是程序根据目前的结果怎么算next[5]的）。那么对于字符串ababab，我们计算next[5]的时候，此时q=5, k=2（上一步循环结束后的结果）。*
-*那么我们需要比较的是str[k+1]和str[q]是否相等，其实就是str[1]和str[5]是否相等！，为啥从k+1比较呢，因为上一次循环中，我们已经保证了str[k]和str[q]（注意这个q是上次循环的q）是相等的（这句话自己想想，很容易理解），所以到本次循环，我们直接比较str[k+1]和str[q]是否相等（这个q是本次循环的q）。*
-*如果相等，那么跳出while()，进入if()，k=k+1，接着next[q]=k。即对于ababab，我们会得出next[5]=3。*
-*如果不等，我们可以用”ababac“描述这种情况。不等，进入while()里面，进行k=next[k]，这句话是说，在str[k + 1] != str[q]的情况下，我们往前找一个k，使str[k + 1]==str[q]。程序给出了一种找法，那就是 k = next[k]。*
-*程序的意思是说，一旦str[k + 1] != str[q]，即在后缀里面找不到时，我是可以直接跳过中间一段，跑到前缀里面找，next[k]就是相同的最长前缀和最长后缀的长度。所以，k=next[k]就变成，k=next[2]，即k=0。*
-*此时再比较str[0+1]和str[5]是否相等，不等，则k=next[0]=-1。跳出循环。*
 
- 
+首先我们看第一个while循环，它到底干了什么。
+在此之前，我们先回到原程序。原程序里有一个大的for()循环，那这个for()循环是干嘛的？
+这个for循环就是计算next[0]，next[1],…next[q]…的值。
+里面最后一句next[q]=k就是说明每次循环结束，我们已经计算了ptr的前(q+1)个字母组成的子串的“相同的最长前缀和最长后缀的长度”。这个“长度”就是k。
+好，到此为止，假设循环进行到 第 q 次，即已经计算了next[q]，我们是怎么计算next[q+1]呢？
+比如我们已经知道ababab，q=4时，next[4]=2（k=2，表示该字符串的前5个字母组成的子串ababa存在相同的最长前缀和最长后缀的长度是3，所以k=2,next[4]=2。
+这个结果可以理解成我们自己观察算的，也可以理解成程序自己算的，这不是重点，重点是程序根据目前的结果怎么算next[5]的）。那么对于字符串ababab，我们计算next[5]的时候，此时q=5, k=2（上一步循环结束后的结果）。
+那么我们需要比较的是str[k+1]和str[q]是否相等，其实就是str[1]和str[5]是否相等！，为啥从k+1比较呢，因为上一次循环中，我们已经保证了str[k]和str[q]（注意这个q是上次循环的q）是相等的（这句话自己想想，很容易理解），所以到本次循环，我们直接比较str[k+1]和str[q]是否相等（这个q是本次循环的q）。
+如果相等，那么跳出while()，进入if()，k=k+1，接着next[q]=k。即对于ababab，我们会得出next[5]=3。
+如果不等，我们可以用”ababac“描述这种情况。不等，进入while()里面，进行k=next[k]，这句话是说，在str[k + 1] != str[q]的情况下，我们往前找一个k，使str[k + 1]==str[q]。程序给出了一种找法，那就是 k = next[k]。
+程序的意思是说，一旦str[k + 1] != str[q]，即在后缀里面找不到时，我是可以直接跳过中间一段，跑到前缀里面找，next[k]就是相同的最长前缀和最长后缀的长度。所以，k=next[k]就变成，k=next[2]，即k=0。
+此时再比较str[0+1]和str[5]是否相等，不等，则k=next[0]=-1。跳出循环。
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
 
 ```
  1 #include<cstdio>
@@ -281,6 +279,7 @@ kmp算法的核心即是计算子串F每一个位置之前的字符串的前缀�
  3 #include<cstring>
  4 #include<algorithm>
  5 using namespace std;
+ 
  6 void cal_next(char *str, int *next, int len)
  7 {
  8     next[0] = -1;
@@ -329,4 +328,5 @@ kmp算法的核心即是计算子串F每一个位置之前的字符串的前缀�
 51 }
 ```
 
-[![复制代码](https://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)
+
+
