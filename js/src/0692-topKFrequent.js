@@ -24,7 +24,6 @@ const topKFrequent = function(words, k) {
     const item = { key, times };
     arr.push(item);
   }
-  // console.log(arr);
   arr.sort((a, b) => {
     if (a.times !== b.times) {
       return a.times > b.times ? -1 : 1;
@@ -32,7 +31,6 @@ const topKFrequent = function(words, k) {
       return a.key > b.key ? 1 : -1;
     }
   });
-  // console.log(arr);
   return arr.slice(0, k).map((item) => item.key);
 };
 // @lc code=end

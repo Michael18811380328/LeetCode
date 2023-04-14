@@ -43,7 +43,6 @@ MyCalendar.prototype.book = function(start, end) {
 // for (let i = 0; i < test.length; i++) {
 //   const testarr = test[i];
 //   const result = myCalendar.book(testarr[0], testarr[1]);
-//   console.log(result);
 // }
 
 /**

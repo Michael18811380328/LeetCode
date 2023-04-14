@@ -25,7 +25,6 @@ const exist = function(board, word) {
       wordDict[word[i]] = 1;
     }
   }
-  // console.log(wordDict);
   const boardPosition = {}; // 这个存放位置
   for (let i = 0; i < board.length; i++) {
     for (let j = 0; j < board[0].length; j++) {
@@ -36,7 +35,6 @@ const exist = function(board, word) {
       boardPosition[curr].push([i, j]);
     }
   }
-  // console.log(boardPosition);
   for (const key in wordDict) {
     const num = wordDict[key];
     if (!boardPosition[key] || boardPosition[key].length < num) {

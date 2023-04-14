@@ -4,7 +4,6 @@
  * [852] 山脉数组的峰顶索引
  */
 
-// @lc code=start
 /**
  * @param {number[]} arr
  * @return {number}
@@ -28,10 +27,7 @@ const peakIndexInMountainArray = function(arr) {
     if (arr[mid] > arr[mid - 1] && arr[mid] > arr[mid + 1]) {
       return mid;
     }
-    // console.log(start, end, mid);
   }
 };
-
-// @lc code=end
 
 export { peakIndexInMountainArray };

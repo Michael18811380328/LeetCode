@@ -77,15 +77,12 @@ const findLHS = function(nums) {
     arr.push(parseInt(key));
   }
   arr.sort((a, b) => a - b);
-  // console.log(arr);
-  // console.log(dict);
   let longest = 0;
   for (let i = 1; i < arr.length; i++) {
     if (arr[i] - arr[i - 1] === 1) {
       const key1 = String(arr[i]);
       const key2 = String(arr[i - 1]);
       const times = dict[key1] + dict[key2];
-      // console.log(key1, key2);
       longest = longest > times ? longest : times;
     }
   }

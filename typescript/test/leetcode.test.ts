@@ -17,6 +17,8 @@ import {sortByBits} from '../src/1356-sortByBits';
 import {slowestKey} from '../src/1629-slowestKey';
 import {trimMean} from '../src/1619-trimMean';
 import {decodeMessage} from '../src/2325-decodeMessage';
+import {checkXMatrix} from '../src/2319-checkXMatrix';
+import {getMinDistance, getMinDistance2} from '../src/1848-getMinDistance';
 
 test('134-canCompleteCircuit', () => {
   const gas = [1, 2, 3, 4, 5];
@@ -203,6 +205,52 @@ test('448-findDisappearedNumbers', () => {
   expect(findDisappearedNumbers([4, 3, 2, 7, 8, 2, 3, 1])).toStrictEqual([
     5, 6,
   ]);
+});
+
+test('2319-checkXMatrix', () => {
+  expect(
+    checkXMatrix([
+      [2, 0, 0, 1],
+      [0, 3, 1, 0],
+      [0, 5, 2, 0],
+      [4, 0, 0, 2],
+    ])
+  ).toStrictEqual(true);
+  expect(
+    checkXMatrix([
+      [5, 7, 0],
+      [0, 3, 1],
+      [0, 5, 0],
+    ])
+  ).toStrictEqual(false);
+});
+
+test('1848-getMinDistance', () => {
+  expect(getMinDistance([1, 2, 3, 4, 5], 5, 3)).toStrictEqual(1);
+  expect(getMinDistance([1], 1, 0)).toStrictEqual(0);
+  expect(getMinDistance([1, 1, 1, 1, 1, 1, 1, 1, 1, 1], 1, 0)).toStrictEqual(0);
+  expect(getMinDistance([5, 3, 6], 5, 2)).toStrictEqual(2);
+  expect(
+    getMinDistance(
+      [1, 2, 3, 4, 4, 4, 4, 4, 32, 5, 2, 3, 2, 5, 5, 5, 5, 34, 5, 6, 2, 15],
+      2,
+      8
+    )
+  ).toStrictEqual(2);
+  // optimise codes
+  expect(getMinDistance2([1, 2, 3, 4, 5], 5, 3)).toStrictEqual(1);
+  expect(getMinDistance2([1], 1, 0)).toStrictEqual(0);
+  expect(getMinDistance2([1, 1, 1, 1, 1, 1, 1, 1, 1, 1], 1, 0)).toStrictEqual(
+    0
+  );
+  expect(getMinDistance2([5, 3, 6], 5, 2)).toStrictEqual(2);
+  expect(
+    getMinDistance2(
+      [1, 2, 3, 4, 4, 4, 4, 4, 32, 5, 2, 3, 2, 5, 5, 5, 5, 34, 5, 6, 2, 15],
+      2,
+      8
+    )
+  ).toStrictEqual(2);
 });
 
 test('2325-decodeMessage', () => {

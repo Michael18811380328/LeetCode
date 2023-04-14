@@ -99,14 +99,12 @@ const sortList = function(head) {
 //     head.next = head.next.next;
 //   }
 //   arr.sort((a, b) => a - b);
-//   console.log(arr);
 //   let res = new ListNode(arr[0]);
 //   for (let i = 1; i < arr.length; i++) {
 //     let item = new ListNode(arr[i]);
 //     // 这个指针为什么没有过来呢？
 //     res.next = item;
 //     res = res.next;
-//     console.log(res);
 //   }
 //   return res;
 //   };

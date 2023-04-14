@@ -20,7 +20,6 @@ const freqAlphabets = function(s) {
       // 第二个规则
       cur = Number(s[0] + s[1]);
       curStr = String.fromCharCode(cur + 96);
-      // console.log(curStr);
       res += curStr;
       s = s.slice(3);
     } else {
@@ -28,10 +27,8 @@ const freqAlphabets = function(s) {
       cur = Number(s[0]);
       curStr = String.fromCharCode(cur + 96);
       res += curStr;
-      // console.log(curStr);
       s = s.slice(1);
     }
-    // console.log(s);
   }
   return res;
 };

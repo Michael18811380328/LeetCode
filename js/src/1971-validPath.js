@@ -34,7 +34,6 @@ const validPath = function(n, edges, start, end) {
     }
     dict[value].push(key);
   }
-  // console.log(dict);
   // 然后找到开始的 start 节点，广度优先遍历
   // 如果开始节点是一个孤立节点，直接返回 false
   if (!dict[start]) {

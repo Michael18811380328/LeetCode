@@ -37,7 +37,6 @@ const findMode = function(root) {
   const dict = {};
   // 使用辅助函数遍历树节点
   runTree(root, dict);
-  // console.log(dict);
   // 统计字典中的最大值
   const values = Object.values(dict);
   const max = Math.max(...values);

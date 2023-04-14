@@ -3,8 +3,6 @@
  *
  * [696] 计数二进制子串
  */
-
-// @lc code=start
 /**
  * @param {string} s
  * @return {number}
@@ -40,7 +38,6 @@ const countBinarySubstrings = function(s) {
       current2 = item;
       time2 = 1;
     }
-    // console.log(current1, time1, current2, time2, res);
   }
   if (current2) {
     const min = Math.min(time1, time2);
@@ -48,6 +45,5 @@ const countBinarySubstrings = function(s) {
   }
   return res;
 };
-// @lc code=end
 
 export { countBinarySubstrings };

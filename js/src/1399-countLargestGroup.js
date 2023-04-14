@@ -33,7 +33,6 @@ const countLargestGroup = function(n) {
       dict[sum] = 1;
     }
   }
-  // console.log(dict);
   // 然后把字典的值转换成数组？求出现次数最多的值
   const dict2 = {};
   let max = 0;
@@ -48,7 +47,6 @@ const countLargestGroup = function(n) {
       dict2[value]++;
     }
   }
-  // console.log(dict2);
   return dict2[max];
 };
 // @lc code=end

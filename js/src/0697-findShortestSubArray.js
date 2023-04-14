@@ -23,7 +23,6 @@ const findShortestSubArray = function(nums) {
     max = max > dict[key].times ? max : dict[key].times;
     dict[key].end = i;
   }
-  // console.log(dict, max);
   // times 最大，start - end 最小的情况
   if (max === 1) {
     return 1;
@@ -33,7 +32,6 @@ const findShortestSubArray = function(nums) {
     const item = dict[key];
     if (item.times === max) {
       const tmp = item.end - item.start + 1;
-      // console.log(tmp);
       if (minLen >= 0) {
         minLen = minLen < tmp ? minLen : tmp;
       } else {

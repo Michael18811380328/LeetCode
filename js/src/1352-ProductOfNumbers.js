@@ -24,7 +24,6 @@ ProductOfNumbers.prototype.add = function(num) {
  */
 ProductOfNumbers.prototype.getProduct = function(k) {
   let res = 1;
-  // console.log(this.arr);
   for (let i = this.arr.length - 1; i > this.arr.length - 1 - k; i--) {
     res *= this.arr[i];
   }

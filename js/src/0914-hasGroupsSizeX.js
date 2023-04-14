@@ -42,11 +42,9 @@ const hasGroupsSizeX = function(deck) {
   arr.sort((a, b) => a - b);
   if (!arr[1]) return true;
   let res = gcd(arr[0], arr[1]);
-  // console.log(arr);
   if (res === 1) return false;
   for (let i = 1; i < arr.length; i++) {
     res = gcd(res, arr[i]);
-    // console.log(res, arr[i], res);
     if (res === 1) return false;
   }
   return true;

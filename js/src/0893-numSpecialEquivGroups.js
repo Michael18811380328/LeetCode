@@ -17,7 +17,6 @@ const numSpecialEquivGroups = function(A) {
   for (let i = 0; i < len; i++) {
     const item = A[i];
     const key = getKey(item);
-    // console.log(key);
     dict[key] ? dict[key]++ : dict[key] = 1;
     num = num > dict[key] ? num : dict[key];
   }

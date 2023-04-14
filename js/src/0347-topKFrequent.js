@@ -57,7 +57,6 @@ function topKFrequent(nums, k) {
 // else if (target.length === k) {
 //   if (noSort) {
 //     target.sort((a, b) => a - b);
-//     console.log(target);
 //   }
 //   if (target[target.length - 1])
 // }

@@ -30,7 +30,6 @@ const findFrequentTreeSum = function(root) {
   // 获取最大值
   let res = [];
   let max = 0;
-  // console.log(dict);
   for (const key in dict) {
     const times = dict[key];
     if (times > max) {

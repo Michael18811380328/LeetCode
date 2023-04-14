@@ -38,7 +38,6 @@ const summaryRanges = function (nums) {
     }
   }
   // 最后处理剩余的
-  // console.log(start, current);
   if (start !== current) {
     // start current 放在数组中
     const item = `${start}->${current}`;

@@ -29,7 +29,6 @@ const findAndReplacePattern = function(words, pattern) {
     keyTimes.push(value);
   }
   keyTimes.sort((a, b) => a - b);
-  // console.log(keyTimes);
 
   // 辅助函数：判断是否相同模式
   // 现在这样需要获取全部的长度，性能不好
@@ -50,7 +49,6 @@ const findAndReplacePattern = function(words, pattern) {
     }
     keyTimes1.sort((a, b) => a - b);
     // 这样可以实现，但是性能不好（获取key再排序等等）
-    // console.log(keyTimes1);
     for (let i = 0; i < keyLen; i++) {
       if (String(keyTimes1[i]) !== String(keyTimes[i])) {
         return false;

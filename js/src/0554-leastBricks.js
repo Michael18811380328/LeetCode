@@ -3,8 +3,6 @@
  *
  * [554] 砖墙
  */
-
-// @lc code=start
 /**
  * @param {number[][]} wall
  * @return {number}
@@ -27,9 +25,7 @@ const leastBricks = function(wall) {
       max = dict[initKey] > max ? dict[initKey] : max;
     }
   }
-  // console.log(dict);
   return rowLen - max;
 };
-// @lc code=end
 
 export { leastBricks };

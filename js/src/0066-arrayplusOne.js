@@ -21,7 +21,6 @@
 //     sum = sum * 10 + digits[i];
 //   }
 //   sum++;
-//   console.log(sum);
 //   let result = [];
 //   while (sum > 0) {
 //     let item = sum % 10;
