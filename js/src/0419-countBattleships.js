@@ -36,7 +36,6 @@ const countBattleships = function(board) {
       if (item === 'X') {
         res++;
         changeBoard(board, i, j);
-        // console.log(board);
       }
     }
   }

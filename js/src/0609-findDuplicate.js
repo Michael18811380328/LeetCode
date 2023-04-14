@@ -1,10 +1,7 @@
 /*
  * @lc app=leetcode.cn id=609 lang=javascript
- *
  * [609] 在系统中查找重复文件
  */
-
-// @lc code=start
 /**
  * @param {string[]} paths
  * @return {string[][]}
@@ -23,7 +20,6 @@ const findDuplicate = function(paths) {
       const index = file.indexOf('(');
       const fileName = file.slice(0, index);
       const fileContent = file.slice(index + 1, file.length - 1);
-      // console.log(fileName, fileContent);
       if (!dict[fileContent]) {
         dict[fileContent] = [];
       }
@@ -42,6 +38,5 @@ const findDuplicate = function(paths) {
   }
   return res;
 };
-// @lc code=end
 
 export { findDuplicate };

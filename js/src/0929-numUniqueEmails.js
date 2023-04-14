@@ -29,7 +29,6 @@ const numUniqueEmails = function(emails) {
   let times = 0;
   for (let i = 0; i < len; i++) {
     const item = valid(emails[i]);
-    // console.log(item);
     // 然后放在对象中，用另一个int记录次数
     if (!dict[item]) {
       times++;

@@ -21,7 +21,6 @@ const allCellsDistOrder = function(R, C, r0, c0) {
       arr.push(item);
     }
   }
-  // console.log(arr);
   arr.sort((a, b) => {
     const disA = Math.abs(a[0] - r0) + Math.abs(a[1] - c0);
     const disB = Math.abs(b[0] - r0) + Math.abs(b[1] - c0);

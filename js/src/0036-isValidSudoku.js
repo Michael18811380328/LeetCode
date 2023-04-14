@@ -201,7 +201,6 @@ function isValidSudoku2(board) {
 //       }
 //     }
 //   }
-//   console.log(hash);
 //   for (const [value] of hash) {
 //     if (!isValidHash(value)) {
 //     return false;

@@ -20,7 +20,6 @@ const isTrue = function(string) {
   } else if (str3.includes(firstStr)) {
     target = str3;
   }
-  // console.log(target, firstStr);
   if (!target) {
     return false;
   }

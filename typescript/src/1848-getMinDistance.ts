@@ -41,10 +41,4 @@ function getMinDistance2(
   return 0;
 }
 
-// console.log(getMinDistance([1,2,3,4,5], 5, 3) === 1);
-// console.log(getMinDistance([1], 1, 0) === 0);
-// console.log(getMinDistance([1,1,1,1,1,1,1,1,1,1], 1, 0) === 0);
-// console.log(getMinDistance([5,3,6], 5, 2) === 2);
-// console.log(getMinDistance([1,2,3,4,4,4,4,4,32,5,2,3,2,5,5,5,5,34,5,6,2,15], 2, 8) === 2);
-
 export {getMinDistance, getMinDistance2};

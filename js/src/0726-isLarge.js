@@ -89,7 +89,6 @@ const countOfAtoms = function(formula) {
     const leftIndex = formula.lastIndexOf('(', rightIndex);
     // 把中间的字符剪出来
     const inner = formula.slice(leftIndex + 1, rightIndex);
-    // console.log(inner);
     // 然后找到右面的数字（次数）;
     let tmp = formula.slice(rightIndex + 1);
     let times;
@@ -137,7 +136,7 @@ const countOfAtoms = function(formula) {
   return res;
 };
 
-// 这三个测试通过
+// 测试通过
 // countOfAtoms("(NB3)33");
 // countOfAtoms("H2O");
 // countOfAtoms("Mg(OH)2");

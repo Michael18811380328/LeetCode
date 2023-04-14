@@ -17,7 +17,6 @@
 const isAlienSorted = function(words, order) {
   // 写一个辅助函数，判断两个单词是否符合顺序
   const checkOrder = function(a, b) {
-    // console.log(a, b);
     const aLen = a.length;
     for (let i = 0; i < aLen; i++) {
       // 其中 '∅' 是空白字符

@@ -13,7 +13,6 @@ const uniqueMorseRepresentations = function(words) {
       const index = str.charCodeAt(i) - 97;
       tmp += standard[index];
     }
-    // console.log(str, tmp);
     return tmp;
   };
 
@@ -27,7 +26,6 @@ const uniqueMorseRepresentations = function(words) {
       num++;
     }
   }
-  // console.log(dict);
   return num;
 };
 

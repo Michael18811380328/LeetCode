@@ -63,7 +63,6 @@ const largestTriangleArea = function(points) {
 //   for (let i = 0; i < len; i++) {
 //     if (i === a || i === b) continue;
 //     let area = getArea(points[a], points[b], points[i]);
-//     console.log(area);
 //     maxArea = maxArea > area ? maxArea : area;
 //   }
 //   return maxArea;

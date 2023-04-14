@@ -27,7 +27,6 @@ const findBottomLeftValue = function(root) {
   const list = [];
   const depth = 0;
   runNode(root, depth, list);
-  // console.log(list, depth);
   return list[list.length - 1][0];
 };
 
@@ -41,7 +40,5 @@ const runNode = function(node, depth, list) {
   runNode(node.left, depth + 1, list);
   runNode(node.right, depth + 1, list);
 };
-
-// @lc code=end
 
 export { findBottomLeftValue };

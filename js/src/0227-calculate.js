@@ -25,7 +25,6 @@ const calculate = function(s) {
     let startNumber = getNumber(s);
     const index = startNumber.length;
     startNumber = Number(startNumber);
-    // console.log(startNumber, index);
 
     if (quota === '+') {
       init = init + tmp;
@@ -47,7 +46,6 @@ const calculate = function(s) {
       }
     }
     s = s.slice(index);
-    // console.log(init, tmp, s);
   }
   init += tmp;
   return init;
