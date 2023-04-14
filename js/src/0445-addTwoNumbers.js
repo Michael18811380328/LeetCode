@@ -13,13 +13,11 @@ function ListNode(val) {
 }
 
 const addTwoNumbers = function(l1, l2) {
-  const arr1 = []; const
-    arr2 = [];
+  const arr1 = [];
+  const arr2 = [];
   toNumber(l1, arr1);
   toNumber(l2, arr2);
-  // console.log(arr1, arr2);
   const arr3 = getSum(arr1, arr2);
-  // console.log(arr1, arr2, arr3);
   const result = toList(arr3);
   return result;
 };

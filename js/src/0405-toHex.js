@@ -68,8 +68,6 @@ const get16plus = (num) => {
     item = Number.isNaN(Number(item)) ? subMap[item] : item;
     res = res * 16 + item;
   }
-  // console.log(n16);
-  // console.log(res);
   res++;
   return get16(res).padStart(8, 'f');
 };

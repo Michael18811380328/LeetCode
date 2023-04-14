@@ -92,8 +92,6 @@ export { countQuadruplets };
 //   }
 //   // 先排序去重，然后再乘法计算
 //   let newArr = [...new Set(nums)].sort((a, b) => a - b > 0 ? 1 : -1);
-//   // console.log(newArr);
-//   // console.log(dict);
 //   let result = 0;
 
 //   for (let i = 0; i < newArr.length; i++) {
@@ -106,7 +104,6 @@ export { countQuadruplets };
 //         }
 //         // 如果字典中有这个值，计算个数
 //         if (dict[sum]) {
-//           // console.log(newArr[i], newArr[j], newArr[k], sum);
 //           result += (dict[newArr[i]].length * dict[newArr[j]].length * dict[newArr[k]].length * dict[sum].length);
 //         }
 //       }

@@ -66,7 +66,6 @@ const commonChars = function(A) {
   }
   // 把最短字符串转换成一个字典
   const dict = string2dict(A[minIndex]);
-  // console.log(dict);
   for (let j = 0; j < len; j++) {
     const item = A[j];
     for (const key in dict) {
@@ -81,7 +80,6 @@ const commonChars = function(A) {
       if (JSON.stringify(dict) == '{}') return [];
     }
   }
-  // console.log(dict);
   let result = [];
   for (const key in dict) {
     const value = dict[key];

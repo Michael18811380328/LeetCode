@@ -43,18 +43,15 @@ const nextGreaterElement = function(nums1, nums2) {
 //   }
 //   // dict 排序
 //   dict.sort((a, b) => a.key > b.key);
-//   console.log(dict);
 //   let res = [];
 //   for (let i = 0; i < nums1; i++) {
 //     let cur = nums1[i];
 //     let item = dict.find(item => item.key === cur);
 //     for (let i = item.key; i < dict.length; i++) {
 //       if (dict[i].index > dict[item.key].index) {
-//         console.log(i);
 //         break;
 //       }
 //     }
-//     console.log();
 //   }
 // };
 

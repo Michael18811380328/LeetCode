@@ -33,13 +33,10 @@ KthLargest.prototype.add = function(val) {
     return this.arr[this.k - 1];
   }
   // 插入的比最小的大，正常插入
-  // console.log(this.arr, val);
   for (let i = 0; i < len; i++) {
     if (val > this.arr[i]) {
-      // console.log(this.arr);
       this.arr.splice(i, 0, val);
       this.arr.pop();
-      // console.log(this.arr);
       return this.arr[this.k - 1];
     }
   }

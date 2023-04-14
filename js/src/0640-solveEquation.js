@@ -1,6 +1,5 @@
 /*
  * @lc app=leetcode.cn id=640 lang=javascript
- *
  * [640] 求解方程
  */
 
@@ -42,7 +41,6 @@ const solveEquation = function(equation) {
   if (right[0] !== '-') {
     right = `+${right}`;
   }
-  // console.log(left, right);
 
   // 先处理左边
   // 先 split ("+") 变成一个数组
@@ -62,9 +60,6 @@ const solveEquation = function(equation) {
       leftArr2.push(str);
     }
   });
-  // 这一步正确
-  // console.log(leftArr2);
-  // console.log(leftArr3);
   const obj1 = getNumber(leftArr2);
   const obj2 = getNumber(leftArr3);
   // 然后再次遍历这个数组，把常熟项和X的系数分开，存储两个单独的变量
@@ -84,7 +79,6 @@ const solveEquation = function(equation) {
   });
   const obj3 = getNumber(leftArr5);
   const obj4 = getNumber(leftArr6);
-  // console.log(obj1, obj2, obj3, obj4);
   const a = obj1.a - obj2.a - obj3.a + obj4.a;
   const b = obj1.b - obj2.b - obj3.b + obj4.b;
 

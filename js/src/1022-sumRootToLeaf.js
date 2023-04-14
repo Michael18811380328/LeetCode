@@ -31,9 +31,7 @@ const sumRootToLeaf = function(root) {
     let newVal = `${preVal}${node.val}`;
     if (!node.left && !node.right) {
       // 没有左右子节点，证明是叶子节点，那么计算值并返回
-      // console.log(newVal);
       newVal = parseInt(newVal, 2);
-      // console.log(newVal);
       list.push(newVal);
     }
     runNode(node.left, newVal);

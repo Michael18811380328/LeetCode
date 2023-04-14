@@ -34,9 +34,7 @@ const projectionArea = function(grid) {
     }
   }
   // dict 求和
-  // console.log(dict);
   Y = dict.reduce((item, sum) => { return item + sum; }, 0);
-  // console.log(X, Y, Z)
   return (X + Y + Z);
 };
 // @lc code=end

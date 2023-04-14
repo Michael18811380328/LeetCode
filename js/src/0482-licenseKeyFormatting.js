@@ -11,7 +11,6 @@
 const licenseKeyFormatting = function(S, K) {
   // 第一步，先去掉全部的破折号，正则
   let s = S.replace(/\-/g, '');
-  // console.log(s);
   // 第二步，将小写转换成大写
   s = s.toUpperCase();
   if (s.length < K) {
@@ -24,7 +23,6 @@ const licenseKeyFormatting = function(S, K) {
     s = s.slice(0, -K);
     arr.unshift(tmp);
   }
-  // console.log(arr);
   // 第四步，将数组使用破折号链接起来成为字符串返回
   return arr.join('-');
 };

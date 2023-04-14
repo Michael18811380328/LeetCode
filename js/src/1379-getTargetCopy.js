@@ -15,7 +15,6 @@
 const getTargetCopy = function(original, cloned, target) {
   // 原始树和克隆树一样，所以直接遍历克隆树，找到对应的节点返回即可
   const runNode = function(node, value) {
-    // console.log(node, value);
     if (!node) {
       return null;
     }

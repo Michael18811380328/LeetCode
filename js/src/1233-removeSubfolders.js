@@ -13,7 +13,6 @@ const removeSubfolders = function(folder) {
   folder.sort((a, b) => {
     return a.length > b.length ? 1 : -1;
   });
-  // console.log(folder);
   const result = [];
   while (folder.length > 0) {
     const item = folder.shift();
@@ -60,8 +59,6 @@ const deleteSubFile = (item, folder) => {
 //     }
 //     if (checkNode(folder[i], tree)) {
 //       result.push(folder[i]);
-//       console.log(folder[i]);
-//       console.log(tree);
 //     }
 //   }
 //   // 每一个文件路径就是一个树节点
@@ -88,7 +85,6 @@ const deleteSubFile = (item, folder) => {
 //     // 如果当前节点不存在，那么继续
 //     if (!pointer[key] && i === arr.length - 1) {
 //       pointer[key] = new TreeNode(key, true);
-//       // console.log(pointer[key]);
 //       return true;
 //     }
 //     if (!pointer[key] && i === arr.length - 1) {

@@ -22,9 +22,7 @@ const canThreePartsEqualSum = function(A) {
       dict[current].push(i);
     }
   }
-  // console.log(current);
   const key = current / 3;
-  // console.log(dict[key], dict[key * 2]);
   // 第一个出现必须小于第二个出现
   if (key === 0) {
     if (dict[0].length >= 3 && dict[0][0] < dict[0][1] && dict[0][1] < dict[0][2]) {

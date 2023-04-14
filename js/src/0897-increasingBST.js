@@ -33,7 +33,6 @@ const increasingBST = function(root) {
     }
   };
   runNode(root, arr);
-  // console.log(arr);
   // 然后把线性的数组，转换成只有右子节点的树
   const getTree = (node, arr) => {
     if (arr.length > 0) {
