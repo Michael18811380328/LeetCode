@@ -9,41 +9,42 @@
  * @param {string[]} transactions
  * @return {string[]}
  */
-// 先把名字相同的单独弄一个数组，然后按照交易时间排序
-// 如果某一个交易和前后的间隔小于 60 分钟，并且不是同一个城市
-// 那么这个交易就是不满足的交易（直接在一个循环内即可）
+// 暴力处理，数组长度1000，可以双重遍历，然后比较两个值是否满足无效交易
 var invalidTransactions = function(transactions) {
-  let result = [];
-  let dict = {};
-  for (let i = 0; i < transactions.length; i++) {
-    let curr = transactions[i];
-    let list = curr.split(',');
+  const len = transactions.length;
+  // 在这里处理重复值？
+  // 数据预处理，把字符串转换成数组，便于后续比较
+  for (let i = 0; i < len; i++) {
+    let list = transactions[i].split(',');
     let name = list[0];
     let time = parseInt(list[1]);
     let amount = parseInt(list[2]);
     let city = list[3];
-    if (!dict[name]) {
-      dict[name] = [];
+    transactions[i] = { name, time, amount, city }
+  }
+  let result = [];
+  function compare(a, b) {    
+    if (a.amount > 1000) {
+      result.push(`${a.name},${a.time},${a.amount},${a.city}`);
     }
-    dict[name].push({ name, time, amount, city });
+    if (b.amount > 1000) {
+      result.push(`${b.name},${b.time},${b.amount},${b.city}`);
+    }
+    if (a.name === b.name && a.city !== b.city && Math.abs(a.time - b.time) < 60) {
+      result.push(`${a.name},${a.time},${a.amount},${a.city}`);
+      result.push(`${b.name},${b.time},${b.amount},${b.city}`);
+    }
   }
-  // 然后根据交易时间排序
-  for (let key in dict) {
-    dict[key].sort((a, b) => {
-      return a > b ? 1 : -1;
-    });
+  for (let i = 0; i < len; i++) {
+    for (let j = i + 1; j < len; j++) {
+      compare(transactions[i], transactions[j]);
+    }
   }
-  console.log(dict);
-  for (let key in dict) {
-    dict[key].forEach((item, index) => {
-      // 1 交易金额超出 1000 不满足（直接字符串转换比较）
-      if (item.amount > 1000) {
-        result.push(item);
-      }
-      // 2 名字相同，城市不同，交易时间 <= 60 分钟
-      // if (item.tiem )
-    });
-  }
+  return Array.from(new Set(result));
 };
 // @lc code=end
 
+console.log(invalidTransactions(["alice,20,800,mtv","alice,50,100,beijing"])) // ["alice,20,800,mtv","alice,50,100,beijing"]
+console.log(invalidTransactions(["alice,20,800,mtv","alice,50,1200,mtv"])) // ["alice,50,1200,mtv"]
+console.log(invalidTransactions(["alice,20,800,mtv","bob,50,1200,mtv"])) // ["bob,50,1200,mtv"]
+// ["alice,20,1220,mtv","alice,20,1220,mtv"] 可能有重复的，不能直接去重
