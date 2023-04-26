@@ -199,7 +199,6 @@ export const throttle = (func, delay) => {
   };
 };
 
-
 export const isValidEmail = (email) => {
   const reg = /^[A-Za-zd]+([-_.][A-Za-zd]+)*@([A-Za-zd]+[-.])+[A-Za-zd]{2,6}$/;
   return reg.test(email);
@@ -209,32 +208,71 @@ export const checkDesktop = () => {
   return window.innerWidth >= 768;
 };
 
+
 export const getErrorMessage = (err) => {
   if (err.response) {
     const { status } = err.response;
     if (status === 500) {
-      return intl.get('Internal_server_error');
+      return 'Internal_server_error';
     }
   }
-  return intl.get('Network_error');
+  return 'Network_error';
 };
 
 export const getErrorMsg = (error) => {
-  let errorMsg = '';
   if (error.response) {
     if (error.response.status === 403) {
-      // toaster.danger();
-      errorMsg = intl.get('Permission_denied');
+      return 'Permission_denied';
     }
     else if (error.response.data && error.response.data['error_msg']) {
-      errorMsg = error.response.data['error_msg'];
+      return error.response.data['error_msg'];
     }
     else {
-      errorMsg = intl.get('Error');
+      return 'Error';
     }
-  } else {
-    errorMsg = intl.get('Please_check_the_network');
   }
-  return errorMsg;
+  return 'Please_check_the_network';
 };
 
+// 使用 iframe 下载文件
+export function download(path) {
+  let iframe = document.createElement('iframe');
+  iframe.src = path;
+  iframe.style.display = 'none';
+  document.body.appendChild(iframe);
+  // 判断 iframe 是否下载完成（定时轮询）
+  const timer = setInterval(() => {
+    const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+    if (iframeDoc.readyState == 'complete' || iframeDoc.readyState == 'interactive') {
+      document.body.removeAttribute(iframe);
+      clearInterval(timer);
+      resolve('success');
+    }
+  }, 1000);
+}
+
+// 自动居中函数
+export function autoCenter(dom) {
+  var bodyX = document.documentElement.offsetWidth || document.body.offsetWidth;
+  var bodyY = document.documentElement.offsetHeight || document.body.offsetHeight;
+  var elementX = dom.offsetWidth;
+  var elementY = dom.offsetHeight;
+  // 前提是需要设置绝对定位，并且父节点是相对定位
+  dom.style.left = (bodyX - elementX) / 2 + "px";
+  dom.style.top = (bodyY - elementY) / 2 + "px";
+}
+
+// 星级评分
+export const starScore = (rate) => {
+  return "★★★★★☆☆☆☆☆".slice(5 - rate, 10 - rate);
+}
+
+// 验证 URL 是否有效，必须包含协议，例如 www.baidu.com 是无效的
+export const checkURL = (url) => {
+  try {
+    new URL(url);
+  } catch (error) {
+    return false;
+  }
+  return true;
+}
