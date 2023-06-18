@@ -12,18 +12,18 @@ cookie 可以在服务器端通过 HTTP 的 SetCookie 字段设置 cookie，比�
 
 ```go
 func cookie(w http.ResponseWriter, r *http.Request) {
-    // 设置了两个 cookie 
-	http.SetCookie(w, &http.Cookie{
-		Name:       "name1",
-		Value:      "value1",
-	})
+  // 设置了两个 cookie 
+  http.SetCookie(w, &http.Cookie{
+    Name:       "name1",
+    Value:      "value1",
+  })
 
-	http.SetCookie(w, &http.Cookie{
-		Name:  "name2",
-		Value: "value2",
-	})
-    // 将字符串写入网页
-	fmt.Fprintln(w, "页面内容")
+  http.SetCookie(w, &http.Cookie{
+    Name:  "name2",
+    Value: "value2",
+  })
+  // 将字符串写入网页
+  fmt.Fprintln(w, "页面内容")
 }
 ```
 
