@@ -5,6 +5,7 @@
 
 // 方法一：循环一次，删除重复元素
 // 100 ms, 在所有 javascript 提交中击败了 71.42%
+// 方法的不足：每次都数组操作 arr.splice 性能略差
 function removeDuplicates1(nums) {
   for (let i = 0; i < nums.length;) {
     if (nums[i] === nums[i + 1]) {
@@ -28,6 +29,7 @@ function removeDuplicates2(nums) {
   for (let fast = 0; fast < len; fast++) {
     if (nums[fast] !== nums[slow]) {
       slow++;
+      // 这样写，不使用数组 splice 方法，性能提升
       nums[slow] = nums[fast];
     }
   }
