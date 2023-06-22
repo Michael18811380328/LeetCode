@@ -19,6 +19,7 @@ import {trimMean} from '../src/1619-trimMean';
 import {decodeMessage} from '../src/2325-decodeMessage';
 import {checkXMatrix} from '../src/2319-checkXMatrix';
 import {getMinDistance, getMinDistance2} from '../src/1848-getMinDistance';
+import {findColumnWidth} from '../src/2639-findColumnWidth';
 
 test('134-canCompleteCircuit', () => {
   const gas = [1, 2, 3, 4, 5];
@@ -266,4 +267,15 @@ test('2325-decodeMessage', () => {
       'zwx hnfx lqantp mnoeius ycgk vcnjrdb'
     )
   ).toBe('the five boxing wizards jump quickly');
+});
+
+test('findColumnWidth', () => {
+  expect(findColumnWidth([[1], [22], [333]])).toEqual([3]);
+  expect(
+    findColumnWidth([
+      [-15, 1, 3],
+      [15, 7, 12],
+      [5, 6, -2],
+    ])
+  ).toEqual([3, 1, 2]);
 });

@@ -48,7 +48,6 @@
 
 // 改进2：不使用数组，直接使用字符串模拟栈
 // 256 ms, 在所有 JavaScript 提交中击败了12.37%
-// 还不如之前的时间呢
 const removeDuplicates = function(S) {
   if (S.length < 2) return S;
   let stack = '';
@@ -67,7 +66,5 @@ const removeDuplicates = function(S) {
   }
   return stack;
 };
-
-// @lc code=end
 
 export { removeDuplicates };

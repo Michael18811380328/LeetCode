@@ -5,9 +5,4 @@ function createHelloWorld() {
   };
 }
 
-/**
- * const f = createHelloWorld();
- * f(); // "Hello World"
- */
-
 export {createHelloWorld};
