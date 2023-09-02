@@ -628,7 +628,6 @@ export { isPalindrome, isPalindrome2 };
 ~~~js
 /*
  * @lc app=leetcode.cn id=10 lang=javascript
- *
  * [10] 正则表达式匹配
  */
 // 思路：
@@ -690,8 +689,7 @@ const isMatch = (s, p) => {
   return dp[sLen][pLen];
 };
 
-// @lc code=end
-
+// 下面是另一种思路，供参考
 // 10-给你一个字符串 s 和一个字符规律 p，请你来实现一个支持 '.' 和 '*' 的正则表达式匹配。
 // '.' 匹配任意单个字符
 // '*' 匹配零个或多个前面的那一个元素
@@ -1345,13 +1343,6 @@ export { isValid, isValid2 };
 ### 0021-mergeTwoLists.js
 
 ~~~js
-/*
- * @lc app=leetcode.cn id=21 lang=javascript
- *
- * [21] 合并两个有序链表
- */
-
-// @lc code=start
 /**
  * Definition for singly-linked list.
  * function ListNode(val, next) {
@@ -1364,9 +1355,11 @@ export { isValid, isValid2 };
  * @param {ListNode} list2
  * @return {ListNode}
  */
+// [21] 合并两个有序链表
+// 将两个升序链表合并为一个新的 升序 链表并返回。
+// 新链表是通过拼接给定的两个链表的所有节点组成的。
 // 这个题目的原理明白，就是递归比较链表头结点的值
-// 卡在了链表数据结构操作上
-// 因为没有要求不改变原始链表，那么直接操作原始链表即可
+// 没有要求不改变原始链表，那么直接操作原始链表即可
 const mergeTwoLists = function(list1, list2) {
   if (list1 === null && list2 === null) {
     return null;
@@ -1377,7 +1370,7 @@ const mergeTwoLists = function(list1, list2) {
   if (list2 === null) {
     return list1;
   }
-  // 如果都不是 null 直接比较这两个链表的头结点
+  // 如果都不是 null, 直接比较这两个链表的头结点
   if (list1.val < list2.val) {
     list1.next = mergeTwoLists(list1.next, list2);
     return list1;
@@ -1386,7 +1379,6 @@ const mergeTwoLists = function(list1, list2) {
     return list2;
   }
 };
-// @lc code=end
 
 export { mergeTwoLists };
 
@@ -1552,13 +1544,6 @@ export { isValid, generateParenthesis, generateParenthesis2, generateParenthesis
 ### 0024-swapPairs.js
 
 ~~~js
-/*
- * @lc app=leetcode.cn id=24 lang=javascript
- *
- * [24] 两两交换链表中的节点
- */
-
-// @lc code=start
 /**
  * Definition for singly-linked list.
  * function ListNode(val, next) {
@@ -1570,6 +1555,7 @@ export { isValid, generateParenthesis, generateParenthesis2, generateParenthesis
  * @param {ListNode} head
  * @return {ListNode}
  */
+// @lc app=leetcode.cn id=24 lang=javascript
 // 60 ms, 在所有 JavaScript 提交中击败了70.94%
 const swapPairs = function(head) {
   const changeNode = (node) => {
@@ -1590,7 +1576,6 @@ const swapPairs = function(head) {
   };
   return changeNode(head);
 };
-// @lc code=end
 
 export { swapPairs };
 
@@ -1607,6 +1592,7 @@ export { swapPairs };
 
 // 方法一：循环一次，删除重复元素
 // 100 ms, 在所有 javascript 提交中击败了 71.42%
+// 方法的不足：每次都数组操作 arr.splice 性能略差
 function removeDuplicates1(nums) {
   for (let i = 0; i < nums.length;) {
     if (nums[i] === nums[i + 1]) {
@@ -1630,6 +1616,7 @@ function removeDuplicates2(nums) {
   for (let fast = 0; fast < len; fast++) {
     if (nums[fast] !== nums[slow]) {
       slow++;
+      // 这样写，不使用数组 splice 方法，性能提升
       nums[slow] = nums[fast];
     }
   }
@@ -2298,7 +2285,6 @@ function isValidSudoku2(board) {
 //       }
 //     }
 //   }
-//   console.log(hash);
 //   for (const [value] of hash) {
 //     if (!isValidHash(value)) {
 //     return false;
@@ -2512,8 +2498,6 @@ export { combinationSum, combinationSum2 };
  * @lc app=leetcode.cn id=40 lang=javascript
  * [40] 组合总和 II
  */
-
-// @lc code=start
 /**
  * @param {number[]} candidates
  * @param {number} target
@@ -3623,7 +3607,6 @@ export { uniquePaths };
 //     sum = sum * 10 + digits[i];
 //   }
 //   sum++;
-//   console.log(sum);
 //   let result = [];
 //   while (sum > 0) {
 //     let item = sum % 10;
@@ -4266,7 +4249,6 @@ const exist = function(board, word) {
       wordDict[word[i]] = 1;
     }
   }
-  // console.log(wordDict);
   const boardPosition = {}; // 这个存放位置
   for (let i = 0; i < board.length; i++) {
     for (let j = 0; j < board[0].length; j++) {
@@ -4277,7 +4259,6 @@ const exist = function(board, word) {
       boardPosition[curr].push([i, j]);
     }
   }
-  // console.log(boardPosition);
   for (const key in wordDict) {
     const num = wordDict[key];
     if (!boardPosition[key] || boardPosition[key].length < num) {
@@ -4384,16 +4365,9 @@ export { removeDuplicates };
 ~~~
 
   
-### 0082.删除排序链表中的重复元素-ii.js
+### 0082-deleteDuplicates-ii.js
 
 ~~~js
-/*
- * @lc app=leetcode.cn id=82 lang=javascript
- *
- * [82] 删除排序链表中的重复元素 II
- */
-
-// @lc code=start
 /**
  * Definition for singly-linked list.
  * function ListNode(val, next) {
@@ -4405,9 +4379,8 @@ export { removeDuplicates };
  * @param {ListNode} head
  * @return {ListNode}
  */
+// [82] 删除排序链表中的重复元素 II
 // Your runtime beats 52.45 % of javascript submissions
-// 先想好思路，然后把各种情况都想清楚，再写代码，事半功倍
-// 这个再看一下官方思路，哪些地方可以提升
 // 链表的解决方法：处理当前的节点后，写一个节点等于递归调用这个函数
 const deleteDuplicates = function(head) {
   // 如果空链表，或者是最后一个节点，直接返回
@@ -4442,7 +4415,7 @@ const deleteDuplicates = function(head) {
     }
   }
 };
-// @lc code=end
+
 export { deleteDuplicates };
 
 ~~~
@@ -4483,10 +4456,8 @@ export { deleteDuplicates };
 ~~~js
 // 84 计算给定柱状图的最大的面积
 // 给定 n 个非负整数，用来表示柱状图中各个柱子的高度。每个柱子彼此相邻，且宽度为 1 。
-
 // 求在该柱状图中，能够勾勒出来的矩形的最大面积。
 // 以上是柱状图的示例，其中每个柱子的宽度为 1，给定的高度为 [2,1,5,6,2,3]。其面积为 10 个单位。
-
 /**
  * @param {number[]} heights
  * @return {number}
@@ -4648,7 +4619,6 @@ export { mergeTwoArray };
 ~~~js
 /*
  * @lc app=leetcode.cn id=89 lang=javascript
- *
  * [89] 格雷编码
  */
 
@@ -4683,7 +4653,6 @@ const grayCode = function(n) {
   }
   return result;
 };
-// @lc code=end
 
 export { grayCode };
 
@@ -4902,12 +4871,6 @@ export { inorderTraversal };
 ### 0095-generateTrees.js
 
 ~~~js
-/*
- * @lc app=leetcode.cn id=95 lang=javascript
- * [95] 不同的二叉搜索树 II
- */
-
-// @lc code=start
 /**
  * Definition for a binary tree node.
  * function TreeNode(val, left, right) {
@@ -4916,6 +4879,7 @@ export { inorderTraversal };
  *     this.right = (right===undefined ? null : right)
  * }
  */
+// [95] 不同的二叉搜索树 II
 /**
  * @param {number} n
  * @return {TreeNode[]}
@@ -4957,7 +4921,7 @@ const generateTrees = function(n) {
 };
 
 // 官方详细解法：https://leetcode-cn.com/problems/unique-binary-search-trees-ii/solution/bu-tong-de-er-cha-sou-suo-shu-ii-by-leetcode-solut/
-// @lc code=end
+
 export { generateTrees };
 
 ~~~
@@ -4966,16 +4930,11 @@ export { generateTrees };
 ### 0096-numTrees.js
 
 ~~~js
-/*
- * @lc app=leetcode.cn id=96 lang=javascript
- *
- * [96] 不同的二叉搜索树
- */
-
 /**
  * @param {number} n
  * @return {number}
  */
+// [96] 不同的二叉搜索树
 // 思路1
 // 难点：动态规划公式，详见文档
 // Your runtime beats 71.57 % of javascript submissions
@@ -5014,10 +4973,9 @@ export { numTrees, numTrees2 };
 ### 0097-isInterleave.js
 
 ~~~js
-// * 97. 交错字符串（中等-困难）
-// * 给定三个字符串 s1、s2、s3，请你帮忙验证 s3 是否是由 s1 和 s2 交错 组成的。
-// 这个解答不太熟，需要多看几次
-
+// 97. 交错字符串（中等-困难）
+// 给定三个字符串 s1、s2、s3，请你帮忙验证 s3 是否是由 s1 和 s2 交错 组成的。
+// 这个问题比较难，需要多看几次
 /**
  * 思路1，双指针：DFS 的思路，时间复杂度 O(2^n)，性能不好
  * 4072 ms, 在所有 JavaScript 提交中击败了5.02%
@@ -5180,35 +5138,30 @@ export { isInterleave, isInterleave2, isInterleave3 };
 ### 0098-isValidBST.js
 
 ~~~js
-/*
- * @lc app=leetcode.cn id=98 lang=javascript
- * [98] 验证二叉搜索树
- */
+// [98] 验证二叉搜索树
 // 本题考察二叉搜索树的性质
 // 左子树是二叉搜索树
 // 右子树是二叉搜索树
 // 左子树的最大值小于当前节点值
 // 右子树的最小值大于当前节点值
 
-// @lc code=start
 // 思路1：递归，判断每一个子树是二叉搜索树
 // 56 ms, 在所有 JavaScript 提交中击败了99.13%
-// 需要给定一个辅助函数，判断一个子树的最值(子树的最值在 small-large 之间)，这是解题关键
-const checkTree = function(node, small, large) {
-  // 如果没有节点，满足
-  if (!node) {
-    return true;
-  }
-  // 如果当前节点的值，大于等于最大值或者小于等于最小值，那么不是二叉搜索树
-  if (node.val >= large || node.val <= small) {
-    return false;
-  }
-  // 子节点在函数中递归判断，更改上下边界即可，辅助函数不需要返回最值
-  // 左子树的最大值小于当前节点值，右子树的最小值大于当前节点值
-  return checkTree(node.left, small, node.val) && checkTree(node.right, node.val, large);
-};
-
 const isValidBST = function(root) {
+  // 需要给定一个辅助函数，判断一个子树的最值(子树的最值在 small-large 之间)，这是解题关键
+  const checkTree = function(node, small, large) {
+    // 如果没有节点，满足
+    if (!node) {
+      return true;
+    }
+    // 如果当前节点的值，大于等于最大值或者小于等于最小值，那么不是二叉搜索树
+    if (node.val >= large || node.val <= small) {
+      return false;
+    }
+    // 子节点在函数中递归判断，更改上下边界即可，辅助函数不需要返回最值
+    // 左子树的最大值小于当前节点值，右子树的最小值大于当前节点值
+    return checkTree(node.left, small, node.val) && checkTree(node.right, node.val, large);
+  };
   // 默认根节点不设置最值判断
   const small = -Infinity;
   const large = +Infinity;
@@ -5253,7 +5206,6 @@ const isValidBST2 = function(root) {
   return true;
 };
 
-// @lc code=end
 export { isValidBST, isValidBST2 };
 
 ~~~
@@ -5262,12 +5214,6 @@ export { isValidBST, isValidBST2 };
 ### 0099-recoverTree.js
 
 ~~~js
-/*
- * @lc app=leetcode.cn id=99 lang=javascript
- * [99] 恢复二叉搜索树
- */
-
-// @lc code=start
 /**
  * Definition for a binary tree node.
  * function TreeNode(val, left, right) {
@@ -5276,6 +5222,7 @@ export { isValidBST, isValidBST2 };
  *     this.right = (right===undefined ? null : right)
  * }
  */
+// [99] 恢复二叉搜索树
 /**
  * @param {TreeNode} root
  * @return {void} Do not return anything, modify root in-place instead.
@@ -5333,7 +5280,7 @@ const recoverTree = function(root) {
   };
   runNode(root);
 };
-// @lc code=end
+
 export { recoverTree };
 
 ~~~
@@ -5451,11 +5398,9 @@ export { isSymmetric };
 ~~~js
 /*
  * @lc app=leetcode.cn id=102 lang=javascript
- *
  * [102] 二叉树的层序遍历
+ * 88 ms, 在所有 JavaScript 提交中击败了69.94%的用户
  */
-
-// @lc code=start
 /**
  * Definition for a binary tree node.
  * function TreeNode(val) {
@@ -5463,7 +5408,6 @@ export { isSymmetric };
  *     this.left = this.right = null;
  * }
  */
-
 const runTree = function(node, layer, matrix) {
   if (!node) return;
   if (!matrix[layer]) {
@@ -5477,7 +5421,6 @@ const runTree = function(node, layer, matrix) {
  * @param {TreeNode} root
  * @return {number[][]}
  */
-// 88 ms, 在所有 JavaScript 提交中击败了69.94%的用户
 const levelOrder = function(root) {
   // 把当前的层数传递下去，然后传递一个二重数组即可
   const matrix = [];
@@ -5492,7 +5435,6 @@ const levelOrder = function(root) {
   return matrix;
 };
 
-// @lc code=end
 export { levelOrder };
 
 ~~~
@@ -5501,13 +5443,6 @@ export { levelOrder };
 ### 0103-zigzagLevelOrder.js
 
 ~~~js
-/*
- * @lc app=leetcode.cn id=103 lang=javascript
- *
- * [103] 二叉树的锯齿形层序遍历
- */
-
-// @lc code=start
 /**
  * Definition for a binary tree node.
  * function TreeNode(val, left, right) {
@@ -5516,6 +5451,7 @@ export { levelOrder };
  *     this.right = (right===undefined ? null : right)
  * }
  */
+// [103] 二叉树的锯齿形层序遍历
 /**
  * @param {TreeNode} root
  * @return {number[][]}
@@ -5575,7 +5511,7 @@ const zigzagLevelOrder = function(root) {
   }
   return result;
 };
-// @lc code=end
+
 export { zigzagLevelOrder };
 
 ~~~
@@ -5628,13 +5564,6 @@ export { maxDepth };
 ### 0105-buildTree.js
 
 ~~~js
-/*
- * @lc app=leetcode.cn id=105 lang=javascript
- *
- * [105] 从前序与中序遍历序列构造二叉树
- */
-
-// @lc code=start
 /**
  * Definition for a binary tree node.
  * function TreeNode(val, left, right) {
@@ -5643,6 +5572,7 @@ export { maxDepth };
  *     this.right = (right===undefined ? null : right)
  * }
  */
+// [105] 从前序与中序遍历序列构造二叉树
 /**
  * @param {number[]} preorder
  * @param {number[]} inorder
@@ -5682,7 +5612,7 @@ const buildTree = function(preorder, inorder) {
   }
   return rootNode;
 };
-// @lc code=end
+
 export { buildTree };
 
 ~~~
@@ -5852,13 +5782,7 @@ export { sortedArrayToBST };
 ### 0109-sortedListToBST.js
 
 ~~~js
-/*
- * @lc app=leetcode.cn id=109 lang=javascript
- *
- * [109] 有序链表转换二叉搜索树
- */
-
-// @lc code=start
+// [109] 有序链表转换二叉搜索树
 /**
  * Definition for singly-linked list.
  * function ListNode(val, next) {
@@ -5912,7 +5836,6 @@ const sortedListToBST = function(head) {
 // 2、设置中位数的是根节点，然后左子树和右子树的边界可以确定，递归左右子树即可
 // 注意：链表找到元素的索引
 
-// @lc code=end
 export { sortedListToBST };
 
 ~~~
@@ -6161,13 +6084,6 @@ export { pathSum };
 ### 0114-flatten.js
 
 ~~~js
-/*
- * @lc app=leetcode.cn id=114 lang=javascript
- *
- * [114] 二叉树展开为链表
- */
-
-// @lc code=start
 /**
  * Definition for a binary tree node.
  * function TreeNode(val, left, right) {
@@ -6176,6 +6092,7 @@ export { pathSum };
  *     this.right = (right===undefined ? null : right)
  * }
  */
+// [114] 二叉树展开为链表
 /**
  * @param {TreeNode} root
  * @return {void} Do not return anything, modify root in-place instead.
@@ -6200,7 +6117,7 @@ const flatten = function(root) {
     prev.right = curr;
   }
 };
-// @lc code=end
+
 export { flatten };
 
 ~~~
@@ -6209,13 +6126,6 @@ export { flatten };
 ### 0116-connect.js
 
 ~~~js
-/*
- * @lc app=leetcode.cn id=116 lang=javascript
- *
- * [116] 填充每个节点的下一个右侧节点指针
- */
-
-// @lc code=start
 /**
  * // Definition for a Node.
  * function Node(val, left, right, next) {
@@ -6225,6 +6135,7 @@ export { flatten };
  *    this.next = next === undefined ? null : next;
  * };
  */
+// [116] 填充每个节点的下一个右侧节点指针
 /**
  * @param {Node} root
  * @return {Node}
@@ -6267,7 +6178,7 @@ const connect = function(root) {
   }
   return root;
 };
-// @lc code=end
+
 export { connect };
 
 ~~~
@@ -6553,7 +6464,6 @@ function maxProfit(prices) {
 }
 
 // const arr = [7, 6, 4, 3, 1, 9, 0, 9, 8, 8, 1];
-// console.log(maxProfit(arr));
 export { maxProfit };
 
 ~~~
@@ -6634,13 +6544,6 @@ export { isPalindrome };
 ### 0127-ladderLength.js
 
 ~~~js
-/*
- * @lc app=leetcode.cn id=127 lang=javascript
- *
- * [127] 单词接龙
- */
-
-// @lc code=start
 /**
  * 127. 单词接龙(无向图)
  * https://leetcode.cn/problems/word-ladder/
@@ -6649,7 +6552,6 @@ export { isPalindrome };
  * @param {string[]} wordList
  * @return {number}
  * Your runtime beats 48.99 % of js submissions
- * Your memory usage beats 92.36 % (43.9 MB)
  */
 const ladderLength = function(beginWord, endWord, wordList) {
   // 辅助函数：判断两个单词是否可以转换(有一个字母不同)
@@ -6678,9 +6580,12 @@ const ladderLength = function(beginWord, endWord, wordList) {
   // 初始化长度是2，beginWord -> middle -> endWord 是两步
   let res = 2;
 
+  // 广度优先遍历-难点
   while (list.length > 0) {
     // 获取当前的长度（这一层），然后遍历当前的这一层单词
     let currentLen = list.length;
+    // 广度遍历一层，现在把新加入的单词，直接放在原来的列表中了
+    // 为了方便理解，也可以创建一个 newList 然后每次循环一层，再获取下一层的长度
     while (currentLen--) {
       const item = list.shift();
       for (let i = 0; i < wordList.length; i++) {
@@ -6702,7 +6607,6 @@ const ladderLength = function(beginWord, endWord, wordList) {
   // 如果没有，返回0
   return 0;
 };
-// @lc code=end
 
 export { ladderLength };
 
@@ -6712,7 +6616,8 @@ export { ladderLength };
 ### 0128-longestConsecutive.js
 
 ~~~js
-// 128
+// 128 最长连续序列
+// https://leetcode-cn.com/problems/longest-consecutive-sequence/
 // 100 ms, 在所有 JavaScript 提交中击败了55.81%
 const longestConsecutive = function(nums) {
   if (nums.length === 0) {
@@ -6737,12 +6642,10 @@ const longestConsecutive = function(nums) {
 };
 
 export { longestConsecutive };
-
 // console.log(longestConsecutive([100, 4, 200, 1, 3, 2]) === 4);
 // console.log(longestConsecutive([0, 3, 7, 2, 5, 8, 4, 6, 0, 1]) === 9);
 // console.log(longestConsecutive([1, 2, 0, 1]) === 3);
 
-// https://leetcode-cn.com/problems/longest-consecutive-sequence/
 // 现在有两个思路：
 // 1 先排序，然后遍历一次数组，那么就是 N + logN * N 的时间复杂度
 // 2 直接遍历数组，把数组出现的数字存储在字典中，并标记相邻的元素（多个数组）
@@ -6865,13 +6768,6 @@ export { solve };
 ### 0133-cloneGraph.js
 
 ~~~js
-/*
- * @lc app=leetcode.cn id=133 lang=javascript
- *
- * [133] 克隆图
- */
-
-// @lc code=start
 /**
  * // Definition for a Node.
  * function Node(val, neighbors) {
@@ -6879,10 +6775,10 @@ export { solve };
  *    this.neighbors = neighbors === undefined ? [] : neighbors;
  * };
  */
-
 /**
  * @param {Node} node
  * @return {Node}
+ * [133] 克隆图
  * 基本思路：BFS或者DFS遍历图节点，使用一个字典记录已经遍历的节点
  * 遍历图节点时，同时克隆节点的值和节点的关系
  */
@@ -6906,7 +6802,7 @@ const cloneGraph = function(node) {
   };
   return runNode(node);
 };
-// @lc code=end
+
 export { cloneGraph };
 
 ~~~
@@ -7305,16 +7201,9 @@ export { hasCycle, hasCycle2 };
 ~~~
 
   
-### 0142.环形链表-ii.js
+### 0142-detectCycle-ii.js
 
 ~~~js
-/*
- * @lc app=leetcode.cn id=142 lang=javascript
- *
- * [142] 环形链表 II
- */
-
-// @lc code=start
 /**
  * Definition for singly-linked list.
  * function ListNode(val) {
@@ -7324,6 +7213,7 @@ export { hasCycle, hasCycle2 };
  */
 
 /**
+ * [142] 环形链表 II
  * @param {ListNode} head
  * @return {ListNode}
  */
@@ -7340,7 +7230,7 @@ const detectCycle = function(head) {
   }
   return null;
 };
-// @lc code=end
+
 export { detectCycle };
 
 ~~~
@@ -7349,13 +7239,6 @@ export { detectCycle };
 ### 0143-reorderList.js
 
 ~~~js
-/*
- * @lc app=leetcode.cn id=143 lang=javascript
- *
- * [143] 重排链表
- */
-
-// @lc code=start
 /**
  * Definition for singly-linked list.
  * function ListNode(val, next) {
@@ -7364,6 +7247,7 @@ export { detectCycle };
  * }
  */
 /**
+ * [143] 重排链表
  * @param {ListNode} head
  * @return {void} Do not return anything, modify head in-place instead.
  * 思路1：先遍历一次链表，把每一个节点和索引存储到数组中，同时找到总长度
@@ -7433,13 +7317,12 @@ const reorderList2 = function(head) {
   return head;
 };
 
-// @lc code=end
-
 // 官方的更好的解法是：
 // 1、通过快慢指针，找到链表的中点，把链表分成两个
 // 2、把后面的链表反转（N，N-1， N-2）
 // 3、合并两个链表（因为长度差可能是0或者1，所以基本不影响）
 // 后续有时间可以按照这个思路完成（这三个子问题，可以使用其他的题目处理）
+
 export { reorderList, reorderList2 };
 
 ~~~
@@ -7695,14 +7578,12 @@ const sortList = function(head) {
 //     head.next = head.next.next;
 //   }
 //   arr.sort((a, b) => a - b);
-//   console.log(arr);
 //   let res = new ListNode(arr[0]);
 //   for (let i = 1; i < arr.length; i++) {
 //     let item = new ListNode(arr[i]);
 //     // 这个指针为什么没有过来呢？
 //     res.next = item;
 //     res = res.next;
-//     console.log(res);
 //   }
 //   return res;
 //   };
@@ -8013,13 +7894,8 @@ export { reverseWords };
 ### 0152-maxProduct.js
 
 ~~~js
-/*
- * @lc app=leetcode.cn id=152 lang=javascript
- *
- * [152] 乘积最大子数组
- */
-// @lc code=start
 /**
+ * [152] 乘积最大子数组
  * @param {number[]} nums
  * @return {number}
  * 考点：动态规划
@@ -8049,7 +7925,6 @@ const maxProduct = function(nums) {
 // console.log(maxProduct([2,3,-2,4]) === 6);
 // console.log(maxProduct([-2,0,-1]) === 0);
 // console.log(maxProduct([-2,3,-4]) === 24);
-// @lc code=end
 
 export { maxProduct };
 
@@ -8318,14 +8193,8 @@ export { findPeakElement };
 ### 0164-maximumGap.js
 
 ~~~js
-/*
- * @lc app=leetcode.cn id=164 lang=javascript
- *
- * [164] 最大间距
- */
-
-// @lc code=start
 /**
+ * [164] 最大间距
  * @param {number[]} nums
  * @return {number}
  * 常规的算法：直接排序，然后比较相邻元素的差值，获取最大值
@@ -8352,8 +8221,6 @@ const maximumGap = function(nums) {
 // 官方给出的算法是基数排序，或者桶排序实现
 // 这两个算法的时间复杂度最好是 O(n)
 // 实际测试发现，JS 内部实现的快速排序，速度比手写的这两个排序效果更快
-// @lc code=end
-
 // 下面是基数排序的代码示例（学习）
 // https://www.runoob.com/w3cnote/radix-sort.html
 // 桶排序：每一个桶是固定的值，然后需要很多桶
@@ -8542,31 +8409,25 @@ export { compareVersion, compareVersion2, compareVersion3 };
 ### 0166-fractionToDecimal.js
 
 ~~~js
-/*
- * @lc app=leetcode.cn id=166 lang=javascript
- *
- * [166] 分数到小数
- */
-
 /**
  * @param {number} numerator
  * @param {number} denominator
  * @return {string}
  */
+// [166] 分数到小数
 // 关键：结果可能是整数，小数，有限循环小数
 // 根据数学定律：将分数转成整数或小数，做法是计算分子和分母相除的结果。可能的结果有三种：整数、有限小数、无限循环小数。
 // 关键是计算循环小数的部分（这是问题的关键）
 // 计算余数时，如果已经出现过，那么就是循环小数
-// 所以，循环计算小数时，需要把余数记录在哈希表中，如果出现同样的余数
-// 那么就说明是无限循环小数
+// 所以，循环计算小数时，需要把余数记录在哈希表中，如果出现同样的余数，就说明是无限循环小数
 // Your runtime beats 45.03 % of javascript submissions
 const fractionToDecimal = function(numerator, denominator) {
-  // 存放不同位数的结果
-  let result = [];
   // 0、处理被除数是 0 的情况
   if (numerator === 0) {
     return '0';
   }
+  // 存放不同位数的结果
+  let result = [];
   // 1、计算正负号
   if (numerator > 0 && denominator < 0 || numerator < 0 && denominator > 0) {
     result.push('-');
@@ -8589,7 +8450,8 @@ const fractionToDecimal = function(numerator, denominator) {
   const indexArr = [];
   let remain = A - Math.floor(A / B) * B;
   remain = remain * 10;
-  // 保证 答案字符串的长度小于10000，这里不会死循环
+  // 保证 答案字符串的长度小于10000，这里不会一致循环
+  // 这个是问题的关键
   while (remain !== 0 && !tmpDict[remain]) {
     tmpDict[remain] = true;
     tmpArr.push(Math.floor(remain / B));
@@ -8597,15 +8459,12 @@ const fractionToDecimal = function(numerator, denominator) {
     remain = remain - Math.floor(remain / B) * B;
     remain = remain * 10;
   }
-
-  // 不是循环的小数
+  // 余数是0，不是循环的小数
   if (remain === 0) {
     result = result.concat(tmpArr);
     return result.join('');
   }
-
-  // 是循环的小数
-  // tmpArr 这个不正确
+  // 在字典中找到了余数，是无限循环小数
   if (tmpDict[remain]) {
     // 先找到这个循环开始的位置，然后加一个括号
     const index = indexArr.indexOf(remain);
@@ -9091,12 +8950,7 @@ export { rotate, rotate1, rotate2 };
 ### 0190-reverseBits.js
 
 ~~~js
-/*
- * @lc app=leetcode.cn id=190 lang=javascript
- *
- * [190] 颠倒二进制位
- */
-// @lc code=start
+// [190] 颠倒二进制位
 // 二进制运算，实际工作中没有使用JS二进制
 // 所以参考官方解答学习（不要求掌握）
 // 将 nn 视作一个长为 3232 的二进制串，从低位往高位枚举 nn 的每一位，将其倒序添加到翻转结果 \textit{rev}rev 中。
@@ -9113,7 +8967,6 @@ const reverseBits = function(n) {
   }
   return rev >>> 0;
 };
-// @lc code=end
 
 export { reverseBits };
 
@@ -9166,17 +9019,14 @@ export { hammingWeight, hammingWeight2 };
 ### 0198-rob.js
 
 ~~~js
-// @lc code=start
 /**
+ * [198] 打家劫舍(动态规划)
  * @param {number[]} nums
  * @return {number}
+ * Your runtime beats 54.12 % of javascript submissions
  */
-// [198] 打家劫舍
-// 这个题目不错，好好看看(动态规划)
-// Your runtime beats 54.12 % of javascript submissions
 const rob = function(nums) {
-  // 动态规划就是求数组的通项公式
-  // 然后获取数组的前几项，即可计算需要的参数
+  // 动态规划就是求数组的通项公式, 然后获取数组的前几项，即可计算需要的参数
   // f(n) = Math.max(f(n - 2) + nums(n), f(n - 1))
   // f(1) = nums(1)
   // f(2) = Math.max(nums[1], nums[2])
@@ -9197,6 +9047,7 @@ const rob = function(nums) {
   }
   return res[res.length - 1];
 };
+
 // [1,2,3,1,2,7,9,3,1]
 
 export { rob };
@@ -9207,13 +9058,6 @@ export { rob };
 ### 0199-rightSideView.js
 
 ~~~js
-/*
- * @lc app=leetcode.cn id=199 lang=javascript
- *
- * [199] 二叉树的右视图
- */
-
-// @lc code=start
 /**
  * Definition for a binary tree node.
  * function TreeNode(val, left, right) {
@@ -9222,6 +9066,7 @@ export { rob };
  *     this.right = (right===undefined ? null : right)
  * }
  */
+// [199] 二叉树的右视图
 /**
  * @param {TreeNode} root
  * @return {number[]}
@@ -9251,7 +9096,6 @@ const rightSideView = function(root) {
   runTree(root.right, layer + 1);
   return matrix.map((arr) => arr[arr.length - 1]);
 };
-// @lc code=end
 
 export { rightSideView };
 
@@ -9883,7 +9727,6 @@ const combinationSum3 = function(k, n) {
   const list = [];
   const tmp = [];
   const backTrack = function(tmp, list) {
-    // console.log(tmp, k, list, n);
     // 如果和已经超过N，直接返回
     if (tmp.length > k) {
       return;
@@ -10273,7 +10116,6 @@ const calculate = function(s) {
     let startNumber = getNumber(s);
     const index = startNumber.length;
     startNumber = Number(startNumber);
-    // console.log(startNumber, index);
 
     if (quota === '+') {
       init = init + tmp;
@@ -10295,7 +10137,6 @@ const calculate = function(s) {
       }
     }
     s = s.slice(index);
-    // console.log(init, tmp, s);
   }
   init += tmp;
   return init;
@@ -10360,7 +10201,6 @@ const summaryRanges = function (nums) {
     }
   }
   // 最后处理剩余的
-  // console.log(start, current);
   if (start !== current) {
     // start current 放在数组中
     const item = `${start}->${current}`;
@@ -10551,6 +10391,46 @@ const isPalindrome = function(head) {
 // @lc code=end
 
 export { isPalindrome };
+
+~~~
+
+  
+### 0235-lowestCommonAncestor.js
+
+~~~js
+/*
+ * @lc app=leetcode.cn id=235 lang=javascript
+ * [235] 二叉搜索树的最近公共祖先
+ * 考察二叉搜索树的性质，遍历树节点，难度一般
+ */
+/**
+ * @param {TreeNode} root
+ * @param {TreeNode} p
+ * @param {TreeNode} q
+ * @return {TreeNode}
+ */
+const lowestCommonAncestor = function(root, p, q) {
+  let res = root;
+  // 设置当前节点是根节点
+  // eslint-disable-next-line
+  while (true) {
+    // 如果当前节点的值大于两个目标节点，那么当前节点是这个节点的左子节点
+    if (res.val > p.val && res.val > q.val) {
+      res = res.left;
+    }
+    // 如果当前节点的值小于两个目标节点，那么当前节点是这个节点的右子节点
+    else if (res.val < p.val && res.val < q.val) {
+      res = res.right;
+    }
+    // 如果相等，或者介于其中，就是这个节点
+    else {
+      break;
+    }
+  }
+  return res;
+};
+
+export { lowestCommonAncestor };
 
 ~~~
 
@@ -11239,20 +11119,12 @@ export { solution };
 ### 0279-numSquares.js
 
 ~~~js
-/*
- * @lc app=leetcode.cn id=279 lang=javascript
- *
- * [279] 完全平方数
- */
-
-// @lc code=start
 /**
- * 完全平方数
+ * 279 完全平方数
  * https://leetcode.cn/problems/perfect-squares/
  * @param {number} n
  * @return {number}
  * Your runtime beats 89.32 % of ss submissions
- * Your memory usage beats 7.05 % of js submissions (48.9 MB)
  */
 const numSquares = function(n) {
   const list = [];
@@ -11275,7 +11147,7 @@ const numSquares = function(n) {
       if (newNum === 0) {
         return times + 1;
       }
-      // 这里可以节省大量性能
+      // 把遍历到的数字，记录到字典中，可以节省大量性能
       if (!map.get(newNum)) {
         list.push([newNum, times + 1]);
         map.set(newNum, true);
@@ -11283,7 +11155,6 @@ const numSquares = function(n) {
     }
   }
 };
-// @lc code=end
 
 export { numSquares };
 
@@ -11760,7 +11631,6 @@ export { MedianFinder, MedianFinder2 };
 // 297 二叉树的序列化和反序列化，需要按照官方的格式，去序列化
 // 简单就是：中序遍历（递归二叉树的节点） + 字符串拼接即可
 // 可以不用转换成数组，然后再转换成字符串的格式
-
 /**
  * Definition for a binary tree node.
  * function TreeNode(val) {
@@ -11768,7 +11638,6 @@ export { MedianFinder, MedianFinder2 };
  *     this.left = this.right = null;
  * }
  */
-
 /**
  * Encodes a tree to a single string.
  * 二叉树序列化成字符串
@@ -11788,7 +11657,6 @@ const serialize = function(root) {
   };
   return runNode(root, '');
 };
-
 /**
  * Decodes your encoded data to tree.
  * 字符串反序列化成二叉树
@@ -12328,7 +12196,6 @@ function topKFrequent(nums, k) {
 // else if (target.length === k) {
 //   if (noSort) {
 //     target.sort((a, b) => a - b);
-//     console.log(target);
 //   }
 //   if (target[target.length - 1])
 // }
@@ -13293,8 +13160,6 @@ const get16plus = (num) => {
     item = Number.isNaN(Number(item)) ? subMap[item] : item;
     res = res * 16 + item;
   }
-  // console.log(n16);
-  // console.log(res);
   res++;
   return get16(res).padStart(8, 'f');
 };
@@ -13585,7 +13450,6 @@ const countBattleships = function(board) {
       if (item === 'X') {
         res++;
         changeBoard(board, i, j);
-        // console.log(board);
       }
     }
   }
@@ -14029,13 +13893,11 @@ function ListNode(val) {
 }
 
 const addTwoNumbers = function(l1, l2) {
-  const arr1 = []; const
-    arr2 = [];
+  const arr1 = [];
+  const arr2 = [];
   toNumber(l1, arr1);
   toNumber(l2, arr2);
-  // console.log(arr1, arr2);
   const arr3 = getSum(arr1, arr2);
-  // console.log(arr1, arr2, arr3);
   const result = toList(arr3);
   return result;
 };
@@ -14229,7 +14091,6 @@ export { frequencySort };
  * @return {number}
  */
 const findContentChildren1 = function(g, s) {
-  // ？这两个数组是否排序，这个很影响性能
   // 可以按照从小到大的顺序排列，然后使用贪心算法，依次遍历数组，看是否满足
   const gLen = g.length;
   const sLen = s.length;
@@ -14499,7 +14360,6 @@ export { findComplement, findComplement2 };
 const licenseKeyFormatting = function(S, K) {
   // 第一步，先去掉全部的破折号，正则
   let s = S.replace(/\-/g, '');
-  // console.log(s);
   // 第二步，将小写转换成大写
   s = s.toUpperCase();
   if (s.length < K) {
@@ -14512,7 +14372,6 @@ const licenseKeyFormatting = function(S, K) {
     s = s.slice(0, -K);
     arr.unshift(tmp);
   }
-  // console.log(arr);
   // 第四步，将数组使用破折号链接起来成为字符串返回
   return arr.join('-');
 };
@@ -14759,18 +14618,15 @@ const nextGreaterElement = function(nums1, nums2) {
 //   }
 //   // dict 排序
 //   dict.sort((a, b) => a.key > b.key);
-//   console.log(dict);
 //   let res = [];
 //   for (let i = 0; i < nums1; i++) {
 //     let cur = nums1[i];
 //     let item = dict.find(item => item.key === cur);
 //     for (let i = item.key; i < dict.length; i++) {
 //       if (dict[i].index > dict[item.key].index) {
-//         console.log(i);
 //         break;
 //       }
 //     }
-//     console.log();
 //   }
 // };
 
@@ -14805,7 +14661,6 @@ const isTrue = function(string) {
   } else if (str3.includes(firstStr)) {
     target = str3;
   }
-  // console.log(target, firstStr);
   if (!target) {
     return false;
   }
@@ -14878,7 +14733,6 @@ const findMode = function(root) {
   const dict = {};
   // 使用辅助函数遍历树节点
   runTree(root, dict);
-  // console.log(dict);
   // 统计字典中的最大值
   const values = Object.values(dict);
   const max = Math.max(...values);
@@ -15065,7 +14919,6 @@ const findFrequentTreeSum = function(root) {
   // 获取最大值
   let res = [];
   let max = 0;
-  // console.log(dict);
   for (const key in dict) {
     const times = dict[key];
     if (times > max) {
@@ -15157,7 +15010,6 @@ const findBottomLeftValue = function(root) {
   const list = [];
   const depth = 0;
   runNode(root, depth, list);
-  // console.log(list, depth);
   return list[list.length - 1][0];
 };
 
@@ -15171,8 +15023,6 @@ const runNode = function(node, depth, list) {
   runNode(node.left, depth + 1, list);
   runNode(node.right, depth + 1, list);
 };
-
-// @lc code=end
 
 export { findBottomLeftValue };
 
@@ -15425,19 +15275,15 @@ export { encode, decode };
  * @param {string} b
  * @return {string}
  */
-// 76 ms
-// , 在所有 JavaScript 提交中击败了
-// 84.62%
+// 76 ms, 在所有 JavaScript 提交中击败了84.62%
 const complexNumberMultiply = function(a, b) {
   // 先把字符串变成两部分
   let index = a.indexOf('+');
   const a1 = parseInt(a.slice(0, index));
   const a2 = parseInt(a.slice(index + 1, a.length - 1));
-  // console.log(a1, a2);
   index = b.indexOf('+');
   const b1 = parseInt(b.slice(0, index));
   const b2 = parseInt(b.slice(index + 1, b.length - 1));
-  // console.log(b1, b2);
   // 然后分别进行乘积
   const c1 = a1 * b1 + a2 * b2 * -1;
   const c2 = a2 * b1 + a1 * b2;
@@ -15595,8 +15441,6 @@ export { checkRecord };
  *
  * [554] 砖墙
  */
-
-// @lc code=start
 /**
  * @param {number[][]} wall
  * @return {number}
@@ -15619,10 +15463,8 @@ const leastBricks = function(wall) {
       max = dict[initKey] > max ? dict[initKey] : max;
     }
   }
-  // console.log(dict);
   return rowLen - max;
 };
-// @lc code=end
 
 export { leastBricks };
 
@@ -16053,15 +15895,12 @@ const findLHS = function(nums) {
     arr.push(parseInt(key));
   }
   arr.sort((a, b) => a - b);
-  // console.log(arr);
-  // console.log(dict);
   let longest = 0;
   for (let i = 1; i < arr.length; i++) {
     if (arr[i] - arr[i - 1] === 1) {
       const key1 = String(arr[i]);
       const key2 = String(arr[i - 1]);
       const times = dict[key1] + dict[key2];
-      // console.log(key1, key2);
       longest = longest > times ? longest : times;
     }
   }
@@ -16249,11 +16088,8 @@ export { tree2str };
 ~~~js
 /*
  * @lc app=leetcode.cn id=609 lang=javascript
- *
  * [609] 在系统中查找重复文件
  */
-
-// @lc code=start
 /**
  * @param {string[]} paths
  * @return {string[][]}
@@ -16272,7 +16108,6 @@ const findDuplicate = function(paths) {
       const index = file.indexOf('(');
       const fileName = file.slice(0, index);
       const fileContent = file.slice(index + 1, file.length - 1);
-      // console.log(fileName, fileContent);
       if (!dict[fileContent]) {
         dict[fileContent] = [];
       }
@@ -16291,9 +16126,88 @@ const findDuplicate = function(paths) {
   }
   return res;
 };
-// @lc code=end
 
 export { findDuplicate };
+
+~~~
+
+  
+### 0611-triangleNumber.js
+
+~~~js
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+// 思路一：数组长度小于1000，那么可以暴力三层循环 时间复杂度是 N * N * N
+// 2204 ms, 在所有 JavaScript 提交中击败了5.53%
+const triangleNumber = function(nums) {
+  const len = nums.length;
+  if (len < 3) return 0;
+  nums = nums.sort((a, b) => a > b ? 1 : -1);
+  let result = 0;
+  for (let i = 0; i < len; i++) {
+    for (let j = i + 1; j < len; j++) {
+      for (let k = j + 1; k < len; k++) {
+        if (nums[i] + nums[j] > nums[k]) {
+          result++;
+        }
+      }
+    }
+  }
+  return result;
+};
+
+// 思路2：外层循环ij，数组已经排序，内部 break 优化一半，时间复杂度是 N * N * N / 2
+// 1196 ms, 在所有 JavaScript 提交中击败了20.28%
+const triangleNumber2 = function(nums) {
+  const len = nums.length;
+  if (len < 3) return 0;
+  nums = nums.sort((a, b) => a > b ? 1 : -1);
+  let result = 0;
+  for (let i = 0; i < len; i++) {
+    for (let j = i + 1; j < len; j++) {
+      for (let k = j + 1; k < len; k++) {
+        if (nums[i] + nums[j] > nums[k]) {
+          result++;
+        } else {
+          break;
+        }
+      }
+    }
+  }
+  return result;
+};
+
+// 思路3：外层循环 i j 内部实现二分法查找，时间复杂度是 N * N * logN
+// 468 ms, 在所有 JavaScript 提交中击败了34.10%
+const triangleNumber3 = function(nums) {
+  const len = nums.length;
+  if (len < 3) return 0;
+  nums.sort((a, b) => a > b ? 1 : -1);
+  let result = 0;
+  for (let i = 0; i < len; i++) {
+    for (let j = i + 1; j < len; j++) {
+      const target = nums[i] + nums[j];
+      let left = j + 1;
+      let right = len - 1;
+      let k = j;
+      while (left <= right) {
+        const mid = Math.floor((left + right) / 2);
+        if (nums[mid] < target) {
+          k = mid;
+          left = mid + 1;
+        } else {
+          right = mid - 1;
+        }
+      }
+      result += k - j;
+    }
+  }
+  return result;
+};
+
+export { triangleNumber, triangleNumber2, triangleNumber3 };
 
 ~~~
 
@@ -16335,6 +16249,57 @@ const mergeTrees = function(t1, t2) {
 // @lc code=end
 
 export { mergeTrees };
+
+~~~
+
+  
+### 0621-leastInterval.js
+
+~~~js
+// 0621 任务调度器
+// https://leetcode.cn/problems/task-scheduler/
+// 考点：贪心算法 + 桶
+// 这个算法比较偏，看过官方答案后还有点想不通，理解困难，后续再思考
+// 官方解答比较抽象，可以参考这个 /https://leetcode.cn/problems/task-scheduler/solution/tong-zi-by-popopop/
+/**
+ * @param {character[]} tasks
+ * @param {number} n
+ * @return {number}
+ */
+const leastInterval = function(tasks, n) {
+  // 1、遍历全部的数组，找到每一个字母出现的次数
+  const map = {};
+  for (let i = 0; i < tasks.length; i++) {
+    if (map[tasks[i]]) {
+      map[tasks[i]] = map[tasks[i]] + 1;
+    }
+    else {
+      map[tasks[i]] = 1;
+    }
+  }
+  // 2、然后对次数进行，排序 arr
+  const arr = Object.values(map).sort((a, b) => a < b ? 1 : -1);
+  // 3、找到出现最多的元素次数 arr[0]，假设我们其他的次数都小于 arr[0], 那么此时的次数应该是 (n + 1) * (arr[0] - 1) + 1 最后一个表示多出来的最多的元素
+  // 这里先考虑，字母去重后的个数，小于等于 N + 1（在第五步中处理）
+  let minLen = (arr[0] - 1) * (n + 1) + 1;
+  // 4、遍历其他元素，如果其他元素个数等于最大元素个数，那么这个数字加1
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] === arr[0]) {
+      minLen++;
+    }
+  }
+  // 5、最后比较玄：插入26个元素时，分成两种情况：
+  // 5.1 当 X 预占位置能插满时，这种情况下其实每个任务之间都不存在空余时间，冷却时间已经被完全填满了。也就是说，我们执行任务所需的时间，就是任务的数量。
+  // 5.2 不能插满，则取最少预占序列长度（即3算出来的结果）
+  return Math.max(minLen, tasks.length);
+};
+
+// console.log(leastInterval(["A","A","A","B","B","B"], 2)) // 8
+// console.log(leastInterval(["A","A","A","B","B","B"], 0)) // 6
+// console.log(leastInterval(["A","A","A","A","A","A","B","C","D","E","F","G"], 2)) // 16
+// console.log(leastInterval(["A","A","A","B","B","B", "C","C","C", "D", "D", "E"], 2)) // 12
+
+export { leastInterval };
 
 ~~~
 
@@ -16515,7 +16480,6 @@ export { averageOfLevels };
 ~~~js
 /*
  * @lc app=leetcode.cn id=640 lang=javascript
- *
  * [640] 求解方程
  */
 
@@ -16557,7 +16521,6 @@ const solveEquation = function(equation) {
   if (right[0] !== '-') {
     right = `+${right}`;
   }
-  // console.log(left, right);
 
   // 先处理左边
   // 先 split ("+") 变成一个数组
@@ -16577,9 +16540,6 @@ const solveEquation = function(equation) {
       leftArr2.push(str);
     }
   });
-  // 这一步正确
-  // console.log(leftArr2);
-  // console.log(leftArr3);
   const obj1 = getNumber(leftArr2);
   const obj2 = getNumber(leftArr3);
   // 然后再次遍历这个数组，把常熟项和X的系数分开，存储两个单独的变量
@@ -16599,7 +16559,6 @@ const solveEquation = function(equation) {
   });
   const obj3 = getNumber(leftArr5);
   const obj4 = getNumber(leftArr6);
-  // console.log(obj1, obj2, obj3, obj4);
   const a = obj1.a - obj2.a - obj3.a + obj4.a;
   const b = obj1.b - obj2.b - obj3.b + obj4.b;
 
@@ -16732,6 +16691,47 @@ const findErrorNums = function(nums) {
 };
 
 export { findErrorNums };
+
+~~~
+
+  
+### 0654-constructMaximumBinaryTree.js
+
+~~~js
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
+/**
+ * @param {number[]} nums
+ * @return {TreeNode}
+ * 最大二叉树
+ * 找到当前数组的最大值，以及对应的 index 然后分别构建左子树和右子树
+ * https://leetcode.cn/problems/maximum-binary-tree/
+ */
+const constructMaximumBinaryTree = function(nums) {
+  function buildTree(arr) {
+    if (arr.length === 0) {
+      return null;
+    }
+    if (arr.length === 1) {
+      return new TreeNode(arr[0]);
+    }
+    const max = Math.max(...arr);
+    const index = arr.indexOf(max);
+    const node = new TreeNode(max);
+    node.left = buildTree(arr.slice(0, index));
+    node.right = buildTree(arr.slice(index + 1));
+    return node;
+  }
+  return buildTree(nums);
+};
+
+export { constructMaximumBinaryTree };
 
 ~~~
 
@@ -17186,7 +17186,6 @@ const topKFrequent = function(words, k) {
     const item = { key, times };
     arr.push(item);
   }
-  // console.log(arr);
   arr.sort((a, b) => {
     if (a.times !== b.times) {
       return a.times > b.times ? -1 : 1;
@@ -17194,7 +17193,6 @@ const topKFrequent = function(words, k) {
       return a.key > b.key ? 1 : -1;
     }
   });
-  // console.log(arr);
   return arr.slice(0, k).map((item) => item.key);
 };
 // @lc code=end
@@ -17248,8 +17246,6 @@ export { hasAlternatingBits };
  *
  * [696] 计数二进制子串
  */
-
-// @lc code=start
 /**
  * @param {string} s
  * @return {number}
@@ -17285,7 +17281,6 @@ const countBinarySubstrings = function(s) {
       current2 = item;
       time2 = 1;
     }
-    // console.log(current1, time1, current2, time2, res);
   }
   if (current2) {
     const min = Math.min(time1, time2);
@@ -17293,7 +17288,6 @@ const countBinarySubstrings = function(s) {
   }
   return res;
 };
-// @lc code=end
 
 export { countBinarySubstrings };
 
@@ -17328,7 +17322,6 @@ const findShortestSubArray = function(nums) {
     max = max > dict[key].times ? max : dict[key].times;
     dict[key].end = i;
   }
-  // console.log(dict, max);
   // times 最大，start - end 最小的情况
   if (max === 1) {
     return 1;
@@ -17338,7 +17331,6 @@ const findShortestSubArray = function(nums) {
     const item = dict[key];
     if (item.times === max) {
       const tmp = item.end - item.start + 1;
-      // console.log(tmp);
       if (minLen >= 0) {
         minLen = minLen < tmp ? minLen : tmp;
       } else {
@@ -17459,13 +17451,10 @@ KthLargest.prototype.add = function(val) {
     return this.arr[this.k - 1];
   }
   // 插入的比最小的大，正常插入
-  // console.log(this.arr, val);
   for (let i = 0; i < len; i++) {
     if (val > this.arr[i]) {
-      // console.log(this.arr);
       this.arr.splice(i, 0, val);
       this.arr.pop();
-      // console.log(this.arr);
       return this.arr[this.k - 1];
     }
   }
@@ -17779,6 +17768,145 @@ export { longestWord };
 ~~~
 
   
+### 0721-accountsMerge.js
+
+~~~js
+/**
+ * @param {string[][]} accounts
+ * @return {string[][]}
+ * https://leetcode.cn/problems/accounts-merge/
+ * 图 DFS 或者 BFS 算法实现
+ * 424 ms, 在所有 JavaScript 提交中击败了16.39% 基本完成，时间不太好
+ */
+const accountsMerge = function(accounts) {
+  // 遍历矩阵，获取 email - index 字典
+  const dict = {};
+  for (let i = 0; i < accounts.length; i++) {
+    const account = accounts[i];
+    for (let j = 1; j < account.length; j++) {
+      const email = account[j];
+      if (!dict[email]) {
+        dict[email] = {};
+      }
+      dict[email][i] = true;
+    }
+  }
+  // 循环原数组，DFS 找到相关的账号并标记原数组
+  const res = [];
+  for (let i = 0; i < accounts.length; i++) {
+    if (accounts[i].visited) {
+      continue;
+    }
+    const account = accounts[i];
+    // 当前账户的邮箱存储
+    accounts[i].visited = true;
+    // 广度优先遍历
+    let result = [];
+    const emails = account.slice(1);
+    while (emails.length > 0) {
+      const currentEmail = emails.pop();
+      result.push(currentEmail);
+      Object.keys(dict[currentEmail]).forEach((index) => {
+        // 没有访问过的节点
+        if (!accounts[index].visited) {
+          // 这是剩余的相同的邮箱
+          emails.push(...accounts[index].slice(1));
+          accounts[index].visited = true;
+        }
+      });
+    }
+    // 这里需要排列顺序（这里看一下为什么可能重复邮箱）
+    result = Array.from(new Set(result)).sort((a, b) => a > b ? 1 : -1);
+    // 把名字放在第一位
+    result.unshift(account[0]);
+    res.push(result);
+  }
+  return res;
+};
+
+// console.log(accountsMerge([["John", "johnsmith@mail.com", "john00@mail.com"], ["John", "johnnybravo@mail.com"], ["John", "johnsmith@mail.com", "john_newyork@mail.com"], ["Mary", "mary@mail.com"]]))
+// [["John", 'john00@mail.com', 'john_newyork@mail.com', 'johnsmith@mail.com'],  ["John", "johnnybravo@mail.com"], ["Mary", "mary@mail.com"]]
+
+// console.log(accountsMerge([["Gabe","Gabe0@m.co","Gabe3@m.co","Gabe1@m.co"],["Kevin","Kevin3@m.co","Kevin5@m.co","Kevin0@m.co"],["Ethan","Ethan5@m.co","Ethan4@m.co","Ethan0@m.co"],["Hanzo","Hanzo3@m.co","Hanzo1@m.co","Hanzo0@m.co"],["Fern","Fern5@m.co","Fern1@m.co","Fern0@m.co"]]))
+// [
+//   ["Ethan","Ethan0@m.co","Ethan4@m.co","Ethan5@m.co"],
+//   ["Gabe","Gabe0@m.co","Gabe1@m.co","Gabe3@m.co"],
+//   ["Hanzo","Hanzo0@m.co","Hanzo1@m.co","Hanzo3@m.co"],
+//   ["Kevin","Kevin0@m.co","Kevin3@m.co","Kevin5@m.co"],
+//   ["Fern","Fern0@m.co","Fern1@m.co","Fern5@m.co"]
+// ]
+
+// 官方给出的算法是并查集，需要学一下这个算法
+// https://leetcode.cn/problems/accounts-merge/solution/zhang-hu-he-bing-by-leetcode-solution-3dyq/
+// var accountsMerge = function(accounts) {
+//   const emailToIndex = new Map();
+//   const emailToName = new Map();
+//   let emailsCount = 0;
+//   for (const account of accounts) {
+//       const name = account[0];
+//       const size = account.length;
+//       for (let i = 1; i < size; i++) {
+//           const email = account[i];
+//           if (!emailToIndex.has(email)) {
+//               emailToIndex.set(email, emailsCount++);
+//               emailToName.set(email, name);
+//           }
+//       }
+//   }
+
+//   const uf = new UnionFind(emailsCount);
+//   for (const account of accounts) {
+//       const firstEmail = account[1];
+//       const firstIndex = emailToIndex.get(firstEmail);
+//       const size = account.length;
+//       for (let i = 2; i < size; i++) {
+//           const nextEmail = account[i];
+//           const nextIndex = emailToIndex.get(nextEmail);
+//           uf.union(firstIndex, nextIndex);
+//       }
+//   }
+
+//   const indexToEmails = new Map();
+//   for (const email of emailToIndex.keys()) {
+//       const index = uf.find(emailToIndex.get(email));
+//       const account = indexToEmails.get(index) ? indexToEmails.get(index) : [];
+//       account.push(email);
+//       indexToEmails.set(index, account);
+//   }
+//   const merged = [];
+//   for (const emails of indexToEmails.values()) {
+//       emails.sort();
+//       const name = emailToName.get(emails[0]);
+//       const account = [];
+//       account.push(name);
+//       account.push(...emails);
+//       merged.push(account);
+//   }
+//   return merged;
+// };
+
+// class UnionFind {
+//   constructor (n) {
+//       this.parent = new Array(n).fill(0).map((element, index) => index);
+//   }
+
+//   union (index1, index2) {
+//       this.parent[this.find(index2)] = this.find(index1);
+//   }
+
+//   find (index) {
+//       if (this.parent[index] !== index) {
+//           this.parent[index] = this.find(this.parent[index]);
+//       }
+//       return this.parent[index];
+//   }
+// }
+
+export { accountsMerge };
+
+~~~
+
+  
 ### 0724-pivotIndex.js
 
 ~~~js
@@ -17906,7 +18034,6 @@ const countOfAtoms = function(formula) {
     const leftIndex = formula.lastIndexOf('(', rightIndex);
     // 把中间的字符剪出来
     const inner = formula.slice(leftIndex + 1, rightIndex);
-    // console.log(inner);
     // 然后找到右面的数字（次数）;
     let tmp = formula.slice(rightIndex + 1);
     let times;
@@ -17954,7 +18081,7 @@ const countOfAtoms = function(formula) {
   return res;
 };
 
-// 这三个测试通过
+// 测试通过
 // countOfAtoms("(NB3)33");
 // countOfAtoms("H2O");
 // countOfAtoms("Mg(OH)2");
@@ -18063,7 +18190,6 @@ MyCalendar.prototype.book = function(start, end) {
 // for (let i = 0; i < test.length; i++) {
 //   const testarr = test[i];
 //   const result = myCalendar.book(testarr[0], testarr[1]);
-//   console.log(result);
 // }
 
 /**
@@ -18088,7 +18214,7 @@ export { MyCalendar };
  * @return {number}
  */
 // 两个思路
-// 1、枚举法，直接遍历这个数字，性能较差(963153657 会超时)
+// 1、枚举法，直接遍历这个数字，性能差(963153657 会超时)
 // var monotoneIncreasingDigits = function(n) {
 //     if (n < 10) return n;
 //     // 辅助函数：判断一个数字是否单调递增的
@@ -18111,10 +18237,7 @@ export { MyCalendar };
 // };
 
 // 2、贪心算法：如果某一个数字满足，那么返回真；如果不满足，从前向后遍历数字，然后把相差的直接变成9，然后再测试，这样可以减少循环次数
-// 这个可以做出来，但是性能还可以提升
-// 同一个代码，在不同时间提交，执行时间差异较大，所以还是从代码角度分析时间复杂度，这个结果仅供参考
-// 92 ms, 在所有 JavaScript 提交中击败了5.25%
-// 52 ms, 在所有 JavaScript 提交中击败了96.79%
+// 52 ms, 在所有 JavaScript 提交中击败了96.79%（时间仅供参考）
 const monotoneIncreasingDigits = function(n) {
   if (n < 10) return n;
   // 辅助函数：判断一个数字是否单调递增的
@@ -18147,16 +18270,11 @@ const monotoneIncreasingDigits = function(n) {
   };
 
   while (!check(n)) {
-    // 重新计算 n
     n = calculateNum(n);
   }
   return n;
 };
 
-// console.log(monotoneIncreasingDigits(10), 9);
-// console.log(monotoneIncreasingDigits(1234), 1234);
-// console.log(monotoneIncreasingDigits(332), 299);
-// console.log(monotoneIncreasingDigits(963153657), 299);
 export { monotoneIncreasingDigits };
 
 ~~~
@@ -18206,25 +18324,18 @@ export { dailyTemperatures };
 ### 0740-deleteAndEarn.js
 
 ~~~js
-/**
- * @param {number[]} nums
- * @return {number}
- */
-
 // 740. 删除并获得点数
 // 给你一个整数数组 nums ，你可以对它进行一些操作。
 // 每次操作中，选择任意一个 nums[i] ，删除它并获得 nums[i] 的点数。之后，你必须删除 所有 等于 nums[i] - 1 和 nums[i] + 1 的元素。
 // 开始你拥有 0 个点数。返回你能通过这些操作获得的最大点数。
 // 104 ms, 在所有 JavaScript 提交中击败了12.14%
-
 // 考点：动态规划和哈希表
 // 1、遍历数组，把数组提取成一个哈希表，同时把原始数组拷贝一份，然后去重排序
-// 2、开始动态规划，循环数组
-// 如果当前的和前面的是不相邻的，直接加上这个数字 * 出现的个数
-// 如果这个数字和前面的是相邻的，那么把这个相邻的数群的开始和结尾找出来，也就是 i 和 k，然后计算 i - k 全部奇数或者偶数的最大值，然后加上去
-// 错误思路：这样就实现了动态规划（删除相邻元素）F(n) = Math.max(fn(1) * times(1) + fn(3) * times(3), fn(2) * times(2) + fn(4) * times(4));
-// 正确思路：打家劫舍的思路，需要递推，不能直接计算奇数或者偶数项的和
-
+// 2、开始动态规划，循环数组（打家劫舍的思路，需要递推，不能直接计算奇数或者偶数项的和）
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
 const deleteAndEarn = function(nums) {
   // 1 构建哈希表（存储出现的次数）
   const dict = {};
@@ -18237,18 +18348,19 @@ const deleteAndEarn = function(nums) {
   });
   // 2 构建纯净数组
   const list = Array.from(new Set(nums)).sort((a, b) => a > b ? 1 : -1);
-  // 3 循环数组，计算最大值（需要辅助函数）
-  // 特殊：如果只有1-2项，直接计算出来结果
+  // 3 循环数组计算最大值
+  // 特殊：如果只有1项，直接计算出来结果
   if (list.length === 1) {
     return list[0] * nums.length;
   }
-  // 这个存放二维数组（如果是不连续的，直接放入；如果是连续的，放入连续的数组）
+  // 这个存放二维数组
   const arr = [];
   let startIndex;
   if (list[1] - list[0] === 1) {
     startIndex = list[0];
   }
   for (let i = 0; i < list.length; i++) {
+    // 如果前后元素是不连续的，直接放入
     if (list[i + 1] - list[i] > 1 && !startIndex) {
       arr.push(list[i]);
     }
@@ -18256,6 +18368,7 @@ const deleteAndEarn = function(nums) {
       arr.push([startIndex, list[i]]);
       startIndex = null;
     }
+    // 如果前后元素是连续的，放入连续的数组
     if (list[i + 1] - list[i] === 1 && !startIndex) {
       startIndex = list[i];
     }
@@ -18270,22 +18383,23 @@ const deleteAndEarn = function(nums) {
       arr.push(list[i]);
     }
   }
-  // 辅助函数：计算两个连续数之间的最大值
-  // 应该是打家劫舍的思路（动态规划）
-  // Max(0) = f(0)
-  // Max(1) = Math.max(f(0), f(1))
-  // Max(n) = Math.max(Max(n - 2) + f(n), Max(n - 1))
+  // 辅助函数：计算两个连续数之间的最大值，打家劫舍的思路（动态规划）
   const getMax = (start, end) => {
     const maxList = [];
+
+    // Max(0) = f(0)
     maxList[start] = start * dict[start];
-    maxList[start + 1] = Math.max(start * dict[start], (start + 1) * dict[start + 1]);
+
+    // Max(1) = Math.max(f(0), f(1))
+    maxList[start + 1] = Math.max(maxList[start], (start + 1) * dict[start + 1]);
+
+    // Max(n) = Math.max(Max(n - 2) + f(n), Max(n - 1))
     for (let i = start + 2; i <= end; i++) {
       maxList[i] = Math.max(maxList[i - 1], maxList[i - 2] + i * dict[i]);
     }
-    // console.log(start, end);
-    // console.log(maxList);
     return maxList[maxList.length - 1];
   };
+
   let tmp = 0;
   for (let i = 0; i < arr.length; i++) {
     if (typeof arr[i] === 'number') {
@@ -18297,12 +18411,6 @@ const deleteAndEarn = function(nums) {
   }
   return tmp;
 };
-
-// console.log(deleteAndEarn([3,4])); // 4
-// console.log(deleteAndEarn([2,2,3,3,3,4])); // 9
-// console.log(deleteAndEarn([3,4,2])); // 6
-// console.log(deleteAndEarn([3,4,2, 8, 20, 21,23,22,90,76, 234,355,27,2,3,6,9,8,356])); // 857
-// console.log(deleteAndEarn([10,8,4,2,1,3,4,8,2,9,10,4,8,5,9,1,5,1,6,8,1,1,6,7,8,9,1,7,6,8,4,5,4,1,5,9,8,6,10,6,4,3,8,4,10,8,8,10,6,4,4,4,9,6,9,10,7,1,5,3,4,4,8,1,1,2,1,4,1,1,4,9,4,7,1,5,1,10,3,5,10,3,10,2,1,10,4,1,1,4,1,2,10,9,7,10,1,2,7,5])) // 338
 
 export { deleteAndEarn };
 
@@ -18919,7 +19027,6 @@ const uniqueMorseRepresentations = function(words) {
       const index = str.charCodeAt(i) - 97;
       tmp += standard[index];
     }
-    // console.log(str, tmp);
     return tmp;
   };
 
@@ -18933,7 +19040,6 @@ const uniqueMorseRepresentations = function(words) {
       num++;
     }
   }
-  // console.log(dict);
   return num;
 };
 
@@ -19109,7 +19215,6 @@ const largestTriangleArea = function(points) {
 //   for (let i = 0; i < len; i++) {
 //     if (i === a || i === b) continue;
 //     let area = getArea(points[a], points[b], points[i]);
-//     console.log(area);
 //     maxArea = maxArea > area ? maxArea : area;
 //   }
 //   return maxArea;
@@ -19121,6 +19226,46 @@ const largestTriangleArea = function(points) {
 // @lc code=end
 
 export { largestTriangleArea };
+
+~~~
+
+  
+### 0814-pruneTree.js
+
+~~~js
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
+/**
+ * @param {TreeNode} root
+ * @return {TreeNode}
+ * 二叉树剪枝 https://leetcode.cn/problems/binary-tree-pruning/
+ */
+const pruneTree = function(root) {
+  const parseNode = (node) => {
+    if (!node) return null;
+    // 如果是1，没有子节点
+    if (node.val === 1 && !node.left && !node.right) {
+      return node;
+    }
+    // 处理左右子节点的情况
+    node.left = parseNode(node.left);
+    node.right = parseNode(node.right);
+    // 如果是0，没有子节点
+    if (node.val === 0 && !node.left && !node.right) {
+      return null;
+    }
+    return node;
+  };
+  return parseNode(root);
+};
+
+export { pruneTree };
 
 ~~~
 
@@ -19592,6 +19737,36 @@ export { isRectangleOverlap };
 ~~~
 
   
+### 0841-canVisitAllRooms.js
+
+~~~js
+/**
+ * @param {number[][]} rooms
+ * @return {boolean}
+ * DFS 或者 BFS 可以实现
+ * https://leetcode.cn/problems/keys-and-rooms/
+ */
+const canVisitAllRooms = function(rooms) {
+  // 辅助函数，深度优先遍历房间
+  const checkRoom = (room) => {
+    if (room.visited) return;
+    room.visited = true;
+    room.forEach((item) => {
+      checkRoom(rooms[item]);
+    });
+  };
+  checkRoom(rooms[0]);
+  return !rooms.some((item) => !item.visited);
+};
+
+// console.log(canVisitAllRooms([[1],[2],[3],[]])) // true
+// console.log(canVisitAllRooms([[1,3],[3,0,1],[2],[0]])) // false
+
+export { canVisitAllRooms };
+
+~~~
+
+  
 ### 0844-backspaceCompare.js
 
 ~~~js
@@ -19712,7 +19887,6 @@ export { maxDistToClosest };
  * [852] 山脉数组的峰顶索引
  */
 
-// @lc code=start
 /**
  * @param {number[]} arr
  * @return {number}
@@ -19736,13 +19910,52 @@ const peakIndexInMountainArray = function(arr) {
     if (arr[mid] > arr[mid - 1] && arr[mid] > arr[mid + 1]) {
       return mid;
     }
-    // console.log(start, end, mid);
   }
 };
 
-// @lc code=end
-
 export { peakIndexInMountainArray };
+
+~~~
+
+  
+### 0856-scoreOfParentheses.js
+
+~~~js
+/**
+ * @param {string} s
+ * @return {number}
+ */
+const scoreOfParentheses = function(s) {
+  // 初始化栈，当前结果是0
+  const stack = [0];
+  // 循环字符串
+  for (let i = 0; i < s.length; i++) {
+    // 如果是左括号，推入一个0
+    if (s[i] === '(') {
+      stack.push(0);
+    }
+    // 如果是右括号
+    else if (s[i] === ')') {
+      // 弹出上一个数字
+      const tmp = stack.pop();
+      // 求出这对括号的值（2的倍数，或者是1）——这个需要注意
+      const sum = Math.max(tmp * 2, 1);
+      // 当前的计算结果相加
+      stack[stack.length - 1] = stack[stack.length - 1] + sum;
+    }
+  }
+  // 返回全部计算结果
+  return stack[0];
+};
+
+// console.log(scoreOfParentheses("()()")) //2
+// console.log(scoreOfParentheses("(())")) //2
+// console.log(scoreOfParentheses("()")) //1
+// console.log(scoreOfParentheses("(()(()))")) // 6
+// console.log(scoreOfParentheses("(()(()))()()()()()")) //11
+// console.log(scoreOfParentheses("(()(()))()(())()()()((()()))")) //20
+
+export { scoreOfParentheses };
 
 ~~~
 
@@ -20103,9 +20316,7 @@ const projectionArea = function(grid) {
     }
   }
   // dict 求和
-  // console.log(dict);
   Y = dict.reduce((item, sum) => { return item + sum; }, 0);
-  // console.log(X, Y, Z)
   return (X + Y + Z);
 };
 // @lc code=end
@@ -20243,7 +20454,6 @@ const findAndReplacePattern = function(words, pattern) {
     keyTimes.push(value);
   }
   keyTimes.sort((a, b) => a - b);
-  // console.log(keyTimes);
 
   // 辅助函数：判断是否相同模式
   // 现在这样需要获取全部的长度，性能不好
@@ -20264,7 +20474,6 @@ const findAndReplacePattern = function(words, pattern) {
     }
     keyTimes1.sort((a, b) => a - b);
     // 这样可以实现，但是性能不好（获取key再排序等等）
-    // console.log(keyTimes1);
     for (let i = 0; i < keyLen; i++) {
       if (String(keyTimes1[i]) !== String(keyTimes[i])) {
         return false;
@@ -20420,7 +20629,6 @@ const numSpecialEquivGroups = function(A) {
   for (let i = 0; i < len; i++) {
     const item = A[i];
     const key = getKey(item);
-    // console.log(key);
     dict[key] ? dict[key]++ : dict[key] = 1;
     num = num > dict[key] ? num : dict[key];
   }
@@ -20540,7 +20748,6 @@ const increasingBST = function(root) {
     }
   };
   runNode(root, arr);
-  // console.log(arr);
   // 然后把线性的数组，转换成只有右子节点的树
   const getTree = (node, arr) => {
     if (arr.length > 0) {
@@ -20663,11 +20870,9 @@ const hasGroupsSizeX = function(deck) {
   arr.sort((a, b) => a - b);
   if (!arr[1]) return true;
   let res = gcd(arr[0], arr[1]);
-  // console.log(arr);
   if (res === 1) return false;
   for (let i = 1; i < arr.length; i++) {
     res = gcd(res, arr[i]);
-    // console.log(res, arr[i], res);
     if (res === 1) return false;
   }
   return true;
@@ -20699,11 +20904,9 @@ export { hasGroupsSizeX };
 const partitionDisjoint = function(A) {
   const min = Math.min(...A);
   let left = A.lastIndexOf(min);
-  // console.log(left);
   while (Math.max(...A.slice(0, left)) > Math.min(...A.slice(left + 1))) {
     // 找到右边的最小值，然后继续求最大值和最小值
     const tmp = Math.min(...A.slice(left + 1));
-    // console.log(tmp);
     left = A.lastIndexOf(tmp);
   }
   if (A[left] === Math.min(...A.slice(0, left))) {
@@ -20928,7 +21131,6 @@ const numUniqueEmails = function(emails) {
   let times = 0;
   for (let i = 0; i < len; i++) {
     const item = valid(emails[i]);
-    // console.log(item);
     // 然后放在对象中，用另一个int记录次数
     if (!dict[item]) {
       times++;
@@ -21215,7 +21417,6 @@ export { minDeletionSize };
 const isAlienSorted = function(words, order) {
   // 写一个辅助函数，判断两个单词是否符合顺序
   const checkOrder = function(a, b) {
-    // console.log(a, b);
     const aLen = a.length;
     for (let i = 0; i < aLen; i++) {
       // 其中 '∅' 是空白字符
@@ -21249,6 +21450,78 @@ const isAlienSorted = function(words, order) {
 // @lc code=end
 
 export { isAlienSorted };
+
+~~~
+
+  
+### 0958-isCompleteTree.js
+
+~~~js
+/*
+ * @lc app=leetcode.cn id=958 lang=javascript
+ * [958] 二叉树的完全性检验 难度中等
+ */
+
+// @lc code=start
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
+/**
+ * @param {TreeNode} root
+ * @return {boolean}
+ */
+// 958 判断是否是完全二叉树
+// 思路：把二叉树层序遍历，然后放在数组中，看出现空位的情况就行
+// 直接 BFS 即可，如果某个节点中不存在，那么就是空位，这个就判断了二叉树的完全性
+// 68 ms, 在所有 JavaScript 提交中击败了70.08%
+const isCompleteTree = function(root) {
+  // 辅助函数：二叉树的层序遍历
+  const runTree = function(node, layer, matrix) {
+    if (!matrix[layer]) {
+      matrix[layer] = [];
+    }
+    if (!node) {
+      matrix[layer].push(null);
+    } else {
+      matrix[layer].push(node.val);
+      runTree(node.left, layer + 1, matrix);
+      runTree(node.right, layer + 1, matrix);
+    }
+  };
+  // 初始化矩阵
+  const matrix = [];
+  matrix[0] = [];
+  const layer = 0;
+  matrix[layer].push(root.val);
+  runTree(root.left, layer + 1, matrix);
+  runTree(root.right, layer + 1, matrix);
+  for (let i = 0; i < matrix.length - 1; i++) {
+    if (matrix[i][matrix[i].length - 1] === null && i !== matrix.length - 2) {
+      return false;
+    }
+    while (matrix[i][matrix[i].length - 1] === null) {
+      matrix[i].pop();
+    }
+    for (let j = 0; j < matrix[i].length; j++) {
+      if (matrix[i][j] === null) {
+        return false;
+      }
+    }
+  }
+  return true;
+};
+
+// [1,2,3,4,5,6] true
+// [1,2,3,4,5,null,7] false
+// [1,2,3,4,5,6,7,8,9,10,11,12,13,null,null,15] false
+// [1,2,3,4,5,6,7,8,9,null,null,null,null,null,null,10,11,12,13] // false
+
+export { isCompleteTree };
 
 ~~~
 
@@ -21491,6 +21764,46 @@ function sortedSquares3(A) {
 // 2. while 第一个数小于0，把第一个数取出来，计算第一个数的平方，然后遍历，splice插入，记录当前的index。
 
 export { sortedSquares, sortedSquares2, sortedSquares3 };
+
+~~~
+
+  
+### 0979-distributeCoins.js
+
+~~~js
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
+/**
+ * @param {TreeNode} root
+ * @return {number}
+ * https://leetcode.cn/problems/distribute-coins-in-binary-tree/
+ * 979. 在二叉树中分配硬币
+ * 当时没有想到怎么解决，参考答案的思路，不考虑一个移动到另一个，只考虑当前节点上净变化数量，然后求和：
+ * 对叶子结点，移动的数量是 abs(node.val - 1)
+ * 对其他节点，移动的数量是 abs(node.val + 左子树移动的数量 + 右子树移动的数量 - 1)
+ * 然后 DFS 即可实现
+ * https://leetcode.cn/problems/distribute-coins-in-binary-tree/
+ */
+const distributeCoins = function(root) {
+  let result = 0;
+  const checkNode = (node) => {
+    if (!node) return 0;
+    const tmp1 = checkNode(node.left);
+    const tmp2 = checkNode(node.right);
+    result = result + Math.abs(tmp1) + Math.abs(tmp2);
+    return node.val + tmp1 + tmp2 - 1;
+  };
+  checkNode(root);
+  return result;
+};
+
+export { distributeCoins };
 
 ~~~
 
@@ -21934,7 +22247,6 @@ const commonChars = function(A) {
   }
   // 把最短字符串转换成一个字典
   const dict = string2dict(A[minIndex]);
-  // console.log(dict);
   for (let j = 0; j < len; j++) {
     const item = A[j];
     for (const key in dict) {
@@ -21949,7 +22261,6 @@ const commonChars = function(A) {
       if (JSON.stringify(dict) == '{}') return [];
     }
   }
-  // console.log(dict);
   let result = [];
   for (const key in dict) {
     const value = dict[key];
@@ -22224,9 +22535,7 @@ const canThreePartsEqualSum = function(A) {
       dict[current].push(i);
     }
   }
-  // console.log(current);
   const key = current / 3;
-  // console.log(dict[key], dict[key * 2]);
   // 第一个出现必须小于第二个出现
   if (key === 0) {
     if (dict[0].length >= 3 && dict[0][0] < dict[0][1] && dict[0][1] < dict[0][2]) {
@@ -22592,9 +22901,7 @@ const sumRootToLeaf = function(root) {
     let newVal = `${preVal}${node.val}`;
     if (!node.left && !node.right) {
       // 没有左右子节点，证明是叶子节点，那么计算值并返回
-      // console.log(newVal);
       newVal = parseInt(newVal, 2);
-      // console.log(newVal);
       list.push(newVal);
     }
     runNode(node.left, newVal);
@@ -22665,7 +22972,6 @@ const allCellsDistOrder = function(R, C, r0, c0) {
       arr.push(item);
     }
   }
-  // console.log(arr);
   arr.sort((a, b) => {
     const disA = Math.abs(a[0] - r0) + Math.abs(a[1] - c0);
     const disB = Math.abs(b[0] - r0) + Math.abs(b[1] - c0);
@@ -22773,7 +23079,6 @@ export { bstToGst };
 
 // 改进2：不使用数组，直接使用字符串模拟栈
 // 256 ms, 在所有 JavaScript 提交中击败了12.37%
-// 还不如之前的时间呢
 const removeDuplicates = function(S) {
   if (S.length < 2) return S;
   let stack = '';
@@ -22792,8 +23097,6 @@ const removeDuplicates = function(S) {
   }
   return stack;
 };
-
-// @lc code=end
 
 export { removeDuplicates };
 
@@ -23278,6 +23581,55 @@ export { countCharacters };
 ~~~
 
   
+### 1169-invalidTransactions.js
+
+~~~js
+/*
+ * @lc app=leetcode.cn id=1169 lang=javascript
+ * [1169] 查询无效交易
+ */
+/**
+ * @param {string[]} transactions
+ * @return {string[]}
+ * 72 ms, 在所有 JavaScript 提交中击败了100.00%
+ */
+const invalidTransactions = function(transactions) {
+  const len = transactions.length;
+  // 数据预处理，把字符串转换成数组，便于后续比较
+  for (let i = 0; i < len; i++) {
+    const list = transactions[i].split(',');
+    const name = list[0];
+    const time = parseInt(list[1]);
+    const amount = parseInt(list[2]);
+    const city = list[3];
+    transactions[i] = { name, time, amount, city };
+  }
+  // 辅助函数：判断当前交易是否有效
+  const isInvalidTransaction = (item, transactions) => transactions.some((info) => {
+    if (info.name === item.name && info.city !== item.city) {
+      return Math.abs(info.time - item.time) <= 60;
+    } else {
+      return false;
+    }
+  });
+  // 过滤超过1000的数量，并且判断是否满足
+  const res = transactions.filter((item) => {
+    return item.amount > 1000 || isInvalidTransaction(item, transactions);
+  });
+  // 结果合并成字符串后返回
+  return res.map((i) => `${i.name},${i.time},${i.amount},${i.city}`);
+};
+
+// console.log(invalidTransactions(["alice,20,800,mtv","alice,50,100,beijing"])) // ["alice,20,800,mtv","alice,50,100,beijing"]
+// console.log(invalidTransactions(["alice,20,800,mtv","alice,50,1200,mtv"])) // ["alice,50,1200,mtv"]
+// console.log(invalidTransactions(["alice,20,800,mtv","bob,50,1200,mtv"])) // ["bob,50,1200,mtv"]
+// console.log(invalidTransactions(["alice,20,1220,mtv","alice,20,1220,mtv"])) // [ 'alice,20,1220,mtv', 'alice,20,1220,mtv' ]
+
+export { invalidTransactions };
+
+~~~
+
+  
 ### 1170-numSmallerByFrequency.js
 
 ~~~js
@@ -23555,15 +23907,11 @@ export { maxNumberOfBalloons };
  * [1200] 最小绝对差
  */
 
-// @lc code=start
 /**
  * @param {number[]} arr
  * @return {number[][]}
  */
-// 216 ms
-// , 在所有 JavaScript 提交中击败了
-// 26.72%
-// 的用户
+// 216 ms, 在所有 JavaScript 提交中击败了26.72%
 const minimumAbsDifference = function(arr) {
   // 处理一下数组是0或者1长度的情况
   const len = arr.length;
@@ -23579,12 +23927,10 @@ const minimumAbsDifference = function(arr) {
   if (len === 2) {
     return res;
   }
-  // console.log(arr);
   // 然后循环数组，判断当前元素和前一个元素的绝对值
   for (let i = 2; i < len; i++) {
     const curr = arr[i];
     const before = arr[i - 1];
-    // console.log(before, curr);
     if ((curr - before) < min) {
       min = curr - before;
       const item = [before, curr];
@@ -23597,11 +23943,9 @@ const minimumAbsDifference = function(arr) {
       continue;
     }
   }
-  // console.log(min);
   return res;
   // 然后设置一个最小值，设置一个存放的数组
 };
-// @lc code=end
 
 export { minimumAbsDifference };
 
@@ -23861,7 +24205,6 @@ const removeSubfolders = function(folder) {
   folder.sort((a, b) => {
     return a.length > b.length ? 1 : -1;
   });
-  // console.log(folder);
   const result = [];
   while (folder.length > 0) {
     const item = folder.shift();
@@ -23908,8 +24251,6 @@ const deleteSubFile = (item, folder) => {
 //     }
 //     if (checkNode(folder[i], tree)) {
 //       result.push(folder[i]);
-//       console.log(folder[i]);
-//       console.log(tree);
 //     }
 //   }
 //   // 每一个文件路径就是一个树节点
@@ -23936,7 +24277,6 @@ const deleteSubFile = (item, folder) => {
 //     // 如果当前节点不存在，那么继续
 //     if (!pointer[key] && i === arr.length - 1) {
 //       pointer[key] = new TreeNode(key, true);
-//       // console.log(pointer[key]);
 //       return true;
 //     }
 //     if (!pointer[key] && i === arr.length - 1) {
@@ -24632,6 +24972,66 @@ export { findNumbers };
 ~~~
 
   
+### 1296-isPossibleDivide.js
+
+~~~js
+/**
+ * @param {number[]} nums
+ * @param {number} k
+ * @return {boolean}
+ * 划分数组为连续数字的集合
+ * 给你一个整数数组 nums 和一个正整数 k，请你判断是否可以把这个数组划分成一些由 k 个连续数字组成的集合。
+ * 如果可以，请返回 true；否则，返回 false。
+ * https://leetcode.cn/problems/divide-array-in-sets-of-k-consecutive-numbers/
+ */
+const isPossibleDivide = function(nums, k) {
+  if (k === 1) return true;
+  const len = nums.length;
+  // 数组长度不是 K 的倍数，那么不满足
+  if (len % k !== 0) return false;
+  // 把数组遍历一次，转换成对象存储
+  const dict = {};
+  for (let i = 0; i < len; i++) {
+    if (!dict[nums[i]]) {
+      dict[nums[i]] = 1;
+    } else {
+      dict[nums[i]] = dict[nums[i]] + 1;
+    }
+  }
+  // 把对象的键拿出来作为数组，遍历这个数组（没有重复值）这里最差的复杂度是N^2，数组的长度是1万，时间可以接受
+  const list = [...Object.keys(dict)];
+  // 从最小的开始，然后获取次数，减去对象中出现的次数
+  // 循环上面的操作，直接最后结果是0
+  for (let i = 0; i < list.length; i++) {
+    const curr = list[i];
+    const number = dict[curr];
+    if (number === 0) continue;
+    dict[curr] = 0;
+    for (let j = 1; j < k; j++) {
+      const tmp = Number(curr) + j;
+      // 如果某一次的次数小于N，那么不满足
+      if (dict[tmp] < number || dict[tmp] === 0 || !dict[tmp]) {
+        return false;
+      }
+      dict[tmp] = dict[tmp] - number;
+    }
+  }
+  return true;
+};
+
+// // true
+// console.log(isPossibleDivide([1, 2, 3, 3, 4, 4, 5, 6], 4));
+// console.log(isPossibleDivide([3, 2, 1, 2, 3, 4, 3, 4, 5, 9, 10, 11], 3));
+// console.log(isPossibleDivide([3, 3, 2, 2, 1, 1], 3));
+// // false
+// console.log(isPossibleDivide([1, 2, 3, 4], 3));
+// console.log(isPossibleDivide([1, 2, 3, 5, 8, 9], 3));
+
+export { isPossibleDivide };
+
+~~~
+
+  
 ### 1299-replaceElements.js
 
 ~~~js
@@ -24728,7 +25128,6 @@ const freqAlphabets = function(s) {
       // 第二个规则
       cur = Number(s[0] + s[1]);
       curStr = String.fromCharCode(cur + 96);
-      // console.log(curStr);
       res += curStr;
       s = s.slice(3);
     } else {
@@ -24736,10 +25135,8 @@ const freqAlphabets = function(s) {
       cur = Number(s[0]);
       curStr = String.fromCharCode(cur + 96);
       res += curStr;
-      // console.log(curStr);
       s = s.slice(1);
     }
-    // console.log(s);
   }
   return res;
 };
@@ -25276,7 +25673,6 @@ ProductOfNumbers.prototype.add = function(num) {
  */
 ProductOfNumbers.prototype.getProduct = function(k) {
   let res = 1;
-  // console.log(this.arr);
   for (let i = this.arr.length - 1; i > this.arr.length - 1 - k; i--) {
     res *= this.arr[i];
   }
@@ -25521,7 +25917,6 @@ export { generateTheString };
 const getTargetCopy = function(original, cloned, target) {
   // 原始树和克隆树一样，所以直接遍历克隆树，找到对应的节点返回即可
   const runNode = function(node, value) {
-    // console.log(node, value);
     if (!node) {
       return null;
     }
@@ -25929,7 +26324,6 @@ const countLargestGroup = function(n) {
       dict[sum] = 1;
     }
   }
-  // console.log(dict);
   // 然后把字典的值转换成数组？求出现次数最多的值
   const dict2 = {};
   let max = 0;
@@ -25944,7 +26338,6 @@ const countLargestGroup = function(n) {
       dict2[value]++;
     }
   }
-  // console.log(dict2);
   return dict2[max];
 };
 // @lc code=end
@@ -28625,18 +29018,12 @@ export { getMaximumGenerated };
 ### 1652-decrypt.js
 
 ~~~js
-/*
- * @lc app=leetcode.cn id=1652 lang=javascript
- *
- * [1652] 拆炸弹
- */
-
-// @lc code=start
 /**
  * @param {number[]} code
  * @param {number} k
  * @return {number[]}
  */
+// [1652] 拆炸弹
 // 分治算法：先根据 K 的符号确定怎么算
 // 每一个情况使用滑动窗口计算
 // Your runtime beats 81.54 % of javascript submissions
@@ -28685,12 +29072,6 @@ const decrypt = function(code, k) {
   }
 };
 
-// 实际是数组，需要 .toString() 处理后测试
-// console.log(decrypt([5,7,1,4], 3).toString() == [12,10,16,13]);
-// console.log(decrypt([1,2,3,4], 0).toString() == [0,0,0,0]);
-// console.log(decrypt([2,4,9,3], -2).toString() == [12,5,6,13]);
-
-// @lc code=end
 export { decrypt };
 
 ~~~
@@ -29772,6 +30153,235 @@ export { longestNiceSubstring };
 ~~~
 
   
+### 1765-highestPeak.js
+
+~~~js
+/*
+ * @lc app=leetcode.cn id=1765 lang=javascript
+ * [1765] 地图中的最高点_图的广度优先遍历
+ */
+// @lc code=start
+/**
+ * @param {number[][]} isWater
+ * @return {number[][]}
+ */
+// 思路1：bfs：由于相邻的两个格子必须高度差为1，而水域必须高度为0，所以，直接以水域为bfs源点，进行bfs把整个区域的值给更新就行了
+// 当矩阵特别大，会超时(1000 * 219的矩阵，数组 push 按照20万操作，肯定会爆)
+const highestPeak1 = function(isWater) {
+  const rowLen = isWater.length;
+  const colLen = isWater[0].length;
+  // 初始化结果矩阵（空的二维数组）
+  const result = [];
+  for (let i = 0; i < rowLen; i++) {
+    result[i] = [];
+  }
+  // 记录标记的点
+  const visitedDict = {};
+  const pushedDict = {};
+  const queue = [];
+  // 先找到值是1的点，设置结果数组是0
+  for (let i = 0; i < rowLen; i++) {
+    for (let j = 0; j < colLen; j++) {
+      if (isWater[i][j] === 1) {
+        visitedDict[`${i}-${j}`] = true;
+        pushedDict[`${i}-${j}`] = true;
+        result[i][j] = 0;
+        queue.push([i, j, 0]);
+      }
+    }
+  }
+  // 辅助函数：标记一个点
+  function markNode(i, j, deep) {
+    visitedDict[`${i}-${j}`] = true;
+    result[i][j] = deep;
+    // 如果已经有了，这里就不需要重复放入，现在这里存在重复放入节点的情况
+    if (!pushedDict[`${i}-${j}`]) {
+      queue.push([i, j, deep]);
+      pushedDict[`${i}-${j}`] = true;
+    }
+  }
+
+  // 辅助函数
+  function checkNode(node) {
+    if (!node) return;
+    const [i, j, deep] = node;
+    // 处理当前节点周边四个点的值，如果点存在，并且没有被遍历过，那么遍历这个点
+    if (j + 1 >= 0 && j + 1 < colLen && !visitedDict[`${i}-${j + 1}`]) {
+      markNode(i, j + 1, deep + 1);
+    }
+    if (j - 1 >= 0 && j - 1 < colLen && !visitedDict[`${i}-${j - 1}`]) {
+      markNode(i, j - 1, deep + 1);
+    }
+    if (i + 1 >= 0 && i + 1 < rowLen && !visitedDict[`${i + 1}-${j}`]) {
+      markNode(i + 1, j, deep + 1);
+    }
+    if (i - 1 >= 0 && i - 1 < rowLen && !visitedDict[`${i - 1}-${j}`]) {
+      markNode(i - 1, j, deep + 1);
+    }
+  }
+  // BFS
+  while (queue.length > 0) {
+    // 数据量大，频繁进出数组很耗时
+    const curr = queue.shift();
+    // 然后从水域点开始遍历，判断周围的四个点，依次加一
+    checkNode(curr);
+  }
+  return result;
+};
+
+// 思路2：整体替换 queue，避免高频 push pop 操作
+// 能通过，2108 ms, 在所有 JavaScript 提交中击败了 5.66%，可以通过，性能还不行
+const highestPeak2 = function(isWater) {
+  const rowLen = isWater.length;
+  const colLen = isWater[0].length;
+  // 初始化结果矩阵（空的二维数组）
+  const result = [];
+  for (let i = 0; i < rowLen; i++) {
+    result[i] = [];
+  }
+  // 记录标记的点
+  const visitedDict = {};
+  let queue = [];
+  // 先找到值是1的点，设置结果数组是0
+  for (let i = 0; i < rowLen; i++) {
+    for (let j = 0; j < colLen; j++) {
+      if (isWater[i][j] === 1) {
+        visitedDict[`${i}-${j}`] = true;
+        result[i][j] = 0;
+        queue.push([i, j, 0]);
+      }
+    }
+  }
+  function markNode(i, j, deep, newQueue) {
+    visitedDict[`${i}-${j}`] = true;
+    result[i][j] = deep;
+    newQueue.push([i, j, deep]);
+  }
+  // BFS
+  while (queue.length > 0) {
+    const newQueue = [];
+    for (let k = 0; k < queue.length; k++) {
+      const [i, j, deep] = queue[k];
+      // 处理当前节点周边四个点的值，如果点存在，并且没有被遍历过，那么遍历这个点
+      if (j + 1 >= 0 && j + 1 < colLen && !visitedDict[`${i}-${j + 1}`]) {
+        markNode(i, j + 1, deep + 1, newQueue);
+      }
+      if (j - 1 >= 0 && j - 1 < colLen && !visitedDict[`${i}-${j - 1}`]) {
+        markNode(i, j - 1, deep + 1, newQueue);
+      }
+      if (i + 1 >= 0 && i + 1 < rowLen && !visitedDict[`${i + 1}-${j}`]) {
+        markNode(i + 1, j, deep + 1, newQueue);
+      }
+      if (i - 1 >= 0 && i - 1 < rowLen && !visitedDict[`${i - 1}-${j}`]) {
+        markNode(i - 1, j, deep + 1, newQueue);
+      }
+    }
+    // 避免队列频繁操作 pop push，使用队列直接替换
+    queue = newQueue;
+  }
+  return result;
+};
+
+// console.log(highestPeak([[0,1],[0,0]])) // [[1,0],[2,1]]
+// console.log(highestPeak([[0,0,1],[1,0,0],[0,0,0]])) // [[1,1,0],[0,1,1],[1,2,2]]
+// console.log(highestPeak([[0,1],[0,0],[0,1],[0,0],[0,1],[0,0],[0,1],[0,0],[0,0]]))
+// [[1,0],[2,1],[1,0],[2,1],[1,0],[2,1],[1,0],[2,1],[3,2]]
+// console.log(highestPeak([[1,1,1,1,0],[1,1,1,1,1],[1,1,1,0,1],[1,1,1,1,0],[1,1,1,1,1],[1,1,1,1,1]]))
+// [[0,0,0,0,1],[0,0,0,0,0],[0,0,0,1,0],[0,0,0,0,1],[0,0,0,0,0],[0,0,0,0,0]]
+
+// 思路3：上面代码继续优化，关键优化是 isWater[newX][newY] > cost，时间复杂度就好很多了；也避免了函数多次调用
+// 原地算法也减少了内存使用
+// 384 ms, 在所有 JavaScript 提交中击败了86.79%
+// 链接：https://leetcode.cn/problems/map-of-highest-peak/solution/pythonjavajavascriptgo-duo-yuan-bfs-by-h-uqwm/
+const highestPeak3 = function(isWater) {
+  const DIRS = [[1, 0], [0, 1], [0, -1], [-1, 0]];
+  const m = isWater.length;
+  const n = isWater[0].length;
+  const MAX = m * n * 10;
+  let queue = [];
+  let cost = 0;
+  for (let i = 0; i < m; i++) {
+    for (let j = 0; j < n; j++) {
+      if (isWater[i][j] == 1) {
+        isWater[i][j] = 0;
+        queue.push([i, j]);
+      } else {
+        // 先把其他的陆地都设置成最大值
+        isWater[i][j] = MAX;
+      }
+    }
+  }
+  while (queue.length > 0) {
+    const newQueue = [];
+    cost++;
+    for (const point of queue) {
+      for (const dir of DIRS) {
+        const newX = point[0] + dir[0];
+        const newY = point[1] + dir[1];
+        // 如果新的值 cost 小于原来的陆地的高度，那么执行替换操作
+        if (newX >= 0 && newY >= 0 && newX < m && newY < n && cost < isWater[newX][newY]) {
+          isWater[newX][newY] = cost;
+          newQueue.push([newX, newY]);
+        }
+      }
+    }
+    queue = newQueue;
+  }
+  return isWater;
+};
+
+// 思路4：dp思路：由于dp都依赖上一次更新的结果，而我们一般就是从左到右的遍历更新，而这题是和四个位置相关，所以，我们分为：从上到下从左到右更新，可以把依赖上和左的答案给更新，从下到上，从右到左更新，可以把依赖下和右的结果给更新完。
+// 本题使用两次动态规划来解决，其实我们很容易想到的是四个方向的动态规范解法：
+// dp[i][j] = min(dp[i-1][j], dp[i][j-1], dp[i+1][j], dp[i][j+1]) + 1,
+// isWater[i][j] = 1
+// 其实使用双向dp就可以解决，我们每次dp解决两个方向的最小值，即(左上、右下)或(右上、左下)
+// 使用两次动态规划其实也是计算了四个方向的最小值，所以使用两次既可！
+// 链接：https://leetcode.cn/problems/map-of-highest-peak/solution/dong-tai-gui-hua-ji-bai-100yong-hu-by-un-mb30/
+
+// var highestPeak = function(isWater) {
+//   let m = isWater.length, n = isWater[0].length;
+//   // 初始化dp
+//   const dp = Array.from(Array(m), () => Array(n).fill(0));
+//   // 定一个最大值
+//   const max = m * n;
+//   // 先去使用左上到右下的DP
+//   for(let i = 0; i < m; i++){
+//       for(let j = 0; j < n; j++){
+//           if(isWater[i][j] === 1){
+//               continue;
+//           }
+//           // 如果值为0的话，则先去计算它到左上的最小值
+//           let min = max;
+//           // 计算上位置的最小值
+//           if (i > 0) {
+//               min = Math.min(min, dp[i - 1][j] + 1);
+//           }
+//           // 计算左侧位置的最小值
+//           if (j > 0) {
+//               min = Math.min(min, dp[i][j - 1] + 1);
+//           }
+//           dp[i][j] = min;
+//       }
+//   }
+//   // 从右下到左上的DP
+//   for (let i = m - 1; i >= 0; i--) {
+//       for (let j = n - 1; j >= 0; j--) {
+//           if (i < m - 1) {
+//               dp[i][j] = Math.min(dp[i][j], dp[i + 1][j] + 1);
+//           }
+//           if (j < n - 1) {
+//               dp[i][j] = Math.min(dp[i][j], dp[i][j + 1] + 1);
+//           }
+//       }
+//   }
+//   return dp;
+// };
+
+export { highestPeak1, highestPeak2, highestPeak3 };
+
+~~~
+
+  
 ### 1768-mergeAlternately.js
 
 ~~~js
@@ -29954,18 +30564,12 @@ export { checkOnesSegment };
 ### 1790-areAlmostEqual.js
 
 ~~~js
-/*
- * @lc app=leetcode.cn id=1790 lang=javascript
- *
- * [1790] 仅执行一次字符串交换能否使两个字符串相等
- */
-
-// @lc code=start
 /**
  * @param {string} s1
  * @param {string} s2
  * @return {boolean}
  */
+// [1790] 仅执行一次字符串交换能否使两个字符串相等
 // 思路：这两个字符串中，只有某两个字符调换位置，其他都相同
 // 那么把这两个找出来，然后调换比较即可
 // Your runtime beats 91.85 % of javascript submissions
@@ -29978,8 +30582,8 @@ const areAlmostEqual = function(s1, s2) {
     return false;
   }
   // 默认设置两个指针都是-1
-  let p1 = -1; let
-    p2 = -1;
+  let p1 = -1;
+  let p2 = -1;
   for (let i = 0; i < s1.length; i++) {
     // 如果某个字符不相等，分三种情况
     if (s1[i] !== s2[i]) {
@@ -30008,7 +30612,7 @@ const areAlmostEqual = function(s1, s2) {
   // 否则不满足
   return false;
 };
-// @lc code=end
+
 export { areAlmostEqual };
 
 ~~~
@@ -30017,17 +30621,11 @@ export { areAlmostEqual };
 ### 1791-findCenter.js
 
 ~~~js
-/*
- * @lc app=leetcode.cn id=1791 lang=javascript
- *
- * [1791] 找出星型图的中心节点
- */
-
-// @lc code=start
 /**
  * @param {number[][]} edges
  * @return {number}
  */
+// [1791] 找出星型图的中心节点
 // 直接找到前两个路径的公共节点即可
 // Your runtime beats 90 % of javascript submissions
 const findCenter = function(edges) {
@@ -30040,7 +30638,7 @@ const findCenter = function(edges) {
   }
   return p2;
 };
-// @lc code=end
+
 export { findCenter };
 
 ~~~
@@ -30115,23 +30713,17 @@ export { secondHighest };
 ### 1800-maxAscendingSum.js
 
 ~~~js
-/*
- * @lc app=leetcode.cn id=1800 lang=javascript
- *
- * [1800] 最大升序子数组和
- */
-
-// @lc code=start
 /**
  * @param {number[]} nums
  * @return {number}
  * Your runtime beats 53.97 % of javascript submissions
  */
+// [1800] 最大升序子数组和
 const maxAscendingSum = function(nums) {
   // 1、先获取数组最大值，处理数组降序的情况
   let max = Math.max(...nums);
   let tmp = nums[0];
-  // 2、遍历数组，
+  // 2、遍历数组
   for (let i = 1; i < nums.length; i++) {
     // 2.1、后面比前面的大，就是升序，增加累加值
     if (nums[i] > nums[i - 1]) {
@@ -30147,7 +30739,7 @@ const maxAscendingSum = function(nums) {
   }
   return Math.max(tmp, max);
 };
-// @lc code=end
+
 export { maxAscendingSum };
 
 ~~~
@@ -30222,6 +30814,84 @@ const squareIsWhite = function(coordinates) {
 };
 
 export { squareIsWhite };
+
+~~~
+
+  
+### 1813-areSentencesSimilar-iii.js
+
+~~~js
+/*
+ * @lc app=leetcode.cn id=1813 lang=javascript
+ * [1813] 句子相似性 III
+ */
+/**
+ * @param {string} sentence1
+ * @param {string} sentence2
+ * @return {boolean} return sentences are similar
+ */
+const areSentencesSimilar = function(sentence1, sentence2) {
+  // 如果字符串相同，直接返回真
+  if (sentence1 === sentence2) {
+    return true;
+  }
+  // 先把字符串转换成数组，然后双指针，从开始和结束分别向中间遍历
+  // 如果双指针相遇（在短的一个字符串中相遇，那么就满足）；如果不相遇，就不满足
+  const arr1 = sentence1.split(' ');
+  const arr2 = sentence2.split(' ');
+  const len1 = arr1.length;
+  const len2 = arr2.length;
+  const lenMin = Math.min(len1, len2);
+  // 如果数组长度相同，但是句子字符串不同，那么一定不满足
+  if (len1 === len2) return false;
+  let start = 0;
+  while (arr1[start] === arr2[start]) {
+    start++;
+  }
+  // 如果左侧相同已经等于最小值，直接返回真
+  if (start === lenMin) {
+    return true;
+  }
+  let end = 0;
+  while (arr1[len1 - 1 - end] === arr2[len2 - 1 - end]) {
+    end++;
+  }
+  // 如果右侧相同已经等于最小值，直接返回真
+  if (end === lenMin) {
+    return true;
+  }
+  // 如果两侧的相同的，大于等于最小数组长度，返回真
+  // 大于的情况 "A B C D B B", "A B B"，等于的情况 "My name is Haley", "My Haley"
+  return (start + end) >= lenMin;
+};
+
+// console.log(areSentencesSimilar("of", "A lot of words")) // false
+// console.log(areSentencesSimilar("Luky", "Lucccky")) // false
+// console.log(areSentencesSimilar("My name is Haley", "My Haley")) // true
+// console.log(areSentencesSimilar("Eating right now", "Eating")) // true
+// console.log(areSentencesSimilar("a", "a aa a")) // true
+// console.log(areSentencesSimilar("A B C D B B", "A B B")) // true
+
+// 官方解答：直接在 while 循环中，左右指针限制最大值
+const areSentencesSimilar2 = function(sentence1, sentence2) {
+  const words1 = sentence1.split(' ');
+  const words2 = sentence2.split(' ');
+  let i = 0;
+  let j = 0;
+  while (i < words1.length && i < words2.length && words1[i] === words2[i]) {
+    i++;
+  }
+  while (j < words1.length - i && j < words2.length - i && words1[words1.length - j - 1] === words2[words2.length - j - 1]) {
+    j++;
+  }
+  return i + j == Math.min(words1.length, words2.length);
+};
+
+// 作者：LeetCode-Solution
+// 链接：https://leetcode.cn/problems/sentence-similarity-iii/solution/ju-zi-xiang-si-xing-iii-by-leetcode-solu-vjy7/
+// 来源：力扣（LeetCode）
+
+export { areSentencesSimilar, areSentencesSimilar2 };
 
 ~~~
 
@@ -31250,17 +31920,11 @@ export { canBeTypedWords };
 ### 1941-areOccurrencesEqual.js
 
 ~~~js
-/*
- * @lc app=leetcode.cn id=1941 lang=javascript
- *
- * [1941] 检查是否所有字符出现次数相同
- */
-
-// @lc code=start
 /**
  * @param {string} s
  * @return {boolean}
  */
+// [1941] 检查是否所有字符出现次数相同
 // 考点：遍历字符串，使用对象存储出现的次数
 const areOccurrencesEqual = function(s) {
   // 1、如果长度是1，一个字符，直接返回真
@@ -31277,7 +31941,7 @@ const areOccurrencesEqual = function(s) {
     }
     dict[key] = dict[key] + 1;
   }
-  // 3、遍历对象，判断出现次数是否相同。如果不同，返回false
+  // 3、遍历对象，判断出现次数是否相同，如果不同，返回 false
   let times = -1;
   for (const key in dict) {
     const value = dict[key];
@@ -31289,7 +31953,6 @@ const areOccurrencesEqual = function(s) {
   }
   return true;
 };
-// @lc code=end
 
 export { areOccurrencesEqual };
 
@@ -31299,18 +31962,12 @@ export { areOccurrencesEqual };
 ### 1945-getLucky.js
 
 ~~~js
-/*
- * @lc app=leetcode.cn id=1945 lang=javascript
- *
- * [1945] 字符串转化后的各位数字之和
- */
-
-// @lc code=start
 /**
  * @param {string} s
  * @param {number} k
  * @return {number}
  */
+// [1945] 字符串转化后的各位数字之和
 // 问题可以转换成两个小问题
 // 1 把字符串根据 code 转换成数字字符串（循环）
 // 2 计算数字字符串的每一位的和（递归）
@@ -31329,7 +31986,6 @@ const getLucky = function(s, k) {
     }
     return res;
   };
-
   /**
    * 2 计算字符串数值的每一位的和
    * @param {string} str 输入的数值字符串
@@ -31342,7 +31998,6 @@ const getLucky = function(s, k) {
     }
     return `${result}`;
   };
-
   // 3调用函数递归计算
   let resultStr = transStr(s);
   while (k > 0) {
@@ -31352,12 +32007,9 @@ const getLucky = function(s, k) {
   return resultStr * 1;
 };
 
-// 特殊情况
 // getLucky("dbvmfhnttvr", 5)
 // 42221368142020220 / 10 返回值是 4222136814202022.5
 // 如果数字很大，除法计算有问题，直接解析字符串，不要使用除法
-
-// @lc code=end
 
 export { getLucky };
 
@@ -31367,14 +32019,8 @@ export { getLucky };
 ### 1952-isThree.js
 
 ~~~js
-/*
- * @lc app=leetcode.cn id=1952 lang=javascript
- *
- * [1952] 三除数
- */
-
-// @lc code=start
 /**
+ * [1952] 三除数
  * @param {number} n
  * @return {boolean}
  */
@@ -31384,7 +32030,9 @@ const isThree = function(n) {
   for (let i = 0; i <= n; i++) {
     if (n % i === 0) {
       times++;
-      if (times > 3) return false;
+      if (times > 3) {
+        return false;
+      }
     }
   }
   return times === 3;
@@ -31416,10 +32064,9 @@ const isThree2 = function(n) {
     }
     return true;
   };
-  // 3 如果是整数，判断这个数是否是质数，这样性能就提升很多了
+  // 3 如果是整数，判断这个数是否是质数
   return isPrime(m);
 };
-// @lc code=end
 
 export { isThree, isThree2 };
 
@@ -31510,13 +32157,7 @@ export { isPrefixString };
 ### 1967-numOfStrings.js
 
 ~~~js
-/*
- * @lc app=leetcode.cn id=1967 lang=javascript
- *
- * [1967] 作为子字符串出现在单词中的字符串数目
- */
-
-// @lc code=start
+// [1967] 作为子字符串出现在单词中的字符串数目
 /**
  * @param {string[]} patterns
  * @param {string} word
@@ -31525,15 +32166,15 @@ export { isPrefixString };
 // 思路1：循环数组，判断字符串中是否包含子字符串
 // 字符串长度比较短，性能可以满足
 // Your runtime beats 33.82 % of javascript submissions
-// const numOfStrings = function(patterns, word) {
-//   let result = 0;
-//   for (let i = 0; i < patterns.length; i++) {
-//     if (word.includes(patterns[i])) {
-//       result++;
-//     }
-//   }
-//   return result;
-// };
+const numOfStrings2 = function(patterns, word) {
+  let result = 0;
+  for (let i = 0; i < patterns.length; i++) {
+    if (word.includes(patterns[i])) {
+      result++;
+    }
+  }
+  return result;
+};
 
 // 思路二：优化内部查找
 // 优化，因为字符串中可能存在重复的，那么遍历时，可以把重复的记录下
@@ -31561,9 +32202,8 @@ const numOfStrings = function(patterns, word) {
   }
   return result;
 };
-// @lc code=end
 
-export { numOfStrings };
+export { numOfStrings, numOfStrings2 };
 
 ~~~
 
@@ -31607,7 +32247,6 @@ const validPath = function(n, edges, start, end) {
     }
     dict[value].push(key);
   }
-  // console.log(dict);
   // 然后找到开始的 start 节点，广度优先遍历
   // 如果开始节点是一个孤立节点，直接返回 false
   if (!dict[start]) {
@@ -31873,8 +32512,6 @@ export { countQuadruplets };
 //   }
 //   // 先排序去重，然后再乘法计算
 //   let newArr = [...new Set(nums)].sort((a, b) => a - b > 0 ? 1 : -1);
-//   // console.log(newArr);
-//   // console.log(dict);
 //   let result = 0;
 
 //   for (let i = 0; i < newArr.length; i++) {
@@ -31887,7 +32524,6 @@ export { countQuadruplets };
 //         }
 //         // 如果字典中有这个值，计算个数
 //         if (dict[sum]) {
-//           // console.log(newArr[i], newArr[j], newArr[k], sum);
 //           result += (dict[newArr[i]].length * dict[newArr[j]].length * dict[newArr[k]].length * dict[sum].length);
 //         }
 //       }
@@ -31936,7 +32572,7 @@ export { reversePrefix };
 ~~~
 
   
-### 2006.差的绝对值为-countKDifference.js
+### 2006-countKDifference.js
 
 ~~~js
 /*
@@ -32076,22 +32712,16 @@ export { maximumDifference };
 ### 2022-construct2DArray.js
 
 ~~~js
-/*
- * @lc app=leetcode.cn id=2022 lang=javascript
- *
- * [2022] 将一维数组转变成二维数组
- */
-
-// @lc code=start
 /**
+ * [2022] 将数组转变成矩阵
+ * 简单，考点是数组的循环和剪切等
+ * 时间复杂度是O(n) 数组的长度 / n
+ * Your runtime beats 96.11 % of javascript submissions
  * @param {number[]} original
  * @param {number} m
  * @param {number} n
  * @return {number[][]}
  */
-// 简单，考点是数组的循环和剪切等
-// 时间复杂度是O(n) 数组的长度 / n
-// Your runtime beats 96.11 % of javascript submissions
 const construct2DArray = function(original, m, n) {
   const len = original.length;
   // 如果长度不一样，无法直接转换
@@ -32110,7 +32740,7 @@ const construct2DArray = function(original, m, n) {
   }
   return res;
 };
-// @lc code=end
+
 export { construct2DArray };
 
 ~~~
@@ -32119,21 +32749,15 @@ export { construct2DArray };
 ### 2027-minimumMoves.js
 
 ~~~js
-/*
- * @lc app=leetcode.cn id=2027 lang=javascript
- *
- * [2027] 转换字符串的最少操作次数
- */
-
-// @lc code=start
-/**
- * @param {string} s
- * @return {number}
- */
+// [2027] 转换字符串的最少操作次数
 // 遍历时，在三个元素中，如果第一个是X，那么必须换成O，不管后面的是什么
 // Your runtime beats 57.99 % of javascript submissions
 // 贪心算法，每次遇到一个满足情况的解，就直接处理
 // 注意边界条件的处理（其他的字符串匹配的方法，解不正确）
+/**
+ * @param {string} s
+ * @return {number}
+ */
 const minimumMoves = function(s) {
   let timer = 0;
   if (!s.includes('X')) {
@@ -32156,7 +32780,7 @@ const minimumMoves = function(s) {
   }
   return timer;
 };
-// @lc code=end
+
 export { minimumMoves };
 
 ~~~
@@ -32165,19 +32789,13 @@ export { minimumMoves };
 ### 2032-twoOutOfThree.js
 
 ~~~js
-/*
- * @lc app=leetcode.cn id=2032 lang=javascript
- *
- * [2032] 至少在两个数组中出现的值
- */
-
-// @lc code=start
 /**
  * @param {number[]} nums1
  * @param {number[]} nums2
  * @param {number[]} nums3
  * @return {number[]}
  */
+// [2032] 至少在两个数组中出现的值
 // 思路：求三个数组中两两的交集，然后求并集
 // 问题：是否考虑重复情况（求并集是否去重）
 // Your runtime beats 80.13 % of javascript submissions
@@ -32201,7 +32819,7 @@ const twoOutOfThree = function(nums1, nums2, nums3) {
   const result = [].concat(inter1, inter2, inter3);
   return [...new Set(result)];
 };
-// @lc code=end
+
 export { twoOutOfThree };
 
 ~~~
@@ -32210,18 +32828,12 @@ export { twoOutOfThree };
 ### 2037-minMovesToSeat.js
 
 ~~~js
-/*
- * @lc app=leetcode.cn id=2037 lang=javascript
- *
- * [2037] 使每位学生都有座位的最少移动次数
- */
-
-// @lc code=start
 /**
  * @param {number[]} seats
  * @param {number[]} students
  * @return {number}
  */
+// [2037] 使每位学生都有座位的最少移动次数
 // 不管怎么移动，第一个移动到第一个座位，第二个移动到第二个座位
 // 这样移动结果是最小的（不考虑每一个的移动的权重）
 // Your runtime beats 81.15 % of javascript submissions
@@ -32241,7 +32853,7 @@ const minMovesToSeat = function(seats, students) {
   }
   return move;
 };
-// @lc code=end
+
 export { minMovesToSeat };
 
 ~~~
@@ -32250,17 +32862,11 @@ export { minMovesToSeat };
 ### 2042-areNumbersAscending.js
 
 ~~~js
-/*
- * @lc app=leetcode.cn id=2042 lang=javascript
- *
- * [2042] 检查句子中的数字是否递增
- */
-
-// @lc code=start
 /**
  * @param {string} s
  * @return {boolean}
  */
+// [2042] 检查句子中的数字是否递增
 // 思路：把字符串转换成数组，然后提取出数字，判断是否递增
 // Your runtime beats 57.94 % of javascript submissions
 const areNumbersAscending = function(s) {
@@ -32270,6 +32876,7 @@ const areNumbersAscending = function(s) {
   arr = arr.filter((item) => {
     return !Number.isNaN(parseInt(item, 10));
   });
+  // 优化：可以直接循环数组，把每一项转换成数字，然后循环一次，就不需要在循环中 parseInt 转换了
   for (let i = 1; i < arr.length; i++) {
     if (parseInt(arr[i], 10) <= parseInt(arr[i - 1], 10)) {
       return false;
@@ -32277,26 +32884,20 @@ const areNumbersAscending = function(s) {
   }
   return true;
 };
-// @lc code=end
+
 export { areNumbersAscending };
 
 ~~~
 
   
-### 2047-checkStr.js
+### 2047-countValidWords.js
 
 ~~~js
-/*
- * @lc app=leetcode.cn id=2047 lang=javascript
- *
- * [2047] 句子中的有效单词数
- */
-
-// @lc code=start
 /**
  * @param {string} sentence
  * @return {number}
  */
+// [2047] 句子中的有效单词数
 // 辅助函数（判断字符串是否是token）
 // Your runtime beats 33.48 % of javascript submissions
 const checkStr = (str) => {
@@ -32308,7 +32909,6 @@ const checkStr = (str) => {
   if (number_reg.test(str)) {
     return false;
   }
-
   // 2. 如果存在连字符
   if (str.indexOf('-') > -1) {
     // 2.1 如果存在多个连字符，不满足
@@ -32327,7 +32927,6 @@ const checkStr = (str) => {
       return false;
     }
   }
-
   // 3 判断标点符号：至多一个 标点符号。'!'、'.' 和 ','
   // 如果存在，标点符号应当位于 token 的末尾。
   // 如果结尾是标点符号，那么直接删除，然后判断剩余部分是否有标点符号
@@ -32347,42 +32946,28 @@ const countValidWords = function(sentence) {
   const arr = sentence.split(' ');
   let times = 0;
   for (let i = 0; i < arr.length; i++) {
-    // console.log(arr[i], checkStr(arr[i]));
     if (checkStr(arr[i])) {
-      // console.log(arr[i]);
       times++;
     }
   }
   return times;
 };
 
-// console.log(countValidWords("-") === 0)
-// console.log(countValidWords('pencil-sharpener.') === 1)
-// console.log(countValidWords('cat and  dog') === 3)
-// console.log(countValidWords('!this  1-s b8d!') === 0)
-// console.log(countValidWords('alice and  bob are playing stone-game10') === 5)
-// @lc code=end
 export { countValidWords };
 
 ~~~
 
   
-### 2053.数组中第-kthDistinct.js
+### 2053-kthDistinct.js
 
 ~~~js
-/*
- * @lc app=leetcode.cn id=2053 lang=javascript
- *
- * [2053] 数组中第 K 个独一无二的字符串
- */
-
-// @lc code=start
 /**
+ * [2053] 数组中第 K 个独一无二的字符串
+ * Your runtime beats 44.36 % of javascript submissions
  * @param {string[]} arr
  * @param {number} k
  * @return {string}
  */
-// Your runtime beats 44.36 % of javascript submissions
 const kthDistinct = function(arr, k) {
   // 1. 遍历一次数组，找出没有重复的和没有重复的元素
   const dict = {};
@@ -32404,7 +32989,7 @@ const kthDistinct = function(arr, k) {
   });
   return filter_arr[k - 1] || '';
 };
-// @lc code=end
+
 export { kthDistinct };
 
 ~~~
@@ -32413,14 +32998,8 @@ export { kthDistinct };
 ### 2057-smallestEqual.js
 
 ~~~js
-/*
- * @lc app=leetcode.cn id=2057 lang=javascript
- *
- * [2057] 值相等的最小索引
- */
-
-// @lc code=start
 /**
+ * [2057] 值相等的最小索引
  * @param {number[]} nums
  * @return {number}
  */
@@ -32434,7 +33013,7 @@ const smallestEqual = function(nums) {
   }
   return -1;
 };
-// @lc code=end
+
 export { smallestEqual };
 
 ~~~
@@ -32443,34 +33022,12 @@ export { smallestEqual };
 ### 2062-countVowelSubstrings.js
 
 ~~~js
-/*
- * @lc app=leetcode.cn id=2062 lang=javascript
- *
- * [2062] 统计字符串中的元音子字符串
- */
-
-// @lc code=start
 /**
  * @param {string} word
  * @return {number}
  */
-// // 思路1： 这个问题可以转换成2个子问题
-// const countVowelSubstrings = function(word) {
-//   // 1 辅助函数：判断是否是元音字符串，设置计数器
-//   const checkStr = (str) => {
-//     // 返回值可以是三个情况
-//     // true 表示满足条件
-//     // false 表示不满足条件（有辅音字母），不需要继续循环
-//     // null ？表示全是元音，但是不够五个，需要继续循环
-//     // 必须包含这5个，而且全部去掉后，不能有辅音
-//     // .replace(/[aeiou]+/g, '');
-//   }
-//   // 2 获取全部子字符串，可以使用双指针
-//   // 外循环是开始的指针，内循环是结束的指针
-// };
-
-// 思路2: 完全正则匹配-这个性能更好，不需要循环全部的子字符串
-// 这个比思路1好，不过双循环内部 includes 可以优化
+// [2062] 统计字符串中的元音子字符串
+// 正则匹配-这个性能更好，不需要循环全部的子字符串，不过双循环内部 includes 可以优化
 // Your runtime beats 44.44 % of javascript submissions
 const countVowelSubstrings = function(word) {
   /**
@@ -32535,11 +33092,6 @@ const countVowelSubstrings = function(word) {
   return times;
 };
 
-// console.log(countVowelSubstrings('cuaieuouac') === 7);
-// console.log(countVowelSubstrings('cuaieuouaaieuouaieuouaieuouc') === 234);
-// "b"
-
-// @lc code=end
 export { countVowelSubstrings };
 
 ~~~
@@ -32548,14 +33100,8 @@ export { countVowelSubstrings };
 ### 2068-checkAlmostEquivalent.js
 
 ~~~js
-/*
- * @lc app=leetcode.cn id=2068 lang=javascript
- *
- * [2068] 检查两个字符串是否几乎相等
- */
-
-// @lc code=start
 /**
+ * [2068] 检查两个字符串是否几乎相等
  * @param {string} word1
  * @param {string} word2
  * @return {boolean}
@@ -32600,7 +33146,7 @@ const checkAlmostEquivalent = function(word1, word2) {
   }
   return true;
 };
-// @lc code=end
+
 export { checkAlmostEquivalent };
 
 ~~~
@@ -32650,20 +33196,13 @@ export { timeRequiredToBuy };
 ### 2078-maxDistance.js
 
 ~~~js
-/*
- * @lc app=leetcode.cn id=2078 lang=javascript
- *
- * [2078] 两栋颜色不同且距离最远的房子
- */
-
-// @lc code=start
 /**
  * @param {number[]} colors
  * @return {number}
  */
+// [2078] 两栋颜色不同且距离最远的房子
 // 思路一：双重循环（设置开始和结束）
-// 数组长度是100，复杂度可以接受
-// 性能有点差，或者满足什么条件可以终止？
+// 数组长度是100，复杂度可以接受。性能有点差，或者满足什么条件可以终止？
 // Your runtime beats 58.99 % of javascript submissions
 const maxDistance = function(colors) {
   let res = 0;
@@ -32681,7 +33220,7 @@ const maxDistance = function(colors) {
   return res;
 };
 // 能否使用双指针优化？
-// @lc code=end
+
 export { maxDistance };
 
 ~~~
@@ -32733,14 +33272,8 @@ export { countWords };
 ### 2089-targetIndices.js
 
 ~~~js
-/*
- * @lc app=leetcode.cn id=2089 lang=javascript
- *
- * [2089] 找出数组排序后的目标下标
- */
-
-// @lc code=start
 /**
+ * [2089] 找出数组排序后的目标下标
  * @param {number[]} nums
  * @param {number} target
  * @return {number[]}
@@ -32760,26 +33293,20 @@ const targetIndices = function(nums, target) {
   });
   return res;
 };
-// @lc code=end
+
 export { targetIndices };
 
 ~~~
 
   
-### 2094.找出-findEvenNumbers.js
+### 2094-findEvenNumbers.js
 
 ~~~js
-/*
- * @lc app=leetcode.cn id=2094 lang=javascript
- *
- * [2094] 找出 3 位偶数
- */
-
-// @lc code=start
 /**
  * @param {number[]} digits
  * @return {number[]}
  */
+// 找出 3 位偶数
 // 时间复杂度是O^3，这个数据量级下可以接受
 // Your runtime beats 38.23 % of javascript submissions
 // 优化后：Your runtime beats 42.65 % of javascript
@@ -32813,23 +33340,17 @@ const findEvenNumbers = function(digits) {
   });
   return arr;
 };
-// @lc code=end
+
 export { findEvenNumbers };
 
 ~~~
 
   
-### 2099.找到和最大的长度为-maxSubsequence.js
+### 2099-maxSubsequence.js
 
 ~~~js
-/*
- * @lc app=leetcode.cn id=2099 lang=javascript
- *
- * [2099] 找到和最大的长度为 K 的子序列
- */
-
-// @lc code=start
 /**
+ * [2099] 找到和最大的长度为 K 的子序列
  * @param {number[]} nums
  * @param {number} k
  * @return {number[]}
@@ -32860,11 +33381,6 @@ const maxSubsequence = function(nums, k) {
   return result;
 };
 
-// console.log(maxSubsequence([2,1,3,3], 2))
-// console.log(maxSubsequence([-1,-2,3,4], 3))
-// console.log(maxSubsequence([3,4,3,3], 2))
-
-// @lc code=end
 export { maxSubsequence };
 
 ~~~
@@ -32873,14 +33389,8 @@ export { maxSubsequence };
 ### 2103-countPoints.js
 
 ~~~js
-/*
- * @lc app=leetcode.cn id=2103 lang=javascript
- *
- * [2103] 环和杆
- */
-
-// @lc code=start
 /**
+ * [2103] 环和杆
  * @param {string} rings
  * @return {number}
  */
@@ -32915,11 +33425,6 @@ const countPoints = function(rings) {
   return result;
 };
 
-// console.log(countPoints("B0B6G0R6R0R6G9") === 1)
-// console.log(countPoints("B0R0G0R9R0B0G0") === 1)
-// console.log(countPoints("G4") === 0)
-
-// @lc code=end
 export { countPoints };
 
 ~~~
@@ -32928,25 +33433,12 @@ export { countPoints };
 ### 2108-firstPalindrome.js
 
 ~~~js
-/*
- * @lc app=leetcode.cn id=2108 lang=javascript
- *
- * [2108] 找出数组中的第一个回文字符串
- */
-
-// @lc code=start
 /**
+ * [2108] 找出数组中的第一个回文字符串
  * @param {string[]} words
  * @return {string}
  */
-// 写一个判断回文字符串的辅助函数,遍历数组即可
 const firstPalindrome = function(words) {
-  // Your runtime beats 24.02 % of javascript submissions
-  // let checkStr = (str) => {
-  //   return str.split('').reverse().join('') === str;
-  // }
-  // 优化：判断回文字符串的函数
-  // 优化后：Your runtime beats 50.56 % of
   const checkStr = (str) => {
     const len = str.length;
     const halflen = Math.ceil(str.length / 2);
@@ -32964,7 +33456,7 @@ const firstPalindrome = function(words) {
   }
   return '';
 };
-// @lc code=end
+
 export { firstPalindrome };
 
 ~~~
@@ -32973,15 +33465,11 @@ export { firstPalindrome };
 ### 2114-mostWordsFound.js
 
 ~~~js
-/*
- * @lc app=leetcode.cn id=2114 lang=javascript
- *
- * [2114] 句子中的最多单词数
- */
 /**
  * @param {string[]} sentences
  * @return {number}
  */
+// [2114] 句子中的最多单词数
 // 判断字符串中最多的空格，然后加1
 // Your runtime beats 48.14 % of javascript submissions
 const mostWordsFound = function(sentences) {
@@ -33011,7 +33499,8 @@ export { mostWordsFound };
 
 ~~~js
 /**
- * [isSameAfterReversals [2119] 反转两次的数字]
+ * [isSameAfterReversals]
+ * [2119] 反转两次的数字
  * @author Michael An
  * @DateTime 2022-03-08T14:38:49+0800
  * @param    {number}                 num [description]
@@ -33034,34 +33523,28 @@ export { isSameAfterReversals };
 ~~~
 
   
-### 2124.检查是否所有-checkString.js
+### 2124-checkString.js
 
 ~~~js
-/*
- * @lc app=leetcode.cn id=2124 lang=javascript
- *
- * [2124] 检查是否所有 A 都在 B 之前
- */
-
-// @lc code=start
 /**
+ * [2124] 检查是否所有 A 都在 B 之前
+ * 找到第一个B，找到最后一个A，比较索引即可
+ * Your runtime beats 6.01 % of javascript submissions
  * @param {string} s
  * @return {boolean}
  */
-// 找到第一个B，找到最后一个A，比较索引即可
-// Your runtime beats 6.01 % of javascript submissions
 const checkString = function(s) {
   const indexA = s.lastIndexOf('a');
+  if (indexA === -1) {
+    return true;
+  }
   const indexB = s.indexOf('b');
-  if (indexA === -1 || indexB === -1) {
+  if (indexB === -1) {
     return true;
   }
   return indexA < indexB;
 };
 
-// 可能 index 的性能不太好，可以改成遍历全部字符串，找到AB
-// 这样时间复杂度就是 O(n)
-// @lc code=end
 export { checkString };
 
 ~~~
@@ -33070,18 +33553,12 @@ export { checkString };
 ### 2129-capitalizeTitle.js
 
 ~~~js
-/*
- * @lc app=leetcode.cn id=2129 lang=javascript
- *
- * [2129] 将标题首字母大写
- */
-
-// @lc code=start
 /**
+ * [2129] 将标题首字母大写
+ * Your runtime beats 55.68 % of javascript submissions
  * @param {string} title
  * @return {string}
  */
-//  Your runtime beats 55.68 % of javascript submissions
 const capitalizeTitle = function(title) {
   // 辅助函数：转换字符串大小写
   const toSmall = (str) => {
@@ -33107,9 +33584,6 @@ const capitalizeTitle = function(title) {
   return arr.join(' ');
 };
 
-// console.log(capitalizeTitle("First leTTeR of EACH Word") === "First Letter of Each Word");
-// console.log(capitalizeTitle("i lOve leetcode") === "i Love Leetcode");
-// @lc code=end
 export default capitalizeTitle;
 
 ~~~
@@ -33118,23 +33592,18 @@ export default capitalizeTitle;
 ### 2133-checkValid.js
 
 ~~~js
-/*
- * @lc app=leetcode.cn id=2133 lang=javascript
- *
- * [2133] 检查是否每一行每一列都包含全部整数
- */
-
-// @lc code=start
-/**
- * @param {number[][]} matrix
- * @return {boolean}
- */
+// [2133] 检查是否每一行每一列都包含全部整数
 // 思路
 // 1、横向纵向遍历矩阵，把每一个情况都拿出来
 // 2、判断每一行和每一列，是否有重复的（如果有重复的，一定不满足）
 // 当前用子数组实现（占用内存略大）
 // N 不超过100，时间空间复杂度可以接受
-// Your runtime beats 50.94 % of javascript submissions
+//
+/**
+ * @param {number[][]} matrix
+ * @return {boolean}
+ * Your runtime beats 50.94 % of javascript submissions
+ */
 const checkValid = function(matrix) {
   // 辅助函数：判断一个数组是否有重复元素
   const checkArr = (arr) => {
@@ -33162,30 +33631,24 @@ const checkValid = function(matrix) {
 
 // console.log(checkValid([[1,2,3],[3,1,2],[2,3,1]]) === true)
 // console.log(checkValid([[1,1,1],[1,2,3],[1,2,3]]) === false)
-// @lc code=end
 
 export default checkValid;
 
 ~~~
 
   
-### 2138.将字符串拆分为若干长度为-divideString.js
+### 2138-divideString.js
 
 ~~~js
-/*
- * @lc app=leetcode.cn id=2138 lang=javascript
- *
- * [2138] 将字符串拆分为若干长度为 k 的组
- */
-
-// @lc code=start
 /**
+ * [2138] 将字符串拆分为若干长度为 k 的组
+ * Your runtime beats 100 % of javascript submissions
  * @param {string} s
  * @param {number} k
  * @param {character} fill
  * @return {string[]}
  */
-//  Your runtime beats 100 % of javascript submissions
+//
 const divideString = function(s, k, fill) {
   const resArr = [];
   // 思路：当S的长度大于K时，每次减掉前K个字符
@@ -33201,10 +33664,6 @@ const divideString = function(s, k, fill) {
   return resArr;
 };
 
-// console.log(divideString("abcdefghi", 3, 'x'))
-// console.log(divideString("abcdefghij", 3, 'x'))
-// @lc code=end
-
 export default divideString;
 
 ~~~
@@ -33213,14 +33672,8 @@ export default divideString;
 ### 2144-minimumCost.js
 
 ~~~js
-/*
- * @lc app=leetcode.cn id=2144 lang=javascript
- *
- * [2144] 打折购买糖果的最小开销
- */
-
-// @lc code=start
 /**
+ * [2144] 打折购买糖果的最小开销
  * @param {number[]} cost
  * @return {number}
  * 思路：排序，然后去掉3的倍数的项，求和即可
@@ -33237,7 +33690,6 @@ const minimumCost = function(cost) {
   }
   return sum;
 };
-// @lc code=end
 
 export { minimumCost };
 
@@ -33279,14 +33731,8 @@ export { countElements };
 ### 2154-findFinalValue.js
 
 ~~~js
-/*
- * @lc app=leetcode.cn id=2154 lang=javascript
- *
- * [2154] 将找到的值乘以 2
- */
-
-// @lc code=start
 /**
+ * [2154] 将找到的值乘以 2
  * @param {number[]} nums
  * @param {number} original
  * @return {number}
@@ -33294,14 +33740,35 @@ export { countElements };
  */
 const findFinalValue = function(nums, original) {
   const set = new Set(nums);
+  // set.has 的时间复杂度也是查找数组
   while (set.has(original)) {
     original *= 2;
   }
   return original;
 };
-// @lc code=end
 
-export { findFinalValue };
+// 56 ms, 在所有 JavaScript 提交中击败了90.28%
+const findFinalValue2 = function(nums, original) {
+  while (nums.includes(original)) {
+    original *= 2;
+  }
+  return original;
+};
+
+// 优化后 N * N 变成了 N
+// 52 ms, 在所有 JavaScript 提交中击败了97.22%
+const findFinalValue3 = function(nums, original) {
+  const dict = {};
+  nums.forEach((item) => {
+    dict[item] = true;
+  });
+  while (dict[original]) {
+    original *= 2;
+  }
+  return original;
+};
+
+export { findFinalValue, findFinalValue2, findFinalValue3 };
 
 ~~~
 
@@ -33309,14 +33776,8 @@ export { findFinalValue };
 ### 2160-minimumSum.js
 
 ~~~js
-/*
- * @lc app=leetcode.cn id=2160 lang=javascript
- *
- * [2160] 拆分数位后四位数字的最小和
- */
-
-// @lc code=start
 /**
+ * [2160] 拆分数位后四位数字的最小和
  * @param {number} num
  * @return {number}
  * Your runtime beats 9.98 % of javascript submissions
@@ -33325,12 +33786,18 @@ const minimumSum = function(num) {
   const arr = num.toString().split('').map((i) => Number(i)).sort((a, b) => a > b ? 1 : -1);
   return (arr[0] + arr[1]) * 10 + arr[2] + arr[3];
 };
-// 现在这个方法，使用了数组排序和数字字符串转换
-// 实际上，获取四个数中前两个最大的数字，然后获取后两个数字，加起来即可
 
-// @lc code=end
+// 60 ms, 在所有 JavaScript 提交中击败了65.56%
+const minimumSum2 = function(num) {
+  const a = num % 10;
+  const b = (num - a) / 10 % 10;
+  const c = (num - a - 10 * b) % 1000 / 100;
+  const d = (num - a - 10 * b - 100 * c) / 1000;
+  const arr = [a, b, c, d].sort((a, b) => a > b ? 1 : -1);
+  return (arr[0] + arr[1]) * 10 + arr[2] + arr[3];
+};
 
-export { minimumSum };
+export { minimumSum, minimumSum2 };
 
 ~~~
 
@@ -33338,14 +33805,8 @@ export { minimumSum };
 ### 2164-sortEvenOdd.js
 
 ~~~js
-/*
- * @lc app=leetcode.cn id=2164 lang=javascript
- *
- * [2164] 对奇偶下标分别排序
- */
-
-// @lc code=start
 /**
+ * [2164] 对奇偶下标分别排序
  * @param {number[]} nums
  * @return {number[]}
  * 简单：把数组按照下标拆成两个，分别排序，然后再拼接起来
@@ -33378,10 +33839,6 @@ const sortEvenOdd = function(nums) {
   return result;
 };
 
-// console.log(sortEvenOdd([4,1,2,3])); // [2,3,4,1]
-// console.log(sortEvenOdd([2, 1])); // [2, 1]
-// @lc code=end
-
 export { sortEvenOdd };
 
 ~~~
@@ -33390,14 +33847,8 @@ export { sortEvenOdd };
 ### 2169-countOperations.js
 
 ~~~js
-/*
- * @lc app=leetcode.cn id=2169 lang=javascript
- *
- * [2169] 得到 0 的操作数
- */
-
-// @lc code=start
 /**
+ * [2169] 得到 0 的操作数
  * @param {number} num1
  * @param {number} num2
  * @return {number}
@@ -33425,12 +33876,6 @@ const countOperations = function(num1, num2) {
   return times + 1;
 };
 
-// console.log(countOperations(10, 10) === 1)
-// console.log(countOperations(2, 3) === 3)
-// console.log(countOperations(0, 0) === 0)
-// console.log(countOperations(0, 1) === 0)
-// @lc code=end
-
 export { countOperations };
 
 ~~~
@@ -33439,14 +33884,8 @@ export { countOperations };
 ### 2176-countPairs.js
 
 ~~~js
-/*
- * @lc app=leetcode.cn id=2176 lang=javascript
- *
- * [2176] 统计数组中相等且可以被整除的数对
- */
-
-// @lc code=start
 /**
+ * [2176] 统计数组中相等且可以被整除的数对
  * @param {number[]} nums
  * @param {number} k
  * @return {number}
@@ -33455,7 +33894,7 @@ export { countOperations };
  */
 const countPairs = function(nums, k) {
   const len = nums.length;
-  // 先判断一下是否有重复值，如果没有重复值，直接返回空
+  // 先判断一下是否有重复值，如果没有重复值（数对），直接返回空
   if (Array.from(new Set(nums)).length === len) {
     return 0;
   }
@@ -33470,9 +33909,6 @@ const countPairs = function(nums, k) {
   }
   return res;
 };
-// 更好的优化方案，是循环一次，然后使用字典计数即可
-// 这个实现也不难，有时间再说
-// @lc code=end
 
 export { countPairs };
 
@@ -33482,19 +33918,13 @@ export { countPairs };
 ### 2180-countEven.js
 
 ~~~js
-/*
- * @lc app=leetcode.cn id=2180 lang=javascript
- *
- * [2180] 统计各位数字之和为偶数的整数个数
- */
-
-// @lc code=start
 /**
+ * [2180] 统计各位数字之和为偶数的整数个数
+ * 72 ms, 在所有 JavaScript 提交中击败了25.35%
  * @param {number} num
  * @return {number}
  */
 const countEven = function(num) {
-  // 72 ms, 在所有 JavaScript 提交中击败了25.35%
   // 辅助函数：判断一个数是否满足各位数字之和为偶数
   const check = (n) => {
     const s = String(n);
@@ -33520,9 +33950,60 @@ const countEven = function(num) {
   }
   return tmp;
 };
-// @lc code=end
 
-export { countEven };
+// 上面的方法，每一个数字都 check，性能较差，可以部分优化成字典计数
+// 68 ms, 在所有 JavaScript 提交中击败了47.62%
+const countEven2 = function(num) {
+  // 辅助函数：判断一个数是否满足各位数字之和为偶数（不变）
+  const check = (n) => {
+    const s = String(n);
+    let res = 0;
+    res += Number(s[0]);
+    if (s[1]) {
+      res += Number(s[1]);
+    }
+    if (s[2]) {
+      res += Number(s[2]);
+    }
+    if (s[3]) {
+      res += Number(s[3]);
+    }
+    return res % 2 === 0;
+  };
+
+  const dict = {};
+  let tmp = 0;
+  for (let i = 1; i <= num; i++) {
+    if (i < 10) {
+      if (i % 2 === 0) {
+        tmp++;
+      }
+      continue;
+    }
+    const remain = i % 10;
+    // 如果是10的倍数，重新计算
+    if (remain === 0) {
+      if (check(i)) {
+        tmp++;
+        dict[i] = true;
+      } else {
+        dict[i] = false;
+      }
+    }
+    // 如果不是10的倍数，从缓存中读取
+    else {
+      if (remain % 2 === 0 && dict[(i - remain)]) {
+        tmp++;
+      }
+      else if (remain % 2 !== 0 && !dict[(i - remain)]) {
+        tmp++;
+      }
+    }
+  }
+  return tmp;
+};
+
+export { countEven, countEven2 };
 
 ~~~
 
@@ -33530,14 +34011,8 @@ export { countEven };
 ### 2185-prefixCount.js
 
 ~~~js
-/*
- * @lc app=leetcode.cn id=2185 lang=javascript
- *
- * [2185] 统计包含给定前缀的字符串
- */
-
-// @lc code=start
 /**
+ * [2185] 统计包含给定前缀的字符串
  * @param {string[]} words
  * @param {string} pref
  * @return {number}
@@ -33552,7 +34027,6 @@ const prefixCount = function(words, pref) {
   });
   return nums;
 };
-// @lc code=end
 
 export { prefixCount };
 
@@ -33562,47 +34036,40 @@ export { prefixCount };
 ### 2190-mostFrequent.js
 
 ~~~js
-/*
- * @lc app=leetcode.cn id=2190 lang=javascript
- *
- * [2190] 数组中紧跟 key 之后出现最频繁的数字
- */
-
-// @lc code=start
 /**
+ * [2190] 数组中紧跟 key 之后出现最频繁的数字
+ * Your runtime beats 20.96 % of javascript submissions
  * @param {number[]} nums
  * @param {number} key
  * @return {number}
-//  */
-// // Your runtime beats 20.96 % of javascript submissions
-// var mostFrequent = function(nums, key) {
-//   // 这个就是遍历一次数组，然后获取后面一个数出现的最大次数即可
-//   let dict = {};
-//   for (let i = 0; i < nums.length - 1; i++) {
-//     if (nums[i] === key) {
-//       let current = nums[i + 1];
-//       if (!dict[current]) {
-//         dict[current] = 0;
-//       }
-//       dict[current] = dict[current] + 1;
-//     }
-//   }
-//   // 实际上在上面直接获取最大值即可，不需要下面的循环了
-//   let max = 0;
-//   let tmp;
-//   for (let key in dict) {
-//     let times = dict[key];
-//     if (times > max) {
-//       max = times;
-//       tmp = key;
-//     }
-//   }
-//   return tmp;
-// };
-
-// 改进后
-// Your runtime beats 82.53 % of javascript submissions
+ */
 const mostFrequent = function(nums, key) {
+  // 这个就是遍历一次数组，然后获取后面一个数出现的最大次数即可
+  const dict = {};
+  for (let i = 0; i < nums.length - 1; i++) {
+    if (nums[i] === key) {
+      const current = nums[i + 1];
+      if (!dict[current]) {
+        dict[current] = 0;
+      }
+      dict[current] = dict[current] + 1;
+    }
+  }
+  // 实际上在上面直接获取最大值即可，不需要下面的循环了
+  let max = 0;
+  let tmp;
+  for (const key in dict) {
+    const times = dict[key];
+    if (times > max) {
+      max = times;
+      tmp = key;
+    }
+  }
+  return tmp;
+};
+
+// 改进后 Your runtime beats 82.53 % of javascript submissions
+const mostFrequent2 = function(nums, key) {
   const dict = {};
   let max = 0;
   let tmp;
@@ -33621,9 +34088,8 @@ const mostFrequent = function(nums, key) {
   }
   return tmp;
 };
-// @lc code=end
 
-export { mostFrequent };
+export { mostFrequent, mostFrequent2 };
 
 ~~~
 
@@ -33631,18 +34097,12 @@ export { mostFrequent };
 ### 2194-cellsInRange.js
 
 ~~~js
-/*
- * @lc app=leetcode.cn id=2194 lang=javascript
- *
- * [2194] Excel 表中某个范围内的单元格
- */
-
-// @lc code=start
 /**
- * @param {string} s
+ * [2194] Excel 表中某个范围 "A1:F1" 内的单元格数组
+ * Your runtime beats 86.88 % of javascript submissions
+ * @param {string} s "A1:F1"
  * @return {string[]}
  */
-//  Your runtime beats 86.88 % of javascript submissions
 const cellsInRange = function(s) {
   // 双层循环即可
   const a = s.charCodeAt(0);
@@ -33654,7 +34114,6 @@ const cellsInRange = function(s) {
   // cd 是内循环，直接使用数字即可
 
   const res = [];
-  // String.fromCharCode()
   for (let i = a; i <= b; i++) {
     const tmp = String.fromCharCode(i);
     for (let j = c; j <= d; j++) {
@@ -33664,9 +34123,6 @@ const cellsInRange = function(s) {
   return res;
 };
 
-// console.log(cellsInRange("A1:F1"))
-// @lc code=end
-
 export { cellsInRange };
 
 ~~~
@@ -33675,14 +34131,8 @@ export { cellsInRange };
 ### 2200-findKDistantIndices.js
 
 ~~~js
-/*
- * @lc app=leetcode.cn id=2200 lang=javascript
- *
- * [2200] 找出数组中的所有 K 近邻下标
- */
-
-// @lc code=start
 /**
+ * [2200] 找出数组中的所有 K 近邻下标
  * @param {number[]} nums
  * @param {number} key
  * @param {number} k
@@ -33705,7 +34155,6 @@ const findKDistantIndices = function(nums, key, k) {
   }
   return Array.from(new Set(tmp));
 };
-// @lc code=end
 
 export { findKDistantIndices };
 
@@ -33715,16 +34164,10 @@ export { findKDistantIndices };
 ### 2206-divideArray.js
 
 ~~~js
-/*
- * @lc app=leetcode.cn id=2206 lang=javascript
- *
- * [2206] 将数组划分成相等数对
- */
-
-// @lc code=start
 /**
  * @param {number[]} nums
  * @return {boolean}
+ * [2206] 将数组划分成相等数对
  * 直接循环一次，然后记录出现的次数，最后次数都是偶数即可
  * Your runtime beats 42.16 % of javascript submissions
  */
@@ -33738,10 +34181,7 @@ const divideArray = function(nums) {
     }
   });
   return Object.keys(dict).length === 0;
-  // console.log(divideArray([3,2,3,2,2,2]));
-  // console.log(divideArray([1,2,3,4]));
 };
-// @lc code=end
 
 export { divideArray };
 
@@ -33751,14 +34191,8 @@ export { divideArray };
 ### 2210-countHillValley.js
 
 ~~~js
-/*
- * @lc app=leetcode.cn id=2210 lang=javascript
- *
- * [2210] 统计数组中峰和谷的数量
- */
-
-// @lc code=start
 /**
+ * [2210] 统计数组中峰和谷的数量
  * @param {number[]} nums
  * @return {number}
  * 思路：波峰和波谷的特点就是左右的值变化
@@ -33788,7 +34222,6 @@ const countHillValley = function(nums) {
   }
   return res;
 };
-// @lc code=end
 
 export { countHillValley };
 
@@ -33798,14 +34231,8 @@ export { countHillValley };
 ### 2215-findDifference.js
 
 ~~~js
-/*
- * @lc app=leetcode.cn id=2215 lang=javascript
- *
- * [2215] 找出两数组的不同
- */
-
-// @lc code=start
 /**
+ * [2215] 找出两数组的不同
  * @param {number[]} nums1
  * @param {number[]} nums2
  * @return {number[][]}
@@ -33837,7 +34264,6 @@ const findDifference = function(nums1, nums2) {
   });
   return [res1, res2];
 };
-// @lc code=end
 
 export { findDifference };
 
@@ -33847,14 +34273,8 @@ export { findDifference };
 ### 2220-minBitFlips.js
 
 ~~~js
-/*
- * @lc app=leetcode.cn id=2220 lang=javascript
- *
- * [2220] 转换数字的最少位翻转次数
- */
-
-// @lc code=start
 /**
+ * [2220] 转换数字的最少位翻转次数
  * @param {number} start
  * @param {number} goal
  * @return {number}
@@ -33877,7 +34297,6 @@ const minBitFlips = function(start, goal) {
   }
   return res;
 };
-// @lc code=end
 
 export { minBitFlips };
 
@@ -33887,14 +34306,8 @@ export { minBitFlips };
 ### 2224-convertTime.js
 
 ~~~js
-/*
- * @lc app=leetcode.cn id=2224 lang=javascript
- *
- * [2224] 转化时间需要的最少操作数
- */
-
-// @lc code=start
 /**
+ * [2224] 转化时间需要的最少操作数
  * @param {string} current
  * @param {string} correct
  * @return {number}
@@ -33924,7 +34337,6 @@ const convertTime = function(current, correct) {
   res += minutes;
   return res;
 };
-// @lc code=end
 
 export { convertTime };
 
@@ -33934,14 +34346,8 @@ export { convertTime };
 ### 2231-largestInteger.js
 
 ~~~js
-/*
- * @lc app=leetcode.cn id=2231 lang=javascript
- *
- * [2231] 按奇偶性交换后的最大数字
- */
-
-// @lc code=start
 /**
+ * [2231] 按奇偶性交换后的最大数字
  * @param {number} num
  * @return {number}
  * Your runtime beats 89.75 % of javascript submissions
@@ -33980,7 +34386,6 @@ const largestInteger = function(num) {
   }
   return parseInt(resArr.join(''), 10);
 };
-// @lc code=end
 
 export { largestInteger };
 
@@ -33990,14 +34395,8 @@ export { largestInteger };
 ### 2235-sum.js
 
 ~~~js
-/*
- * @lc app=leetcode.cn id=2235 lang=javascript
- *
- * [2235] 两整数相加
- */
-
-// @lc code=start
 /**
+ * [2235] 两整数相加
  * @param {number} num1
  * @param {number} num2
  * @return {number} number
@@ -34006,7 +34405,6 @@ export { largestInteger };
 const sum = function(num1, num2) {
   return num1 + num2;
 };
-// @lc code=end
 
 export { sum };
 
@@ -34016,14 +34414,8 @@ export { sum };
 ### 2236-checkTree.js
 
 ~~~js
-/*
- * @lc app=leetcode.cn id=2236 lang=javascript
- *
- * [2236] 判断根结点是否等于子结点之和
- */
-
-// @lc code=start
 /**
+ *
  * Definition for a binary tree node.
  * function TreeNode(val, left, right) {
  *     this.val = (val===undefined ? 0 : val)
@@ -34032,6 +34424,7 @@ export { sum };
  * }
  */
 /**
+ * [2236] 判断根结点是否等于子结点之和
  * @param {TreeNode} root
  * @return {boolean}
  * Your runtime beats 94.47 % of javascript submissions
@@ -34039,7 +34432,6 @@ export { sum };
 const checkTree = function(root) {
   return root.val === (root.left.val + root.right.val);
 };
-// @lc code=end
 
 export { checkTree };
 
@@ -34049,19 +34441,12 @@ export { checkTree };
 ### 2243-digitSum.js
 
 ~~~js
-/*
- * @lc app=leetcode.cn id=2243 lang=javascript
- *
- * [2243] 计算字符串的数字和
- */
-
-// @lc code=start
 /**
+ * [2243] 计算字符串的数字和
  * @param {string} s
  * @param {number} k
  * @return {string}
  */
-// 现在算法是按照题目算的，性能不好，能否优化算法？
 // Your runtime beats 24.84 % of javascript submissions
 const digitSum = function(s, k) {
   let arr = s.split('').map((item) => parseInt(item, 10));
@@ -34070,7 +34455,9 @@ const digitSum = function(s, k) {
     for (let i = 0; i < arr.length; i += k) {
       let sum = 0;
       for (let j = i; j < i + k; j++) {
-        if (arr[j] > -1) sum += arr[j];
+        if (arr[j] > -1) {
+          sum += arr[j];
+        }
       }
       newArr.push(sum);
     }
@@ -34078,7 +34465,6 @@ const digitSum = function(s, k) {
   }
   return arr.join('');
 };
-// @lc code=end
 
 export { digitSum };
 
@@ -34088,24 +34474,20 @@ export { digitSum };
 ### 2248-intersection.js
 
 ~~~js
-/*
- * @lc app=leetcode.cn id=2248 lang=javascript
- *
- * [2248] 多个数组求交集
- */
-
-// @lc code=start
 /**
+ * [2248] 多个数组求交集
  * @param {number[][]} nums
  * @return {number[]}
  * Your runtime beats 45.9 % of javascript submissions
  */
 const intersection = function(nums) {
   const length1 = nums.length;
+  // 数组降维排序
   const list = nums.flat().sort((a, b) => a > b ? 1 : -1);
   const res = [];
   let previous = list[0];
   let time = 1;
+  // 循环一次数组
   for (let i = 1; i < list.length; i++) {
     if (list[i] === previous) {
       time++;
@@ -34122,8 +34504,32 @@ const intersection = function(nums) {
   }
   return res;
 };
-// @lc code=end
-export { intersection };
+
+// 更好的思路：直接遍历一次数组，然后用字典记录出现的次数，遍历字典的键，判断次数等于数组的长度即可
+// 在所有 JavaScript 提交中击败了62.22%
+const intersection2 = function(nums) {
+  const len = nums.length;
+  const dict = {};
+  for (let i = 0; i < nums.length; i++) {
+    for (let j = 0; j < nums[i].length; j++) {
+      const curr = nums[i][j];
+      if (!dict[curr]) {
+        dict[curr] = 0;
+      }
+      dict[curr] = dict[curr] + 1;
+    }
+  }
+  let result = [];
+  for (const key in dict) {
+    if (dict[key] === len) {
+      result.push(Number(key));
+    }
+  }
+  result = result.sort((a, b) => a > b ? 1 : -1);
+  return result;
+};
+
+export { intersection, intersection2 };
 
 ~~~
 
@@ -34131,14 +34537,8 @@ export { intersection };
 ### 2255-countPrefixes.js
 
 ~~~js
-/*
- * @lc app=leetcode.cn id=2255 lang=javascript
- *
- * [2255] 统计是给定字符串前缀的字符串数目
- */
-
-// @lc code=start
 /**
+ * [2255] 统计是给定字符串前缀的字符串数目
  * @param {string[]} words
  * @param {string} s
  * @return {number}
@@ -34182,7 +34582,6 @@ const countPrefixes2 = function(words, s) {
   }
   return num;
 };
-// @lc code=end
 
 export { countPrefixes1, countPrefixes2 };
 
@@ -34192,14 +34591,9 @@ export { countPrefixes1, countPrefixes2 };
 ### 2264-largestGoodInteger.js
 
 ~~~js
-/*
- * @lc app=leetcode.cn id=2264 lang=javascript
- *
- * [2264] 字符串中最大的 3 位相同数字
- */
-
-// @lc code=start
 /**
+ * [2264] 字符串中最大的 3 位相同数字
+ * @lc app=leetcode.cn id=2264 lang=javascript
  * @param {string} num
  * @return {string}
  */
@@ -34215,9 +34609,64 @@ const largestGoodInteger = function(num) {
   if (tmp === '') return '';
   return tmp + tmp + tmp;
 };
-// @lc code=end
 
 export { largestGoodInteger };
+
+~~~
+
+  
+### 2265-averageOfSubtree.js
+
+~~~js
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
+/**
+ * 判断当前节点的值等于子树的值的平均值，如果是小数则向下取整
+ * https://leetcode.cn/problems/count-nodes-equal-to-average-of-subtree/submissions/
+ * @param {TreeNode} root
+ * @return {number}
+ * 84 ms, 在所有 JavaScript 提交中击败了25.00%
+ */
+const averageOfSubtree = function(root) {
+  const runNode = (node) => {
+    let sum = node.val;
+    let number = 1;
+    // 叶子结点一定满足
+    if (!node.left && !node.right) {
+      result++;
+      return { sum, number };
+    }
+    // 有子节点，那么需要判断
+    if (node.left) {
+      const { sum: sum1, number: number1 } = runNode(node.left);
+      sum += sum1;
+      number += number1;
+    }
+    if (node.right) {
+      const { sum: sum2, number: number2 } = runNode(node.right);
+      sum += sum2;
+      number += number2;
+    }
+    // 判断当前子树是否满足条件
+    if (Math.floor(sum / number) === node.val) {
+      result++;
+    }
+    return { sum, number };
+  };
+  let result = 0;
+  if (root) {
+    runNode(root);
+  }
+  return result;
+};
+
+export { averageOfSubtree };
 
 ~~~
 
@@ -34225,14 +34674,10 @@ export { largestGoodInteger };
 ### 2269-divisorSubstrings.js
 
 ~~~js
-/*
- * @lc app=leetcode.cn id=2269 lang=javascript
- *
- * [2269] 找到一个数字的 K 美丽值
- */
-
-// @lc code=start
 /**
+ * [2269] 找到一个数字的 K 美丽值
+ * 一个整数 num 的 k 美丽值定义为 num 中符合以下条件的 子字符串 数目：
+ * 子字符串长度为 k && 子字符串能整除 num 。
  * @param {number} num
  * @param {number} k
  * @return {number}
@@ -34250,9 +34695,6 @@ const divisorSubstrings = function(num, k) {
   return res;
 };
 
-// console.log(divisorSubstrings(240, 2), 2);
-// console.log(divisorSubstrings(430043, 2), 2);
-// @lc code=end
 export { divisorSubstrings };
 
 ~~~
@@ -34261,14 +34703,8 @@ export { divisorSubstrings };
 ### 2273-removeAnagrams.js
 
 ~~~js
-/*
- * @lc app=leetcode.cn id=2273 lang=javascript
- *
- * [2273] 移除字母异位词后的结果数组
- */
-
-// @lc code=start
 /**
+ * [2273] 移除字母异位词后的结果数组
  * @param {string[]} words
  * @return {string[]}
  * Your runtime beats 69.72 % of javascript submissions
@@ -34288,8 +34724,6 @@ const removeAnagrams = function(words) {
     return !dict[index];
   });
 };
-// console.log(removeAnagrams(["abba","baba","bbaa","cd","cd"])) // ["abba","cd"]
-// @lc code=end
 
 export { removeAnagrams };
 
@@ -34299,14 +34733,8 @@ export { removeAnagrams };
 ### 2278-percentageLetter.js
 
 ~~~js
-/*
- * @lc app=leetcode.cn id=2278 lang=javascript
- *
- * [2278] 字母在字符串中的百分比
- */
-
-// @lc code=start
 /**
+ * [2278] 字母在字符串中的百分比
  * @param {string} s
  * @param {character} letter
  * @return {number}
@@ -34322,7 +34750,7 @@ const percentageLetter = function(s, letter) {
   }
   return Math.floor(times / len * 100);
 };
-// @lc code=end
+
 export { percentageLetter };
 
 ~~~
@@ -34331,14 +34759,8 @@ export { percentageLetter };
 ### 2283-digitCount.js
 
 ~~~js
-/*
- * @lc app=leetcode.cn id=2283 lang=javascript
- *
- * [2283] 判断一个数的数字计数是否等于数位的值
- */
-
-// @lc code=start
 /**
+ * [2283] 判断一个数的数字计数是否等于数位的值
  * @param {string} num
  * @return {boolean}
  * Your runtime beats 64.81 % of javascript submissions
@@ -34362,10 +34784,6 @@ const digitCount = function(num) {
   return true;
 };
 
-// console.log(digitCount("1210") === true);
-// console.log(digitCount("030") === false);
-
-// @lc code=end
 export { digitCount };
 
 ~~~
@@ -34374,14 +34792,8 @@ export { digitCount };
 ### 2287-rearrangeCharacters.js
 
 ~~~js
-/*
- * @lc app=leetcode.cn id=2287 lang=javascript
- *
- * [2287] 重排字符形成目标字符串
- */
-
-// @lc code=start
 /**
+ * [2287] 重排字符形成目标字符串
  * @param {string} s
  * @param {string} target
  * @return {number}
@@ -34423,15 +34835,7 @@ const rearrangeCharacters = function(s, target) {
   return Math.min(...res);
 };
 
-// console.log(rearrangeCharacters("ilovecodingonleetcode", "code") === 2)
-// console.log(rearrangeCharacters("abcba", "abc") === 1)
-// console.log(rearrangeCharacters("abbaccaddaeea", "aaaaa") === 1)
-// console.log(rearrangeCharacters("lrnvlcqukanpdnluowenfxquitzryponxsikhciohyostvmkapkfpglzikitwiraqgchxnpryhwpuwpozacjhmwhjvslprqlnxrk", "woijih") === 2);
-// console.log(rearrangeCharacters("abc", "abcd") === 0)
-// console.log(rearrangeCharacters("aaaaaaaaaaaaaaaaaaaaaaaaaa", "aaaaaaaaa") === 2)
 export { rearrangeCharacters };
-
-// @lc code=end
 
 ~~~
 
@@ -34439,14 +34843,8 @@ export { rearrangeCharacters };
 ### 2293-minMaxGame.js
 
 ~~~js
-/*
- * @lc app=leetcode.cn id=2293 lang=javascript
- *
- * [2293] 极大极小游戏
- */
-
-// @lc code=start
 /**
+ * [2293] 极大极小游戏
  * @param {number[]} nums
  * @return {number}
  * Your runtime beats 90.21 % of javascript submissions
@@ -34466,9 +34864,6 @@ const minMaxGame = function(nums) {
   return nums[0];
 };
 
-// console.log(minMaxGame([1,3,5,2,4,8,2,2])) // 1
-// console.log(minMaxGame([3])) // 3
-// @lc code=end
 export { minMaxGame };
 
 ~~~
@@ -34479,13 +34874,10 @@ export { minMaxGame };
 ~~~js
 /*
  * @lc app=leetcode.cn id=2295 lang=javascript
- *
- * [2295] 替换数组中的元素
+ * [2295] 简单 替换数组中的元素
  * 考点：这道题使用对象保存数组原来的位置，以及调换后的位置
- * 调换过程操作对象，需要注意
  */
 
-// @lc code=start
 /**
  * @param {number[]} nums
  * @param {number[][]} operations
@@ -34497,7 +34889,6 @@ const arrayChange = function(nums, operations) {
   nums.forEach((item, index) => {
     dict[item] = index;
   });
-  // 这里把原来的位置先拿到，把键删除，然后加入新的键(实现替换)
   operations.forEach((item) => {
     const pos = dict[item[0]];
     delete dict[item[0]];
@@ -34510,12 +34901,6 @@ const arrayChange = function(nums, operations) {
   }
   return res;
 };
-
-// todo
-// [[1,3],[2,1],[3,2]] 这种可以优化？
-// console.log(arrayChange([1,2], [[1,3],[2,1],[3,2]])) // [2,1]
-// console.log(arrayChange([1,2,4,6], [[1,3],[4,7],[6,1]])) // [3,2,7,1]
-// @lc code=end
 
 export { arrayChange };
 
@@ -34575,17 +34960,118 @@ export { strongPasswordCheckerII };
 ~~~
 
   
-### 2303-calculateTax.js
+### 2300-successfulPairs.js
 
 ~~~js
 /*
- * @lc app=leetcode.cn id=2303 lang=javascript
- *
- * [2303] 计算应缴税款总额
+ * @lc app=leetcode.cn id=2300 lang=javascript
+ * [2300] 咒语和药水的成功对数
+ * https://leetcode.cn/problems/successful-pairs-of-spells-and-potions/
  */
-
-// @lc code=start
 /**
+ * @param {number[]} spells
+ * @param {number[]} potions
+ * @param {number} success
+ * @return {number[]}
+ */
+// 思路一：两重循环，中间判断终止条件，性能比较差
+// 9856 ms, 在所有 JavaScript 提交中击败了5.17%
+const successfulPairs2 = function(spells, potions, success) {
+  potions = potions.filter((posion) => {
+    return posion > 0;
+  }).sort((a, b) => {
+    return a < b ? 1 : -1;
+  });
+  const dict = {};
+  return spells.map((spell) => {
+    if (spell === 0) return 0;
+    let res = 0;
+    if (dict[spell] || dict[spell] === 0) {
+      return dict[spell];
+    }
+    const tmp = success / spell;
+    for (let i = 0; i < potions.length; i++) {
+      if (potions[i] >= tmp) {
+        res++;
+      } else {
+        break;
+      }
+    }
+    dict[spell] = res;
+    return res;
+  });
+};
+
+// 思路2：二分数组判断
+// 336 ms, 在所有 JavaScript 提交中击败了20.69%
+// 这个时间基本满足
+const successfulPairs = function(spells, potions, success) {
+  potions = potions.filter((posion) => {
+    return posion > 0;
+  }).sort((a, b) => {
+    return a < b ? 1 : -1;
+  });
+  const len = potions.length;
+  const dict = {};
+  return spells.map((spell) => {
+    if (spell === 0) return 0;
+    if (dict[spell] || dict[spell] === 0) {
+      return dict[spell];
+    }
+    const tmp = success / spell;
+    if (potions[0] < tmp) {
+      return 0;
+    }
+    if (potions[potions.length - 1] > tmp) {
+      return len;
+    }
+    // 二分法（还有提升空间）
+    let start = 0;
+    let end = len - 1;
+    let mid = Math.floor((start + end) / 2);
+    while (potions[mid] !== tmp) {
+      if (potions[mid] >= tmp && potions[mid + 1] < tmp) {
+        return mid + 1;
+      }
+      if (potions[mid] < tmp) {
+        end = mid;
+        mid = Math.floor((start + end) / 2);
+      }
+      if (potions[mid] >= tmp) {
+        start = mid;
+        mid = Math.floor((start + end) / 2);
+      }
+      if (potions[start] === tmp) {
+        return potions.lastIndexOf(potions[start]) + 1;
+      }
+      if (potions[end] === tmp) {
+        return potions.lastIndexOf(potions[end]) + 1;
+      }
+    }
+    return potions.lastIndexOf(potions[mid]) + 1;
+  });
+};
+
+export { successfulPairs, successfulPairs2 };
+
+// console.log(successfulPairs([5,1,3], [1,2,3,4,5], 7), [4,0,3])
+// console.log(successfulPairs([3,1,2], [8,5,8], 16), [2,0,2])
+// console.log(successfulPairs([3,1,2,0,3,3,4,4], [8,5,8], 16), [2,0,2,0,2,2,2,2])
+// console.log(successfulPairs([4], [8,5,8], 16), [3])
+// console.log(successfulPairs(
+//   [36,36,22,11,35,21,4,25,30,35,31,10,8,39,7,22,18,9,23,30,9,37,22,7,36,40,17,37,38,27,6,15,1,15,7,31,36,29,9,15,3,37,15,17,25,35,9,21,5,17,25,8,18,25,7,19,4,33,9,5,29,13,9,18,5,10,31,6,7,24,13,11,8,19,2],
+//   [30,11,5,20,19,36,39,24,20,37,33,22,32,28,36,24,40,27,36,37,38,23,39,11,40,19,37,32,25,29,28,37,31,36,32,40,38,22,17,38,20,33,29,17,36,33,35,25,28,18,17,19,40,27,40,28,40,40,40,39,17,34,36,11,22,29,22,35,35,22,18,34],
+//   135
+// ), [72,72,71,68,72,71,29,71,72,72,72,68,68,72,59,71,71,68,71,72,68,72,71,59,72,72,71,72,72,72,51,71,0,71,59,72,72,72,68,71,0,72,71,71,71,72,68,71,46,71,71,68,71,71,59,71,29,72,68,46,72,71,68,71,46,68,72,51,59,71,71,68,68,71,0]);
+
+~~~
+
+  
+### 2303-calculateTax.js
+
+~~~js
+/**
+ * [2303] 计算应缴税款总额
  * @param {number[][]} brackets
  * @param {number} income
  * @return {number}
@@ -34609,11 +35095,7 @@ const calculateTax = function(brackets, income) {
   }
   return total;
 };
-// console.log(calculateTax([[3,50],[7,10],[12,25]], 10) === 2.65);
-// console.log(calculateTax([[1,0],[4,25],[5,50]], 2) === 0.25);
-// console.log(calculateTax([[10,10]], 5) === 0.5);
 
-// @lc code=end
 export { calculateTax };
 
 ~~~
@@ -34622,23 +35104,15 @@ export { calculateTax };
 ### 2309-greatestLetter.js
 
 ~~~js
-/*
- * @lc app=leetcode.cn id=2309 lang=javascript
- *
- * [2309] 兼具大小写的最好英文字母
- */
-
-// @lc code=start
 /**
+ * [2309] 兼具大小写的最好英文字母
  * @param {string} s
  * @return {string}
  * Your runtime beats 83.75 % of javascript submissions
- * 难度简单
- * 最好记住不同的字符对应的 Unicode，
+ * 难度简单，记住不同的字符对应的 Unicode
+ * 'a'.charCodeAt() 97 'A'.charCodeAt() 65
  */
 const greatestLetter = function(s) {
-  // 'a'.charCodeAt() 97
-  // 'A'.charCodeAt() 65
   // 因为字符串长度1000，可以先去重，减少循环次数
   let arr = [...new Set(s.split(''))].sort();
   arr = arr.reverse();
@@ -34659,10 +35133,6 @@ const greatestLetter = function(s) {
   return '';
 };
 
-// console.log(greatestLetter("lEeTcOdE") === 'E');
-// console.log(greatestLetter("arRAzFif") === 'R');
-// console.log(greatestLetter("AbCdEfGhIjK") === '');
-// @lc code=end
 export { greatestLetter };
 
 ~~~
@@ -34714,8 +35184,6 @@ const countAsterisks2 = function(s) {
   return sum;
 };
 
-// 在官方测试案例情况中，这两个算法的性能差距不大
-// 根据实际数据选择适合的算法
 export { countAsterisks1, countAsterisks2 };
 
 ~~~
@@ -34761,9 +35229,6 @@ const checkXMatrix = function(grid) {
   return true;
 };
 
-// console.log(checkXMatrix([[2,0,0,1],[0,3,1,0],[0,5,2,0],[4,0,0,2]]) === true);
-// console.log(checkXMatrix([[5,7,0],[0,3,1],[0,5,0]]) === false);
-
 export { checkXMatrix };
 
 ~~~
@@ -34781,6 +35246,7 @@ export { checkXMatrix };
  * @return {string}
  */
 const decodeMessage = function(key, message) {
+  // unit test use nodejs env, don't support String.replaceAll(), so we can use String.replace() instead temporary
   const cleanKey = Array.from(new Set(key.replaceAll(' ', '').split('')));
   const dict = {};
   for (let i = 0; i < cleanKey.length; i++) {
@@ -34798,9 +35264,6 @@ const decodeMessage = function(key, message) {
   return newMessage;
 };
 
-// console.log(decodeMessage("the quick brown fox jumps over the lazy dog", "vkbs bs t suepuv") === "this is a secret")
-// console.log(decodeMessage("eljuxhpwnyrdgtqkviszcfmabo", "zwx hnfx lqantp mnoeius ycgk vcnjrdb") === "the five boxing wizards jump quickly")
-
 export { decodeMessage };
 
 ~~~
@@ -34809,14 +35272,9 @@ export { decodeMessage };
 ### 2331-evaluateTree.js
 
 ~~~js
-/*
- * @lc app=leetcode.cn id=2331 lang=javascript
- *
- * [2331] 计算布尔二叉树的值
- */
-
-// @lc code=start
 /**
+ * @lc app=leetcode.cn id=2331 lang=javascript
+ * [2331] 计算布尔二叉树的值
  * Definition for a binary tree node.
  * function TreeNode(val, left, right) {
  *     this.val = (val===undefined ? 0 : val)
@@ -34831,7 +35289,6 @@ export { decodeMessage };
  */
 const evaluateTree = function(root) {
   // 0 false,  1 true,  2 OR,  3 AND
-  // 递归树节点即可
   if (!root) {
     return false;
   }
@@ -34845,7 +35302,7 @@ const evaluateTree = function(root) {
     return evaluateTree(root.left) && evaluateTree(root.right);
   }
 };
-// @lc code=end
+
 export { evaluateTree };
 
 ~~~
@@ -34856,11 +35313,8 @@ export { evaluateTree };
 ~~~js
 /*
  * @lc app=leetcode.cn id=2335 lang=javascript
- *
  * [2335] 装满杯子需要的最短总时长
  */
-
-// @lc code=start
 /**
  * @param {number[]} amount
  * @return {number}
@@ -34873,7 +35327,7 @@ const fillCups = function(amount) {
   // 辅助函数，计算三个数的情况
   function fillThreeCups(amount) {
     // 如果有一个是0，那么直接返回剩余三个的最大值即可
-    if (amount[0] == 0 || amount[1] === 0 || amount[2] === 0) {
+    if (amount[0] === 0 || amount[1] === 0 || amount[2] === 0) {
       return Math.max(...amount);
     }
     // 如果三个都不是0，那么前两个最大的减去1，剩余一个不变
@@ -34916,11 +35370,6 @@ const fillCups2 = function(amount) {
   return fillThreeCups(amount);
 };
 
-// console.log(fillCups([5,4,4]) === 7)
-// console.log(fillCups([1,4,2]) === 4)
-// console.log(fillCups([5,0,0]) === 5)
-// 可以想一下更好的办法，先把最小的拿出来，然后做差，这样递归的次数就少多了 [100, 100, 10] 这种
-
 export { fillCups, fillCups2 };
 
 ~~~
@@ -34932,6 +35381,7 @@ export { fillCups, fillCups2 };
 /**
  * @param {number[]} nums
  * @return {number[]}
+ * 判断一个数组中有几个数对，有几个单独的数
  */
 const numberOfPairs = function(nums) {
   const dict = {};
@@ -34997,8 +35447,7 @@ export { bestHand };
 /**
  * @param {string} s
  * @return {character}
- * 2351. 第一个出现两次的字母
- * 难度简单
+ * 2351. 第一个出现两次的字母,简单
  */
 const repeatedCharacter = function(s) {
   const dict = {};
@@ -35017,6 +35466,96 @@ export { repeatedCharacter };
 ~~~
 
   
+### 2379-minimumRecolors.js
+
+~~~js
+/**
+ * @param {string} blocks
+ * @param {number} k
+ * @return {number}
+ * 得到 K 个黑块的最少涂色次数,
+ * 思路1：循环一次数组
+ */
+const minimumRecolors1 = function(blocks, k) {
+  // 辅助函数，检查某个位置开始时，需要黑块的个数
+  const checkBlack = (start) => {
+    let res = 0;
+    for (let i = start; i < start + k; i++) {
+      if (blocks[i] === 'W') {
+        res++;
+      }
+    }
+    return res;
+  };
+  // 先构建一个目标字符串，includes看是否满足
+  let target = '';
+  for (let i = 0; i < k; i++) {
+    target = `${target}B`;
+  }
+  // 因为已经有 k 个连续的黑块。
+  if (blocks.includes(target)) {
+    return 0;
+  }
+  // 这里处理
+  let min = k;
+  for (let i = 0; i <= blocks.length - k; i++) {
+    const tmp = checkBlack(i);
+    if (min > tmp) {
+      min = tmp;
+    }
+  }
+  return min;
+};
+
+/**
+ * @param {string} blocks
+ * @param {number} k
+ * @return {number}
+ * 思路2：滑动窗口
+ * https://leetcode.cn/problems/minimum-recolors-to-get-k-consecutive-black-blocks/
+ */
+const minimumRecolors = function(blocks, k) {
+  const len = blocks.length;
+  // 如果区间等于全部长度，那么计算 W 的个数即可
+  if (len === k) {
+    let min = 0;
+    for (let i = 0; i < len; i++) {
+      const item = blocks[i];
+      if (item === 'W') min++;
+    }
+    return min;
+  }
+  // 如果区间小于字符串长度，那么滑动窗口，计算区间内 W 最少的情况
+  // 先计算初始区间内的数量
+  let tmp = 0;
+  for (let i = 0; i < k; i++) {
+    if (blocks[i] === 'W') {
+      tmp++;
+    }
+  }
+  let min = tmp;
+  if (min === 0) return 0;
+  // 开始滑动窗口
+  for (let i = k; i < len; i++) {
+    if (blocks[i] === 'W') tmp++;
+    if (blocks[i - k] === 'W') tmp--;
+    if (tmp === 0) return 0;
+    min = tmp < min ? tmp : min;
+  }
+  return min;
+};
+
+// 某个滑动区间内，W 个数最少，如果已经是0，那么直接返回
+// console.log(minimumRecolors("WBBWWBBWBW", 10)) // 5
+// console.log(minimumRecolors("WBBWWBBWBW", 7)) // 3
+// console.log(minimumRecolors("WBWBBBW", 2)) // 0
+// console.log(minimumRecolors("WBBWWBBWBWWBBWWBBWBWWBBWWBBWBWWBBWWBBWBWWBBWWBBWBWWBBWWBBWBW", 30)) // 15
+
+export { minimumRecolors, minimumRecolors1 };
+
+~~~
+
+  
 ### 2399-checkDistances.js
 
 ~~~js
@@ -35025,8 +35564,6 @@ export { repeatedCharacter };
  * Your runtime beats 80.72 % of javascript submissions
  * [2399] 检查相同字母间的距离
  */
-
-// @lc code=start
 /**
  * @param {string} s
  * @param {number[]} distance
@@ -35036,11 +35573,9 @@ const checkDistances = function(s, distance) {
   const dict = {};
   for (let i = 0; i < s.length; i++) {
     const curr = s[i];
-    // 把第一次出现的位置，记录在字典中
     if (!dict[curr] && dict[curr] !== 0) {
       dict[curr] = i;
     } else {
-      // 比较字典中的位置和实际距离中的位置
       if (i - dict[curr] - 1 !== distance[curr.charCodeAt(0) - 97]) {
         return false;
       }
@@ -35049,9 +35584,6 @@ const checkDistances = function(s, distance) {
   return true;
 };
 
-// console.log(checkDistances("abaccb", [1,3,0,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]) === true)
-// console.log(checkDistances("aa", [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0])=== false)
-// @lc code=end
 export { checkDistances };
 
 ~~~
@@ -35065,8 +35597,6 @@ export { checkDistances };
  * Your runtime beats 14.86 % of javascript submissions
  * [2404] 出现最频繁的偶数元素
  */
-
-// @lc code=start
 /**
  * @param {number[]} nums
  * @return {number}
@@ -35101,12 +35631,101 @@ const mostFrequentEven = function(nums) {
   return Math.min(...arr);
 };
 
-// console.log(mostFrequentEven([0,1,2,2,4,4,1]) === 2);
-// console.log(mostFrequentEven([4,4,4,9,2,4,2,2]) === 4)
-// console.log(mostFrequentEven([29,47,21,41,13,37,25,7]) === -1)
-
-// @lc code=end
 export { mostFrequentEven };
+
+~~~
+
+  
+### 2409-countDaysTogether.js
+
+~~~js
+/*
+ * @lc app=leetcode.cn id=2409 lang=javascript
+ * [2409] 统计共同度过的日子数
+ * 60 ms, 在所有 JavaScript 提交中击败了 65.00%
+ */
+/**
+ * @param {string} arriveAlice
+ * @param {string} leaveAlice
+ * @param {string} arriveBob
+ * @param {string} leaveBob
+ * @return {number}
+ */
+const countDaysTogether = function(arriveAlice, leaveAlice, arriveBob, leaveBob) {
+  // 辅助函数：判断某一天是一年中的第多少天（简化版 1154 代码）默认不是闰年
+  const dayOfYear = function(date) {
+    const month = Number(date.slice(0, 2));
+    const day = Number(date.slice(3));
+    const getMonthDays = (month) => {
+      let sum = 0;
+      const month31 = [1, 3, 5, 7, 8, 10, 12];
+      for (let i = 1; i <= month; i++) {
+        if (i === 2) {
+          sum += 28;
+        } else if (month31.includes(i)) {
+          sum += 31;
+        } else {
+          sum += 30;
+        }
+      }
+      return sum;
+    };
+    return getMonthDays(month - 1) + day;
+  };
+  // 主函数 因为是在一年内，计算出两个时间分别对应的天数是第几天, 例如：[10, 20] [15, 30] 然后两个数组再求交集
+  const alice = [dayOfYear(arriveAlice), dayOfYear(leaveAlice)];
+  const bob = [dayOfYear(arriveBob), dayOfYear(leaveBob)];
+  if (alice[1] < bob[0]) return 0;
+  if (bob[1] < alice[0]) return 0;
+  const days = [...alice, ...bob].sort((a, b) => a > b ? 1 : -1);
+  return days[2] - days[1] + 1;
+};
+
+// console.log(countDaysTogether("08-15", "08-18", "08-16", "08-19") === 3)
+// console.log(countDaysTogether("08-15", "08-18", "08-16", "08-19") === 3)
+// console.log(countDaysTogether("10-01", "10-31", "11-01", "12-31") === 0)
+
+export { countDaysTogether };
+
+~~~
+
+  
+### 2413-smallestEvenMultiple.js
+
+~~~js
+/**
+ * @param {number} n
+ * @return {number}
+ */
+const smallestEvenMultiple = function(n) {
+  return n % 2 === 0 ? n : n * 2;
+};
+
+export { smallestEvenMultiple };
+
+~~~
+
+  
+### 2427-commonFactors.js
+
+~~~js
+/**
+ * @param {number} a
+ * @param {number} b
+ * @return {number}
+ */
+const commonFactors = function(a, b) {
+  const min = Math.min(a, b);
+  let tmp = 0;
+  for (let i = 1; i <= min; i++) {
+    if (a % i === 0 && b % i === 0) {
+      tmp++;
+    }
+  }
+  return tmp;
+};
+
+export { commonFactors };
 
 ~~~
 
@@ -35117,12 +35736,831 @@ export { mostFrequentEven };
 /**
  * @param {number} celsius
  * @return {number[]}
+ * 摄氏度转换成华氏度和开氏度（简单）
  */
 const convertTemperature = function(celsius) {
   return [celsius + 273.15, celsius * 1.80 + 32.00];
 };
 
 export { convertTemperature };
+
+~~~
+
+  
+### 2485-pivotInteger.js
+
+~~~js
+/**
+ * @param {number} n
+ * @return {number}
+ * https://leetcode.cn/problems/find-the-pivot-integer/
+ */
+const pivotInteger = function(n) {
+  if (n === 1) return 1;
+  const sum = (1 + n) * n / 2;
+  let tmp = 0;
+  for (let i = 1; i < n; i++) {
+    if (tmp === (sum - i) / 2) {
+      return i;
+    }
+    if (tmp > sum / 2) return -1;
+    tmp = tmp + i;
+  }
+  return -1;
+};
+
+// console.log(pivotInteger(1)) // 1
+// console.log(pivotInteger(8)) // 6
+// console.log(pivotInteger(4)) // -1
+// console.log(pivotInteger(40)) // -1
+
+export { pivotInteger };
+
+~~~
+
+  
+### 2490-isCircularSentence.js
+
+~~~js
+/**
+ * @param {string} sentence
+ * @return {boolean}
+ * easy 判断回环句
+ */
+const isCircularSentence = function(sentence) {
+  if (!sentence.includes(' ')) {
+    return sentence[0] === sentence[sentence.length - 1];
+  }
+  const arr = sentence.split(' ');
+  // check first and last word
+  if (arr[0][0] !== arr[arr.length - 1][arr[arr.length - 1].length - 1]) {
+    return false;
+  }
+  for (let i = 0; i < arr.length - 1; i++) {
+    if (arr[i][arr[i].length - 1] !== arr[i + 1][0]) {
+      return false;
+    }
+  }
+  return true;
+};
+
+// console.log(isCircularSentence("leetcode exercises sound delightful"))
+// console.log(isCircularSentence("Leetcode is cool"))
+
+export { isCircularSentence };
+
+~~~
+
+  
+### 2496-maximumValue.js
+
+~~~js
+/**
+ * @param {string[]} strs
+ * @return {number}
+ */
+// 一个由字母和数字组成的字符串的 值 定义如下：
+// 如果字符串 只 包含数字，那么值为该字符串在 10 进制下的所表示的数字。
+// 否则，值为字符串的 长度 。
+// 给你一个字符串数组 strs ，每个字符串都只由字母和数字组成，请你返回 strs 中字符串的 最大值 。
+const maximumValue = function(strs) {
+  let max = 0;
+  for (let i = 0; i < strs.length; i++) {
+    if (Number.isNaN(strs[i])) {
+      const len = strs[i].length;
+      max = Math.max(max, len);
+    } else {
+      const res = parseInt(strs[i], 10);
+      max = Math.max(max, res);
+    }
+  }
+  return max;
+};
+
+export { maximumValue };
+
+~~~
+
+  
+### 2500-deleteGreatestValue.js
+
+~~~js
+/**
+ * @param {number[][]} grid
+ * @return {number}
+ */
+const deleteGreatestValue = function(grid) {
+  const height = grid.length;
+  const width = grid[0].length;
+  // 处理特殊情况
+  if (height === 1 && width === 1) {
+    return grid[0][0];
+  }
+  if (height === 1) {
+    return grid[0].reduce((a, b) => a + b, 0);
+  }
+  // 每一行排序
+  grid = grid.map((list) => {
+    return list.sort((a, b) => a > b ? 1 : -1);
+  });
+  let res = 0;
+  // 循环每一列，求出每一列的最大值
+  for (let i = 0; i < width; i++) {
+    const tmp = [];
+    for (let j = 0; j < height; j++) {
+      tmp.push(grid[j][i]);
+    }
+    res = res + Math.max(...tmp);
+  }
+  return res;
+};
+
+// console.log(deleteGreatestValue([[1,2,4],[3,3,1]])) // 8
+// console.log(deleteGreatestValue([[10]])) // 10
+// console.log(deleteGreatestValue([[50,72,65,6,81,92,18,51,10,50,32,64,32,14,54,16,45,64,27,45,15,94,40,51,7,4,17,81,69,96,79,88,11,60,91,21,82,56,30,38,19]])) // 1937
+
+export { deleteGreatestValue };
+
+~~~
+
+  
+### 2540-getCommon.js
+
+~~~js
+/**
+ * @param {number[]} nums1
+ * @param {number[]} nums2
+ * @return {number}
+ */
+// 思路1，遍历两个数组，找到最小值；
+const getCommon1 = function(nums1, nums2) {
+  // 处理极端值，没有最小公共值
+  if (nums1[0] > nums2[nums2.length - 1]) return -1;
+  if (nums2[0] > nums1[nums1.length - 1]) return -1;
+  const dict = {};
+  for (let i = 0; i < nums1.length; i++) {
+    dict[nums1[i]] = true;
+  }
+  for (let j = 0; j < nums2.length; j++) {
+    if (dict[nums2[j]]) {
+      return nums2[j];
+    }
+  }
+  return -1;
+};
+
+// 思路2：双指针，获取最小值
+// 68 ms, 在所有 JavaScript 提交中击败了90.65%
+const getCommon2 = function(nums1, nums2) {
+  // 处理极端值，没有最小公共值
+  if (nums1[0] > nums2[nums2.length - 1]) return -1;
+  if (nums2[0] > nums1[nums1.length - 1]) return -1;
+  let pointer1 = 0;
+  let pointer2 = 0;
+  while (nums1[pointer1] && nums2[pointer2]) {
+    if (nums1[pointer1] === nums2[pointer2]) {
+      return nums1[pointer1];
+    }
+    else if (nums1[pointer1] < nums2[pointer2]) {
+      pointer1++;
+    }
+    else {
+      pointer2++;
+    }
+  }
+  return -1;
+};
+
+export { getCommon1, getCommon2 };
+
+~~~
+
+  
+### 2562-findTheArrayConcVal.js
+
+~~~js
+/**
+ * @param {number[]} nums
+ * @return {number}
+ * 双指针遍历数组
+ */
+const findTheArrayConcVal = function(nums) {
+  let result = 0;
+  const end = Math.ceil(nums.length / 2);
+  for (let i = 0; i < end; i++) {
+    if (i !== nums.length - 1 - i) {
+      result += Number(String(nums[i]) + String(nums[nums.length - 1 - i]));
+    } else {
+      result += nums[i];
+    }
+  }
+  return result;
+};
+
+// console.log(findTheArrayConcVal([7,52,2,4])); // 596
+// console.log(findTheArrayConcVal([5,14,13,8,12])); // 673
+
+export { findTheArrayConcVal };
+
+~~~
+
+  
+### 2566-minMaxDifference.js
+
+~~~js
+/**
+ * @param {number} num
+ * @return {number}
+ * 64 ms, 在所有 JavaScript 提交中击败了 60.00%
+ * https://leetcode.cn/problems/maximum-difference-by-remapping-a-digit/
+ */
+const minMaxDifference = function(num) {
+  const currArr = String(num).split('');
+  const first = currArr[0];
+  // min 最高位变成0
+  const min = currArr.map((item) => {
+    return item === first ? 0 : item;
+  }).join('');
+  // max 应该是第一个非9的数字
+  let max = currArr.join('');
+  const maxChange = currArr.find((item) => item != 9);
+  if (maxChange || maxChange == 0) {
+    max = currArr.map((item) => {
+      return item === maxChange ? 9 : item;
+    }).join('');
+  }
+  return Number(max) - Number(min);
+};
+
+// console.log(minMaxDifference(9991) === 9998);
+// console.log(minMaxDifference(90) === 99);
+// console.log(minMaxDifference(11891) === 99009);
+
+export { minMaxDifference };
+
+~~~
+
+  
+### 2570-mergeArrays.js
+
+~~~js
+/**
+ * @param {number[][]} nums1
+ * @param {number[][]} nums2
+ * @return {number[][]}
+ * 2570. 合并两个二维数组 - 求和法
+ * https://leetcode.cn/problems/merge-two-2d-arrays-by-summing-values/
+ * 简单，循环数组
+ */
+const mergeArrays = function(nums1, nums2) {
+  const dict = {};
+  nums1.forEach((item) => {
+    const value = item[1];
+    const key = item[0];
+    if (dict[key]) {
+      dict[key] = dict[key] + value;
+    } else {
+      dict[key] = value;
+    }
+  });
+  nums2.forEach((item) => {
+    const value = item[1];
+    const key = item[0];
+    if (dict[key]) {
+      dict[key] = dict[key] + value;
+    } else {
+      dict[key] = value;
+    }
+  });
+  const result = [];
+  for (const key in dict) {
+    result.push([Number(key), dict[key]]);
+  }
+  return result;
+};
+
+// console.log(mergeArrays([[1,2],[2,3],[4,5]], [[1,4],[3,2],[4,1]])); // [[1,6],[2,3],[3,2],[4,6]]
+
+export { mergeArrays };
+
+~~~
+
+  
+### 2574-leftRightDifference.js
+
+~~~js
+/**
+ * @param {number[]} nums
+ * @return {number[]}
+ * 思路1：直接计算出左侧数组和右侧数组，然后求结果数组
+ * https://leetcode.cn/problems/left-and-right-sum-differences/
+ */
+const leftRightDifference = function(nums) {
+  const len = nums.length;
+  if (len === 1) return [0];
+  const leftSum = [];
+  const rightSum = [];
+  let tmp = 0;
+  for (let i = 0; i < len; i++) {
+    leftSum[i] = tmp;
+    tmp += nums[i];
+  }
+  tmp = 0;
+  for (let i = len - 1; i >= 0; i--) {
+    rightSum[i] = tmp;
+    tmp += nums[i];
+  }
+  const res = [];
+  for (let i = 0; i < len; i++) {
+    res.push(Math.abs(leftSum[i] - rightSum[i]));
+  }
+  return res;
+};
+
+// console.log(leftRightDifference([10,4,8,3])) // [15,1,11,22]
+// console.log(leftRightDifference([1])) // [0]
+
+export { leftRightDifference };
+
+~~~
+
+  
+### 2600-kItemsWithMaximumSum.js
+
+~~~js
+/**
+ * @param {number} numOnes
+ * @param {number} numZeros
+ * @param {number} numNegOnes
+ * @param {number} k
+ * @return {number}
+ */
+const kItemsWithMaximumSum = function(numOnes, numZeros, numNegOnes, k) {
+  if (k <= numOnes) {
+    return k;
+  }
+  if (k <= numOnes + numZeros) {
+    return numOnes;
+  }
+  return numOnes - (k - numOnes - numZeros);
+};
+
+export { kItemsWithMaximumSum };
+
+~~~
+
+  
+### 2619-last.js
+
+~~~js
+// https://leetcode.cn/problems/array-prototype-last/
+// eslint-disable-next-line no-extend-native
+Array.prototype.last = function() {
+  return this.length > 0 ? this[this.length - 1] : -1;
+};
+
+/**
+ * const arr = [1, 2, 3];
+ * arr.last(); // 3
+ */
+
+~~~
+
+  
+### 2620-createCounter.js
+
+~~~js
+/**
+ * @param {number} n
+ * @return {Function} counter
+ */
+const createCounter = function(n) {
+  this.val = n;
+  return function() {
+    tmp = this.val;
+    this.val = this.val + 1;
+    return tmp;
+  };
+};
+
+/**
+* const counter = createCounter(10)
+* counter() // 10
+* counter() // 11
+* counter() // 12
+*/
+
+export { createCounter };
+
+~~~
+
+  
+### 2621-sleep.js
+
+~~~js
+/**
+ * @param {number} millis
+ */
+async function sleep(millis) {
+  return new Promise(
+    (resolve) => { setTimeout(resolve, millis); },
+    () => {},
+  );
+}
+
+/**
+* let t = Date.now()
+* sleep(100).then(() => console.log(Date.now() - t)) // 100
+*/
+
+export { sleep };
+
+~~~
+
+  
+### 2626-reduce.js
+
+~~~js
+/**
+ * @param {number[]} nums
+ * @param {Function} fn
+ * @param {number} init
+ * @return {number}
+ */
+// 调用库函数实现 reduce 效果
+const reduce1 = function(nums, fn, init) {
+  return nums.reduce(fn, init);
+};
+
+// 手动实现 reduce 函数
+const reduce2 = function(nums, fn, init) {
+  for (let i = 0; i < nums.length; i++) {
+    init = fn(init, nums[i]);
+  }
+  return init;
+};
+
+export { reduce1, reduce2 };
+
+~~~
+
+  
+### 2634-filter.js
+
+~~~js
+/**
+ * @param {number[]} arr
+ * @param {Function} fn
+ * @return {number[]}
+ */
+const filter = function(arr, fn) {
+  const res = [];
+  arr.forEach((item, index) => {
+    if (fn(item, index)) res.push(item);
+  });
+  return res;
+};
+
+export { filter };
+
+~~~
+
+  
+### 2639-findColumnWidth.js
+
+~~~js
+/**
+ * @param {number[][]} grid
+ * @return {number[]}
+ * 简单，遍历矩阵找到最大值
+ */
+// 60 ms, 在所有 JavaScript 提交中击败了92.22%
+const findColumnWidth = function(grid) {
+  const rowLen = grid.length;
+  const columnLen = grid[0].length;
+  const result = [];
+  for (let i = 0; i < columnLen; i++) {
+    let tmp = 0;
+    for (let j = 0; j < rowLen; j++) {
+      const curr = String(grid[j][i]).length;
+      if (curr > tmp) {
+        tmp = curr;
+      }
+    }
+    result.push(tmp);
+  }
+  return result;
+};
+
+// console.log(findColumnWidth([[1], [22], [333]])); // [3]
+// console.log(findColumnWidth([[-15, 1, 3], [15, 7, 12], [5, 6, -2]])); // [3,1,2]
+
+export { findColumnWidth };
+
+~~~
+
+  
+### 2665-createCounter.js
+
+~~~js
+/**
+ * @param {integer} init
+ * @return { increment: Function, decrement: Function, reset: Function }
+ */
+const createCounter = function(init) {
+  this.init = init;
+  this.val = init;
+  this.increment = function() {
+    this.val++;
+    return this.val;
+  };
+  this.decrement = function() {
+    this.val--;
+    return this.val;
+  };
+  this.reset = function() {
+    this.val = this.init;
+    return this.val;
+  };
+  return this;
+};
+// 模拟计数器，简单，实现加减存储
+
+/**
+ * const counter = createCounter(5)
+ * counter.increment(); // 6
+ * counter.reset(); // 5
+ * counter.decrement(); // 4
+ */
+
+export { createCounter };
+
+~~~
+
+  
+### 2667-createHelloWorld.js
+
+~~~js
+/**
+ * @return {Function}
+ */
+// 返回固定字符串，简单
+const createHelloWorld = function() {
+  // eslint-disable-next-line no-unused-vars
+  return function(...args) {
+    return 'Hello World';
+  };
+};
+
+/**
+* const f = createHelloWorld();
+* f(); // "Hello World"
+*/
+
+export { createHelloWorld };
+
+~~~
+
+  
+### 2677-chunk.js
+
+~~~js
+/**
+ * @param {Array} arr
+ * @param {number} size
+ * @return {Array[]}
+ */
+// 分块数组，简单
+const chunk = function(arr, size) {
+  if (arr.length === 0) return [];
+  const matrix = [];
+  while (arr.length > 0) {
+    const tmp = arr.splice(0, size);
+    matrix.push(tmp);
+  }
+  return matrix;
+};
+
+export { chunk };
+
+~~~
+
+  
+### 2704-expect.js
+
+~~~js
+/**
+ * @param {string} val
+ * @return {Object}
+ */
+const expect = function(val) {
+  return {
+    toBe: (value) => {
+      if (val === value) {
+        return true;
+      }
+      throw new Error('Not Equal');
+    },
+    notToBe: (value) => {
+      if (val !== value) {
+        return true;
+      }
+      throw new Error('Equal');
+    },
+  };
+};
+
+/**
+* expect(5).toBe(5); // true
+* expect(5).notToBe(5); // throws "Equal"
+*/
+
+// () => expect(5).toBe(null)
+// {"error":"Not Equal"}
+
+export { expect };
+
+~~~
+
+  
+### 2722-join.js
+
+~~~js
+/**
+ * @param {Array} arr1
+ * @param {Array} arr2
+ * @return {Array}
+ */
+const join = function(arr1, arr2) {
+  // 1 把 arr1 转换成 map
+  const dict = {};
+  arr1.forEach((item) => {
+    dict[item.id] = item;
+  });
+  // 2 遍历 arr2 如果不重复，直接放入 map; 如果 ID 重复，那么 Object.assign() 合并属性
+  arr2.forEach((item) => {
+    const id = item.id;
+    if (!dict[id]) {
+      dict[id] = item;
+    } else {
+      dict[id] = { ...dict[id], ...item };
+    }
+  });
+  // 3 遍历 map-key 转换成数组，然后根据 ID 排序输出
+  let arr3 = [];
+  for (const key in dict) {
+    arr3.push(dict[key]);
+  }
+  arr3 = arr3.sort((a, b) => {
+    return a.id > b.id ? 1 : -1;
+  });
+  return arr3;
+};
+
+// join([{"id": 1, "x": 2, "y": 3},{"id": 2, "x": 3, "y": 6}], [{"id": 2, "x": 10, "y": 20},{"id": 3, "x": 0, "y": 0}]) ===
+// [{"id":1,"x":2,"y":3},{"id":2,"x":10,"y":20},{"id":3,"x":0,"y":0}]
+
+export { join };
+
+~~~
+
+  
+### 2724-sortBy.js
+
+~~~js
+/**
+ * @param {Array} arr
+ * @param {Function} fn
+ * @return {Array}
+ */
+const sortBy = function(arr, fn) {
+  return arr.sort((a, b) => {
+    return fn(a) > fn(b) ? 1 : -1;
+  });
+};
+
+export { sortBy };
+
+~~~
+
+  
+### 2725-cancellable.js
+
+~~~js
+/**
+ * @param {Function} fn
+ * @param {Array} args
+ * @param {number} t
+ * @return {Function}
+ */
+const cancellable = function(fn, args, t) {
+  // 0s 先执行一次函数
+  fn(...args);
+  // 间隔 t 执行一次函数
+  const timer = setInterval(() => {
+    fn(...args);
+  }, t);
+  // 返回取消定时器的函数
+  return () => { clearInterval(timer); };
+};
+
+export { cancellable };
+
+~~~
+
+  
+### 2726-Calculator.js
+
+~~~js
+class Calculator {
+  /**
+   * @param {number} value
+   */
+  constructor(value) {
+    this.value = value;
+    this.error = false;
+  }
+
+  /**
+   * @param {number} value
+   * @return {Calculator}
+   */
+  add(value) {
+    if (!this.error) this.value = this.value + value;
+    return this;
+  }
+
+  /**
+   * @param {number} value
+   * @return {Calculator}
+   */
+  subtract(value) {
+    if (!this.error) this.value = this.value - value;
+    return this;
+  }
+
+  /**
+   * @param {number} value
+   * @return {Calculator}
+   */
+  multiply(value) {
+    if (!this.error) this.value = this.value * value;
+    return this;
+  }
+
+  /**
+   * @param {number} value
+   * @return {Calculator}
+   */
+  divide(value) {
+    if (!this.error) {
+      if (value === 0) {
+        this.value = 'Division by zero is not allowed';
+        this.error = true;
+        return this;
+      }
+      this.value = this.value / value;
+    }
+    return this;
+  }
+
+  /**
+   * @param {number} value
+   * @return {Calculator}
+   */
+  power(value) {
+    if (!this.error) this.value = this.value ** value;
+    return this;
+  }
+
+  /**
+   * @return {number}
+   */
+  getResult() {
+    if (this.error) {
+      return 'Division by zero is not allowed';
+    }
+    return this.value;
+  }
+}
+
+export { Calculator };
+
+~~~
+
+  
+### 2727-isEmpty.js
+
+~~~js
+/**
+ * @param {Object | Array} obj
+ * @return {boolean}
+ */
+const isEmpty = function(obj) {
+  return Object.keys(obj).length === 0;
+};
+
+export { isEmpty };
 
 ~~~
 
