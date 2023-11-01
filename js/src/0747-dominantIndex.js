@@ -1,10 +1,8 @@
 /*
  * @lc app=leetcode.cn id=747 lang=javascript
- *
  * [747] 至少是其他数字两倍的最大数
  */
 
-// @lc code=start
 /**
  * @param {number[]} nums
  * @return {number}
@@ -24,7 +22,7 @@ const dominantIndex = function(nums) {
       return -1;
     }
   }
-  // 数组中有三个数，那么循环获取最大和第二大的数字
+  // 数组中有三个数，循环获取最大和第二大的数字
   let max = nums[0] > nums[1] ? nums[0] : nums[1];
   let subMax = nums[0] < nums[1] ? nums[0] : nums[1];
   for (let i = 2; i < len; i++) {
@@ -43,6 +41,5 @@ const dominantIndex = function(nums) {
     return -1;
   }
 };
-// @lc code=end
 
 export { dominantIndex };

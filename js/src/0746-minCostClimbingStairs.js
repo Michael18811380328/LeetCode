@@ -18,10 +18,4 @@ const minCostClimbingStairs = function(cost) {
   return result[len];
 };
 
-// 输入：cost = [10,15,20]
-// 输出：15
-
-// 输入：cost = [1,100,1,1,1,100,1,1,100,1]
-// 输出：6
-
 export { minCostClimbingStairs };
