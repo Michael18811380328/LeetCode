@@ -1,5 +1,6 @@
 # -*- coding:utf-8 -*-
-# 01- twosum
+# 0001- twosum
+
 def twoSum1(nums, target):
     for i in range(0, len(nums)):
         for j in range(i + 1, len(nums)):

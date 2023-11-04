@@ -1,6 +1,6 @@
 # -*- coding:utf-8 -*-
+# 0172 统计n的阶乘中0的数量
 
-# 172 统计n的阶乘中0的数量
 def trailingZeroes(n):
     if n < 5:
         return 0
