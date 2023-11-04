@@ -6,12 +6,6 @@
 /js/coverage
 /typescript/coverage
 
-# package
-/js/package-lock.json
-/typescript/package-lock.json
-/js/yarn.lock
-/typescript/yarn.lock
-
 # production
 /js/build
 /typescript/build

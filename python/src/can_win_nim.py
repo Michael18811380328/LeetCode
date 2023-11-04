@@ -1,5 +1,6 @@
 # coding=utf-8
-# 292 nim-game 在nim游戏中获胜
+# 0292 nim-game 在nim游戏中获胜
+
 def canWinNim(n):
     """
     :type n: int
