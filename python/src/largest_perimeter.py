@@ -1,4 +1,4 @@
-# 967 find three numbers in a list to generate a triangle which C is max
+# 0967 find three numbers in a list to generate a triangle which C is max
 def largestPerimeter(A):
     if len(A) == 3:
         if (A[0] + A[1] + A[2]) > 2 * max(A[0], A[1], A[2]):
