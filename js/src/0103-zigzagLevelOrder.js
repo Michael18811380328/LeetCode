@@ -6,10 +6,10 @@
  *     this.right = (right===undefined ? null : right)
  * }
  */
-// [103] 二叉树的锯齿形层序遍历
 /**
  * @param {TreeNode} root
  * @return {number[][]}
+ * [103] 二叉树的锯齿形层序遍历
  * 广度优先遍历+不同层加一个序号，说明是正的还是反的即可
  * 可以先把树层序遍历（并加一个层序号）成数组
  * 然后数组进一步处理成合适的锯齿
@@ -18,7 +18,7 @@
 //  56 ms, 在所有 JavaScript 提交中击败了95.87%
 const zigzagLevelOrder = function(root) {
   if (!root) return [];
-  // 先把二叉树层序遍历，同时增加layer层数
+  // 先把二叉树层序遍历(广度优先遍历)，同时增加layer层数
   const res = [];
   const list = [];
   list.push({

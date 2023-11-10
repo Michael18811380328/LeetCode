@@ -3062,7 +3062,7 @@ const maxSubArray = function(nums) {
 
 // 思路2：动态规划(n)
 // 如果数组增加一项，那么求增加一项的最大值
-// 1 最大自序和，可以转换成以每一个项为结尾的子序的最大值 max = for（range(fn(1), fn(n)）)
+// 1 最大子序和，可以转换成以每一个项为结尾的子序的最大值 max = for（range(fn(1), fn(n)）)
 // 2 递推公式：fn = Math.max(fn(n - 1) + num[n], num[n]) 这是关键
 // 以当前数字结尾的子序列的最大值，可能是这个数字，或者这个数字和前面的全部相加
 const maxSubArray2 = function(nums) {
