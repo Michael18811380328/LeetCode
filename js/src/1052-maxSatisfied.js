@@ -9,7 +9,7 @@
  * @return {number}
  * 最大顾客数 = 各种情况下都不生气的顾客（staticValue） + 老板心情好时不生气的顾客（slide window, max）
  */
-var maxSatisfied = function(customers, grumpy, minutes) {
+const maxSatisfied = function(customers, grumpy, minutes) {
   const len = customers.length;
   // 各种情况下都不生气的顾客（固定值）
   let staticValue = 0;
@@ -52,3 +52,5 @@ var maxSatisfied = function(customers, grumpy, minutes) {
 // console.log(maxSatisfied([1], [1], 1) === 1);
 // console.log(maxSatisfied([4,10,10], [1,1,0], 2) === 24);
 // console.log(maxSatisfied([2,6,6,9], [0,0,1,1], 1) === 17);
+
+export { maxSatisfied };

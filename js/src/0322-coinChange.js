@@ -1,22 +1,10 @@
 /*
  * @lc app=leetcode.cn id=322 lang=javascript
- *
- * [322] 零钱兑换
+ * [322] 零钱兑换 动态规划，自己没有想出来
  */
 
-// @lc code=start
-/**
- * @param {number[]} coins
- * @param {number} amount
- * @return {number}
- */
-/**
- * @param {number[]} coins
- * @param {number} amount
- * @return {number}
- */
-// 注意：硬币找零贪心算法可能不是最优解
-var coinChange = function(coins, amount) {
+// 思路1：贪心算法，硬币找零贪心算法可能不是最优解，有些情况不对
+const coinChange = function(coins, amount) {
   if (amount === 0) return 0;
   coins.sort((a, b) => a - b);
   // 可以把大部分情况过滤掉
@@ -27,7 +15,7 @@ var coinChange = function(coins, amount) {
   // 这个保证正确
   coins.pop();
   while (coins.length > 0) {
-    let res = heart(coins, amount, min);
+    const res = heart(coins, amount, min);
     if (res) {
       min = res;
     }
@@ -35,13 +23,12 @@ var coinChange = function(coins, amount) {
   }
   return min;
 };
-
 // 使用贪心算法计算出最合理的解
-var heart = function(coins, amount, times) {
+const heart = function(coins, amount, times) {
   let time = 0;
   let remain = amount;
   for (let i = coins.length - 1; i > -1; i--) {
-    let current = coins[i];
+    const current = coins[i];
     remain = amount % current;
     time = time + (amount - remain) / current;
     amount = remain;
@@ -53,11 +40,22 @@ var heart = function(coins, amount, times) {
     }
   }
   return remain === 0 ? time : -1;
-}
+};
 
-// [186,419,83,408]
-// 6249
-// 20
-// 这个情况不能使用逐层贪心算法解决（需要使用动态规划解决）
+// 思路2 动态规划
+// 参考链接：https://leetcode.cn/problems/coin-change/solutions/975451/dai-ma-sui-xiang-lu-dai-ni-xue-tou-wan-q-80r7/
+const coinChange2 = function(coins, amount) {
+  if (!amount) {
+    return 0;
+  }
+  const dp = Array(amount + 1).fill(Infinity);
+  dp[0] = 0;
+  for (let i = 0; i < coins.length; i++) {
+    for (let j = coins[i]; j <= amount; j++) {
+      dp[j] = Math.min(dp[j - coins[i]] + 1, dp[j]);
+    }
+  }
+  return dp[amount] === Infinity ? -1 : dp[amount];
+};
 
-// @lc code=end
+export { coinChange, coinChange2 };

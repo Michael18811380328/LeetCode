@@ -44,7 +44,7 @@
     "jest": "27.5.1",
     "jest-watch-typeahead": "^0.6.4",
     "jsdoc-to-markdown": "^7.1.1",
-    "regenerator-runtime": "^0.13.3",    
+    "regenerator-runtime": "^0.13.3",
     "standard": "^16.0.4",
     "string.prototype.replaceall": "1.0.7"
   },
@@ -55,5 +55,8 @@
       "/lib/ckeditor/",
       "tmp.js"
     ]
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
   }
 }
