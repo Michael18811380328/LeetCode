@@ -9,7 +9,7 @@ process.exec(cmd, function(error, stdout, stderr) {
   console.log(stderr);
 });
 
-// 类型：node 脚本（在node环境下运行）
+// 类型：node 脚本
 // 需求：leetcode 中有 C 代码，可能出错，每一个手动编译排错比较慢
 // 作用：批量编译C代码，确保静态换件下不报错
 function compileFile(path) {

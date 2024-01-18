@@ -1,4 +1,4 @@
-// 需求：界面中很多 HTML 标签缺少 ariaLabel 属性（盲人阅读器），需要获取这部分节点，同理适应于某些节点缺少某些属性的情况
+// 需求：网页中 HTML 标签缺少 aria-label 属性（盲人阅读器），需要获取这部分节点，同理适应于某些节点缺少某些属性的情况
 // 环境：浏览器环境
 
 let runNode = (node, path) => {
@@ -22,7 +22,7 @@ let runNode = (node, path) => {
 let root = document.getElementsByTagName('body')[0];
 let path = '/';
 
-// 设置定时器的目的：因为获取到不符合的节点，本地会更改 HTML 代码，然后这里可以持续监测哪些代码缺少属性
+// 设置定时器的目的：界面打印不符合的节点，本地会更改代码后，项目热更新，可以持续监测哪些代码缺少属性
 setInterval(() => {
   console.log('开始测试');
   runNode(root, path);

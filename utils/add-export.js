@@ -1,9 +1,11 @@
 const fs = require('fs');
 
-// 类型：node 脚本（在node环境下运行）
-// 需求：eslint 要求一个模块必须有输出，否则会显示警告
-// 作用：给 JS 或者 TS 模块后面增加 export 输入语句
-// 预处理：先使用 npm run lint 把函数声明改成 const
+// 类型：node 脚本
+// 需求：eslint 要求一个模块必须有输出，否则会显示警告，leetcode 解答后默认没有输入模块，所以给 JS 或者 TS 模块后面增加 export 输入语句
+
+/**
+ * add export to js leetcode file
+ */
 function addExport(path) {
   const files = fs.readdirSync(path);
   const suffixList = ['js', 'ts'];
@@ -40,6 +42,9 @@ function addExport(path) {
   }
 }
 
+/**
+ * add export to typescript leetcode file
+ */
 function addExportTs(path) {
   const files = fs.readdirSync(path);
   const suffixList = ['js', 'ts'];
@@ -75,7 +80,6 @@ function addExportTs(path) {
   }
 }
 
-// 这里放需要处理的目录（绝对路径）
 const jsDir = './LeetCode/js/src';
 const tsDir = './LeetCode/typescript/src';
 

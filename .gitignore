@@ -8,6 +8,9 @@
 
 # production
 /js/build
+/js/es
+/js/lib
+/js/dist
 /typescript/build
 /lib
 

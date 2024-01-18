@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-// 类型：node 脚本（在node环境下运行）
+// 类型：node 脚本
 // 需求：github 中不同题目排序不正确，现在比较首字符排序，不是按照数字排序（2 在 10 的后面）
 // 作用：给题目增加前缀0，让 github 显示正常
 function rename(path) {
