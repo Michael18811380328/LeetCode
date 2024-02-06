@@ -15,4 +15,4 @@
 -- 在排名相同的分数后，排名数应该是下一个连续的整数。换句话说，排名之间不应该有空缺的数字。
 -- 按 score 降序返回结果表。
 
-SELECT Score, (SELECT count(DISTINCT score) FROM Scores WHERE score >= s.score) AS 'Rank' FROM Scores s ORDER BY Score DESC ;
+SELECT Score, (SELECT count(DISTINCT score) FROM Scores WHERE score >= s.score) AS 'Rank' FROM Scores s ORDER BY Score DESC;

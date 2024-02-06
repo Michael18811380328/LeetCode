@@ -1,4 +1,4 @@
-from guess_number import  guessNumber, guess
+from guess_number import guessNumber, guess
 
 def test_case():
     assert guess(6) == 0

@@ -10,7 +10,4 @@
 -- 编写一个SQL查询来 删除 所有重复的电子邮件，只保留一个id最小的唯一电子邮件。
 
 # Write your MySQL query statement below
-DELETE p1 FROM Person p1,
-    Person p2
-WHERE
-    p1.Email = p2.Email AND p1.Id > p2.Id;
+DELETE p1 FROM Person p1, Person p2 WHERE p1.Email = p2.Email AND p1.Id > p2.Id;

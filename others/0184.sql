@@ -9,10 +9,5 @@ FROM
     Department ON Employee.DepartmentId = Department.Id
 WHERE
     (Employee.DepartmentId , Salary) IN
-    (   SELECT
-            DepartmentId, MAX(Salary)
-        FROM
-            Employee
-        GROUP BY DepartmentId
-  )
+    (SELECT DepartmentId, MAX(Salary) FROM Employee GROUP BY DepartmentId)
 ;
