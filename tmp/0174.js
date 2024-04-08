@@ -125,19 +125,19 @@ console.log(calculateMinimumHP(dungeon1));
 var calculateMinimumHP2 = function (dungeon) {
   const m = dungeon.length;
   const n = dungeon[0].length;
-  // 创建一个二维数组来存储所需的最小生命值
+  // 初始化一个二维数组来存储所需的最小生命值
   const dp = Array.from({ length: m }, () => new Array(n));
-  // 初始化右下角的单元格
+  // 初始化右下角单元格
   dp[m - 1][n - 1] = Math.max(1, 1 - dungeon[m - 1][n - 1]);
-  // 初始化最后一列
+  // 初始化最右侧一列
   for (let i = m - 2; i >= 0; i--) {
     dp[i][n - 1] = Math.max(1, dp[i + 1][n - 1] - dungeon[i][n - 1]);
   }
-  // 初始化最后一行
+  // 初始化最下面一行
   for (let j = n - 2; j >= 0; j--) {
     dp[m - 1][j] = Math.max(1, dp[m - 1][j + 1] - dungeon[m - 1][j]);
   }
-  // 填充其余的dp数组
+  // 填充其余的单元格
   for (let i = m - 2; i >= 0; i--) {
     for (let j = n - 2; j >= 0; j--) {
       const minNext = Math.min(dp[i + 1][j], dp[i][j + 1]);
