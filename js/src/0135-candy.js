@@ -10,7 +10,7 @@
 // 2 第一次从左向右比较，第二次从右向左比较，这样就能用上之前的比较结果
 // 贪心算法：局部最优可以推出全局最优
 const candy = function(ratings) {
-  let result = Array(ratings.length).fill(1);
+  const result = Array(ratings.length).fill(1);
   // 从左向右遍历
   for (let i = 1; i < result.length; i++) {
     if (ratings[i] > ratings[i - 1]) {
@@ -27,7 +27,7 @@ const candy = function(ratings) {
   return result.reduce((a, b) => a + b, 0);
 };
 
-console.log(candy([1,0,2]) === 5);
+// console.log(candy([1, 0, 2]) === 5);
 
 export { candy };
 

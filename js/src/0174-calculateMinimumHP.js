@@ -10,10 +10,10 @@
 // 1、反向的动态规划（从最后一个节点开始规划，然后一直计算到第一个节点）
 // 2、处理当前节点的正负号——先确定向下和向右的情况的最小消耗的血量，然后和当前节点的值做比较，如果当前是负数，继续增加最小值
 // 如果当前是正数，且大于最小值，那么就设置当前的值为1
-var calculateMinimumHP = function(dungeon) {
+const calculateMinimumHP = function(dungeon) {
   const m = dungeon.length;
   const n = dungeon[0].length;
-  let dict = {};
+  const dict = {};
   function getValue(a, b) {
     return dict[`${a}-${b}`];
   }
@@ -26,7 +26,7 @@ var calculateMinimumHP = function(dungeon) {
     // 递归的结束点（右下角的点）
     if (i === m - 1 && j === n - 1) {
       // 如果节点大于0，那么加血，只要满足1点血即可；否则减血，返回 1 - 减血值
-      let value = dungeon[m - 1][n - 1] > 0 ? 1 : 1 - dungeon[m - 1][n - 1];
+      const value = dungeon[m - 1][n - 1] > 0 ? 1 : 1 - dungeon[m - 1][n - 1];
       setValue(i, j, value);
       return value;
     }
@@ -50,15 +50,12 @@ var calculateMinimumHP = function(dungeon) {
     const value = dungeon[i][j] >= goMin ? 1 : goMin - dungeon[i][j];
     setValue(i, j, value);
     return value;
-  }
+  };
   return minHP(0, 0);
 };
 
-const dungeon1 = [[-2,-3,3],[-5,-10,1],[10,30,-5]];
-
-console.log(calculateMinimumHP(dungeon1));
-
-
+// const dungeon1 = [[-2, -3, 3], [-5, -10, 1], [10, 30, -5]];
+// console.log(calculateMinimumHP(dungeon1));
 
 // 自己的思路不行（不满足题目要求），仅供参考
 // 可以使用两次动态规划计算出俩
@@ -120,9 +117,8 @@ console.log(calculateMinimumHP(dungeon1));
 //   return getValue(dungeon.length, dungeon[0].length);
 // };
 
-
 // 其他的思路，完全动态规划实现，这个和上面自己的想法类似，倒推动态规划
-var calculateMinimumHP2 = function (dungeon) {
+const calculateMinimumHP2 = function (dungeon) {
   const m = dungeon.length;
   const n = dungeon[0].length;
   // 初始化一个二维数组来存储所需的最小生命值
@@ -145,6 +141,6 @@ var calculateMinimumHP2 = function (dungeon) {
     }
   }
   return dp[0][0];
-}
+};
 
-export { calculateMinimumHP, calculateMinimumHP2 }; 
+export { calculateMinimumHP, calculateMinimumHP2 };
