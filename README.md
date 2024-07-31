@@ -15,3 +15,5 @@
 [待办事项](./todo.md)
 
 [单元测试](./unit-test.md)
+
+[脚本说明](./scripts-description.md)

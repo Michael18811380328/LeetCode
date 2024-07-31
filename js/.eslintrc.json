@@ -47,6 +47,7 @@
     "max-classes-per-file": "off",
     "no-underscore-dangle": "off",
     "class-methods-use-this": "off",
+    "no-extend-native": "off",
     "no-return-assign": "off"
   },
   "parser": "@babel/eslint-parser"

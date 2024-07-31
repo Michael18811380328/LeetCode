@@ -1,7 +1,4 @@
-/**
- * @param {integer} init
- * @return { increment: Function, decrement: Function, reset: Function }
- */
+// 模拟计数器，简单，实现加减存储
 const createCounter = function(init) {
   this.init = init;
   this.val = init;
@@ -19,7 +16,6 @@ const createCounter = function(init) {
   };
   return this;
 };
-// 模拟计数器，简单，实现加减存储
 
 /**
  * const counter = createCounter(5)

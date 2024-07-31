@@ -11,6 +11,8 @@
 /js/es
 /js/lib
 /js/dist
+/js/dist-parcel
+/js/.parcel-cache
 /typescript/build
 /lib
 

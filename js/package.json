@@ -2,13 +2,17 @@
   "name": "leetcode",
   "version": "1.0.0",
   "description": "Learn Leetcode",
-  "main": "test.js",
+  "source": "src/leetcode.js",
+  "main": "dist-parcel/main.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
+    "watch-parcel": "parcel watch",
+    "build-parcel": "parcel build",
     "clean": "rm -rf node_modules",
     "standard": "./node_modules/.bin/standard",
+    "standard-fix": "./node_modules/.bin/standard --fix",
     "test": "node ./scripts/jest-test.js --env=jsdom --coverage",
     "test-watch": "node ./scripts/jest-test.js --env=jsdom --coverage --watch",
     "build-es": "./node_modules/.bin/babel src --out-dir es",
@@ -52,10 +56,11 @@
     "eslint-plugin-import": "2.26.0",
     "jest": "27.5.1",
     "jest-watch-typeahead": "^0.6.4",
-    "jsdoc-to-markdown": "^7.1.1",
+    "jsdoc-to-markdown": "^8.0.1",
+    "parcel": "^2.12.0",
     "regenerator-runtime": "^0.13.3",
     "rollup": "2.79.1",
-    "standard": "^16.0.4",
+    "standard": "^17.1.0",
     "string.prototype.replaceall": "1.0.7"
   },
   "standard": {
