@@ -16,7 +16,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [14.x]
+        node-version: [20.x]
 
     steps:
     - uses: actions/checkout@v2
@@ -27,13 +27,13 @@ jobs:
     - run: |
         cd js
         echo "javascript test"
-        npm install
+        npm install --force
         npm run lint
         npm run test
 
         cd ../typescript
         echo "typescript test"
-        npm install
+        npm install --force
         npm run lint
         npm run test-ts
 

@@ -28,7 +28,7 @@
 
 ### npm run lint/lint-html/lint-fix
 
-使用 eslint 工具检查代码格式，https://www.npmjs.com/package/eslint，本地配置文件为 .eslintrc.json
+使用 eslint 工具检查代码格式，https://www.npmjs.com/package/eslint 配置文件为 .eslintrc.json
 
 ### npm run watch-parcel/build-parcel
 
@@ -36,7 +36,7 @@
 
 ### npm run build
 
-使用 rollup 工具进行编译，https://www.npmjs.com/package/rollup，本地配置文件为 rollup.config.js
+使用 rollup 工具进行编译，https://www.npmjs.com/package/rollup 配置文件为 rollup.config.js
 
 ### npm run standard
 
@@ -46,15 +46,15 @@
 
 ### npm run test/test-watch
 
-使用 jest 工具进行单元测试，https://www.npmjs.com/package/jest，本地配置文件 jest.config.js
+使用 jest 工具进行单元测试，https://www.npmjs.com/package/jest 配置文件 jest.config.js
 
 ### npm run build-es
 
-使用 babel 工具进行编译，把 es6 代码编译成 es5 代码，https://www.npmjs.com/package/@babel/cli，本地配置文件.babelrc
+使用 babel 工具进行编译，把 es6 代码编译成 es5 代码，https://www.npmjs.com/package/@babel/cli 配置文件.babelrc
 
 ### npm run build-api
 
-使用 jsdoc-to-markdown 工具，https://www.npmjs.com/package/jsdoc-to-markdown，自动生成 API 文档
+使用 jsdoc-to-markdown 工具，https://www.npmjs.com/package/jsdoc-to-markdown 自动生成 API 文档
 
 
 
@@ -92,7 +92,7 @@ npm install -g typescript
 
 ### npm run clean/lint/fix
 
-作用：使用第三方库 gts 进行代码格式检查和自动修复，https://www.npmjs.com/package/gts，类似 eslint。GTS is Google's TypeScript style guide, and the configuration for our formatter, linter, and automatic code fixer.
+作用：使用第三方库 gts 进行代码格式检查和自动修复，https://www.npmjs.com/package/gts 类似 eslint。GTS is Google's TypeScript style guide, and the configuration for our formatter, linter, and automatic code fixer.
 
 ### npm run prepare/pretest
 
@@ -102,9 +102,7 @@ npm install -g typescript
 
 这是内置钩子函数，表示在测试后进行代码格式检查
 
-
-
 ## test.sh
 
-bash 脚本，一次性执行 js ts py 的单元测试。
+bash 脚本，一次性执行 javascript typescript python 的单元测试。
 
