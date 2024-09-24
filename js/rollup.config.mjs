@@ -1,39 +1,33 @@
-import { defineConfig } from 'rollup';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import json from '@rollup/plugin-json';
 import babel from '@rollup/plugin-babel';
 import terser from '@rollup/plugin-terser';
 
-export default defineConfig({
-  input: [
-    './src/leetcode.js',
-  ],
+export default {
+  input: './src/leetcode.js',
   output: [
     {
-      format: 'cjs',
       file: './dist/leetcode.js',
-      plugins: [
-        terser(),
-      ],
+      format: 'cjs',
+      plugins: [terser()],
     },
     {
       format: 'cjs',
       dir: './lib',
       exports: 'named',
       preserveModules: true,
-      preserveModulesRoot: 'src'
+      preserveModulesRoot: 'src',
+      plugins: [terser()],
     },
     {
       format: 'es',
       dir: './es',
       exports: 'named',
       preserveModules: true,
-      preserveModulesRoot: 'src'
+      preserveModulesRoot: 'src',
+      plugins: [terser()],
     },
-  ],
-  external: [
-    /@babel\/runtime/,
   ],
   plugins: [
     // resolve third-party modules
@@ -46,4 +40,4 @@ export default defineConfig({
     json(),
     commonjs(),
   ],
-});
+};
