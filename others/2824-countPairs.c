@@ -1,3 +1,4 @@
+// https://leetcode.cn/problems/count-pairs-whose-sum-is-less-than-target/description/
 int countPairs(int* nums, int numsSize, int target){
   int i;
   int j;

@@ -1,4 +1,5 @@
 /**
+ * source: https://leetcode.cn/problems/count-pairs-whose-sum-is-less-than-target/description/
  * @param {number[]} nums
  * @param {number} target
  * @return {number}
