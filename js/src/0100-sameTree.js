@@ -24,7 +24,6 @@ function isSameArray(p, q) {
   }
   return true;
 }
-// const result = isSameArray([1, 2, 3], [1, 2, 3]);
 
 // 72 ms , 在所有 javascript 提交中击败了 51.96%
 /**

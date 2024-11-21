@@ -10,6 +10,7 @@ function wordBreak1(s, wordDict) {
   const dict = {};
   const subDict = {};
   for (let i = 0; i < wordDict.length; i++) {
+    const item = wordDict[i];
     // 先把字典中无关的字符串过滤出去，减少字典的复杂度
     if (s.includes(item)) {
       dict[item] = true;

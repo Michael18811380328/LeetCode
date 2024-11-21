@@ -4,75 +4,6 @@
  * 这个实际不算很难，思路也能想到，自己的思路和官方不一致，没有处理某些边界情况
  */
 
-// 思路1(某些情况不满足)
-const removeCommentErr = function(source) {
-  // 先统一处理 // 行内注释，这样遍历一次（不管什么情况）
-  const result1 = [];
-  for (let i = 0; i < source.length; i++) {
-    const cur = source[i];
-    const index = cur.indexOf('//');
-    // 没有行内注释
-    if (index === -1) {
-      result1.push(cur);
-    }
-    // 有行内注释，在第一位，全部删除
-    else if (index === 0) {
-      continue;
-    }
-    else {
-      result1.push(cur.slice(0, index));
-    }
-  }
-  // 然后统一处理一行内的块级注释
-  const result2 = [];
-  for (let i = 0; i < result1.length; i++) {
-    const cur = result1[i];
-    const index1 = cur.indexOf('/*');
-    const index2 = cur.lastIndexOf('*/');
-    if (index1 > -1 && index2 > -1) {
-      const start = cur.slice(0, index1);
-      const end = cur.slice(index2 + 2);
-      const newCur = start + end;
-      if (newCur.length > 0) {
-        result2.push(newCur);
-      }
-    }
-    else {
-      result2.push(cur);
-    }
-  }
-  // 然后处理跨行的块级注释，注意：块级是否换行等等
-  const result3 = [];
-  let isBlock = false;
-  let tmpStr = '';
-  for (let i = 0; i < result2.length; i++) {
-    const cur = result2[i];
-    if (isBlock) {
-      const index = cur.indexOf('*/');
-      if (index === -1) {
-        continue;
-      }
-      const end = cur.slice(index + 2);
-      if ((tmpStr + end).length > 0) {
-        result3.push(tmpStr + end);
-      }
-      tmpStr = '';
-      isBlock = false;
-    }
-    else {
-      const index = cur.indexOf('/*');
-      if (index === -1) {
-        result3.push(cur);
-      }
-      else {
-        tmpStr = cur.slice(0, index);
-        isBlock = true;
-      }
-    }
-  }
-  return result3;
-};
-
 // 官方解答：
 // 链接：https://leetcode.cn/problems/remove-comments/solutions/2365861/shan-chu-zhu-shi-by-leetcode-solution-lb9x/
 const removeComments = function(source) {
@@ -123,4 +54,4 @@ const removeComments = function(source) {
   return newCommwnts;
 };
 
-export { removeCommentErr, removeComments };
+export { removeComments };
