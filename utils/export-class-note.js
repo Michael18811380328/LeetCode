@@ -1,5 +1,4 @@
 /**
- * seatable 浏览器脚本
  * 需求: 把某个课程笔记导出 markdown 文件
  */
 const table = window.app.state.value.tables[0];

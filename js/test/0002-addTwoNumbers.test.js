@@ -50,3 +50,16 @@ test('02-addTwoNumbers list node', () => {
   expect(result2.val).toEqual(1);
   expect(result2.next.val).toEqual(8);
 });
+
+test('addTwoNumbers', () => {
+  const l1 = new ListNode(5);
+  const l2 = new ListNode(5);
+  expect(addTwoNumbers(l1, l2).val).toEqual(0);
+  expect(addTwoNumbers(l1, l2).next.val).toEqual(2);
+
+  const l3 = new ListNode(1);
+  l3.next = new ListNode(8);
+  const l4 = new ListNode(0);
+  expect(addTwoNumbers(l3, l4).val).toEqual(1);
+  expect(addTwoNumbers(l3, l4).next.val).toEqual(8);
+});

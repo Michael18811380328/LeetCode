@@ -12,7 +12,7 @@ const groupAnagrams = function (strs) {
   };
   // 2 把每一项字符串排序一下
   for (let i = 0; i < strs.length; i++) {
-    item = sequenceStr(strs[i]);
+    const item = sequenceStr(strs[i]);
     if (!hash[item]) {
       hash[item] = [];
     }
