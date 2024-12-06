@@ -38,6 +38,4 @@ https://github.com/neetcode-gh/leetcode: Leetcode solutions
 [![Code Style: Google](https://img.shields.io/badge/code%20style-google-blueviolet.svg)](https://github.com/google/gts)
 
 
-## 2024-11-AI 分支说明
 
-使用 AI 重构代码，补充单元测试等，目标是 leetcode JS 前 100 题目，同时复习相关算法。

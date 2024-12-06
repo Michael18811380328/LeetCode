@@ -17,10 +17,6 @@ theme:
     palette:
         primary: "red"
 
-extra_javascript:
-    - 'js/baidu-statistics.min.js'
-    - 'js/history.min.js'
-
 markdown_extensions:
   - admonition
   - codehilite:
