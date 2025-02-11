@@ -16,7 +16,7 @@ class Solution:
         min = tmp
         if min == 0:
             return 0
-        
+
         for i in range(k, l):
             if blocks[i] == 'W':
                 tmp = tmp + 1
@@ -25,5 +25,5 @@ class Solution:
             if tmp == 0:
                 return 0
             min = tmp if tmp < min else min
-        
+
         return min

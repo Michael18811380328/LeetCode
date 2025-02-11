@@ -19,7 +19,7 @@
 #python
 *.pyc
 *.pytest_cache
-/python/python3-env
+/python/test-env
 
 # IDE cache
 .vscode

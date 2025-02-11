@@ -4,7 +4,7 @@ class Solution:
         total = len(nums)
         if total == 1:
             return [0]
-        
+
         # 这里创建长度是total的列表
         left_sum = [1 for x in range(0, total)]
         right_sum = [1 for x in range(0, total)]

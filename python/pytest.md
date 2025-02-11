@@ -8,15 +8,13 @@ pytest 是 python 测试工具之一。LeetCode 部署 pytest 用来单元测试
 1.安装方法
 
 ~~~bash
-sudo pip install -U pytest
-# 如果没有安装 pip，首先需要安装 wget brew pip 等工具
+pip install pytest
 ~~~
 
 2.查看安装的版本
 
 ~~~bash
 pytest --version
-# 如果显示版本号，就说明安装正确
 ~~~
 
 3.注意事项
@@ -103,3 +101,9 @@ class TestClass:
 
 
 参考链接：https://www.cnblogs.com/shenh/p/11572657.html
+
+## 测试覆盖率
+
+```bash
+pytest --cov=mymodule src/tests/
+```
