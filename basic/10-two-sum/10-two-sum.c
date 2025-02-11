@@ -19,4 +19,3 @@ int main() {
   two_sum(nums, size, target);
   return 0;
 }
-yth
