@@ -21,7 +21,7 @@ import {checkXMatrix} from '../src/2319-checkXMatrix';
 import {getMinDistance, getMinDistance2} from '../src/1848-getMinDistance';
 import {findColumnWidth} from '../src/2639-findColumnWidth';
 
-test('134-canCompleteCircuit', () => {
+test('0134-canCompleteCircuit', () => {
   const gas = [1, 2, 3, 4, 5];
   const cost = [3, 4, 5, 1, 2];
   const result = 3;
@@ -32,7 +32,7 @@ test('134-canCompleteCircuit', () => {
   expect(canCompleteCircuit(gas1, cost1)).toBe(result1);
 });
 
-test('228-summaryRanges', () => {
+test('0228-summaryRanges', () => {
   const numsList: number[][] = [
     [0, 1, 2, 4, 5, 7],
     [0, 2, 3, 4, 6, 8, 9],
@@ -52,13 +52,13 @@ test('228-summaryRanges', () => {
   }
 });
 
-test('238-moveZeroes', () => {
+test('0283-moveZeroes', () => {
   const nums = [0, 1, 0, 3, 12];
   moveZeroes(nums);
   expect(nums).toStrictEqual([1, 3, 12, 0, 0]);
 });
 
-test('343-integerBreak ', () => {
+test('0343-integerBreak ', () => {
   expect(integerBreak(1)).toBe(1);
   expect(integerBreak(2)).toBe(1);
   expect(integerBreak(3)).toBe(2);
@@ -67,7 +67,7 @@ test('343-integerBreak ', () => {
   expect(integerBreak(11)).toBe(54);
 });
 
-test('349-intersection', () => {
+test('0349-intersection', () => {
   const nums1 = [1, 2, 2, 1],
     nums2 = [2, 2];
   expect(intersection(nums1, nums2)).toStrictEqual([2]);
@@ -76,19 +76,19 @@ test('349-intersection', () => {
   expect(intersection(nums3, nums4)).toStrictEqual([4, 9]);
 });
 
-test('434-countSegments', () => {
+test('0434-countSegments', () => {
   expect(countSegments('')).toBe(0);
   expect(countSegments('Leetcode')).toBe(1);
   expect(countSegments('Hello, my name is John')).toBe(5);
 });
 
-test('434-countSegments', () => {
+test('0434-countSegments', () => {
   expect(countSegments('')).toBe(0);
   expect(countSegments('Leetcode')).toBe(1);
   expect(countSegments('Hello, my name is John')).toBe(5);
 });
 
-test('459-repeatedSubstringPattern', () => {
+test('0459-repeatedSubstringPattern', () => {
   expect(repeatedSubstringPattern('a')).toEqual(false);
   expect(repeatedSubstringPattern('abab')).toEqual(true);
   expect(repeatedSubstringPattern('abcabcabcabc')).toEqual(true);
@@ -103,25 +103,25 @@ test('1752-check', () => {
   expect(check([2, 1])).toEqual(true);
 });
 
-test('467-findComplement', () => {
+test('0467-findComplement', () => {
   expect(findComplement1(5)).toBe(2);
   expect(findComplement1(1)).toBe(0);
   expect(findComplement2(5)).toBe(2);
   expect(findComplement2(1)).toBe(0);
 });
 
-test('561-arrayPairSum', () => {
+test('0561-arrayPairSum', () => {
   expect(arrayPairSum([])).toBe(0);
   expect(arrayPairSum([1, 4, 3, 2])).toBe(4);
   expect(arrayPairSum([6, 2, 6, 5, 1, 2])).toBe(9);
 });
 
-test('628-maximumProduct', () => {
+test('0628-maximumProduct', () => {
   expect(maximumProduct([1, 2, 3])).toBe(6);
   expect(maximumProduct([1, 2, 3, 4])).toBe(24);
 });
 
-test('824-toGoatLati', () => {
+test('0824-toGoatLati', () => {
   expect(toGoatLatin('I speak Goat Latin')).toBe(
     'Imaa peaksmaaa oatGmaaaa atinLmaaaaa'
   );
@@ -130,7 +130,7 @@ test('824-toGoatLati', () => {
   );
 });
 
-test('941-validMountainArray', () => {
+test('0941-validMountainArray', () => {
   expect(validMountainArray([2, 1])).toBe(false);
   expect(validMountainArray([3, 5, 5])).toBe(false);
   expect(validMountainArray([0, 3, 2, 1])).toBe(true);
@@ -199,7 +199,7 @@ test('1619-trimMean', () => {
   ).toStrictEqual(5.291666666666667);
 });
 
-test('448-findDisappearedNumbers', () => {
+test('0448-findDisappearedNumbers', () => {
   expect(findDisappearedNumbers([4])).toStrictEqual([]);
   expect(findDisappearedNumbers([4, 3, 2, 1])).toStrictEqual([]);
   expect(findDisappearedNumbers([1, 1, 1, 1, 1])).toStrictEqual([2, 3, 4, 5]);
@@ -269,7 +269,7 @@ test('2325-decodeMessage', () => {
   ).toBe('the five boxing wizards jump quickly');
 });
 
-test('findColumnWidth', () => {
+test('2639-findColumnWidth', () => {
   expect(findColumnWidth([[1], [22], [333]])).toEqual([3]);
   expect(
     findColumnWidth([

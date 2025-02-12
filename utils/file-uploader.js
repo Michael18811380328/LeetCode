@@ -272,12 +272,6 @@ class FileUploader extends React.Component {
     });
   }
 
-  // 再次上传函数（没用到）
-  // uploadFileAgain = (uploadFileInfo) => {
-  //   uploadFileInfo.isErrorTip = false;
-  //   this.handleFileChange(uploadFileInfo);
-  // }
-
   // 上传过程中的回调函数（大文件上传）
   onUploadProgress = (event, uploadFileMessage) => {
     const { onFileUploadProgress } = this.props;

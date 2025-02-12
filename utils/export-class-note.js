@@ -2,7 +2,6 @@
  * 需求: 把某个课程笔记导出 markdown 文件
  */
 const table = window.app.state.value.tables[0];
-
 const rows = table.rows;
 const columnKey = table.columns[1].key;
 

@@ -11,15 +11,6 @@ function getEventTransfer(event) {
   let text = getType(transfer, TEXT);
   let files = getFiles(transfer);
 
-  // 然后把这部分打印出来
-  /* eslint-disable */
-  console.log('-------------------- Copied Data Start -----------------------');
-  console.log('html:', html);
-  console.log('text:', text);
-  console.log('files:', files);
-  console.log('-------------------- Copied Data End -------------------------');
-  /* eslint-enable */
-
   // 返回三种类型
   // paste html
   if (html) {
