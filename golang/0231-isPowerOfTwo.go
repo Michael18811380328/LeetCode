@@ -1,3 +1,5 @@
+package utils
+
 func isPowerOfTwo(n int) bool {
     if n <= 0 {
         return false

@@ -50,12 +50,14 @@ pytest -q
 
 测试文件在 /python/test_*.py 路径下
 
+### golang 单元测试
 
-### 其他语言单元测试
+项目使用 golang 内置的单元测试，本地需要安装 golang 开发环境
 
-题目较少，暂时不支持。
-
-GoLang 单元测试可以参考：https://zhuanlan.zhihu.com/p/91072465
+~~~bash
+cd golang
+go test
+~~~
 
 ### 集成测试
 
