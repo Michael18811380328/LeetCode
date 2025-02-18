@@ -42,7 +42,7 @@ def intToRoman(num):
         while (res[2] > 0):
             result += 'C'
             res[2] -= 1
-        
+
     if (res[4] == 4):
         if (res[3] == 1):
             result += 'XC'
@@ -54,7 +54,7 @@ def intToRoman(num):
         while (res[4] > 0):
             result += 'X'
             res[4] -= 1
-    
+
     if (res[6] == 4):
         if (res[5] == 1):
             result += 'IX'
