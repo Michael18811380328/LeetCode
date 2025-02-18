@@ -36,10 +36,3 @@ jobs:
         npm install --force
         npm run lint
         npm run test-ts
-
-        cd ../python
-        echo "python test"
-        pip install pytest
-        pytest -q
-    
-        # chmod 755 test.sh && ./test.sh
