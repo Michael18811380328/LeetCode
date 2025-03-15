@@ -11,7 +11,7 @@
 
 第4节  小哼买书：书籍的编号一定，书籍需要去重。可以有两个思路实现：可以使用桶排序，这样最快；可以使用快速排序+去重，这样适合更全面。
 
-结论：根据具体的问题确定排序的方法，快速排序方法不一定是最佳的方法。
+**结论：根据具体的问题确定排序的方法，快速排序方法不一定是最佳的方法。**
 
 除了上面几个排序方法，还有堆排序，选择排序等其他排序。
 
@@ -26,7 +26,7 @@ int main() {
 }
 ~~~
 
-#### 01 bubble-sort
+### 01 bubble-sort
 
 冒泡排序
 
@@ -52,19 +52,20 @@ int main() {
   bubble_sort(arr, len);
   int i;
   printf("array length is %d\n", len);
-  for (i = 0; i < len; i++)
+  for (i = 0; i < len; i++) {
     printf("%d\n", arr[i]);
+  }
   return 0;
 }
 
 ~~~
 
-02-selection-sort
+### 02-selection-sort
 
 选择排序
 
 ~~~c
-#include <stab.h>
+#include <stdio.h>
 
 void selection_sort(int arr[], int len) {
   int i, j, tmp;
@@ -88,10 +89,9 @@ void swap(int *a, int *b) {
   *a = *b;
   *b = tmp;
 }
-
 ~~~
 
-03-quick-sort-recursive
+### 03-quick-sort-recursive
 
 快速排序
 
@@ -136,7 +136,7 @@ void quick_sort(int arr[], int len) {
 
 ~~~
 
-04-book-sort
+### 04-book-sort
 
 桶排序
 
@@ -170,10 +170,9 @@ int main () {
   getchar();
   return 0;
 }
-
 ~~~
 
-05-buy-books
+### 05-buy-books
 
 案例：买书（书籍编码范围很小 ，需要去重）
 

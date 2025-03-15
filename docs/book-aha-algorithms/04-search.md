@@ -17,7 +17,7 @@
 
 第6节  水管工游戏
 
-01-dfs
+### 01-dfs
 
 ~~~c
 #include <stdio.h>
@@ -57,7 +57,7 @@ int main() {
 
 ~~~
 
-02-dfs-number
+### 02-dfs-number
 
 ~~~c
 #include <stdio.h>
@@ -93,7 +93,7 @@ int main() {
 
 ~~~
 
-03-maze.c
+### 03-maze.c
 
 ~~~c
 #include <stdio.h>
@@ -157,7 +157,7 @@ int main() {
 
 ~~~
 
-04-bfs
+### 04-bfs
 
 ~~~c
 #include <stdio.h>
@@ -238,7 +238,7 @@ int main() {
 
 ~~~
 
-05-boom-man-bfs
+### 05-boom-man-bfs
 
 ~~~c
 #include <stdio.h>
@@ -353,7 +353,7 @@ int main() {
 
 ~~~
 
-06-boom-man-dfs
+### 06-boom-man-dfs
 
 ~~~c
 #include <stdio.h>
@@ -445,7 +445,7 @@ int main() {
 
 ~~~
 
-07-island
+### 07-island
 
 ~~~c
 #include <stdio.h>
@@ -562,7 +562,7 @@ int main() {
 
 ~~~
 
-08.pipe
+### 08.pipe
 
 ~~~c
 #include <stdio.h>

@@ -13,7 +13,7 @@
 
 第4节  数的全排列：使用回溯算法，可以优化全排列（深度优先算法）
 
-01-math
+### 01-math
 
 ~~~c
 #include <stdio.h>
@@ -66,7 +66,7 @@ int main() {
 
 ~~~
 
-02-boom
+### 02-boom
 
 ~~~c
 #include <stdio.h>
@@ -74,7 +74,7 @@ int main() {
 int main() {
   char a[20][21];
   int i, j, sum, map = 0, p, q, x, y, n, m;
-  // 输入N行M列
+  // 输入 N 行 M 列
   scanf("%d %d", &n, &m);
 
   for (i = 0; i <= n - 1; i++) {
@@ -138,7 +138,7 @@ int main() {
 
 ~~~
 
-03-match-equation
+### 03-match-equation
 
 ~~~c
 #include <stdio.h>

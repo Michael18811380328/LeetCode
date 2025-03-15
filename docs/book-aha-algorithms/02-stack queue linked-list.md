@@ -29,7 +29,7 @@
 
 第5节  模拟链表：使用两个数组模拟链表和指针（数据数组和指针数组实现）
 
-01-queue
+### 01-queue
 
 ~~~c
 #include <stdio.h> 
@@ -56,7 +56,7 @@ int main() {
 
 ~~~
 
-02-queue-struct
+### 02-queue-struct
 
 ~~~c
 #include <stdio.h>
@@ -95,7 +95,7 @@ int main() {
 }
 ~~~
 
-03-stack.c
+### 03-stack.c
 
 ~~~c
 #include <stdio.h>
@@ -143,7 +143,7 @@ int main() {
 
 ~~~
 
-04-cat-and-fish
+### 04-cat-and-fish
 
 ~~~c
 #include <stdio.h>
@@ -285,7 +285,7 @@ int main() {
 
 ~~~
 
-05-linked-list
+### 05-linked-list
 
 ~~~c
 #include <stdio.h>
@@ -376,7 +376,7 @@ int main() {
 
 ~~~
 
-06-linked-list-array
+### 06-linked-list-array
 
 ~~~c
 #include <stdio.h>
