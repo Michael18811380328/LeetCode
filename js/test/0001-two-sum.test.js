@@ -12,4 +12,7 @@ test('01-get two items index from an array', () => {
   expect(twoSum3([2, 11, 7, 15], 9)).toEqual([0, 2]);
   expect(twoSum3([1, 3, 4, 0, 2], 6)).toEqual([2, 4]);
   expect(twoSum3([3, 3], 6)).toEqual([0, 1]);
+  expect(twoSum3([2, 7, 11, 15], 9)).toEqual([0, 1]);
+  expect(twoSum3([3, 2, 4], 6)).toEqual([1, 2]);
+  expect(twoSum3([3, 3], 6)).toEqual([0, 1]);
 });

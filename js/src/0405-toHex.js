@@ -9,6 +9,7 @@
  * @param {number} num
  * @return {string}
  */
+
 // Your runtime beats 26.42 % of javascript submissions
 const toHex = function(num) {
   if (num === 0) {

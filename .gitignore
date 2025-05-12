@@ -30,3 +30,4 @@ js/eslint-reports/lint-results.html
 *.out
 
 site
+js/src/filebrowser.db
