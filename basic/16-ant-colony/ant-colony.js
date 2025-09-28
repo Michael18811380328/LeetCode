@@ -1,10 +1,10 @@
-const NUM_ANTS = 10;
-const NUM_CITIES = 5;
-const MAX_ITER = 100;
-const ALPHA = 1.0;
-const BETA = 2.0;
-const RHO = 0.5;
-const Q = 100;
+const NUM_ANTS = 10; // 蚂蚁数量
+const NUM_CITIES = 5; // 城市数量
+const MAX_ITER = 100; // 最大迭代次数
+const ALPHA = 1.0; // 信息素重要程度参数
+const BETA = 2.0; // 启发函数重要程度参数
+const RHO = 0.5; // 信息素蒸发参数
+const Q = 100; // 信息素释放参数
 
 let pheromone = Array.from({ length: NUM_CITIES }, () => Array(NUM_CITIES).fill(1));
 let distance = Array.from({ length: NUM_CITIES }, () => 

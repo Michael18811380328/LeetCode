@@ -1,3 +1,9 @@
+/**
+ * 判别分析（LDA）是一种用于分类的统计方法，常用于将观测值分配到预定义的类别中。
+ * @param {Array} X - 特征矩阵，每个样本是一个数组
+ * @param {Array} y - 标签数组，每个样本的类别
+ * @returns {Array} - 判别分析的权重数组
+ */
 function lda(X, y) {
   const classes = [...new Set(y)];
   const meanOverall = X.reduce((acc, row) => acc.map((val, i) => val + row[i]), Array(X[0].length).fill(0)).map(val => val / X.length);
