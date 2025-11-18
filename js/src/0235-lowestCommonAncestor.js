@@ -12,7 +12,7 @@
 const lowestCommonAncestor = function(root, p, q) {
   let res = root;
   // 设置当前节点是根节点
-  // eslint-disable-next-line
+   
   while (true) {
     // 如果当前节点的值大于两个目标节点，那么当前节点是这个节点的左子节点
     if (res.val > p.val && res.val > q.val) {

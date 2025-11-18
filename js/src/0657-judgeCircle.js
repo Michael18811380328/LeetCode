@@ -18,20 +18,20 @@ const judgeCircle = function(moves) {
   for (let i = 0; i < moves.length; i++) {
     const item = moves[i];
     switch (item) {
-      case 'R':
-        x++;
-        break;
-      case 'L':
-        x--;
-        break;
-      case 'U':
-        y++;
-        break;
-      case 'D':
-        y--;
-        break;
-      default:
-        break;
+    case 'R':
+      x++;
+      break;
+    case 'L':
+      x--;
+      break;
+    case 'U':
+      y++;
+      break;
+    case 'D':
+      y--;
+      break;
+    default:
+      break;
     }
   }
   return x === 0 && y === 0;

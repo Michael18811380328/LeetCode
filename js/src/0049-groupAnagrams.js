@@ -20,7 +20,7 @@ const groupAnagrams = function (strs) {
   }
   // 3 创建一个结果数组
   const result = [];
-  // eslint-disable-next-line
+   
   for (let key in hash) {
     const valueArr = hash[key];
     const resArr = [];

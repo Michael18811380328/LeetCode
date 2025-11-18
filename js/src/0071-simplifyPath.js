@@ -18,17 +18,17 @@ const simplifyPath = function(path) {
     const index = path.indexOf('/');
     const item = path.slice(0, index + 1);
     switch (item) {
-      case '/':
-        stack.push(item);
-        break;
-      case './':
-        break;
-      case '../':
-        if (stack.length > 1) stack.pop();
-        break;
-      default:
-        stack.push(item);
-        break;
+    case '/':
+      stack.push(item);
+      break;
+    case './':
+      break;
+    case '../':
+      if (stack.length > 1) stack.pop();
+      break;
+    default:
+      stack.push(item);
+      break;
     }
     path = path.slice(index + 1);
   }

@@ -71,7 +71,7 @@ const addTwoNumbers2 = function (l1, l2) {
   let l = null;
   let plus = 0;
   // 辅助函数
-  // eslint-disable-next-line no-shadow
+   
   function setNode(vm, l1, l2) {
     if (!l1 && !l2 && !plus) {
       return vm;

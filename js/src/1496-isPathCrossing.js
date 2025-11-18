@@ -28,20 +28,20 @@ const isPathCrossing = function(path) {
   for (let i = 0; i < path.length; i++) {
     const item = path[i];
     switch (item) {
-      case 'N':
-        previous[0]++;
-        break;
-      case 'S':
-        previous[0]--;
-        break;
-      case 'E':
-        previous[1]++;
-        break;
-      case 'W':
-        previous[1]--;
-        break;
-      default:
-        break;
+    case 'N':
+      previous[0]++;
+      break;
+    case 'S':
+      previous[0]--;
+      break;
+    case 'E':
+      previous[1]++;
+      break;
+    case 'W':
+      previous[1]--;
+      break;
+    default:
+      break;
     }
     const key = getKey(previous);
     // 如果再次走这个坐标，那么就是错误的

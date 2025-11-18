@@ -29,7 +29,7 @@ const numRabbits = function(answers) {
   }
   // 然后遍历数组，计算不同报数的情况
   let result = 0;
-  // eslint-disable-next-line guard-for-in
+   
   for (const key in dict) {
     const value = dict[key];
     const time = Number(key);

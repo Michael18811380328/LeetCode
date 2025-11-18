@@ -23,50 +23,50 @@ const generateMatrix = function(n) {
   // 辅助函数：计算下一个在什么位置
   const getNext = (res, x, y, direction) => {
     switch (direction) {
-      case 'right':
-        if (res[x][y + 1] === true) {
-          direction = 'right';
-          // x = x;
-          y = y + 1;
-        } else {
-          direction = 'down';
-          x = x + 1;
-          // y = y;
-        }
-        break;
-      case 'down':
-        if (res[x + 1] && res[x + 1][y] === true) {
-          direction = 'down';
-          x = x + 1;
-          // y = y;
-        } else {
-          direction = 'left';
-          // x = x;
-          y = y - 1;
-        }
-        break;
-      case 'left':
-        if (res[x][y - 1] === true) {
-          direction = 'left';
-          // x = x;
-          y = y - 1;
-        } else {
-          direction = 'up';
-          x = x - 1;
-          // y = y;
-        }
-        break;
-      case 'up':
-        if (res[x - 1] && res[x - 1][y] === true) {
-          direction = 'up';
-          x = x - 1;
-          // y = y;
-        } else {
-          direction = 'right';
-          // x = x;
-          y = y + 1;
-        }
-        break;
+    case 'right':
+      if (res[x][y + 1] === true) {
+        direction = 'right';
+        // x = x;
+        y = y + 1;
+      } else {
+        direction = 'down';
+        x = x + 1;
+        // y = y;
+      }
+      break;
+    case 'down':
+      if (res[x + 1] && res[x + 1][y] === true) {
+        direction = 'down';
+        x = x + 1;
+        // y = y;
+      } else {
+        direction = 'left';
+        // x = x;
+        y = y - 1;
+      }
+      break;
+    case 'left':
+      if (res[x][y - 1] === true) {
+        direction = 'left';
+        // x = x;
+        y = y - 1;
+      } else {
+        direction = 'up';
+        x = x - 1;
+        // y = y;
+      }
+      break;
+    case 'up':
+      if (res[x - 1] && res[x - 1][y] === true) {
+        direction = 'up';
+        x = x - 1;
+        // y = y;
+      } else {
+        direction = 'right';
+        // x = x;
+        y = y + 1;
+      }
+      break;
     }
     return { x, y, direction };
   };

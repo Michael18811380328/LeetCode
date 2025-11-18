@@ -21,23 +21,23 @@ const maxNumberOfBalloons = function(text) {
   for (let i = 0; i < len; i++) {
     const item = text[i];
     switch (item) {
-      case 'b':
-        b++;
-        break;
-      case 'a':
-        a++;
-        break;
-      case 'l':
-        l++;
-        break;
-      case 'o':
-        o++;
-        break;
-      case 'n':
-        n++;
-        break;
-      default:
-        break;
+    case 'b':
+      b++;
+      break;
+    case 'a':
+      a++;
+      break;
+    case 'l':
+      l++;
+      break;
+    case 'o':
+      o++;
+      break;
+    case 'n':
+      n++;
+      break;
+    default:
+      break;
     }
   }
   return Math.min(b, a, n, Math.floor(o / 2), Math.floor(l / 2));
