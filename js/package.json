@@ -8,6 +8,7 @@
     "test": "test"
   },
   "scripts": {
+    "check-unit-test": "node ./scripts/check-unit-test.js",
     "watch-parcel": "parcel watch",
     "build-parcel": "parcel build",
     "clean": "rm -rf node_modules",
