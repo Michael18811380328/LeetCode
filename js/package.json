@@ -59,7 +59,7 @@
     "jsdoc-to-markdown": "^8.0.1",
     "parcel": "^2.12.0",
     "regenerator-runtime": "^0.13.3",
-    "rollup": "4.53.2",
+    "rollup": "4.59.0",
     "standard": "^17.1.0",
     "string.prototype.replaceall": "1.0.7"
   },
