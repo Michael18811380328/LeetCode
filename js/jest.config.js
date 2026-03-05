@@ -1,7 +1,8 @@
 module.exports = {
-  "watchPlugins": [
-    "jest-watch-typeahead/filename",
-    "jest-watch-typeahead/testname"
-  ],
-  "setupFilesAfterEnv": ["<rootDir>/scripts/jestSetup.js"],
+  testEnvironment: 'jsdom',
+  setupFilesAfterEnv: ['<rootDir>/scripts/jestSetup.js'],
+  collectCoverageFrom: [
+    'src/**/*.js',
+    '!src/**/*.test.js'
+  ]
 };
