@@ -30,12 +30,12 @@ jobs:
     - run: |
         cd js
         echo "javascript test"
-        pnpm install --force
-        pnpm run lint
-        pnpm run test
+        npm install --force
+        npm run lint
+        npm run test
 
         cd ../typescript
         echo "typescript test"
-        pnpm install --force
-        pnpm run lint
-        pnpm run test-ts
+        npm install --force
+        npm run lint
+        npm run test-ts
