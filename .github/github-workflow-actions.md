@@ -199,7 +199,7 @@ https://docs.github.com/articles/workflow-syntax-for-github-actions#jobsjob_idst
 
 ```yml
 - name: Install Dependencies
-  run: npm install
+  run: pnpm install
 ```
 
 https://docs.github.com/articles/workflow-syntax-for-github-actions#jobsjob_idstepsrun
@@ -227,11 +227,11 @@ jobs:
       with:
         node-version: ${{ matrix.node_version }}
 
-    - name: npm install, build and test
+    - name: pnpm install, build and test
       run: |
-        npm install
-        npm run build --if-present
-        npm test
+        pnpm install
+        pnpm run build --if-present
+        pnpm test
 ```
 
 https://docs.github.com/articles/workflow-syntax-for-github-actions#jobsjob_idstrategy
@@ -245,7 +245,7 @@ GitHub操作使用工作流上下文中的数据支持步骤和作业的条件�
 
 ```yml
 steps:
-- run: npm publish
+- run: pnpm publish
   if: github.event_name == 'push'
 ```
 

@@ -12,16 +12,16 @@ js 代码格式检查，代码使用 ESLint 检查代码的规范性（.eslintrc
 
 ~~~bash
 cd js
-npm run lint
-npm run lint-fix
-npm run test
+pnpm run lint
+pnpm run lint-fix
+pnpm run test
 ~~~
 
 ### typescript 单元测试
 
 ~~~bash
 cd typescript
-npm run test-ts
+pnpm run test-ts
 ~~~
 
 如果出现下面报错，需要全局安装 TS 环境
@@ -29,8 +29,8 @@ npm run test-ts
 ~~~js
 // Test suite failed to run
 // Cannot find module 'typescript'
-// npm install -g typescript
-// npm install --save-dev jest typescript ts-jest
+// pnpm install -g typescript
+// pnpm install --save-dev jest typescript ts-jest
 // https://kulshekhar.github.io/ts-jest/user/install
 ~~~
 
