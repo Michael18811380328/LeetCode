@@ -4,13 +4,34 @@ import json from '@rollup/plugin-json';
 import babel from '@rollup/plugin-babel';
 import terser from '@rollup/plugin-terser';
 
+const terserConfig = {
+  compress: {
+    defaults: false,
+    drop_console: false,
+    drop_debugger: true,
+    keep_classnames: false,
+    keep_fnames: false,
+    passes: 2
+  },
+  mangle: {
+    properties: false,
+    keep_classnames: false,
+    keep_fnames: false
+  },
+  format: {
+    comments: false
+  }
+};
+
+const plugins = [terser(terserConfig)];
+
 export default {
   input: './src/leetcode.js',
   output: [
     {
       file: './dist/leetcode.js',
       format: 'cjs',
-      plugins: [terser()],
+      plugins,
     },
     {
       format: 'cjs',
@@ -18,7 +39,7 @@ export default {
       exports: 'named',
       preserveModules: true,
       preserveModulesRoot: 'src',
-      plugins: [terser()],
+      plugins,
     },
     {
       format: 'es',
@@ -26,7 +47,7 @@ export default {
       exports: 'named',
       preserveModules: true,
       preserveModulesRoot: 'src',
-      plugins: [terser()],
+      plugins,
     },
   ],
   plugins: [
