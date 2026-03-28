@@ -22,8 +22,6 @@
 "test-watch": "node ./scripts/jest-test.js --env=jsdom --coverage --watch",
 
 "build-es": "./node_modules/.bin/babel src --out-dir es",
-
-"build-api": "./node_modules/jsdoc-to-markdown/bin/cli.js ./src/*.js > leetcode-api.md",
 ```
 
 ### pnpm run lint/lint-html/lint-fix
@@ -51,12 +49,6 @@
 ### pnpm run build-es
 
 使用 babel 工具进行编译，把 es6 代码编译成 es5 代码，https://www.npmjs.com/package/@babel/cli 配置文件.babelrc
-
-### pnpm run build-api
-
-使用 jsdoc-to-markdown 工具，https://www.npmjs.com/package/jsdoc-to-markdown 自动生成 API 文档
-
-
 
 ## typescript npm 脚本
 
