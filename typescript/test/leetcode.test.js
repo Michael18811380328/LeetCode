@@ -1,25 +1,25 @@
-import {canCompleteCircuit} from '../src/0134-canCompleteCircuit';
-import {summaryRanges} from '../src/0228-summaryRanges';
-import {moveZeroes} from '../src/0283-moveZeroes';
-import {integerBreak} from '../src/0343-integerBreak';
-import {intersection} from '../src/0349-intersection';
-import {countSegments} from '../src/0434-countSegments';
-import {findComplement1, findComplement2} from '../src/0476-findComplement';
-import {maximumProduct} from '../src/0628-maximumProduct';
-import {toGoatLatin} from '../src/0824-toGoatLatin';
-import {validMountainArray} from '../src/0941-validMountainArray';
-import {arrayPairSum} from '../src/0561-arrayPairSum';
-import {findDisappearedNumbers} from '../src/0448-findDisappearedNumbers';
-import {repeatedSubstringPattern} from '../src/0459-repeatedSubstringPattern';
-import {check} from '../src/1752-check';
-import {duplicateZeros} from '../src/1089-duplicateZeros';
-import {sortByBits} from '../src/1356-sortByBits';
-import {slowestKey} from '../src/1629-slowestKey';
-import {trimMean} from '../src/1619-trimMean';
-import {decodeMessage} from '../src/2325-decodeMessage';
-import {checkXMatrix} from '../src/2319-checkXMatrix';
-import {getMinDistance, getMinDistance2} from '../src/1848-getMinDistance';
-import {findColumnWidth} from '../src/2639-findColumnWidth';
+import {canCompleteCircuit} from '../build/src/0134-canCompleteCircuit';
+import {summaryRanges} from '../build/src/0228-summaryRanges';
+import {moveZeroes} from '../build/src/0283-moveZeroes';
+import {integerBreak} from '../build/src/0343-integerBreak';
+import {intersection} from '../build/src/0349-intersection';
+import {countSegments} from '../build/src/0434-countSegments';
+import {findComplement1, findComplement2} from '../build/src/0476-findComplement';
+import {maximumProduct} from '../build/src/0628-maximumProduct';
+import {toGoatLatin} from '../build/src/0824-toGoatLatin';
+import {validMountainArray} from '../build/src/0941-validMountainArray';
+import {arrayPairSum} from '../build/src/0561-arrayPairSum';
+import {findDisappearedNumbers} from '../build/src/0448-findDisappearedNumbers';
+import {repeatedSubstringPattern} from '../build/src/0459-repeatedSubstringPattern';
+import {check} from '../build/src/1752-check';
+import {duplicateZeros} from '../build/src/1089-duplicateZeros';
+import {sortByBits} from '../build/src/1356-sortByBits';
+import {slowestKey} from '../build/src/1629-slowestKey';
+import {trimMean} from '../build/src/1619-trimMean';
+import {decodeMessage} from '../build/src/2325-decodeMessage';
+import {checkXMatrix} from '../build/src/2319-checkXMatrix';
+import {getMinDistance, getMinDistance2} from '../build/src/1848-getMinDistance';
+import {findColumnWidth} from '../build/src/2639-findColumnWidth';
 
 test('0134-canCompleteCircuit', () => {
   const gas = [1, 2, 3, 4, 5];
@@ -33,14 +33,14 @@ test('0134-canCompleteCircuit', () => {
 });
 
 test('0228-summaryRanges', () => {
-  const numsList: number[][] = [
+  const numsList = [
     [0, 1, 2, 4, 5, 7],
     [0, 2, 3, 4, 6, 8, 9],
     [],
     [-1],
     [0],
   ];
-  const resList: string[][] = [
+  const resList = [
     ['0->2', '4->5', '7'],
     ['0', '2->4', '6', '8->9'],
     [],
