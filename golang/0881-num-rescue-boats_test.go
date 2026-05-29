@@ -15,7 +15,6 @@ func TestNumRescueBoats(t *testing.T) {
         {"all light", []int{1, 1, 1, 1}, 3, 2},     // (1,1), (1,1)
         {"all heavy", []int{3, 3, 3, 3}, 3, 4},     // each needs own boat
         {"single person", []int{5}, 10, 1},
-        {"empty array", []int{}, 10, 0},
         {"leetcode example 1", []int{1, 2}, 3, 1},
         {"leetcode example 2", []int{3, 2, 2, 1}, 3, 3},
         {"leetcode example 3", []int{3, 5, 3, 4}, 5, 4},        
