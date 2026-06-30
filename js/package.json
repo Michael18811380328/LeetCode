@@ -39,7 +39,7 @@
   "homepage": "https://github.com/Michael18811380328/LeetCode#readme",
   "devDependencies": {
     "@babel/cli": "^7.17.6",
-    "@babel/core": "^7.4.3",
+    "@babel/core": "^7.29.6",
     "@babel/eslint-parser": "^7.18.2",
     "@babel/plugin-transform-runtime": "^7.23.6",
     "@babel/polyfill": "^7.11.5",
