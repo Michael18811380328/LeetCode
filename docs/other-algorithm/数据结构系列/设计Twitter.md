@@ -251,8 +251,6 @@ public List<Integer> getNewsFeed(int userId) {
 
 这个过程是这样的，下面是我制作的一个 GIF 图描述合并链表的过程。假设有三个 Tweet 链表按 time 属性降序排列，我们把他们降序合并添加到 res 中。注意图中链表节点中的数字是 time 属性，不是 id 属性：
 
-![gif](../pictures/设计Twitter/merge.gif)
-
 至此，这道一个极其简化的 Twitter 时间线功能就设计完毕了。
 
 

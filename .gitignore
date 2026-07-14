@@ -19,7 +19,7 @@
 #python
 *.pyc
 *.pytest_cache
-/python/python3-env
+myenv
 
 # IDE cache
 .vscode
@@ -29,5 +29,3 @@ js/eslint-reports/lint-results.html
 #clang
 *.out
 
-site
-js/src/filebrowser.db
