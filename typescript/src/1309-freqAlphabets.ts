@@ -15,4 +15,4 @@ function freqAlphabets(s: string): string {
   return res;
 }
 
-export {freqAlphabets};
+export { freqAlphabets };

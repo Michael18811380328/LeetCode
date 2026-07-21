@@ -13,4 +13,4 @@ function rotate(nums: number[], k: number): void {
   nums.unshift(...tailArray);
 }
 
-export {rotate};
+export { rotate };

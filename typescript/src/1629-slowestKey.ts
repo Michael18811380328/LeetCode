@@ -17,4 +17,4 @@ function slowestKey(releaseTimes: number[], keysPressed: string): string {
   return longStr;
 }
 
-export {slowestKey};
+export { slowestKey };

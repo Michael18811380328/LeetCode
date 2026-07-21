@@ -22,4 +22,4 @@ function findComplement2(num: number): number {
   return parseInt(str, 2);
 }
 
-export {findComplement1, findComplement2};
+export { findComplement1, findComplement2 };

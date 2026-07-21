@@ -17,4 +17,4 @@ function pruneTree(root: TreeNode | null): TreeNode | null {
   return parseNode(root);
 }
 
-export {pruneTree};
+export { pruneTree };

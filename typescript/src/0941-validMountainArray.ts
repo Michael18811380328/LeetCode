@@ -22,4 +22,4 @@ function validMountainArray(A: number[]): boolean {
   return reach;
 }
 
-export {validMountainArray};
+export { validMountainArray };

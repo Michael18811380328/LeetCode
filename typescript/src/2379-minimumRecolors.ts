@@ -23,4 +23,4 @@ function minimumRecolors(blocks: string, k: number): number {
   return min;
 }
 
-export {minimumRecolors};
+export { minimumRecolors };

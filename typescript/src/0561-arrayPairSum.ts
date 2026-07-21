@@ -21,4 +21,4 @@ function arrayPairSum(nums: number[]): number {
   return sum;
 }
 
-export {arrayPairSum};
+export { arrayPairSum };

@@ -15,4 +15,4 @@ function findContentChildren(g: number[], s: number[]): number {
   return result;
 }
 
-export {findContentChildren};
+export { findContentChildren };

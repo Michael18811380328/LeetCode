@@ -14,4 +14,4 @@ function countPairs(nums: number[], k: number): number {
   return res;
 }
 
-export {countPairs};
+export { countPairs };

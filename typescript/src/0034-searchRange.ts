@@ -24,4 +24,4 @@ function searchRange(nums: number[], target: number): number[] {
   return res;
 }
 
-export {searchRange};
+export { searchRange };

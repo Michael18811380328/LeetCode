@@ -2,22 +2,22 @@ import TreeNode from './treeNode';
 
 // 72 ms, 在所有 TypeScript 提交中击败了100.00%
 function averageOfSubtree(root: TreeNode | null): number {
-  const runNode = (node: TreeNode): {sum; number} => {
+  const runNode = (node: TreeNode): { sum; number } => {
     let sum: number = node.val;
     let number = 1;
     // 叶子结点一定满足
     if (!node.left && !node.right) {
       result++;
-      return {sum, number};
+      return { sum, number };
     }
     // 有子节点，那么需要判断
     if (node.left) {
-      const {sum: sum1, number: number1} = runNode(node.left);
+      const { sum: sum1, number: number1 } = runNode(node.left);
       sum += sum1;
       number += number1;
     }
     if (node.right) {
-      const {sum: sum2, number: number2} = runNode(node.right);
+      const { sum: sum2, number: number2 } = runNode(node.right);
       sum += sum2;
       number += number2;
     }
@@ -25,7 +25,7 @@ function averageOfSubtree(root: TreeNode | null): number {
     if (Math.floor(sum / number) === node.val) {
       result++;
     }
-    return {sum, number};
+    return { sum, number };
   };
   let result = 0;
   if (root) {
@@ -34,4 +34,4 @@ function averageOfSubtree(root: TreeNode | null): number {
   return result;
 }
 
-export {averageOfSubtree};
+export { averageOfSubtree };

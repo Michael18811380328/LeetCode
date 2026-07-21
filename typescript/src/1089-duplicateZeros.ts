@@ -14,4 +14,4 @@ function duplicateZeros(arr: number[]): void {
   }
 }
 
-export {duplicateZeros};
+export { duplicateZeros };

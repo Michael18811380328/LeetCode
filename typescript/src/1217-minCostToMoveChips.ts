@@ -8,4 +8,4 @@ function minCostToMoveChips(position: number[]): number {
   return Math.min(odd, even);
 }
 
-export {minCostToMoveChips};
+export { minCostToMoveChips };

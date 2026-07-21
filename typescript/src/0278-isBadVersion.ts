@@ -16,4 +16,4 @@ function solution(isBadVersion: any) {
   };
 }
 
-export {solution};
+export { solution };

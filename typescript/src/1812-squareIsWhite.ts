@@ -13,4 +13,4 @@ function squareIsWhite(coordinates) {
   }
 }
 
-export {squareIsWhite};
+export { squareIsWhite };

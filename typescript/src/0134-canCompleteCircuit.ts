@@ -1,7 +1,7 @@
 function canComplete(leftArr: number[]): number {
   let sum = 0;
   const len: number = leftArr.length;
-  leftArr.forEach(item => (sum += item));
+  leftArr.forEach((item) => (sum += item));
   if (sum < 0) {
     return -1;
   }
@@ -35,4 +35,4 @@ function canCompleteCircuit(gas: number[], cost: number[]): number {
   return canComplete(leftover);
 }
 
-export {canCompleteCircuit};
+export { canCompleteCircuit };

@@ -17,4 +17,4 @@ function moveZeroes(nums: number[]): void {
   }
 }
 
-export {moveZeroes};
+export { moveZeroes };

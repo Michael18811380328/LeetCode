@@ -14,4 +14,4 @@ function arraySign(nums: number[]): number {
   return minusTimes % 2 === 0 ? 1 : -1;
 }
 
-export {arraySign};
+export { arraySign };

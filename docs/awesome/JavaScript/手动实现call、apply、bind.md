@@ -1,3 +1,8 @@
+---
+{
+  "title": "手动实现call、apply、bind",
+}
+---
 ## 模拟实现call
 
 - 1.判断当前`this`是否为函数，防止` Function.prototype.myCall()` 直接调用

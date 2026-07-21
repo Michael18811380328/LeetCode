@@ -6,4 +6,4 @@ function queryString(s: string, n: number): boolean {
   return true;
 }
 
-export {queryString};
+export { queryString };

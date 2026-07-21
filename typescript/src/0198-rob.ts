@@ -16,4 +16,4 @@ function rob(nums: number[]): number {
   return res[res.length - 1];
 }
 
-export {rob};
+export { rob };

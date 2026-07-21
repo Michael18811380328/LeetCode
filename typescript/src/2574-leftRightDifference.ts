@@ -21,4 +21,4 @@ function leftRightDifference(nums: number[]): number[] {
   return res;
 }
 
-export {leftRightDifference};
+export { leftRightDifference };

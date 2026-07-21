@@ -11,4 +11,4 @@ function repeatedCharacter(s: string): string {
   return '';
 }
 
-export {repeatedCharacter};
+export { repeatedCharacter };

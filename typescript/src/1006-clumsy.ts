@@ -50,4 +50,4 @@ function clumsy(n: number): number {
   return 0;
 }
 
-export {clumsy};
+export { clumsy };

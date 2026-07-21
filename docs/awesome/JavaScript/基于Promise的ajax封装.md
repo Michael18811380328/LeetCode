@@ -1,3 +1,8 @@
+---
+{
+  "title": "基于Promise的ajax封装",
+}
+---
 
 基于把原生`ajax`封装为`Promise`形式。
 

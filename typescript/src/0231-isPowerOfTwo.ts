@@ -10,4 +10,4 @@ function isPowerOfTwo(n: number): boolean {
 }
 // 96 ms, 在所有 typescript 提交中击败了95.65%
 
-export {isPowerOfTwo};
+export { isPowerOfTwo };

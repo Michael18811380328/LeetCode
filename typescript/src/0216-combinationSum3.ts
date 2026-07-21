@@ -24,4 +24,4 @@ function combinationSum3(k: number, n: number): number[][] {
   return list;
 }
 
-export {combinationSum3};
+export { combinationSum3 };

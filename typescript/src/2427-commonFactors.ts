@@ -9,4 +9,4 @@ function commonFactors(a: number, b: number): number {
   return tmp;
 }
 
-export {commonFactors};
+export { commonFactors };

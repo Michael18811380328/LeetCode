@@ -17,4 +17,4 @@ function goodNodes(root: TreeNode | null): number {
   return goodNumber;
 }
 
-export {goodNodes};
+export { goodNodes };

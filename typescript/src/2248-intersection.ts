@@ -20,4 +20,4 @@ function intersection(nums: number[][]): number[] {
   return result;
 }
 
-export {intersection};
+export { intersection };

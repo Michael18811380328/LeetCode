@@ -1,3 +1,8 @@
+---
+{
+  "title": "EventEmitter",
+}
+---
 ## 观察者模式
 
 ![image](http://img.blog.csdn.net/20161126191512446)

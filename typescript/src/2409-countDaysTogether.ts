@@ -2,7 +2,7 @@ function countDaysTogether(
   arriveAlice: string,
   leaveAlice: string,
   arriveBob: string,
-  leaveBob: string
+  leaveBob: string,
 ): number {
   const dayOfYear = function (date: string): number {
     const month = Number(date.slice(0, 2));
@@ -31,4 +31,4 @@ function countDaysTogether(
   return days[2] - days[1] + 1;
 }
 
-export {countDaysTogether};
+export { countDaysTogether };

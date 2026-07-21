@@ -36,9 +36,9 @@ function numTriplets(nums1: number[], nums2: number[]): number {
   const foo = (arr1: number[], arr2: number[]): number => {
     let sum = 0;
     // 获取字典和出现的个数(可能有重复)
-    const arr3: number[] = arr2.map(item => Math.pow(item, 2));
+    const arr3: number[] = arr2.map((item) => Math.pow(item, 2));
     const dict: any = {};
-    arr3.forEach(ele => {
+    arr3.forEach((ele) => {
       if (dict[ele]) {
         dict[ele]++;
       } else {
@@ -59,4 +59,4 @@ function numTriplets(nums1: number[], nums2: number[]): number {
   return foo(nums1, nums2) + foo(nums2, nums1);
 }
 
-export {numTriplets};
+export { numTriplets };

@@ -11,4 +11,4 @@ function largestOddNumber(num: string): string {
   return '';
 }
 
-export {largestOddNumber};
+export { largestOddNumber };

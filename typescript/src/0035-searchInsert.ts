@@ -26,4 +26,4 @@ function searchInsert(nums: number[], target: number): number {
   return 0;
 }
 
-export {searchInsert};
+export { searchInsert };

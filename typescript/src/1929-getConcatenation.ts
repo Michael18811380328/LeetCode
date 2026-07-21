@@ -2,4 +2,4 @@ function getConcatenation(nums: number[]): number[] {
   return [...nums, ...nums];
 }
 
-export {getConcatenation};
+export { getConcatenation };

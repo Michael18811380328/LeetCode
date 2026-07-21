@@ -2,4 +2,4 @@ function stoneGame(): boolean {
   return true;
 }
 
-export {stoneGame};
+export { stoneGame };

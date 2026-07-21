@@ -38,4 +38,4 @@ function checkZeroOnes(s: string): boolean {
   return max1 > max2;
 }
 
-export {checkZeroOnes};
+export { checkZeroOnes };

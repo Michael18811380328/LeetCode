@@ -9,4 +9,4 @@ function maximumProduct(nums: number[]): number {
   return Math.max(num1, num2);
 }
 
-export {maximumProduct};
+export { maximumProduct };

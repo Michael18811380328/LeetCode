@@ -17,4 +17,4 @@ function findMaxConsecutiveOnes(nums: number[]): number {
   return max;
 }
 
-export {findMaxConsecutiveOnes};
+export { findMaxConsecutiveOnes };

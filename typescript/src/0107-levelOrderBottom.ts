@@ -27,4 +27,4 @@ function levelOrderBottom(root: TreeNode | null): number[][] {
   return result;
 }
 
-export {levelOrderBottom};
+export { levelOrderBottom };

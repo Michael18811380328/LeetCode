@@ -26,4 +26,4 @@ function checkXMatrix(grid: number[][]): boolean {
   return true;
 }
 
-export {checkXMatrix};
+export { checkXMatrix };

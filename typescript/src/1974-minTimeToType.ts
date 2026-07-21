@@ -5,7 +5,7 @@ function minTimeToType(word: string): number {
   const getIndent = (a: string, b: string): number => {
     if (a === b) return 0;
     const tmp: number = Math.abs(
-      Number(b.charCodeAt(0)) - Number(a.charCodeAt(0))
+      Number(b.charCodeAt(0)) - Number(a.charCodeAt(0)),
     );
     return Math.min(tmp, 26 - tmp);
   };
@@ -17,4 +17,4 @@ function minTimeToType(word: string): number {
   return res;
 }
 
-export {minTimeToType};
+export { minTimeToType };

@@ -59,4 +59,4 @@ function intToRoman(num: number): string {
   return result;
 }
 
-export {intToRoman};
+export { intToRoman };

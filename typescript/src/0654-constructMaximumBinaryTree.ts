@@ -18,4 +18,4 @@ function constructMaximumBinaryTree(nums: number[]): TreeNode | null {
   return buildTree(nums);
 }
 
-export {constructMaximumBinaryTree};
+export { constructMaximumBinaryTree };

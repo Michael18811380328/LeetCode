@@ -11,4 +11,4 @@ function largestGoodInteger(num: string): string {
   return tmp + tmp + tmp;
 }
 
-export {largestGoodInteger};
+export { largestGoodInteger };

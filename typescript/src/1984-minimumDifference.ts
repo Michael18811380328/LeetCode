@@ -14,4 +14,4 @@ function minimumDifference(nums: number[], k: number): number {
   return min;
 }
 
-export {minimumDifference};
+export { minimumDifference };

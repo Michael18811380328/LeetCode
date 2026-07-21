@@ -34,4 +34,4 @@ function longestPalindrome(s: string): number {
   return max;
 }
 
-export {longestPalindrome};
+export { longestPalindrome };

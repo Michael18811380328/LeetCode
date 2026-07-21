@@ -8,4 +8,4 @@ function chunk(arr: any[], size: number): any[][] {
   return matrix;
 }
 
-export {chunk};
+export { chunk };

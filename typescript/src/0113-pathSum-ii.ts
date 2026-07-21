@@ -8,7 +8,7 @@ function pathSum(root: TreeNode | null, targetSum: number): number[][] {
   const runNode = (
     node: TreeNode | null,
     tmp: number[],
-    lastSum: number
+    lastSum: number,
   ): void => {
     if (!node) return;
     tmp.push(node.val);
@@ -25,4 +25,4 @@ function pathSum(root: TreeNode | null, targetSum: number): number[][] {
   return list;
 }
 
-export {pathSum};
+export { pathSum };

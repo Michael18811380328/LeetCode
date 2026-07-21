@@ -39,7 +39,7 @@ function handleTen(node: ListNode | null): null {
 // 132 ms, 在所有 TypeScript 提交中击败了30.75%
 function addTwoNumbers(
   l1: ListNode | null,
-  l2: ListNode | null
+  l2: ListNode | null,
 ): ListNode | null {
   if (!l1 && !l2) {
     return null;
@@ -66,4 +66,4 @@ function addTwoNumbers(
   return result;
 }
 
-export {handleTen, addTwoNumbers};
+export { handleTen, addTwoNumbers };

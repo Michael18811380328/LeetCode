@@ -63,11 +63,14 @@ extra:
 
 # Page tree
 nav:
-    - algea-new:
-        - 'API 文档自动更新': 'algea-new/API 文档自动更新.md'
+    - '0096.不同的二叉搜索树': '0096.不同的二叉搜索树.md'
+    - '1957.删除字符使字符串变好': '1957.删除字符使字符串变好.md'
+    - '2135.统计追加字母可以获得的单词数': '2135.统计追加字母可以获得的单词数.md'
+
+    - JavaScript 数据结构与算法:
+        - 'readme': 'JavaScript 数据结构与算法/readme.md'
 
     - algea-new/算法介绍/二叉树:
-        - '二叉树': 'algea-new/算法介绍/二叉树/二叉树.md'
         - '二叉树的中序遍历': 'algea-new/算法介绍/二叉树/二叉树的中序遍历.md'
         - '二叉树的前序遍历': 'algea-new/算法介绍/二叉树/二叉树的前序遍历.md'
         - '二叉树的后序遍历': 'algea-new/算法介绍/二叉树/二叉树的后序遍历.md'
@@ -76,13 +79,11 @@ nav:
         - '重建二叉树': 'algea-new/算法介绍/二叉树/重建二叉树.md'
 
     - algea-new/算法介绍/动态规划:
-        - '198.打家劫舍': 'algea-new/算法介绍/动态规划/198.打家劫舍.md'
         - '哈希表': 'algea-new/算法介绍/哈希表.md'
 
     - algea-new/算法介绍/字符串:
         - '判断字符串是否表示数值': 'algea-new/算法介绍/字符串/判断字符串是否表示数值.md'
         - '字符串的全部排列': 'algea-new/算法介绍/字符串/字符串的全部排列.md'
-        - '字符串翻转': 'algea-new/算法介绍/字符串/字符串翻转.md'
         - '字符流中第一个不重复的字符': 'algea-new/算法介绍/字符串/字符流中第一个不重复的字符.md'
         - '替换字符串中空格': 'algea-new/算法介绍/字符串/替换字符串中空格.md'
         - '学习数据结构和算法的高效方法': 'algea-new/算法介绍/学习数据结构和算法的高效方法.md'
@@ -94,8 +95,6 @@ nav:
         - '查找素数': 'algea-new/算法介绍/数学/查找素数.md'
 
     - algea-new/算法介绍/数组:
-        - '两数之和': 'algea-new/算法介绍/数组/两数之和.md'
-        - '四数之和': 'algea-new/算法介绍/数组/四数之和.md'
         - '在排序数组中查找数字': 'algea-new/算法介绍/数组/在排序数组中查找数字.md'
         - '如何去除有序数组的重复元素': 'algea-new/算法介绍/数组/如何去除有序数组的重复元素.md'
         - '把数组排成最小的数': 'algea-new/算法介绍/数组/把数组排成最小的数.md'
@@ -116,10 +115,10 @@ nav:
         - '行动画算法': 'algea-new/算法文档/行动画算法.md'
         - '行排序算法': 'algea-new/算法文档/行排序算法.md'
         - '行过滤算法': 'algea-new/算法文档/行过滤算法.md'
+        - 'algea': 'algea.md'
 
     - algre:
         - '00-练习之前，你需要了解的': 'algre/00-练习之前，你需要了解的.md'
-        - '01-反转链表': 'algre/01-反转链表.md'
         - '02-环形链表': 'algre/02-环形链表.md'
         - '03-链表合并': 'algre/03-链表合并.md'
         - '04-求链表中间节点': 'algre/04-求链表中间节点.md'
@@ -161,24 +160,237 @@ nav:
         - '贪心算法': 'algre/贪心算法.md'
         - '链表算法': 'algre/链表算法.md'
         - '验证二叉搜索树': 'algre/验证二叉搜索树.md'
-        - 'all': 'all.md'
 
-    - book/JavaScript 数据结构与算法:
-        - 'readme': 'book/JavaScript 数据结构与算法/readme.md'
+    - awesome/JavaScript:
+        - 'EventEmitter': 'awesome/JavaScript/EventEmitter.md'
+        - 'README': 'awesome/JavaScript/README.md'
+        - '函数柯里化': 'awesome/JavaScript/函数柯里化.md'
+        - '单例模式': 'awesome/JavaScript/单例模式.md'
+        - '图片懒加载': 'awesome/JavaScript/图片懒加载.md'
+        - '基于Promise的ajax封装': 'awesome/JavaScript/基于Promise的ajax封装.md'
+        - '异步循环打印': 'awesome/JavaScript/异步循环打印.md'
+        - '手动实现ES5继承': 'awesome/JavaScript/手动实现ES5继承.md'
+        - '手动实现JSONP': 'awesome/JavaScript/手动实现JSONP.md'
+        - '手动实现call、apply、bind': 'awesome/JavaScript/手动实现call、apply、bind.md'
+        - '手动实现instanceof': 'awesome/JavaScript/手动实现instanceof.md'
+        - '数组乱序-洗牌算法': 'awesome/JavaScript/数组乱序-洗牌算法.md'
+        - '数组去重、扁平、最值': 'awesome/JavaScript/数组去重、扁平、最值.md'
+        - '模拟实现promise': 'awesome/JavaScript/模拟实现promise.md'
+        - '浅拷贝和深拷贝': 'awesome/JavaScript/浅拷贝和深拷贝.md'
+        - '节流': 'awesome/JavaScript/节流.md'
+        - '防抖': 'awesome/JavaScript/防抖.md'
+        - 'README': 'awesome/README.md'
 
-    - book/book-Algorithms/01-basic:
-        - 'readme': 'book/book-Algorithms/readme.md'
+    - awesome/algorithm/DFS和BFS:
+        - 'DFS和BFS': 'awesome/algorithm/DFS和BFS/DFS和BFS.md'
+        - 'README': 'awesome/algorithm/README.md'
 
-    - book/book-aha-algorithms:
-        - '01-sort': 'book/book-aha-algorithms/01-sort.md'
-        - '02-stack queue linked-list': 'book/book-aha-algorithms/02-stack queue linked-list.md'
-        - '03-enumeration': 'book/book-aha-algorithms/03-enumeration.md'
-        - '04-search': 'book/book-aha-algorithms/04-search.md'
-        - '05-traverse-graph': 'book/book-aha-algorithms/05-traverse-graph.md'
-        - '06-shortest-path': 'book/book-aha-algorithms/06-shortest-path.md'
-        - '07-tree': 'book/book-aha-algorithms/07-tree.md'
-        - '08-more': 'book/book-aha-algorithms/08-more.md'
-        - 'readme': 'book/book-aha-algorithms/readme.md'
+    - awesome/algorithm/分治:
+        - '数组中的逆序对': 'awesome/algorithm/分治/数组中的逆序对.md'
+
+    - awesome/algorithm/动态规划:
+        - '动态规划': 'awesome/algorithm/动态规划/动态规划.md'
+        - '打家劫舍': 'awesome/algorithm/动态规划/打家劫舍.md'
+        - '最小路径和': 'awesome/algorithm/动态规划/最小路径和.md'
+
+    - awesome/algorithm/回溯算法:
+        - 'N皇后问题': 'awesome/algorithm/回溯算法/N皇后问题.md'
+        - 'N皇后问题2': 'awesome/algorithm/回溯算法/N皇后问题2.md'
+        - '二叉树中和为某一值的路径': 'awesome/algorithm/回溯算法/二叉树中和为某一值的路径.md'
+        - '和为sum的n个数': 'awesome/algorithm/回溯算法/和为sum的n个数.md'
+        - '回溯算法': 'awesome/algorithm/回溯算法/回溯算法.md'
+        - '字符串的排列': 'awesome/algorithm/回溯算法/字符串的排列.md'
+        - '机器人的运动范围': 'awesome/algorithm/回溯算法/机器人的运动范围.md'
+        - '矩阵中的路径': 'awesome/algorithm/回溯算法/矩阵中的路径.md'
+
+    - awesome/algorithm/排序:
+        - '冒泡排序': 'awesome/algorithm/排序/冒泡排序.md'
+        - '堆排序': 'awesome/algorithm/排序/堆排序.md'
+        - '复杂度': 'awesome/algorithm/排序/复杂度.md'
+        - '归并排序': 'awesome/algorithm/排序/归并排序.md'
+        - '快速排序': 'awesome/algorithm/排序/快速排序.md'
+        - '排序': 'awesome/algorithm/排序/排序.md'
+        - '插入排序': 'awesome/algorithm/排序/插入排序.md'
+        - '选择排序': 'awesome/algorithm/排序/选择排序.md'
+
+    - awesome/algorithm/数学运算:
+        - '1+2+3+...+n': 'awesome/algorithm/数学运算/1+2+3+...+n.md'
+        - '不用加减乘除做加法': 'awesome/algorithm/数学运算/不用加减乘除做加法.md'
+        - '丑数': 'awesome/algorithm/数学运算/丑数.md'
+        - '二进制中1的个数': 'awesome/algorithm/数学运算/二进制中1的个数.md'
+        - '字符串转换成整数': 'awesome/algorithm/数学运算/字符串转换成整数.md'
+        - '数值的整数次方': 'awesome/algorithm/数学运算/数值的整数次方.md'
+        - '数组中只出现一次的数字': 'awesome/algorithm/数学运算/数组中只出现一次的数字.md'
+        - '整数中1出现的次数': 'awesome/algorithm/数学运算/整数中1出现的次数.md'
+
+    - awesome/algorithm/查找:
+        - '二维数组查找': 'awesome/algorithm/查找/二维数组查找.md'
+        - '在排序数组中查找数字': 'awesome/algorithm/查找/在排序数组中查找数字.md'
+        - '旋转数组的最小数字': 'awesome/algorithm/查找/旋转数组的最小数字.md'
+        - '查找': 'awesome/algorithm/查找/查找.md'
+
+    - awesome/algorithm/贪心算法:
+        - '分发饼干': 'awesome/algorithm/贪心算法/分发饼干.md'
+        - '贪心算法': 'awesome/algorithm/贪心算法/贪心算法.md'
+
+    - awesome/algorithm/递归和循环:
+        - '变态跳台阶': 'awesome/algorithm/递归和循环/变态跳台阶.md'
+        - '斐波拉契数列': 'awesome/algorithm/递归和循环/斐波拉契数列.md'
+        - '矩形覆盖': 'awesome/algorithm/递归和循环/矩形覆盖.md'
+        - '跳台阶': 'awesome/algorithm/递归和循环/跳台阶.md'
+        - '递归': 'awesome/algorithm/递归和循环/递归.md'
+
+    - awesome/dataStructure:
+        - 'README': 'awesome/dataStructure/README.md'
+
+    - awesome/dataStructure/二叉树:
+        - '二叉搜索树与双向链表': 'awesome/dataStructure/二叉树/二叉搜索树与双向链表.md'
+        - '二叉搜索树的后序遍历': 'awesome/dataStructure/二叉树/二叉搜索树的后序遍历.md'
+        - '二叉搜索树的第k个节点': 'awesome/dataStructure/二叉树/二叉搜索树的第k个节点.md'
+        - '二叉树': 'awesome/dataStructure/二叉树/二叉树.md'
+        - '二叉树中和为某一值的路径': 'awesome/dataStructure/二叉树/二叉树中和为某一值的路径.md'
+        - '二叉树的下一个节点': 'awesome/dataStructure/二叉树/二叉树的下一个节点.md'
+        - '二叉树的基本操作': 'awesome/dataStructure/二叉树/二叉树的基本操作.md'
+        - '二叉树的镜像': 'awesome/dataStructure/二叉树/二叉树的镜像.md'
+        - '从上到下打印二叉树': 'awesome/dataStructure/二叉树/从上到下打印二叉树.md'
+        - '对称的二叉树': 'awesome/dataStructure/二叉树/对称的二叉树.md'
+        - '平衡二叉树': 'awesome/dataStructure/二叉树/平衡二叉树.md'
+        - '序列化二叉树': 'awesome/dataStructure/二叉树/序列化二叉树.md'
+        - '树的子结构': 'awesome/dataStructure/二叉树/树的子结构.md'
+
+    - awesome/dataStructure/堆:
+        - '堆': 'awesome/dataStructure/堆/堆.md'
+        - '堆的基本操作': 'awesome/dataStructure/堆/堆的基本操作.md'
+        - '数据流中的中位数': 'awesome/dataStructure/堆/数据流中的中位数.md'
+        - '最小的k个数': 'awesome/dataStructure/堆/最小的k个数.md'
+
+    - awesome/dataStructure/字符串:
+        - '字符串的排列': 'awesome/dataStructure/字符串/字符串的排列.md'
+        - '字符串翻转': 'awesome/dataStructure/字符串/字符串翻转.md'
+        - '字符流中第一个不重复的字符': 'awesome/dataStructure/字符串/字符流中第一个不重复的字符.md'
+        - '替换空格': 'awesome/dataStructure/字符串/替换空格.md'
+        - '正则表达式匹配': 'awesome/dataStructure/字符串/正则表达式匹配.md'
+        - '表示数值的字符串': 'awesome/dataStructure/字符串/表示数值的字符串.md'
+
+    - awesome/dataStructure/数组:
+        - '三数之和': 'awesome/dataStructure/数组/三数之和.md'
+        - '两数之和': 'awesome/dataStructure/数组/两数之和.md'
+        - '和为S的两个数字': 'awesome/dataStructure/数组/和为S的两个数字.md'
+        - '和为S的连续正整数序列': 'awesome/dataStructure/数组/和为S的连续正整数序列.md'
+        - '四数之和': 'awesome/dataStructure/数组/四数之和.md'
+        - '在排序数组中查找数字': 'awesome/dataStructure/数组/在排序数组中查找数字.md'
+        - '扑克牌顺子': 'awesome/dataStructure/数组/扑克牌顺子.md'
+        - '把数组排成最小的数': 'awesome/dataStructure/数组/把数组排成最小的数.md'
+        - '数组': 'awesome/dataStructure/数组/数组.md'
+        - '数组中出现次数超过数组长度一半的数字': 'awesome/dataStructure/数组/数组中出现次数超过数组长度一半的数字.md'
+        - '数组中的逆序对': 'awesome/dataStructure/数组/数组中的逆序对.md'
+        - '构建乘积数组': 'awesome/dataStructure/数组/构建乘积数组.md'
+        - '第一个只出现一次的字符': 'awesome/dataStructure/数组/第一个只出现一次的字符.md'
+        - '调整数组顺序使奇数位于偶数前面': 'awesome/dataStructure/数组/调整数组顺序使奇数位于偶数前面.md'
+        - '连续子数组的最大和': 'awesome/dataStructure/数组/连续子数组的最大和.md'
+        - '顺时针打印矩阵': 'awesome/dataStructure/数组/顺时针打印矩阵.md'
+
+    - awesome/dataStructure/栈和队列:
+        - '包含min函数的栈': 'awesome/dataStructure/栈和队列/包含min函数的栈.md'
+        - '栈和队列': 'awesome/dataStructure/栈和队列/栈和队列.md'
+        - '栈的压入弹出序列': 'awesome/dataStructure/栈和队列/栈的压入弹出序列.md'
+        - '滑动窗口的最大值': 'awesome/dataStructure/栈和队列/滑动窗口的最大值.md'
+        - '用两个栈实现队列': 'awesome/dataStructure/栈和队列/用两个栈实现队列.md'
+
+    - awesome/dataStructure/链表:
+        - '两个链表的第一个公共节点': 'awesome/dataStructure/链表/两个链表的第一个公共节点.md'
+        - '从尾到头打印链表': 'awesome/dataStructure/链表/从尾到头打印链表.md'
+        - '删除链表中的节点or重复的节点': 'awesome/dataStructure/链表/删除链表中的节点or重复的节点.md'
+        - '反转链表': 'awesome/dataStructure/链表/反转链表.md'
+        - '合并两个排序的链表': 'awesome/dataStructure/链表/合并两个排序的链表.md'
+        - '圈圈中最后剩下的数字': 'awesome/dataStructure/链表/圈圈中最后剩下的数字.md'
+        - '复杂链表的复制': 'awesome/dataStructure/链表/复杂链表的复制.md'
+        - '链表': 'awesome/dataStructure/链表/链表.md'
+        - '链表中环的入口节点': 'awesome/dataStructure/链表/链表中环的入口节点.md'
+        - '链表倒数第k个节点': 'awesome/dataStructure/链表/链表倒数第k个节点.md'
+
+    - awesome/leetcode:
+        - '1.两数之和': 'awesome/leetcode/1.两数之和.md'
+        - '15.三数之和': 'awesome/leetcode/15.三数之和.md'
+        - '18.四数之和': 'awesome/leetcode/18.四数之和.md'
+        - '239.滑动窗口的最大值': 'awesome/leetcode/239.滑动窗口的最大值.md'
+        - '51.N皇后问题': 'awesome/leetcode/51.N皇后问题.md'
+        - '52.N皇后问题2': 'awesome/leetcode/52.N皇后问题2.md'
+        - '64.最小路径和': 'awesome/leetcode/64.最小路径和.md'
+
+    - awesome/剑指offer:
+        - '1.二维数组查找': 'awesome/剑指offer/1.二维数组查找.md'
+        - '10.2跳台阶': 'awesome/剑指offer/10.2跳台阶.md'
+        - '10.3变态跳台阶': 'awesome/剑指offer/10.3变态跳台阶.md'
+        - '10.斐波拉契数列': 'awesome/剑指offer/10.斐波拉契数列.md'
+        - '11.旋转数组的最小数字': 'awesome/剑指offer/11.旋转数组的最小数字.md'
+        - '12.矩阵中的路径': 'awesome/剑指offer/12.矩阵中的路径.md'
+        - '13.机器人的运动范围': 'awesome/剑指offer/13.机器人的运动范围.md'
+        - '15.二进制中1的个数': 'awesome/剑指offer/15.二进制中1的个数.md'
+        - '16.数值的整数次方': 'awesome/剑指offer/16.数值的整数次方.md'
+        - '18.删除链表中的节点or重复的节点': 'awesome/剑指offer/18.删除链表中的节点or重复的节点.md'
+        - '19.正则表达式匹配': 'awesome/剑指offer/19.正则表达式匹配.md'
+        - '20.表示数值的字符串': 'awesome/剑指offer/20.表示数值的字符串.md'
+        - '21.调整数组顺序使奇数位于偶数前面': 'awesome/剑指offer/21.调整数组顺序使奇数位于偶数前面.md'
+        - '22.链表倒数第k个节点': 'awesome/剑指offer/22.链表倒数第k个节点.md'
+        - '23.链表中环的入口节点': 'awesome/剑指offer/23.链表中环的入口节点.md'
+        - '24.反转链表': 'awesome/剑指offer/24.反转链表.md'
+        - '25.合并两个排序的链表': 'awesome/剑指offer/25.合并两个排序的链表.md'
+        - '26.树的子结构': 'awesome/剑指offer/26.树的子结构.md'
+        - '27.二叉树的镜像': 'awesome/剑指offer/27.二叉树的镜像.md'
+        - '28.对称的二叉树': 'awesome/剑指offer/28.对称的二叉树.md'
+        - '29.顺时针打印矩阵': 'awesome/剑指offer/29.顺时针打印矩阵.md'
+        - '30.包含main函数的栈': 'awesome/剑指offer/30.包含main函数的栈.md'
+        - '31.栈的压入弹出序列': 'awesome/剑指offer/31.栈的压入弹出序列.md'
+        - '32.从上到下打印二叉树': 'awesome/剑指offer/32.从上到下打印二叉树.md'
+        - '33.二叉搜索树的后序遍历': 'awesome/剑指offer/33.二叉搜索树的后序遍历.md'
+        - '34.二叉树中和为某一值的路径': 'awesome/剑指offer/34.二叉树中和为某一值的路径.md'
+        - '35.复杂链表的复制': 'awesome/剑指offer/35.复杂链表的复制.md'
+        - '36.二叉搜索树与双向链表': 'awesome/剑指offer/36.二叉搜索树与双向链表.md'
+        - '37.序列化二叉树': 'awesome/剑指offer/37.序列化二叉树.md'
+        - '38.字符串的排列': 'awesome/剑指offer/38.字符串的排列.md'
+        - '39.数组中出现次数超过数组长度一半的数字': 'awesome/剑指offer/39.数组中出现次数超过数组长度一半的数字.md'
+        - '40.最小的k个数': 'awesome/剑指offer/40.最小的k个数.md'
+        - '41.数据流中的中位数': 'awesome/剑指offer/41.数据流中的中位数.md'
+        - '42.连续子数组的最大和': 'awesome/剑指offer/42.连续子数组的最大和.md'
+        - '43.整数中1出现的次数': 'awesome/剑指offer/43.整数中1出现的次数.md'
+        - '45.把数组排成最小的数': 'awesome/剑指offer/45.把数组排成最小的数.md'
+        - '49.丑数': 'awesome/剑指offer/49.丑数.md'
+        - '5.替换空格': 'awesome/剑指offer/5.替换空格.md'
+        - '50.字符流中第一个不重复的字符': 'awesome/剑指offer/50.字符流中第一个不重复的字符.md'
+        - '50.第一个只出现一次的字符': 'awesome/剑指offer/50.第一个只出现一次的字符.md'
+        - '51.数组中的逆序对': 'awesome/剑指offer/51.数组中的逆序对.md'
+        - '52.两个链表的第一个公共节点': 'awesome/剑指offer/52.两个链表的第一个公共节点.md'
+        - '53.在排序数组中查找数字': 'awesome/剑指offer/53.在排序数组中查找数字.md'
+        - '54.二叉搜索树的第k个节点': 'awesome/剑指offer/54.二叉搜索树的第k个节点.md'
+        - '55.2.平衡二叉树': 'awesome/剑指offer/55.2.平衡二叉树.md'
+        - '55.二叉树的最大深度': 'awesome/剑指offer/55.二叉树的最大深度.md'
+        - '56.数组中只出现一次的数字': 'awesome/剑指offer/56.数组中只出现一次的数字.md'
+        - '57.1.和为S的两个数字': 'awesome/剑指offer/57.1.和为S的两个数字.md'
+        - '57.2.和为S的连续正整数序列': 'awesome/剑指offer/57.2.和为S的连续正整数序列.md'
+        - '58.字符串翻转': 'awesome/剑指offer/58.字符串翻转.md'
+        - '59.滑动窗口的最大值': 'awesome/剑指offer/59.滑动窗口的最大值.md'
+        - '6.从尾到头打印链表': 'awesome/剑指offer/6.从尾到头打印链表.md'
+        - '61.扑克牌顺子': 'awesome/剑指offer/61.扑克牌顺子.md'
+        - '62.圈圈中最后剩下的数字': 'awesome/剑指offer/62.圈圈中最后剩下的数字.md'
+        - '64.1+2+3+...+n': 'awesome/剑指offer/64.1+2+3+...+n.md'
+        - '65.不用加减乘除做加法': 'awesome/剑指offer/65.不用加减乘除做加法.md'
+        - '66.构建乘积数组': 'awesome/剑指offer/66.构建乘积数组.md'
+        - '67.字符串转换成整数': 'awesome/剑指offer/67.字符串转换成整数.md'
+        - '8.二叉树的下一个节点': 'awesome/剑指offer/8.二叉树的下一个节点.md'
+        - '9.用两个栈实现队列': 'awesome/剑指offer/9.用两个栈实现队列.md'
+        - 'book-Algorithms': 'book-Algorithms.md'
+
+    - book-aha-algorithms:
+        - '01-sort': 'book-aha-algorithms/01-sort.md'
+        - '02-stack queue linked-list': 'book-aha-algorithms/02-stack queue linked-list.md'
+        - '03-enumeration': 'book-aha-algorithms/03-enumeration.md'
+        - '04-search': 'book-aha-algorithms/04-search.md'
+        - '05-traverse-graph': 'book-aha-algorithms/05-traverse-graph.md'
+        - '06-shortest-path': 'book-aha-algorithms/06-shortest-path.md'
+        - '07-tree': 'book-aha-algorithms/07-tree.md'
+        - '08-more': 'book-aha-algorithms/08-more.md'
+        - 'readme': 'book-aha-algorithms/readme.md'
         - 'index': 'index.md'
 
     - interview:
@@ -201,3 +413,88 @@ nav:
         - '19 知乎面试2': 'interview/19 知乎面试2.md'
         - '20 搜狗前端面试题': 'interview/20 搜狗前端面试题.md'
         - '21 前端面试题': 'interview/21 前端面试题.md'
+        - 'log': 'log.md'
+
+    - other-algorithm:
+        - 'README': 'other-algorithm/README.md'
+
+    - other-algorithm/动态规划系列:
+        - 'README': 'other-algorithm/动态规划系列/README.md'
+        - '动态规划之KMP字符匹配算法': 'other-algorithm/动态规划系列/动态规划之KMP字符匹配算法.md'
+        - '动态规划之博弈问题': 'other-algorithm/动态规划系列/动态规划之博弈问题.md'
+        - '动态规划之四键键盘': 'other-algorithm/动态规划系列/动态规划之四键键盘.md'
+        - '动态规划之正则表达': 'other-algorithm/动态规划系列/动态规划之正则表达.md'
+        - '动态规划设计：最长递增子序列': 'other-algorithm/动态规划系列/动态规划设计：最长递增子序列.md'
+        - '动态规划详解进阶': 'other-algorithm/动态规划系列/动态规划详解进阶.md'
+        - '团灭股票问题': 'other-algorithm/动态规划系列/团灭股票问题.md'
+        - '子序列问题模板': 'other-algorithm/动态规划系列/子序列问题模板.md'
+        - '抢房子': 'other-algorithm/动态规划系列/抢房子.md'
+        - '最优子结构': 'other-algorithm/动态规划系列/最优子结构.md'
+        - '最长公共子序列': 'other-algorithm/动态规划系列/最长公共子序列.md'
+        - '编辑距离': 'other-algorithm/动态规划系列/编辑距离.md'
+        - '贪心算法之区间调度问题': 'other-algorithm/动态规划系列/贪心算法之区间调度问题.md'
+        - '高楼扔鸡蛋进阶': 'other-algorithm/动态规划系列/高楼扔鸡蛋进阶.md'
+        - '高楼扔鸡蛋问题': 'other-algorithm/动态规划系列/高楼扔鸡蛋问题.md'
+
+    - other-algorithm/数据结构系列:
+        - 'README': 'other-algorithm/数据结构系列/README.md'
+        - '二叉堆详解实现优先级队列': 'other-algorithm/数据结构系列/二叉堆详解实现优先级队列.md'
+        - '二叉搜索树操作集锦': 'other-algorithm/数据结构系列/二叉搜索树操作集锦.md'
+        - '单调栈': 'other-algorithm/数据结构系列/单调栈.md'
+        - '单调队列': 'other-algorithm/数据结构系列/单调队列.md'
+        - '实现计算器': 'other-algorithm/数据结构系列/实现计算器.md'
+        - '设计Twitter': 'other-algorithm/数据结构系列/设计Twitter.md'
+        - '递归反转链表的一部分': 'other-algorithm/数据结构系列/递归反转链表的一部分.md'
+        - '队列实现栈栈实现队列': 'other-algorithm/数据结构系列/队列实现栈栈实现队列.md'
+
+    - other-algorithm/算法思维系列:
+        - 'FloodFill算法详解及应用': 'other-algorithm/算法思维系列/FloodFill算法详解及应用.md'
+        - 'README': 'other-algorithm/算法思维系列/README.md'
+        - 'UnionFind算法应用': 'other-algorithm/算法思维系列/UnionFind算法应用.md'
+        - 'UnionFind算法详解': 'other-algorithm/算法思维系列/UnionFind算法详解.md'
+        - 'twoSum问题的核心思想': 'other-algorithm/算法思维系列/twoSum问题的核心思想.md'
+        - '为什么推荐算法4': 'other-algorithm/算法思维系列/为什么推荐算法4.md'
+        - '二分查找详解': 'other-algorithm/算法思维系列/二分查找详解.md'
+        - '信封嵌套问题': 'other-algorithm/算法思维系列/信封嵌套问题.md'
+        - '几个反直觉的概率问题': 'other-algorithm/算法思维系列/几个反直觉的概率问题.md'
+        - '前缀和技巧': 'other-algorithm/算法思维系列/前缀和技巧.md'
+        - '区间交集问题': 'other-algorithm/算法思维系列/区间交集问题.md'
+        - '区间调度问题之区间合并': 'other-algorithm/算法思维系列/区间调度问题之区间合并.md'
+        - '双指针技巧': 'other-algorithm/算法思维系列/双指针技巧.md'
+        - '回溯算法详解修订版': 'other-algorithm/算法思维系列/回溯算法详解修订版.md'
+        - '字符串乘法': 'other-algorithm/算法思维系列/字符串乘法.md'
+        - '常用的位操作': 'other-algorithm/算法思维系列/常用的位操作.md'
+        - '洗牌算法': 'other-algorithm/算法思维系列/洗牌算法.md'
+        - '滑动窗口技巧': 'other-algorithm/算法思维系列/滑动窗口技巧.md'
+        - '烧饼排序': 'other-algorithm/算法思维系列/烧饼排序.md'
+        - '算法学习之路': 'other-algorithm/算法思维系列/算法学习之路.md'
+        - '递归详解': 'other-algorithm/算法思维系列/递归详解.md'
+
+    - other-algorithm/高频面试系列:
+        - 'LRU算法': 'other-algorithm/高频面试系列/LRU算法.md'
+        - 'README': 'other-algorithm/高频面试系列/README.md'
+        - 'koko偷香蕉': 'other-algorithm/高频面试系列/koko偷香蕉.md'
+        - 'k个一组反转链表': 'other-algorithm/高频面试系列/k个一组反转链表.md'
+        - '二分查找判定子序列': 'other-algorithm/高频面试系列/二分查找判定子序列.md'
+        - '判断回文链表': 'other-algorithm/高频面试系列/判断回文链表.md'
+        - '合法括号判定': 'other-algorithm/高频面试系列/合法括号判定.md'
+        - '子集排列组合': 'other-algorithm/高频面试系列/子集排列组合.md'
+        - '座位调度': 'other-algorithm/高频面试系列/座位调度.md'
+        - '接雨水': 'other-algorithm/高频面试系列/接雨水.md'
+        - '最长回文子串': 'other-algorithm/高频面试系列/最长回文子串.md'
+        - '水塘抽样': 'other-algorithm/高频面试系列/水塘抽样.md'
+        - '消失的元素': 'other-algorithm/高频面试系列/消失的元素.md'
+        - '缺失和重复的元素': 'other-algorithm/高频面试系列/缺失和重复的元素.md'
+        - 'scripts-description': 'scripts-description.md'
+        - 'todo': 'todo.md'
+        - 'unit-test': 'unit-test.md'
+        - '单调栈': '单调栈.md'
+        - '回溯算法': '回溯算法.md'
+
+    - 字符串敏感词匹配:
+        - 'KMP字符串匹配算法': '字符串敏感词匹配/KMP字符串匹配算法.md'
+        - 'KMP算法JS实现': '字符串敏感词匹配/KMP算法JS实现.md'
+        - '字符串算法-敏感词匹配': '字符串敏感词匹配/字符串算法-敏感词匹配.md'
+        - '敏感词过滤实现 trie': '字符串敏感词匹配/敏感词过滤实现 trie.md'
+        - '正则表达式匹配字符串': '正则表达式匹配字符串.md'
+        - '深度广度优先搜索': '深度广度优先搜索.md'

@@ -2,7 +2,7 @@ function numberOfPairs(nums: number[]): number[] {
   const dict = {};
   let pair = 0;
   let remain = 0;
-  nums.forEach(num => {
+  nums.forEach((num) => {
     if (dict[num]) {
       dict[num] = null;
       pair++;
@@ -15,4 +15,4 @@ function numberOfPairs(nums: number[]): number[] {
   return [pair, remain];
 }
 
-export {numberOfPairs};
+export { numberOfPairs };

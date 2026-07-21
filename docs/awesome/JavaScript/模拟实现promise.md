@@ -1,3 +1,8 @@
+---
+{
+  "title": "模拟实现promise",
+}
+---
 ## 基础版本
 
 - 设定三个状态 `PENDING、FULFILLED、REJECTED` ，只能由`PENDING`改变为`FULFILLED、REJECTED`，并且只能改变一次

@@ -6,8 +6,8 @@ function countSegments(s: string): number {
   if (str.indexOf(' ') === -1) {
     return 1;
   }
-  const arr: string[] = str.split(' ').filter(item => item !== '');
+  const arr: string[] = str.split(' ').filter((item) => item !== '');
   return arr.length;
 }
 
-export {countSegments};
+export { countSegments };

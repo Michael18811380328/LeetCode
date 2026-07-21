@@ -7,4 +7,4 @@ function trimMean(arr: number[]): number {
   return sum / arr.length;
 }
 
-export {trimMean};
+export { trimMean };

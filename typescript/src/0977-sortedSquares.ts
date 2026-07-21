@@ -24,4 +24,4 @@ function sortedSquares(nums: number[]): number[] {
   return res;
 }
 
-export {sortedSquares};
+export { sortedSquares };

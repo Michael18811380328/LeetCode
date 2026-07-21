@@ -14,4 +14,4 @@ function findGCD(nums: number[]): number {
   return 1;
 }
 
-export {findGCD};
+export { findGCD };

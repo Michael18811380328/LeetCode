@@ -25,10 +25,10 @@ function sortByBits(arr: number[]): number[] {
     matrix[times].push(arr[i]);
   }
   let result: number[] = [];
-  matrix.forEach(item => {
+  matrix.forEach((item) => {
     result = result.concat(item);
   });
   return result;
 }
 
-export {sortByBits};
+export { sortByBits };

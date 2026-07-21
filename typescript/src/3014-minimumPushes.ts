@@ -11,4 +11,4 @@ function minimumPushes(word: string): number {
   }
 }
 
-export {minimumPushes};
+export { minimumPushes };

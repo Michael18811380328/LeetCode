@@ -10,4 +10,4 @@ function complexNumberMultiply(a: string, b: string): string {
   return `${c1}+${c2}i`;
 }
 
-export {complexNumberMultiply};
+export { complexNumberMultiply };

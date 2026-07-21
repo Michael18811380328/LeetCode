@@ -28,4 +28,4 @@ function findDisappearedNumbers(nums: number[]): number[] {
   return result;
 }
 
-export {findDisappearedNumbers};
+export { findDisappearedNumbers };

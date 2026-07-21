@@ -6,4 +6,4 @@ function buyChoco(prices: number[], money: number): number {
   return money - prices[0] - prices[1];
 }
 
-export {buyChoco};
+export { buyChoco };

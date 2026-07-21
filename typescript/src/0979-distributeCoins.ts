@@ -13,4 +13,4 @@ function distributeCoins(root: TreeNode | null): number {
   return result;
 }
 
-export {distributeCoins};
+export { distributeCoins };

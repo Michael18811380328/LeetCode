@@ -19,4 +19,4 @@ function integerBreak(n: number): number {
   return res;
 }
 
-export {integerBreak};
+export { integerBreak };

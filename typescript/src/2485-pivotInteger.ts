@@ -12,4 +12,4 @@ function pivotInteger(n: number): number {
   return -1;
 }
 
-export {pivotInteger};
+export { pivotInteger };

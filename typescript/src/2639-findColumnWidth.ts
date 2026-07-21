@@ -20,4 +20,4 @@ function findColumnWidth(grid: number[][]): number[] {
   return result;
 }
 
-export {findColumnWidth};
+export { findColumnWidth };

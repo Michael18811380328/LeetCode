@@ -2,7 +2,7 @@
 function isSumEqual(
   firstWord: string,
   secondWord: string,
-  targetWord: string
+  targetWord: string,
 ): boolean {
   const getNum = (str: string): number => {
     let res = 0;
@@ -21,4 +21,4 @@ function isSumEqual(
   return getNum(firstWord) + getNum(secondWord) === getNum(targetWord);
 }
 
-export {isSumEqual};
+export { isSumEqual };

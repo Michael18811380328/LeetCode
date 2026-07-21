@@ -15,4 +15,4 @@ function replaceElements(arr: number[]): number[] {
   return res;
 }
 
-export {replaceElements};
+export { replaceElements };

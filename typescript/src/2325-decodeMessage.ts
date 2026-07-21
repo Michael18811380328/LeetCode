@@ -15,4 +15,4 @@ function decodeMessage(key: string, message: string): string {
   return newMessage;
 }
 
-export {decodeMessage};
+export { decodeMessage };

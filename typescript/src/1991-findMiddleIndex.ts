@@ -17,4 +17,4 @@ function findMiddleIndex(nums: number[]): number {
   return -1;
 }
 
-export {findMiddleIndex};
+export { findMiddleIndex };

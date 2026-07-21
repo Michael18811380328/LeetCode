@@ -25,7 +25,7 @@ function getMinDistance(nums: number[], target: number, start: number): number {
 function getMinDistance2(
   nums: number[],
   target: number,
-  start: number
+  start: number,
 ): number {
   if (nums[start] === target) {
     return 0;
@@ -41,4 +41,4 @@ function getMinDistance2(
   return 0;
 }
 
-export {getMinDistance, getMinDistance2};
+export { getMinDistance, getMinDistance2 };

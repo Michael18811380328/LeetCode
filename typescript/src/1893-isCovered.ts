@@ -17,4 +17,4 @@ function isCovered(ranges: number[][], left: number, right: number): boolean {
   return true;
 }
 
-export {isCovered};
+export { isCovered };

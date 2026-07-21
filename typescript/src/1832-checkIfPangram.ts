@@ -20,4 +20,4 @@ function checkIfPangram(sentence: string): boolean {
   return timer === 26;
 }
 
-export {checkIfPangram};
+export { checkIfPangram };

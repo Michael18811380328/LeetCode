@@ -19,4 +19,4 @@ function check(nums: number[]): boolean {
   return true;
 }
 
-export {check};
+export { check };
